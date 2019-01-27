@@ -1,0 +1,14 @@
+{{ $img := index (.Page.Resources.Match (printf "images/%s" (.Get "src"))) 0 }}
+<div class="picture">
+    <a href="{{ $img.RelPermalink }}" title="View fullsize">
+        <picture>
+            <source srcset="{{ ($img.Resize "320x").RelPermalink }}" media="(max-width: 320px) and (max-resolution: 1dppx)" />
+            <source srcset="{{ ($img.Resize "640x").RelPermalink }}" media="(max-width: 640px) and (max-resolution: 1dppx), (max-width: 320px) and (max-resolution: 2dppx)" />
+            <source srcset="{{ ($img.Resize "1280x").RelPermalink }}" media="(max-width: 1280px) and (max-resolution: 1dppx), (max-width: 640px) and (max-resolution: 2dppx), (max-width: 320px) and (max-resolution: 3dppx)" />
+                <img src="{{ $img.RelPermalink }}" alt="{{ .Get "alt" }}" />
+        </picture>
+        {{ with .Get "caption" }}
+            <div class="caption">{{.}}</div>
+        {{ end }}
+    </a>
+</div>

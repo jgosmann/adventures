@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Lato Light';
+    src: url('fonts/LatoLatin-Light.woff2') format('woff2'),
+        url('fonts/LatoLatin-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('fonts/LatoLatin-LightItalic.woff2') format('woff2'),
+        url('fonts/LatoLatin-LightItalic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('fonts/LatoLatin-Regular.woff2') format('woff2'),
+        url('fonts/LatoLatin-Regular.woff') format('woff');
+    font-weight: bold;
+}
+
+body {
+    font-family: "Lato Light";
+    margin: 0;
+}
+
+.title-screen {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.title {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    width: 80%;
+    right: 0;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.title h1 {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.title p {
+    margin: 0;
+}
+
+.title .meta {
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80vh;
+}
+
+.picture {
+    margin: 32px;
+    text-align: center;
+}
+
+.picture a {
+    position: relative;
+    display: inline-block;
+    vertical-algin: top;
+}
+
+.picture .caption {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-style: italic;
+    padding: 4px;
+    font-size: 0.9em;
+}
+
+img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+p {
+    width: 600px;
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.vertical {
+    overflow: scroll;
+    white-space: nowrap;
+}

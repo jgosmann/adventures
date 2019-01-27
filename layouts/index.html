@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="main.css" />
+        <!-- TODO meta -->
+        {{ range .AlternativeOutputFormats -}}
+            {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
+    </head>
+    <body>
+        <main>
+            {{ range .Pages }}
+                <article>
+                    {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
+                    <style>
+                        .title-screen {
+                            background-image: url('{{ ($bg.Fill "320x240").RelPermalink }}');
+                        }
+                        @media screen and (min-width: 321px), screen and (min-height: 241px),
+                                screen and (min-resolution: 2dppx) {
+                            .title-screen { background-image: url('{{ ($bg.Fill "640x480").RelPermalink }}'); }
+                        }
+                        @media screen and (min-width: 641px), screen and (min-height: 481px),
+                                screen and (min-resolution: 2dppx) and (min-width: 321px),
+                                screen and (min-resolution: 2dppx) and (min-height: 241px) {
+                            .title-screen { background-image: url('{{ ($bg.Fill "1280x960").RelPermalink }}'); }
+                        }
+                        @media screen and (min-width: 1281px), screen and (min-height: 961px)
+                                screen and (min-resolution: 2dppx) and (min-width: 641px),
+                                screen and (min-resolution: 2dppx) and (min-height: 481px) {
+                            .title-screen { background-image: url('{{ $bg.RelPermalink }}'); }
+                        }
+                    </style>
+                    <div class="title-screen">
+                        <div class="title">
+                            <h1>{{ .Title }} – {{ .Date.Format "January 2, 2006" }}</h1>
+                            <p class="meta">{{ .ReadingTime }} minute read</p>
+                        </div>
+                    </div>
+                    {{ .Content }}
+                </article>
+            {{ end }}
+        </main>
+    </body>
+</html>
