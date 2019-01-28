@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8"/>
         <title>{{ .Site.Title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="main.css" />
@@ -35,7 +36,7 @@
                     </style>
                     <div class="title-screen">
                         <div class="title">
-                            <h1>{{ .Title }} – {{ .Date.Format "January 2, 2006" }}</h1>
+                            <h1>{{ .Title }} ({{ .Date.Format "January 2, 2006" }})</h1>
                             <p class="meta">{{ .ReadingTime }} minute read</p>
                         </div>
                     </div>

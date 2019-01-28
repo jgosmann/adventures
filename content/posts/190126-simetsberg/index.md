@@ -3,22 +3,22 @@ title: "Simetsberg"
 background: 0003.jpg
 date: 2019-01-26T09:34:04+01:00
 publishdate: 2019-01-27T09:34:04+01:00
-draft: true
+draft: false
 resources:
 - src: images/*.jpg
 ---
 
 While the avalanche danger was very high at the beginning of January, it settled
 at a 2 out of 5 this weekend. That allowed me to do my frist snow shoe hike of
-the season and try out my newly acquired snow shoes. Fabian, Emil, and me
+the season and to try out my newly acquired snow shoes. Fabian, Emil, and me
 decided to climb the Simetsberg, a mountain in the lower Alps south of Munich.
 
 <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=9.851989746093752%2C46.71538559839362%2C12.658996582031252%2C48.401855990063694&amp;layer=mapnik&amp;marker=47.56540738772852%2C11.2554931640625" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=47.5654&amp;mlon=11.2555#map=9/47.5654/11.2555">View Larger Map</a></small>
 
 We take the first reasonable public transport connection at 7:59am from Munich
-central station. We see quite a number of skiers and snow boarders heading out
-too. After about an hour-long train ride, we change into a bus that drops us at
-our starting point in Obernach after another 30 minutes. From there we start
+central station. There we see quite a number of skiers and snow boarders heading
+out too. After about an hour-long train ride, we change into a bus that drops us
+at our starting point in Obernach after another 30 minutes. From there we start
 walking. It is snowing a bit, but we ascend 100 or 200 meters before we decide
 that the snow is getting too deep and we put on our snow shoes.
 
@@ -64,10 +64,10 @@ up there.
 
 {{< rimg src="0009.jpg">}}
 
-On our way down we discover some more nice views that we missed on the way due
-to the thick cloud cover.
+On our way down we discover some more nice views that we missed on the way up
+due to the thick cloud cover.
 
-{{< rimg src="0010.jpg" caption="An odd snow formation. Presumambly it is a small tree fully covered in snow.">}}
+{{< rimg src="0010.jpg" caption="An odd snow formation. Presumably, it is a small tree fully covered in snow.">}}
 
 {{< rimg src="0011.jpg">}}
 
