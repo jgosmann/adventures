@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{ .Site.Title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ "main.css" | relURL }}" />
+        <!-- TODO meta -->
+        {{ range .AlternativeOutputFormats -}}
+            {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
+        {{ block "head" . }}
+        {{ end }}
+    </head>
+    <body>
+        <main>
+            {{ block "main" . }}
+            {{ end }}
+        </main>
+    </body>
+</html>
