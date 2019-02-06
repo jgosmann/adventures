@@ -1,9 +1,15 @@
 {{ define "head" }}
 {{ end }}
 {{ define "main" }}
-    <ul>
+    <ol class="postlist">
         {{ range .Pages }}
-            <li><a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-12" }} | {{ .Title }}</li>
+            <a href="{{ .RelPermalink }}"><li>
+                <div class="headline">{{ .Title }}</div>
+                <ul class="meta">
+                    <li>{{ .Date.Format "January 2, 2006" }}</li>
+                    <li>{{ .ReadingTime }} minute read</li>
+                </ul>
+            </li></a>
         {{ end }}
-    </ul>
+    </ol>
 {{ end }}
