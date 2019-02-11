@@ -1,67 +1,8 @@
 {{ define "head" }}
-    {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
-    <style>
-        .title-screen {
-            background-image: url('{{ ($bg.Fill "600x600").RelPermalink }}');
-        }
-        @media screen and (min-height: 601px), screen and (min-height: 301px) and (min-resolution: 2dppx) {
-            .title-screen { background-image: url('{{ ($bg.Fill "600x800").RelPermalink }}'); }
-        }
-        @media screen and (min-width: 601px), screen and (min-width: 301px) and (min-resolution: 2dppx) {
-            .title-screen { background-image: url('{{ ($bg.Fill "800x800").RelPermalink }}'); }
-        }
-        @media screen and (min-height: 801px), screen and (min-height: 401px) and (min-resolution: 2dppx) {
-            .title-screen { background-image: url('{{ ($bg.Fill "800x1200").RelPermalink }}'); }
-        }
-        @media screen and (min-width: 801px), screen and (min-width: 401px) and (min-resolution: 2dppx) {
-            .title-screen { background-image: url('{{ ($bg.Fill "1200x1200").RelPermalink }}'); }
-        }
-        @media screen and (min-height: 1201px), screen and (min-height: 601px) and (min-resolution: 2dppx) {
-            .title-screen { background-image: url('{{ ($bg.Fill "1200x1800").RelPermalink }}'); }
-        }
-        @media screen and (min-width: 1201px), screen and (min-width: 601px) and (min-resolution: 2dppx) {
-            .title-screen { background-image: url('{{ ($bg.Fill "1800x1800").RelPermalink }}'); }
-        }
-        @media screen and (min-height: 1801px), screen and (min-width: 1801px),
-                screen and (min-height: 1801px) and (min-resolution: 2dppx),
-                screen and (min-width: 1801px) and (min-resolution: 2dppx) {
-            .title-screen { background-image: url('{{ $bg.RelPermalink }}');
-        }
-        @media screen and (min-resolution: 2dppx) {
-            .title-screen { background-size: 300px 300px; }
-        }
-        @media screen and (min-height: 301px) and (min-resolution: 2dppx) {
-            .title-screen { background-size: 300px 400px; }
-        }
-        @media screen and (min-width: 301px) and (min-resolution: 2dppx) {
-            .title-screen { background-size: 400px 400px; }
-        }
-        @media screen and (min-height: 401px) and (min-resolution: 2dppx) {
-            .title-screen { background-size: 400px 600px; }
-        }
-        @media screen and (min-width: 401px) and (min-resolution: 2dppx) {
-            .title-screen { background-size: 600px 600px; }
-        }
-        @media screen and (min-height: 601px) and (min-resolution: 2dppx) {
-            .title-screen { background-size: 600px 900px; }
-        }
-        @media screen and (min-width: 601px) and (min-resolution: 2dppx) {
-            .title-screen { background-size: 900px 900px; }
-        }
-        @media screen and (min-height: 1801px) and (min-resolution: 2dppx),
-                screen and (min-width: 1801px) and (min-resolution: 2dppx) {
-            .title-screen { background-size: 50%; }
-        }
-    </style>
 {{ end }}
 {{ define "main" }}
+    <div class="navlink"><a href="{{ relref . "/" }}">&lt;&nbsp;Back to list of posts</a></div>
     <article>
-        <div class="title-screen">
-            <div class="title">
-                <h1>{{ .Title }} ({{ .Date.Format "January 2, 2006" }})</h1>
-                <p class="meta">{{ .ReadingTime }} minute read</p>
-            </div>
-        </div>
         {{ .Content }}
     </article>
 {{ end }}

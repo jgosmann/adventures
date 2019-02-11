@@ -89,11 +89,14 @@ img {
     max-height: 80vh;
 }
 
-p {
+p, ul, h1 {
     width: 600px;
     max-width: calc(100% - 32px);
     margin-left: auto;
     margin-right: auto;
+}
+
+p {
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -139,4 +142,25 @@ ul.meta, ol.meta {
 .meta > li {
     white-space: nowrap;
     margin-right: 16px;
+}
+
+.subscribe {
+    text-transform: uppercase;
+}
+
+.navlink {
+    font-weight: bold;
+    padding: 0 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.navlink a {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.navlink a:hover {
+    background-color: #e1e0ff;
 }

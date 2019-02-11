@@ -1,8 +1,9 @@
 {{ define "head" }}
 {{ end }}
 {{ define "main" }}
+    <div class="navlink subscribe"><a href="{{ relref . "subscribe" }}">Subscribe</a></div>
     <ol class="postlist">
-        {{ range .Pages }}
+        {{ range where .Pages "Section" "posts" }}
             <a href="{{ .RelPermalink }}"><li>
                 <div class="headline">{{ .Title }}</div>
                 <ul class="meta">
