@@ -130,13 +130,17 @@ p {
 }
 
 .postlist a {
+    transition: 0.2s;
     color: #000;
     text-decoration: none;
 }
 
+.postlist a:hover {
+    color: #fff;
+}
+
 .postlist a:hover li {
-    color: #000;
-    background-color: #e1e0ff;
+    background-color: #336cc6;
 }
 
 .postlist .headline {
@@ -172,6 +176,7 @@ ul.meta, ol.meta {
 }
 
 .navlink a {
+    transition: 0.2s;
     display: inline-block;
     color: #000;
     text-decoration: none;
@@ -179,8 +184,8 @@ ul.meta, ol.meta {
 }
 
 .navlink a:hover {
-    color: #000;
-    background-color: #e1e0ff;
+    color: #fff;
+    background-color: #336cc6;
 }
 
 a {
