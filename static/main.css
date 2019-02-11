@@ -135,6 +135,7 @@ p {
 }
 
 .postlist a:hover li {
+    color: #000;
     background-color: #e1e0ff;
 }
 
@@ -178,5 +179,15 @@ ul.meta, ol.meta {
 }
 
 .navlink a:hover {
+    color: #000;
     background-color: #e1e0ff;
+}
+
+a {
+    color: #336cc6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dd16c9;
 }
