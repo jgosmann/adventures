@@ -57,6 +57,7 @@
 {{ define "main" }}
     <article>
         <div class="title-screen">
+            <div class="navlink"><a href="{{ relref . "/" }}">&lt;&nbsp;Back to list of posts</a></div>
             <div class="title">
                 <h1>{{ .Title }} ({{ .Date.Format "January 2, 2006" }})</h1>
                 <p class="meta">{{ .ReadingTime }} minute read</p>

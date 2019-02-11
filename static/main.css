@@ -154,6 +154,11 @@ ul.meta, ol.meta {
     border-bottom: 1px solid #ccc;
 }
 
+.title-screen .navlink {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 .navlink a {
     display: inline-block;
     color: #000;
