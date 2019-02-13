@@ -1,4 +1,10 @@
 .DS_Store
 .*.swp
+assets/meta.html
+node_modules
 public
 resources/_gen
+static/browserconfig.xml
+static/favicon.ico
+static/manifest.json
+static/*.png
