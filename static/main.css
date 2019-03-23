@@ -175,12 +175,20 @@ ul.meta, ol.meta {
     border-bottom: 1px solid #ccc;
 }
 
+.nextlink {
+    text-align: right;
+}
+
+.nextlink a {
+    border: 1px solid #ccc;
+}
+
 .title-screen .navlink {
     border: none;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.navlink a {
+.navlink a, .nextlink a {
     transition: 0.2s;
     display: inline-block;
     color: #000;
@@ -188,7 +196,7 @@ ul.meta, ol.meta {
     padding: 8px;
 }
 
-.navlink a:hover {
+.navlink a:hover, .nextlink a:hover {
     color: #fff;
     background-color: #336cc6;
 }
