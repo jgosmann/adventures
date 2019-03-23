@@ -13,7 +13,7 @@ colder and snow takes time to melt. Thus, Fabian (from last time), another
 Fabian, Kristina, Martin, Susanne, and I still had good conditions for
 another snow shoe hike to the mountain Bodenschneid.
 
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=11.817641258239746%2C47.66475151431423%2C11.861500740051271%2C47.69104578658821&amp;layer=mapnik&amp;marker=47.67790525830325%2C11.83955309999999" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=47.6779&amp;mlon=11.8396#map=15/47.6779/11.8396">View Larger Map</a></small>
+{{< loc "47.6779" "11.8396" >}}
 
 At 8:04am, we leave from Munich Central Station in a train packed with skiers and
 snowboarders. After about an hour we arrive in Neuhaus at the Schliersee from

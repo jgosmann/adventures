@@ -13,7 +13,7 @@ at a 2 out of 5 this weekend. That allowed me to do my frist snow shoe hike of
 the season and to try out my newly acquired snow shoes. Fabian, Emil, and me
 decided to climb the Simetsberg, a mountain in the lower Alps south of Munich.
 
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=9.851989746093752%2C46.71538559839362%2C12.658996582031252%2C48.401855990063694&amp;layer=mapnik&amp;marker=47.56540738772852%2C11.2554931640625" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=47.5654&amp;mlon=11.2555#map=9/47.5654/11.2555">View Larger Map</a></small>
+{{< loc "47.5654" "11.2555" >}}
 
 We take the first reasonable public transport connection at 7:59am from Munich
 central station. There we see quite a number of skiers and snow boarders heading
