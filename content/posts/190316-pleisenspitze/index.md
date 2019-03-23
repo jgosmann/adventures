@@ -3,22 +3,21 @@ title: "Pleisenspitze, Tag 1"
 background: 22.jpg
 date: 2019-03-16T20:14:40+01:00
 publishdate: 2019-03-19T20:14:40+01:00
-draft: true
 resources:
 - src: images/*.jpg
+- src: 20190316.gpx
 ---
 
 The winter season is ending, we already had some quite warm days in Munich, and
-even the first barbeque at my work place. Reasons enough to have a final,
-grandiose snow shoe weekend with Fabian, Martin, Kristina, and Susanne and the
-goal to summit the Pleisenspitze at 2569 meters above the sea.
-
-TODO map
+even the first barbeque of the year happened at my work place. Reasons enough to
+have a final, grandiose snow shoe weekend with Fabian, Martin, Kristina, and
+Susanne with the goal to summit the Pleisenspitze at 2569 meters above sea
+level.
 
 Unlike the other hikes, this is a two day adventure and allows us to have a late
-start on Saturday with a train leaving at 10:32. Originally we planned to stay
+start on Saturday with a train leaving at 10:32. Originally, we planned to stay
 on it until the little Austrian town of Scharnitz, but this requires to get
-another an additional ticket (because it is one stop outside of Germany) and the
+an additional ticket (because it is one stop outside of Germany) and the
 conductor tells us that we could walk from Mittenwald (the last stop in Germany)
 to Scharnitz. We are pretty sure that the conductor himself never did this, but
 check out the option regardless and decide for it because we have quite some
@@ -33,14 +32,17 @@ To get to Scharnitz by foot, we follow more or less the river Isar which also
 flows through Munich. Except for one 80 meter ascend and descend, it is a pretty
 flat trail. On some stretches, however, is a thin layer of mushy and slippery
 snow which is slightly annoying and not deep enough to put on the snow shoes.
-Anyways we make it to the German-Austrian border. Not that you would notice in
-any way, it is Europe after all. But this ravine apparently marks the border.
+
+{{< gpxTrack src="20190316.gpx" >}}
+
+Anyways, we make it to the German-Austrian border. Not that you would notice in
+any way; it is Europe after all. But this ravine apparently marks the border.
 
 {{< rimg src="3.jpg" alt="A ravine marking the German-Austrian border.">}}
 
-{{< rimg src="4.jpg" caption="First views of the mountain range we are going to climb.">}}
+{{< rimg src="4.jpg" caption="The Pleisenspitze lies behind this mountain range.">}}
 
-{{< rimg src="5.jpg" alt="The mountain rang we are going to climb.">}}
+{{< rimg src="5.jpg" alt="A mountain range hiding the view of the Pleisenspitze.">}}
 
 {{< rimg src="6.jpg" alt="Susanne and Kristina">}}
 
@@ -68,17 +70,18 @@ any way, it is Europe after all. But this ravine apparently marks the border.
 
 {{< rimg src="18.jpg" caption="The Pleisenhütte">}}
 
-Finally we reach the Pleisenhütte, a smallish cabin where we will stay for the
-night with a bunch of other snow shoe hikers and skiers. Such cabins are pretty
-typical in the Alps. The comfort can vary quite a bit; in this case it is
-somewhat minimal as there is no running water (there might be in the summer).
-But we get a single room just for the five of our group while some of the other
-groups have to share rooms. It is also not uncommon to have communal bunks with
-twenty to thirty people in one big room in such a hut.
+Finally, after 850 meters of elevation gain, we reach the Pleisenhütte,
+a smallish cabin where we will stay for the night with a bunch of other snow
+shoe hikers and skiers. Such cabins are pretty typical in the Alps. The comfort
+can vary quite a bit; in this case it is somewhat minimal as there is no running
+water (there might be in the summer).  But we get a single room just for the
+five of our group while some of the other groups have to share rooms. It is also
+not uncommon to have communal bunks with twenty to thirty people in one big room
+in such a hut.
 
 We enjoy the last light of the day on the patio with some drinks. Which requires
-us to put on surprisingly many layers, given that we were hiking in T-Shirts, to
-not freeze.
+us to put on surprisingly many layers to prevent us from getting cold, given
+that we were hiking in T-Shirts.
 
 {{< rimg src="19.jpg" caption="View from the patio.">}}
 
@@ -95,3 +98,5 @@ dinner. The menu offers a selection of local dishes, many of them involving some
 kind of [Knödel](https://en.wikipedia.org/wiki/Kn%C3%B6del). Once satisfied we
 pass the remaining evening with games under the light of oil lamps and head
 lamps until we finally go to sleep.
+
+{{< nextday >}}
