@@ -1,3 +1,13 @@
+import { config, dom, library } from '@fortawesome/fontawesome-svg-core'
+config.keepOriginalSource = false;
+
+import { faRssSquare } from '@fortawesome/free-solid-svg-icons/faRssSquare'
+
+library.add(faRssSquare)
+
+dom.watch()
+
+
 import 'leaflet/dist/leaflet.css'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerRetinaIcon from 'leaflet/dist/images/marker-icon-2x.png'

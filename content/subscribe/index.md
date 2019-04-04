@@ -7,7 +7,11 @@ draft: false
 
 # How to subscribe to the blog
 
-The blog provides an [RSS feed]({{< relref path="/" outputFormat="rss" >}}) that
+<div class="icon-btn">
+    <a href="{{< ref path="/" outputFormat="rss" >}}">{{< icon fa-rss-square >}}</a>
+</div>
+
+The blog provides an [RSS feed]({{< ref path="/" outputFormat="rss" >}}) that
 can deliver new posts directly to you. [A short explanation of RSS can be found
 here.](http://www.whatisrss.com/)
 

@@ -248,3 +248,8 @@ a {
 a:hover {
     color: #dd16c9;
 }
+
+.icon-btn {
+    font-size: 6rem;
+    text-align: center;
+}
