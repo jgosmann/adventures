@@ -1,4 +1,5 @@
 const changed = require('gulp-changed');
+const child_process = require('child_process');
 const favicons = require('favicons').stream;
 const fs = require('fs');
 const gulp = require('gulp');
@@ -30,4 +31,9 @@ gulp.task('favicons', () => {
       );
     }))
     .pipe(gulp.dest(dest));
+});
+
+gulp.task('deploy', () => {
+  return child_process.execFile(
+    "lftp -u jgosmann 'sftp://hyper-world.de' -e 'mirror -R public adventures; wait all; exit'");
 });
