@@ -67,7 +67,7 @@ undergrowth.
 
 {{< rimg src="0017.jpg" caption="The great view after finally reaching the top of the ridge.">}}
 
-{{< rimg src="0018.jpg" alt="Panoramic view from the Bodenschneid ridge">}}
+{{< pano src="0018.jpg" alt="Panoramic view from the Bodenschneid ridge">}}
 
 {{< rimg src="0019.jpg" caption="The final part before the summit.">}}
 

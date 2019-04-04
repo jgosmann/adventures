@@ -44,7 +44,7 @@ close to use.
 
 {{< rimg src="29.jpg" caption="It is again pretty sunny and warm.">}}
 
-{{< rimg src="33.jpg" alt="The view during the ascent.">}}
+{{< pano src="33.jpg" alt="The view during the ascent.">}}
 
 {{< rimg src="35.jpg" alt="Susanne and Kristina">}}
 
@@ -54,7 +54,7 @@ close to use.
 
 {{< rimg src="39.jpg" caption="The last few steps …">}}
 
-{{< rimg src="40.jpg" caption="… before we can enjoy the amazing view of the Alps.">}}
+{{< pano src="40.jpg" caption="… before we can enjoy the amazing view of the Alps.">}}
 
 We have a quick snack, take in the view, and then head back down. We do not want
 to stay too long because the sun is slowly melting the snow, which might

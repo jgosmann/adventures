@@ -66,7 +66,7 @@ any way; it is Europe after all. But this ravine apparently marks the border.
 
 {{< rimg src="16.jpg" caption="… and better as we climb higher.">}}
 
-{{< rimg src="17.jpg" alt="Panoramic view">}}
+{{< pano src="17.jpg" alt="Panoramic view">}}
 
 {{< rimg src="18.jpg" caption="The Pleisenhütte">}}
 
