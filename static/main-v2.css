@@ -34,7 +34,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     display: block;
     position: absolute;
-    bottom: 10%;
+    bottom: 15%;
     width: 80%;
     right: 0;
     padding: 8px;
@@ -257,6 +257,15 @@ a:hover {
 .icon-btn {
     font-size: 6rem;
     text-align: center;
+}
+
+.scroll-down {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 6rem;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 85%;
 }
 
 .scroll-left {

@@ -1,11 +1,12 @@
 import { config, dom, library } from '@fortawesome/fontawesome-svg-core'
 config.keepOriginalSource = false;
 
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight'
 import { faRssSquare } from '@fortawesome/free-solid-svg-icons/faRssSquare'
 
-library.add(faChevronLeft, faChevronRight, faRssSquare)
+library.add(faChevronDown, faChevronLeft, faChevronRight, faRssSquare)
 
 dom.watch()
 
