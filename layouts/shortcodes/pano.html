@@ -1,5 +1,6 @@
 {{ $img := index (.Page.Resources.Match (printf "images/%s" (.Get "src"))) 0 }}
 <div class="pano" style="height: {{ $img.Height }}px;">
+    <div class="pano-scroll">
         <div id="rimg-dynload-{{ .Ordinal }}" class="dynload">
         </div>
         <script>
@@ -10,8 +11,14 @@
                 + '<img src="{{ $img.RelPermalink }}" alt="{{ .Get "alt" }}" />'
             );
         </script>
-        {{ with .Get "caption" }}
-            <div class="caption">{{.}}</div>
-        {{ end }}
-    </a>
+    </div>
+    <div class="scroll-left">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="scroll-right">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+    {{ with .Get "caption" }}
+        <div class="caption">{{.}}</div>
+    {{ end }}
 </div>
