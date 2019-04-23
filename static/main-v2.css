@@ -138,11 +138,12 @@ iframe {
     width: calc(100vw - 64px);
 }
 
-p, ul, h1 {
+p, ul, h1, article ol {
     width: 600px;
     max-width: calc(100% - 32px);
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 ul {

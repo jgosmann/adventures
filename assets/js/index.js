@@ -4,9 +4,10 @@ config.keepOriginalSource = false;
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight'
+import { faEye } from '@fortawesome/free-solid-svg-icons/faEye'
 import { faRssSquare } from '@fortawesome/free-solid-svg-icons/faRssSquare'
 
-library.add(faChevronDown, faChevronLeft, faChevronRight, faRssSquare)
+library.add(faChevronDown, faChevronLeft, faChevronRight, faEye, faRssSquare)
 
 dom.watch()
 
