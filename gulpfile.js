@@ -33,7 +33,7 @@ gulp.task('favicons', () => {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('deploy', () => {
-  return child_process.execFile(
+gulp.task('deploy', async () => {
+  await child_process.execFile(
     "lftp -u jgosmann 'sftp://hyper-world.de' -e 'mirror -R public adventures; wait all; exit'");
 });
