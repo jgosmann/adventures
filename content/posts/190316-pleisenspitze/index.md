@@ -6,6 +6,8 @@ publishdate: 2019-03-19T20:14:40+01:00
 resources:
 - src: images/*.jpg
 - src: 20190316.gpx
+categories:
+- snow shoeing
 ---
 
 The winter season is ending, we already had some quite warm days in Munich, and

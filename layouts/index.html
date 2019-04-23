@@ -8,6 +8,11 @@
                 <div class="headline">{{ .Title }}</div>
                 <ul class="meta">
                     <li>{{ .Date.Format "January 2, 2006" }}</li>
+                    <li><ol class="comma">
+                        {{ range .Params.categories }}
+                            <li>{{ . }}</li>
+                        {{ end }}
+                    </ol></li>
                     <li>{{ .ReadingTime }} minute read</li>
                 </ul>
             </li></a>

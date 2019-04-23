@@ -6,6 +6,8 @@ publishdate: 2019-01-27T09:34:04+01:00
 draft: false
 resources:
 - src: images/*.jpg
+categories:
+- snow shoeing
 ---
 
 While the avalanche danger was very high at the beginning of January, it settled

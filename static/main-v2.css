@@ -209,6 +209,16 @@ ul.meta, ol.meta {
     margin-right: 16px;
 }
 
+ol.comma, ul.comma {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.comma li:not(:last-of-type):after {
+    content: ",";
+}
+
 .subscribe {
     text-transform: uppercase;
 }

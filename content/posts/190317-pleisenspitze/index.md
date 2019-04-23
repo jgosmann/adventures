@@ -7,6 +7,8 @@ resources:
 - src: images/*.jpg
 - src: 20190317-0.gpx
 - src: 20190317-1.gpx
+categories:
+- snow shoeing
 ---
 
 We wake up between 7 and 7:30am, shortly before the breakfast. Because there is
