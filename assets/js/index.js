@@ -34,6 +34,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const initMap = (targetId) => {
   const map = leaflet.map(targetId, {
     dragging: !L.Browser.mobile,
+    tap: !L.Browser.mobile,
     scrollWheelZoom: false
   });
 
