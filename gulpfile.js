@@ -34,6 +34,11 @@ gulp.task('favicons', () => {
 });
 
 gulp.task('deploy', async () => {
-  await child_process.execFile(
-    "lftp -u jgosmann 'sftp://hyper-world.de' -e 'mirror -R public adventures; wait all; exit'");
+  child_process.execFileSync(
+    'rsync', [
+      '-avz', '--delete', '--checksum',
+      'public/', 'jgosmann@hyper-world.de:~/adventures'
+    ],
+    { stdio: 'inherit' }
+  );
 });
