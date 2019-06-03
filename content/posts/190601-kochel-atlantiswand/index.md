@@ -6,6 +6,8 @@ publishdate: 2019-06-03T20:02:17+02:00
 draft: false
 resources:
 - src: images/*.jpg
+categories:
+- rock climbing
 ---
 
 Summer is finally here and I went out climbing again with Jason and Lisa. This
