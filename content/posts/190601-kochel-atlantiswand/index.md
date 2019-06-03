@@ -28,6 +28,8 @@ slipping of on one of the last crux moves.
 
 {{< rimg src="3.jpg" description="Lisa on Sog ins Nichts">}}
 
+# Climbing log book
+
 {{<climbs>}}
 {{<climb name="Scherzhaft Männlich" uiaa="5+" yds="5.8" style="flash">}}
 {{<climb name="Sog ins Nichts" uiaa="8" yds="5.11d" style="toprope-hangdog">}}
