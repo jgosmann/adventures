@@ -5,11 +5,23 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight'
+import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
 import { faDog } from '@fortawesome/free-solid-svg-icons/faDog'
 import { faEye } from '@fortawesome/free-solid-svg-icons/faEye'
+import { faLevelDownAlt } from '@fortawesome/free-solid-svg-icons/faLevelDownAlt'
 import { faRssSquare } from '@fortawesome/free-solid-svg-icons/faRssSquare'
 
-library.add(faBolt, faChevronDown, faChevronLeft, faChevronRight, faDog, faEye, faRssSquare)
+library.add(
+  faBolt,
+  faChevronDown,
+  faChevronLeft,
+  faChevronRight,
+  faCircle,
+  faDog,
+  faEye,
+  faLevelDownAlt,
+  faRssSquare
+)
 
 dom.watch()
 

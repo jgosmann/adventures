@@ -3,7 +3,12 @@
         <i class="fas fa-eye" title="onsight"></i>
     {{ else if eq (.Get "style") "flash" }}
         <i class="fas fa-bolt" title="flash"></i>
+    {{ else if eq (.Get "style") "redpoint" }}
+        <i class="fas fa-circle" style="color: #b51313;" title="redpoint"></i>
     {{ else if eq (.Get "style") "hangdog" }}
+        <i class="fas fa-dog" title="hang dog"></i>
+    {{ else if eq (.Get "style") "toprope-hangdog" }}
+        <i class="fas fa-level-down-alt" title="toprope"></i>
         <i class="fas fa-dog" title="hang dog"></i>
     {{ end }}
     {{ .Get "name" }} ({{ with .Get "french"}}{{ . }}, {{ end }}UIAA {{ .Get "uiaa" }}, YDS {{ .Get "yds" }})
