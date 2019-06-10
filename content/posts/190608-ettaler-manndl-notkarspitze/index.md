@@ -2,12 +2,12 @@
 title: "Ettaler Manndl und Notkarspitze"
 date: 2019-06-8T17:19:23+02:00
 publishdate: 2019-06-09T17:19:23+02:00
-draft: true
+draft: false
 background: 6.jpg
 resources:
 - src: images/*.jpg
 categories:
-- hike
+- hiking
 ---
 
 Instead of rock climbing, I did a hike with Fabian this weekend. It was a long
@@ -20,9 +20,9 @@ summited the Ettaler Manndl (1636m).
 
 {{< rimg src="2.jpg" alt="View from the Ettaler Manndl">}}
 
-The last part before the summit was not normal hiking trail, but a [via
+The last part before the summit was not a normal hiking trail, but a [via
 ferrata](https://en.wikipedia.org/wiki/Via_ferrata). So some easy climbing was
-involved to actually getting to the top. It was the lowest difficulty rating
+involved in actually getting to the top. It was the lowest difficulty rating
 as far as climbing or via ferratas go, so as experienced climbers, we did it
 without the backup of a via ferrata set. Though, we had to be a little bit
 careful because the rock was quite polished and some blocks were a bit loose,
@@ -36,7 +36,7 @@ We then descended to Ettal, a little village with a monestary.
 
 {{< rimg src="5.jpg" caption="Ettal with its monestary">}}
 
-On the other side of Ettal we then had climb another mountain, the Notkarspitze
+On the other side of Ettal, we then had climb another mountain, the Notkarspitze
 (1889m). This was getting quite tiresome after having already done a whole
 mountain.
 
@@ -60,5 +60,5 @@ that he messed up the schedule and the train was 20 minutes later than he
 thought.
 
 Anyways it was a challenging, but great hike. It took us about 8:20h of walking
-time. We ascended a total of 2075m and descended 2225m. That is much more that
+time. We ascended a total of 2075m and descended 2225m. That is much more than
 I have done in a single day in a long time.
