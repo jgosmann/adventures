@@ -2,3 +2,7 @@ baseURL = "https://adventures.jgosmann.de/"
 languageCode = "en-us"
 title = "Jan's outdoor adventures"
 timeout = 30000
+
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 90
