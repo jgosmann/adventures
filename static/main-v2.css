@@ -119,6 +119,17 @@ iframe {
     max-height: 100%;
 }
 
+.video {
+    margin: 32px;
+    font-size: 0;
+    text-align: center;
+}
+
+.video video {
+    max-height: 80vh;
+    max-width: 100%;
+}
+
 .pano img {
     max-height: 100vh;
 }
@@ -167,6 +178,15 @@ p {
     white-space: nowrap;
 }
 
+.circled {
+    display: inline-block;
+    color: #fff;
+    background: #000;
+    border-radius: 50%;
+    width: 1.1em;
+    height: 1.1em;
+    text-align: center;
+}
 
 .postlist {
     margin: 0;
