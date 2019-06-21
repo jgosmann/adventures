@@ -9,9 +9,11 @@
                 <ul class="meta">
                     <li>{{ .Date.Format "January 2, 2006" }}</li>
                     <li><ol class="comma">
-                        {{ range .Params.categories }}
-                            <li>{{ . }}</li>
-                        {{ end }}
+                        {{ with .Params.categories }}
+                            {{ range sort . }}
+                                <li>{{ . }}</li>
+                            {{ end }}
+                        {{end}}
                     </ol></li>
                     <li>{{ .ReadingTime }} minute read</li>
                 </ul>

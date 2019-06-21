@@ -7,6 +7,7 @@ draft: false
 resources:
 - src: images/*.jpg
 categories:
+- sport climbing
 - rock climbing
 ---
 

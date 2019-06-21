@@ -7,6 +7,7 @@ background: 9.jpg
 resources:
 - src: images/*.jpg
 categories:
+- sport climbing
 - rock climbing
 ---
 
