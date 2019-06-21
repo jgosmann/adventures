@@ -32,7 +32,7 @@ either, but at least it felt possible and maybe having an accurate grade.
 # Climbing log book
 
 {{<climbs>}}
-{{<climb name="Take It Easy" french="5c" uiaa="6" yds="5.9" style="flash">}}
-{{<climb name="Der Gipfelschilling" french="6b+" uiaa="7+" yds="5.10d" style="hangdog">}}
-{{<climb name="L'Lisa" french="6c" uiaa="7+/8-" yds="5.11a/b" style="hangdog">}}
+{{<climb name="Take It Easy" grade="french 5c" style="flash">}}
+{{<climb name="Der Gipfelschilling" grade="french 6b+" style="hangdog">}}
+{{<climb name="L'Lisa" grade="french 6c" style="hangdog">}}
 {{</climbs>}}

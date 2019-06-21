@@ -32,7 +32,7 @@ slipping of on one of the last crux moves.
 # Climbing log book
 
 {{<climbs>}}
-{{<climb name="Scherzhaft Männlich" uiaa="5+" yds="5.8" style="flash">}}
-{{<climb name="Sog ins Nichts" uiaa="8" yds="5.11d" style="toprope-hangdog">}}
-{{<climb name="Das Ramayani Kapitel" uiaa="7+" yds="5.11a" style="redpoint">}}
+{{<climb name="Scherzhaft Männlich" grade="UIAA 5+" style="flash">}}
+{{<climb name="Sog ins Nichts" grade="UIAA 8" style="toprope-hangdog">}}
+{{<climb name="Das Ramayani Kapitel" grade="UIAA 7+" style="redpoint">}}
 {{</climbs>}}

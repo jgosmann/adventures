@@ -51,7 +51,7 @@ more climbing around Munich this summer.
 # Climbing log book
 
 {{<climbs>}}
-{{<climb name="Radlweg" uiaa="3" yds="5.4" style="onsight">}}
-{{<climb name="Schwarzer Riss" uiaa="4" yds="5.5" style="onsight">}}
-{{<climb name="Weberknecht Verschneidung" uiaa="4" yds="5.5" style="onsight">}}
+{{<climb name="Radlweg" grade="UIAA 3" style="onsight">}}
+{{<climb name="Schwarzer Riss" grade="UIAA 4" style="onsight">}}
+{{<climb name="Weberknecht Verschneidung" grade="UIAA 4" style="onsight">}}
 {{</climbs>}}
