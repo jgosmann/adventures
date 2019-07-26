@@ -6,3 +6,4 @@ timeout = 30000
 [imaging]
 resampleFilter = "CatmullRom"
 quality = 90
+anchor = "center"
