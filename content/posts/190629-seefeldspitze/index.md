@@ -8,6 +8,11 @@ resources:
 - src: images/*.jpg
 categories:
 - hiking
+summary:
+  Twice a year my employer invites all employees to a five-star superior hotel
+  in the middle of the Alps. Of the two days we stay there, one is regarded as
+ leisure time and a whole range of activities is offered. I decided to join a
+ hike with some colleagues onto the Seefeldspitze.
 ---
 
 Twice a year my employer invites all employees to a five-star superior hotel in
