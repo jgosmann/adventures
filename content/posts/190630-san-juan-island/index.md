@@ -1,0 +1,62 @@
+---
+title: "San Juan Island, arrival"
+date: 2019-06-30T09:41:47+02:00
+publishdate: 2019-07-27T09:41:47+02:00
+draft: false
+resources:
+- src: images/*.jpg
+categories:
+- travel
+background: 3.jpg
+---
+
+My vacation starts with waking up before sunrise to catch an early flight at
+8am. Admitted, 8am is not that early, but it is always good to be early for an
+international flight. Especially if your luggage looks like this, in order to
+check-in two backpacks as a single item (in combination they are still below
+the size and weight restrictions):
+
+{{< rimg src="1.jpg" alt="How to check-in two bags as a single bag">}}
+
+This works without complaints, I only had to find the bulky luggage counter.
+
+After a short layover in Frankfurt, I board a ten hour flight to Seattle/Tacoma
+(“Seatac”) that is as enjoyable as such a long flight can be. It helps that the
+seat next to me is free.
+
+{{<travel "[48.155004, 11.4717963], [50.1211277, 8.4964812], [47.441618, -122.3012509]">}}
+
+Once I arrive in Seatac, I unfortunately have to wait a long time in a hallway
+because the immigration hall is “at capacity”. When I finally make through,
+though, I surprisingly get a really friendly immigration officer to talk to.
+
+After picking up my luggage, my friends Peter, his dad David, Alex, Yvonne, and
+Pants pick me up from the airport. The next stop is the Seattle REI to stock up
+on freeze-dried meals and some outdoor equipment for an upcoming part of the
+trip.  Then we continue to drive a little bit up north to the San Juan Island
+ferry in Anacortes. On the way, we pass four (!) accidents, one of which could
+have been in a movie: we see a a white car speeding along the shoulder on the
+right, then swirving to the left into traffic, shortly after followed by
+a police car. Not long after, we pass an accident caused by that car involving
+a motorcycle.  Luckily it seems that no one got hurt! But the driver of that car
+seems to have run. This definitely did not help to instill any more confidence
+in the US highways than I had before.
+
+Unfortunately, we barely miss the next ferry to San Juan Island and have to wait
+about two more hours. We pass the time by playing a bit of Frisbee, talking to
+a guy who rode is bicycle up from San Francisco, and ordering some Chinese food.
+On the ferry, I finally get hit by the jetlag and doze off for most of the time,
+but still regain consciousness to see the sunset.
+
+{{< rimg src="2.jpg" alt="On the ferry ride">}}
+
+{{< rimg src="3.jpg" alt="On the ferry ride">}}
+
+{{<travel "[47.6077,-122.3421], [48.4852,-122.6160], [48.5316,-123.0867]">}}
+
+When we finally arrive at Peter's parent's house, we go to sleep soon, but not
+before listening to the nighthawks for a while on the deck. Every once in
+a while, one of these birds [goes into a deep dive making a unique
+sound](https://youtu.be/E-_CDXH9qhY).
+
+{{<nextday>}}

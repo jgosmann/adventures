@@ -48,3 +48,5 @@ beatiful in summer.
 
 All in all this was a nice warm-up for my vacation starting the next day with an
 early flight around 8am.
+
+{{<nextday>}}
