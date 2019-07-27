@@ -1,12 +1,13 @@
 .DS_Store
 .*.swp
 assets/meta.html
+layouts/_default/baseof.html
 node_modules
 public
 resources/_gen
 static/browserconfig.xml
-static/bundle.js
-static/bundle.js.map
+static/bundle.*.js
+static/bundle.*.js.map
 static/favicon.ico
 static/manifest.json
 static/*.png

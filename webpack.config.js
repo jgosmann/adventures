@@ -1,4 +1,6 @@
+const fs = require('fs');
 const path = require('path');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: './assets/js/index.js',
@@ -21,7 +23,21 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'static'),
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
     library: 'joa'
-  }
+  },
+  plugins: [
+    new ManifestPlugin({
+      map: (fd) => {
+        if (fd.name === 'main.js') {
+          templateFile = path.resolve(__dirname, 'layouts/_default/baseof.template.html');
+          outFile = path.resolve(__dirname, 'layouts/_default/baseof.html');
+          content = fs.readFileSync(templateFile, 'utf8');
+          content = content.replace(/%SCRIPT%/g, fd.path);
+          fs.writeFileSync(outFile, content);
+        }
+        return fd;
+      }
+    })
+  ]
 };
