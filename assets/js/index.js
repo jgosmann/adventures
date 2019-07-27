@@ -31,6 +31,7 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerRetinaIcon from 'leaflet/dist/images/marker-icon-2x.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import leaflet from 'leaflet'
+import 'Leaflet.Geodesic/Leaflet.Geodesic'
 
 // FIXME allow for prefix, is there in general a better solution?
 const DefaultIcon = L.icon({
@@ -104,8 +105,7 @@ const showGpxTrack = (targetId, trackUrl, onlySegments) => {
 }
 
 const showLocation = (targetId, latLng, zoomLevel) => {
-
-  const map = initMap(targetId)
+  const map = initMap(targetId);
   if (zoomLevel) {
     map.setView(latLng, zoomLevel);
   } else {
@@ -114,6 +114,13 @@ const showLocation = (targetId, latLng, zoomLevel) => {
   }
 
   leaflet.marker(latLng).addTo(map);
+}
+
+const showRoute = (targetId, routeLatLng) => {
+  const map = initMap(targetId);
+  const route = L.geodesic([], {steps: 50, color: '#d43c31'}).addTo(map);
+  route.setLatLngs([routeLatLng]);
+  map.fitBounds(route.getBounds(), {padding: [50, 50]});
 }
 
 const intersectionOptions = {
@@ -136,4 +143,4 @@ const registerDynLoad = (targetId, html) => {
   intersectionObserver.observe(target)
 }
 
-export { registerDynLoad, showGpxTrack, showLocation }
+export { registerDynLoad, showGpxTrack, showLocation, showRoute }

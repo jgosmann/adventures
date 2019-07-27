@@ -1,0 +1,4 @@
+<div id="{{ .Page.UniqueID }}-travel{{ .Ordinal }}" class="map"></div>
+<script>
+  joa.showRoute('{{ .Page.UniqueID }}-travel{{ .Ordinal }}', [{{ .Get 0 | safeJS }}]);
+</script>
