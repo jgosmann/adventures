@@ -1,5 +1,5 @@
 ---
-title: "Squamish, day 15"
+title: "Squamish, day 6"
 date: 2019-07-15T20:18:55+02:00
 publishdate: 2019-08-02T20:18:55+02:00
 draft: false
