@@ -1,0 +1,52 @@
+---
+title: "Squamish, day 8"
+date: 2019-07-17T14:11:39+02:00
+publishdate: 2019-08-03T14:11:39+02:00
+draft: false
+resources:
+- src: images/*.jpg
+categories:
+- rock climbing
+- sport climbing
+background: 1.jpg
+---
+
+It is raining. Thus, we go back to the overhanging routes that stay dry in rain
+located in the Cheakamus Canyon. Because of the overhanging nature of the rock,
+the routes are quite hard. But they have fixed draws, which means you can try
+them without losing gear if you cannot finish them.
+
+{{<loc "49.9100" "-123.1562" "10">}}
+
+We start with Face the Music (5.12a). It has a lower crux for me that I can
+figure out and another crux not far from the anchors. I figure out the beta, but
+cannot pull of the moves. My reach always ends up a little bit too short, but it
+might be doable with more practice.
+
+Next we try Mrs. Negative (5.12a), a pretty short route consisting out of
+essentially two boulder problems separated by a good rest. Unexpectedly, I make
+it through the first boulder problem without much trouble. It takes me a few
+attempts to figure out the second part, that also feels doable except for the
+very top. I cannot make it to the anchors. Maybe this is because the top is
+soaking wet from the rain or maybe those moves are just hard. I give the route
+a second ground-up try, but it feels harder than the first time. Am
+I already getting tired? This route felt doable with enough practice (except
+maybe the top) on the first try, but now I am not so sure anymore.
+
+{{< rimg src="1.jpg" caption="Mrs. Negative (5.12a)">}}
+
+The third route, we try today, is The Neutered Bovine (5.11c). I tried it
+already about two years ago, but had to bail because it was affecting an injured
+finger. Now I want to see how it feels with that finger being fine again. Turns
+out it feels as hard as the 5.12a routes to me and I do not finish it.
+Christine, however, makes it up all the way. Impressive!
+
+I give Face the Music another try before we leave as I feel quite rested. But
+on the wall I notice quickly that I am actually more tired than my body made me
+believe on the ground.
+
+Anyways, a good day, taking many falls and getting comfortable with it.
+
+{{< rimg src="2.jpg" caption="Do not give apples to bears">}}
+
+{{<nextday>}}
