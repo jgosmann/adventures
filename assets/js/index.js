@@ -8,8 +8,10 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp'
 import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
 import { faDog } from '@fortawesome/free-solid-svg-icons/faDog'
 import { faEye } from '@fortawesome/free-solid-svg-icons/faEye'
+import { faFirstAid } from '@fortawesome/free-solid-svg-icons/faFirstAid'
 import { faLevelDownAlt } from '@fortawesome/free-solid-svg-icons/faLevelDownAlt'
 import { faRssSquare } from '@fortawesome/free-solid-svg-icons/faRssSquare'
+import { faRunning } from '@fortawesome/free-solid-svg-icons/faRunning'
 
 library.add(
   faBolt,
@@ -19,8 +21,10 @@ library.add(
   faCircle,
   faDog,
   faEye,
+  faFirstAid,
   faLevelDownAlt,
-  faRssSquare
+  faRssSquare,
+  faRunning
 )
 
 dom.watch()

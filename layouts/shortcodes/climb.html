@@ -14,6 +14,16 @@
     {{ else if eq (.Get "style") "toprope-hangdog" }}
         <i class="fas fa-level-down-alt" title="toprope"></i>
         <i class="fas fa-dog" title="hang dog"></i>
+    {{ else if eq (.Get "style") "aid" }}
+        <i class="fas fa-first-aid" title="aid"></i>
+    {{ else if eq (.Get "style") "bailed" }}
+        <i class="fas fa-running" title="bailed"></i>
+    {{ end }}
+    {{ if or (eq (.Get "style") "skipped") (eq (.Get "style") "not attempted")}}
+        <span class="skipped">{{ .Get "style" }}
     {{ end }}
     {{ .Get "name" }} ({{ with .Get "grade" }}{{ . }}{{ end }})
+    {{ if eq (.Get "style") "skipped" }}
+        </span>
+    {{ end }}
 </li>
