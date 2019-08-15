@@ -51,10 +51,10 @@ eat Sushi, and pack as we are leaving tomorrow.
 
 {{<climbs>}}
 {{<climb name="High Boltage Line" style="bailed" grade="5.10a">}}
-{{<climb name="Foot in the Gravy" style="toprope-hangdog" grade="5.4">}}
-{{<climb name="Dusty Eyes" style="toprope-hangdog" grade="5.7">}}
-{{<climb name="The Alexis Cracks" style="toprope-hangdog" grade="5.7">}}
-{{<climb name="Libya Sucks" style="toprope-hangdog" grade="5.7">}}
+{{<climb name="Foot in the Gravy" style="toprope" grade="5.4">}}
+{{<climb name="Dusty Eyes" style="toprope" grade="5.7">}}
+{{<climb name="The Alexis Cracks" style="toprope" grade="5.7">}}
+{{<climb name="Libya Sucks" style="toprope" grade="5.7">}}
 {{</climbs>}}
 
 {{<nextday>}}
