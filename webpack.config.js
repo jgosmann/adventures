@@ -37,7 +37,8 @@ module.exports = {
           fs.writeFileSync(outFile, content);
         }
         return fd;
-      }
+      },
+      fileName: 'webpack-manifest.json'
     })
   ]
 };

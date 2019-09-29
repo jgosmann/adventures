@@ -1,15 +1,21 @@
-const changed = require('gulp-changed');
 const child_process = require('child_process');
-const favicons = require('favicons').stream;
+const del = require('del');
+const faviconsStream = require('favicons').stream;
 const fs = require('fs');
 const gulp = require('gulp');
+const { parallel, series } = require('gulp');
+const webpack_stream = require('webpack-stream');
+const webpack_config = require('./webpack.config.js');
 
-gulp.task('favicons', () => {
+function static_clean() {
+  return del(['./static']);
+}
+
+function favicons() {
   const dest = './static';
   const metafile = './assets/meta.html';
   return gulp.src('./assets/svg/favicon.svg')
-    .pipe(changed(dest, {transformPath: _ => { return metafile; }}))
-    .pipe(favicons({
+    .pipe(faviconsStream({
       appName: 'Jan\' outdoor adventures',
       developerName: 'Jan Gosmann',
       developerURL: 'https://www.jgosmann.de',
@@ -31,9 +37,29 @@ gulp.task('favicons', () => {
       );
     }))
     .pipe(gulp.dest(dest));
-});
+}
 
-gulp.task('deploy', async () => {
+function fonts() {
+  return gulp.src('./assets/fonts/*').pipe(gulp.dest('./static/fonts'));
+}
+
+function webpack() {
+  return webpack_stream(webpack_config)
+    .pipe(gulp.dest('./static'))
+}
+
+
+function hugo_clean() {
+  return del(['./public']);
+}
+
+async function hugo() {
+  child_process.execFileSync(
+    'hugo', { stdio: 'inherit' }
+  );
+}
+
+async function deploy() {
   child_process.execFileSync(
     'rsync', [
       '-avz', '--delete', '--checksum',
@@ -41,4 +67,15 @@ gulp.task('deploy', async () => {
     ],
     { stdio: 'inherit' }
   );
-});
+}
+
+exports.favicons = favicons;
+exports.fonts = fonts
+exports.webpack = webpack;
+exports.rehugo = series(hugo_clean, hugo);
+exports.rebuild = series(
+  static_clean,
+  parallel(favicons, fonts, webpack),
+  exports.rehugo);
+exports.clean = parallel(static_clean, hugo_clean);
+exports.deploy = deploy;
