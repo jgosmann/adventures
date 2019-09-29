@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Jan's outdoor adventures"
 timeout = 30000
 
+[params]
+mainSections = ["posts"]
+
 [imaging]
 resampleFilter = "CatmullRom"
 quality = 90

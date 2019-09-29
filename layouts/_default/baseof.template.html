@@ -4,7 +4,9 @@
         <meta charset="utf-8"/>
         <title>{{ .Site.Title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="{{ "main-v2.css" | relURL }}?{{ readFile "static/main-v2.css" | md5}}" />
+        {{ $sass := resources.Get "sass/main.scss" }}
+        {{ $style := $sass | resources.ToCSS (dict "targetPath" "main.css" "outputStyle" "compressed") | fingerprint }}
+            <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
         {{ readFile "/assets/meta.html" | safeHTML }}
         {{ range .AlternativeOutputFormats -}}
             {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

@@ -1,0 +1,80 @@
+/*
+ * general
+ */
+
+a {
+    color: #336cc6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dd16c9;
+}
+
+article {
+    h1, ol, p, ul, h1 {
+        width: 600px;
+        max-width: calc(100% - 32px);
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 80vh;
+    }
+
+    p {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    ul {
+        width: calc(600px - 40px);
+        max-width: calc(100% - 72px);
+        padding: 0 20px;
+
+        ul {
+            margin: 0;
+            max-width: calc(100% - 40px);
+        }
+    }
+}
+
+/*
+ * meta style
+ */
+.meta {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+ul.meta, ol.meta {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.meta > li {
+    white-space: nowrap;
+    margin-right: 16px;
+}
+
+/*
+ * comma lists
+ */
+ol.comma, ul.comma {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.comma li:not(:last-of-type):after {
+    content: ",";
+}

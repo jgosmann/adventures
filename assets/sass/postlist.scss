@@ -1,0 +1,28 @@
+.postlist {
+    margin: 0;
+    padding: 0;
+
+    a {
+        transition: 0.2s;
+        color: #000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #fff;
+
+        li {
+            background-color: #336cc6;
+        }
+    }
+
+    .headline {
+        font-size: 1.4em;
+    }
+}
+
+.postlist > a > li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 16px;
+}

@@ -1,0 +1,10 @@
+@import "../mixins.scss";
+
+.nextlink {
+    @include block-link;
+    text-align: right;
+
+    a {
+        border: 1px solid #ccc;
+    }
+}

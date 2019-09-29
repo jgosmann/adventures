@@ -1,0 +1,20 @@
+@import "mixins.scss";
+
+.icon-btn {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.navlink {
+    @include block-link;
+    font-weight: bold;
+    padding: 0 8px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.subscribe {
+    @include block-link;
+
+    text-transform: uppercase;
+}

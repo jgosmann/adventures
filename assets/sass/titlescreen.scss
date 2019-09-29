@@ -1,0 +1,40 @@
+@import "mixins.scss";
+
+.title-screen {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .navlink {
+        border: none;
+    }
+
+    .title {
+        background-color: rgba(255, 255, 255, 0.9);
+        display: block;
+        position: absolute;
+        bottom: 15%;
+        width: 80%;
+        right: 0;
+        padding: 8px;
+        box-sizing: border-box;
+
+        h1 {
+            margin: 0;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .scroll-down {
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 6rem;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 85%;
+    }
+}

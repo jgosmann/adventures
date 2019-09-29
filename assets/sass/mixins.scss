@@ -1,0 +1,14 @@
+@mixin block-link {
+    a {
+        transition: 0.2s;
+        display: inline-block;
+        color: #000;
+        text-decoration: none;
+        padding: 8px;
+    }
+
+    a:hover, a:hover {
+        color: #fff;
+        background-color: #336cc6;
+    }
+}
