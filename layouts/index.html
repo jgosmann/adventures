@@ -6,18 +6,24 @@
         {{ range where .Pages "Type" "in" site.Params.mainSections }}
         {{ range .Pages }}
             <a href="{{ .RelPermalink }}"><li>
-                <div class="headline">{{ .Title }}</div>
-                <ul class="meta">
-                    <li>{{ .Date.Format "January 2, 2006" }}</li>
-                    <li><ol class="comma">
-                        {{ with .Params.categories }}
-                            {{ range sort . }}
-                                <li>{{ . }}</li>
-                            {{ end }}
-                        {{end}}
-                    </ol></li>
-                    <li>{{ .ReadingTime }} minute read</li>
-                </ul>
+                <picture>
+                    {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
+                    <source srcset="{{ ($bg.Fill "600x600").RelPermalink }}" media="(min-resolution: 1.5dppx)" />
+                    <img src="{{ ($bg.Fill "300x300").RelPermalink }}" alt="Teaser picture" />
+                </picture>
+                <div class="desc">
+                    <h2>{{ .Title }}</h2>
+                    <ul class="meta">
+                        <li>{{ .Date.Format "January 2, 2006" }}<br>{{ .ReadingTime }} minute read</li>
+                        <li><ol class="comma">
+                            {{ with .Params.categories }}
+                                {{ range sort . }}
+                                    <li>{{ . }}</li>
+                                {{ end }}
+                            {{end}}
+                        </ol></li>
+                    </ul>
+                </div>
             </li></a>
         {{ end }}
         {{ end }}

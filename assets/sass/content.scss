@@ -73,6 +73,10 @@ ol.comma, ul.comma {
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    li {
+        display: inline;
+    }
 }
 
 .comma li:not(:last-of-type):after {
