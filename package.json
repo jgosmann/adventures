@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.5.5",
     "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
@@ -21,7 +22,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.7",
     "Leaflet.Geodesic": "github:henrythasler/Leaflet.Geodesic",
-    "leaflet": "^1.5.1"
+    "leaflet": "^1.5.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }

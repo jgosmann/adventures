@@ -7,6 +7,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp'
 import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
 import { faDog } from '@fortawesome/free-solid-svg-icons/faDog'
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons/faEnvelopeSquare'
 import { faEye } from '@fortawesome/free-solid-svg-icons/faEye'
 import { faFirstAid } from '@fortawesome/free-solid-svg-icons/faFirstAid'
 import { faLevelDownAlt } from '@fortawesome/free-solid-svg-icons/faLevelDownAlt'
@@ -20,6 +21,7 @@ library.add(
   faChevronUp,
   faCircle,
   faDog,
+  faEnvelopeSquare,
   faEye,
   faFirstAid,
   faLevelDownAlt,

@@ -3,7 +3,10 @@ const path = require('path');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
-  entry: './assets/js/index.js',
+  entry: {
+    main: './assets/js/index.js',
+    doveseed: './assets/js/doveseed/index.js'
+  },
   mode: 'production',
   devtool: 'sourcemap',
   module: {
@@ -23,7 +26,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'static'),
-    filename: 'bundle.[contenthash].js',
+    filename: '[name].[contenthash].js',
     library: 'joa'
   },
   plugins: [
@@ -32,6 +35,12 @@ module.exports = {
         if (fd.name === 'main.js') {
           templateFile = path.resolve(__dirname, 'layouts/_default/baseof.template.html');
           outFile = path.resolve(__dirname, 'layouts/_default/baseof.html');
+          content = fs.readFileSync(templateFile, 'utf8');
+          content = content.replace(/%SCRIPT%/g, fd.path);
+          fs.writeFileSync(outFile, content);
+        } else if (fd.name === 'doveseed.js') {
+          templateFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed.template.html');
+          outFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed.html');
           content = fs.readFileSync(templateFile, 'utf8');
           content = content.replace(/%SCRIPT%/g, fd.path);
           fs.writeFileSync(outFile, content);

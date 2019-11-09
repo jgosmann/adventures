@@ -5,12 +5,30 @@ publishdate: 2019-02-11T15:56:53+01:00
 draft: false
 ---
 
+
 # How to subscribe to the blog
 
+<div class="icon-card">
+<div class="icon-btn">
+    {{< icon fa-envelope-square >}}
+</div>
+<div class="content">
+<h3>E-mail Notifications</h3>
+{{< doveseed >}}
+<p class="meta">By subscribing with your e-mail you agree to the <a href="">privacy policy</a>. In particular, you agree to
+receive e-mail from this website. For this the e-mail address will be stored and
+processed on the server. You may <a href="">unsubscribe</a> any time.</p>
+</div>
+</div>
+
+<div class="icon-card">
 <div class="icon-btn">
     <a href="{{< ref path="/" outputFormat="rss" >}}">{{< icon fa-rss-square >}}</a>
 </div>
+<div class="content">
+<h3>RSS Feed</h3>
 
+{{% md %}}
 The blog provides an [RSS feed]({{< ref path="/" outputFormat="rss" >}}) that
 can deliver new posts directly to you. [A short explanation of RSS can be found
 here.](http://www.whatisrss.com/)
@@ -27,3 +45,7 @@ To get the updates delivered automatically, you have a variety of options:
     This Than That), can do a lot more than just delivering email notifications
     for RSS feeds.
   * [Blogtrottr](https://blogtrottr.com/)
+{{% /md %}}
+
+</div>
+</div>

@@ -2,6 +2,7 @@
 .*.swp
 assets/meta.html
 layouts/_default/baseof.html
+layouts/shortcodes/doveseed.html
 node_modules
 public
 resources/_gen
