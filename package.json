@@ -26,6 +26,7 @@
     "Leaflet.Geodesic": "github:henrythasler/Leaflet.Geodesic",
     "leaflet": "^1.5.1",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-google-recaptcha": "^2.0.1"
   }
 }
