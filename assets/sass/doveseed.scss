@@ -1,3 +1,5 @@
+@import "buttons";
+
 #doveseed {
     form {
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
@@ -26,30 +28,14 @@
     }
 
     button[type=submit] {
-        background-color: #336cc6;
-        background: linear-gradient(180deg, rgb(51,108,198) 60%, rgb(31,59,105) 100%);
+        @include shaded-button(rgb(51, 108, 198), rgb(31, 59, 105), rgb(67, 124, 214));
+        margin: 0;
         font-weight: bold;
         color: #fff;
-        border: none;
         border-radius: 0px 4px 4px 0px;
         padding: 8px;
         height: 100%;
         box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.5);
-        transition: 0.2s;
-    }
-
-    button[type=submit]:hover {
-        background-color: #2f4b79;
-        background: linear-gradient(180deg, rgb(67,124,214) 60%, rgb(31,59,105) 100%);
-    }
-
-    button[type=submit]:active {
-        transition: 0s;
-        background: #336cc6;
-    }
-
-    button[type=submit]:disabled {
-        background: #336cc6;
     }
 
     .state-success button[type=submit] {

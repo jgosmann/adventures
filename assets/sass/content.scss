@@ -12,7 +12,7 @@ a:hover {
 }
 
 article {
-    h1, ol, p, ul, h1 {
+    h1, ol, p, ul, h1, h2, h3 {
         width: 600px;
         max-width: calc(100% - 32px);
         margin-left: auto;
@@ -34,6 +34,7 @@ article {
 
     ul {
         padding: 0 20px;
+        box-sizing: border-box;
 
         ul {
             margin: 0;
@@ -78,35 +79,4 @@ ol.comma, ul.comma {
 
 .comma li:not(:last-of-type):after {
     content: ",";
-}
-
-/*
- * Button links
- */
-
-.button {
-  background-color: #336cc6;
-  background: linear-gradient(180deg, rgb(51,108,198) 60%, rgb(31,59,105) 100%);
-  font-weight: bold;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px;
-  box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.5);
-  transition: 0.2s;
-}
-
-.button:hover {
-    background-color: #2f4b79;
-    background: linear-gradient(180deg, rgb(67,124,214) 60%, rgb(31,59,105) 100%);
-    color: #fff;
-}
-
-.button:active {
-    transition: 0s;
-    background: #336cc6;
-}
-
-.button:disabled {
-    background: #336cc6;
 }

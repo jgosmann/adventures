@@ -1,1 +1,5 @@
-@import "content.scss", "doveseed.scss", "global.scss", "pictures.scss", "postlist.scss", "shortcodes/shortcodes.scss", "special.scss", "titlescreen.scss";
+@import "content.scss", "buttons", "doveseed.scss", "global.scss", "pictures.scss", "postlist.scss", "shortcodes/shortcodes.scss", "special.scss", "titlescreen.scss";
+
+$flag-icon-css-path: '/flags';
+$include: "us" "gb" "de";
+@import "flag-icon-css/sass/flag-icon";

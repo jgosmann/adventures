@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
@@ -25,11 +26,12 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path: path.resolve(__dirname, 'lib'),
     filename: '[name].[contenthash].js',
     library: 'joa'
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new ManifestPlugin({
       map: (fd) => {
         if (fd.name === 'main.js') {

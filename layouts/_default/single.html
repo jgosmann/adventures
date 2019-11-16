@@ -1,7 +1,12 @@
 {{ define "head" }}
 {{ end }}
 {{ define "main" }}
-    <div class="navlink"><a href="{{ relref . "/" }}">&lt;&nbsp;Back to list of posts</a></div>
+    <div class="navbar">
+        {{ with .Sites.First.GetPage "/" }}
+            <a class="navlink" href="{{ .RelPermalink }}">&lt;&nbsp;Back to list of posts</a>
+        {{ end }}
+        {{ partial "legal.html" . }}
+    </div>
     <article>
         {{ .Content }}
     </article>

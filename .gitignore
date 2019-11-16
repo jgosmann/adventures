@@ -3,6 +3,7 @@
 assets/meta.html
 layouts/_default/baseof.html
 layouts/shortcodes/doveseed.html
+lib
 node_modules
 public
 resources/_gen

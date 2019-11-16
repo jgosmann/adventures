@@ -5,7 +5,7 @@
         <title>{{ .Site.Title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {{ $sass := resources.Get "sass/main.scss" }}
-        {{ $style := $sass | resources.ToCSS (dict "targetPath" "main.css" "outputStyle" "compressed") | fingerprint }}
+        {{ $style := $sass | resources.ToCSS (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) | fingerprint }}
             <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
         {{ readFile "/assets/meta.html" | safeHTML }}
         {{ range .AlternativeOutputFormats -}}

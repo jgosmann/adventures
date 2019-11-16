@@ -1,21 +1,40 @@
-@import "mixins.scss";
-
 .icon-btn {
     font-size: 6rem;
     text-align: center;
 }
 
-.navlink {
-    @include block-link;
-    font-weight: bold;
+.navbar {
     padding: 0 8px;
     border-bottom: 1px solid #ccc;
     background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.navlink {
+    transition: 0.2s;
+    display: block;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    padding: 8px;
+
+    &:hover, &:hover {
+        color: #fff;
+        background-color: #336cc6;
+    }
+}
+
+.legal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 0.75em;
+    text-align: right;
 }
 
 .subscribe {
-    @include block-link;
-
     text-transform: uppercase;
 }
 
@@ -47,5 +66,43 @@
         width: auto;
         max-width: none;
         box-sizing: content-box;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-left: 0;
+    }
+}
+
+.crypted-phone:after {
+    content: attr(data-country) "\202f" attr(data-area) "\202f" attr(data-block0) "\202f" attr(data-block1);
+}
+
+.crypted-email:after {
+    content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}
+
+.split-flag {
+    position: relative;
+    &::before {
+        content: '\00a0';
+    }
+    line-height: 1em;
+    width: (4/3) * 1em;
+    display: inline-block;
+
+    .ul, .lr {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &::before {
+            content: '';
+        }
+    }
+
+    .lr {
+        clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
     }
 }
