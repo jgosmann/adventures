@@ -51,5 +51,12 @@ module.exports = {
       },
       fileName: 'webpack-manifest.json'
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      'react': 'preact/compat',
+      'react-dom/testing-utils': 'preact/test-utils',
+      'react-dom': 'preact/compat'
+    }
+  }
 };

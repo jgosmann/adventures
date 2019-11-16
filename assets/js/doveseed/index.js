@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons';
-import React, { useRef, useState } from 'react';
-import ReactDOM from 'react-dom';
-import ReCAPTCHA from "react-google-recaptcha";
+import { h, render, Component, createRef } from 'preact';
+import { useEffect, useRef, useState } from 'preact/hooks';
+
+import ReCaptcha from './recaptcha';
 
 function VCollapsible(props) {
   var className = 'vcollapsible';
@@ -41,17 +42,16 @@ function SubscribeForm(props) {
     recaptcha.current.execute();
   };
 
-  const onCaptchaComplete = () => {
-    body = {
-      captcha: recaptcha.current.getValue()
-    };
-
-    fetch(props.url + emailInput.current.value, {
+  const onCaptchaComplete = (captcha) => {
+    return fetch(props.url + emailInput.current.value, {
       method: 'POST',
-      body: JSON.stringify(body)})
+      body: JSON.stringify({captcha})})
     .then((response) => {
+      console.log('uiae');
       setState(response.ok ? 'success' : 'error');
+      console.log('uiae2');
     }).catch(() => {
+      console.log('c');
       setState('error');
     });
   };
@@ -71,20 +71,20 @@ function SubscribeForm(props) {
         </VCollapsible>
         {props.submitLabel}
       </button>
-      <ReCAPTCHA
+      <ReCaptcha
         ref={recaptcha}
         size="invisible"
         sitekey="6LdL4sEUAAAAAEsmXbX_Z21wla_bM9dhjSe8I5hf"
         onChange={onCaptchaComplete}
-        onExpired={onError}
-        onErrored={onError} />
+        onError={onError}
+        onExpired={onError} />
     </form>
   );
 }
 
 function LoadDoveseedSubscriptionForm(selector, props) {
   const domContainer = document.querySelector(selector);
-  ReactDOM.render(React.createElement(SubscribeForm, props), domContainer);
+  render(<SubscribeForm {...props} />, domContainer);
 }
 
 export { LoadDoveseedSubscriptionForm }

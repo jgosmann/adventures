@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import { h, render } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 
 function ButtonLink({children, onClick, title}) {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -46,8 +46,8 @@ function enhanceCryptedElements(className, getData, onClick) {
     }
     const copyBtn = document.createElement("span");
     cryptedElem.parentElement.insertBefore(copyBtn, cryptedElem.nextSibling);
-    ReactDOM.render(
-      React.createElement(CopyButton, {getCopyText: () => getData(cryptedElem)}),
+    render(
+      <CopyButton getCopyText={() => getData(cryptedElem)} />,
       copyBtn);
   }
 }

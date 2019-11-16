@@ -1,6 +1,7 @@
 .DS_Store
 .*.swp
 assets/meta.html
+favicons
 layouts/_default/baseof.html
 layouts/shortcodes/doveseed.html
 lib

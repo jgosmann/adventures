@@ -19,6 +19,14 @@ weight = 2
     source = "lib"
     target = "static"
 
+  [[module.mounts]]
+    source = "assets/fonts"
+    target = "static/fonts"
+
+  [[module.mounts]]
+    source = "favicons"
+    target = "static"
+
 [params]
 mainSections = ["posts"]
 
