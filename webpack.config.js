@@ -46,6 +46,12 @@ module.exports = {
           content = fs.readFileSync(templateFile, 'utf8');
           content = content.replace(/%SCRIPT%/g, fd.path);
           fs.writeFileSync(outFile, content);
+
+          templateFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed-confirm.template.html');
+          outFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed-confirm.html');
+          content = fs.readFileSync(templateFile, 'utf8');
+          content = content.replace(/%SCRIPT%/g, fd.path);
+          fs.writeFileSync(outFile, content);
         }
         return fd;
       },

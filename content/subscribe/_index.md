@@ -14,10 +14,10 @@ draft: false
 </div>
 <div class="content">
 <h3>E-mail Notifications</h3>
-{{< doveseed >}}
-<p class="meta">By subscribing with your e-mail you agree to the <a href="">privacy policy</a>. In particular, you agree to
+{{< doveseed "subscribe" "Subscribe" >}}
+<p class="meta">By subscribing with your e-mail you agree to the <a href="{{< ref path="/legal/privacy" >}}">privacy policy</a>. In particular, you agree to
 receive e-mail from this website. For this the e-mail address will be stored and
-processed on the server. You may <a href="">unsubscribe</a> any time.</p>
+processed on the server. You may <a href="{{< ref path="/unsubscribe" >}}">unsubscribe</a> any time.</p>
 </div>
 </div>
 

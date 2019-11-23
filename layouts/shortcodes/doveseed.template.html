@@ -3,8 +3,8 @@
 <script>
     window.onload = (ev) => {
         joa.LoadDoveseedSubscriptionForm('#doveseed', {
-            url: 'https://doveseed.adventures.jgosmann.de/subscribe/',
-            submitLabel: 'Subscribe'
+            url: 'https://doveseed.adventures.jgosmann.de/{{ .Get 0 }}/',
+            submitLabel: '{{ .Get 1 }}'
         });
     };
 </script>

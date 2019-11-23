@@ -45,13 +45,13 @@ function SubscribeForm(props) {
   const onCaptchaComplete = (captcha) => {
     return fetch(props.url + emailInput.current.value, {
       method: 'POST',
-      body: JSON.stringify({captcha})})
+      body: JSON.stringify({captcha}),
+      headers: {
+        'Content-Type': 'application/json'
+      }})
     .then((response) => {
-      console.log('uiae');
       setState(response.ok ? 'success' : 'error');
-      console.log('uiae2');
     }).catch(() => {
-      console.log('c');
       setState('error');
     });
   };
@@ -82,9 +82,53 @@ function SubscribeForm(props) {
   );
 }
 
+function ConfirmationButton(props) {
+  const [state, setState] = useState('initial');
+  const emailInput = useRef(null);
+  const token = useRef(null);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setState('requestOngoing');
+
+    return fetch(props.url + emailInput.current.value, {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + token.current.value
+      }})
+    .then((response) => {
+      setState(response.ok ? 'success' : 'error');
+    }).catch(() => {
+      setState('error');
+    });
+  };
+
+  const disabled = state === 'requestOngoing' || state === 'success';
+
+  const searchParams = new URLSearchParams(window.location.search);
+
+  return (
+    <form onSubmit={onSubmit} className={'state-' + state}>
+      <input ref={token} type="hidden" required={true} value={searchParams.get('token')} />
+      <input ref={emailInput} type="email" required={true} disabled={true} value={searchParams.get('email')} />
+      <button type="submit" className="button" disabled={disabled}>
+        <VCollapsible collapsed={state === 'initial'}>
+          <ProcessingStateIcon state={state} />
+        </VCollapsible>
+        {props.submitLabel}
+      </button>
+    </form>
+  );
+}
+
 function LoadDoveseedSubscriptionForm(selector, props) {
   const domContainer = document.querySelector(selector);
   render(<SubscribeForm {...props} />, domContainer);
 }
 
-export { LoadDoveseedSubscriptionForm }
+function LoadDoveseedConfirmationButton(selector, props) {
+  const domContainer = document.querySelector(selector);
+  render(<ConfirmationButton {...props} />, domContainer);
+}
+
+export { LoadDoveseedSubscriptionForm, LoadDoveseedConfirmationButton }
