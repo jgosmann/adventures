@@ -12,7 +12,7 @@ function static_clean() {
 }
 
 function favicons() {
-  const dest = './static';
+  const dest = './favicons';
   const metafile = './assets/meta.html';
   return gulp.src('./assets/svg/favicon.svg')
     .pipe(faviconsStream({

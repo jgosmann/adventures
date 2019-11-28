@@ -2,22 +2,22 @@
     {{ if eq (.Get "style") "fa" }}
         <div class="circled" title="first ascent">1</div>
     {{ else if eq (.Get "style") "onsight" }}
-        <i class="fas fa-eye" title="onsight"></i>
+        <i class="fas fa-fw fa-eye" title="onsight"></i>
     {{ else if eq (.Get "style") "flash" }}
-        <i class="fas fa-bolt" title="flash"></i>
+        <i class="fas fa-fw fa-bolt" title="flash"></i>
     {{ else if eq (.Get "style") "redpoint" }}
-        <i class="fas fa-circle" style="color: #b51313;" title="redpoint"></i>
+        <i class="fas fa-fw fa-circle" style="color: #b51313;" title="redpoint"></i>
     {{ else if eq (.Get "style") "hangdog" }}
-        <i class="fas fa-dog" title="hang dog"></i>
+        <i class="fas fa-fw fa-dog" title="hang dog"></i>
     {{ else if eq (.Get "style") "toprope" }}
-        <i class="fas fa-level-down-alt" title="toprope"></i>
+        <i class="fas fa-fw fa-level-down-alt" title="toprope"></i>
     {{ else if eq (.Get "style") "toprope-hangdog" }}
-        <i class="fas fa-level-down-alt" title="toprope"></i>
-        <i class="fas fa-dog" title="hang dog"></i>
+        <i class="fas fa-fw fa-level-down-alt" title="toprope"></i>
+        <i class="fas fa-fw fa-dog" title="hang dog"></i>
     {{ else if eq (.Get "style") "aid" }}
-        <i class="fas fa-first-aid" title="aid"></i>
+        <i class="fas fa-fw fa-first-aid" title="aid"></i>
     {{ else if eq (.Get "style") "bailed" }}
-        <i class="fas fa-running" title="bailed"></i>
+        <i class="fas fa-fw fa-running" title="bailed"></i>
     {{ end }}
     {{ if or (eq (.Get "style") "skipped") (eq (.Get "style") "not attempted")}}
         <span class="skipped">{{ .Get "style" }}

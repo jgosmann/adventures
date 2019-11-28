@@ -1,0 +1,10 @@
+<div id="doveseed"></div>
+<script src="{{ "%SCRIPT%" | relURL }}" defer></script>
+<script>
+    window.onload = (ev) => {
+        joa.LoadDoveseedSubscriptionForm('#doveseed', {
+            url: 'https://doveseed.adventures.jgosmann.de/{{ .Get 0 }}/',
+            submitLabel: '{{ .Get 1 }}'
+        });
+    };
+</script>

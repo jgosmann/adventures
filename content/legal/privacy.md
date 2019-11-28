@@ -1,0 +1,248 @@
+---
+title: "Privacy Policy"
+date: 2019-02-11T15:56:53+01:00
+publishdate: 2019-02-11T15:56:53+01:00
+draft: false
+---
+
+<a href="{{< relref path="/legal/privacy" lang="de" >}}">
+    <span class="flag-icon flag-icon-de"></span>
+    Deutsche Version
+</a>
+
+# Privacy Policy
+
+Personal data (usually referred to just as "data" below) will only be processed
+by us to the extent necessary and for the purpose of providing a functional and
+user-friendly website, including its contents, and the services offered there.
+
+Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection
+Regulation (hereinafter referred to as the "GDPR"), "processing" refers to any
+operation or set of operations such as collection, recording, organization,
+structuring, storage, adaptation, alteration, retrieval, consultation, use,
+disclosure by transmission, dissemination, or otherwise making available,
+alignment, or combination, restriction, erasure, or destruction performed on
+personal data, whether by automated means or not.
+
+The following privacy policy is intended to inform you in particular about the
+type, scope, purpose, duration, and legal basis for the processing of such data
+either under our own control or in conjunction with others. We also inform you
+below about the third-party components we use to optimize our website and
+improve the user experience which may result in said third parties also
+processing data they collect and control.
+
+Our privacy policy is structured as follows:
+
+1. Information about us as controllers of your data
+2. The rights of users and data subjects
+3. Information about the data processing
+
+## 1. Information about us as controllers of your data
+
+The party responsible for this website (the "controller") for purposes of data
+protection law is:
+
+Jan Gosmann<br>
+Vogelweidestr. 5<br>
+81677 München<br>
+Deutschland
+
+phone: <span class="crypted-phone" data-country="+49" data-area="174"
+  data-block0="3588" data-block1="307"></span><br>
+email: <a href="#" class="crypted-email" data-name="adventures" data-domain="jgosmann"
+  data-tld="de"></a>
+
+
+## 2. The rights of users and data subjects
+
+With regard to the data processing to be described in more detail below, users
+and data subjects have the right
+
+* to confirmation of whether data concerning them is being processed,
+  information about the data being processed, further information about the
+  nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);
+* to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);
+* to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO),
+  or, alternatively, if further processing is necessary as stipulated in Art. 17
+  Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;
+* to receive copies of the data concerning them and/or provided by them and to
+  have the same transmitted to other providers/controllers (cf. also Art. 20
+  GDPR);
+* to file complaints with the supervisory authority if they believe that data
+  concerning them is being processed by the controller in breach of data
+  protection provisions (see also Art. 77 GDPR).
+
+In addition, the controller is obliged to inform all recipients to whom it
+discloses data of any such corrections, deletions, or restrictions placed on
+processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation
+does not apply if such notification is impossible or involves a disproportionate
+effort. Nevertheless, users have a right to information about these recipients.
+
+**Likewise, under Art. 21 GDPR, users and data subjects have the right to
+object to the controller's future processing of their data pursuant to Art.
+6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the
+purpose of direct advertising is permissible.**
+
+## 3. Information about the data processing
+
+Your data processed when using our website will be deleted or blocked as soon as
+the purpose for its storage ceases to apply, provided the deletion of the same
+is not in breach of any statutory storage obligations or unless otherwise
+stipulated below.
+
+
+### Server data
+
+For technical reasons, the following data sent by your internet browser to us or
+to our server provider will be collected, especially to ensure a secure and
+stable website: These server log files record the type and version of your
+browser, operating system, the website from which you came (referrer URL), the
+webpages on our site visited, the date and time of your visit, as well as the IP
+address from which you visited our site.
+
+The data thus collected will be temporarily stored, but not in association with
+any other of your data.
+
+The basis for this storage is Art. 6 Para. 1 lit. f) GDPR. Our legitimate
+interest lies in the improvement, stability, functionality, and security of our
+website.
+
+The data will be deleted within no more than fourteen days, unless continued
+storage is required for evidentiary purposes. In which case, all or part of the
+data will be excluded from deletion until the investigation of the relevant
+incident is finally resolved.
+
+
+### Newsletter
+
+If you subscribe to our free email notifications, the data requested from you
+for this purpose, i.e. your email address and, will be sent to us. We may also
+store the IP address of your computer and the date and time of your
+registration.  With the registration, you consent to receive these notification
+and the type of content it will offer. The data collected will be used
+exclusively to send the email notifications and will not be passed on to third
+parties.
+
+The legal basis for this is Art. 6 Para. 1 lit. a) GDPR.
+
+You may revoke your prior consent to receive this newsletter under Art. 7 Para.
+3 GDPR with future effect. All you have to do is inform us that you are revoking
+your consent or click on the unsubscribe link contained in each newsletter.
+
+
+### Google reCAPTCHA
+
+Our website uses Google reCAPTCHA to check and prevent automated servers
+("bots") from accessing and interacting with our website. This is a service
+provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
+Irland (hereinafter: Google).
+
+Through certification according to the EU-US Privacy Shield
+
+<a
+href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"
+target="_blank"
+rel="noopener">https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a>
+
+Google guarantees that it will follow the EU's data protection regulations when
+processing data in the United States.
+
+This service allows Google to determine from which website your request has been
+sent and from which IP address the reCAPTCHA input box has been used. In
+addition to your IP address, Google may collect other information necessary to
+provide and guarantee this service.&nbsp;&nbsp;&nbsp;
+
+The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in
+the security of our website and in the prevention of unwanted, automated access
+in the form of spam or similar.
+
+Google offers detailed information at
+
+<a href="https://policies.google.com/privacy" target="_blank"
+rel="noopener">https://policies.google.com/privacy</a>
+
+concerning the general handling of your user data.
+
+
+### OpenStreetMap
+
+For maps on our site, we use OpenStreetMap, a service of the OpenStreetMap
+Foundation, St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, United
+Kingdom, hereinafter referred to as "OpenStreetMap".
+
+When you access one of our Internet pages that includes the OpenStreetMap
+service, OpenStreetMap stores a cookie on your terminal device via your browser.
+This processes your user settings and user data for the purpose of displaying
+the page or guaranteeing the functionality of the OpenStreetMap service. Through
+this processing, OpenStreetMap can recognize the website from which your request
+has been sent and to which IP address the directions should be
+transmitted.&nbsp;
+
+The legal basis for collecting and processing this information is Art. 6 Para.
+1 lit. f) GDPR. Our legitimate interest lies in the optimization and economic
+operation of our site.
+
+If you do not agree to this processing, you have the option of preventing the
+installation of cookies by making the appropriate settings in your browser.
+Further details can be found in the section about cookies above.
+
+OpenStreetMap offers further information about its data collection and processing as
+well your rights and your options for protecting your privacy at this link:
+
+<a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank"
+rel="noopener">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a>.
+
+
+### Mapbox API
+
+For maps on our site, we use Mapbox API, a service of Mapbox Inc., 740 15th Street NW,
+5th Floor, Washington, District of Columbia 20005, USA, hereinafter referred to
+as "Mapbox".
+
+Through certification according to the EU-US Privacy Shield
+
+<a
+href="https://www.privacyshield.gov/participant?id=a2zt0000000CbWQAA0&amp;status=Active"
+target="_blank"
+rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000CbWQAA0&amp;status=Active</a>
+
+Mapbox guarantees that it will follow the EU's data protection regulations
+when processing data in the United States.
+
+The legal basis for collecting and processing this information is Art. 6 Para.
+1 lit. f) GDPR. Our legitimate interest lies in optimizing the functionality of
+our website.
+
+When you access one of our pages that includes the Mapbox service, Mapbox stores
+a cookie on your terminal device via your browser. The information generated by
+the cookie about your use of our app including your IP address is transmitted to
+a Mapbox server in the USA and stored there. This data is processed for the
+purpose of displaying the page or ensuring the functionality of the Mapbox
+service. Mapbox may share this information with third parties where required to
+do so by law or where the information is processed by third parties on behalf of
+Mapbox.
+
+The "Terms of Service" provided by Mapbox at <a
+href="https://www.mapbox.com/tos/#maps" target="_blank"
+rel="noopener">https://www.mapbox.com/tos/#maps</a> contain further information
+about the use of Mapbox and the data obtained by Mapbox.
+
+If you do not agree to this processing, you have the option of preventing the
+installation of cookies by making the appropriate settings in your browser.
+Further details can be found in the section about cookies above. However, it
+will then no longer be possible to use the Mapbox service via our website.
+
+In addition, Mapbox offers further information about how it collects and uses
+your data, your rights, and how to protect your privacy at the following link:
+
+<a href="https://www.mapbox.com/privacy/" target="_blank"
+rel="noopener">https://www.mapbox.com/privacy/</a>.
+
+
+<a
+href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html"
+target="_blank" rel="noopener">Model Data Protection Statement</a> of <a
+href="https://www.ratgeberrecht.eu/" target="_blank">Anwaltskanzlei Weiß &amp;
+Partner</a>
+
+

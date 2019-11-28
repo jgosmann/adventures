@@ -1,7 +1,12 @@
 {{ define "head" }}
 {{ end }}
 {{ define "main" }}
-    <div class="navlink subscribe"><a href="{{ relref . "subscribe" }}">Subscribe</a></div>
+    <div class="navbar">
+        {{ with .Sites.First.GetPage "/subscribe" }}
+            <a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a>
+        {{ end }}
+        {{ partial "legal.html" . }}
+    </div>
     <ol class="postlist">
         {{ range where .Pages "Type" "in" site.Params.mainSections }}
         {{ range .Pages }}

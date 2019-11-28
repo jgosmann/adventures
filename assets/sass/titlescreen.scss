@@ -1,11 +1,9 @@
-@import "mixins.scss";
-
 .title-screen {
     background-size: cover;
     background-position: center;
     height: 100vh;
 
-    .navlink {
+    .navbar {
         border: none;
     }
 

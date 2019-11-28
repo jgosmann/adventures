@@ -1,0 +1,64 @@
+@mixin shaded-button($mainColor, $shade, $highlight) {
+    background-color: $mainColor;
+    background: linear-gradient(180deg, $mainColor 60%, $shade 100%);
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+    cursor: pointer;
+    display: inline-block;
+
+    margin-left: 8px;
+    margin-right: 8px;
+
+    &:hover {
+        background-color: $highlight;
+        background: linear-gradient(180deg, $highlight 60%, $shade 100%);
+    }
+
+    &:active {
+        transition: 0s;
+        background: $mainColor;
+    }
+}
+
+.button {
+  @include shaded-button(rgb(51, 108, 198), rgb(31, 59, 105), rgb(67, 124, 214));
+  color: #fff;
+  font-weight: bold;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.button-small {
+    @include shaded-button(rgb(230, 230, 230), rgb(180, 180, 180), rgb(246, 246, 246));
+
+    color: #000;
+    padding: 1px 4px;
+    position: relative;
+
+    &:hover {
+        color: #000;
+    }
+}
+
+@keyframes enlarge-fade-out {
+    from {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+}
+
+.enlarge-fade-out {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    animation: enlarge-fade-out 0.2s 1;
+}

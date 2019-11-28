@@ -2,6 +2,30 @@ baseURL = "https://adventures.jgosmann.de/"
 languageCode = "en-us"
 title = "Jan's outdoor adventures"
 timeout = 30000
+DefaultContentLanguage = "en"
+
+[languages.en]
+weight = 1
+
+[languages.de]
+weight = 2
+
+[module]
+  [[module.mounts]]
+    source = "node_modules/flag-icon-css/flags"
+    target = "static/flags"
+
+  [[module.mounts]]
+    source = "lib"
+    target = "static"
+
+  [[module.mounts]]
+    source = "assets/fonts"
+    target = "static/fonts"
+
+  [[module.mounts]]
+    source = "favicons"
+    target = "static"
 
 [params]
 mainSections = ["posts"]
@@ -10,3 +34,6 @@ mainSections = ["posts"]
 resampleFilter = "CatmullRom"
 quality = 90
 anchor = "center"
+
+[blackfriday]
+fractions = false
