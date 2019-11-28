@@ -32,8 +32,19 @@ function ProcessingStateIcon(props) {
 
 function SubscribeForm(props) {
   const [state, setState] = useState('initial');
+  const [initializedFromUrl, setInitializedFromUrl] = useState(false);
+
   const emailInput = useRef(null);
   const recaptcha = useRef(null);
+
+  if (emailInput.current !== null && !initializedFromUrl) {
+    setInitializedFromUrl(true);
+    const searchParams = new URLSearchParams(window.location.search);
+    const email = searchParams.get('email');
+    if (email) {
+      emailInput.current.value = email;
+    }
+  }
 
   const onSubmit = (e) => {
     e.preventDefault();
