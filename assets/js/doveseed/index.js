@@ -32,19 +32,12 @@ function ProcessingStateIcon(props) {
 
 function SubscribeForm(props) {
   const [state, setState] = useState('initial');
-  const [initializedFromUrl, setInitializedFromUrl] = useState(false);
 
   const emailInput = useRef(null);
   const recaptcha = useRef(null);
 
-  if (emailInput.current !== null && !initializedFromUrl) {
-    setInitializedFromUrl(true);
-    const searchParams = new URLSearchParams(window.location.search);
-    const email = searchParams.get('email');
-    if (email) {
-      emailInput.current.value = email;
-    }
-  }
+  const searchParams = new URLSearchParams(window.location.search);
+  const email = searchParams.get('email');
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -75,7 +68,7 @@ function SubscribeForm(props) {
 
   return (
     <form onSubmit={onSubmit} className={'state-' + state}>
-      <input ref={emailInput} type="email" placeholder="Email address" required={true} disabled={disabled} />
+      <input ref={emailInput} defaultValue={email} type="email" placeholder="Email address" required={true} disabled={disabled} />
       <button type="submit" disabled={disabled}>
         <VCollapsible collapsed={state === 'initial'}>
           <ProcessingStateIcon state={state} />
