@@ -95,4 +95,30 @@ const showRoute = (targetId, routeLatLng) => {
   map.fitBounds(route.getBounds(), {padding: [50, 50]});
 }
 
-export { showGpxTrack, showLocation, showRoute }
+
+const Load = () => {
+  const locations = document.querySelectorAll('.loc');
+  for (let loc of locations) {
+    showLocation(
+      loc.getAttribute('id'),
+      [Number(loc.getAttribute('data-lat')), Number(loc.getAttribute('data-long'))],
+      loc.getAttribute('data-zoom')
+    );
+  }
+
+  const tracks = document.querySelectorAll('.gpx');
+  for (let track of tracks) {
+    showGpxTrack(track.getAttribute('id'), track.getAttribute('src'));
+  }
+
+  const routes = document.querySelectorAll('.route');
+  for (let route of routes) {
+    showRoute(route.getAttribute('id'), JSON.parse(route.getAttribute('data-route')));
+  }
+}
+
+if (document.readyState === 'loading') {
+  window.addEventListener('load', Load);
+} else {
+  Load();
+}

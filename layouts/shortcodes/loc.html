@@ -1,4 +1,4 @@
-<div id="{{ .Page.UniqueID }}-loc{{ .Ordinal }}" class="map"></div>
-<script>
-    joa.showLocation('{{ .Page.UniqueID }}-loc{{ .Ordinal }}', [Number({{ .Get 0 }}), Number({{ .Get 1 }})]{{ with .Get 2 }}, Number({{ . }}){{ end }});
-</script>
+<div id="{{ .Page.UniqueID }}-loc{{ .Ordinal }}" class="map loc"
+  data-lat="{{ .Get 0 }}" data-long="{{ .Get 1 }}"
+  {{ with .Get 2 }}data-zoom="{{ . }}"{{ end }}
+></div>

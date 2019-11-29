@@ -1,4 +1,1 @@
-<div id="{{ .Page.UniqueID }}-gpxTrack{{ .Ordinal }}" class="map"></div>
-<script>
-  joa.showGpxTrack('{{ .Page.UniqueID }}-gpxTrack{{ .Ordinal }}', '{{ .Get "src" }}');
-</script>
+<div id="{{ .Page.UniqueID }}-gpxTrack{{ .Ordinal }}" class="map gpx" data-src="{{ .Get "src" }}"></div>
