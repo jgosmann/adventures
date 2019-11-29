@@ -28,7 +28,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: '[name].[contenthash].js',
-    library: 'joa'
   },
   plugins: [
     new CleanWebpackPlugin(),
