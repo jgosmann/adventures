@@ -1,10 +1,2 @@
-<div id="doveseed-confirm"></div>
+<div class="doveseed-confirm" data-url="https://doveseed.adventures.jgosmann.de/confirm/" data-submit-label="{{ .Get 0 }}"></div>
 <script src="{{ "%SCRIPT%" | relURL }}" defer></script>
-<script>
-    window.onload = (ev) => {
-        joa.LoadDoveseedConfirmationButton('#doveseed-confirm', {
-            url: 'https://doveseed.adventures.jgosmann.de/confirm/',
-            submitLabel: '{{ .Get 0 }}'
-        });
-    };
-</script>

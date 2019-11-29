@@ -1,10 +1,2 @@
-<div id="doveseed"></div>
+<div class="doveseed" data-url="https://doveseed.adventures.jgosmann.de/{{ .Get 0 }}" data-submit-label="{{ .Get 1 }}"></div>
 <script src="{{ "%SCRIPT%" | relURL }}" defer></script>
-<script>
-    window.onload = (ev) => {
-        joa.LoadDoveseedSubscriptionForm('#doveseed', {
-            url: 'https://doveseed.adventures.jgosmann.de/{{ .Get 0 }}/',
-            submitLabel: '{{ .Get 1 }}'
-        });
-    };
-</script>

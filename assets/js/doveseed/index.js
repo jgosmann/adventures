@@ -125,14 +125,37 @@ function ConfirmationButton(props) {
   );
 }
 
-function LoadDoveseedSubscriptionForm(selector, props) {
-  const domContainer = document.querySelector(selector);
-  render(<SubscribeForm {...props} />, domContainer);
+function LoadDoveseedSubscriptionForm(selector) {
+  const domContainers = document.querySelectorAll(selector);
+  for (let domContainer of domContainers) {
+    const props = {
+      url: domContainer.getAttribute('data-url'),
+      submitLabel: domContainer.getAttribute('data-submit-label'),
+    };
+    render(<SubscribeForm {...props} />, domContainer);
+  }
 }
 
-function LoadDoveseedConfirmationButton(selector, props) {
-  const domContainer = document.querySelector(selector);
-  render(<ConfirmationButton {...props} />, domContainer);
+function LoadDoveseedConfirmationButton(selector) {
+  const domContainers = document.querySelectorAll(selector);
+  for (let domContainer of domContainers) {
+    const props = {
+      url: domContainer.getAttribute('data-url'),
+      submitLabel: domContainer.getAttribute('data-submit-label'),
+    };
+    render(<ConfirmationButton {...props} />, domContainer);
+  }
 }
 
-export { LoadDoveseedSubscriptionForm, LoadDoveseedConfirmationButton }
+
+function Load() {
+  LoadDoveseedSubscriptionForm('.doveseed');
+  LoadDoveseedConfirmationButton('.doveseed-confirm');
+}
+
+
+if (document.readyState === 'loading') {
+  window.addEventListener('load', Load);
+} else {
+  Load();
+}
