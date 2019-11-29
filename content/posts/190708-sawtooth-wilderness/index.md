@@ -14,6 +14,7 @@ background: 11.jpg
 We wake up around sunrise at 5:30am to make the ferry that brings us out of the
 wilderness in time.
 
+<!--more-->
 {{<rimg src="3.jpg" caption="Packing up for the last time">}}
 
 We first have a short ascend onto a last ridge line.

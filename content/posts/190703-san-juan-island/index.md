@@ -14,6 +14,7 @@ Like the previous days, we woke up late. Today we did a short hike, scrambling
 up Mt Grant and from there to Devin's house (one of Peter's friends) to hang out
 there for a while.
 
+<!--more-->
 {{< rimg src="2.jpg" alt="Up the mountain">}}
 
 {{< rimg src="3.jpg" caption="The view from Mt Grant">}}

@@ -14,6 +14,7 @@ Instead of rock climbing, I did a hike with Fabian this weekend. It was a long
 tour and we took the train at 6:32am to Oberammergau. From there, we first
 summited the Ettaler Manndl (1636m).
 
+<!--more-->
 {{< loc "47.58468" "11.11568" >}}
 
 {{< rimg src="1.jpg" caption="View from the Ettaler Manndl">}}

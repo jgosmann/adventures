@@ -16,6 +16,7 @@ a rest day, the skin on my fingers and my feet hurt. Thus, I take it easy today.
 Also, Tim's family comes to visit him and to try some climbing themselves. We
 head to the Smoke Bluffs which are essentially within the city of Squamish.
 
+<!--more-->
 {{<loc "49.70991" "-123.14214" "13">}}
 
 {{< rimg src="2.jpg" caption="The view from Smoke Bluffs">}}

@@ -17,6 +17,7 @@ underbrush is still wet from the rain and both Peter and Alex get wet feet from
 the water shed by just walking through, but my hiking boots are still pretty
 new and the Gore-Tex holds up.
 
+<!--more-->
 {{< rimg src="3.jpg" alt="Packing up gear">}}
 
 {{< pano src="1.jpg" alt="Panoramic view">}}

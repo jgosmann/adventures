@@ -18,6 +18,7 @@ feasonable camp spot before the descent to our destination Stehekin. Thus, we
 plan on doing some extra hiking with less gear on top of the next ridge line.
 But first we have to get there.
 
+<!--more-->
 {{< rimg src="1.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="2.jpg" alt="Sawtooth wilderness">}}
 

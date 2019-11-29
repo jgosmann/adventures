@@ -16,6 +16,7 @@ international flight. Especially if your luggage looks like this, in order to
 check-in two backpacks as a single item (in combination they are still below
 the size and weight restrictions):
 
+<!--more-->
 {{< rimg src="1.jpg" alt="How to check-in two bags as a single bag">}}
 
 This works without complaints, I only had to find the bulky luggage counter.

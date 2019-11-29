@@ -15,6 +15,7 @@ of July parade in Friday Harbor. Lots of people are watching the various floats
 go by. Fittingly, we see a bald eagle fly above at some point. I suppose it does
 not get much more American than this.
 
+<!--more-->
 {{< rimg src="4.jpg" alt="At the 4th of July parade">}}
 
 {{< rimg src="5.jpg" alt="At the 4th of July parade">}}

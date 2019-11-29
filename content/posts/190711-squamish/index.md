@@ -15,6 +15,7 @@ Today is the first day of climbing! Because it is still somewhat wet from
 yesterday, we decide to go to the Cheakamus Canyon area. It is supposed to dry
 quickly and has some overhanging stuff that does not get wet.
 
+<!--more-->
 {{<loc "49.9100" "-123.1562" "10">}}
 
 {{< rimg src="1.jpg" caption="Warm up on Boy Pie (5.8)">}}

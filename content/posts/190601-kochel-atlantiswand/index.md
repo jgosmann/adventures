@@ -16,6 +16,7 @@ time near Kochel at the Atlantiswand (“Atlantis wall”). Besides lead climbin
 there is also some bouldering around and people seem to stash their (old?) crash
 pads under the bottom part of the wall.
 
+<!--more-->
 {{< rimg src="1.jpg" alt="Crash pads stashed below the wall.">}}
 
 But we stuck to lead climbing. After warming up on Scherzhaft Männlich (UIAA 5+,

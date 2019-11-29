@@ -16,6 +16,7 @@ some variety and go bouldering with Olivia and Esti before they go back to
 Vancouver. After picking up crash pads from JC, a friend of Olivia, we head to
 the boulder fields below the Chief.
 
+<!--more-->
 {{< rimg src="8.jpg" caption="The Chief">}}
 
 {{<loc "49.68151" "-123.15212" "14">}}

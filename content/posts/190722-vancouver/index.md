@@ -15,6 +15,7 @@ learn a bit more about the history of the city. The museum tells the story of
 Vancouver from the First Nations through the 19th and 20th century and is quite
 interesting.
 
+<!--more-->
 {{< rimg src="1.jpg" caption="The Museum of Vancouver is supposed to look like a Haida hat">}}
 
 Besides the main exhibition there is also an exhibition on wildlife in the city

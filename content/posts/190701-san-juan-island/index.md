@@ -14,6 +14,7 @@ After a late breakfast with bacon and eggs, we take a stroll through Friday
 Harbor. We come across Sunken Park which is actually lower than its surroundings
 and Peter shows us the school he went to.
 
+<!--more-->
 {{< rimg src="2.jpg" caption="Sunken Park">}}
 
 {{< rimg src="5.jpg" caption="Spring Street School">}}
