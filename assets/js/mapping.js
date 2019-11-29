@@ -108,7 +108,7 @@ const Load = () => {
 
   const tracks = document.querySelectorAll('.gpx');
   for (let track of tracks) {
-    showGpxTrack(track.getAttribute('id'), track.getAttribute('src'));
+    showGpxTrack(track.getAttribute('id'), track.getAttribute('data-src'));
   }
 
   const routes = document.querySelectorAll('.route');
