@@ -47,7 +47,7 @@ function SubscribeForm(props) {
   };
 
   const onCaptchaComplete = (captcha) => {
-    return fetch(props.url + emailInput.current.value, {
+    return fetch(props.url + '/' + emailInput.current.value, {
       method: 'POST',
       body: JSON.stringify({captcha}),
       headers: {
@@ -95,7 +95,7 @@ function ConfirmationButton(props) {
     e.preventDefault();
     setState('requestOngoing');
 
-    return fetch(props.url + emailInput.current.value, {
+    return fetch(props.url + '/' + emailInput.current.value, {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer ' + token.current.value
