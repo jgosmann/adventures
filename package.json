@@ -29,7 +29,7 @@
     "flag-icon-css": "^3.4.5",
     "leaflet": "^1.6.0",
     "leaflet.geodesic": "github:henrythasler/Leaflet.Geodesic",
-    "preact": "^10.0.5",
+    "preact": "^10.1.1",
     "react": "^16.12.0"
   }
 }
