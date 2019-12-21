@@ -13,7 +13,7 @@
     "favicons": "^5.5.0",
     "file-loader": "^5.0.2",
     "gulp": "^4.0.2",
-    "gulp-changed": "^3.2.0",
+    "gulp-changed": "^4.0.2",
     "style-loader": "^1.1.1",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
