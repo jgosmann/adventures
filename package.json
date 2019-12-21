@@ -25,10 +25,9 @@
     "@fortawesome/free-regular-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
-    "Leaflet.Geodesic": "github:henrythasler/Leaflet.Geodesic",
     "flag-icon-css": "^3.4.5",
     "leaflet": "^1.6.0",
-    "leaflet.geodesic": "github:henrythasler/Leaflet.Geodesic",
+    "leaflet.geodesic": "^2.5.2",
     "preact": "^10.1.1",
     "react": "^16.12.0"
   }

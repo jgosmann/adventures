@@ -3,7 +3,7 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerRetinaIcon from 'leaflet/dist/images/marker-icon-2x.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import leaflet from 'leaflet'
-import 'Leaflet.Geodesic/Leaflet.Geodesic'
+import 'leaflet.geodesic'
 
 // FIXME allow for prefix, is there in general a better solution?
 const DefaultIcon = L.icon({
