@@ -5,6 +5,7 @@ publishdate: 2019-02-11T15:56:53+01:00
 draft: false
 ---
 
+<p>
 <a href="{{< relref path="/legal/privacy" lang="en" >}}">
     <span class="split-flag">
         <span class="flag-icon flag-icon-us ul"></span>
@@ -12,6 +13,7 @@ draft: false
     </span>
     English version
 </a>
+</p>
 
 # Datenschutzerklärung
 

@@ -5,10 +5,12 @@ publishdate: 2019-02-11T15:56:53+01:00
 draft: false
 ---
 
+<p>
 <a href="{{< relref path="/legal/disclosure" lang="de" >}}">
     <span class="flag-icon flag-icon-de"></span>
     Deutsche Version
 </a>
+</p>
 
 # Legal disclosure
 
