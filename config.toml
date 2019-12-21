@@ -35,5 +35,5 @@ resampleFilter = "CatmullRom"
 quality = 90
 anchor = "center"
 
-[blackfriday]
-fractions = false
+[markup.goldmark.renderer]
+unsafe = true
