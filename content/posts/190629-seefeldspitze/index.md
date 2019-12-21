@@ -1,6 +1,7 @@
 ---
 title: "Seefeldspitze"
 date: 2019-06-29T19:54:59+02:00
+year: "2019"
 publishdate: 2019-07-25T19:54:59+02:00
 background: 6.jpg
 draft: false

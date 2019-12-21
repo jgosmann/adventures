@@ -2,6 +2,7 @@
 title: "Simetsberg"
 background: 0003.jpg
 date: 2019-01-26T09:34:04+01:00
+year: "2019"
 publishdate: 2019-01-27T09:34:04+01:00
 draft: false
 resources:

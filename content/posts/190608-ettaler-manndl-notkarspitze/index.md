@@ -1,6 +1,7 @@
 ---
 title: "Ettaler Manndl und Notkarspitze"
 date: 2019-06-8T17:19:23+02:00
+year: "2019"
 publishdate: 2019-06-09T17:19:23+02:00
 draft: false
 background: 6.jpg

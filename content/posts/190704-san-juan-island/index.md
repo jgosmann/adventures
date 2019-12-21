@@ -1,6 +1,7 @@
 ---
 title: "San Juan Island, day 4"
 date: 2019-07-04T14:19:42+02:00
+year: "2019"
 publishdate: 2019-07-27T14:19:42+02:00
 draft: false
 resources:

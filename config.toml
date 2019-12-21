@@ -37,3 +37,6 @@ anchor = "center"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[taxonomies]
+year = "year"

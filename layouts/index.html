@@ -1,36 +1,19 @@
 {{ define "head" }}
 {{ end }}
 {{ define "main" }}
-    <div class="navbar">
-        {{ with .Sites.First.GetPage "/subscribe" }}
-            <a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a>
-        {{ end }}
-        {{ partial "legal.html" . }}
-    </div>
+    {{ partial "navbar.html" . }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 20 }}
     <ol class="postlist">
-        {{ range where .Pages "Type" "in" site.Params.mainSections }}
-        {{ range .Pages }}
-            <a href="{{ .RelPermalink }}"><li>
-                <picture>
-                    {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
-                    <source srcset="{{ ($bg.Fill "600x600").RelPermalink }}" media="(min-resolution: 1.5dppx)" />
-                    <img src="{{ ($bg.Fill "300x300").RelPermalink }}" alt="Teaser picture" />
-                </picture>
-                <div class="desc">
-                    <h2>{{ .Title }}</h2>
-                    <ul class="meta">
-                        <li>{{ .Date.Format "January 2, 2006" }}<br>{{ .ReadingTime }} minute read</li>
-                        <li><ol class="comma">
-                            {{ with .Params.categories }}
-                                {{ range sort . }}
-                                    <li>{{ . }}</li>
-                                {{ end }}
-                            {{end}}
-                        </ol></li>
-                    </ul>
-                </div>
-            </li></a>
-        {{ end }}
+        {{ range $paginator.Pages }}
+            {{ partial "postcard.html" . }}
         {{ end }}
     </ol>
+    <div class="pagination">
+        {{ if $paginator.HasPrev }}
+            <a class="button prev" href="{{ $paginator.Prev.URL }}"><i class="fas fa-chevron-left"></i>&nbsp;Newer posts</a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+            <a class="button next" href="{{ $paginator.Next.URL }}">Older posts&nbsp;<i class="fas fa-chevron-right"></i></a>
+        {{ end }}
+    </div>
 {{ end }}

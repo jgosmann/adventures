@@ -1,6 +1,7 @@
 ---
 title: "San Juan Island, arrival"
 date: 2019-06-30T09:41:47+02:00
+year: "2019"
 publishdate: 2019-07-27T09:41:47+02:00
 draft: false
 resources:

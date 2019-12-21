@@ -1,0 +1,18 @@
+<div class="navbar">
+    {{ with .Sites.First.GetPage "/subscribe" }}
+        <a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a>
+    {{ end }}
+    <ol>
+        {{ $active := .Name }}
+        {{ range .Site.Taxonomies.year.Alphabetical.Reverse }}
+            <li>
+                {{ if eq $active .Name }}
+                    <a class="navlink selected" href="{{ $.Site.Home.RelPermalink }}">{{ .Name }}</a>
+                {{ else }}
+                    <a class="navlink" href="{{ "/year/" | relLangURL }}{{ .Name }}">{{ .Name }}</a>
+                {{ end }}
+            </li>
+        {{ end }}
+    </ol>
+    {{ partial "legal.html" . }}
+</div>

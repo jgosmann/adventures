@@ -1,6 +1,7 @@
 ---
 title: "Sawtooth Wilderness, day 2"
 date: 2019-07-06T15:47:07+02:00
+year: "2019"
 publishdate: 2019-07-28T15:47:07+02:00
 draft: false
 resources:

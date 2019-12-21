@@ -2,6 +2,7 @@
 title: "Zillertal, day 2"
 background: 9.jpg
 date: 2019-06-16T19:28:08+02:00
+year: "2019"
 publishdate: 2019-06-16T19:28:08+02:00
 draft: false
 resources:

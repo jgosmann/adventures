@@ -10,6 +10,18 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+
+    ol {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .selected {
+        background-color: #000;
+        color: #fff;
+    }
 }
 
 .navlink {
@@ -36,6 +48,15 @@
 
 .subscribe {
     text-transform: uppercase;
+}
+
+.pagination {
+    margin: 16px;
+    text-align: center;
+    .button {
+        margin: 16px;
+        width: 118px;
+    }
 }
 
 .icon-card {

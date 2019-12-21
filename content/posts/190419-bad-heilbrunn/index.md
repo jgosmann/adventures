@@ -2,6 +2,7 @@
 title: "Bad Heilbrunn"
 date: 2019-04-19T18:59:49+02:00
 publishdate: 2019-04-23T18:59:49+02:00
+year: "2019"
 draft: false
 background: 9.jpg
 resources:

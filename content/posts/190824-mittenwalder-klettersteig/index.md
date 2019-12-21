@@ -1,6 +1,7 @@
 ---
 title: "Mittenwalder Klettersteig"
 date: 2019-08-24T15:30:38+02:00
+year: "2019"
 publishdate: 2019-08-25T15:30:38+02:00
 draft: false
 resources:

@@ -2,6 +2,7 @@
 title: "Kochel: Atlantiswand"
 background: 2.jpg
 date: 2019-06-01T20:02:17+02:00
+year: "2019"
 publishdate: 2019-06-03T20:02:17+02:00
 draft: false
 resources:

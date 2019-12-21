@@ -1,6 +1,7 @@
 ---
 title: "Riffelspitze"
 date: 2019-10-03T20:11:47+02:00
+year: "2019"
 publishdate: 2019-10-04T20:11:47+02:00
 draft: false
 resources:

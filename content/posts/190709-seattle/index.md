@@ -1,6 +1,7 @@
 ---
 title: "Seattle"
 date: 2019-07-09T19:30:34+02:00
+year: "2019"
 publishdate: 2019-07-29T19:30:34+02:00
 draft: false
 resources:

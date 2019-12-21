@@ -1,6 +1,7 @@
 ---
 title: "Guffert"
 date: 2019-08-31T19:00:20+02:00
+year: "2019"
 publishdate: 2019-08-31T19:00:20+02:00
 draft: false
 resources:

@@ -1,6 +1,7 @@
 ---
 title: "Squamish, day 2"
 date: 2019-07-11T18:57:15+02:00
+year: "2019"
 publishdate: 2019-08-01T18:57:15+02:00
 draft: false
 resources:

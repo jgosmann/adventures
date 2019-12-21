@@ -2,6 +2,7 @@
 title: "Pleisenspitze, day 1"
 background: 22.jpg
 date: 2019-03-16T20:14:40+01:00
+year: "2019"
 publishdate: 2019-03-19T20:14:40+01:00
 resources:
 - src: images/*.jpg

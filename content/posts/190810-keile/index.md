@@ -1,6 +1,7 @@
 ---
 title: "Nuts, friends, and co"
 date: 2019-08-10T20:25:18+02:00
+year: "2019"
 publishdate: 2019-08-13T20:25:18+02:00
 draft: false
 resources:

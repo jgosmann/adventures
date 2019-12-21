@@ -1,6 +1,7 @@
 ---
 title: "Vancouver, day 3"
 date: 2019-07-22T19:47:19+02:00
+year: "2019"
 publishdate: 2019-08-07T19:47:19+02:00
 draft: false
 resources:

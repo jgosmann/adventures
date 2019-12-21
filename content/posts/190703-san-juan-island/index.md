@@ -1,6 +1,7 @@
 ---
 title: "San Juan Island, day 3"
 date: 2019-07-03T14:12:44+02:00
+year: "2019"
 publishdate: 2019-07-27T14:12:44+02:00
 draft: false
 resources:
