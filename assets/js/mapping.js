@@ -4,6 +4,9 @@ import markerRetinaIcon from 'leaflet/dist/images/marker-icon-2x.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import leaflet from 'leaflet'
 import 'leaflet.geodesic'
+import 'leaflet.markercluster'
+import 'leaflet.markercluster/dist/MarkerCluster.css'
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 
 // FIXME allow for prefix, is there in general a better solution?
 const DefaultIcon = L.icon({
@@ -105,11 +108,14 @@ const showPostMap = (targetId) => {
     }));
 
   const map = initMap(targetId, {scrollWheelZoom: true, dragging: true});
-  posts.forEach(post => {
-    const marker = leaflet.marker(post.loc);
-    marker.bindPopup(post.html);
-    marker.addTo(map);
+  const markers = L.markerClusterGroup({
   });
+  markers.addLayers(posts.map(post => {
+    const marker = L.marker(post.loc);
+    marker.bindPopup(post.html);
+    return marker;
+  }));
+  map.addLayer(markers);
 
   map.fitBounds(posts.map(p => p.loc), {padding: [50, 50]});
 }
