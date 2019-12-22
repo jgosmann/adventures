@@ -3,9 +3,14 @@
 {{ define "main" }}
     <div class="fullheight-wrapper">
         <div class="navbar">
-            {{ with .Sites.First.GetPage "/subscribe" }}
-                <a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a>
-            {{ end }}
+            <ul>
+                {{ with .Sites.First.GetPage "/subscribe" }}
+                    <li><a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a></li>
+                {{ end }}
+                {{ with .Site.Home }}
+                    <li><a class="navlink" href="{{ .RelPermalink }}">List</a></li>
+                {{ end }}
+            </ul>
             {{ partial "legal.html" . }}
         </div>
         <div id="postmap" class="map postmap">

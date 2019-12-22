@@ -2,9 +2,14 @@
 {{ end }}
 {{ define "main" }}
     <div class="navbar">
-        {{ with .Sites.First.GetPage "/subscribe" }}
-            <a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a>
-        {{ end }}
+        <ul>
+            {{ with .Sites.First.GetPage "/subscribe" }}
+                <li><a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a></li>
+            {{ end }}
+            {{ with .Sites.First.GetPage "/map" }}
+                <li><a class="navlink" href="{{ .RelPermalink }}">Map</a></li>
+            {{ end }}
+        </ul>
         {{ partial "legal.html" . }}
     </div>
     <ol class="postlist">
