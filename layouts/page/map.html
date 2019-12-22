@@ -11,10 +11,10 @@
         <div id="postmap" class="map postmap">
             {{ range where .Site.RegularPages "Type" "posts" }}
                 {{ if isset .Params "map" }}
-                    <div data-loc="[{{ .Params.map }}]" style="display: none;">
-                        {{ .Render "thumbnail" }}
-                        <a href="{{ .RelPermalink }}">{{ .Render "thumbdesc" }}</a>
-                    </div>
+                    <div data-loc="[{{ .Params.map }}]"
+                         data-html="
+                             {{ .Render "thumbnail" | htmlEscape | safeHTML }}
+                             &lt;a href=&quot;{{ .RelPermalink }}&quot;&gt;{{ .Render "thumbdesc" | htmlEscape | safeHTML }}&lt;/a&gt;"></div>
                 {{ end }}
             {{ end }}
         </div>
