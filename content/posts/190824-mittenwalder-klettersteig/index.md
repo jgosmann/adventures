@@ -9,6 +9,7 @@ categories:
 - via ferrata
 - hiking
 background: 2.jpg
+map: "47.4344, 11.2828"
 ---
 
 Today Fabian and I plan to do the Mittenwalder Klettersteig ([via

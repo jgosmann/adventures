@@ -8,6 +8,7 @@ resources:
 categories:
 - travel
 background: 30.jpg
+map: "49.2573, -123.1241"
 ---
 
 We wake up early and drive back to Vancouver. Christine and Vera drop me off at

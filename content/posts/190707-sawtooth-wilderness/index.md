@@ -9,6 +9,7 @@ categories:
 - backcountry
 - hiking
 background: 22.jpg
+map: "48.220176, -120.268001"
 ---
 
 No bear eats us in the night.

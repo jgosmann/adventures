@@ -9,6 +9,7 @@ background: 9.jpg
 categories:
 - hiking
 - via ferrata
+map: "47.43184, 11.06142"
 ---
 
 The friends I usually head into the mountains with were not available this

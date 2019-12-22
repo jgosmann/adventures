@@ -23,3 +23,7 @@ body {
     margin: 0;
     scroll-snap-type: y proximity;
 }
+
+html, body, main {
+    height: 100%
+}

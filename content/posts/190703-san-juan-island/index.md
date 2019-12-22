@@ -8,6 +8,7 @@ resources:
 categories:
 - travel
 background: 5.jpg
+map: "48.5316, -123.0867"
 ---
 
 Like the previous days, we woke up late. Today we did a short hike, scrambling

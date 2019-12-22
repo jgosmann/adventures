@@ -9,6 +9,7 @@ categories:
 - bouldering
 - rock climbing
 background: 2.jpg
+map: "49.68151, -123.15212"
 ---
 
 While Vera and Christine have another day of sport climbing, I decide to add
@@ -19,7 +20,7 @@ the boulder fields below the Chief.
 <!--more-->
 {{< rimg src="8.jpg" caption="The Chief">}}
 
-{{<loc "49.68151" "-123.15212" "14">}}
+{{< loc "49.68151" "-123.15212" "14">}}
 
 {{< rimg src="1.jpg" caption="Topping out on Slingshot (V2)">}}
 

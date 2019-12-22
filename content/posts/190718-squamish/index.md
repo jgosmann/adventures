@@ -9,6 +9,7 @@ categories:
 - rock climbing
 - sport climbing
 background: 12.jpg
+map: "49.9354914, -123.1576047"
 ---
 
 I mentioned our campsite neighbours a couple of times. We chatted a little bit
@@ -17,7 +18,7 @@ guidebook, so they gave us their [printout from Mountain
 Project](https://www.mountainproject.com/route/111739226/centurion). Vera and
 I want to do that climb today. Buf first we need to find it.
 
-{{<loc "49.9354914" "-123.1576047" "11">}}
+{{< loc "49.9354914" "-123.1576047" "11">}}
 
 The printout gives us a textual description of the approach, a satellite image
 with the approach marked, and an elevation profile of the approach.

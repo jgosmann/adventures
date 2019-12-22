@@ -8,6 +8,7 @@ resources:
 categories:
 - travel
 background: 3.jpg
+map: "48.5316, -123.0867"
 ---
 
 My vacation starts with waking up before sunrise to catch an early flight at

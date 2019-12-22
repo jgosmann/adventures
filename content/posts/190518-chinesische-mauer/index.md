@@ -9,6 +9,7 @@ resources:
 categories:
 - sport climbing
 - rock climbing
+map: "47.3706, 11.1427"
 ---
 
 Despite a beatiful April, the weather has been pretty cold and wet for most of

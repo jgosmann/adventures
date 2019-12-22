@@ -10,6 +10,7 @@ categories:
 - hiking
 - backcountry
 background: 20.jpg
+map: "48.220176, -120.268001"
 ---
 
 We wake up early before sunrise to catch the first ferry to the mainland because

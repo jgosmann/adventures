@@ -9,6 +9,7 @@ categories:
 - rock climbing
 - sport climbing
 background: IMG_20190716_140625.jpg
+map: "49.7559, -123.1388"
 ---
 
 Today is the day. The day Vera and I attempt of the 15 pitch Stairway to Heaven

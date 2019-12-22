@@ -8,6 +8,7 @@ resources:
 - src: 20190316.gpx
 categories:
 - snow shoeing
+map: "47.40868, 11.34195"
 ---
 
 The winter season is ending, we already had some quite warm days in Munich, and

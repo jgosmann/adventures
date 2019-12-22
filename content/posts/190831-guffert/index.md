@@ -8,6 +8,7 @@ resources:
 categories:
 - hiking
 background: 3.jpg
+map: "47.5497203, 11.765546"
 ---
 
 Kristina and Martin had a car available this weekend, so we decided to hike

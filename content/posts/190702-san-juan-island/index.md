@@ -8,6 +8,7 @@ resources:
 background: 4.jpg
 categories:
 - travel
+map: "48.5316, -123.0867"
 ---
 
 Another relaxed day spending the morning in the hot tub with a light drizzle of

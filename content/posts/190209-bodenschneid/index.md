@@ -8,6 +8,7 @@ resources:
 - src: images/*.jpg
 categories:
 - snow shoeing
+map: "47.6779, 11.8396"
 ---
 
 The temperature climbed to 8°C in Munich today, but in higher altitude it is

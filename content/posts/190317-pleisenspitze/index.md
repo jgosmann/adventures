@@ -9,6 +9,7 @@ resources:
 - src: 20190317-1.gpx
 categories:
 - snow shoeing
+map: "47.40868, 11.34195"
 ---
 
 We wake up between 7 and 7:30am, shortly before the breakfast. Because there is

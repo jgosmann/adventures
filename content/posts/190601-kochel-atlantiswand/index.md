@@ -9,6 +9,7 @@ resources:
 categories:
 - sport climbing
 - rock climbing
+map: "47.62905, 11.3304"
 ---
 
 Summer is finally here and I went out climbing again with Jason and Lisa. This

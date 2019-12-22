@@ -9,6 +9,7 @@ categories:
 - backcountry
 - hiking
 background: 11.jpg
+map: "48.220176, -120.268001"
 ---
 
 We wake up around sunrise at 5:30am to make the ferry that brings us out of the

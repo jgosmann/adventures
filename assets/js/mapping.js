@@ -18,11 +18,12 @@ const DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
-const initMap = (targetId) => {
+const initMap = (targetId, options = {}) => {
   const map = leaflet.map(targetId, {
     dragging: !L.Browser.mobile,
     tap: !L.Browser.mobile,
-    scrollWheelZoom: false
+    scrollWheelZoom: false,
+    ...options
   });
 
   leaflet.tileLayer(
@@ -95,6 +96,24 @@ const showRoute = (targetId, routeLatLng) => {
   map.fitBounds(route.getBounds(), {padding: [50, 50]});
 }
 
+const showPostMap = (targetId) => {
+  const mapElem = document.getElementById(targetId);
+  const posts = Array.from(mapElem.children).map(
+    elem => ({
+      loc: JSON.parse(elem.getAttribute('data-loc')),
+      html: elem.innerHTML,
+    }));
+
+  const map = initMap(targetId, {scrollWheelZoom: true, dragging: true});
+  posts.forEach(post => {
+    const marker = leaflet.marker(post.loc);
+    marker.bindPopup(post.html);
+    marker.addTo(map);
+  });
+
+  map.fitBounds(posts.map(p => p.loc), {padding: [50, 50]});
+}
+
 
 const Load = () => {
   const locations = document.querySelectorAll('.loc');
@@ -114,6 +133,11 @@ const Load = () => {
   const routes = document.querySelectorAll('.route');
   for (let route of routes) {
     showRoute(route.getAttribute('id'), JSON.parse(route.getAttribute('data-route')));
+  }
+
+  const postmaps = document.querySelectorAll('.postmap');
+  for (let postmap of postmaps) {
+    showPostMap(postmap.getAttribute('id'));
   }
 }
 

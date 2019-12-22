@@ -13,6 +13,7 @@ summary:
   in the middle of the Alps. Of the two days we stay there, one is regarded as
  leisure time and a whole range of activities is offered. I decided to join a
  hike with some colleagues onto the Seefeldspitze.
+map: "47.3333314, 11.2158237"
 ---
 
 Twice a year my employer invites all employees to a five-star superior hotel in

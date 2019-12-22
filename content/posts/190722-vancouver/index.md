@@ -8,6 +8,7 @@ resources:
 categories:
 - travel
 background: 3.jpg
+map: "49.2573, -123.1241"
 ---
 
 It is my last day of the trip and I decided to visit the Museum of Vancouver to

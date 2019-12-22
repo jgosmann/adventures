@@ -8,6 +8,7 @@ resources:
 background: 5.jpg
 categories:
 - hiking
+map: "47.4652, 11.0456"
 ---
 
 Despite consistent rain on Wednesday afternoon and evening, Fabian, Martin,

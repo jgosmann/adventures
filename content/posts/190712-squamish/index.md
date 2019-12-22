@@ -9,6 +9,7 @@ categories:
 - rock climbing
 - sport climbing
 background: 5.jpg
+map: "49.92332, -123.16649"
 ---
 
 Today we are aiming for another top 100 climb, the three pitch Star Chek right
@@ -19,7 +20,7 @@ four pitches. Also, you actually walk-in and walk-off and do not use the rappel
 anchors. Back in the days people rappeled in, but this is now frowned uppon as
 there apparently have been several near misses with loose rocks.
 
-{{<loc "49.92332" "-123.16649" "10">}}
+{{< loc "49.92332" "-123.16649" "10">}}
 
 {{< rimg src="1.jpg" caption="Gearing up with minimal gear (not much you need for mere three pitches) and the ropes tied to backpacks for the 15 minute hike in.">}}
 

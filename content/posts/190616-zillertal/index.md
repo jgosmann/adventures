@@ -8,6 +8,7 @@ resources:
 - src: images/*.jpg
 categories:
 - hiking
+map: "47.2297861, 11.8759901"
 ---
 
 Today we sleep a little bit longer. It rained a bit during the night and is

@@ -8,6 +8,7 @@ resources:
 - src: images/*.jpg
 categories:
 - hiking
+map: "47.58468, 11.11568"
 ---
 
 Instead of rock climbing, I did a hike with Fabian this weekend. It was a long

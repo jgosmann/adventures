@@ -9,6 +9,7 @@ categories:
 - rock climbing
 - sport climbing
 background: 2.jpg
+map: "49.6448, -123.2080"
 ---
 
 We go to Murrin Park today where we meet up with Olivia and her friend Esti.
@@ -22,7 +23,7 @@ nearby opposing wall, I want to know whether I can do it without that wall.
 Turns out I can as I onsight the climb that in this variant feels closer to
 5.10a/b.
 
-{{<loc "49.6448" "-123.2080" "11">}}
+{{< loc "49.6448" "-123.2080" "11">}}
 
 {{< rimg src="2.jpg" caption="In the Doghouse (5.7)">}}
 

@@ -8,6 +8,7 @@ resources:
 - src: images/*.jpg
 categories:
 - snow shoeing
+map: "47.5654, 11.2555"
 ---
 
 While the avalanche danger was very high at the beginning of January, it settled

@@ -9,6 +9,7 @@ categories:
 - rock climbing
 - sport climbing
 background: 1.jpg
+map: "49.9100, -123.1562"
 ---
 
 It is raining. Thus, we go back to the overhanging routes that stay dry in rain
@@ -16,7 +17,7 @@ located in the Cheakamus Canyon. Because of the overhanging nature of the rock,
 the routes are quite hard. But they have fixed draws, which means you can try
 them without losing gear if you cannot finish them.
 
-{{<loc "49.9100" "-123.1562" "10">}}
+{{< loc "49.9100" "-123.1562" "10">}}
 
 We start with Face the Music (5.12a). It has a lower crux for me that I can
 figure out and another crux not far from the anchors. I figure out the beta, but

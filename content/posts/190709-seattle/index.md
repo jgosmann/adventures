@@ -8,6 +8,7 @@ resources:
 background: 3.jpg
 categories:
 - travel
+map: "47.6052, -122.3431"
 ---
 
 After breakfast I have to repack my luggage to get it into a somewhat easily

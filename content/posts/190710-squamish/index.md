@@ -8,6 +8,7 @@ resources:
 background: 3.jpg
 categories:
 - travel
+map: "49.7559, -123.1388"
 ---
 
 After sleeping in a bit and checking out of the hostel, I wait for Vera and

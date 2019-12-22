@@ -9,6 +9,7 @@ categories:
 - backcountry
 - hiking
 background: 15.jpg
+map: "48.220176, -120.268001"
 ---
 
 The night was rainy and cold, but when we wake up the weather is again beatiful.

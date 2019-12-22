@@ -8,6 +8,7 @@ resources:
 background: 6.jpg
 categories:
 - via ferrata
+map: "47.6665, 12.3520"
 ---
 
 This weekend my parents are visiting me in Munich on their way back home from

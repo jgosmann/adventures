@@ -9,6 +9,7 @@ resources:
 categories:
 - sport climbing
 - rock climbing
+map: "47.7548, 11.4486"
 ---
 
 My parents visited me over Easter in Munich and I took them climbing outdoors

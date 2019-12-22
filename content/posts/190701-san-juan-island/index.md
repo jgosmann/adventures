@@ -8,6 +8,7 @@ resources:
 categories:
 - travel
 background: 6.jpg
+map: "48.5316, -123.0867"
 ---
 
 After a late breakfast with bacon and eggs, we take a stroll through Friday

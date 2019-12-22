@@ -10,6 +10,7 @@ resources:
 categories:
 - bouldering
 - rock climbing
+map: "47.3855478, 11.8470404"
 ---
 
 Last weekend a couple of friends from bouldering and I (we were eight in total)

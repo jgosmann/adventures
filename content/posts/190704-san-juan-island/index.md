@@ -8,6 +8,7 @@ resources:
 background: 11.jpg
 categories:
 - travel
+map: "48.5316, -123.0867"
 ---
 
 Today we could not sleep quite as long because we wanted to make it to the 4th

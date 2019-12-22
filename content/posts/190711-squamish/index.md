@@ -9,6 +9,7 @@ categories:
 - rock climbing
 - sport climbing
 background: 2.jpg
+map: "49.9100, -123.1562"
 ---
 
 Today is the first day of climbing! Because it is still somewhat wet from

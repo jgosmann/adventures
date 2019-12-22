@@ -9,6 +9,7 @@ categories:
 - rock climbing
 - sport climbing
 background: 4.jpg
+map: "49.9878, -123.3116"
 ---
 
 Vera and Christine went to Squamish Valley yesterday and found the climbing to
@@ -21,7 +22,7 @@ on the wall the whole day.
 
 {{< rimg src="4.jpg" alt="The Squamish Valley wall">}}
 
-{{<loc "49.9878" "-123.3116" "9">}}
+{{< loc "49.9878" "-123.3116" "9">}}
 
 While I noticed that there is a lot of thimble berries around Squamish (which
 I now know since the Sawtooth Mountain hike), I was not able to find any ripe

@@ -1,0 +1,38 @@
+{{ define "head" }}
+{{ end }}
+{{ define "main" }}
+    <div class="fullheight-wrapper">
+        <div class="navbar">
+            {{ with .Sites.First.GetPage "/subscribe" }}
+                <a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a>
+            {{ end }}
+            {{ partial "legal.html" . }}
+        </div>
+        <div id="postmap" class="map postmap">
+            {{ range where .Site.RegularPages "Type" "posts" }}
+                {{ if isset .Params "map" }}
+                    <div data-loc="[{{ .Params.map }}]" style="display: none;">
+                        <picture>
+                            {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
+                            <source srcset="{{ ($bg.Fill "600x600").RelPermalink }}" media="(min-resolution: 1.5dppx)" />
+                            <img src="{{ ($bg.Fill "300x300").RelPermalink }}" alt="Teaser picture" />
+                        </picture>
+                        <a href="{{ .RelPermalink }}"><div class="desc">
+                            <h2>{{ .Title }}</h2>
+                            <ul class="meta">
+                                <li>{{ .Date.Format "January 2, 2006" }}<br>{{ .ReadingTime }} minute read</li>
+                                <li><ol class="comma">
+                                    {{ with .Params.categories }}
+                                        {{ range sort . }}
+                                            <li>{{ . }}</li>
+                                        {{ end }}
+                                    {{end}}
+                                </ol></li>
+                            </ul>
+                        </div>
+                    </div></a>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

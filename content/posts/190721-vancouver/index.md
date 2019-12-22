@@ -8,6 +8,7 @@ resources:
 categories:
 - travel
 background: 5.jpg
+map: "49.2573, -123.1241"
 ---
 
 The alarm rings and wakes me up. But it is not my alarm, it is the alarm of the

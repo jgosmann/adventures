@@ -6,6 +6,7 @@ draft: false
 resources:
 - src: images/*.jpg
 background: 1.jpg
+map: "48.8316, 11.1019"
 ---
 
 This weekend I am attending a course with the German Alpine club (DAV) about

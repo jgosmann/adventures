@@ -1,5 +1,6 @@
 .DS_Store
 .*.swp
+.*.swo
 assets/meta.html
 favicons
 layouts/_default/baseof.html
