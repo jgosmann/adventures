@@ -33,17 +33,14 @@ start bumping the grade to V3 which I do with a cool bat hang. Not sure if that
 was the intended beta, but I definitely started with both hands on the start
 hold (and my feet above my head) and could climb it that way.
 
+{{<gallery>}}
 {{< rimg src="2.jpg" caption="V3 start of Left Brain">}}
-
 {{< rimg src="3.jpg" caption="Starting to hand-foot match">}}
-
 {{< rimg src="4.jpg" caption="Got the hand foot match">}}
-
 {{< rimg src="5.jpg" caption="Starting to turn around">}}
-
 {{< rimg src="6.jpg" caption="Almost in the V2 start position now">}}
-
 {{< rimg src="7.jpg" caption="Going for the V2 throw to the next hold on the lip">}}
+{{</gallery>}}
 
 Two other climbers come by and try the same problem before we move on to the
 next boulder. There I climb Anatomy Lesson (V3) which takes quite a while to
@@ -70,11 +67,11 @@ Squamish Adventure Centre gift store and the post office) are already closed.
 Back at the campsite, we pass the time with a bit of slacklining while waiting
 for Vera and Christine before Olivia and Esti are headed back to Vancouver.
 
+{{<gallery>}}
 {{< rimg src="9.jpg" alt="Me slacklining">}}
-
 {{< rimg src="10.jpg" alt="Me slacklining">}}
-
 {{< rimg src="11.jpg" alt="Me slacklining">}}
+{{</gallery>}}
 
 
 # Climbing log book

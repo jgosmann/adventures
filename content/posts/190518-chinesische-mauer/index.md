@@ -26,9 +26,10 @@ was even stiffer (and I did not send it). We ended the day with L'Lisa (french
 6c, UIAA 7+/8-, YDS 5.11a/b) because of the name. I did not send that one
 either, but at least it felt possible and maybe having an accurate grade.
 
+{{<gallery>}}
 {{< rimg src="3.jpg" caption="Jason on Der Gipfelschilling.">}}
-
 {{< rimg src="1.jpg" caption="Me on L'Lisa.">}}
+{{</gallery>}}
 
 # Climbing log book
 

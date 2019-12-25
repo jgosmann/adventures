@@ -21,13 +21,12 @@ a shuttle to the Sea to Sky Gondola.
 
 {{<loc "49.67510" "-123.15704" "13">}}
 
+{{<gallery>}}
 {{< rimg src="1.jpg" caption="Going up in the Sea to Sky Gondola">}}
-
 {{< rimg src="2.jpg" alt="View from the Sea to Sky Gondola">}}
-
 {{< rimg src="4.jpg" alt="">}}
-
 {{< rimg src="6.jpg" alt="">}}
+{{</gallery>}}
 
 While gondolas are somewhat rare in Canada, I did many gondola rides in the Alps
 where they are a bit more a means of transportations to or from the
@@ -49,9 +48,10 @@ After walking across the suspension bridge I follow an easy interpretative trail
 about the Squamish (as in the First Nation, not the city) and after that a trail
 with some major lookouts.
 
+{{<gallery>}}
 {{< rimg src="10.jpg" alt="View of Squamish">}}
-
 {{< rimg src="11.jpg" alt="View of Howe Sound">}}
+{{</gallery>}}
 
 {{< rimg src="12.jpg" caption="The Chief from behind">}}
 
@@ -71,11 +71,13 @@ amazes me how lazy people are that the main trails are super crowded while I am
 the only person here where it is just a few more meters further away and
 a little bit more difficult trail. But I am certainly not complaining.
 
+{{<gallery>}}
 {{< rimg src="13.jpg" caption="View from the Highline lookout">}}
+{{< rimg src="15.jpg" alt="View of mountains">}}
+{{</gallery>}}
 
 {{< rimg src="14.jpg" caption="Selfie because there was no one else here to ask for a photo">}}
 
-{{< rimg src="15.jpg" alt="View of mountains">}}
 
 On the way back down, I can spot pitch 1 (Women in Comfortable Shoes) and 2 of
 Stairway to Heaven with climbers on it. It is nice to get this perspective on
@@ -117,18 +119,14 @@ Finally, there is a stage where groups like [Shooting Star
 Idols](https://www.youtube.com/watch?v=GPJpQ-BcIQs), “celebrating and
 popularizing the best of Asian idol culture in Canada”, perform.
 
+{{<gallery>}}
 {{< rimg src="20.jpg" alt="Richmond Night Market">}}
-
 {{< rimg src="21.jpg" alt="Richmond Night Market">}}
-
 {{< rimg src="22.jpg" caption="There were also some activities for children">}}
-
 {{< rimg src="23.jpg" caption="More activities for children">}}
-
 {{< rimg src="24.jpg" caption="The only proper ride">}}
-
 {{< rimg src="25.jpg" caption="I have my doubts how original these are, but I will check if there is anything like it at the real Oktoberfest">}}
-
 {{< rimg src="26.jpg" caption="Shooting Star Idols performing">}}
+{{</gallery>}}
 
 {{<nextday>}}

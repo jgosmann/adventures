@@ -37,9 +37,10 @@ into the rock. It also turns out that we get quite wet because the rain from the
 previous day is still flowing down everywhere (good thing we have Gore-Tex
 hardshells).
 
+{{<gallery>}}
 {{< rimg src="2.jpg" caption="Entering the Höllentalklamm">}}
-
 {{< rimg src="3.jpg" caption="It is really narrow">}}
+{{</gallery>}}
 
 After passing the Höllentalklamm, we enter a gorgeous scenery. We are now at an
 elevation of about 1300m which was high enough for the rain of last night to
@@ -78,11 +79,11 @@ engulfed in clouds and do not see much. Anyways, we continue to ascend the
 nearby Riffelspitze (“ripple peak”) along an arête. Not soon after the cloud
 cover breaks and we get a spectecular view of the Eibsee.
 
+{{<gallery>}}
 {{< rimg src="10.jpg" caption="The Eibsee">}}
-
 {{< rimg src="11.jpg" caption="Going up the ridge line">}}
-
 {{< rimg src="12.jpg" caption="Another view of the Eibsee">}}
+{{</gallery>}}
 
 The last bit before the summit gets quite steep and in addition many of the
 rocks are covered in snow or wet from molten snow. Being extra cautios and with
@@ -92,17 +93,18 @@ very well be possible to get all the way up, but going down is always harder.
 Even going down the part we have already ascended takes us quite a while to get
 down again.
 
+{{<gallery>}}
 {{< rimg src="k - 3.jpg" alt="Me">}}
-
 {{< rimg src="13.jpg" caption="Attempting to summit">}}
-
 {{< rimg src="14.jpg" caption="View back on the ridge line">}}
+{{</gallery>}}
 
 {{< rimg src="15.jpg" caption="We have to descent this again">}}
 
+{{<gallery>}}
 {{< rimg src="16.jpg" alt="Fabian and Kristina">}}
-
 {{< rimg src="17.jpg" caption="The peak of the Riffelspitze">}}
+{{</gallery>}}
 
 On a little plateau, we have another break to eat our summit cake (that we could
 not eat on the summit). From there, besides the view of the Eibsee, we can also

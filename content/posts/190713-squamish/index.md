@@ -25,11 +25,11 @@ Turns out I can as I onsight the climb that in this variant feels closer to
 
 {{< loc "49.6448" "-123.2080" "11">}}
 
+{{<gallery>}}
 {{< rimg src="2.jpg" caption="In the Doghouse (5.7)">}}
-
-{{< rimg src="3.jpg" caption="In the Doghouse (5.7)">}}
-
-{{< rimg src="4.jpg" caption="In the Doghouse (5.7)">}}
+{{< rimg src="3.jpg" alt="In the Doghouse (5.7)">}}
+{{< rimg src="4.jpg" alt="In the Doghouse (5.7)">}}
+{{</gallery>}}
 
 We also do A Bachelor's Life memorial Arête before moving on to a different wall
 with the top 100 5.11a Pleasant Pheasant. That wall is quite high and looks
@@ -41,15 +41,13 @@ the slightly lower anchor of the neighbouring route to the left. Anyways, I'll
 try it and with a few takes (and a fall I believe) I make it up all the way.
 Definitely not an easy 5.11a, but trying it is good for my mental game.
 
+{{<gallery>}}
 {{< rimg src="7.jpg" caption="More Than Just a Pretty Face (5.11a)">}}
-
-{{< rimg src="8.jpg" caption="More Than Just a Pretty Face (5.11a)">}}
-
-{{< rimg src="5.jpg" caption="More Than Just a Pretty Face (5.11a)">}}
-
-{{< rimg src="9.jpg" caption="More Than Just a Pretty Face (5.11a)">}}
-
-{{< rimg src="11.jpg" caption="More Than Just a Pretty Face (5.11a)">}}
+{{< rimg src="8.jpg" alt="More Than Just a Pretty Face (5.11a)">}}
+{{< rimg src="5.jpg" alt="More Than Just a Pretty Face (5.11a)">}}
+{{< rimg src="9.jpg" alt="More Than Just a Pretty Face (5.11a)">}}
+{{< rimg src="11.jpg" alt="More Than Just a Pretty Face (5.11a)">}}
+{{</gallery>}}
 
 We finish climbing slightly earlier than the last days which gives us the chance
 to get shower (for $5) at the recreation centre in Squamish and to buy some

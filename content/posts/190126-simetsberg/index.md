@@ -72,15 +72,13 @@ due to the thick cloud cover.
 
 {{< rimg src="0010.jpg" caption="An odd snow formation. Presumably, it is a small tree fully covered in snow.">}}
 
+{{<gallery>}}
 {{< rimg src="0011.jpg">}}
-
 {{< rimg src="0012.jpg">}}
-
 {{< rimg src="0013.jpg">}}
-
 {{< rimg src="0014.jpg">}}
-
 {{< rimg src="0015.jpg">}}
+{{</gallery>}}
 
 Back at the starting point, we have to wait an hour for the next bus. Luckily,
 with the temperature around the freezing point, it is comparably warm (at least

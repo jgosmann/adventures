@@ -27,9 +27,10 @@ Das Ramayani Kapitel 10 o.S. (UIAA 7+, YDS 5.11a) that a could redpoint on my
 third try after one try of working out the beta and one try of accidentally
 slipping of on one of the last crux moves.
 
+{{<gallery>}}
 {{< rimg src="4.jpg" description="Lisa on Sog ins Nichts">}}
-
 {{< rimg src="3.jpg" description="Lisa on Sog ins Nichts">}}
+{{</gallery>}}
 
 # Climbing log book
 

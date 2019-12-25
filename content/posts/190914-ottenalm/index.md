@@ -23,38 +23,38 @@ mountain companions' track) which has a difficulty rating of D.
 
 {{< rimg src="2.jpg" caption="The start of the ferrata.">}}
 
+{{<gallery>}}
 {{< rimg src="3.jpg" caption="The iron rungs show you how it goes upward steeply.">}}
-
 {{< rimg src="4.jpg" caption="The Ottenalm">}}
-
 {{< rimg src="6.jpg" caption="A two rope bridge has to be crossed. It is swinging quite a bit.">}}
+{{</gallery>}}
 
 {{< rimg src="7.jpg" alt="Two rope bridge">}}
 
 {{< rimg src="8.jpg" alt="Two rope bridge">}}
 
+{{<gallery large="true">}}
 {{< rimg src="9.jpg" caption="The overhanging crux of the ferrata.">}}
-
 {{< rimg src="10.jpg" alt="In the crux">}}
-
 {{< rimg src="11.jpg" alt="In the crux">}}
-
 {{< rimg src="12.jpg" caption="Some people ahead of us.">}}
+{{</gallery>}}
 
+{{<gallery>}}
 {{< rimg src="13.jpg" caption="Approaching the second (shorter) two rope bridge.">}}
-
 {{< rimg src="14.jpg" alt="Two rope bridge">}}
+{{</gallery>}}
 
 After finishing the ferrata, we take a short break before heading back down to
 the Ottenalm. My parents have a drink there, while I tackle a second, harder
 ferrata, the Ottenalm-Direttissima (difficulty D/E). It has almost no iron rungs
 for the feet. Thus, I switch to climbing shoes.
 
+{{<gallery>}}
 {{< rimg src="15.jpg" caption="At the start which is already quite steep.">}}
-
 {{< rimg src="16.jpg" alt="Ottenalm-Direttissima">}}
-
 {{< rimg src="17.jpg" caption="Two people ahead of me that I will soon overtake.">}}
+{{</gallery>}}
 
 Both were quite nice via ferratas that require a quite a bit of technique and
 arm strength. After some food at the Ottenalm, we descend back to the village

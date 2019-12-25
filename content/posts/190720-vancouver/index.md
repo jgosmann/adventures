@@ -24,9 +24,10 @@ Canada Place where large cruise ships dock.
 
 {{< rimg src="1.jpg" caption="Canada Place">}}
 
+{{<gallery>}}
 {{< rimg src="6.jpg" alt="Canada Place">}}
-
 {{< rimg src="7.jpg" alt="Canada Place">}}
+{{</gallery>}}
 
 {{< rimg src="9.jpg" alt="Canada Place">}}
 
@@ -37,9 +38,10 @@ Next I walk through Gastown and see the famous steam-powered clock.
 From Gastown it is just a short walk to Chinatown. There I have a steamed-bun
 with pork filling as a snack.
 
+{{<gallery>}}
 {{< rimg src="15.jpg" alt="Chinatown gate">}}
-
 {{< rimg src="16.jpg" alt="The Associations">}}
+{{</gallery>}}
 
 In Chinatown, I visit the Dr. Sun Yat Sen Chinese gardens which are apparently
 true in style to gardens in China. I attend an interesting tour, included in the
@@ -47,15 +49,19 @@ admission, explaining the guiding principles of the garden design (Feng Shui, Yi
 and Yang, symbolism). It is quite interesting and the garden is a nice, tranquil
 place.
 
+{{<gallery>}}
 {{< rimg src="18.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
 {{< rimg src="19.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
 {{< rimg src="20.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
+{{</gallery>}}
 {{< rimg src="21.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
 {{< rimg src="22.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
+{{<gallery>}}
 {{< rimg src="23.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
 {{< rimg src="24.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
 {{< rimg src="25.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
 {{< rimg src="26.jpg" alt="Dr. Sun Yat Sen Chinese gardens">}}
+{{</gallery>}}
 
 While walking around, I noticed that Vancouver has some good bicycle lanes (wide,
 separated from the traffic and clear signage). So I decide to rent a bicycle.
@@ -76,28 +82,25 @@ beatiful and has some impressively large trees. One point of interest is a giant
 hollow tree. I like how the forrest smells of the firs and other trees mix with
 salty air coming in from the sea.
 
+{{<gallery>}}
 {{< rimg src="33.jpg" caption="A giant tree">}}
-
 {{< rimg src="46.jpg" caption="And another one">}}
-
 {{< rimg src="34.jpg" caption="The big hollow tree">}}
+{{</gallery>}}
 
 I leave the forrest and follow the coastal path around the peninsula giving
 varying views of Vancouver, the surrounding mountains, and the sea.
 
 {{< rimg src="35.jpg" caption="Vancouver skyline">}}
 
+{{<gallery>}}
 {{< rimg src="36.jpg" caption="Totem poles in Stanley Park">}}
-
 {{< rimg src="37.jpg" alt="A lighthouse">}}
-
 {{< rimg src="39.jpg" alt="Dragon in Stanley Park">}}
-
 {{< rimg src="41.jpg" caption="Girl in a Wetsuit meant to symbolize Vancouver's dependence on the ocean">}}
-
 {{< rimg src="42.jpg" caption="Lion's Gate bridge">}}
-
 {{< rimg src="43.jpg" caption="Siwash rock">}}
+{{</gallery>}}
 
 {{< rimg src="44.jpg" alt="The mountains behind Lion's Gate bridge">}}
 

@@ -35,16 +35,19 @@ will stay there during our hike and pick up us afterwards. We have lunch
 not need during the hike, and pack final things before driving to the trail
 head.
 
+{{<gallery>}}
 {{< rimg src="3.jpg" caption="The cabin">}}
-
 {{< rimg src="5.jpg" caption="Obligatory picture at the trail head">}}
+{{</gallery>}}
 
 We start hiking in warm, sunny weather.
 
+{{<gallery>}}
 {{< rimg src="8.jpg" alt="On the hike">}}
 {{< rimg src="9.jpg" alt="On the hike">}}
 {{< rimg src="10.jpg" alt="On the hike">}}
 {{< rimg src="11.jpg" alt="On the hike">}}
+{{</gallery>}}
 
 But soon clouds start forming.
 
@@ -76,27 +79,31 @@ Thus, we decide to press on to not later run into risk not being able to finish
 the hike in time.
 
 {{< rimg src="16.jpg" alt="On the hike">}}
+
+{{<gallery>}}
 {{< rimg src="17.jpg" alt="On the hike">}}
 {{< rimg src="18.jpg" alt="On the hike">}}
 {{< rimg src="19.jpg" caption="Look for the deer">}}
 {{< rimg src="23.jpg" alt="On the hike">}}
 {{< rimg src="21.jpg" caption="The ridge line we crossed to the left">}}
-
 {{< rimg src="22.jpg" caption="We did not find out what surprise awaits one at Surprise Lake. Stehekin is our destination.">}}
-
 {{< rimg src="24.jpg" alt="On the hike">}}
+{{</gallery>}}
+
 {{< rimg src="25.jpg" alt="On the hike">}}
 
 On the next ridge line we finally cross the official border into the wilderness.
 
 {{< rimg src="26.jpg" caption="The start of the wilderness">}}
-
 {{< rimg src="27.jpg" alt="">}}
+
+{{<gallery>}}
 {{< rimg src="28.jpg" alt="">}}
 {{< rimg src="29.jpg" alt="">}}
 {{< rimg src="30.jpg" alt="">}}
 {{< rimg src="31.jpg" alt="">}}
 {{< rimg src="33.jpg" alt="">}}
+{{</gallery>}}
 
 Near Chipmunk Pass (I believe) we set up our first camp. After dinner a light
 rain starts again, so we go to bed. It rains for most of the night.
@@ -105,3 +112,5 @@ We hiked 17.7km in 5:45h today. During that we ascended 1064m, to a peak of
 height of 2268m, and descended 445m.
 
 {{<gpxTrack src="20190705.gpx">}}
+
+{{<nextday>}}

@@ -35,27 +35,23 @@ At some point a (police?) helicoptor flies across the mountain range and gives u
 quite a show, zig-zagging around the mountains and at one point getting sort of
 close to use.
 
+{{<gallery>}}
 {{< rimg src="24.jpg" alt="View during the ascend">}}
-
 {{< rimg src="25.jpg" alt="Susanne ascending">}}
-
 {{< rimg src="26.jpg" alt="Ascending">}}
-
 {{< rimg src="27.jpg" caption="We have to ascend this slope.">}}
-
 {{< rimg src="28.jpg" caption="Taking some pictures of the amazing view.">}}
-
 {{< rimg src="29.jpg" caption="It is again pretty sunny and warm.">}}
+{{</gallery>}}
 
 {{< pano src="33.jpg" alt="The view during the ascent.">}}
 
+{{<gallery>}}
 {{< rimg src="35.jpg" alt="Susanne and Kristina">}}
-
 {{< rimg src="37.jpg" caption="Here you get a little bit of an impression of the steepness.">}}
-
 {{< rimg src="38.jpg" caption="Fabian getting ahead. Can you see the airplane?">}}
-
 {{< rimg src="39.jpg" caption="The last few steps …">}}
+{{</gallery>}}
 
 {{< pano src="40.jpg" caption="… before we can enjoy the amazing view of the Alps.">}}
 
@@ -66,32 +62,30 @@ icy crust, it is now much more mushy and moist.
 
 {{< gpxTrack src="20190317-1.gpx" >}}
 
+{{<gallery>}}
 {{< rimg src="41.jpg" alt="Descending">}}
-
 {{< rimg src="42.jpg" alt="Descending">}}
-
 {{< rimg src="43.jpg" alt="Descending">}}
+{{</gallery>}}
 
 When we get to a patch of snow free grass, we take another break to eat some
 more, enjoy the view, and the sun.
 
+{{<gallery>}}
 {{< rimg src="45.jpg" alt="Taking of the snow shoes for a break at a patch of snow free grass.">}}
-
 {{< rimg src="46.jpg" alt="Having a break.">}}
+{{</gallery>}}
 
 {{< rimg src="47.jpg" alt="Having a break.">}}
 
+{{<gallery>}}
 {{< rimg src="48.jpg" caption="Continuing and enjoying the descent.">}}
-
 {{< rimg src="49.jpg" caption="We made it back to the Pleisenhütte, but we only descended half of the elevation.">}}
-
 {{< rimg src="50.jpg" caption="About an hour before we reach Scharnitz, we pass this small stream which allows us to refill our water with some well tasting water.">}}
-
 {{< rimg src="51.jpg" caption="Back to the Isar and the last couple of meters before reaching Scharnitz.">}}
-
 {{< rimg src="52.jpg" alt="The Isar.">}}
-
 {{< rimg src="53.jpg" alt="The Isar.">}}
+{{</gallery>}}
 
 At the Isar we take another break in the sun before catching our train back to
 Munich from Scharnitz. Today, we hiked 13.7km with an ascend of about 810 meters

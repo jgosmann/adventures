@@ -30,11 +30,11 @@ long distances between the bolts also require close attention to the line of the
 route because you cannot just follow the bolts.  I am relieved to make it to the
 end of the pitch without a fall.
 
+{{<gallery>}}
 {{< rimg src="7.jpg" caption="Vera at the first anchor after I climbed the first few meters of the second pitch">}}
-
 {{< rimg src="8.jpg" caption="We are already getting some nice views">}}
-
 {{< rimg src="1.jpg" caption="View after the first two pitches">}}
+{{</gallery>}}
 
 Next we have to hike a short bit to the Mañana slab. There one of the crux
 pitches (5.10c) awaits. At least with reasonable bolt distances. Nevertheless,
@@ -151,21 +151,16 @@ First Peak (the lowest of three) to have at least been on top.
 
 {{< rimg src="6.jpg" caption="A peculiar balancing boulder. I like the little tree growing on it on the left.">}}
 
+{{<gallery>}}
 {{< rimg src="16.jpg" caption="We were those climbers below earlier today">}}
-
 {{< rimg src="15.jpg" caption="Great view from the top">}}
-
 {{< rimg src="17.jpg" alt="">}}
-
 {{< rimg src="18.jpg" caption="Second and Third Peak">}}
-
 {{< rimg src="20.jpg" alt="">}}
-
 {{< rimg src="21.jpg" alt="">}}
-
 {{< rimg src="22.jpg" alt="">}}
-
 {{< rimg src="5.jpg" caption="Ther chipmunks know, where there are tourists, there will be food">}}
+{{</gallery>}}
 
 We then head back down to meet Christine and Tim who did another (shorter and
 not all the way up) traditionally protected multipitch climb on the Apron of the

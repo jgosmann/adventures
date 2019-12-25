@@ -45,6 +45,7 @@ grassland on the other side of the ridge. It is interesting how the composition
 of plants changes the closer you get to a stream to than change in the opposite
 order once you cross the stream.
 
+{{<gallery>}}
 {{< rimg src="7.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="8.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="9.jpg" alt="Sawtooth wilderness">}}
@@ -55,23 +56,27 @@ order once you cross the stream.
 {{< rimg src="14.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="15.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="16.jpg" alt="Sawtooth wilderness">}}
-
 {{< rimg src="17.jpg" caption="Some parts were affected by wildfires. Here is a surprising border where the fire stopped just behind the green trees in the foreground.">}}
-
 {{< rimg src="18.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="20.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="22.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="24.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 {{< pano src="25.jpg" alt="Sawtooth wilderness">}}
 
+{{<gallery>}}
 {{< rimg src="26.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="27.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 {{< pano src="28.jpg" alt="Sawtooth wilderness">}}
 
+{{<gallery>}}
 {{< rimg src="29.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="30.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
+
 {{< rimg src="31.jpg" alt="Sawtooth wilderness">}}
 
 {{< pano src="32.jpg" alt="Sawtooth wilderness">}}
@@ -83,8 +88,10 @@ a tent, yet alone sleep in it, for the next several kilometers. But the
 elevation lines tell us that there should be a flatter area a bit short of
 crossing the next ridge line.
 
+{{<gallery>}}
 {{<rimg src="33.jpg" alt="Sawtooth wilderness">}}
 {{<rimg src="34.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 After descending into a valley and climbing up most of the ridge line again, we
 finally make it close to the spot we determined on the map. Unfortunately, we
@@ -94,9 +101,10 @@ secluded spot in the area with a way better view. We are only a little bit
 worried about a large amount of bear scat nearby. We hang our food far from the
 tent this night.
 
+{{<gallery>}}
 {{<rimg src="ziege.jpg" alt="A goat">}}
-
 {{<rimg src="35.jpg" caption="Our campsite. A mosquito made it into the picture. They were not too bad, except for the evening hours.">}}
+{{</gallery>}}
 
 {{<pano src="36.jpg" alt="Sawtooth wilderness">}}
 

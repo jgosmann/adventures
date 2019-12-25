@@ -29,15 +29,13 @@ placed on points of interest. I also come along a National Historic Park which
 is basically a museum on the Klondike Gold Rush. Because it is free, I visit it
 too.
 
+{{<gallery>}}
 {{< rimg src="1.jpg" caption="A Chinatown needs to have a gate">}}
-
 {{< rimg src="2.jpg" caption="The last remaining house with a balcony in traditional Chinese style">}}
-
 {{< rimg src="3.jpg" alt="Skyline">}}
-
 {{< rimg src="4.jpg" caption="The secluded Waterfall Garden provides some quiet in the city">}}
-
 {{< rimg src="5.jpg" alt="Make Seattle shitty again">}}
+{{</gallery>}}
 
 In the afternoon I buy some sandwiches, pick up my luggage from the hostel, and
 head to the Greyhound bus terminal. Unfortunately, the bus to Vancouver is

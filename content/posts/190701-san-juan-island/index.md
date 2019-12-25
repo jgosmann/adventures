@@ -16,13 +16,13 @@ Harbor. We come across Sunken Park which is actually lower than its surroundings
 and Peter shows us the school he went to.
 
 <!--more-->
+
+{{<gallery>}}
 {{< rimg src="2.jpg" caption="Sunken Park">}}
-
 {{< rimg src="5.jpg" caption="Spring Street School">}}
-
 {{< rimg src="3.jpg" alt="Friday Harbor">}}
-
 {{< rimg src="4.jpg" caption="The ferry">}}
+{{</gallery>}}
 
 The ferry was shut down for most of the day, because someone left a bomb threat
 in one of the wash rooms. Luckily, this did not happen yesterday. Of course,
@@ -35,10 +35,12 @@ fun.
 The rest of the evening, we spend relaxing on the deck and making big, fat
 burgers for dinner.
 
+{{<gallery>}}
 {{< rimg src="1.jpg" alt="Me on the deck">}}
+{{< rimg src="7.jpg" caption="Burger dinner!">}}
+{{</gallery>}}
 
 {{< rimg src="6.jpg" caption="The view from the deck. On days like this, you can clearly see Mt Baker on the mainland.">}}
 
-{{< rimg src="7.jpg" caption="Burger dinner!">}}
 
 {{<nextday>}}

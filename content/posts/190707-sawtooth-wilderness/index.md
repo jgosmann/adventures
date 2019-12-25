@@ -26,19 +26,23 @@ But first we have to get there.
 On top of the ridge line we leave most of our gear behind, and wander off-trail
 on top of the ridge line to the first peak we can see.
 
+{{<gallery>}}
 {{< rimg src="5.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="6.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="7.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 That did not take very long. We decide to continue even further and trying to
 ascend the big mountain that we can see in the ridge line curving around.
 
 {{< rimg src="8.jpg" caption="Can we get to that mountain?">}}
 
+{{<gallery>}}
 {{< rimg src="9.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="10.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="11.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="12.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 Well we make it quite close, but get to a spot that gets quite steep and seems
 unsafe to descend. Also, on the other side of that descend getting to the top of
@@ -52,16 +56,20 @@ head back.
 
 {{< pano src="16.jpg" alt="Sawtooth wilderness">}}
 
+{{<gallery>}}
 {{< rimg src="17.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="18.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="19.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 After picking up our gear, we soon leave the Sawtooth Wilderness and enter the
 Lake Chelan National Recreation Area, though we will cut back close to the
 border at the end of the day.
 
+{{<gallery>}}
 {{< rimg src="20.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="21.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 {{< rimg src="22.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="23.jpg" alt="Sawtooth wilderness">}}
 
@@ -77,28 +85,33 @@ to dig any holes.
 
 {{< rimg src="25.jpg" caption="We camped on the other side of this lake.">}}
 
+{{<gallery>}}
 {{< rimg src="26.jpg" caption="Our camp site">}}
-
 {{< rimg src="27.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 {{< rimg src="28.jpg" caption="A log that makes for a comfortable reclining chair.">}}
 
+{{<gallery>}}
 {{< rimg src="29.jpg" alt="Sawtooth wilderness">}}
-
 {{< rimg src="32.jpg" alt="Sawtooth wilderness">}}
-
 {{< rimg src="34.jpg" alt="Sawtooth wilderness">}}
-
 {{< rimg src="41.jpg" alt="Sawtooth wilderness">}}
-{{< rimg src="42.jpg" alt="Sawtooth wilderness">}}
-{{< rimg src="43.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
+{{< rimg src="42.jpg" alt="Sawtooth wilderness">}}
+
+{{<gallery>}}
+{{< rimg src="43.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="marmot.jpg" caption="A marmot enjoying the sun.">}}
+{{</gallery>}}
 
 Because we are so early, Peter and I climb a nearby ridge line and minor
 mountain without our backpacks and can enjoy another amazing view.
 
 {{< rimg src="30.jpg" alt="Sawtooth wilderness">}}
+
+{{<gallery>}}
 {{< rimg src="31.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="33.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="35.jpg" alt="Sawtooth wilderness">}}
@@ -106,6 +119,7 @@ mountain without our backpacks and can enjoy another amazing view.
 {{< rimg src="37.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="38.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="39.jpg" alt="Sawtooth wilderness">}}
+{{</gallery>}}
 
 {{< pano src="40.jpg" alt="Sawtooth wilderness">}}
 

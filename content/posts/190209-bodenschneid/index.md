@@ -42,33 +42,22 @@ just go off-trail to cut across to our actual trail. This is easy because of the
 thick layer of snow. In the summer this would likely be impossible due to the
 undergrowth.
 
+{{<gallery>}}
 {{< rimg src="0004.jpg" alt="A hut covered in deep snow">}}
-
 {{< rimg src="0005.jpg" caption="Descending a little bit before going off-trail which is much more fun than this boring wide road.">}}
-
 {{< rimg src="0006.jpg" alt="Susanne and Fabian leading the way">}}
-
 {{< rimg src="0007.jpg" caption="The Bodenschneid. We could see the summit cross, but it is quite hard to discern on this photo (though possible).">}}
-
 {{< rimg src="0008.jpg" alt="Fabian and Kristina going uphill">}}
-
 {{< rimg src="0009.jpg" alt="Fabian in front of another snow covered hut">}}
-
 {{< rimg src="0010.jpg" alt="More huts">}}
-
 {{< rimg src="0011.jpg" caption="Around to the backside of the mountain, we discover a ski location.">}}
-
 {{< rimg src="0012.jpg" caption="The snow formed an interesting pattern here.">}}
-
 {{< rimg src="0013.jpg" alt="Approaching the final climb">}}
-
 {{< rimg src="0014.jpg" caption="The final and steepest climb. In some spots it was quite difficult to get up.">}}
-
 {{< rimg src="0015.jpg" alt="Susanne, Martin, and Kristina following">}}
-
 {{< rimg src="0016.jpg" caption="About half-way up the steep climb.">}}
-
 {{< rimg src="0017.jpg" caption="The great view after finally reaching the top of the ridge.">}}
+{{</gallery>}}
 
 {{< pano src="0018.jpg" alt="Panoramic view from the Bodenschneid ridge">}}
 
@@ -89,29 +78,20 @@ Then, suddenly, we are getting ingulfed in some foggy clouds and the view is
 suddenly much worse. We also starting to get a little bit cold. So we gather out
 things quickly and start the descend via an alternate, not quite as steep route.
 
+{{<gallery>}}
 {{< rimg src="0022.jpg" alt="Starting the descend">}}
-
 {{< rimg src="0023.jpg" alt="View on the descend">}}
-
 {{< rimg src="0024.jpg" caption="During the descend the sun breaks out again and gives us a nice golden light.">}}
-
 {{< rimg src="0025.jpg" caption="It is easy to topple over when descending.  Luckily, the snow is soft.">}}
-
 {{< rimg src="0026.jpg" caption="Breaking trail through deep snow because that is more fun than the actual trail.">}}
-
 {{< rimg src="0027.jpg" alt="Martin and Fabian breaking trail">}}
-
 {{< rimg src="0028.jpg" caption="Susanne standing rock solid, while Kristina and Fabian have some trouble with their balance.">}}
-
 {{< rimg src="0029.jpg" caption="Are some starting to get tired?">}}
-
 {{< rimg src="0030.jpg" alt="Martin, Fabian, and Sussane standing in the golden sunlight">}}
-
 {{< rimg src="0031.jpg" alt="Near the huts for the skiers">}}
-
 {{< rimg src="0032.jpg" alt="Almost back to that one snow covered hut">}}
-
 {{< rimg src="0033.jpg" caption="Running downhill in snow shoes can be a lot of fun. And catapults lots of snow against your back.">}}
+{{</gallery>}}
 
 Soon we reach the lower part of the trail where snow shoes are not much use and
 we take them off again. We make it back for the 4:49pm train, but it is 15

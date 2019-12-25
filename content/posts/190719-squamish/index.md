@@ -43,9 +43,10 @@ cracks. Those are moves you rarely get on sport climbs.
 We end early (the last 9 days of climbing are taking their toll), get showers,
 eat Sushi, and pack as we are leaving tomorrow.
 
+{{<gallery>}}
 {{< rimg src="4.jpg" caption="Our campsite">}}
-
 {{< rimg src="5.jpg" alt="Our rental car">}}
+{{</gallery>}}
 
 
 # Climbing log book

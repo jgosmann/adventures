@@ -41,11 +41,11 @@ second rappel down (of two total) was also one of the best I did. You get about
 
 {{< rimg src="2.jpg" caption="Pitch 2 of Sacrilege">}}
 
+{{<gallery>}}
 {{< rimg src="3.jpg" caption="30m of free hanging rappel">}}
-
 {{< rimg src="4.jpg" alt="Rappel">}}
-
 {{< rimg src="6.jpg" alt="Rappel">}}
+{{</gallery>}}
 
 Before heading back to the campsite, we do another quick 5.8 slab climb which
 I believe to be Kingfishers Catch Fire. On the way back, we stop at the Tantalus

@@ -23,14 +23,16 @@ liquor.
 
 Next we visit the alpaca farm …
 
+{{<gallery>}}
 {{< rimg src="2.jpg" alt="Alpaca farm">}}
-
 {{< rimg src="3.jpg" alt="Alpaca farm">}}
+{{</gallery>}}
 
 … and the lavender farm.
 
+{{<gallery>}}
 {{< rimg src="4.jpg" alt="Lavender farm">}}
-
 {{< rimg src="5.jpg" alt="Lavender farm">}}
+{{</gallery>}}
 
 {{<nextday>}}

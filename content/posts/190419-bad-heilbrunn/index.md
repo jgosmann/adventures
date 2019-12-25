@@ -24,27 +24,28 @@ Our first warmup route was the Radlweg (UIAA 3, YDS 5.4). Roughly translates to
 
 {{< rimg src="1.jpg" caption="Me on the Radlweg">}}
 
+{{<gallery>}}
 {{< rimg src="2.jpg" caption="Me on belay duty">}}
-
 {{< rimg src="3.jpg" caption="My father on the Radlweg">}}
+{{</gallery>}}
 
 Then we did Schwarzer Riss (“black crack”, UIAA 4, YDS 5.5) with a surprisingly
 hard crux for the grade.
 
+{{<gallery>}}
 {{< rimg src="4.jpg" caption="Me on Schwarzer Riss">}}
-
 {{< rimg src="5.jpg" caption="Me in the crux of Schwarzer Riss">}}
-
 {{< rimg src="6.jpg" caption="Me on belay duty again">}}
-
 {{< rimg src="7.jpg" caption="Rappelling">}}
+{{</gallery>}}
 
 Finally, we did the Weberknecht Verschneidung (“Harvestman corner”, UIAA 4, YDS
 5.5) which is a really nice climb despite the low grade.
 
+{{<gallery>}}
 {{< rimg src="8.jpg" caption="My father on the Weberknecht Verschneidung">}}
-
 {{< rimg src="9.jpg" caption="The main slab wall of Bad Heilbrunn">}}
+{{</gallery>}}
 
 My parents enjoyed their first outdoor climb a lot and I hope to squeeze in some
 more climbing around Munich this summer.

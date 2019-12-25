@@ -50,9 +50,10 @@ a guy who rode is bicycle up from San Francisco, and ordering some Chinese food.
 On the ferry, I finally get hit by the jetlag and doze off for most of the time,
 but still regain consciousness to see the sunset.
 
+{{<gallery>}}
 {{< rimg src="2.jpg" alt="On the ferry ride">}}
-
 {{< rimg src="3.jpg" alt="On the ferry ride">}}
+{{</gallery>}}
 
 {{<travel "[47.6077,-122.3421], [48.4852,-122.6160], [48.5316,-123.0867]">}}
 

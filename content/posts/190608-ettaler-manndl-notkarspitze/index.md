@@ -30,9 +30,10 @@ without the backup of a via ferrata set. Though, we had to be a little bit
 careful because the rock was quite polished and some blocks were a bit loose,
 but the steel cable was solid.
 
+{{<gallery>}}
 {{< rimg src="4.jpg" caption="The route follows the steel cable">}}
-
 {{< rimg src="3.jpg" caption="The last bit before the summit">}}
+{{</gallery>}}
 
 We then descended to Ettal, a little village with a monestary.
 
@@ -46,11 +47,12 @@ mountain.
 
 {{< rimg src="6.jpg" caption="View from the Notkarspitze">}}
 
-{{< rimg src="7.jpg" caption="You can see Garmisch-Partenkirchen in the valley">}}
-
+{{<gallery>}}
 {{< rimg src="8.jpg" alt="View from the Notkarspitze">}}
-
 {{< rimg src="9.jpg" alt="View from the Notkarspitze">}}
+{{</gallery>}}
+
+{{< rimg src="7.jpg" caption="You can see Garmisch-Partenkirchen in the valley">}}
 
 We then descended to Farchant. And the village border Fabian noted that we could
 make the next train back if we were fast enough. So we decided to run the

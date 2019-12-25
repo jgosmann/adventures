@@ -48,9 +48,10 @@ a rest. So, I make good progress and soon even overtake a couple.
 
 {{< rimg src="2.jpg" caption="The view with the gondala station at the left.">}}
 
+{{<gallery>}}
 {{< rimg src="3.jpg" caption="Shortly before a rope ladder that informs me that most of the hardest parts are behind me, but some are still to come.">}}
-
 {{< rimg src="5.jpg" alt="Rope ladder">}}
+{{</gallery>}}
 
 {{< rimg src="6.jpg" alt="Rope ladder">}}
 
@@ -96,11 +97,11 @@ find the right partner) before attempting that.
 
 {{< rimg src="17.jpg" caption="The Jubiläumsgrat with the Zugspitze at the end.">}}
 
+{{<gallery>}}
 {{< rimg src="14.jpg" alt="View from the Alpspitze">}}
-
 {{< rimg src="15.jpg" caption="View of Garmisch-Partenkirchen">}}
-
 {{< rimg src="16.jpg" caption="The Ostgrat that I ascended.">}}
+{{</gallery>}}
 
 The view is beatiful. Nevertheless, I eventually get satisfied with it and start
 my descent. Again against the usual flow of people down the Alpspitz-Ferrata.
@@ -114,9 +115,10 @@ rocks coming down in exactly that place. Probably some person higher up caused
 this rockfall. That is why it is important to wear a helmet during such
 activities. Luckily I do not get hit and can then savely pass.
 
+{{<gallery large="true">}}
 {{< rimg src="18.jpg" caption="The beginning of the descent.">}}
-
 {{< rimg src="19.jpg" caption="The most famous ladder in the Alpspitz-Ferrata.">}}
+{{</gallery>}}
 
 There is an aspecially famous ladder of iron rungs in the Alpspitz-Ferrata that
 is depicted in many photos and guide books. As a child I saw one of those which
@@ -124,9 +126,10 @@ made me totally want to climb that mountain. Probably my first outdoor related
 goal? My parents did this with me when I was 12. It is nice to reminiscice in
 these memories while going down the ladder.
 
+{{<gallery>}}
 {{< rimg src="alpspitze2000.jpg" caption="Climbing the Alpspitze at the age of 12.">}}
-
 {{< rimg src="20.jpg" caption="The ladder from further back. A perspective rarely shown.">}}
+{{</gallery>}}
 
 {{< rimg src="21.jpg" caption="The view back to the Bernadeinkopf with the Mauerläuferklettersteig.">}}
 

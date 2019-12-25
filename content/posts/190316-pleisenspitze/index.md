@@ -41,33 +41,22 @@ snow which is slightly annoying and not deep enough to put on the snow shoes.
 Anyways, we make it to the German-Austrian border. Not that you would notice in
 any way; it is Europe after all. But this ravine apparently marks the border.
 
+{{<gallery>}}
 {{< rimg src="3.jpg" alt="A ravine marking the German-Austrian border.">}}
-
 {{< rimg src="4.jpg" caption="The Pleisenspitze lies behind this mountain range.">}}
-
 {{< rimg src="5.jpg" alt="A mountain range hiding the view of the Pleisenspitze.">}}
-
 {{< rimg src="6.jpg" alt="Susanne and Kristina">}}
-
 {{< rimg src="7.jpg" alt="The group on a flat trail approaching the mountain range.">}}
-
 {{< rimg src="8.jpg" caption="We arrived in Scharnitz with the Pleisenspitze clearly visible in the background.">}}
-
 {{< rimg src="9.jpg" alt="View in Scharnitz away from the Pleisenspitze.">}}
-
 {{< rimg src="10.jpg" caption="Checking directions">}}
-
 {{< rimg src="11.jpg" caption="Approaching the Pleisenspitze along the river Isar.">}}
-
 {{< rimg src="12.jpg" caption="The rising moon appeared to be really large above the mountain. Of course this visual effect always gets lost on photos.">}}
-
 {{< rimg src="13.jpg" caption="As we get higher we finally encounter some snow.">}}
-
 {{< rimg src="14.jpg" caption="But it is still warm enough for some of us to hike in T-shirts.">}}
-
 {{< rimg src="15.jpg" caption="The views are slowly getting better …">}}
-
 {{< rimg src="16.jpg" caption="… and better as we climb higher.">}}
+{{</gallery>}}
 
 {{< pano src="17.jpg" alt="Panoramic view">}}
 

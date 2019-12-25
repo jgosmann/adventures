@@ -49,9 +49,10 @@ lost for while. As we wander around, we meet our campsite neighbours who happen
 to look for another climb close to the start of Stairway to Heaven. Together we
 locate the right approach path.
 
+{{<gallery>}}
 {{< rimg src="3.jpg" caption="Vera coming back down the approach">}}
-
 {{< rimg src="2.jpg" caption="Christine heading back down at the start of Stairway to Heaven">}}
+{{</gallery>}}
 
 {{< rimg src="1.jpg" caption="The start of the route already gives a nice view of Howe Sound">}}
 

@@ -26,57 +26,53 @@ there apparently have been several near misses with loose rocks.
 
 {{< rimg src="2.jpg" alt="Hike in">}}
 
+{{<gallery>}}
 {{< rimg src="3.jpg" alt="Hike in">}}
-
 {{< rimg src="4.jpg" alt="Hike in">}}
+{{</gallery>}}
 
 {{< rimg src="5.jpg" caption="Two other climbers starting the route ahead of us">}}
 
+{{<gallery>}}
 {{< rimg src="6.jpg" alt="First pitch">}}
-
 {{< rimg src="7.jpg" alt="Approaching the climb">}}
-
 {{< rimg src="8.jpg" caption="Getting ready next to the white water of the Cheakamus">}}
+{{</gallery>}}
 
 {{< rimg src="9.jpg" alt="Me, Vera, Christine">}}
 
 {{< rimg src="10.jpg" alt="Me and Christine">}}
 
+{{<gallery>}}
 {{< rimg src="11.jpg" caption="Me starting the first ptich">}}
-
 {{< rimg src="12.jpg" caption="At the first anchors">}}
-
 {{< rimg src="13.jpg" alt="Vera at the first anchors">}}
-
+{{</gallery>}}
+{{<gallery large="true">}}
 {{< rimg src="14.jpg" alt="The Cheakamus">}}
-
 {{< rimg src="15.jpg" alt="The Cheakamus">}}
+{{</gallery>}}
 
+{{<gallery>}}
 {{< rimg src="16.jpg" alt="Christine and Vera">}}
-
 {{< rimg src="17.jpg" caption="Christine starting the next pitch">}}
-
 {{< rimg src="18.jpg" alt="Christine leading">}}
-
 {{< rimg src="19.jpg" caption="Rope management">}}
-
 {{< rimg src="20.jpg" caption="Getting ready to follow the pitch">}}
-
+{{</gallery>}}
+{{<gallery large="true">}}
 {{< rimg src="21.jpg" caption="View from the part I led">}}
-
 {{< rimg src="22.jpg" caption="Belaying Christine up">}}
-
+{{</gallery>}}
+{{<gallery>}}
 {{< rimg src="23.jpg" alt="Slabby pitch">}}
-
 {{< rimg src="24.jpg" caption="Christine starting the final pitch">}}
-
 {{< rimg src="25.jpg" alt="Me waiting">}}
-
+{{</gallery>}}
+{{<gallery large="true">}}
 {{< rimg src="26.jpg" alt="View of the Cheakamus">}}
-
 {{< rimg src="29.jpg" caption="Vera following the last pitch. She has quite some problems getting up there being unused to slabs. But she learned to love slabs by the end of the trip.">}}
-
-{{< rimg src="30.jpg" caption="Packing up">}}
+{{</gallery>}}
 
 After finishing this climb, we still have about half a day and decide to check
 out Area 44.

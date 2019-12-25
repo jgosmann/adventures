@@ -28,9 +28,10 @@ a backup toprope line. All my nuts hold, but one of the friends that I believed
 to be bomber failed. Upon closer inspection it seems that there was a thin layer
 of a different (brittle) mineral on the rock that was broken away on the impact.
 
+{{<gallery large="true">}}
 {{<rimg src="2.jpg" caption="Placing friends">}}
-
 {{<rimg src="4.jpg" alt="Me climbing">}}
+{{</gallery>}}
 
 We have a nice dinner outside at the inn where we staying for the night. On
 Sunday we place and test more gear. I have again a cam that fails on the second

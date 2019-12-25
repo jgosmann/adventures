@@ -55,13 +55,12 @@ think its grade is around actual V4/6c Fb bloc (but definitely harder than
 Motscho). The crux is definitely the first move and it is pretty much a one move
 wonder.
 
+{{<gallery>}}
 {{< rimg src="1.jpg" caption="This is the line: Alter Falter" >}}
-
 {{< rimg src="2.jpg" caption="The starting position" >}}
-
 {{< rimg src="3.jpg" caption="How is that right foot position even anatomically possible?" >}}
-
 {{< rimg src="4.jpg" caption="The rest is easy" >}}
+{{</gallery>}}
 
  After Lisa and Jason return, they quickly warm up on the same boulder and then
 we go on a little bit further into the forest where there are much more

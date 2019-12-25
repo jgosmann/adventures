@@ -34,45 +34,35 @@ during the day. We see some people who did not even bring a via ferrata set.
 
 {{< rimg src="2.jpg" alt="Fabian crossing a wooden bridge">}}
 
+{{<gallery>}}
 {{< rimg src="3.jpg" alt="View">}}
-
 {{< rimg src="4.jpg" caption="Much of the via ferrata follows the German-Austrian border as indicated by the pole with the Ö.">}}
-
 {{< rimg src="5.jpg" alt="View">}}
-
 {{< rimg src="6.jpg" alt="View">}}
-
 {{< rimg src="7.jpg" caption="Descending some ladders">}}
-
 {{< rimg src="8.jpg" alt="View">}}
-
 {{< rimg src="9.jpg" caption="Traversing on wood planks">}}
-
 {{< rimg src="10.jpg" alt="Traversing on wood planks">}}
+{{</gallery>}}
 
 {{< rimg src="11.jpg" alt="View">}}
 
+{{<gallery large="true">}}
 {{< rimg src="12.jpg" caption="I do not know who would take a bicycle up here, but if you do, be aware that you are not allowed to ride it.">}}
-
 {{< rimg src="13.jpg" caption="This shows where we came from">}}
+{{</gallery>}}
 
+{{<gallery>}}
 {{< rimg src="14.jpg" alt="View">}}
-
 {{< rimg src="15.jpg" alt="View">}}
-
 {{< rimg src="16.jpg" alt="View">}}
-
 {{< rimg src="17.jpg" caption="Last summit">}}
-
 {{< rimg src="18.jpg" alt="The via ferrata">}}
-
 {{< rimg src="19.jpg" alt="The view from our lunch break spot on the Kirchlspitze">}}
-
 {{< rimg src="20.jpg" caption="A little bit of a “traffic jam” on the final part">}}
-
 {{< rimg src="21.jpg" caption="The Pleisenspitze which we have been on in the winter already">}}
-
 {{< rimg src="22.jpg" caption="Here the via ferrata ends, and people left some messages laid out with stones">}}
+{{</gallery>}}
 
 After the via ferrata we descend to the Brunnsteinhütte where we have a drink
 before continuing our descent back to Mittenwald. Instead of the direct descent,
@@ -81,9 +71,10 @@ This one is higher and probably longer than the Sky Pilot suspension bridge in
 Squamish. It also allows you to look through the bottom. Much more exciting than
 in Squamish!
 
+{{<gallery large="true">}}
 {{< rimg src="23.jpg" caption="The suspension bridge">}}
-
 {{< rimg src="24.jpg" alt="Suspension bridge">}}
+{{</gallery>}}
 
 While descending the last few meters we hear thunder announcing the forecasted
 thunderstorms. But there is not much rain, only a couple of drops. It is barely

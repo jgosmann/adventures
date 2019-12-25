@@ -17,13 +17,12 @@ go by. Fittingly, we see a bald eagle fly above at some point. I suppose it does
 not get much more American than this.
 
 <!--more-->
+{{<gallery>}}
 {{< rimg src="4.jpg" alt="At the 4th of July parade">}}
-
 {{< rimg src="5.jpg" alt="At the 4th of July parade">}}
-
 {{< rimg src="6.jpg" alt="At the 4th of July parade">}}
-
 {{< rimg src="7.jpg" alt="At the 4th of July parade">}}
+{{</gallery>}}
 
 However, we do not see any of Susie's mopeds in the parade. These rentals are
 a quite common occurence on the island and sometimes a traffic disturbance due
@@ -35,15 +34,13 @@ to their slow speed.
 
 Next we go tide pooling.
 
+{{<gallery>}}
 {{< rimg src="9.jpg" caption="Path to the coast">}}
-
 {{< rimg src="10.jpg" alt="Path to the coast">}}
-
 {{< rimg src="3.jpg" alt="Tide pooling">}}
-
 {{< rimg src="11.jpg" alt="A see star">}}
-
 {{< rimg src="12.jpg" alt="Tide pooling">}}
+{{</gallery>}}
 
 {{< rimg src="13.jpg" caption="That is a huge crab!">}}
 
@@ -54,9 +51,10 @@ A highlight of the day is going sailing on David's sailboat.
 But the visit to Friday Harbor labs (where Peter's mum Megan just became interim
 director), is quite interesting too.
 
+{{<gallery>}}
 {{< rimg src="15.jpg" alt="Friday Harbor labs">}}
-
 {{< rimg src="16.jpg" alt="Friday Harbor labs">}}
+{{</gallery>}}
 
 Here is a video of a scale worm feeding. Watch until the end!
 

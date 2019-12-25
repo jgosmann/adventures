@@ -48,8 +48,9 @@ crack climbs is actually a small stream of running water. Hoping for better
 conditions tomorrow and an early start, we head back to camp, have dinner, and
 go to sleep.
 
+{{<gallery>}}
 {{< rimg src="3.jpg" caption="Heading back to the car, with the impressive Stawamus Chief in the background.">}}
-
 {{< rimg src="4.jpg" caption="The moon above the Stawamus Chief as seen from our campground.">}}
+{{</gallery>}}
 
 {{<nextday>}}

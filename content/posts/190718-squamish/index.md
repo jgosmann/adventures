@@ -91,9 +91,10 @@ We then follow a faint trail through thick West Coast rainforrest for about 20
 minutes. It is actually a quite nice hike. Even though well camouflaged, we see
 a grouse with a chick. Surprisingly they do not flee as we pass.
 
+{{<gallery>}}
 {{< rimg src="5.jpg" alt="The trail">}}
-
 {{< rimg src="6.jpg" alt="Grouse with chick">}}
+{{</gallery>}}
 
 {{< rimg src="7.jpg" caption="The boulder field tells us that we are almost there">}}
 
@@ -107,9 +108,10 @@ again. So we decide to start the climb. I lead the first pitch (5.10a). Indeed
 the start is quite doable (though I weight the rope once or twice) and as I get
 a little bit higher the rock starts getting drier.
 
+{{<gallery large="true">}}
 {{< rimg src="8.jpg" caption="Start of the first pitch">}}
-
 {{< rimg src="9.jpg" caption="At the anchor after the first pitch">}}
+{{</gallery>}}
 
 Vera leads the second pitch (5.8) which is scrambling for the most part. Then
 I am back to leading. Pitch 3 (5.10b) starts steep, has a slabby crux and is
@@ -122,17 +124,18 @@ showers. But we make it all the way to the top and can enjoy the view.
 
 {{< rimg src="11.jpg" alt="The view">}}
 
+{{<gallery>}}
 {{< rimg src="12.jpg" alt="The view">}}
-
 {{< rimg src="13.jpg" alt="Me on top">}}
-
 {{< rimg src="16.jpg" alt="The view">}}
+{{</gallery>}}
 
 The wind up there is strong and cold. Thus we soon rappel back down.
 
+{{<gallery>}}
 {{< rimg src="14.jpg" alt="Rappeling">}}
-
 {{< rimg src="15.jpg" alt="Rappeling">}}
+{{</gallery>}}
 
 It definitely was a very fun climb with neat exposure in a somewhat remote
 location. We did not meet or see any other climbers there.

@@ -31,16 +31,13 @@ descent and returning to Zell along the Ziller.
 a via ferrata next to it tha looks quite fun. Hopefully, I get the chance to do
 it one day (but today I do not have my harness and via ferrata set with me).
 
-
+{{<gallery>}}
 {{< rimg src="11.jpg" caption="The Talbach" >}}
-
 {{< rimg src="12.jpg" alt="Jason and Lisa coming down the Talbach stairs" >}}
-
 {{< rimg src="13.jpg" caption="A fun looking via ferrata" >}}
-
 {{< rimg src="14.jpg" alt="Talbach" >}}
-
 {{< rimg src="15.jpg" alt="Me in front of the Talbach" >}}
+{{</gallery>}}
 
 For all of the hike, it stayed dry and the weather was probably better for
 bouldering than yesterday. But so is life. Before we get back into the cars for
