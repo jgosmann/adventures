@@ -1,5 +1,6 @@
 {{ $img := index (.Page.Resources.Match (printf "images/%s" (.Get "src"))) 0 }}
-<div class="picture" style="height: calc({{ div (float $img.Height) $img.Width }} * (100vw - 64px));">
+{{ $aspectRatio := div (float $img.Width) $img.Height }}
+<div class="picture" style="height: calc((100vw - 64px) / {{ $aspectRatio }});">
     <a href="{{ $img.RelPermalink }}" title="View fullsize">
         <div class="dynload"
             data-html="
