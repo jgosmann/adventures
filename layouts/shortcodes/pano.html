@@ -1,13 +1,15 @@
 {{ $img := index (.Page.Resources.Match (printf "images/%s" (.Get "src"))) 0 }}
-<div class="pano" style="height: {{ $img.Height }}px;">
+{{ $imgLowRes := $img.Resize (printf "%dx" (div $img.Width 2)) }}
+<div class="pano" style="height: {{ div $img.Height 2 }}px;">
     <div class="pano-scroll">
-        <div class="dynload"
-             data-html="
-                &lt;source srcset=&quot;{{ ($img.Resize "320x").RelPermalink }}&quot; media=&quot;(max-width: 320px) and (max-resolution: 1dppx)&quot; />
-                &lt;source srcset=&quot;{{ ($img.Resize "640x").RelPermalink }}&quot; media=&quot;(max-width: 640px) and (max-resolution: 1dppx), (max-width: 320px) and (max-resolution: 2dppx)&quot; />
-                &lt;source srcset=&quot;{{ ($img.Resize "1280x").RelPermalink }}&quot; media=&quot;(max-width: 1280px) and (max-resolution: 1dppx), (max-width: 640px) and (max-resolution: 2dppx), (max-width: 320px) and (max-resolution: 3dppx)&quot; />
-                &lt;img src=&quot;{{ $img.RelPermalink }}&quot; alt=&quot;{{ .Get "alt" }}&quot; />"
-        ></div>
+        <div class="dynload">
+            <template>
+                <img src="{{ $imgLowRes.RelPermalink }}"
+                     srcset="{{ $imgLowRes.RelPermalink }} 1x, {{ $img.RelPermalink }} 2x"
+                     sizes="{{ div $img.Width 2 }}px"
+                     alt="{{ .Get "alt" }}" />
+            </template>
+        </div>
     </div>
     <div class="scroll-left">
         <i class="fas fa-chevron-left"></i>
