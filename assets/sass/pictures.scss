@@ -75,10 +75,8 @@
         margin: 16px;
 
         max-height: 80vh;
-        width: calc(attr(data-aspect-ratio) * 80vh);
         @media screen and (min-height: 600px) {
             max-height: 45vh;
-            width: calc(attr(data-aspect-ratio) * 45vh);
         }
 
         .dynload {
@@ -89,6 +87,5 @@
 
 .gallery.large .picture {
     max-height: 80vh;
-    width: calc(attr(data-aspect-ratio) * 80vh);
 }
 
