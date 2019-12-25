@@ -104,7 +104,7 @@ const showPostMap = (targetId) => {
   const posts = Array.from(mapElem.children).map(
     elem => ({
       loc: JSON.parse(elem.getAttribute('data-loc')),
-      html: elem.getAttribute('data-html'),
+      html: elem.querySelector('template').innerHTML,
     }));
 
   const map = initMap(targetId, {scrollWheelZoom: true, dragging: true});
