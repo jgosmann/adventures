@@ -1,14 +1,12 @@
 {{ $img := index (.Page.Resources.Match (printf "images/%s" (.Get "src"))) 0 }}
 {{ $aspectRatio := div (float $img.Width) $img.Height }}
-<div class="picture" style="height: calc((100vw - 64px) / {{ $aspectRatio }});">
+<div class="picture"{{ if not .Parent }} style="height: calc((100vw - 64px) / {{ $aspectRatio }});"{{ end }}>
     <a href="{{ $img.RelPermalink }}" title="View fullsize">
-        <div class="dynload"
-            data-html="
-                &lt;source srcset=&quot;{{ ($img.Resize "320x").RelPermalink }}&quot; media=&quot;(max-width: 320px) and (max-resolution: 1dppx)&quot; />
-                &lt;source srcset=&quot;{{ ($img.Resize "640x").RelPermalink }}&quot; media=&quot;(max-width: 640px) and (max-resolution: 1dppx), (max-width: 320px) and (max-resolution: 2dppx)&quot; />
-                &lt;source srcset=&quot;{{ ($img.Resize "1280x").RelPermalink }}&quot; media=&quot;(max-width: 1280px) and (max-resolution: 1dppx), (max-width: 640px) and (max-resolution: 2dppx), (max-width: 320px) and (max-resolution: 3dppx)&quot; />
-                &lt;img src=&quot;{{ $img.RelPermalink }}&quot; alt=&quot;{{ .Get "alt" }}&quot; />"
-        ></div>
+        <div class="dynload"{{ with .Parent }} style="height: {{ with .Get "large" }}80{{ else }}45{{ end }}vh;"{{ end }}>
+            <template>
+                <img src="{{ ($img.Resize "320x").RelPermalink }}" alt="{{ .Get "alt" }}" srcset="{{ ($img.Resize "320x").RelPermalink }} 320w, {{ ($img.Resize "640x").RelPermalink }} 640w, {{ ($img.Resize "1280x").RelPermalink }} 1280w, {{ $img.RelPermalink }} {{ $img.Width }}w" {{ with .Parent }}style="width: calc({{ with .Get "large" }}80vh{{ else }}45vh{{ end }} * {{ $aspectRatio }});" {{ end }} sizes="{{ with .Parent }}calc({{ with .Get "large" }}80vh{{ else }}45vh{{ end }} * {{ $aspectRatio }}){{ else }}100vw{{end}}" />
+            </template>
+        </div>
         {{ with .Get "caption" }}
             <div class="caption">{{.}}</div>
         {{ end }}

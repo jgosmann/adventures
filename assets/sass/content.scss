@@ -30,6 +30,10 @@ article {
     p {
         margin-top: 16px;
         margin-bottom: 16px;
+
+        &:empty {
+            margin: 0;
+        }
     }
 
     ul {

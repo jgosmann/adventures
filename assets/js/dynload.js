@@ -4,8 +4,8 @@ const intersectionOptions = {
 const loadNow = (entries, observer) => {
   entries.filter(entry => entry.isIntersecting).forEach(entry => {
     intersectionObserver.unobserve(entry.target)
-    const newEl = document.createElement('picture')
-    newEl.innerHTML = entry.target.getAttribute('data-html')
+    const newEl =  document.importNode(
+      entry.target.querySelector('template').content, true)
     entry.target.parentNode.replaceChild(newEl, entry.target)
   })
 }
