@@ -6,7 +6,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
   entry: {
     main: './assets/js/index.js',
-    doveseed: './assets/js/doveseed/index.js'
+    doveseed: './assets/js/doveseed/index.js',
+    mapping: './assets/js/mapping.js'
   },
   mode: 'production',
   devtool: 'sourcemap',
@@ -33,24 +34,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new ManifestPlugin({
       map: (fd) => {
-        if (fd.name === 'main.js') {
-          templateFile = path.resolve(__dirname, 'layouts/_default/baseof.template.html');
-          outFile = path.resolve(__dirname, 'layouts/_default/baseof.html');
-          content = fs.readFileSync(templateFile, 'utf8');
-          content = content.replace(/%SCRIPT%/g, fd.path);
-          fs.writeFileSync(outFile, content);
-        } else if (fd.name === 'doveseed.js') {
-          templateFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed.template.html');
-          outFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed.html');
-          content = fs.readFileSync(templateFile, 'utf8');
-          content = content.replace(/%SCRIPT%/g, fd.path);
-          fs.writeFileSync(outFile, content);
-
-          templateFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed-confirm.template.html');
-          outFile = path.resolve(__dirname, 'layouts/shortcodes/doveseed-confirm.html');
-          content = fs.readFileSync(templateFile, 'utf8');
-          content = content.replace(/%SCRIPT%/g, fd.path);
-          fs.writeFileSync(outFile, content);
+        if (/.js$/.test(fd.name)) {
+          outPath = path.resolve(__dirname, 'layouts/partials/', 'script.' + fd.name + '.html');
+          fs.writeFileSync(outPath, `<script src="{{ "${fd.path}" | relURL }}" defer></script>`);
         }
         return fd;
       },

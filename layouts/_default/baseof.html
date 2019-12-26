@@ -13,7 +13,7 @@
         {{ end -}}
         {{ block "head" . }}
         {{ end }}
-        <script src="{{ "%SCRIPT%" | relURL }}"></script>
+        {{ partial "script.main.js.html" . }}
     </head>
     <body>
         <main>

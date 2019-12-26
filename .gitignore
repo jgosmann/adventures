@@ -3,9 +3,7 @@
 .*.swo
 assets/meta.html
 favicons
-layouts/_default/baseof.html
-layouts/shortcodes/doveseed.html
-layouts/shortcodes/doveseed-confirm.html
+layouts/partials/script.*.js.html
 lib
 node_modules
 public
