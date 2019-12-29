@@ -70,8 +70,11 @@
                 {{ partial "legal.html" . }}
             </div>
             <div class="title">
-                <h1>{{ .Title }} ({{ .Date.Format "January 2, 2006" }})</h1>
-                <p class="meta">{{ .ReadingTime }} minute read</p>
+                <h1>{{ .Title }}</h1>
+                <div class="box">
+                    <p>{{ .Date.Format "January 2, 2006" }}</p>
+                    <p>{{ .ReadingTime }} minute read</p>
+                </div>
             </div>
             <div class="scroll-down">
                 <i class="fas fa-chevron-up"></i>

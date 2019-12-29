@@ -9,31 +9,53 @@
     }
 
     .title {
-        background-color: rgba(255, 255, 255, 0.9);
         display: block;
         position: absolute;
-        bottom: 15%;
-        width: 80%;
-        right: 0;
-        padding: 8px;
-        box-sizing: border-box;
+        bottom: 33%;
+        width: 100%;
+        left: 0;
+        z-index: 1;
+
+        color: #fff;
+        text-align: center;
 
         h1 {
-            margin: 0;
-            margin-bottom: 8px;
+            width: auto;
+            max-width: none;
+            font-size: 4vw;
+            @media (max-width: 600px) {
+                font-size: 24px;
+            }
+            @media (min-width: 1600px) {
+                font-size: 64px;
+            }
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 32px;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .box {
+            background-color: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 16px;
+            border-radius: 4px;
         }
 
         p {
+            width: auto;
+            max-width: none;
             margin: 0;
         }
     }
 
     .scroll-down {
-        color: rgba(0, 0, 0, 0.4);
+        color: rgba(0, 0, 0, 0.6);
         font-size: 6rem;
         position: absolute;
         width: 100%;
         text-align: center;
-        top: 85%;
+        top: 75%;
+        z-index: 0;
     }
 }
