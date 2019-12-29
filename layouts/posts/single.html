@@ -1,3 +1,6 @@
+{{ define "title" }}
+<title>{{ .Title }} — {{ .Site.Title }}</title>
+{{ end }}
 {{ define "head" }}
     {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
     <style>
