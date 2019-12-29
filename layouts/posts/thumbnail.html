@@ -2,8 +2,8 @@
     <template>
         <picture>
             {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
-            <source srcset="{{ ($bg.Fill "600x600").RelPermalink }}" media="(min-resolution: 1.5dppx)" />
-            <img src="{{ ($bg.Fill "300x300").RelPermalink }}" alt="Teaser picture" />
+            <source srcset="{{ ($bg.Fill "600x500").RelPermalink }}" media="(min-resolution: 1.5dppx)" />
+            <img src="{{ ($bg.Fill "300x250").RelPermalink }}" alt="Teaser picture" />
         </picture>
     </template>
 </div>

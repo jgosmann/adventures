@@ -43,7 +43,7 @@
     }
 }
 
-.postlist > a > li, {
+.postlist > li, {
     transition: 0.2s;
     display: block;
     margin: 16px;
@@ -100,7 +100,7 @@
     }
 }
 
-.postlist > a:hover > li {
+.postlist > li:hover {
     transform: translate(-2px, -2px);
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
 }

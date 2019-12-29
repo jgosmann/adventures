@@ -15,10 +15,10 @@
     <ol class="postlist">
         {{ range where .Pages "Type" "in" site.Params.mainSections }}
         {{ range .Pages }}
-            <a href="{{ .RelPermalink }}"><li>
+            <li><a href="{{ .RelPermalink }}">
                 {{ .Render "thumbnail" }}
                 {{ .Render "thumbdesc" }}
-            </li></a>
+            </a></li>
         {{ end }}
         {{ end }}
     </ol>
