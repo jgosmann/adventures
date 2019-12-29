@@ -13,7 +13,7 @@
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
     {{ range where .Pages "Type" "in" site.Params.mainSections }}
-    {{ range .Pages }}
+    {{ range first 25 .Pages }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
