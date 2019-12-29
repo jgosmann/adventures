@@ -22,7 +22,7 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | plainify }}</description>
       {{ $bg := index (.Resources.Match (printf "images/%s" .Params.background)) 0 }}
-      <og:image>{{ $bg.Permalink }}</og:image>
+      <og:image>{{ ($bg.Resize "800x").Permalink }}</og:image>
     </item>
     {{ end }}
     {{ end }}
