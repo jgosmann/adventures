@@ -16,7 +16,11 @@
         {{ range where .Pages "Type" "in" site.Params.mainSections }}
         {{ range .Pages }}
             <li><a href="{{ .RelPermalink }}">
-                {{ .Render "thumbnail" }}
+                <div class="dynload">
+                    <template>
+                        {{ .Render "thumbnail" }}
+                    </template>
+                </div>
                 {{ .Render "thumbdesc" }}
             </a></li>
         {{ end }}
