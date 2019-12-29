@@ -94,6 +94,10 @@
     content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
 
+.dynload {
+    min-height: 1px;
+}
+
 .split-flag {
     position: relative;
     &::before {
