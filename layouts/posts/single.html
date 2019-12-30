@@ -60,6 +60,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="{{ .Summary }}" />
+    <meta name="description" content="{{ .Summary }}" />
     <meta property="og:image" content="{{ $bg.Permalink }}" />
     {{ partial "script.mapping.js.html" . }}
 {{ end }}

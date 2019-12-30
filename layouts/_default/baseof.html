@@ -14,6 +14,11 @@
             {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
         {{ end -}}
         {{ block "head" . }}
+            <meta property="og:url" content="{{ .Permalink }}" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="{{ .Title }}" />
+            <meta property="og:description" content="Jan's blog about adventures experienced outdoors and while travelling." />
+            <meta name="description" content="Jan's blog about adventures experienced outdoors and while travelling." />
         {{ end }}
         {{ partial "script.main.js.html" . }}
     </head>
