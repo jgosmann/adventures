@@ -27,6 +27,10 @@ weight = 2
     source = "favicons"
     target = "static"
 
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
 [params]
 mainSections = ["posts"]
 
