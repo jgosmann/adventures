@@ -52,7 +52,7 @@ function enhanceCryptedElements(className, getData, onClick) {
   }
 }
 
-window.addEventListener("load", () => {
+const enableCrypted = () => {
   const getPhone = (cryptedElem) => {
     return cryptedElem.getAttribute("data-country")
       + cryptedElem.getAttribute("data-area")
@@ -70,4 +70,10 @@ window.addEventListener("load", () => {
   enhanceCryptedElements("crypted-email", getEmail, (email) => {
       window.location.href = "mailto:" + email;
   });
-});
+};
+
+if (document.readyState === 'loading') {
+  window.addEventListener('load', enableCrypted)
+} else {
+  enableCrypted()
+}
