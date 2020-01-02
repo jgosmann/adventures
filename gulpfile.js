@@ -4,6 +4,7 @@ const faviconsStream = require('favicons').stream;
 const fs = require('fs');
 const gulp = require('gulp');
 const { parallel, series } = require('gulp');
+const path = require('path');
 const webpack_stream = require('webpack-stream');
 const webpack_config = require('./webpack.config.js');
 
@@ -40,19 +41,30 @@ function webpack() {
     .pipe(gulp.dest('./lib'))
 }
 
-
-function hugo_clean() {
+function clean() {
   return del(['./public']);
 }
 
 async function hugo() {
-  child_process.execFileSync(
+  const isFingerprinted = (dirent) => {
+    return ['.js', '.js.map', '.css'].some(suffix => dirent.name.endsWith(suffix));
+  }
+
+  const public_path = './public';
+  const public_dir = await fs.promises.opendir(public_path);
+  for await (const dirent of public_dir) {
+    if (isFingerprinted(dirent)) {
+      await fs.promises.unlink(path.join(public_path, dirent.name))
+    }
+  }
+
+  await child_process.execFile(
     'hugo', { stdio: 'inherit' }
   );
 }
 
-async function deploy() {
-  child_process.execFileSync(
+function deploy() {
+  return child_process.execFile(
     'rsync', [
       '-avz', '--delete', '--checksum',
       'public/', 'jgosmann@hyper-world.de:~/adventures'
@@ -63,9 +75,9 @@ async function deploy() {
 
 exports.favicons = favicons;
 exports.webpack = webpack;
-exports.rehugo = series(hugo_clean, hugo);
-exports.rebuild = series(
-  parallel(favicons, webpack),
-  exports.rehugo);
-exports.clean = hugo_clean;
+exports.rehugo = series(clean, hugo);
+exports.build = series(parallel(favicons, webpack), hugo)
+exports.rebuild = series(clean, exports.build);
+exports.hugo = hugo;
+exports.clean = clean;
 exports.deploy = deploy;
