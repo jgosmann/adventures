@@ -36,5 +36,8 @@
     "normalize.css": "^8.0.1",
     "preact": "^10.1.1",
     "react": "^16.12.0"
+  },
+  "scripts": {
+    "prettier": "prettier --write assets/js/*.js assets/js/**/*.js *.js"
   }
 }
