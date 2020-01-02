@@ -63,6 +63,30 @@ async function hugo() {
   );
 }
 
+exports.watchAssets = () => {
+  gulp.watch('./assets/assets/svg/favicon.svg', favicons);
+  gulp.watch('./assets/js/**/*', webpack)
+};
+
+exports.hugoServer = () => {
+    const hugo = child_process.spawn('hugo', ['server']);
+    hugo.stdout.on('data', (data) => {
+        const lines = data.toString().split('\n');
+        for (let i = 0; i < lines.length; ++i) {
+            console.log(`[hugo] ${lines[i]}`);
+        }
+    });
+    hugo.stderr.on('data', (data) => {
+        const lines = data.toString().split('\n');
+        for (let i = 0; i < lines.length; ++i) {
+            console.error(`[hugo] ${lines[i]}`);
+        }
+    });
+    return hugo;
+};
+
+exports.server = parallel(exports.watchAssets, exports.hugoServer);
+
 function deploy() {
   return child_process.execFile(
     'rsync', [
