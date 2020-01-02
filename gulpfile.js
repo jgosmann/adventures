@@ -7,10 +7,6 @@ const { parallel, series } = require('gulp');
 const webpack_stream = require('webpack-stream');
 const webpack_config = require('./webpack.config.js');
 
-function static_clean() {
-  return del(['./static']);
-}
-
 function favicons() {
   const dest = './favicons';
   const metafile = './assets/meta.html';
@@ -39,13 +35,9 @@ function favicons() {
     .pipe(gulp.dest(dest));
 }
 
-function fonts() {
-  return gulp.src('./assets/fonts/*').pipe(gulp.dest('./static/fonts'));
-}
-
 function webpack() {
   return webpack_stream(webpack_config)
-    .pipe(gulp.dest('./static'))
+    .pipe(gulp.dest('./lib'))
 }
 
 
@@ -70,12 +62,10 @@ async function deploy() {
 }
 
 exports.favicons = favicons;
-exports.fonts = fonts
 exports.webpack = webpack;
 exports.rehugo = series(hugo_clean, hugo);
 exports.rebuild = series(
-  static_clean,
-  parallel(favicons, fonts, webpack),
+  parallel(favicons, webpack),
   exports.rehugo);
-exports.clean = parallel(static_clean, hugo_clean);
+exports.clean = hugo_clean;
 exports.deploy = deploy;
