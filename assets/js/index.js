@@ -1,4 +1,4 @@
-import './crypted.js'
-import './dynload.js'
-import './icons.js'
-import './parallax.js'
+import "./crypted.js";
+import "./dynload.js";
+import "./icons.js";
+import "./parallax.js";
