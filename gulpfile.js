@@ -8,7 +8,12 @@ const path = require('path');
 const webpack_stream = require('webpack-stream');
 const webpack_config = require('./webpack.config.js');
 
-function favicons() {
+const clean = () => {
+  return del(['./public']);
+}
+exports.clean = clean;
+
+const favicons = () => {
   const dest = './favicons';
   const metafile = './assets/meta.html';
   return gulp.src('./assets/svg/favicon.svg')
@@ -35,17 +40,15 @@ function favicons() {
     }))
     .pipe(gulp.dest(dest));
 }
+exports.favicons = favicons;
 
-function webpack() {
+const webpack = () => {
   return webpack_stream(webpack_config)
     .pipe(gulp.dest('./lib'))
 }
+exports.webpack = webpack;
 
-function clean() {
-  return del(['./public']);
-}
-
-async function hugo() {
+const hugo = async () => {
   const isFingerprinted = (dirent) => {
     return ['.js', '.js.map', '.css'].some(suffix => dirent.name.endsWith(suffix));
   }
@@ -62,13 +65,15 @@ async function hugo() {
     'hugo', { stdio: 'inherit' }
   );
 }
+exports.hugo = hugo;
 
-exports.watchAssets = () => {
-  gulp.watch('./assets/assets/svg/favicon.svg', favicons);
+const watchAssets = () => {
+  gulp.watch('./assets/svg/favicon.svg', favicons);
   gulp.watch('./assets/js/**/*', webpack)
 };
+exports.watchAssets = watchAssets;
 
-exports.hugoServer = () => {
+const hugoServer = () => {
     const hugo = child_process.spawn('hugo', ['server']);
     hugo.stdout.on('data', (data) => {
         const lines = data.toString().split('\n');
@@ -84,10 +89,9 @@ exports.hugoServer = () => {
     });
     return hugo;
 };
+exports.hugoServer = hugoServer;
 
-exports.server = parallel(exports.watchAssets, exports.hugoServer);
-
-function deploy() {
+const deploy = () => {
   return child_process.execFile(
     'rsync', [
       '-avz', '--delete', '--checksum',
@@ -96,12 +100,8 @@ function deploy() {
     { stdio: 'inherit' }
   );
 }
-
-exports.favicons = favicons;
-exports.webpack = webpack;
-exports.rehugo = series(clean, hugo);
-exports.build = series(parallel(favicons, webpack), hugo)
-exports.rebuild = series(clean, exports.build);
-exports.hugo = hugo;
-exports.clean = clean;
 exports.deploy = deploy;
+
+exports.server = parallel(watchAssets, hugoServer);
+exports.build = series(parallel(favicons, webpack), hugo)
+exports.default = exports.build
