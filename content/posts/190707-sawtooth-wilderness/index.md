@@ -1,13 +1,14 @@
 ---
 title: "Sawtooth Wilderness, day 3"
 date: 2019-07-07T18:43:16+02:00
+year: "2019"
 publishdate: 2019-07-28T18:43:16+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- backcountry
-- hiking
+  - backcountry
+  - hiking
 background: 22.jpg
 map: "48.220176, -120.268001"
 ---
@@ -20,6 +21,7 @@ plan on doing some extra hiking with less gear on top of the next ridge line.
 But first we have to get there.
 
 <!--more-->
+
 {{< rimg src="1.jpg" alt="Sawtooth wilderness">}}
 {{< rimg src="2.jpg" alt="Sawtooth wilderness">}}
 

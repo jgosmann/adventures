@@ -1,13 +1,14 @@
 ---
 title: "San Juan Island, day 2"
 date: 2019-07-02T13:54:46+02:00
+year: "2019"
 publishdate: 2019-07-27T13:54:46+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 4.jpg
 categories:
-- travel
+  - travel
 map: "48.5316, -123.0867"
 ---
 

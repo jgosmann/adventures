@@ -2,13 +2,14 @@
 title: "Pleisenspitze, day 2"
 background: 39.jpg
 date: 2019-03-17T21:21:52+01:00
+year: "2019"
 publishdate: 2019-03-19T21:21:52+01:00
 resources:
-- src: images/*.jpg
-- src: 20190317-0.gpx
-- src: 20190317-1.gpx
+  - src: images/*.jpg
+  - src: 20190317-0.gpx
+  - src: 20190317-1.gpx
 categories:
-- snow shoeing
+  - snow shoeing
 map: "47.40868, 11.34195"
 ---
 
@@ -92,7 +93,6 @@ Munich from Scharnitz. Today, we hiked 13.7km with an ascend of about 810 meters
 and a descent of about 1570 meters
 
 {{< rimg src="54.jpg" alt="">}}
-
 
 All in all it was great weekend trip with a cozy evening in a mountain cabin. It
 was interesting to observe how the quality of the snow changes through out the

@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 9"
 date: 2019-07-18T18:49:45+02:00
+year: "2019"
 publishdate: 2019-08-03T18:49:45+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- rock climbing
-- sport climbing
+  - rock climbing
+  - sport climbing
 background: 12.jpg
 map: "49.9354914, -123.1576047"
 ---
@@ -40,7 +41,7 @@ somewhere else to do some trad climbing.
 What is slightly worrying is that the area is clear-cut. We quickly realize that
 we either cannot be right or that the trail has been covered under the debris of
 dead trees. But if that is the case, our campsite neighbours should have told us
-about it.  So we decide this cannot be the “first major switchback” and continue
+about it. So we decide this cannot be the “first major switchback” and continue
 walking up the road which gives us a view on some nice cliffs.
 
 {{< rimg src="4.jpg" caption="Are these the cliffs we are looking for? We figure out later, yes they are. The route is on the left-most part.">}}
@@ -82,7 +83,7 @@ that are non-forrested. Turns out that switchback where we are back at is not
 the “first major switchback” on the road! (I suppose it was not there six years
 ago?) We actually have to hike the road we went up before (again, sigh), but not
 as far as we went. There is another switchback which is the one we are looking
-for.  Close to it is a pull off where the trail starts. We looked at it before,
+for. Close to it is a pull off where the trail starts. We looked at it before,
 but if you do not know that there is a trail, you just do not see it.
 
 {{< rimg src="17.jpg" caption="Where is the trail?">}}
@@ -146,7 +147,6 @@ close by. Unfortunately, we have to wait quite long for our food there, but it
 is delicious.
 
 {{< rimg src="1.jpg" caption="This was found by Christine and Tim">}}
-
 
 # Climbing log book
 

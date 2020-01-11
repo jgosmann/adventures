@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 2"
 date: 2019-07-11T18:57:15+02:00
+year: "2019"
 publishdate: 2019-08-01T18:57:15+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- rock climbing
-- sport climbing
+  - rock climbing
+  - sport climbing
 background: 2.jpg
 map: "49.9100, -123.1562"
 ---
@@ -17,6 +18,7 @@ yesterday, we decide to go to the Cheakamus Canyon area. It is supposed to dry
 quickly and has some overhanging stuff that does not get wet.
 
 <!--more-->
+
 {{<loc "49.9100" "-123.1562" "10">}}
 
 {{< rimg src="1.jpg" caption="Warm up on Boy Pie (5.8)">}}
@@ -25,7 +27,7 @@ There we warm up on a juggy, slightly overhanging climb called Boy Pie and
 a proper slab called Mirror Image. It won't be the last slab as we discover that
 there are many slab climbs around Squamish. After the warmup, we move on to
 Kigijushi, a fantastic 5.10c, that is regarded as one of the top 100 Squamish
-climbs.  I already onsighted it about two years ago when I was in Squamish for
+climbs. I already onsighted it about two years ago when I was in Squamish for
 a single day, but today I pump out and do not get a clean sent. Given it is the
 first day and I could not climb much lead this year so far (for reasons out of my
 control), I am ok with this.
@@ -59,7 +61,6 @@ opener.
 
 {{< rimg src="8.jpg" caption="Learning how to open a can">}}
 
-
 # Climbing log book
 
 {{<climbs>}}
@@ -67,9 +68,9 @@ opener.
 {{<climb name="Mirror Image" style="flash" grade="YDS 5.8">}}
 {{<climb name="Kigijushi" style="hangdog" grade="YDS 5.10c">}}
 {{<multipitch name="Sacrilege" pitches="3">}}
-    {{<climb name="pitch 1" style="toprope" grade="YDS 5.8">}}
-    {{<climb name="pitch 2" style="toprope" grade="YDS 5.9">}}
-    {{<climb name="pitch 3" style="onsight" grade="YDS 5.10a">}}
+{{<climb name="pitch 1" style="toprope" grade="YDS 5.8">}}
+{{<climb name="pitch 2" style="toprope" grade="YDS 5.9">}}
+{{<climb name="pitch 3" style="onsight" grade="YDS 5.10a">}}
 {{</multipitch>}}
 {{<climb name="Kingfishers Catch Fire" style="flash" grade="YDS 5.8">}}
 {{</climbs>}}

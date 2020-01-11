@@ -2,13 +2,14 @@
 title: "Kochel: Atlantiswand"
 background: 2.jpg
 date: 2019-06-01T20:02:17+02:00
+year: "2019"
 publishdate: 2019-06-03T20:02:17+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- sport climbing
-- rock climbing
+  - sport climbing
+  - rock climbing
 map: "47.62905, 11.3304"
 ---
 
@@ -18,6 +19,7 @@ there is also some bouldering around and people seem to stash their (old?) crash
 pads under the bottom part of the wall.
 
 <!--more-->
+
 {{< rimg src="1.jpg" alt="Crash pads stashed below the wall.">}}
 
 But we stuck to lead climbing. After warming up on Scherzhaft Männlich (UIAA 5+,

@@ -1,18 +1,19 @@
 ---
 title: "Seefeldspitze"
 date: 2019-06-29T19:54:59+02:00
+year: "2019"
 publishdate: 2019-07-25T19:54:59+02:00
 background: 6.jpg
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- hiking
+  - hiking
 summary:
   Twice a year my employer invites all employees to a five-star superior hotel
   in the middle of the Alps. Of the two days we stay there, one is regarded as
- leisure time and a whole range of activities is offered. I decided to join a
- hike with some colleagues onto the Seefeldspitze.
+  leisure time and a whole range of activities is offered. I decided to join a
+  hike with some colleagues onto the Seefeldspitze.
 map: "47.3333314, 11.2158237"
 ---
 

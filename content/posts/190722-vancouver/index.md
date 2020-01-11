@@ -1,12 +1,13 @@
 ---
 title: "Vancouver, day 3"
 date: 2019-07-22T19:47:19+02:00
+year: "2019"
 publishdate: 2019-08-07T19:47:19+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- travel
+  - travel
 background: 3.jpg
 map: "49.2573, -123.1241"
 ---
@@ -17,6 +18,7 @@ Vancouver from the First Nations through the 19th and 20th century and is quite
 interesting.
 
 <!--more-->
+
 {{< rimg src="1.jpg" caption="The Museum of Vancouver is supposed to look like a Haida hat">}}
 
 Besides the main exhibition there is also an exhibition on wildlife in the city

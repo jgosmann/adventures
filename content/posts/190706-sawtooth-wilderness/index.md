@@ -1,13 +1,14 @@
 ---
 title: "Sawtooth Wilderness, day 2"
 date: 2019-07-06T15:47:07+02:00
+year: "2019"
 publishdate: 2019-07-28T15:47:07+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- backcountry
-- hiking
+  - backcountry
+  - hiking
 background: 15.jpg
 map: "48.220176, -120.268001"
 ---
@@ -19,6 +20,7 @@ the water shed by just walking through, but my hiking boots are still pretty
 new and the Gore-Tex holds up.
 
 <!--more-->
+
 {{< rimg src="3.jpg" alt="Packing up gear">}}
 
 {{< pano src="1.jpg" alt="Panoramic view">}}

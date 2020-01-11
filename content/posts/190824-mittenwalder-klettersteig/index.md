@@ -1,13 +1,14 @@
 ---
 title: "Mittenwalder Klettersteig"
 date: 2019-08-24T15:30:38+02:00
+year: "2019"
 publishdate: 2019-08-25T15:30:38+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- via ferrata
-- hiking
+  - via ferrata
+  - hiking
 background: 2.jpg
 map: "47.4344, 11.2828"
 ---

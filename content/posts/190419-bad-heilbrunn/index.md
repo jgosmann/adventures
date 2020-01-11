@@ -2,13 +2,14 @@
 title: "Bad Heilbrunn"
 date: 2019-04-19T18:59:49+02:00
 publishdate: 2019-04-23T18:59:49+02:00
+year: "2019"
 draft: false
 background: 9.jpg
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- sport climbing
-- rock climbing
+  - sport climbing
+  - rock climbing
 map: "47.7548, 11.4486"
 ---
 

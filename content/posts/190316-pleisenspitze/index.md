@@ -2,12 +2,13 @@
 title: "Pleisenspitze, day 1"
 background: 22.jpg
 date: 2019-03-16T20:14:40+01:00
+year: "2019"
 publishdate: 2019-03-19T20:14:40+01:00
 resources:
-- src: images/*.jpg
-- src: 20190316.gpx
+  - src: images/*.jpg
+  - src: 20190316.gpx
 categories:
-- snow shoeing
+  - snow shoeing
 map: "47.40868, 11.34195"
 ---
 
@@ -66,7 +67,7 @@ Finally, after 850 meters of elevation gain, we reach the Pleisenhütte,
 a smallish cabin where we will stay for the night with a bunch of other snow
 shoe hikers and skiers. Such cabins are pretty typical in the Alps. The comfort
 can vary quite a bit; in this case it is somewhat minimal as there is no running
-water (there might be in the summer).  But we get a single room just for the
+water (there might be in the summer). But we get a single room just for the
 five of our group while some of the other groups have to share rooms. It is also
 not uncommon to have communal bunks with twenty to thirty people in one big room
 in such a hut.

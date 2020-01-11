@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 1"
 date: 2019-07-10T19:57:58+02:00
+year: "2019"
 publishdate: 2019-07-29T19:57:58+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 3.jpg
 categories:
-- travel
+  - travel
 map: "49.7559, -123.1388"
 ---
 
@@ -37,7 +38,7 @@ treacherous forrest. Sometimes, what looks like solid ground, gives in and your
 leg ends up disappearing in a hidden hole. Not to mention lots of potential to
 slip on wet logs or rocks. Finally, we agree to turn around and relocate the
 trail. Once we make it back to trail, we suddenly have no trouble finding it
-continuation.  Unfortunately, the wall turns out wet (well, that was not
+continuation. Unfortunately, the wall turns out wet (well, that was not
 unexpected). So we had back to the official trail and take a look at the
 impressive falls themselves.
 

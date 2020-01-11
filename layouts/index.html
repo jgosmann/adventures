@@ -1,29 +1,17 @@
-{{ define "head" }}
-{{ end }}
-{{ define "main" }}
-    <div class="navbar">
-        <ul>
-            {{ with .Sites.First.GetPage "/subscribe" }}
-                <li><a class="navlink subscribe" href="{{ .RelPermalink }}">Subscribe</a></li>
-            {{ end }}
-            {{ with .Sites.First.GetPage "/map" }}
-                <li><a class="navlink" href="{{ .RelPermalink }}">Map</a></li>
-            {{ end }}
-        </ul>
-        {{ partial "legal.html" . }}
-    </div>
-    <ol class="postlist">
-        {{ range where .Pages "Type" "in" site.Params.mainSections }}
-        {{ range .Pages }}
-            <li><a href="{{ .RelPermalink }}">
-                <div class="dynload">
-                    <template>
-                        {{ .Render "thumbnail" }}
-                    </template>
-                </div>
-                {{ .Render "thumbdesc" }}
-            </a></li>
-        {{ end }}
-        {{ end }}
-    </ol>
+{{ define "head" }} {{ end }} {{ define "main" }} {{ partial "navbar.html" . }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 20 }}
+<ol class="postlist">
+  {{ range $paginator.Pages }} {{ partial "postcard.html" . }} {{ end }}
+</ol>
+<div class="pagination">
+  {{ if $paginator.HasPrev }}
+  <a class="button prev" href="{{ $paginator.Prev.URL }}"
+    ><i class="fas fa-chevron-left"></i>&nbsp;Newer posts</a
+  >
+  {{ end }} {{ if $paginator.HasNext }}
+  <a class="button next" href="{{ $paginator.Next.URL }}"
+    >Older posts&nbsp;<i class="fas fa-chevron-right"></i
+  ></a>
+  {{ end }}
+</div>
 {{ end }}

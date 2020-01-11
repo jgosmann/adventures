@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 5"
 date: 2019-07-14T19:45:26+02:00
+year: "2019"
 publishdate: 2019-08-02T19:45:26+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- bouldering
-- rock climbing
+  - bouldering
+  - rock climbing
 background: 2.jpg
 map: "49.68151, -123.15212"
 ---
@@ -18,6 +19,7 @@ Vancouver. After picking up crash pads from JC, a friend of Olivia, we head to
 the boulder fields below the Chief.
 
 <!--more-->
+
 {{< rimg src="8.jpg" caption="The Chief">}}
 
 {{< loc "49.68151" "-123.15212" "14">}}
@@ -72,7 +74,6 @@ for Vera and Christine before Olivia and Esti are headed back to Vancouver.
 {{< rimg src="10.jpg" alt="Me slacklining">}}
 {{< rimg src="11.jpg" alt="Me slacklining">}}
 {{</gallery>}}
-
 
 # Climbing log book
 

@@ -1,12 +1,13 @@
 ---
 title: "Guffert"
 date: 2019-08-31T19:00:20+02:00
+year: "2019"
 publishdate: 2019-08-31T19:00:20+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- hiking
+  - hiking
 background: 3.jpg
 map: "47.5497203, 11.765546"
 ---

@@ -2,12 +2,13 @@
 title: "Zillertal, day 2"
 background: 9.jpg
 date: 2019-06-16T19:28:08+02:00
+year: "2019"
 publishdate: 2019-06-16T19:28:08+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- hiking
+  - hiking
 map: "47.2297861, 11.8759901"
 ---
 
@@ -18,7 +19,7 @@ drive to Zell to do a little hike going up partly the Zellberg.
 
 {{< loc "47.2297861" "11.8759901" >}}
 
- While some of us only make it up halfway of the 900m ascent and then turn
+While some of us only make it up halfway of the 900m ascent and then turn
 around to go back to a café, Fabian, Jade, Lisa, Jason, and I do the full hike
 of about 12km. We get some nice views before going back a down a pretty steep
 descent and returning to Zell along the Ziller.
@@ -27,7 +28,7 @@ descent and returning to Zell along the Ziller.
 
 {{< rimg src="10.jpg" alt="View on the way" >}}
 
- On the way down we cross the Talbach with an impressive waterfall that has
+On the way down we cross the Talbach with an impressive waterfall that has
 a via ferrata next to it tha looks quite fun. Hopefully, I get the chance to do
 it one day (but today I do not have my harness and via ferrata set with me).
 
@@ -49,4 +50,3 @@ slightly better. I really enjoyed the boulder problems in the Zillertal. It
 actually might have been my favourite bouldering place so far. Though, Halfway
 Log Dump on the Bruce Peninsula wasn't bad either. But the Zillertal is
 definitely more enjoyable than the Niagara Glen with its painfully sharp holds.
-

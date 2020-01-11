@@ -1,13 +1,14 @@
 ---
 title: "Seattle"
 date: 2019-07-09T19:30:34+02:00
+year: "2019"
 publishdate: 2019-07-29T19:30:34+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 3.jpg
 categories:
-- travel
+  - travel
 map: "47.6052, -122.3431"
 ---
 

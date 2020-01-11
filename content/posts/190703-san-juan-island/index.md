@@ -1,12 +1,13 @@
 ---
 title: "San Juan Island, day 3"
 date: 2019-07-03T14:12:44+02:00
+year: "2019"
 publishdate: 2019-07-27T14:12:44+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- travel
+  - travel
 background: 5.jpg
 map: "48.5316, -123.0867"
 ---
@@ -16,6 +17,7 @@ up Mt Grant and from there to Devin's house (one of Peter's friends) to hang out
 there for a while.
 
 <!--more-->
+
 {{< rimg src="2.jpg" alt="Up the mountain">}}
 
 {{< rimg src="3.jpg" caption="The view from Mt Grant">}}

@@ -1,13 +1,14 @@
 ---
 title: "Ottenalm"
 date: 2019-09-14T19:04:59+02:00
+year: "2019"
 publishdate: 2019-09-22T19:04:59+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 6.jpg
 categories:
-- via ferrata
+  - via ferrata
 map: "47.6665, 12.3520"
 ---
 

@@ -1,13 +1,14 @@
 ---
 title: "San Juan Island, day 4"
 date: 2019-07-04T14:19:42+02:00
+year: "2019"
 publishdate: 2019-07-27T14:19:42+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 11.jpg
 categories:
-- travel
+  - travel
 map: "48.5316, -123.0867"
 ---
 
@@ -17,6 +18,7 @@ go by. Fittingly, we see a bald eagle fly above at some point. I suppose it does
 not get much more American than this.
 
 <!--more-->
+
 {{<gallery>}}
 {{< rimg src="4.jpg" alt="At the 4th of July parade">}}
 {{< rimg src="5.jpg" alt="At the 4th of July parade">}}

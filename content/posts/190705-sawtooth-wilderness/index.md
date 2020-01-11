@@ -1,14 +1,15 @@
 ---
 title: "Sawtooth Wilderness, day 1"
 date: 2019-07-05T14:51:11+02:00
+year: "2019"
 publishdate: 2019-07-27T14:51:11+02:00
 draft: false
 resources:
-- src: images/*.jpg
-- src: 20190705.gpx
+  - src: images/*.jpg
+  - src: 20190705.gpx
 categories:
-- hiking
-- backcountry
+  - hiking
+  - backcountry
 background: 20.jpg
 map: "48.220176, -120.268001"
 ---

@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 8"
 date: 2019-07-17T14:11:39+02:00
+year: "2019"
 publishdate: 2019-08-03T14:11:39+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- rock climbing
-- sport climbing
+  - rock climbing
+  - sport climbing
 background: 1.jpg
 map: "49.9100, -123.1562"
 ---

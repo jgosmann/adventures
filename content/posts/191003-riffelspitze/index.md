@@ -1,13 +1,14 @@
 ---
 title: "Riffelspitze"
 date: 2019-10-03T20:11:47+02:00
+year: "2019"
 publishdate: 2019-10-04T20:11:47+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 5.jpg
 categories:
-- hiking
+  - hiking
 map: "47.4652, 11.0456"
 ---
 
@@ -138,5 +139,5 @@ Munich.
 
 Despite the bad luck with the trains, it was a great hike with
 really amazing and varied scenery at this time of year. We ascended about 1500m
-up to a peak height of 2200m, and descended about 1300m  It took us about 7h
+up to a peak height of 2200m, and descended about 1300m It took us about 7h
 including breaks.

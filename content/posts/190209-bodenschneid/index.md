@@ -2,12 +2,13 @@
 title: "Bodenschneid"
 background: 0019.jpg
 date: 2019-02-09T20:09:32+01:00
+year: "2019"
 publishdate: 2019-02-09T20:09:32+01:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- snow shoeing
+  - snow shoeing
 map: "47.6779, 11.8396"
 ---
 

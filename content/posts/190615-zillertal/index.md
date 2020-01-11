@@ -2,14 +2,15 @@
 title: "Zillertal, day 1"
 background: 3.jpg
 date: 2019-06-15T19:28:04+02:00
+year: "2019"
 publishdate: 2019-06-16T19:28:04+02:00
 draft: false
 resources:
-- src: images/*.jpg
-- src: videos/*.m4v
+  - src: images/*.jpg
+  - src: videos/*.m4v
 categories:
-- bouldering
-- rock climbing
+  - bouldering
+  - rock climbing
 map: "47.3855478, 11.8470404"
 ---
 
@@ -48,7 +49,7 @@ seems easier) and then play around a bit with variations.
 
 {{< rimg src="5.jpg" caption="The finish of Motscho (actually I think the finish is the chalky jug a little bit to the left, but whatever)" >}}
 
- While Motscho traverses a bit form the left before going up, we come up with
+While Motscho traverses a bit form the left before going up, we come up with
 a line that goes directly up and isn't in the guide book. I am the first to send
 the line. Maybe a first ascent? If so, I decide to call it Alter Falter and
 think its grade is around actual V4/6c Fb bloc (but definitely harder than
@@ -62,7 +63,7 @@ wonder.
 {{< rimg src="4.jpg" caption="The rest is easy" >}}
 {{</gallery>}}
 
- After Lisa and Jason return, they quickly warm up on the same boulder and then
+After Lisa and Jason return, they quickly warm up on the same boulder and then
 we go on a little bit further into the forest where there are much more
 boulders. There I do a nice traverse (unknown name, 5c Fb trav) and Pablo Diablo
 (5a Fb bloc) which is not easy (also harder than Motscho) and takes a while to

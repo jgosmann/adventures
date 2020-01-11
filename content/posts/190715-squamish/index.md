@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 6"
 date: 2019-07-15T20:18:55+02:00
+year: "2019"
 publishdate: 2019-08-02T20:18:55+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- rock climbing
-- sport climbing
+  - rock climbing
+  - sport climbing
 background: 4.jpg
 map: "49.9878, -123.3116"
 ---
@@ -60,7 +61,6 @@ In the evening, Vera and Christine drive to the Vancouver airport to pick up Tim
 who will be joining us for the last few days. I already go to sleep to get
 enough of it because we will be waking up before sunrise tomorrow and I will
 have to lead the majority of pitches (including the hard ones).
-
 
 # Climbing log book
 

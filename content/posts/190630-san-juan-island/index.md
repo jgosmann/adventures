@@ -1,12 +1,13 @@
 ---
 title: "San Juan Island, arrival"
 date: 2019-06-30T09:41:47+02:00
+year: "2019"
 publishdate: 2019-07-27T09:41:47+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- travel
+  - travel
 background: 3.jpg
 map: "48.5316, -123.0867"
 ---
@@ -18,6 +19,7 @@ check-in two backpacks as a single item (in combination they are still below
 the size and weight restrictions):
 
 <!--more-->
+
 {{< rimg src="1.jpg" alt="How to check-in two bags as a single bag">}}
 
 This works without complaints, I only had to find the bulky luggage counter.
@@ -35,12 +37,12 @@ though, I surprisingly get a really friendly immigration officer to talk to.
 After picking up my luggage, my friends Peter, his dad David, Alex, Yvonne, and
 Pants pick me up from the airport. The next stop is the Seattle REI to stock up
 on freeze-dried meals and some outdoor equipment for an upcoming part of the
-trip.  Then we continue to drive a little bit up north to the San Juan Island
+trip. Then we continue to drive a little bit up north to the San Juan Island
 ferry in Anacortes. On the way, we pass four (!) accidents, one of which could
 have been in a movie: we see a a white car speeding along the shoulder on the
 right, then swirving to the left into traffic, shortly after followed by
 a police car. Not long after, we pass an accident caused by that car involving
-a motorcycle.  Luckily it seems that no one got hurt! But the driver of that car
+a motorcycle. Luckily it seems that no one got hurt! But the driver of that car
 seems to have run. This definitely did not help to instill any more confidence
 in the US highways than I had before.
 

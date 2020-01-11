@@ -1,13 +1,14 @@
 ---
 title: "Ettaler Manndl und Notkarspitze"
 date: 2019-06-8T17:19:23+02:00
+year: "2019"
 publishdate: 2019-06-09T17:19:23+02:00
 draft: false
 background: 6.jpg
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- hiking
+  - hiking
 map: "47.58468, 11.11568"
 ---
 
@@ -16,6 +17,7 @@ tour and we took the train at 6:32am to Oberammergau. From there, we first
 summited the Ettaler Manndl (1636m).
 
 <!--more-->
+
 {{< loc "47.58468" "11.11568" >}}
 
 {{< rimg src="1.jpg" caption="View from the Ettaler Manndl">}}

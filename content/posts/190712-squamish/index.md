@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 3"
 date: 2019-07-12T19:42:29+02:00
+year: "2019"
 publishdate: 2019-08-01T19:42:29+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- rock climbing
-- sport climbing
+  - rock climbing
+  - sport climbing
 background: 5.jpg
 map: "49.92332, -123.16649"
 ---

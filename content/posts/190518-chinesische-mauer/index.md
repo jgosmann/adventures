@@ -2,20 +2,21 @@
 title: "Chinesische Mauer"
 background: 2.jpg
 date: 2019-05-18T19:16:25+02:00
+year: "2019"
 publishdate: 2019-05-30T19:16:25+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- sport climbing
-- rock climbing
+  - sport climbing
+  - rock climbing
 map: "47.3706, 11.1427"
 ---
 
 Despite a beatiful April, the weather has been pretty cold and wet for most of
 May. But this weekend was finally a little bit nicer and, together with Jason
 and Lisa, I got around to check out the “Chinesische Mauer” (Chinese Great Wall)
-crag near Leutasch in Austria.  It is pretty impressive as you can see from the
+crag near Leutasch in Austria. It is pretty impressive as you can see from the
 title picture.
 
 {{< loc "47.3706" "11.1427" >}}

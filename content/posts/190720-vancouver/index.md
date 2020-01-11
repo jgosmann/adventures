@@ -1,12 +1,13 @@
 ---
 title: "Vancouver, day 1"
 date: 2019-07-20T15:17:22+02:00
+year: "2019"
 publishdate: 2019-08-04T15:17:22+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- travel
+  - travel
 background: 30.jpg
 map: "49.2573, -123.1241"
 ---
@@ -109,7 +110,7 @@ a half day rental. Then I have a nice Burrito for dinner before finding a book
 store to buy something to read for my flight back. I already finished the book
 I brought on the trip from home and left it with Vera (it was an English book)
 to not have to carry it back. I also get some groceries for the next day and do
-laundry.  After 10 days of climbing this was definitely necessary to have some
+laundry. After 10 days of climbing this was definitely necessary to have some
 clean cloths again.
 
 {{<nextday>}}

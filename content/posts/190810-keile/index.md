@@ -1,10 +1,11 @@
 ---
 title: "Nuts, friends, and co"
 date: 2019-08-10T20:25:18+02:00
+year: "2019"
 publishdate: 2019-08-13T20:25:18+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 1.jpg
 map: "48.8316, 11.1019"
 ---
@@ -13,7 +14,7 @@ This weekend I am attending a course with the German Alpine club (DAV) about
 placing trad gear such as nuts and cams. It is in southern part of the
 Frankenjura, a well known climbing area within Germany about 90 minutes north of
 Munich. It is famous for [Action
-Directe](https://en.wikipedia.org/wiki/Action_Directe_(climb)), the world's
+Directe](<https://en.wikipedia.org/wiki/Action_Directe_(climb)>), the world's
 first 5.14d (UIAA 11).
 
 {{<loc "48.8316" "11.1019">}}
@@ -53,4 +54,3 @@ transition to hand jams and finally an easy finger lock.
 All in all, a fun and informative course. I definitely feel a bit more confident
 to lead (some easy) trad climbs. It was also great to test the placements and
 see how much they hold (or do not hold).
-

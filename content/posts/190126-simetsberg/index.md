@@ -2,12 +2,13 @@
 title: "Simetsberg"
 background: 0003.jpg
 date: 2019-01-26T09:34:04+01:00
+year: "2019"
 publishdate: 2019-01-27T09:34:04+01:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- snow shoeing
+  - snow shoeing
 map: "47.5654, 11.2555"
 ---
 
@@ -47,7 +48,7 @@ As expected it gets a bit colder and quite windy once we leave the tree line.
 Consequently we layer up. The last 100 to 200 meters of the 1060 meters total to
 ascend get really steep again, but we eventually make it to the top of the
 Simetsberg at an elevation of 1840m and get hit even more by the wind. The
-summit cross has some impressive ice formations on it.  (Unfortunately, my
+summit cross has some impressive ice formations on it. (Unfortunately, my
 camera lens got wet and foggy and the following pictures suffered in quality.)
 
 {{< rimg src="0005.jpg" alt="Summit cross of the Simetsberg.">}}

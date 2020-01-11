@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 7"
 date: 2019-07-16T10:22:22+02:00
+year: "2019"
 publishdate: 2019-08-03T10:22:22+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- rock climbing
-- sport climbing
+  - rock climbing
+  - sport climbing
 background: IMG_20190716_140625.jpg
 map: "49.7559, -123.1388"
 ---
@@ -27,7 +28,7 @@ above a certain height from the last bolt, you really do not want to fall on
 slab. But once you get to that height, downclimbing to bail also seems to risky,
 so you have to keep it mentally together, trust your feet, and continue on. The
 long distances between the bolts also require close attention to the line of the
-route because you cannot just follow the bolts.  I am relieved to make it to the
+route because you cannot just follow the bolts. I am relieved to make it to the
 end of the pitch without a fall.
 
 {{<gallery>}}
@@ -49,8 +50,8 @@ right with slightly better feet, but even worse handholds? I attempt to start
 each variant several times, but do not feel confident enough to commit and
 weight the rope again. Finally, I decide that it has to be the left variant.
 I place my foot carefully, then tense my leg muscles and start lifting my weight
-up.  I ignore the pain of the tiny rock feature pressing with all my body weight
-into my toe.  To my surprise the foot holds. A few more moves and I can clip the
+up. I ignore the pain of the tiny rock feature pressing with all my body weight
+into my toe. To my surprise the foot holds. A few more moves and I can clip the
 next bolt.
 
 Another easier (5.10a) pitch follows. After traversing another dyke, it brings
@@ -78,7 +79,7 @@ the rope. To entangle the mess, I had to weigh the rope.
 
 Now we have to do some hiking again. It is the longest, but also last hiking
 part (except maybe very short hikes before the last two pitches). The following
-pitches will be face climbing up the main part of the Chief.  To get there, we
+pitches will be face climbing up the main part of the Chief. To get there, we
 have to go along some (in my opinion) wide ledges. However, Vera is slightly
 scared. What we are looking for is an exposed ledge called the Bellygood Ledge.
 At two points, where the ledges get narrower, we set up a tree belay, thinking
@@ -121,7 +122,7 @@ pitch “Universal Key” (5.10b) sport style (e.g. get lowered back down to the
 ledge after completing it). According to the guide book, the bolts are oddly
 positioned. I do not notice that at first, climb through a first crux, traverse
 on a ledge to the right, and then I am stuck. The ledge narrows and turns into
-a thin crack turning vertical. The next bolt is to the right.  Laybacking on the
+a thin crack turning vertical. The next bolt is to the right. Laybacking on the
 crack I am about two hands short of reaching it. There are no features on the
 rock in-between to hold onto. The rock is actually somewhat covered with lichen
 and slightly crumbly on touch, suggesting that no one climbed across there.
@@ -181,7 +182,6 @@ shoes have broken in and are a bit more comfortable, but I am starting to get
 different pain points from the prolonged use.
 
 {{< rimg src="9.jpg" caption="Climbing shoes rubbing off">}}
-
 
 # Climbing log book
 

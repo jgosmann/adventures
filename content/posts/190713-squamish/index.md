@@ -1,13 +1,14 @@
 ---
 title: "Squamish, day 4"
 date: 2019-07-13T20:16:23+02:00
+year: "2019"
 publishdate: 2019-08-01T20:16:23+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- rock climbing
-- sport climbing
+  - rock climbing
+  - sport climbing
 background: 2.jpg
 map: "49.6448, -123.2080"
 ---
@@ -50,13 +51,12 @@ Definitely not an easy 5.11a, but trying it is good for my mental game.
 {{</gallery>}}
 
 We finish climbing slightly earlier than the last days which gives us the chance
-to get shower (for $5) at the recreation centre in Squamish and to buy some
+to get shower (for \$5) at the recreation centre in Squamish and to buy some
 groceries afterwards. Olivia and Esti are staying at the same camp ground and
 already started a fire in our pit when we get back. We grill hot dogs and smores
 over the fire before heading to bed.
 
 {{< rimg src="6.jpg" caption="Olivia's hilarious onesie">}}
-
 
 # Climbing log book
 

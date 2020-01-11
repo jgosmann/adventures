@@ -1,14 +1,15 @@
 ---
 title: "Mauerläuferklettersteig and Alpspitze"
 date: 2019-09-22T21:33:53+02:00
+year: "2019"
 publishdate: 2019-09-22T19:33:53+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 background: 9.jpg
 categories:
-- hiking
-- via ferrata
+  - hiking
+  - via ferrata
 map: "47.43184, 11.06142"
 ---
 

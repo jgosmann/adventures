@@ -1,13 +1,14 @@
 ---
 title: "Sawtooth Wilderness, day 4"
 date: 2019-07-08T19:16:01+02:00
+year: "2019"
 publishdate: 2019-07-28T19:16:01+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- backcountry
-- hiking
+  - backcountry
+  - hiking
 background: 11.jpg
 map: "48.220176, -120.268001"
 ---
@@ -16,6 +17,7 @@ We wake up around sunrise at 5:30am to make the ferry that brings us out of the
 wilderness in time.
 
 <!--more-->
+
 {{<rimg src="3.jpg" caption="Packing up for the last time">}}
 
 We first have a short ascend onto a last ridge line.

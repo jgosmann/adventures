@@ -1,12 +1,13 @@
 ---
 title: "Vancouver, day 2"
 date: 2019-07-21T19:46:34+02:00
+year: "2019"
 publishdate: 2019-08-07T19:46:34+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- travel
+  - travel
 background: 5.jpg
 map: "49.2573, -123.1241"
 ---
@@ -77,7 +78,6 @@ a little bit more difficult trail. But I am certainly not complaining.
 {{</gallery>}}
 
 {{< rimg src="14.jpg" caption="Selfie because there was no one else here to ask for a photo">}}
-
 
 On the way back down, I can spot pitch 1 (Women in Comfortable Shoes) and 2 of
 Stairway to Heaven with climbers on it. It is nice to get this perspective on

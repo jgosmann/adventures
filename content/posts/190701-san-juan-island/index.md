@@ -1,12 +1,13 @@
 ---
 title: "San Juan Island, day 1"
 date: 2019-07-01T11:01:19+02:00
+year: "2019"
 publishdate: 2019-07-27T11:01:19+02:00
 draft: false
 resources:
-- src: images/*.jpg
+  - src: images/*.jpg
 categories:
-- travel
+  - travel
 background: 6.jpg
 map: "48.5316, -123.0867"
 ---
@@ -41,6 +42,5 @@ burgers for dinner.
 {{</gallery>}}
 
 {{< rimg src="6.jpg" caption="The view from the deck. On days like this, you can clearly see Mt Baker on the mainland.">}}
-
 
 {{<nextday>}}
