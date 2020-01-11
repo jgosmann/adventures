@@ -76,7 +76,7 @@ const watchAssets = () => {
 exports.watchAssets = watchAssets;
 
 const hugoServer = () => {
-  const hugo = child_process.spawn("hugo", ["server"]);
+  const hugo = child_process.spawn("hugo", ["server", "-D"]);
   hugo.stdout.on("data", data => {
     const lines = data.toString().split("\n");
     for (let i = 0; i < lines.length; ++i) {
