@@ -2,7 +2,8 @@
 title: "Taubenstein and Rotwand"
 date: 2020-01-11T19:27:23+01:00
 publishdate: 2020-01-11T19:27:23+01:00
-draft: true
+year: "2020"
+draft: false
 resources:
   - src: images/*.jpeg
 background: 9.jpeg
@@ -11,24 +12,26 @@ categories:
 map: "47.65007, 11.93435"
 ---
 
-After a fall break I finally got outdoors again together with Fabian, Martin, and
+After a fall break, I finally got outdoors again together with Fabian, Martin, and
 Kristina. Fabian, the early riser as always, made us take the train at 7:04am.
 About an hour later we start our hike at the Spitizingsee and plan to hike up
 to the Taubenstein and then summit the Rotwand.
+
+<!--more-->
 
 {{< loc "47.65007" "11.93435" >}}
 
 After a short stretch of a road with little snow, we vear off the road into
 deep, but quite hard snow. We gain elevation quickly. However, we have to turn
 around a few meters before the summit of the Taubenstein because the slope is
-getting to steep. Surprisingly it does not look that steep until you actually
+getting too steep. Surprisingly, it does not look that steep until you actually
 try to climb it.
 
 {{< rimg src="1.jpeg" caption="It does not look that steep, but we barely made it past the tree.">}}
 
-So we decide to skip that summit as the Rotwand will be higher anyways and in
-the foggy weather we will not get a view anyways (the forecast said it would be
-sunny). While turning around we meet a couple headed the same way which we
+So we decide to skip that summit as the Rotwand will be higher and in
+the foggy weather we will not get a view (the forecast said it would be
+sunny). While turning around, we meet a couple headed the same way which we
 quickly leave behind us.
 
 {{<gallery>}}
@@ -52,34 +55,34 @@ have some hot apple cider with Amaretto to console us.
 
 {{< rimg src="7.jpeg" caption="Fabian's hair got iced up.">}}
 
-On the descend we stop at the Rotwandhaus where we have another hot drink. When
+On the descend, we stop at the Rotwandhaus where we have another hot drink. When
 getting ready to continue, we meet the couple from earlier again. Their snow
-shoes were not as good as ours for alpine conditions and they told us that they
+shoes were not as good as ours for alpine conditions, and they told us that they
 were extremly lucky that they could follow our tracks on the more difficult
 parts. Unfortunately, they lost them at some point, then ended up lost
-(navigation can be difficult without GPS in foggy conditions an when everything
+(navigation can be difficult without GPS in foggy conditions and if everything
 is white snow), but made it the Rotwandhaus with their phone's GPS. Quite an
 adventure for what was their first snow show tour ever. Apparently, this tour
 was listed as easy to moderate on an internet site. (Morale of the story: do not
-trust everything on the internet.).
+trust everything on the internet.)
 
 {{<gallery>}}
 {{< rimg src="9.jpeg" alt="">}}
 {{< rimg src="10.jpeg" alt="">}}
 {{< rimg src="11.jpeg" caption="The sun finally poking a little bit through the clouds behind the ridge line.">}}
-{{< rimg src="12.jpeg" caption="Going downhill to fast can lead to a loss of balance.">}}
+{{< rimg src="12.jpeg" caption="Going downhill too fast can lead to a loss of balance.">}}
 {{</gallery>}}
 
 During the descend we stop a one point to adjust our clothing layers and
-I notice that apart from the noises we make it is completely silent. I realize
-how rare it is to experience such silence when living in a city where there is
-always a minor noise background and enjoy it while it lasts.
+I notice that apart from the noises we make ourselves it is completely silent.
+I realize how rare it is to experience such silence when living in a city where
+there is always a minor noise background and enjoy it while it lasts.
 
-The desecend brings us to Geitau just a few minutes before a train departs. It
-goes actually in the wrong direction, but the upcoming stop is the terminal stop
+We reach the village Geitau just a few minutes before a train departs. It
+goes in the wrong direction, but the upcoming stop is the terminal stop
 where it will turn around and go back to Munich. So we board it anyways to be in
-warmth even though it was hardly a cold day (our ticket is valid for any number
+warmth; even though it was hardly a cold day (our ticket is valid for any number
 of trips that day).
 
-Without the break in Rotwandhaus, we spend six hours on the hike, ascendend
+Without the break in the Rotwandhaus, we spent six hours on the hike, ascended
 about 960m and descended 1270m.
