@@ -45,3 +45,5 @@ want. Before going to sleep, though, we have some cake and a bit later a three
 course menu with soup, a giant pan of
 [Schupfnudeln](https://en.wikipedia.org/wiki/Schupfnudel) with Sauerkraut and
 sausages, and ice cream.
+
+{{<nextday>}}
