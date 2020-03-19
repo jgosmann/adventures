@@ -89,3 +89,5 @@ We hiked a distance of almost 20km, descended 1050m, and ascended a total of 130
 Our highest peak was about 1650m and we took about 7:30h. Given that my backpack
 was weighing a total of up to 15kg (including snow shoes, avalanche safety
 equipment, food, water), this is quite an accomplishment, I think.
+
+{{<nextday>}}
