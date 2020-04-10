@@ -1,4 +1,5 @@
 ExpiresActive On
+ExpiresDefault "access plus 1 hours"
 ExpiresByType application/javascript "access plus 365 days"
 ExpiresByType font/woff2 "access plus 365 days"
 ExpiresByType image/jpeg "access plus 365 days"
