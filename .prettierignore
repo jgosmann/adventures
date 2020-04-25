@@ -1,1 +1,5 @@
 layouts/**/*.html
+.cache
+package.json
+package-lock.json
+public
