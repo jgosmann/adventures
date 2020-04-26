@@ -6,6 +6,13 @@ export const semanticList = css({
   listStyleType: "none",
 })
 
+export const flexList = css([
+  semanticList,
+  {
+    display: "flex",
+  },
+])
+
 export const commaSeparatedList = css([
   semanticList,
   {

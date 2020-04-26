@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import HtmlHead from "../components/HtmlHead"
+import IndexNavigation from "../components/navigation/IndexNavigation"
 import PostPreview from "../components/PostPreview"
 
 import "normalize.css"
@@ -67,19 +68,22 @@ const IndexPage = ({
 }) => (
   <>
     <HtmlHead path={pathname} language="en" />
-    <ol css={listStyle}>
-      {nodes.map(node => (
-        <li key={node.id} css={listItemStyle}>
-          <PostPreview
-            title={node.frontmatter.title}
-            fixedImage={node.background.childImageSharp.fixed}
-            date={Date.parse(node.frontmatter.date)}
-            minutesToRead={node.timeToRead}
-            categories={node.frontmatter.categories}
-          />
-        </li>
-      ))}
-    </ol>
+    <IndexNavigation />
+    <main>
+      <ol css={listStyle}>
+        {nodes.map(node => (
+          <li key={node.id} css={listItemStyle}>
+            <PostPreview
+              title={node.frontmatter.title}
+              fixedImage={node.background.childImageSharp.fixed}
+              date={Date.parse(node.frontmatter.date)}
+              minutesToRead={node.timeToRead}
+              categories={node.frontmatter.categories}
+            />
+          </li>
+        ))}
+      </ol>
+    </main>
   </>
 )
 
