@@ -3,6 +3,7 @@ module.exports = {
     title: `Jan's outdoor adventures`,
     description: `Jan's blog about adventures experienced outdoors and while travelling.`,
     author: `@jgosmann`,
+    siteUrl: `https://adventures.jgosmann.de`,
   },
   plugins: [
     `gatsby-plugin-emotion`,

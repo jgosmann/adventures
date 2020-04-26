@@ -1,9 +1,9 @@
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Helmet } from "react-helmet"
 
-import PostPreview from "../components/PostPreview.js"
+import HtmlHead from "../components/HtmlHead"
+import PostPreview from "../components/PostPreview"
 
 import "normalize.css"
 
@@ -63,38 +63,10 @@ const IndexPage = ({
   data: {
     allMdx: { nodes },
   },
+  location: { pathname },
 }) => (
   <>
-    <Helmet>
-      <style type="text/css">{`
-        @font-face {
-            font-family: 'Lato Light';
-            src: url('fonts/LatoLatin-Light.woff2') format('woff2'),
-                url('fonts/LatoLatin-Light.woff') format('woff');
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Lato Light';
-            src: url('fonts/LatoLatin-LightItalic.woff2') format('woff2'),
-                url('fonts/LatoLatin-LightItalic.woff') format('woff');
-            font-style: italic;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Lato Light';
-            src: url('fonts/LatoLatin-Regular.woff2') format('woff2'),
-                url('fonts/LatoLatin-Regular.woff') format('woff');
-            font-weight: bold;
-            font-display: swap;
-        }
-
-        body {
-          font-family: "Lato Light", sans-serif;
-        }
-      `}</style>
-    </Helmet>
+    <HtmlHead path={pathname} language="en" />
     <ol css={listStyle}>
       {nodes.map(node => (
         <li key={node.id} css={listItemStyle}>
@@ -113,6 +85,9 @@ const IndexPage = ({
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default IndexPage
