@@ -12,21 +12,11 @@ export const pageQuery = graphql`
   query {
     allMdx(sort: { fields: frontmatter___publishdate, order: DESC }) {
       nodes {
-        background {
-          childImageSharp {
-            fixed(width: 300, height: 250) {
-              ...GatsbyImageSharpFixed_tracedSVG
-            }
-          }
-        }
+        id
         frontmatter {
-          categories
-          date
-          title
           draft
         }
-        id
-        timeToRead
+        ...PostPreview_data
       }
     }
   }
@@ -73,13 +63,7 @@ const IndexPage = ({
       <ol css={listStyle}>
         {nodes.map(node => (
           <li key={node.id} css={listItemStyle}>
-            <PostPreview
-              title={node.frontmatter.title}
-              fixedImage={node.background.childImageSharp.fixed}
-              date={Date.parse(node.frontmatter.date)}
-              minutesToRead={node.timeToRead}
-              categories={node.frontmatter.categories}
-            />
+            <PostPreview data={node} />
           </li>
         ))}
       </ol>

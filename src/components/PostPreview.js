@@ -1,11 +1,30 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarDay } from "@fortawesome/free-solid-svg-icons"
 import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
 
 import { commaSeparatedList, semanticList } from "../styles"
+
+export const dataFragment = graphql`
+  fragment PostPreview_data on Mdx {
+    background {
+      childImageSharp {
+        fixed(width: 300, height: 250) {
+          ...GatsbyImageSharpFixed_tracedSVG
+        }
+      }
+    }
+    frontmatter {
+      categories
+      date
+      title
+    }
+    timeToRead
+  }
+`
 
 const textBoxStyle = {
   position: "absolute",
@@ -21,13 +40,7 @@ const textBoxStyle = {
   flexDirection: "column",
 }
 
-const PostPreview = ({
-  title,
-  fixedImage,
-  date,
-  minutesToRead,
-  categories,
-}) => {
+const PostPreview = ({ data }) => {
   const dateFormat = new Intl.DateTimeFormat("en-US", {
     day: "numeric",
     month: "long",
@@ -35,7 +48,10 @@ const PostPreview = ({
   })
   return (
     <>
-      <Img fixed={fixedImage} css={{ width: "100%", height: "100%" }} />
+      <Img
+        fixed={data.background.childImageSharp.fixed}
+        css={{ width: "100%", height: "100%" }}
+      />
       <div css={textBoxStyle}>
         <h2
           css={{
@@ -45,7 +61,7 @@ const PostPreview = ({
             fontWeight: "bold",
           }}
         >
-          {title}
+          {data.frontmatter.title}
         </h2>
         <ul
           css={[
@@ -66,24 +82,24 @@ const PostPreview = ({
         >
           <li css={{ whiteSpace: "nowrap" }}>
             <ul css={[semanticList, { lineHeight: 1.3 }]}>
-              {date && (
+              {data.frontmatter.date && (
                 <li>
                   <FontAwesomeIcon icon={faCalendarDay} />{" "}
-                  {dateFormat.format(date)}
+                  {dateFormat.format(Date.parse(data.frontmatter.date))}
                 </li>
               )}
-              {minutesToRead && (
+              {data.timeToRead && (
                 <li>
-                  <FontAwesomeIcon icon={faHourglassHalf} /> {minutesToRead}{" "}
+                  <FontAwesomeIcon icon={faHourglassHalf} /> {data.timeToRead}{" "}
                   minute read
                 </li>
               )}
             </ul>
           </li>
-          {categories && (
+          {data.frontmatter.categories && (
             <li>
               <ol css={commaSeparatedList}>
-                {categories.map(c => (
+                {data.frontmatter.categories.map(c => (
                   <li key={c}>{c}</li>
                 ))}
               </ol>
@@ -96,11 +112,7 @@ const PostPreview = ({
 }
 
 PostPreview.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.string.isRequired),
-  date: PropTypes.instanceOf(Date),
-  fixedImage: PropTypes.object,
-  minutesToRead: PropTypes.number,
-  title: PropTypes.string,
+  data: PropTypes.object.isRequired,
 }
 
 export default PostPreview
