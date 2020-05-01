@@ -8,6 +8,9 @@ import React from "react"
 
 import { commaSeparatedList, semanticList } from "../styles"
 
+export const width = 300
+export const height = 250
+
 export const dataFragment = graphql`
   fragment PostPreview_data on Mdx {
     background {

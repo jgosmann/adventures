@@ -25,6 +25,7 @@
     "gatsby-plugin-manifest": "^2.3.7",
     "gatsby-plugin-mdx": "^1.1.11",
     "gatsby-plugin-react-helmet": "^3.2.5",
+    "gatsby-plugin-react-leaflet": "^2.0.13",
     "gatsby-plugin-sharp": "^2.5.7",
     "gatsby-source-filesystem": "^2.2.5",
     "gatsby-transformer-sharp": "^2.4.7",
@@ -35,7 +36,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-leaflet": "^2.6.3",
+    "react-leaflet-markercluster": "^2.0.0"
   },
   "scripts": {
     "build": "gatsby build",
