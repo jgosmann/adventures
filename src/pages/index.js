@@ -9,8 +9,11 @@ import PostPreview from "../components/PostPreview"
 import "normalize.css"
 
 export const pageQuery = graphql`
-  query {
-    allMdx(sort: { fields: frontmatter___publishdate, order: DESC }) {
+  query($postIds: [String!]) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { id: { in: $postIds } }
+    ) {
       nodes {
         id
         frontmatter {
@@ -61,9 +64,9 @@ const IndexPage = ({
     <IndexNavigation />
     <main>
       <ol css={listStyle}>
-        {nodes.map(node => (
-          <li key={node.id} css={listItemStyle}>
-            <PostPreview data={node} />
+        {nodes.map(post => (
+          <li key={post.id} css={listItemStyle}>
+            <PostPreview data={post} />
           </li>
         ))}
       </ol>

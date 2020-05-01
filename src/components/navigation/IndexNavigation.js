@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBell } from "@fortawesome/free-solid-svg-icons"
 import { faGlobeEurope } from "@fortawesome/free-solid-svg-icons"
 import { faTh } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 
 import LegalLinks from "./LegalLinks"
@@ -37,33 +37,50 @@ const NavLink = styled(props => <Link activeClassName="active" {...props} />)`
   }
 `
 
-const IndexNavigation = () => (
-  <nav css={navStyle}>
-    <ul css={flexList}>
-      <li>
-        <NavLink to="/subscribe">
-          <FontAwesomeIcon icon={faBell} /> Subscribe
+const IndexNavigation = () => {
+  const yearIndices = useStaticQuery(graphql`
+    query {
+      allSitePage(
+        filter: { path: { regex: "/^\\\\/year[/].*$/" } }
+        sort: { fields: context___year, order: DESC }
+      ) {
+        nodes {
+          path
+          context {
+            year
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <nav css={navStyle}>
+      <ul css={flexList}>
+        <li>
+          <NavLink to="/subscribe">
+            <FontAwesomeIcon icon={faBell} /> Subscribe
+          </NavLink>
+        </li>
+        <NavLink to="/">
+          <FontAwesomeIcon icon={faTh} /> List
         </NavLink>
-      </li>
-      <NavLink to="/">
-        <FontAwesomeIcon icon={faTh} /> List
-      </NavLink>
-      <li>
-        <NavLink to="/map">
-          <FontAwesomeIcon icon={faGlobeEurope} /> Map
-        </NavLink>
-      </li>
-    </ul>
-    <ol css={flexList}>
-      <li>
-        <NavLink to="">2020</NavLink>
-      </li>
-      <li>
-        <NavLink to="">2019</NavLink>
-      </li>
-    </ol>
-    <LegalLinks />
-  </nav>
-)
+        <li>
+          <NavLink to="/map">
+            <FontAwesomeIcon icon={faGlobeEurope} /> Map
+          </NavLink>
+        </li>
+      </ul>
+      <ol css={flexList}>
+        {yearIndices.allSitePage.nodes.map(index => (
+          <li key={index.context.year}>
+            <NavLink to={index.path}>{index.context.year}</NavLink>
+          </li>
+        ))}
+      </ol>
+      <LegalLinks />
+    </nav>
+  )
+}
 
 export default IndexNavigation
