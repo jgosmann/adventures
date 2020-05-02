@@ -28,6 +28,20 @@ exports.createResolvers = ({ createResolvers }) => {
             },
           }),
       },
+      images: {
+        type: `[File!]!`,
+        resolve: (source, args, context) =>
+          context.nodeModel.runQuery({
+            type: `File`,
+            query: {
+              filter: {
+                absolutePath: {
+                  glob: `${path.dirname(source.fileAbsolutePath)}/images/*`,
+                },
+              },
+            },
+          }),
+      },
     },
   })
 }
