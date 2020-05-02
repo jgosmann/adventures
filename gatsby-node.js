@@ -32,7 +32,7 @@ exports.createResolvers = ({ createResolvers }) => {
   })
 }
 
-exports.createPages = async ({ actions, graphql }) => {
+const createYearlyIndices = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   const postListTemplate = path.resolve("src/pages/index.js")
@@ -70,4 +70,45 @@ exports.createPages = async ({ actions, graphql }) => {
     })
     start = end
   }
+}
+
+const createPostPages = async ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const postTemplate = path.resolve("src/templates/post.js")
+
+  const posts = (
+    await graphql(`
+      query {
+        allMdx {
+          nodes {
+            id
+            parent {
+              ... on File {
+                relativeDirectory
+              }
+            }
+          }
+        }
+      }
+    `)
+  ).data.allMdx.nodes.map(node => ({
+    id: node.id,
+    path: node.parent.relativeDirectory,
+  }))
+
+  posts.forEach(post =>
+    createPage({
+      path: `/posts/${post.path}`,
+      component: postTemplate,
+      context: {
+        postId: post.id,
+      },
+    })
+  )
+}
+
+exports.createPages = async args => {
+  createYearlyIndices(args)
+  createPostPages(args)
 }

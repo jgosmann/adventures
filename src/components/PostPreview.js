@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarDay } from "@fortawesome/free-solid-svg-icons"
 import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
 
+import PostMeta from "../components/PostMeta"
 import { commaSeparatedList, semanticList } from "../styles"
 
 export const width = 300
@@ -24,6 +25,11 @@ export const dataFragment = graphql`
       categories
       date
       title
+    }
+    parent {
+      ... on File {
+        relativeDirectory
+      }
     }
     timeToRead
   }
@@ -50,7 +56,10 @@ const PostPreview = ({ data }) => {
     year: "numeric",
   })
   return (
-    <>
+    <Link
+      to={`/posts/${data.parent.relativeDirectory}`}
+      css={{ color: "#000" }}
+    >
       <Img
         fixed={data.background.childImageSharp.fixed}
         css={{ width: "100%", height: "100%" }}
@@ -61,7 +70,7 @@ const PostPreview = ({ data }) => {
             margin: 0,
             marginBottom: 4,
             fontSize: "1em",
-            fontWeight: "bold",
+            fontWeight: "normal",
           }}
         >
           {data.frontmatter.title}
@@ -84,20 +93,10 @@ const PostPreview = ({ data }) => {
           ]}
         >
           <li css={{ whiteSpace: "nowrap" }}>
-            <ul css={[semanticList, { lineHeight: 1.3 }]}>
-              {data.frontmatter.date && (
-                <li>
-                  <FontAwesomeIcon icon={faCalendarDay} />{" "}
-                  {dateFormat.format(Date.parse(data.frontmatter.date))}
-                </li>
-              )}
-              {data.timeToRead && (
-                <li>
-                  <FontAwesomeIcon icon={faHourglassHalf} /> {data.timeToRead}{" "}
-                  minute read
-                </li>
-              )}
-            </ul>
+            <PostMeta
+              frontmatter={data.frontmatter}
+              timeToRead={data.timeToRead}
+            />
           </li>
           {data.frontmatter.categories && (
             <li>
@@ -110,7 +109,7 @@ const PostPreview = ({ data }) => {
           )}
         </ul>
       </div>
-    </>
+    </Link>
   )
 }
 

@@ -23,11 +23,10 @@ const navStyle = css({
 const NavLink = styled(props => <Link activeClassName="active" {...props} />)`
   transition: 0.2s;
   display: block;
-  font-weight: bold;
   color: #000;
   text-decoration: none;
   padding: 8px 8px 4px;
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid rgba(255, 255, 255, 0);
   height: 100%;
   box-sizing: border-box;
 

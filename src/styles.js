@@ -24,3 +24,12 @@ export const commaSeparatedList = css([
     },
   },
 ])
+
+export const fullHeight = css`
+  html,
+  body,
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    height: 100%;
+  }
+`

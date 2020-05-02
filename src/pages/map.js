@@ -5,6 +5,7 @@ import React from "react"
 import { Popup } from "react-leaflet"
 import MarkerClusterGroup from "react-leaflet-markercluster"
 
+import colors from "../colors"
 import HtmlHead from "../components/HtmlHead"
 import IndexNavigation from "../components/navigation/IndexNavigation"
 import Map from "../components/leaflet/Map"
@@ -13,6 +14,7 @@ import PostPreview, {
   width as PostPreviewWidth,
   height as postPreviewHeight,
 } from "../components/PostPreview.js"
+import { fullHeight } from "../styles"
 
 import "normalize.css"
 import "react-leaflet-markercluster/dist/styles.min.css"
@@ -72,20 +74,11 @@ const IndexPage = ({
   },
   location: { pathname },
 }) => (
-  <>
+  <div css={{ display: "flex", flexDirection: "column", height: "100%" }}>
     <HtmlHead path={pathname} language="en" />
-    <Global
-      styles={css`
-        html,
-        body,
-        #___gatsby,
-        #gatsby-focus-wrapper {
-          height: 100%;
-        }
-      `}
-    />
+    <Global styles={fullHeight} />
     <IndexNavigation />
-    <main css={{ height: "100%" }}>
+    <main css={{ flexGrow: 1, "a:hover": { color: colors.accent } }}>
       <Map
         bounds={nodes.map(node => getNodeLatLng(node))}
         scrollWheelZoom={true}
@@ -102,7 +95,7 @@ const IndexPage = ({
         </MarkerClusterGroup>
       </Map>
     </main>
-  </>
+  </div>
 )
 
 IndexPage.propTypes = {
