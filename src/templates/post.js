@@ -22,7 +22,6 @@ export const pageQuery = graphql`
 
 // FIXME: open graph meta tags
 // TODO: extract layout component
-// TODO: parallax scroll
 // TODO: format body
 const PostPage = ({ data: { mdx }, location: { pathname } }) => (
   <>

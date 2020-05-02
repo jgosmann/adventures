@@ -4,7 +4,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import PostMeta from "../../components/PostMeta"
 
@@ -52,35 +52,59 @@ const CoverImg = styled(Img)({
   width: "100%",
 })
 
-const Titlescreen = ({ background, frontmatter, timeToRead }) => (
-  <div css={{ height: "100%", position: "relative", overflow: "hidden" }}>
-    <CoverImg fluid={background.childImageSharp.fluid} />
-    <div
-      css={{
-        position: "absolute",
-        left: 0,
-        bottom: "33%",
-        width: "100%",
-        color: "#fff",
-        textAlign: "center",
-      }}
-    >
-      <h1 css={titleStyle}>{frontmatter.title}</h1>
-      <BoxedPostMeta frontmatter={frontmatter} timeToRead={timeToRead} />
+const Titlescreen = ({ background, frontmatter, timeToRead }) => {
+  const [scrollRatio, setScrollRatio] = useState(0)
+  const updateParallax = () => {
+    window.requestAnimationFrame(() => {
+      const newScrollRatio = Math.max(
+        0,
+        Math.min(1, window.scrollY / window.innerHeight)
+      )
+      setScrollRatio(newScrollRatio)
+    })
+  }
+  useEffect(() => {
+    const isMobileDevice = /Mobi/i.test(window.navigator.userAgent)
+    if (!isMobileDevice) {
+      updateParallax()
+      window.addEventListener("scroll", updateParallax)
+      window.addEventListener("resize", updateParallax)
+    }
+  }, [])
+
+  return (
+    <div css={{ height: "100%", position: "relative", overflow: "hidden" }}>
+      <CoverImg
+        fluid={background.childImageSharp.fluid}
+        style={{ transform: `translate(0, ${50 * scrollRatio}%)` }}
+      />
+      <div
+        css={{
+          position: "absolute",
+          left: 0,
+          bottom: "33%",
+          width: "100%",
+          color: "#fff",
+          textAlign: "center",
+        }}
+      >
+        <h1 css={titleStyle}>{frontmatter.title}</h1>
+        <BoxedPostMeta frontmatter={frontmatter} timeToRead={timeToRead} />
+      </div>
+      <FontAwesomeIcon
+        icon={faChevronUp}
+        style={{
+          color: "rgba(0, 0, 0, 0.6)",
+          fontSize: "6rem",
+          position: "absolute",
+          top: "75%",
+          left: "50%",
+          transform: "translate(-50%, 0)",
+        }}
+      />
     </div>
-    <FontAwesomeIcon
-      icon={faChevronUp}
-      style={{
-        color: "rgba(0, 0, 0, 0.6)",
-        fontSize: "6rem",
-        position: "absolute",
-        top: "75%",
-        left: "50%",
-        transform: "translate(-50%, 0)",
-      }}
-    />
-  </div>
-)
+  )
+}
 
 Titlescreen.propTypes = {
   background: PropTypes.object.isRequired,
