@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import PropTypes from "prop-types"
 import React from "react"
 
+import Gallery from "./Gallery"
 import Rimg from "./Rimg"
 
 export const dataFragment = graphql`
@@ -64,6 +65,7 @@ const Content = ({ mdx }) => {
     src: PropTypes.string.isRequired,
   }
   const mdxComponents = {
+    Gallery,
     Rimg: BoundRimg,
   }
 
