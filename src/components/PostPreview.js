@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCalendarDay } from "@fortawesome/free-solid-svg-icons"
-import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"

@@ -6,12 +6,18 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import Gallery from "./Gallery"
+import Pano from "./Pano"
 import Rimg from "./Rimg"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
     images {
       ...Rimg_data
+      name
+      ext
+    }
+    panoramas {
+      ...Pano_data
       name
       ext
     }
@@ -53,20 +59,23 @@ const StyleWrapper = styled("div")`
 `
 
 const Content = ({ mdx }) => {
-  const images = Object.assign(
-    {},
-    ...mdx.images.map(img => ({ [img.name + img.ext]: img }))
-  )
-
-  const BoundRimg = ({ src, ...props }) => (
-    <Rimg image={images[src]} {...props} />
-  )
-  BoundRimg.propTypes = {
-    src: PropTypes.string.isRequired,
+  const bindImages = (Component, data) => {
+    const images = Object.assign(
+      {},
+      ...data.map(img => ({ [img.name + img.ext]: img }))
+    )
+    const BoundImage = ({ src, ...props }) => (
+      <Component image={images[src]} {...props} />
+    )
+    BoundImage.propTypes = {
+      src: PropTypes.string.isRequired,
+    }
+    return BoundImage
   }
   const mdxComponents = {
     Gallery,
-    Rimg: BoundRimg,
+    Pano: bindImages(Pano, mdx.panoramas),
+    Rimg: bindImages(Rimg, mdx.images),
   }
 
   return (

@@ -6,6 +6,7 @@ export const GalleryContext = React.createContext({
   large: false,
 })
 
+// TODO fix for narrow screens
 const Gallery = ({ children, large }) => (
   <div
     css={{

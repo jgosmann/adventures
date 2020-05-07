@@ -29,7 +29,7 @@ exports.createResolvers = ({ createResolvers }) => {
           }),
       },
       images: {
-        type: `[File!]!`,
+        type: `[File!]`,
         resolve: (source, args, context) =>
           context.nodeModel.runQuery({
             type: `File`,
@@ -37,6 +37,20 @@ exports.createResolvers = ({ createResolvers }) => {
               filter: {
                 absolutePath: {
                   glob: `${path.dirname(source.fileAbsolutePath)}/images/*`,
+                },
+              },
+            },
+          }),
+      },
+      panoramas: {
+        type: `[File!]`,
+        resolve: (source, args, context) =>
+          context.nodeModel.runQuery({
+            type: `File`,
+            query: {
+              filter: {
+                absolutePath: {
+                  glob: `${path.dirname(source.fileAbsolutePath)}/pano/*`,
                 },
               },
             },
