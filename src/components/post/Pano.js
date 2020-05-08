@@ -9,7 +9,7 @@ import VerticalScroll from "../VerticalScroll"
 export const dataFragment = graphql`
   fragment Pano_data on File {
     childImageSharp {
-      pano: fixed(height: 1200, fit: OUTSIDE) {
+      pano: fixed(height: 600, fit: OUTSIDE) {
         ...GatsbyImageSharpFixed_tracedSVG
         aspectRatio
       }
@@ -25,15 +25,13 @@ const Pano = ({ alt, caption, image }) => {
         scrollSnapAlign: "start",
         position: "relative",
         textAlign: "center",
-        maxHeight: "100%",
-        maxWidth: "100%",
       }}
     >
       <VerticalScroll>
         <Img
           fixed={image.childImageSharp.pano}
           alt={alt || caption}
-          style={{
+          css={{
             maxHeight: "100vh",
           }}
         />

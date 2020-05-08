@@ -40,7 +40,7 @@ const Rimg = ({ alt, caption, image }) => {
           fluid={image.childImageSharp.rimg}
           alt={alt || caption}
           css={{
-            maxWidth: "100%",
+            maxWidth: "calc(100vw - 64px)",
             width: `calc(${height} * ${image.childImageSharp.rimg.aspectRatio})`,
             maxHeight: height,
             boxShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",
