@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 const scrollArrowStyle = css({
   color: "rgba(0, 0, 0, 0.6)",
@@ -43,9 +43,26 @@ const useRefState = initialValue => {
 
 const VerticalScroll = ({ children }) => {
   const scrollArea = useRef(null)
+
   const [scrollDirection, setScrollDirection] = useRefState(0)
   const lastScrollProcessing = useRef(null)
   const [hover, setHover] = useState(0)
+
+  const [showScrollArrows, setShowScrollArrows] = useState(true)
+
+  useEffect(() => {
+    const determineScrollArrowVisibility = () => {
+      if (scrollArea.current) {
+        setShowScrollArrows(
+          scrollArea.current.scrollWidth > scrollArea.current.clientWidth
+        )
+      }
+    }
+    window.addEventListener("resize", determineScrollArrowVisibility)
+    determineScrollArrowVisibility()
+    return () =>
+      window.removeEventListener("resize", determineScrollArrowVisibility)
+  }, [])
 
   const scroll = timestamp => {
     if (scrollDirection.current == 0) {
@@ -102,6 +119,13 @@ const VerticalScroll = ({ children }) => {
           hover < 0 ? "hover" : "",
           scrollDirection.current < 0 ? "active" : "inactive",
         ].join(" ")}
+        style={
+          showScrollArrows
+            ? {}
+            : {
+                display: "none",
+              }
+        }
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
@@ -118,6 +142,13 @@ const VerticalScroll = ({ children }) => {
           hover > 0 ? "hover" : "",
           scrollDirection.current > 0 ? "active" : "inactive",
         ].join(" ")}
+        style={
+          showScrollArrows
+            ? {}
+            : {
+                display: "none",
+              }
+        }
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
