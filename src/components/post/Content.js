@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import Gallery from "./Gallery"
+import Nextday from "./Nextday"
 import Pano from "./Pano"
 import Rimg from "./Rimg"
 
@@ -58,7 +59,7 @@ const StyleWrapper = styled("div")`
   }
 `
 
-const Content = ({ mdx }) => {
+const Content = ({ mdx, nextPath }) => {
   const bindImages = (Component, data) => {
     const images = Object.assign(
       {},
@@ -72,8 +73,12 @@ const Content = ({ mdx }) => {
     }
     return BoundImage
   }
+
+  const BoundNextday = () => <Nextday path={nextPath} />
+
   const mdxComponents = {
     Gallery,
+    Nextday: BoundNextday,
     Pano: bindImages(Pano, mdx.panoramas),
     Rimg: bindImages(Rimg, mdx.images),
   }
@@ -88,6 +93,7 @@ const Content = ({ mdx }) => {
 }
 
 Content.propTypes = {
+  nextPath: PropTypes.string,
   mdx: PropTypes.object.isRequired,
 }
 

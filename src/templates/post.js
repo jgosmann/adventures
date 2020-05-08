@@ -23,14 +23,18 @@ export const pageQuery = graphql`
 
 // FIXME: open graph meta tags
 // TODO: extract layout component
-const PostPage = ({ data: { mdx }, location: { pathname } }) => (
+const PostPage = ({
+  data: { mdx },
+  location: { pathname },
+  pageContext: { nextPath },
+}) => (
   <>
     <HtmlHead path={pathname} language="en" />
     <Global styles={fullHeight} />
     <main css={{ height: "100%" }}>
       <article css={{ height: "100%" }}>
         <Titlescreen {...mdx} />
-        <Content mdx={mdx} />
+        <Content mdx={mdx} nextPath={nextPath} />
       </article>
     </main>
     <div css={{ position: "absolute", top: 0, left: 0, width: "100%" }}>
@@ -44,6 +48,9 @@ PostPage.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
+  pageContext: PropTypes.shape({
+    nextPath: PropTypes.string,
+  }),
 }
 
 export default PostPage

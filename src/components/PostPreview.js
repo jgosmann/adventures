@@ -23,11 +23,7 @@ export const dataFragment = graphql`
       date
       title
     }
-    parent {
-      ... on File {
-        relativeDirectory
-      }
-    }
+    path
     timeToRead
   }
 `
@@ -47,16 +43,8 @@ const textBoxStyle = {
 }
 
 const PostPreview = ({ data }) => {
-  const dateFormat = new Intl.DateTimeFormat("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  })
   return (
-    <Link
-      to={`/posts/${data.parent.relativeDirectory}`}
-      css={{ color: "#000" }}
-    >
+    <Link to={data.path} css={{ color: "#000" }}>
       <Img
         fixed={data.background.childImageSharp.fixed}
         css={{ width: "100%", height: "100%" }}

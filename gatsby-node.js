@@ -29,9 +29,9 @@ exports.createResolvers = ({ createResolvers }) => {
           }),
       },
       images: {
-        type: `[File!]`,
-        resolve: (source, args, context) =>
-          context.nodeModel.runQuery({
+        type: `[File!]!`,
+        resolve: async (source, args, context) =>
+          (await context.nodeModel.runQuery({
             type: `File`,
             query: {
               filter: {
@@ -40,12 +40,12 @@ exports.createResolvers = ({ createResolvers }) => {
                 },
               },
             },
-          }),
+          })) || [],
       },
       panoramas: {
-        type: `[File!]`,
-        resolve: (source, args, context) =>
-          context.nodeModel.runQuery({
+        type: `[File!]!`,
+        resolve: async (source, args, context) =>
+          (await context.nodeModel.runQuery({
             type: `File`,
             query: {
               filter: {
@@ -54,7 +54,23 @@ exports.createResolvers = ({ createResolvers }) => {
                 },
               },
             },
-          }),
+          })) || [],
+      },
+      path: {
+        type: `String!`,
+        resolve: async (source, args, context) =>
+          "/posts/" +
+          (
+            await context.nodeModel.runQuery({
+              type: `File`,
+              firstOnly: true,
+              query: {
+                filter: {
+                  absolutePath: { eq: source.fileAbsolutePath },
+                },
+              },
+            })
+          ).relativeDirectory,
       },
     },
   })
@@ -108,29 +124,28 @@ const createPostPages = async ({ actions, graphql }) => {
   const posts = (
     await graphql(`
       query {
-        allMdx {
-          nodes {
-            id
-            parent {
-              ... on File {
-                relativeDirectory
-              }
+        allMdx(sort: { fields: frontmatter___date, order: ASC }) {
+          edges {
+            node {
+              id
+              path
+            }
+            next {
+              path
             }
           }
         }
       }
     `)
-  ).data.allMdx.nodes.map(node => ({
-    id: node.id,
-    path: node.parent.relativeDirectory,
-  }))
+  ).data.allMdx.edges
 
   posts.forEach(post =>
     createPage({
-      path: `/posts/${post.path}`,
+      path: post.node.path,
       component: postTemplate,
       context: {
-        postId: post.id,
+        postId: post.node.id,
+        nextPath: post.next ? post.next.path : null,
       },
     })
   )
