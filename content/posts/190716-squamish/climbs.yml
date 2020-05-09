@@ -1,0 +1,74 @@
+- date: 2019-07-16T10:22:22+02:00
+  ascents:
+    - name: "Stairway to Heaven"
+      pitches:
+        - name: "Women in Comfortable Shoes"
+          grade:
+            system: YDS
+            value: "5.10a"
+          style: hangdog
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: onsight
+        - name: "Xenolith Dance"
+          grade:
+            system: YDS
+            value: "5.10c"
+          style: aid
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: onsight
+        - name: "Dyke Link"
+          grade:
+            system: YDS
+            value: "5.10a"
+          style: skipped
+        - name: "“Moonwatcher”"
+          grade:
+            system: YDS
+            value: "5.9"
+          style: hangdog
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: skipped
+        - grade:
+            system: YDS
+            value: "5.10c"
+          style: skipped
+        - name: "“Universal Key”"
+          grade:
+            system: YDS
+            value: "5.10b"
+          style: bailed
+        - name: "Traverse of the Gods"
+          grade:
+            system: YDS
+            value: "5.9"
+          style: not attempted
+        - name: "Traverse of the Gods"
+          grade:
+            system: YDS
+            value: "5.8"
+          style: not attempted
+        - grade:
+            system: YDS
+            value: "5.10b"
+          style: not attempted
+        - name: "Upper Black Dyke"
+          grade:
+            system: YDS
+            value: "5.10b"
+          style: not attempted
+        - name: "Mr. Ciechanowski"
+          grade:
+            system: YDS
+            value: "5.10a"
+          style: not attempted
+        - name: "Ladies First"
+          grade:
+            system: YDS
+            value: "5.10a"
+          style: not attempted

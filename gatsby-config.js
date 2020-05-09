@@ -30,6 +30,7 @@ module.exports = {
         defaultQuality: 90,
       },
     },
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

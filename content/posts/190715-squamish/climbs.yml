@@ -1,0 +1,22 @@
+- date: 2019-07-15T20:18:55+02:00
+  ascents:
+    - name: "Domestic Disturbance"
+      grade:
+        system: YDS
+        value: "5.10a"
+      style: onsight
+    - name: "Flypaper"
+      grade:
+        system: YDS
+        value: "5.10c"
+      style: onsight
+    - name: "Under the Influence"
+      grade:
+        system: YDS
+        value: "5.11a"
+      style: redpoint
+    - name: "Upchuck"
+      grade:
+        system: YDS
+        value: "5.11b"
+      style: flash

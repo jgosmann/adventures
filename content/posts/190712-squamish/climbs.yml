@@ -1,0 +1,30 @@
+- date: 2019-07-12T19:42:29+02:00
+  ascents:
+    - name: "Star Chek"
+      pitches:
+        - grade:
+            system: YDS
+            value: "5.8"
+          style: toprope
+        - grade:
+            system: YDS
+            value: "5.7"
+          style: toprope
+        - grade:
+            system: YDS
+            value: "5.7"
+          style: onsight
+        - grade:
+            system: YDS
+            value: "5.9"
+          style: toprope
+    - name: "Rocky Horror"
+      grade:
+        system: YDS
+        value: "5.10b"
+      style: flash
+    - name: "Attachment Theory"
+      grade:
+        system: YDS
+        value: "5.10b"
+      style: onsight

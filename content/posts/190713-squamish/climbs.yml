@@ -1,0 +1,32 @@
+- date: 2019-07-13T20:16:23+02:00
+  ascents:
+    - name: "Oscar's Slab"
+      grade:
+        system: YDS
+        value: "5.8"
+      style: onsight
+    - name: "Zoë"
+      grade:
+        system: YDS
+        value: "5.10a"
+      style: onsight
+    - name: "More Than Just a Pretty Face"
+      grade:
+        system: YDS
+        value: "5.10c"
+      style: redpoint
+    - name: "In the Doghouse"
+      grade:
+        system: YDS
+        value: "5.7"
+      style: onsight
+    - name: "A Bachelor's Life Memorial Arête"
+      grade:
+        system: YDS
+        value: "5.10a"
+      style: flash
+    - name: "Pleasant Pheasant"
+      grade:
+        system: YDS
+        value: "5.11a"
+      style: hangdog

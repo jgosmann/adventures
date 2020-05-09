@@ -1,0 +1,17 @@
+- date: 2019-06-01T20:02:17+02:00
+  ascents:
+    - name: "Scherzhaft Männlich"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: flash
+    - name: "Sog ins Nichts"
+      grade:
+        system: UIAA
+        value: "8"
+      style: toprope-hangdog
+    - name: "Das Ramayani Kapitel"
+      grade:
+        system: UIAA
+        grade: "7+"
+      style: redpoint

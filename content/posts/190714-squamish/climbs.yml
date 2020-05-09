@@ -1,0 +1,30 @@
+- date: 2019-07-14T19:45:26+02:00
+  ascents:
+    - name: "Slingshot"
+      grade:
+        system: V
+        value: "V2"
+    - name: "Left Brain"
+      grade:
+        system: V
+        value: "V2"
+    - name: "Left Brain, V3 start"
+      grade:
+        system: V
+        value: "V3"
+    - name: "Anatomy Lessen"
+      grade:
+        system: V
+        value: "V3"
+    - name: "Squamish Days"
+      grade:
+        system: V
+        value: "V0"
+    - name: "Broken Nose"
+      grade:
+        system: V
+        value: "V2"
+    - name: "American Gigolo"
+      grade:
+        system: V
+        value: "V3"

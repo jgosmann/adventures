@@ -8,53 +8,65 @@
 
 const path = require("path")
 
+const resolveSinglePostFile = relativeDirectory => (source, args, context) => {
+  const evaluatedDirectory =
+    relativeDirectory instanceof Function
+      ? relativeDirectory(source, args, context)
+      : relativeDirectory
+  return context.nodeModel.runQuery({
+    type: `File`,
+    firstOnly: true,
+    query: {
+      filter: {
+        absolutePath: {
+          eq: `${path.dirname(source.fileAbsolutePath)}/${evaluatedDirectory}`,
+        },
+      },
+    },
+  })
+}
+
+const resolvePostFiles = relativeDirectory => async (source, args, context) => {
+  const evaluatedDirectory =
+    relativeDirectory instanceof Function
+      ? relativeDirectory(source, args, context)
+      : relativeDirectory
+  return (
+    (await context.nodeModel.runQuery({
+      type: `File`,
+      query: {
+        filter: {
+          absolutePath: {
+            glob: `${path.dirname(
+              source.fileAbsolutePath
+            )}/${evaluatedDirectory}/*`,
+          },
+        },
+      },
+    })) || []
+  )
+}
+
 exports.createResolvers = ({ createResolvers }) => {
   createResolvers({
     Mdx: {
       background: {
         type: `File`,
-        resolve: (source, args, context) =>
-          context.nodeModel.runQuery({
-            type: `File`,
-            firstOnly: true,
-            query: {
-              filter: {
-                absolutePath: {
-                  eq: `${path.dirname(source.fileAbsolutePath)}/images/${
-                    source.frontmatter.background
-                  }`,
-                },
-              },
-            },
-          }),
+        resolve: resolveSinglePostFile(
+          source => `images/${source.frontmatter.background}`
+        ),
+      },
+      climbs: {
+        type: `File`,
+        resolve: resolveSinglePostFile("climbs.yml"),
       },
       images: {
         type: `[File!]!`,
-        resolve: async (source, args, context) =>
-          (await context.nodeModel.runQuery({
-            type: `File`,
-            query: {
-              filter: {
-                absolutePath: {
-                  glob: `${path.dirname(source.fileAbsolutePath)}/images/*`,
-                },
-              },
-            },
-          })) || [],
+        resolve: resolvePostFiles("images"),
       },
       panoramas: {
         type: `[File!]!`,
-        resolve: async (source, args, context) =>
-          (await context.nodeModel.runQuery({
-            type: `File`,
-            query: {
-              filter: {
-                absolutePath: {
-                  glob: `${path.dirname(source.fileAbsolutePath)}/pano/*`,
-                },
-              },
-            },
-          })) || [],
+        resolve: resolvePostFiles("pano"),
       },
       path: {
         type: `String!`,

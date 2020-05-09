@@ -1,0 +1,17 @@
+- date: 2019-05-18T19:16:25+02:00
+  ascents:
+    - name: "Take It Easy"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Der Gipfelschilling"
+      grade:
+        system: french
+        value: "6b+"
+      style: hangdog
+    - name: "L'Lisa"
+      grade:
+        system: french
+        value: "6c"
+      style: hangdog

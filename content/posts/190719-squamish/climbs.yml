@@ -1,0 +1,27 @@
+- date: 2019-07-19T14:56:26+02:00
+  ascents:
+    - name: "High Boltage Line"
+      grade:
+        system: YDS
+        value: "5.10a"
+      style: bailed
+    - name: "Foot in the Gravy"
+      grade:
+        system: YDS
+        value: "5.4"
+      style: toprope
+    - name: "Dusty Eyes"
+      grade:
+        system: YDS
+        value: "5.7"
+      style: toprope
+    - name: "The Alexis Cracks"
+      grade:
+        system: YDS
+        value: "5.7"
+      style: toprope
+    - name: "Libya Sucks"
+      grade:
+        system: YDS
+        value: "5.7"
+      style: toprope

@@ -1,0 +1,20 @@
+- date: 2019-06-15T19:28:04+02:00
+  ascents:
+    - name: "Motscho"
+      grade:
+        system: "Fb bloc"
+        value: "6c"
+    - name: "Alter Falter"
+      grade:
+        system: "Fb bloc"
+        value: "6c"
+      style: fa
+    - name: "Unknown traverse"
+      grade:
+        system: "Fb trav"
+        value: "5c"
+      style: flash
+    - name: "Pablo Diablo"
+      grade:
+        system: "Fb bloc"
+        value: "5a"

@@ -1,0 +1,17 @@
+- date: 2019-04-19T18:59:49+02:00
+  ascents:
+    - name: "Radlweg"
+      grade:
+        system: UIAA
+        value: "3"
+      style: onsight
+    - name: "Schwarzer Riss"
+      grade:
+        system: UIAA
+        value: "4"
+      style: onsight
+    - name: "Weberknecht Verschneidung"
+      grade:
+        system: UIAA
+        value: "4"
+      style: onsight

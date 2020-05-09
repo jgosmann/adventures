@@ -1,0 +1,28 @@
+- date: 2019-07-18T18:49:45+02:00
+  ascents:
+    - name: "Centurion"
+      pitches:
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: hangdog
+        - grade:
+            system: YDS
+            value: "5.8"
+          style: toprope
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: onsight
+        - grade:
+            system: YDS
+            value: "5.10c"
+          style: hangdog
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: onsight
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: onsight

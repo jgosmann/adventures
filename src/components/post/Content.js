@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import PropTypes from "prop-types"
 import React from "react"
 
+import ClimbingLog from "./ClimbingLog"
 import Gallery from "./Gallery"
 import Nextday from "./Nextday"
 import Pano from "./Pano"
@@ -12,6 +13,11 @@ import Rimg from "./Rimg"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
+    climbs {
+      childClimbsYaml {
+        ...ClimbingLog_data
+      }
+    }
     images {
       ...Rimg_data
       name
@@ -83,11 +89,14 @@ const Content = ({ mdx, nextPath }) => {
     Rimg: bindImages(Rimg, mdx.images),
   }
 
+  console.log(mdx)
+
   return (
     <StyleWrapper>
       <MDXProvider components={mdxComponents}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
+      {mdx.climbs && <ClimbingLog climbs={mdx.climbs.childClimbsYaml} />}
     </StyleWrapper>
   )
 }

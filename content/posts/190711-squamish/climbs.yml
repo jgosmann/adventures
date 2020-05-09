@@ -1,0 +1,36 @@
+- date: 2019-07-11T18:57:15+02:00
+  ascents:
+    - name: "Boy Pie"
+      grade:
+        system: YDS
+        value: "5.8"
+      style: flash
+    - name: "Mirror Image"
+      grade:
+        system: YDS
+        value: "5.8"
+      style: flash
+    - name: "Kigijushi"
+      grade:
+        system: YDS
+        value: "5.10c"
+      style: hangdog
+    - name: "Sacrilege"
+      pitches:
+        - grade:
+            system: YDS
+            value: "5.8"
+          style: toprope
+        - grade:
+            system: YDS
+            value: "5.9"
+          style: toprope
+        - grade:
+            system: YDS
+            value: "5.10a"
+          style: onsight
+    - name: "Kingfishers Catch Fire"
+      grade:
+        system: YDS
+        value: "5.8"
+      style: flash
