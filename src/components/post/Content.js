@@ -8,6 +8,7 @@ import React from "react"
 import ClimbingLog from "./ClimbingLog"
 import Gallery from "./Gallery"
 import GpxTrack from "./GpxTrack"
+import Loc from "./Loc"
 import Nextday from "./Nextday"
 import Pano from "./Pano"
 import Rimg from "./Rimg"
@@ -102,6 +103,7 @@ const Content = ({ mdx, nextPath }) => {
   const mdxComponents = {
     Gallery,
     GpxTrack: BoundGpxTrack,
+    Loc,
     Nextday: BoundNextday,
     Pano: bindImages(Pano, mdx.panoramas),
     Rimg: bindImages(Rimg, mdx.images),
