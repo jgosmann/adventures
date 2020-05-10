@@ -13,6 +13,7 @@ import Nextday from "./Nextday"
 import Pano from "./Pano"
 import Rimg from "./Rimg"
 import Travel from "./Travel"
+import Video from "./Video"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
@@ -35,6 +36,13 @@ export const dataFragment = graphql`
       ...Pano_data
       name
       ext
+    }
+    videos: resources(filter: { ext: { in: [".m4v", ".mp4"] } }) {
+      videoH264 {
+        path
+      }
+      name
+      relativePath
     }
   }
 `
@@ -85,6 +93,18 @@ const Content = ({ mdx, nextPath }) => {
     src: PropTypes.string.isRequired,
   }
 
+  const videos = Object.assign(
+    {},
+    ...mdx.videos.map(video => ({
+      [video.relativePath.replace(/^[^/]+\//, "")]: video.videoH264.path,
+    }))
+  )
+  console.log(videos)
+  const BoundVideo = ({ src }) => <Video src={videos[src]} />
+  BoundVideo.propTypes = {
+    src: PropTypes.string.isRequired,
+  }
+
   const bindImages = (Component, data) => {
     const images = Object.assign(
       {},
@@ -109,6 +129,7 @@ const Content = ({ mdx, nextPath }) => {
     Pano: bindImages(Pano, mdx.panoramas),
     Rimg: bindImages(Rimg, mdx.images),
     Travel,
+    Video: BoundVideo,
   }
 
   return (
