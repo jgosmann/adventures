@@ -48,8 +48,7 @@ const listItemStyle = {
   maxHeight: "calc(100vh - 72px)",
 
   "&:hover": {
-    transform: "translate(-2px, -2px)",
-    boxShadow: "2px 3px 4px rgba(0, 0, 0, 0.5)",
+    boxShadow: "0px 1px 12px rgba(0, 0, 0, 0.75)",
   },
 }
 
