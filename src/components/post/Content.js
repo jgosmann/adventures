@@ -7,23 +7,29 @@ import React from "react"
 
 import ClimbingLog from "./ClimbingLog"
 import Gallery from "./Gallery"
+import GpxTrack from "./GpxTrack"
 import Nextday from "./Nextday"
 import Pano from "./Pano"
 import Rimg from "./Rimg"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
-    climbs {
+    climbs: resources(filter: { relativePath: { eq: "climbs.yml" } }) {
       childClimbsYaml {
         ...ClimbingLog_data
       }
     }
-    images {
+    gpxTracks: resources(filter: { relativePath: { glob: "*.gpx" } }) {
+      publicURL
+      name
+      ext
+    }
+    images: resources(filter: { relativePath: { glob: "images/*" } }) {
       ...Rimg_data
       name
       ext
     }
-    panoramas {
+    panoramas: resources(filter: { relativePath: { glob: "pano/*" } }) {
       ...Pano_data
       name
       ext
@@ -66,6 +72,17 @@ const StyleWrapper = styled("div")`
 `
 
 const Content = ({ mdx, nextPath }) => {
+  const gpxTracks = Object.assign(
+    {},
+    ...mdx.gpxTracks.map(track => ({
+      [track.name + track.ext]: track.publicURL,
+    }))
+  )
+  const BoundGpxTrack = ({ src }) => <GpxTrack url={gpxTracks[src]} />
+  BoundGpxTrack.propTypes = {
+    src: PropTypes.string.isRequired,
+  }
+
   const bindImages = (Component, data) => {
     const images = Object.assign(
       {},
@@ -84,19 +101,20 @@ const Content = ({ mdx, nextPath }) => {
 
   const mdxComponents = {
     Gallery,
+    GpxTrack: BoundGpxTrack,
     Nextday: BoundNextday,
     Pano: bindImages(Pano, mdx.panoramas),
     Rimg: bindImages(Rimg, mdx.images),
   }
-
-  console.log(mdx)
 
   return (
     <StyleWrapper>
       <MDXProvider components={mdxComponents}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
-      {mdx.climbs && <ClimbingLog climbs={mdx.climbs.childClimbsYaml} />}
+      {mdx.climbs.length > 0 && (
+        <ClimbingLog climbs={mdx.climbs[0].childClimbsYaml} />
+      )}
     </StyleWrapper>
   )
 }

@@ -26,27 +26,6 @@ const resolveSinglePostFile = relativeDirectory => (source, args, context) => {
   })
 }
 
-const resolvePostFiles = relativeDirectory => async (source, args, context) => {
-  const evaluatedDirectory =
-    relativeDirectory instanceof Function
-      ? relativeDirectory(source, args, context)
-      : relativeDirectory
-  return (
-    (await context.nodeModel.runQuery({
-      type: `File`,
-      query: {
-        filter: {
-          absolutePath: {
-            glob: `${path.dirname(
-              source.fileAbsolutePath
-            )}/${evaluatedDirectory}/*`,
-          },
-        },
-      },
-    })) || []
-  )
-}
-
 exports.createResolvers = ({ createResolvers }) => {
   createResolvers({
     Mdx: {
@@ -56,17 +35,39 @@ exports.createResolvers = ({ createResolvers }) => {
           source => `images/${source.frontmatter.background}`
         ),
       },
-      climbs: {
-        type: `File`,
-        resolve: resolveSinglePostFile("climbs.yml"),
-      },
-      images: {
+      resources: {
         type: `[File!]!`,
-        resolve: resolvePostFiles("images"),
-      },
-      panoramas: {
-        type: `[File!]!`,
-        resolve: resolvePostFiles("pano"),
+        args: {
+          filter: `FileFilterInput`,
+          limit: `Int`,
+          skip: `Int`,
+          sort: `FileSortInput`,
+        },
+        resolve: async (source, args, context) => {
+          const pathPrefix = path.basename(
+            path.dirname(source.fileAbsolutePath)
+          )
+          const relativePathFilters =
+            (args.filter && args.filter.relativePath) || {}
+          return (
+            (await context.nodeModel.runQuery({
+              type: `File`,
+              query: {
+                ...args,
+                filter: {
+                  ...args.filter,
+                  relativePath: Object.assign(
+                    { glob: `${pathPrefix}/**` },
+                    ...Object.entries(relativePathFilters).map(([k, v]) => ({
+                      [k]: `${pathPrefix}/${v}`,
+                    }))
+                  ),
+                  sourceInstanceName: { eq: "posts" },
+                },
+              },
+            })) || []
+          )
+        },
       },
       path: {
         type: `String!`,
