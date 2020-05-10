@@ -12,6 +12,7 @@ import Loc from "./Loc"
 import Nextday from "./Nextday"
 import Pano from "./Pano"
 import Rimg from "./Rimg"
+import Travel from "./Travel"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
@@ -107,6 +108,7 @@ const Content = ({ mdx, nextPath }) => {
     Nextday: BoundNextday,
     Pano: bindImages(Pano, mdx.panoramas),
     Rimg: bindImages(Rimg, mdx.images),
+    Travel,
   }
 
   return (
