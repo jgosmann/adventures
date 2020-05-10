@@ -81,6 +81,7 @@ const IndexPage = ({
     <main css={{ flexGrow: 1, "a:hover": { color: colors.accent } }}>
       <Map
         bounds={nodes.map(node => getNodeLatLng(node))}
+        padding={[50, 50]}
         scrollWheelZoom={true}
         dragging={true}
       >
