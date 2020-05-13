@@ -168,3 +168,18 @@ exports.createPages = async args => {
   createYearlyIndices(args)
   createPostPages(args)
 }
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-leaflet-geodesic/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
