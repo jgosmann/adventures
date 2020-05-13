@@ -23,6 +23,56 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            output: "/index.xml",
+            title: "Jan's outdoor adventures",
+            query: `
+              {
+                allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+                  nodes {
+                    path
+                    excerpt(pruneLength: 500)
+                    frontmatter {
+                      date
+                      map
+                      title
+                    }
+                    background {
+                      childImageSharp {
+                        resize(width: 800) {
+                          src
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            custom_namespaces: {
+              og: "http://ogp.me/ns#",
+            },
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.nodes.map(node => {
+                const latLong = JSON.parse(`[${node.frontmatter.map}]`)
+                return {
+                  ...node.frontmatter,
+                  url: site.siteMetadata.siteUrl + node.path + "/",
+                  description: node.excerpt,
+                  lat: latLong[0],
+                  long: latLong[1],
+                  custom_elements: [
+                    { "og:image": node.background.childImageSharp.resize.src },
+                  ],
+                }
+              }),
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
