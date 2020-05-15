@@ -26,5 +26,6 @@ export const fontStyle = `
 
   body {
     font-family: "Lato", sans-serif;
+    font-size: 16px;
   }
 `

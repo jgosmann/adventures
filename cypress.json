@@ -1,4 +1,4 @@
 {
-  "baseUrl": "http://localhost:1313",
+  "baseUrl": "http://localhost:8000",
   "blacklistHosts": ["*google.com"]
 }

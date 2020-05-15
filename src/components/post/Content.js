@@ -1,4 +1,3 @@
-import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
@@ -6,6 +5,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import ClimbingLog from "./ClimbingLog"
+import ContentStyleWrapper from "../ContentStyleWrapper"
 import Gallery from "./Gallery"
 import GpxTrack from "./GpxTrack"
 import Loc from "./Loc"
@@ -43,40 +43,6 @@ export const dataFragment = graphql`
       }
       name
       relativePath
-    }
-  }
-`
-
-const StyleWrapper = styled("div")`
-  h1,
-  ol,
-  p,
-  ul,
-  h1,
-  h2,
-  h3 {
-    width: 600px;
-    max-width: calc(100% - 32px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  p {
-    margin-top: 32px;
-    margin-bottom: 32px;
-
-    &:empty {
-      margin: 0;
-    }
-  }
-
-  ul {
-    padding: 0 20px;
-    box-sizing: border-box;
-
-    ul {
-      margin: 0;
-      max-width: calc(100% - 40px);
     }
   }
 `
@@ -133,14 +99,14 @@ const Content = ({ mdx, nextPath }) => {
   }
 
   return (
-    <StyleWrapper>
+    <ContentStyleWrapper>
       <MDXProvider components={mdxComponents}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
       {mdx.climbs.length > 0 && (
         <ClimbingLog climbs={mdx.climbs[0].childClimbsYaml} />
       )}
-    </StyleWrapper>
+    </ContentStyleWrapper>
   )
 }
 
