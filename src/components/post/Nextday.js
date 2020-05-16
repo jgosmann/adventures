@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import { defaultShadedButton } from "../../styles"
+import { primaryShadedButton } from "../../styles"
 
 const Nextday = ({ path }) => (
   <p css={{ textAlign: "right" }}>
-    <Link to={path} css={defaultShadedButton}>
+    <Link to={path} css={primaryShadedButton}>
       Next day <FontAwesomeIcon icon={faChevronRight} />
     </Link>
   </p>

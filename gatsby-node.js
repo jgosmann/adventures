@@ -69,21 +69,18 @@ exports.createResolvers = ({ createResolvers }) => {
           )
         },
       },
-      path: {
+    },
+    File: {
+      pagePath: {
         type: `String!`,
-        resolve: async (source, args, context) =>
-          "/posts/" +
-          (
-            await context.nodeModel.runQuery({
-              type: `File`,
-              firstOnly: true,
-              query: {
-                filter: {
-                  absolutePath: { eq: source.fileAbsolutePath },
-                },
-              },
-            })
-          ).relativeDirectory,
+        resolve: source => {
+          const parts = source.name.split(".")
+          const name = parts.length > 1 ? parts.slice(0, -1).join("") : parts[0]
+          const lang = parts.length > 1 ? "/" + parts[parts.length - 1] : ""
+          return `${lang}/${source.sourceInstanceName}/${
+            source.relativeDirectory
+          }${name === "index" ? "" : name}`
+        },
       },
     },
   })
@@ -97,19 +94,24 @@ const createYearlyIndices = async ({ actions, graphql }) => {
   const posts = (
     await graphql(`
       query {
-        allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+        allFile(
+          filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
+          sort: { fields: childMdx___frontmatter___date, order: DESC }
+        ) {
           nodes {
-            id
-            frontmatter {
-              date
+            childMdx {
+              id
+              frontmatter {
+                date
+              }
             }
           }
         }
       }
     `)
-  ).data.allMdx.nodes.map(post => ({
-    id: post.id,
-    date: new Date(post.frontmatter.date),
+  ).data.allFile.nodes.map(post => ({
+    id: post.childMdx.id,
+    date: new Date(post.childMdx.frontmatter.date),
   }))
 
   let start = 0
@@ -136,29 +138,67 @@ const createPostPages = async ({ actions, graphql }) => {
 
   const posts = (
     await graphql(`
-      query {
-        allMdx(sort: { fields: frontmatter___date, order: ASC }) {
+      {
+        allFile(
+          filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
+          sort: { fields: childMdx___frontmatter___date, order: ASC }
+        ) {
           edges {
             node {
-              id
-              path
+              pagePath
+              childMdx {
+                id
+              }
             }
             next {
-              path
+              pagePath
             }
           }
         }
       }
     `)
-  ).data.allMdx.edges
+  ).data.allFile.edges
 
   posts.forEach(post =>
     createPage({
-      path: post.node.path,
+      path: post.node.pagePath,
       component: postTemplate,
       context: {
-        postId: post.node.id,
-        nextPath: post.next ? post.next.path : null,
+        postId: post.node.childMdx.id,
+        nextPath: post.next ? post.next.pagePath : null,
+      },
+    })
+  )
+}
+
+const createLegalPages = async ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const legalTemplate = path.resolve("src/templates/legal.js")
+
+  const legalPages = (
+    await graphql(`
+      {
+        allFile(
+          filter: { ext: { eq: ".mdx" }, sourceInstanceName: { eq: "legal" } }
+        ) {
+          nodes {
+            pagePath
+            childMdx {
+              id
+            }
+          }
+        }
+      }
+    `)
+  ).data.allFile.nodes
+
+  legalPages.forEach(page =>
+    createPage({
+      path: page.pagePath,
+      component: legalTemplate,
+      context: {
+        pageId: page.childMdx.id,
       },
     })
   )
@@ -167,6 +207,7 @@ const createPostPages = async ({ actions, graphql }) => {
 exports.createPages = async args => {
   createYearlyIndices(args)
   createPostPages(args)
+  createLegalPages(args)
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {

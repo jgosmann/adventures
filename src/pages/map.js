@@ -21,12 +21,16 @@ import "react-leaflet-markercluster/dist/styles.min.css"
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___publishdate, order: DESC }) {
+    allFile(
+      filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
+    ) {
       nodes {
-        id
-        frontmatter {
-          draft
-          map
+        childMdx {
+          id
+          frontmatter {
+            draft
+            map
+          }
         }
         ...PostPreview_data
       }
@@ -70,7 +74,7 @@ const getNodeLatLng = node => JSON.parse(`[${node.frontmatter.map}]`)
 
 const IndexPage = ({
   data: {
-    allMdx: { nodes },
+    allFile: { nodes },
   },
   location: { pathname },
 }) => (
@@ -80,14 +84,14 @@ const IndexPage = ({
     <IndexNavigation />
     <main css={{ flexGrow: 1, "a:hover": { color: colors.accent } }}>
       <Map
-        bounds={nodes.map(node => getNodeLatLng(node))}
+        bounds={nodes.map(node => getNodeLatLng(node.childMdx))}
         padding={[50, 50]}
         scrollWheelZoom={true}
         dragging={true}
       >
         <MarkerClusterGroup>
           {nodes.map(node => (
-            <Marker key={node.id} position={getNodeLatLng(node)}>
+            <Marker key={node.id} position={getNodeLatLng(node.childMdx)}>
               <Popup css={popupStyle}>
                 <PostPreview data={node} />
               </Popup>

@@ -1,7 +1,5 @@
 import styled from "@emotion/styled"
 
-import colors from "../colors"
-
 const ContentStyleWrapper = styled("div")`
   margin-top: 32px;
 
@@ -29,21 +27,6 @@ const ContentStyleWrapper = styled("div")`
       margin: 0;
       max-width: calc(100vw - 40px);
     }
-  }
-
-  a {
-    color: ${colors.accent};
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: ${colors.highlight};
-  }
-
-  iframe {
-    margin: 0;
-    width: auto;
-    height: auto;
   }
 `
 

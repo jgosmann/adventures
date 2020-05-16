@@ -1,5 +1,7 @@
 import { withPrefix } from "gatsby"
 
+import colors from "../../colors"
+
 export const fontStyle = `
   @font-face {
     font-family: "Lato";
@@ -27,5 +29,14 @@ export const fontStyle = `
   body {
     font-family: "Lato", sans-serif;
     font-size: 16px;
+  }
+
+  a {
+    color: ${colors.accent};
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: ${colors.highlight};
   }
 `

@@ -59,13 +59,17 @@ export const shadedButton = ({ mainColor, highlight, shade }) => css`
     transition: 0s;
     background: ${mainColor};
   }
-
-  color: #fff;
-  text-decoration: none;
-
-  &:hover {
-    color: #fff;
-  }
 `
 
-export const defaultShadedButton = shadedButton(colors.button)
+export const primaryShadedButton = css([
+  shadedButton(colors.button.primary),
+  css`
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  `,
+])
+export const defaultShadedButton = shadedButton(colors.button.default)

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useRef } from "react"
 
-import { defaultShadedButton } from "../../styles"
+import { primaryShadedButton } from "../../styles"
 import ProcessingStateIcon from "./ProcessingStateIcon"
 import VCollapsible from "./VCollapsible"
 
@@ -56,7 +56,7 @@ function EmailSubmissionForm({
         type="submit"
         disabled={disabled}
         css={[
-          defaultShadedButton,
+          primaryShadedButton,
           {
             borderRadius: "0 4px 4px 0",
             boxShadow: "-1px 0 1px rgba(0, 0, 0, 0.5)",

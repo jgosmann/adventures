@@ -33,6 +33,7 @@ const NavLink = styled(props => <Link activeClassName="active" {...props} />)`
   &:hover,
   &.active {
     border-color: ${colors.accent};
+    color: #000;
   }
 `
 

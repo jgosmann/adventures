@@ -25,10 +25,10 @@ const LegalLink = styled(Link)`
 const LegalLinks = () => (
   <ul css={[flexList, style]}>
     <li>
-      <LegalLink to="">Privacy policy</LegalLink>
+      <LegalLink to="/legal/privacy">Privacy policy</LegalLink>
     </li>
     <li>
-      <LegalLink to="">Legal disclosure</LegalLink>
+      <LegalLink to="/legal/disclosure">Legal disclosure</LegalLink>
     </li>
   </ul>
 )

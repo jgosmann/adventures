@@ -10,14 +10,20 @@ import "normalize.css"
 
 export const pageQuery = graphql`
   query($postIds: [String!]) {
-    allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: { id: { in: $postIds } }
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "posts" }
+        ext: { eq: ".mdx" }
+        childMdx: { id: { in: $postIds } }
+      }
+      sort: { fields: childMdx___frontmatter___date, order: DESC }
     ) {
       nodes {
-        id
-        frontmatter {
-          draft
+        childMdx {
+          id
+          frontmatter {
+            draft
+          }
         }
         ...PostPreview_data
       }
@@ -54,7 +60,7 @@ const listItemStyle = {
 
 const IndexPage = ({
   data: {
-    allMdx: { nodes },
+    allFile: { nodes },
   },
   location: { pathname },
 }) => (
@@ -64,7 +70,7 @@ const IndexPage = ({
     <main>
       <ol css={listStyle}>
         {nodes.map(post => (
-          <li key={post.id} css={listItemStyle}>
+          <li key={post.childMdx.id} css={listItemStyle}>
             <PostPreview data={post} />
           </li>
         ))}
