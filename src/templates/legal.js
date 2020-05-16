@@ -18,6 +18,9 @@ export const pageQuery = graphql`
   query($pageId: String!) {
     mdx(id: { eq: $pageId }) {
       body
+      frontmatter {
+        title
+      }
       ...Content_data
     }
   }
@@ -33,7 +36,7 @@ const mdxComponents = {
 
 const PostPage = ({ data: { mdx }, location: { pathname } }) => (
   <>
-    <HtmlHead path={pathname} language="en" />
+    <HtmlHead path={pathname} title={mdx.frontmatter.title} language="en" />
     <IndexNavigation />
     <main css={{ height: "100%" }}>
       <ContentStyleWrapper>

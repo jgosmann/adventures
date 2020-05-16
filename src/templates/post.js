@@ -14,6 +14,17 @@ import "normalize.css"
 export const pageQuery = graphql`
   query($postId: String!) {
     mdx(id: { eq: $postId }) {
+      background {
+        childImageSharp {
+          resize(width: 800) {
+            src
+          }
+        }
+      }
+      excerpt(pruneLength: 500)
+      frontmatter {
+        title
+      }
       body
       ...Titlescreen_data
       ...Content_data
@@ -21,7 +32,6 @@ export const pageQuery = graphql`
   }
 `
 
-// FIXME: open graph meta tags
 // TODO: extract layout component
 const PostPage = ({
   data: { mdx },
@@ -29,7 +39,13 @@ const PostPage = ({
   pageContext: { nextPath },
 }) => (
   <>
-    <HtmlHead path={pathname} language="en" />
+    <HtmlHead
+      path={pathname}
+      description={mdx.excerpt}
+      title={mdx.frontmatter.title}
+      imageSrc={mdx.background.childImageSharp.resize.src}
+      language="en"
+    />
     <Global styles={fullHeight} />
     <main css={{ height: "100%" }}>
       <article css={{ height: "100%" }}>

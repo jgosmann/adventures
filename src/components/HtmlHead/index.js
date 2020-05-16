@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 
 import { fontStyle } from "./font"
 
-const HtmlHead = ({ title, language, path }) => {
+const HtmlHead = ({ description, imageSrc, title, language, path }) => {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -19,6 +19,7 @@ const HtmlHead = ({ title, language, path }) => {
     }
   `)
 
+  const completeTitle = (title ? `${title} | ` : "") + site.siteMetadata.title
   return (
     <Helmet
       defaultTitle={site.siteMetadata.title}
@@ -28,7 +29,7 @@ const HtmlHead = ({ title, language, path }) => {
       meta={[
         {
           name: `description`,
-          content: site.siteMetadata.description,
+          content: description || site.siteMetadata.description,
         },
         {
           name: `og:url`,
@@ -40,12 +41,20 @@ const HtmlHead = ({ title, language, path }) => {
         },
         {
           name: `og:title`,
-          content: title || site.siteMetadata.title,
+          content: completeTitle,
         },
         {
           name: `og:description`,
-          content: site.siteMetadata.description,
+          content: description || site.siteMetadata.description,
         },
+        ...(imageSrc
+          ? [
+              {
+                name: `og:image`,
+                content: `${site.siteMetadata.siteUrl}${imageSrc}`,
+              },
+            ]
+          : []),
       ]}
     >
       <style type="text/css">{fontStyle}</style>
@@ -54,7 +63,9 @@ const HtmlHead = ({ title, language, path }) => {
 }
 
 HtmlHead.propTypes = {
+  description: PropTypes.string,
   language: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
   path: PropTypes.string.isRequired,
   title: PropTypes.string,
 }
