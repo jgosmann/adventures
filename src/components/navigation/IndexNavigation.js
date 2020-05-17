@@ -1,14 +1,12 @@
 import { css } from "@emotion/core"
-import styled from "@emotion/styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBell } from "@fortawesome/free-solid-svg-icons"
-import { faGlobeEurope } from "@fortawesome/free-solid-svg-icons"
-import { faTh } from "@fortawesome/free-solid-svg-icons"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { faBell, faGlobeEurope, faTh } from "@fortawesome/free-solid-svg-icons"
+import PropTypes from "prop-types"
 import React from "react"
 
 import LegalLinks from "./LegalLinks"
-import colors from "../../colors"
+import NavLink from "./NavLink"
+import YearSelector from "./YearSelector"
 import { flexList } from "../../styles"
 
 const navStyle = css({
@@ -20,40 +18,7 @@ const navStyle = css({
   alignItems: "stretch",
 })
 
-const NavLink = styled(props => <Link activeClassName="active" {...props} />)`
-  transition: 0.2s;
-  display: block;
-  color: #000;
-  text-decoration: none;
-  padding: 8px 8px 4px;
-  border-bottom: 4px solid rgba(255, 255, 255, 0);
-  height: 100%;
-  box-sizing: border-box;
-
-  &:hover,
-  &.active {
-    border-color: ${colors.accent};
-    color: #000;
-  }
-`
-
-const IndexNavigation = () => {
-  const yearIndices = useStaticQuery(graphql`
-    query {
-      allSitePage(
-        filter: { path: { regex: "/^\\\\/year[/].*$/" } }
-        sort: { fields: context___year, order: DESC }
-      ) {
-        nodes {
-          path
-          context {
-            year
-          }
-        }
-      }
-    }
-  `)
-
+const IndexNavigation = ({ path }) => {
   return (
     <nav css={navStyle}>
       <ul css={flexList}>
@@ -70,17 +35,17 @@ const IndexNavigation = () => {
             <FontAwesomeIcon icon={faGlobeEurope} /> Map
           </NavLink>
         </li>
+        <li>
+          <YearSelector path={path} />
+        </li>
       </ul>
-      <ol css={flexList}>
-        {yearIndices.allSitePage.nodes.map(index => (
-          <li key={index.context.year}>
-            <NavLink to={index.path}>{index.context.year}</NavLink>
-          </li>
-        ))}
-      </ol>
       <LegalLinks />
     </nav>
   )
+}
+
+IndexNavigation.propTypes = {
+  path: PropTypes.string,
 }
 
 export default IndexNavigation

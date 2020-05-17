@@ -66,7 +66,6 @@ const IndexPage = ({
 }) => (
   <>
     <HtmlHead path={pathname} language="en" />
-    <IndexNavigation />
     <main>
       <ol css={listStyle}>
         {nodes.map(post => (
@@ -76,6 +75,9 @@ const IndexPage = ({
         ))}
       </ol>
     </main>
+    <div css={{ position: "fixed", top: 0, left: 0, width: "100%" }}>
+      <IndexNavigation path={pathname} />
+    </div>
   </>
 )
 
