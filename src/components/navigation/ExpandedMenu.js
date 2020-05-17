@@ -22,6 +22,7 @@ const ExpandedMenu = ({ expanded, onCollapse, path }) => (
       padding: "0 8px 0 0",
       transition: "opacity 0.2s ease-out",
       zIndex: 1,
+      fontSize: 28,
     }}
     style={expanded ? { opacity: 1 } : { opacity: 0, pointerEvents: "none" }}
     className={expanded ? "expanded" : undefined}
@@ -50,7 +51,6 @@ const ExpandedMenu = ({ expanded, onCollapse, path }) => (
         marginBottom: 4,
         display: "flex",
         flexDirection: "row",
-        fontSize: "0.8em",
         justifyContent: "center",
         width: "100vw",
         li: {

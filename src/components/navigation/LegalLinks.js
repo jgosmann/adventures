@@ -15,7 +15,7 @@ const LegalLink = styled(Link)`
 `
 
 const LegalLinks = props => (
-  <ul css={flexList} {...props}>
+  <ul css={[flexList, { fontSize: "0.7em" }]} {...props}>
     <li>
       <LegalLink to="/legal/privacy">Privacy policy</LegalLink>
     </li>

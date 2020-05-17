@@ -19,6 +19,10 @@ const CollapsedMenu = ({ expanded, onExpand, path }) => (
       padding: "0 8px",
       borderBottom: "1px solid #ccc",
       backgroundColor: "rgba(255, 255, 255, 0.9)",
+      fontSize: 28,
+      [`@media (min-width: ${minFullWidth}px)`]: {
+        fontSize: "1em",
+      },
     }}
   >
     <div>
@@ -32,7 +36,6 @@ const CollapsedMenu = ({ expanded, onExpand, path }) => (
       css={{
         flexDirection: "column",
         justifyContent: "space-evenly",
-        fontSize: "0.75em",
         textAlign: "right",
         display: "none",
         [`@media (min-width: ${minFullWidth}px)`]: {
