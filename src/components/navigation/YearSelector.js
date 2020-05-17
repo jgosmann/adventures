@@ -98,6 +98,8 @@ const YearSelector = ({ path }) => {
       css={{ position: "relative", padding: 0 }}
       className={yearMatch ? "active" : undefined}
       onClick={toggleActive}
+      onBlur={() => setActive(false)}
+      onFocus={() => setActive(true)}
     >
       <LabelLine>{selectedText}</LabelLine>
       <DropDown style={{ opacity: active ? 1 : 0 }}>
