@@ -6,7 +6,7 @@ import React from "react"
 import ContentStyleWrapper from "../../components/ContentStyleWrapper"
 import HtmlHead from "../../components/HtmlHead"
 import IconBullet from "../../components/IconBullet"
-import IndexNavigation from "../../components/navigation/IndexNavigation"
+import Navigation from "../../components/navigation"
 import SubscribeForm from "../../components/doveseed/SubscribeForm"
 
 import "normalize.css"
@@ -14,8 +14,8 @@ import "normalize.css"
 const SubscribePage = () => (
   <>
     <HtmlHead path="/subscribe" language="en" />
-    <IndexNavigation />
-    <main>
+    <Navigation fixed />
+    <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>
         <h1>How to subscribe to the blog</h1>
         <IconBullet icon={faEnvelopeSquare}>

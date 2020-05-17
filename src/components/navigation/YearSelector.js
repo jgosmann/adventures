@@ -7,8 +7,10 @@ import PropTypes from "prop-types"
 import React, { useState } from "react"
 
 import colors from "../../colors"
+import Label from "./Label"
 import NavLink from "./NavLink"
 import { flexList } from "../../styles"
+import { minFullWidth } from "./sizes"
 
 const LabelLine = ({ children, ...props }) => (
   <div
@@ -18,8 +20,9 @@ const LabelLine = ({ children, ...props }) => (
     }}
     {...props}
   >
-    <FontAwesomeIcon icon={faCalendarAlt} /> {children}{" "}
-    <FontAwesomeIcon icon={faCaretDown} />
+    <FontAwesomeIcon icon={faCalendarAlt} />
+    <Label>{children}</Label>
+    <FontAwesomeIcon icon={faCaretDown} css={{ marginLeft: 4 }} />
   </div>
 )
 
@@ -31,6 +34,7 @@ const DropDown = styled("div")`
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   min-width: 100%;
   background-color: #fff;
   border-radius: 4px;
@@ -52,7 +56,10 @@ const Option = styled(props => (
     <Link activeClassName="active" {...props} />
   </li>
 ))`
-  padding: 4px 4px 4px 24px;
+  padding: 4px 8px 4px 4px;
+  @media (min-width: ${minFullWidth}px) {
+    padding-left: 24px;
+  }
   color: #000;
   width: 100%;
   height: 100%;
@@ -67,7 +74,7 @@ const Option = styled(props => (
   }
 `
 
-const YearSelector = ({ path }) => {
+const YearSelector = ({ path, ...props }) => {
   const [active, setActive] = useState(false)
 
   const yearIndices = useStaticQuery(graphql`
@@ -100,9 +107,12 @@ const YearSelector = ({ path }) => {
       onClick={toggleActive}
       onBlur={() => setActive(false)}
       onFocus={() => setActive(true)}
+      {...props}
     >
       <LabelLine>{selectedText}</LabelLine>
-      <DropDown style={{ opacity: active ? 1 : 0 }}>
+      <DropDown
+        style={active ? { opacity: 1 } : { opacity: 0, pointerEvents: "none" }}
+      >
         <LabelLine>Pick a year</LabelLine>
         <div css={{ overflow: "hidden" }}>
           <Options
@@ -111,7 +121,11 @@ const YearSelector = ({ path }) => {
             }}
           >
             {yearIndices.allSitePage.nodes.map(index => (
-              <Option key={index.context.year} to={index.path}>
+              <Option
+                key={index.context.year}
+                to={index.path}
+                aria-label={`Posts for the year ${index.context.year}`}
+              >
                 {index.context.year}
               </Option>
             ))}

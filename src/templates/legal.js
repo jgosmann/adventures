@@ -10,7 +10,7 @@ import CryptedPhone from "../components/crypted/Phone"
 import FlagDe from "../components/flags/FlagDe"
 import FlagSplitEn from "../components/flags/FlagSplitEn"
 import HtmlHead from "../components/HtmlHead"
-import IndexNavigation from "../components/navigation/IndexNavigation"
+import Navigation from "../components/navigation"
 
 import "normalize.css"
 
@@ -37,8 +37,8 @@ const mdxComponents = {
 const PostPage = ({ data: { mdx }, location: { pathname } }) => (
   <>
     <HtmlHead path={pathname} title={mdx.frontmatter.title} language="en" />
-    <IndexNavigation />
-    <main css={{ height: "100%" }}>
+    <Navigation fixed />
+    <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{mdx.body}</MDXRenderer>

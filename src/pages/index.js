@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import HtmlHead from "../components/HtmlHead"
-import IndexNavigation from "../components/navigation/IndexNavigation"
+import Navigation from "../components/navigation"
 import PostPreview from "../components/PostPreview"
 
 import "normalize.css"
@@ -66,7 +66,8 @@ const IndexPage = ({
 }) => (
   <>
     <HtmlHead path={pathname} language="en" />
-    <main>
+    <Navigation path={pathname} fixed />
+    <main css={{ marginTop: 48 }}>
       <ol css={listStyle}>
         {nodes.map(post => (
           <li key={post.childMdx.id} css={listItemStyle}>
@@ -75,9 +76,6 @@ const IndexPage = ({
         ))}
       </ol>
     </main>
-    <div css={{ position: "fixed", top: 0, left: 0, width: "100%" }}>
-      <IndexNavigation path={pathname} />
-    </div>
   </>
 )
 

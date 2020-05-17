@@ -5,7 +5,7 @@ import React from "react"
 
 import Content from "../components/post/Content"
 import HtmlHead from "../components/HtmlHead"
-import IndexNavigation from "../components/navigation/IndexNavigation"
+import Navigation from "../components/navigation"
 import { fullHeight } from "../styles"
 import Titlescreen from "../components/post/Titlescreen"
 
@@ -47,15 +47,13 @@ const PostPage = ({
       language="en"
     />
     <Global styles={fullHeight} />
-    <main css={{ height: "100%" }}>
+    <Navigation fixed />
+    <main css={{ height: "100%", position: "relative", zIndex: 0 }}>
       <article css={{ height: "100%" }}>
         <Titlescreen {...mdx} />
         <Content mdx={mdx} nextPath={nextPath} />
       </article>
     </main>
-    <div css={{ position: "absolute", top: 0, left: 0, width: "100%" }}>
-      <IndexNavigation />
-    </div>
   </>
 )
 

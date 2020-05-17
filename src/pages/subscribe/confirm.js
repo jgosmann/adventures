@@ -3,15 +3,15 @@ import React from "react"
 import ConfirmationButton from "../../components/doveseed/ConfirmationButton"
 import ContentStyleWrapper from "../../components/ContentStyleWrapper"
 import HtmlHead from "../../components/HtmlHead"
-import IndexNavigation from "../../components/navigation/IndexNavigation"
+import Navigation from "../../components/navigation"
 
 import "normalize.css"
 
 const ConfirmPage = () => (
   <>
     <HtmlHead path="/subscribe" language="en" />
-    <IndexNavigation />
-    <main>
+    <Navigation fixed />
+    <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>
         <h1>Confirm subscription</h1>
         <p>

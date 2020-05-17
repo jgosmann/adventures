@@ -7,7 +7,7 @@ import MarkerClusterGroup from "react-leaflet-markercluster"
 
 import colors from "../colors"
 import HtmlHead from "../components/HtmlHead"
-import IndexNavigation from "../components/navigation/IndexNavigation"
+import Navigation from "../components/navigation"
 import Map from "../components/leaflet/Map"
 import Marker from "../components/leaflet/Marker"
 import PostPreview, {
@@ -81,8 +81,15 @@ const IndexPage = ({
   <div css={{ display: "flex", flexDirection: "column", height: "100%" }}>
     <HtmlHead path={pathname} language="en" />
     <Global styles={fullHeight} />
-    <IndexNavigation />
-    <main css={{ flexGrow: 1, "a:hover": { color: colors.accent } }}>
+    <Navigation />
+    <main
+      css={{
+        flexGrow: 1,
+        "a:hover": { color: colors.accent },
+        position: "relative",
+        zIndex: 0,
+      }}
+    >
       <Map
         bounds={nodes.map(node => getNodeLatLng(node.childMdx))}
         padding={[50, 50]}
