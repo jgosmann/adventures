@@ -1,9 +1,10 @@
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
-import React from "react"
+import React, { useContext } from "react"
 
 import colors from "../../colors"
+import MenuContext from "./MenuContext"
 
 const marker = ({ markerSide }) =>
   ({
@@ -17,11 +18,19 @@ const marker = ({ markerSide }) =>
     `,
   }[markerSide || "bottom"])
 
-const NavLink = styled(props => <Link activeClassName="active" {...props} />, {
-  shouldForwardProp: prop => {
-    return prop !== "as"
+const NavLink = styled(
+  props => {
+    const { active } = useContext(MenuContext)
+    return (
+      <Link activeClassName="active" tabIndex={active ? 0 : -1} {...props} />
+    )
   },
-})`
+  {
+    shouldForwardProp: prop => {
+      return prop !== "as"
+    },
+  }
+)`
   transition: 0.2s;
   display: block;
   color: #000;

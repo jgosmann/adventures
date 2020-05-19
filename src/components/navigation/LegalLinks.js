@@ -1,11 +1,15 @@
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
-import React from "react"
+import React, { useContext } from "react"
 
 import colors from "../../colors"
 import { flexList } from "../../styles"
+import MenuContext from "./MenuContext"
 
-const LegalLink = styled(Link)`
+const LegalLink = styled(props => {
+  const { active } = useContext(MenuContext)
+  return <Link tabIndex={active ? 0 : -1} {...props} />
+})`
   text-decoration: none;
   color: #888;
 

@@ -1,13 +1,13 @@
-import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt, faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 
 import colors from "../../colors"
 import Label from "./Label"
+import MenuContext from "./MenuContext"
 import NavLink from "./NavLink"
 import { flexList } from "../../styles"
 import { minFullWidth } from "./sizes"
@@ -51,11 +51,14 @@ const Options = styled("ol")`
   transition: 0.2s ease-out;
 `
 
-const Option = styled(props => (
-  <li>
-    <Link activeClassName="active" {...props} />
-  </li>
-))`
+const Option = styled(props => {
+  const { active } = useContext(MenuContext)
+  return (
+    <li>
+      <Link activeClassName="active" tabIndex={active ? 0 : -1} {...props} />
+    </li>
+  )
+})`
   padding: 4px 8px 4px 4px;
   @media (min-width: ${minFullWidth}px) {
     padding-left: 24px;

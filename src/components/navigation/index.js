@@ -3,6 +3,7 @@ import React, { useState } from "react"
 
 import CollapsedMenu from "./CollapsedMenu"
 import ExpandedMenu from "./ExpandedMenu"
+import MenuContext from "./MenuContext"
 
 const Navigation = ({ fixed, path }) => {
   const [expanded, setExpanded] = useState(false)
@@ -21,16 +22,20 @@ const Navigation = ({ fixed, path }) => {
           : undefined
       }
     >
-      <CollapsedMenu
-        expanded={expanded}
-        onExpand={() => setExpanded(true)}
-        path={path}
-      />
-      <ExpandedMenu
-        expanded={expanded}
-        onCollapse={() => setExpanded(false)}
-        path={path}
-      />
+      <MenuContext.Provider value={{ active: !expanded }}>
+        <CollapsedMenu
+          expanded={expanded}
+          onExpand={() => setExpanded(true)}
+          path={path}
+        />
+      </MenuContext.Provider>
+      <MenuContext.Provider value={{ active: expanded }}>
+        <ExpandedMenu
+          expanded={expanded}
+          onCollapse={() => setExpanded(false)}
+          path={path}
+        />
+      </MenuContext.Provider>
     </div>
   )
 }
