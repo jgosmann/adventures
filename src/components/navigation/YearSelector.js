@@ -15,8 +15,11 @@ import { minFullWidth } from "./sizes"
 const LabelLine = ({ children, ...props }) => (
   <div
     css={{
-      padding: "8px 8px 4px",
       whiteSpace: "nowrap",
+      padding: "12px 12px 8px",
+      [`@media (min-width: ${minFullWidth}px)`]: {
+        padding: "8px 8px 4px",
+      },
     }}
     {...props}
   >
@@ -59,9 +62,9 @@ const Option = styled(props => {
     </li>
   )
 })`
-  padding: 4px 8px 4px 4px;
+  padding: 8px 12px 8px 8px;
   @media (min-width: ${minFullWidth}px) {
-    padding-left: 24px;
+    padding: 4px 8px 4px 24px;
   }
   color: #000;
   width: 100%;
@@ -105,7 +108,7 @@ const YearSelector = ({ path, ...props }) => {
   return (
     <NavLink
       as="div"
-      css={{ position: "relative", padding: 0 }}
+      css={{ position: "relative", padding: 0, "@media": { padding: 0 } }}
       className={yearMatch ? "active" : undefined}
       onClick={toggleActive}
       onBlur={() => setActive(false)}

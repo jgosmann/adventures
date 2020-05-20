@@ -1,16 +1,21 @@
 import styled from "@emotion/styled"
-import React, { useContext } from "react"
+import React from "react"
 
-import MenuContext from "./MenuContext"
+import { minFullWidth } from "./sizes"
 
-const MenuButton = styled(props => {
-  const { active } = useContext(MenuContext)
-  return <button tabIndex={active ? 0 : -1} {...props} />
-})`
+const MenuButton = styled("button")`
+  position: absolute;
+  top: 0;
+  right: 0;
   background: none;
-  padding: 8px;
   border: none;
   cursor: pointer;
+  z-index: 2;
+  padding: 12px 20px;
+
+  @media (min-width: ${minFullWidth}px) {
+    display: none;
+  }
 `
 
 export default MenuButton

@@ -5,16 +5,24 @@ import React, { useContext } from "react"
 
 import colors from "../../colors"
 import MenuContext from "./MenuContext"
+import { minFullWidth } from "./sizes"
 
 const marker = ({ markerSide }) =>
   ({
     bottom: css`
-      padding: 8px 8px 4px;
       border-bottom: 4px solid rgba(255, 255, 255, 0);
+
+      padding: 12px 12px 8px;
+      @media (min-width: ${minFullWidth}px) {
+        padding: 8px 8px 4px;
+      }
     `,
     left: css`
-      padding: 8px;
       border-left: 4px solid rgba(255, 255, 255, 0);
+      padding: 12px;
+      @media (min-width: ${minFullWidth}px) {
+        padding: 8px;
+      }
     `,
   }[markerSide || "bottom"])
 

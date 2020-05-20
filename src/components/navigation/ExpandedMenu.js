@@ -1,11 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTimes } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 import React from "react"
 
 import LegalLinks from "./LegalLinks"
 import MainLinks from "./MainLinks"
-import MenuButton from "./MenuButton"
 
 const ExpandedMenu = ({ expanded, onCollapse, path }) => (
   <nav
@@ -22,29 +19,15 @@ const ExpandedMenu = ({ expanded, onCollapse, path }) => (
       padding: "0 8px 0 0",
       transition: "opacity 0.2s ease-out",
       zIndex: 1,
-      fontSize: 28,
     }}
     style={expanded ? { opacity: 1 } : { opacity: 0, pointerEvents: "none" }}
     className={expanded ? "expanded" : undefined}
   >
-    <div
-      css={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-      }}
-    >
-      <MainLinks
-        path={path}
-        orientation="column"
-        style={expanded ? {} : { transform: "scaleY(0)" }}
-      />
-      <div>
-        <MenuButton title="Collapse menu" onClick={onCollapse}>
-          <FontAwesomeIcon icon={faTimes} />
-        </MenuButton>
-      </div>
-    </div>
+    <MainLinks
+      path={path}
+      orientation="column"
+      style={expanded ? {} : { transform: "scaleY(0)" }}
+    />
     <LegalLinks
       css={{
         marginTop: "1em",
