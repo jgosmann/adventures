@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt, faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useContext, useState } from "react"
+import React, { useContext, useRef, useState } from "react"
 
 import colors from "../../colors"
 import Label from "./Label"
@@ -82,6 +82,7 @@ const Option = styled(props => {
 
 const YearSelector = ({ path, ...props }) => {
   const [active, setActive] = useState(false)
+  const dropDownButtonRef = useRef(null)
 
   const yearIndices = useStaticQuery(graphql`
     query {
@@ -108,11 +109,22 @@ const YearSelector = ({ path, ...props }) => {
   return (
     <NavLink
       as="div"
-      css={{ position: "relative", padding: 0, "@media": { padding: 0 } }}
+      ref={dropDownButtonRef}
+      css={{
+        position: "relative",
+        outline: "none",
+        padding: 0,
+        "@media": { padding: 0 },
+      }}
       className={yearMatch ? "active" : undefined}
       onClick={toggleActive}
       onBlur={() => setActive(false)}
-      onFocus={() => setActive(true)}
+      onFocus={ev => {
+        if (ev.target !== dropDownButtonRef.current) {
+          setActive(true)
+        }
+      }}
+      tabIndex={-1}
       {...props}
     >
       <LabelLine>{selectedText}</LabelLine>
