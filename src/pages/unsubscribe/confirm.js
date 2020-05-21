@@ -6,6 +6,7 @@ import HtmlHead from "../../components/HtmlHead"
 import Navigation from "../../components/navigation"
 
 import "normalize.css"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 const ConfirmPage = () => (
   <>

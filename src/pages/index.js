@@ -7,6 +7,7 @@ import Navigation from "../components/navigation"
 import PostPreview from "../components/PostPreview"
 
 import "normalize.css"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 export const pageQuery = graphql`
   query($postIds: [String!]) {

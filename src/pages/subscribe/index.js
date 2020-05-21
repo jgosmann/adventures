@@ -10,6 +10,7 @@ import Navigation from "../../components/navigation"
 import SubscribeForm from "../../components/doveseed/SubscribeForm"
 
 import "normalize.css"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 const SubscribePage = () => (
   <>

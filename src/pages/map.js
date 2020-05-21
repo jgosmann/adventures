@@ -17,6 +17,7 @@ import PostPreview, {
 import { fullHeight } from "../styles"
 
 import "normalize.css"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 import "react-leaflet-markercluster/dist/styles.min.css"
 
 export const pageQuery = graphql`

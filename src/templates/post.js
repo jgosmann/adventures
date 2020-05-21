@@ -10,6 +10,7 @@ import { fullHeight } from "../styles"
 import Titlescreen from "../components/post/Titlescreen"
 
 import "normalize.css"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 export const pageQuery = graphql`
   query($postId: String!) {
