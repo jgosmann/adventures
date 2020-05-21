@@ -1,10 +1,16 @@
-import { graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons"
+import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 import HtmlHead from "../components/HtmlHead"
 import Navigation from "../components/navigation"
 import PostPreview from "../components/PostPreview"
+import { defaultShadedButton } from "../styles"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -59,11 +65,12 @@ const listItemStyle = {
   },
 }
 
-const IndexPage = ({
+const PostList = ({
   data: {
     allFile: { nodes },
   },
   location: { pathname },
+  pageContext: { nextPage, prevPage },
 }) => (
   <>
     <HtmlHead path={pathname} language="en" />
@@ -76,15 +83,44 @@ const IndexPage = ({
           </li>
         ))}
       </ol>
+      {(prevPage || nextPage) && (
+        <div
+          css={{
+            margin: 16,
+            textAlign: "center",
+            a: {
+              margin: 16,
+              width: 118,
+              color: "#000",
+              "&:hover": { color: "#000" },
+            },
+          }}
+        >
+          {prevPage && (
+            <Link css={defaultShadedButton} to={prevPage}>
+              <FontAwesomeIcon icon={faChevronLeft} /> Newer posts
+            </Link>
+          )}
+          {nextPage && (
+            <Link css={defaultShadedButton} to={nextPage}>
+              Older posts <FontAwesomeIcon icon={faChevronRight} />
+            </Link>
+          )}
+        </div>
+      )}
     </main>
   </>
 )
 
-IndexPage.propTypes = {
+PostList.propTypes = {
   data: PropTypes.object.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
+  pageContext: PropTypes.shape({
+    nextPage: PropTypes.string,
+    prevPage: PropTypes.string,
+  }),
 }
 
-export default IndexPage
+export default PostList

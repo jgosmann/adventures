@@ -89,7 +89,7 @@ exports.createResolvers = ({ createResolvers }) => {
 const createYearlyIndices = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const postListTemplate = path.resolve("src/pages/index.js")
+  const postListTemplate = path.resolve("src/templates/PostList.js")
 
   const posts = (
     await graphql(`
@@ -114,6 +114,27 @@ const createYearlyIndices = async ({ actions, graphql }) => {
     date: new Date(post.childMdx.frontmatter.date),
   }))
 
+  // Paged default index
+  const postsPerPage = 20
+  const numPages = Math.ceil(posts.length / postsPerPage)
+  const pagePath = i => (i === 0 ? "/" : `/page/${i + 1}`)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: pagePath(i),
+      component: postListTemplate,
+      context: {
+        postIds: posts
+          .slice(i * postsPerPage, (i + 1) * postsPerPage)
+          .map(post => post.id),
+        numPages,
+        currentPage: i + 1,
+        prevPage: i > 0 ? pagePath(i - 1) : undefined,
+        nextPage: i + 1 < numPages ? pagePath(i + 1) : undefined,
+      },
+    })
+  })
+
+  // Yearly indices
   let start = 0
   while (start < posts.length) {
     const year = posts[start].date.getFullYear()
