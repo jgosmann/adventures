@@ -65,7 +65,6 @@ const Content = ({ mdx, nextPath }) => {
       [video.relativePath.replace(/^[^/]+\//, "")]: video.videoH264.path,
     }))
   )
-  console.log(videos)
   const BoundVideo = ({ src }) => <Video src={videos[src]} />
   BoundVideo.propTypes = {
     src: PropTypes.string.isRequired,
