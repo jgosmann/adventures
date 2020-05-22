@@ -10,7 +10,7 @@ import React from "react"
 import HtmlHead from "../components/HtmlHead"
 import Navigation from "../components/navigation"
 import PostPreview from "../components/PostPreview"
-import { defaultShadedButton } from "../styles"
+import { contentBaseStyle, defaultShadedButton } from "../styles"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -75,7 +75,7 @@ const PostList = ({
   <>
     <HtmlHead path={pathname} language="en" />
     <Navigation path={pathname} fixed />
-    <main css={{ marginTop: 48 }}>
+    <main>
       <ol css={listStyle}>
         {nodes.map(post => (
           <li key={post.childMdx.id} css={listItemStyle}>

@@ -1,3 +1,4 @@
+import { Global } from "@emotion/core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
@@ -7,8 +8,9 @@ import CollapsedMenu from "./CollapsedMenu"
 import ExpandedMenu from "./ExpandedMenu"
 import MenuButton from "./MenuButton"
 import MenuContext from "./MenuContext"
+import { minFullWidth } from "./sizes"
 
-const Navigation = ({ fixed, path }) => {
+const Navigation = ({ fixed, noTopMargin, path }) => {
   const [expanded, setExpanded] = useState(false)
   const collapseButton = useRef(null)
   const expandButton = useRef(null)
@@ -27,6 +29,18 @@ const Navigation = ({ fixed, path }) => {
           : undefined
       }
     >
+      {fixed && !noTopMargin && (
+        <Global
+          styles={{
+            body: {
+              marginTop: 56,
+              [`@media (min-width: ${minFullWidth}px)`]: {
+                marginTop: 48,
+              },
+            },
+          }}
+        />
+      )}
       <MenuContext.Provider value={{ active: !expanded }}>
         <CollapsedMenu
           expanded={expanded}
@@ -59,6 +73,7 @@ const Navigation = ({ fixed, path }) => {
 
 Navigation.propTypes = {
   fixed: PropTypes.bool,
+  noTopMargin: PropTypes.bool,
   path: PropTypes.string,
 }
 

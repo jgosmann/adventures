@@ -73,7 +73,14 @@ const Titlescreen = ({ background, frontmatter, timeToRead }) => {
   }, [])
 
   return (
-    <div css={{ height: "100%", position: "relative", overflow: "hidden" }}>
+    <div
+      css={{
+        height: "100%",
+        position: "relative",
+        overflow: "hidden",
+        marginBottom: 32,
+      }}
+    >
       <CoverImg
         fluid={background.childImageSharp.fluid}
         style={{ transform: `translate(0, ${50 * scrollRatio}%)` }}

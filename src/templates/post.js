@@ -48,8 +48,14 @@ const PostPage = ({
       language="en"
     />
     <Global styles={fullHeight} />
-    <Navigation fixed />
-    <main css={{ height: "100%", position: "relative", zIndex: 0 }}>
+    <Navigation fixed noTopMargin />
+    <main
+      css={{
+        height: "100%",
+        position: "relative",
+        zIndex: 0,
+      }}
+    >
       <article css={{ height: "100%" }}>
         <Titlescreen {...mdx} />
         <Content mdx={mdx} nextPath={nextPath} />

@@ -2,6 +2,30 @@ import { css } from "@emotion/core"
 
 import colors from "./colors"
 
+export const contentBaseStyle = css`
+  h1,
+  ol,
+  p,
+  ul,
+  h1,
+  h2,
+  h3,
+  form {
+    margin: 0 auto 1em;
+    line-height: 1.25;
+    color: #222;
+  }
+
+  ul {
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    ul {
+      margin: 0;
+    }
+  }
+`
+
 export const semanticList = css({
   margin: 0,
   padding: 0,

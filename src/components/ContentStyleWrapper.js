@@ -1,7 +1,9 @@
 import styled from "@emotion/styled"
 
+import { contentBaseStyle } from "../styles"
+
 const ContentStyleWrapper = styled("div")`
-  margin-top: 32px;
+  ${contentBaseStyle}
 
   h1,
   ol,
@@ -13,18 +15,10 @@ const ContentStyleWrapper = styled("div")`
   form {
     width: 600px;
     max-width: calc(100vw - 32px);
-    margin: 0 auto 1em;
-    margin-right: auto;
-    line-height: 1.25;
-    color: #222;
   }
 
   ul {
-    padding: 0 20px;
-    box-sizing: border-box;
-
     ul {
-      margin: 0;
       max-width: calc(100vw - 40px);
     }
   }
