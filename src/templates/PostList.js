@@ -63,6 +63,10 @@ const listItemStyle = {
   "&:hover": {
     boxShadow: "0px 1px 12px rgba(0, 0, 0, 0.75)",
   },
+
+  "&:focus-within": {
+    boxShadow: "0px 1px 12px rgba(0, 0, 0, 0.75)",
+  },
 }
 
 const PostList = ({
