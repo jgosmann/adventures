@@ -24,6 +24,7 @@ function EmailSubmissionForm({
 
   return (
     <form
+      className="email-submission-form"
       onSubmit={ev => onSubmit(ev, emailInput.current.value)}
       css={{
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",

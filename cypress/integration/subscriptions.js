@@ -31,9 +31,11 @@ describe("The subscription process", function() {
       .its("onRecaptchaLoad")
       .then(fn => fn())
 
-    cy.get('input[type="email"]').type(email)
-    cy.get("form").submit()
-    cy.get("button svg").should("have.attr", "data-icon", "check")
+    cy.get("form.email-submission-form").within(form => {
+      cy.get('input[type="email"]').type(email)
+      cy.root().submit()
+      cy.get("button svg").should("have.attr", "data-icon", "check")
+    })
 
     cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
       const entity = Object.values(content._default).filter(
@@ -44,8 +46,10 @@ describe("The subscription process", function() {
       cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
     })
 
-    cy.get("form").submit()
-    cy.get("button svg").should("have.attr", "data-icon", "check")
+    cy.get("form.email-submission-form").within(form => {
+      cy.root().submit()
+      cy.get("button svg").should("have.attr", "data-icon", "check")
+    })
 
     cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
       const entity = Object.values(content._default).filter(
@@ -59,9 +63,11 @@ describe("The subscription process", function() {
       .its("onRecaptchaLoad")
       .then(fn => fn())
 
-    cy.get('input[type="email"]').type(email)
-    cy.get("form").submit()
-    cy.get("button svg").should("have.attr", "data-icon", "check")
+    cy.get("form.email-submission-form").within(form => {
+      cy.get('input[type="email"]').type(email)
+      cy.root().submit()
+      cy.get("button svg").should("have.attr", "data-icon", "check")
+    })
 
     cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
       const entity = Object.values(content._default).filter(
@@ -72,8 +78,10 @@ describe("The subscription process", function() {
       cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
     })
 
-    cy.get("form").submit()
-    cy.get("button svg").should("have.attr", "data-icon", "check")
+    cy.get("form.email-submission-form").within(form => {
+      cy.root().submit()
+      cy.get("button svg").should("have.attr", "data-icon", "check")
+    })
 
     cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
       const entity = Object.values(content._default).filter(
