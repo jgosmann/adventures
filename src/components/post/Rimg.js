@@ -10,7 +10,7 @@ export const dataFragment = graphql`
   fragment Rimg_data on File {
     childImageSharp {
       rimg: fluid {
-        ...GatsbyImageSharpFluid_tracedSVG
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
         aspectRatio
       }
     }

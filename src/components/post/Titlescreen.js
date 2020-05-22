@@ -13,7 +13,7 @@ export const dataFragment = graphql`
     background {
       childImageSharp {
         fluid(maxWidth: 1800) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

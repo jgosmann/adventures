@@ -10,10 +10,10 @@ export const dataFragment = graphql`
   fragment Pano_data on File {
     childImageSharp {
       panoSmall: fixed(height: 300, fit: OUTSIDE) {
-        ...GatsbyImageSharpFixed_tracedSVG
+        ...GatsbyImageSharpFixed_withWebp_tracedSVG
       }
       pano: fixed(height: 600, fit: OUTSIDE) {
-        ...GatsbyImageSharpFixed_tracedSVG
+        ...GatsbyImageSharpFixed_withWebp_tracedSVG
       }
     }
   }

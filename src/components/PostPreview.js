@@ -15,7 +15,7 @@ export const dataFragment = graphql`
       background {
         childImageSharp {
           fixed(width: 300, height: 250) {
-            ...GatsbyImageSharpFixed_tracedSVG
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
