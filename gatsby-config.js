@@ -106,11 +106,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Jan's outdoor adventures`,
+        short_name: `Jan's adventures`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#000000`,
+        theme_color: `#cccccc`,
         display: `minimal-ui`,
         icon: `assets/svg/favicon.svg`, // This path is relative to the root of the site.
       },
