@@ -12,8 +12,7 @@ import { minFullWidth } from "./sizes"
 
 const Navigation = ({ fixed, noTopMargin, path }) => {
   const [expanded, setExpanded] = useState(false)
-  const collapseButton = useRef(null)
-  const expandButton = useRef(null)
+  const menuButtonRef = useRef(null)
 
   return (
     <div
@@ -48,15 +47,8 @@ const Navigation = ({ fixed, noTopMargin, path }) => {
             setExpanded(true)
           }}
           path={path}
-          menuButtonRef={expandButton}
         />
       </MenuContext.Provider>
-      <MenuButton
-        title={expanded ? "Collapse menu" : "Expand menu"}
-        onClick={() => setExpanded(current => !current)}
-      >
-        <FontAwesomeIcon icon={expanded ? faTimes : faBars} fixedWidth />
-      </MenuButton>
       <MenuContext.Provider value={{ active: expanded }}>
         <ExpandedMenu
           expanded={expanded}
@@ -64,9 +56,16 @@ const Navigation = ({ fixed, noTopMargin, path }) => {
             setExpanded(false)
           }}
           path={path}
-          menuButtonRef={collapseButton}
         />
       </MenuContext.Provider>
+      <MenuButton
+        title={expanded ? "Collapse menu" : "Expand menu"}
+        onClick={() => setExpanded(current => !current)}
+        onMouseLeave={() => menuButtonRef.current.blur()}
+        ref={menuButtonRef}
+      >
+        <FontAwesomeIcon icon={expanded ? faTimes : faBars} fixedWidth />
+      </MenuButton>
     </div>
   )
 }

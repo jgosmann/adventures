@@ -73,10 +73,16 @@ const Option = styled(props => {
   border-left: 4px solid rgba(0, 0, 0, 0);
   transition: 0.2s;
 
+  outline: none;
+
   &:hover,
   &.active {
     color: #000;
     border-left: 4px solid ${colors.accent};
+  }
+
+  &:focus {
+    color: ${colors.accent};
   }
 `
 

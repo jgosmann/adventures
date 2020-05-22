@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
-import React from "react"
 
+import colors from "../../colors"
 import { minFullWidth } from "./sizes"
 
 const MenuButton = styled("button")`
@@ -12,6 +12,13 @@ const MenuButton = styled("button")`
   cursor: pointer;
   z-index: 2;
   padding: 12px 20px;
+
+  outline: none;
+
+  &:focus,
+  &:hover {
+    color: ${colors.accent};
+  }
 
   @media (min-width: ${minFullWidth}px) {
     display: none;

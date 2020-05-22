@@ -49,11 +49,16 @@ const NavLink = styled(
 
   cursor: pointer;
   user-select: none;
+  outline: none;
 
   &:hover,
   &.active {
     border-color: ${colors.accent};
     color: #000;
+  }
+
+  &:focus {
+    color: ${colors.accent};
   }
 `
 
