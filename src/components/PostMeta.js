@@ -25,12 +25,12 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
 const PostMeta = ({ frontmatter, timeToRead, className }) => (
   <ul css={semanticList} className={className}>
     {frontmatter.date && (
-      <IconListItem icon={faCalendarDay}>
+      <IconListItem icon={faCalendarDay} title="Date">
         {dateFormat.format(Date.parse(frontmatter.date))}
       </IconListItem>
     )}
     {timeToRead && (
-      <IconListItem icon={faHourglassHalf}>
+      <IconListItem icon={faHourglassHalf} title="Estimated reading duration">
         {timeToRead} minute read
       </IconListItem>
     )}
