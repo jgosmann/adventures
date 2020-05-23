@@ -85,6 +85,7 @@ module.exports = {
                   custom_elements: [
                     {
                       "og:image":
+                        site.siteMetadata.siteUrl +
                         node.childMdx.background.childImageSharp.resize.src,
                     },
                   ],
