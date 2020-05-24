@@ -17,9 +17,12 @@ const ContentStyleWrapper = styled("div")`
     max-width: calc(100vw - 32px);
   }
 
-  ul {
-    ul {
-      max-width: calc(100vw - 40px);
+  ul,
+  ol {
+    box-sizing: border-box;
+    ul,
+    ol {
+      max-width: 100%;
     }
   }
 `
