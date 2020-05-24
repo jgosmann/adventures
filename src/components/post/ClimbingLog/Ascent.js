@@ -44,7 +44,7 @@ const Ascent = ({ data, pitch }) => {
       {data.grade && (
         <>
           {" "}
-          <Grade {...data.grade} />
+          (<Grade {...data.grade} />)
         </>
       )}
       {data.pitches && (

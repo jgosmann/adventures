@@ -44,7 +44,7 @@ const Grade = ({ system, value }) => {
     .map(toSystem => gradeToString(convertGrade(value, system, toSystem)))
     .join("\n")
 
-  return <span title={title}>({gradeToString({ system, value })})</span>
+  return <span title={title}>{gradeToString({ system, value })}</span>
 }
 
 Grade.propTypes = {
