@@ -28,10 +28,12 @@ const MainLinks = ({ orientation, path, ...props }) => {
           <Label>Subscribe</Label>
         </NavLink>
       </li>
-      <NavLink to="/" markerSide={markerSide} aria-label="List of posts">
-        <FontAwesomeIcon icon={faTh} />
-        <Label>List</Label>
-      </NavLink>
+      <li>
+        <NavLink to="/" markerSide={markerSide} aria-label="List of posts">
+          <FontAwesomeIcon icon={faTh} />
+          <Label>List</Label>
+        </NavLink>
+      </li>
       <li>
         <NavLink to="/map" markerSide={markerSide} aria-label="Map with posts">
           <FontAwesomeIcon icon={faGlobeEurope} />
