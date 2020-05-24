@@ -31,6 +31,7 @@
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-source-filesystem": "^2.3.8",
+    "gatsby-transformer-csv": "^2.3.2",
     "gatsby-transformer-sharp": "^2.5.3",
     "gatsby-transformer-video": "^0.1.18",
     "gatsby-transformer-yaml": "^2.4.2",

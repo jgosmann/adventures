@@ -17,6 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `assets`,
+        path: `${__dirname}/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `posts`,
         path: `${__dirname}/content/posts/`,
       },
@@ -95,6 +102,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-csv`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
