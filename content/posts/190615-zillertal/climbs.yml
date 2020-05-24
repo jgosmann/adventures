@@ -2,19 +2,19 @@
   ascents:
     - name: "Motscho"
       grade:
-        system: "Fb bloc"
+        system: "Fb_bloc"
         value: "6c"
     - name: "Alter Falter"
       grade:
-        system: "Fb bloc"
+        system: "Fb_bloc"
         value: "6c"
       style: fa
     - name: "Unknown traverse"
       grade:
-        system: "Fb trav"
+        system: "Fb_trav"
         value: "5c"
       style: flash
     - name: "Pablo Diablo"
       grade:
-        system: "Fb bloc"
+        system: "Fb_bloc"
         value: "5a"

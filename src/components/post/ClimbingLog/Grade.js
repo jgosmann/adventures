@@ -25,7 +25,7 @@ const Grade = ({ system, value }) => {
     let index = conversionTable.findIndex(row => row[fromSystem] === value)
     for (; index >= 0 && !conversionTable[index][toSystem]; --index);
     if (index < 0) {
-      return { system: fromSystem, value }
+      return undefined
     }
     return { system: toSystem, value: conversionTable[index][toSystem] }
   }
@@ -34,14 +34,16 @@ const Grade = ({ system, value }) => {
     if (system === "V") {
       return value
     } else {
-      return `${system} ${value}`
+      return `${system.replace("_", " ")} ${value}`
     }
   }
 
   const relevantConversions =
     boulderingGrades.indexOf(system) >= 0 ? boulderingGrades : sportGrades
   const title = relevantConversions
-    .map(toSystem => gradeToString(convertGrade(value, system, toSystem)))
+    .map(toSystem => convertGrade(value, system, toSystem))
+    .filter(grade => !!grade)
+    .map(gradeToString)
     .join("\n")
 
   return <span title={title}>{gradeToString({ system, value })}</span>
