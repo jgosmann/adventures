@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -avz --delete --checksum public/ jgosmann@hyper-world.de:~/adventures
+rsync -avz --delete public/ jgosmann@hyper-world.de:~/adventures
