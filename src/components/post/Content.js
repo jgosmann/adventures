@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import ClimbingLog from "./ClimbingLog"
+import { LocalStorageGradeContext } from "./ClimbingLog/Grade"
 import ContentStyleWrapper from "../ContentStyleWrapper"
 import Gallery from "./Gallery"
 import GpxTrack from "./GpxTrack"
@@ -99,12 +100,14 @@ const Content = ({ mdx, nextPath }) => {
 
   return (
     <ContentStyleWrapper>
-      <MDXProvider components={mdxComponents}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </MDXProvider>
-      {mdx.climbs.length > 0 && (
-        <ClimbingLog climbs={mdx.climbs[0].childClimbsYaml} />
-      )}
+      <LocalStorageGradeContext>
+        <MDXProvider components={mdxComponents}>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+        {mdx.climbs.length > 0 && (
+          <ClimbingLog climbs={mdx.climbs[0].childClimbsYaml} />
+        )}
+      </LocalStorageGradeContext>
     </ContentStyleWrapper>
   )
 }
