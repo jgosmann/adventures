@@ -35,7 +35,7 @@ const NavLink = styled(
   },
   {
     shouldForwardProp: prop => {
-      return prop !== "as"
+      return !new Set(["as", "markerSide"]).has(prop)
     },
   }
 )`
