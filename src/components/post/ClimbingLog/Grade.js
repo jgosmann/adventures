@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useRef, useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
@@ -53,8 +53,21 @@ LocalStorageGradeContext.propTypes = {
 }
 
 const Grade = ({ system, value }) => {
-  const [expanded, setExpanded] = useState(false)
+  const [state, setState] = useState({
+    expanded: false,
+    xTranslation: 0,
+  })
   const gradeContext = useContext(GradeContext)
+  const dropDownRef = useRef(null)
+  useEffect(() => {
+    const collapse = () =>
+      setState(current => ({
+        ...current,
+        expanded: false,
+      }))
+    window.addEventListener("resize", collapse)
+    return () => window.removeEventListener("resize", collapse)
+  }, [])
 
   const conversionTable = useStaticQuery(graphql`
     query {
@@ -131,20 +144,38 @@ const Grade = ({ system, value }) => {
         },
       }}
       tabIndex={0}
-      onClick={() => setExpanded(current => !current)}
-      onBlur={() => setExpanded(false)}
+      onClick={() => {
+        setState(current => {
+          const translateXBy = Math.abs(
+            Math.min(
+              0,
+              dropDownRef.current.getBoundingClientRect().right -
+                current.xTranslation -
+                dropDownRef.current.clientWidth -
+                2
+            )
+          )
+          return {
+            ...current,
+            expanded: !current.expanded,
+            xTranslation: translateXBy,
+          }
+        })
+      }}
+      onBlur={() => setState(current => ({ ...current, expanded: false }))}
     >
       {gradeToString(displayGrade)} <FontAwesomeIcon icon={faCaretDown} />
       <div
+        ref={dropDownRef}
         css={{
           position: "absolute",
           top: -1,
-          right: -1,
+          right: -1 - state.xTranslation,
           padding: 4,
-          opacity: expanded ? 1 : 0,
-          transform: `scale(${expanded ? 1 : 0})`,
+          opacity: state.expanded ? 1 : 0,
+          transform: `scale(${state.expanded ? 1 : 0})`,
           transformOrigin: "top right",
-          pointerEvents: expanded ? undefined : "none",
+          pointerEvents: state.expanded ? undefined : "none",
           cursor: "default",
           background: "#fff",
           border: "1px solid #888",
