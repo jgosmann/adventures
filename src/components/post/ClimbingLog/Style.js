@@ -59,7 +59,9 @@ const Style = ({ ascensionStyle }) => {
 }
 
 Style.propTypes = {
-  ascensionStyle: PropTypes.oneOf([]).isRequired,
+  ascensionStyle: PropTypes.oneOf(
+    Object.keys(styleMap).concat(["skipped", "not attempted"])
+  ).isRequired,
 }
 
 export default Style
