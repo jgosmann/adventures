@@ -218,7 +218,7 @@ const Grade = ({ system, value }) => {
         })
       }}
       onBlur={ev => {
-        if (!dropDownRef.current.contains(ev.relatedTarget) && state.expanded) {
+        if (!ref.current.contains(ev.relatedTarget) && state.expanded) {
           setState(current => ({
             ...current,
             expanded: false,
