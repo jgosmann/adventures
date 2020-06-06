@@ -297,7 +297,7 @@ const Grade = ({ system, value }) => {
                   </td>
                   <td>
                     <label htmlFor={`gradeSelect-${state.id}-${grade.system}`}>
-                      {grade.system}
+                      {grade.system.replace("_", " ")}
                     </label>
                   </td>
                   <td css={{ fontWeight: "bold" }}>

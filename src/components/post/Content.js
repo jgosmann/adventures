@@ -9,6 +9,7 @@ import { LocalStorageGradeContext } from "./ClimbingLog/Grade"
 import ContentStyleWrapper from "../ContentStyleWrapper"
 import Gallery from "./Gallery"
 import GpxTrack from "./GpxTrack"
+import Grade from "./ClimbingLog/Grade"
 import Loc from "./Loc"
 import Nextday from "./Nextday"
 import Pano from "./Pano"
@@ -90,6 +91,7 @@ const Content = ({ mdx, nextPath }) => {
   const mdxComponents = {
     Gallery,
     GpxTrack: BoundGpxTrack,
+    Grade,
     Loc,
     Nextday: BoundNextday,
     Pano: bindImages(Pano, mdx.panoramas),

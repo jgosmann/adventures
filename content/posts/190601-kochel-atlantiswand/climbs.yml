@@ -13,5 +13,5 @@
     - name: "Das Ramayani Kapitel"
       grade:
         system: UIAA
-        grade: "7+"
+        value: "7+"
       style: redpoint
