@@ -22,6 +22,7 @@ const ContentStyleWrapper = styled("div")`
     ul,
     ol {
       max-width: 100%;
+      margin: 0;
     }
   }
 `
