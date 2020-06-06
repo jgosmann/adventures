@@ -13,6 +13,8 @@ const GradeContext = React.createContext({
   defaultSportGradeSystem: null,
 })
 
+let nextId = 0
+
 export const LocalStorageGradeContext = ({ children }) => {
   const [state, setState] = useState({
     defaultBoulderingGradeSystem: null,
@@ -65,6 +67,7 @@ const Grade = ({ system, value }) => {
     xTranslation: 0,
     selectedSystem: null,
     hasPendingUpdate: false,
+    id: nextId++,
   })
   const gradeContext = useContext(GradeContext)
   const updateDefaultSystem = state => {
@@ -174,6 +177,7 @@ const Grade = ({ system, value }) => {
     <button
       ref={ref}
       title={convertedGrades.map(gradeToString).join("\n")}
+      className="climbingGrade"
       css={{
         position: "relative",
         cursor: "pointer",
@@ -252,13 +256,16 @@ const Grade = ({ system, value }) => {
         <div css={{ marginBottom: 8, padding: 2 }}>
           <input
             tabIndex={state.expanded ? 0 : -1}
+            id={`gradeSelect-${state.id}-null`}
             type="radio"
             name="system"
             value="null"
             checked={state.selectedSystem === "null"}
             onChange={selectionChanged}
           />{" "}
-          Show original grades
+          <label htmlFor={`gradeSelect-${state.id}-null`}>
+            Show original grades
+          </label>
         </div>
         <div>
           {" "}
@@ -270,6 +277,7 @@ const Grade = ({ system, value }) => {
                   <td>
                     <input
                       tabIndex={state.expanded ? 0 : -1}
+                      id={`gradeSelect-${state.id}-${grade.system}`}
                       type="radio"
                       name="system"
                       checked={state.selectedSystem === grade.system}
@@ -277,8 +285,16 @@ const Grade = ({ system, value }) => {
                       onChange={selectionChanged}
                     />
                   </td>
-                  <td>{grade.system}</td>
-                  <td css={{ fontWeight: "bold" }}>{grade.value}</td>
+                  <td>
+                    <label htmlFor={`gradeSelect-${state.id}-${grade.system}`}>
+                      {grade.system}
+                    </label>
+                  </td>
+                  <td css={{ fontWeight: "bold" }}>
+                    <label htmlFor={`gradeSelect-${state.id}-${grade.system}`}>
+                      {grade.value}
+                    </label>
+                  </td>
                 </tr>
               ))}
             </tbody>
