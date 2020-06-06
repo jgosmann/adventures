@@ -4,6 +4,8 @@ import React, { useContext, useRef, useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
+import colors from "../../../colors"
+
 const sportGrades = ["UIAA", "YDS", "french"]
 const boulderingGrades = ["Fb_bloc", "Fb_trav", "V"]
 
@@ -150,6 +152,29 @@ const Grade = ({ system, value }) => {
     }
   }
 
+  const renderGrade = ({ system, value }) => {
+    if (system === "V") {
+      return value
+    } else {
+      return (
+        <>
+          <span
+            css={{
+              backgroundColor: colors.accent,
+              color: "#fff",
+              borderRadius: 4,
+              padding: "1px 2px 0",
+              fontSize: "0.8em",
+            }}
+          >
+            {system.replace("_", " ")}
+          </span>{" "}
+          {value}
+        </>
+      )
+    }
+  }
+
   const relevantConversions =
     boulderingGrades.indexOf(system) >= 0 ? boulderingGrades : sportGrades
   const convertedGrades = relevantConversions
@@ -181,21 +206,24 @@ const Grade = ({ system, value }) => {
       css={{
         position: "relative",
         cursor: "pointer",
-        padding: 1,
+        padding: "0 0 1px",
         color: "inherit",
         lineHeight: 0,
         textAlign: "left",
         display: "inline-block",
         background: "none",
-        border: "1px solid rgba(0, 0, 0, 0)",
+        transition: "0.2s ease-out",
+        border: "none",
         borderRadius: 4,
         whiteSpace: "nowrap",
         outline: "none",
         "&:hover": {
-          borderColor: "#888",
+          backgroundColor: colors.accent,
+          color: "#fff",
         },
         "&:focus-within": {
-          borderColor: "#888",
+          backgroundColor: colors.accent,
+          color: "#fff",
         },
       }}
       onClick={() => {
@@ -237,7 +265,7 @@ const Grade = ({ system, value }) => {
         }
       }}
     >
-      {gradeToString(displayGrade)} <FontAwesomeIcon icon={faCaretDown} />
+      {renderGrade(displayGrade)} <FontAwesomeIcon icon={faCaretDown} />
       <form
         ref={dropDownRef}
         css={{
