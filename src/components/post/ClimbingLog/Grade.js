@@ -226,6 +226,16 @@ const Grade = ({ system, value }) => {
           }))
         }
       }}
+      onKeyDown={ev => {
+        const escKeyCode = 27
+        if (ev.keyCode == escKeyCode && state.expanded) {
+          setState(current => ({
+            ...current,
+            expanded: false,
+            hasPendingUpdate: true,
+          }))
+        }
+      }}
     >
       {gradeToString(displayGrade)} <FontAwesomeIcon icon={faCaretDown} />
       <form
