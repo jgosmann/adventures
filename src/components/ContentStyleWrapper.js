@@ -11,8 +11,7 @@ const ContentStyleWrapper = styled("div")`
   ul,
   h1,
   h2,
-  h3,
-  form {
+  h3 {
     width: 600px;
     max-width: calc(100vw - 32px);
   }

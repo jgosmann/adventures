@@ -41,8 +41,15 @@ export const LocalStorageGradeContext = ({ children }) => {
     })
   }
 
+  const getDefaultSystem = system =>
+    boulderingGrades.indexOf(system) >= 0
+      ? state.defaultBoulderingGradeSystem
+      : state.defaultSportGradeSystem
+
   return (
-    <GradeContext.Provider value={{ ...state, setDefaultGradeSystems }}>
+    <GradeContext.Provider
+      value={{ ...state, getDefaultSystem, setDefaultGradeSystems }}
+    >
       {children}
     </GradeContext.Provider>
   )
@@ -56,8 +63,24 @@ const Grade = ({ system, value }) => {
   const [state, setState] = useState({
     expanded: false,
     xTranslation: 0,
+    selectedSystem: null,
+    hasPendingUpdate: false,
   })
   const gradeContext = useContext(GradeContext)
+  const updateDefaultSystem = state => {
+    const update =
+      boulderingGrades.indexOf(state.selectedSystem) >= 0
+        ? { defaultBoulderingGradeSystem: state.selectedSystem }
+        : { defaultSportGradeSystem: state.selectedSystem }
+    gradeContext.setDefaultGradeSystems(update)
+  }
+  useEffect(() => {
+    if (state.hasPendingUpdate) {
+      setState({ ...state, hasPendingUpdate: false })
+      updateDefaultSystem(state)
+    }
+  }, [state])
+  const ref = useRef(null)
   const dropDownRef = useRef(null)
   useEffect(() => {
     const collapse = () =>
@@ -65,9 +88,32 @@ const Grade = ({ system, value }) => {
         ...current,
         expanded: false,
       }))
+    const onClick = ev => {
+      if (ref.current.contains(ev.target)) return
+      setState(current => {
+        return {
+          ...current,
+          expanded: false,
+          hasPendingUpdate: current.expanded,
+        }
+      })
+    }
     window.addEventListener("resize", collapse)
-    return () => window.removeEventListener("resize", collapse)
+    window.addEventListener("click", onClick)
+    return () => {
+      window.removeEventListener("resize", collapse)
+      window.removeEventListener("click", onClick)
+    }
   }, [])
+  useEffect(() => {
+    const selectedSystem = gradeContext.getDefaultSystem(system)
+    if (state.selectedSystem !== selectedSystem) {
+      setState({
+        ...state,
+        selectedSystem: gradeContext.getDefaultSystem(system),
+      })
+    }
+  }, [gradeContext])
 
   const conversionTable = useStaticQuery(graphql`
     query {
@@ -107,31 +153,36 @@ const Grade = ({ system, value }) => {
     .map(toSystem => convertGrade(value, system, toSystem))
     .filter(grade => !!grade)
 
-  const defaultSystem =
-    boulderingGrades.indexOf(system) >= 0
-      ? gradeContext.defaultBoulderingGradeSystem
-      : gradeContext.defaultSportGradeSystem
-  const displayGrade = convertGrade(value, system, defaultSystem) || {
+  const displayGrade = convertGrade(
+    value,
+    system,
+    gradeContext.getDefaultSystem(system)
+  ) || {
     value,
     system,
   }
 
-  const defaultSystemChanged = ev => {
+  const selectionChanged = ev => {
     const newSystem = ev.target.value
-    const update =
-      boulderingGrades.indexOf(newSystem) >= 0
-        ? { defaultBoulderingGradeSystem: newSystem }
-        : { defaultSportGradeSystem: newSystem }
-    gradeContext.setDefaultGradeSystems(update)
+    setState(current => ({
+      ...current,
+      selectedSystem: newSystem,
+    }))
   }
 
   return (
-    <span
+    <button
+      ref={ref}
       title={convertedGrades.map(gradeToString).join("\n")}
       css={{
         position: "relative",
         cursor: "pointer",
         padding: 1,
+        color: "inherit",
+        lineHeight: 0,
+        textAlign: "left",
+        display: "inline-block",
+        background: "none",
         border: "1px solid rgba(0, 0, 0, 0)",
         borderRadius: 4,
         whiteSpace: "nowrap",
@@ -143,7 +194,6 @@ const Grade = ({ system, value }) => {
           borderColor: "#888",
         },
       }}
-      tabIndex={0}
       onClick={() => {
         setState(current => {
           const translateXBy = Math.abs(
@@ -158,14 +208,23 @@ const Grade = ({ system, value }) => {
           return {
             ...current,
             expanded: !current.expanded,
+            hasPendingUpdate: current.expanded,
             xTranslation: translateXBy,
           }
         })
       }}
-      onBlur={() => setState(current => ({ ...current, expanded: false }))}
+      onBlur={ev => {
+        if (!dropDownRef.current.contains(ev.relatedTarget) && state.expanded) {
+          setState(current => ({
+            ...current,
+            expanded: false,
+            hasPendingUpdate: true,
+          }))
+        }
+      }}
     >
       {gradeToString(displayGrade)} <FontAwesomeIcon icon={faCaretDown} />
-      <div
+      <form
         ref={dropDownRef}
         css={{
           position: "absolute",
@@ -185,32 +244,37 @@ const Grade = ({ system, value }) => {
           whiteSpace: "nowrap",
           zIndex: 1,
           color: "#222",
+          fontSize: "0.8em",
+          lineHeight: 1.2,
         }}
+        onClick={ev => ev.stopPropagation()}
       >
         <div css={{ marginBottom: 8, padding: 2 }}>
           <input
+            tabIndex={state.expanded ? 0 : -1}
             type="radio"
             name="system"
             value="null"
-            checked={!defaultSystem || defaultSystem === "null"}
-            onChange={defaultSystemChanged}
+            checked={state.selectedSystem === "null"}
+            onChange={selectionChanged}
           />{" "}
           Show original grades
         </div>
         <div>
           {" "}
           Show grades as
-          <table css={{ td: { padding: 2 } }}>
+          <table css={{ td: { padding: "0 4px 0" } }}>
             <tbody>
               {convertedGrades.map(grade => (
                 <tr key={grade.system}>
                   <td>
                     <input
+                      tabIndex={state.expanded ? 0 : -1}
                       type="radio"
                       name="system"
-                      checked={defaultSystem === grade.system}
+                      checked={state.selectedSystem === grade.system}
                       value={grade.system}
-                      onChange={defaultSystemChanged}
+                      onChange={selectionChanged}
                     />
                   </td>
                   <td>{grade.system}</td>
@@ -220,8 +284,8 @@ const Grade = ({ system, value }) => {
             </tbody>
           </table>
         </div>
-      </div>
-    </span>
+      </form>
+    </button>
   )
 }
 
