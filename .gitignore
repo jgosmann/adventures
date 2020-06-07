@@ -2,6 +2,7 @@
 .DS_Store
 .*.swp
 .*.swo
+access-tokens.json
 assets/meta.html
 favicons
 layouts/partials/script.*.js.html

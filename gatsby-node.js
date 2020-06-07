@@ -6,7 +6,39 @@
 
 // You can delete this file if you're not using it
 
+const fs = require("fs")
+const FlexSearch = require("flexsearch")
+const axios = require("axios").default
 const path = require("path")
+
+const accessTokensPromise = (async () =>
+  JSON.parse(await fs.promises.readFile("access-tokens.json")))()
+
+const reverseGeocode = async ({ lat, long }) => {
+  const languages = ["de", "en"]
+  try {
+    const response = await axios.get(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${long},${lat}.json`,
+      {
+        params: {
+          types: "place",
+          language: languages.join(","),
+          access_token: (await accessTokensPromise).mapbox,
+        },
+      }
+    )
+    return response.data.features
+      .map(feature =>
+        [feature.place_name].concat(
+          languages.map(lang => feature[`place_name_${lang}`])
+        )
+      )
+      .join("; ")
+  } catch (error) {
+    console.error(error)
+    throw error
+  }
+}
 
 const resolveSinglePostFile = relativeDirectory => (source, args, context) => {
   const evaluatedDirectory =
@@ -152,6 +184,91 @@ const createYearlyIndices = async ({ actions, graphql }) => {
   }
 }
 
+const createSearchIndex = async ({ graphql }) => {
+  const extractTextFromMdxAst = ({ type, value, children }) => {
+    if (type === "text") return value
+    if (!children) return ""
+    if (type === "paragraph")
+      return children.map(extractTextFromMdxAst).join("")
+    return children.map(extractTextFromMdxAst).join("\n\n")
+  }
+
+  let nextId = 0
+  const preprocessDoc = async post => {
+    const [lat, long] = JSON.parse(`[${post.childMdx.frontmatter.map}]`)
+    return {
+      pagePath: post.pagePath,
+      childMdx: {
+        ...post.childMdx,
+        mdxAST: undefined,
+      },
+      search: {
+        id: nextId++,
+        categories: post.childMdx.frontmatter.categories.join(" "),
+        content: extractTextFromMdxAst(post.childMdx.mdxAST),
+        location: await reverseGeocode({ lat, long }),
+      },
+    }
+  }
+
+  const posts = (
+    await graphql(`
+      {
+        allFile(
+          filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
+        ) {
+          nodes {
+            pagePath
+            childMdx {
+              background {
+                childImageSharp {
+                  fixed(width: 300, height: 250) {
+                    tracedSVG
+                    width
+                    height
+                    src
+                    srcSet
+                    srcWebp
+                    srcSetWebp
+                  }
+                }
+              }
+              frontmatter {
+                categories
+                date
+                title
+                map
+              }
+              timeToRead
+              mdxAST
+            }
+          }
+        }
+      }
+    `)
+  ).data.allFile.nodes
+
+  const searchIndex = new FlexSearch({
+    encode: "advanced",
+    tokenize: "reverse",
+    threshold: 0,
+    cache: false,
+    doc: {
+      id: "search:id",
+      store: ["pagePath", "childMdx"],
+      field: [
+        "childMdx:frontmatter:title",
+        "search:categories",
+        "search:content",
+        "search:location",
+      ],
+    },
+  })
+
+  searchIndex.add(await Promise.all(posts.map(preprocessDoc)))
+  await fs.promises.writeFile("./public/search.json", searchIndex.export())
+}
+
 const createPostPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -227,6 +344,7 @@ const createLegalPages = async ({ actions, graphql }) => {
 
 exports.createPages = async args => {
   createYearlyIndices(args)
+  createSearchIndex(args)
   createPostPages(args)
   createLegalPages(args)
 }
