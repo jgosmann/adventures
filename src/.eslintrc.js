@@ -1,10 +1,9 @@
 module.exports = {
   env: {
-    browser: false,
-    node: true,
+    browser: true,
     es6: true,
   },
-  extends: ["eslint:recommended"],
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
@@ -16,6 +15,6 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module",
   },
-  plugins: [],
+  plugins: ["react"],
   rules: {},
 }
