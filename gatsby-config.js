@@ -4,6 +4,7 @@ module.exports = {
     description: `Jan's blog about adventures experienced outdoors and while travelling.`,
     author: `@jgosmann`,
     siteUrl: `https://adventures.jgosmann.de`,
+    searchUrl: `https://search.adventures.jgosmann.de`,
   },
   plugins: [
     {
