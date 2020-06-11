@@ -251,16 +251,16 @@ const createSearchIndex = async ({ graphql }) => {
   const searchIndex = new FlexSearch({
     encode: "advanced",
     tokenize: "reverse",
-    threshold: 0,
+    threshold: false,
     cache: false,
     doc: {
       id: "search:id",
       store: ["pagePath", "childMdx"],
       field: [
-        "childMdx:frontmatter:title",
         "search:categories",
-        "search:content",
         "search:location",
+        "childMdx:frontmatter:title",
+        "search:content",
       ],
     },
   })
