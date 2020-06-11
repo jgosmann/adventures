@@ -79,7 +79,7 @@ const SearchField = ({ path, query, ...props }) => {
 }
 
 SearchField.propTypes = {
-  path: PropTypes.string.isRequired,
+  path: PropTypes.string,
   query: PropTypes.string,
 }
 
