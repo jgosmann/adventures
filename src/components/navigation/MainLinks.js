@@ -7,8 +7,9 @@ import Label from "./Label"
 import NavLink from "./NavLink"
 import { flexList } from "../../styles"
 import YearSelector from "./YearSelector"
+import SearchField from "./SearchField"
 
-const MainLinks = ({ orientation, path, ...props }) => {
+const MainLinks = ({ orientation, path, query, ...props }) => {
   const markerSide = orientation === "column" ? "left" : "bottom"
   return (
     <ul
@@ -43,6 +44,9 @@ const MainLinks = ({ orientation, path, ...props }) => {
       <li>
         <YearSelector path={path} markerSide={markerSide} />
       </li>
+      <li css={{ flex: 1 }}>
+        <SearchField markerSide={markerSide} query={query} />
+      </li>
     </ul>
   )
 }
@@ -50,6 +54,7 @@ const MainLinks = ({ orientation, path, ...props }) => {
 MainLinks.propTypes = {
   orientation: PropTypes.oneOf(["row", "column"]),
   path: PropTypes.string,
+  query: PropTypes.string,
 }
 
 export default MainLinks

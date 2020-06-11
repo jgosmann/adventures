@@ -10,6 +10,7 @@ const LegalLink = styled(props => {
   const { active } = useContext(MenuContext)
   return <Link tabIndex={active ? 0 : -1} {...props} />
 })`
+  white-space: nowrap;
   text-decoration: none;
   color: #888;
 
@@ -19,7 +20,7 @@ const LegalLink = styled(props => {
 `
 
 const LegalLinks = props => (
-  <ul css={[flexList, { fontSize: "0.7em" }]} {...props}>
+  <ul css={[flexList, { fontSize: "0.7em", marginLeft: 4 }]} {...props}>
     <li>
       <LegalLink to="/legal/privacy">Privacy policy</LegalLink>
     </li>

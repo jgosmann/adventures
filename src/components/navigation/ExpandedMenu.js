@@ -4,7 +4,7 @@ import React from "react"
 import LegalLinks from "./LegalLinks"
 import MainLinks from "./MainLinks"
 
-const ExpandedMenu = ({ expanded, onCollapse, path }) => (
+const ExpandedMenu = ({ expanded, path, query }) => (
   <nav
     css={{
       position: "absolute",
@@ -26,6 +26,7 @@ const ExpandedMenu = ({ expanded, onCollapse, path }) => (
     <MainLinks
       path={path}
       orientation="column"
+      query={query}
       style={expanded ? {} : { transform: "scaleY(0)" }}
     />
     <LegalLinks
@@ -46,8 +47,8 @@ const ExpandedMenu = ({ expanded, onCollapse, path }) => (
 
 ExpandedMenu.propTypes = {
   expanded: PropTypes.bool,
-  onCollapse: PropTypes.func,
   path: PropTypes.string,
+  query: PropTypes.string,
 }
 
 export default ExpandedMenu

@@ -14,7 +14,7 @@ const PostList = ({ location: { pathname, search } }) => {
   return (
     <>
       <HtmlHead path={pathname} language="en" />
-      <Navigation path={pathname} fixed />
+      <Navigation path={pathname} query={query} fixed />
       <main>{query && <Search query={query} />}</main>
     </>
   )
