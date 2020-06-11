@@ -10,7 +10,7 @@ import MenuButton from "./MenuButton"
 import MenuContext from "./MenuContext"
 import { minFullWidth } from "./sizes"
 
-const Navigation = ({ fixed, noTopMargin, path }) => {
+const Navigation = ({ fixed, noTopMargin, path, query }) => {
   const [expanded, setExpanded] = useState(false)
   const menuButtonRef = useRef(null)
 
@@ -47,6 +47,7 @@ const Navigation = ({ fixed, noTopMargin, path }) => {
             setExpanded(true)
           }}
           path={path}
+          query={query}
         />
       </MenuContext.Provider>
       <MenuContext.Provider value={{ active: expanded }}>
@@ -56,6 +57,7 @@ const Navigation = ({ fixed, noTopMargin, path }) => {
             setExpanded(false)
           }}
           path={path}
+          query={query}
         />
       </MenuContext.Provider>
       <MenuButton
@@ -74,6 +76,7 @@ Navigation.propTypes = {
   fixed: PropTypes.bool,
   noTopMargin: PropTypes.bool,
   path: PropTypes.string,
+  query: PropTypes.string,
 }
 
 export default Navigation
