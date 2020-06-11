@@ -23,6 +23,11 @@ const SearchField = ({ path, query, ...props }) => {
       {...props}
       method="get"
       action="/search"
+      onSubmit={ev => {
+        if (!value) {
+          ev.preventDefault()
+        }
+      }}
     >
       <label
         css={{
