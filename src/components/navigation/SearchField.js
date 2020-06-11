@@ -16,7 +16,7 @@ const SearchField = ({ path, query, ...props }) => {
   return (
     <NavLink
       as="form"
-      className={(active || path.match(/^\/search\/?/)) && "active"}
+      className={(active || (path && path.match(/^\/search\/?/))) && "active"}
       onBlur={() => setActive(false)}
       onFocus={() => setActive(true)}
       css={{ cursor: "default", display: "flex" }}
