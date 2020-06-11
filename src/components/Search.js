@@ -84,6 +84,9 @@ const Search = ({ query }) => {
           textAlign: "center",
         }}
       >
+        {!state.loading && state.data.length == 0 && (
+          <p>Unfortunately, nothing was found. 😞</p>
+        )}
         {state.loading ? (
           <Spinner css={{ fontSize: 48 }} />
         ) : (
