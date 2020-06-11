@@ -2,6 +2,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import PostPreviewList from "./PostPreviewList"
+import { primaryShadedButton } from "../styles"
+import Spinner from "./Spinner"
 
 const Search = ({ query }) => {
   const searchUrl = useStaticQuery(graphql`
@@ -13,9 +15,13 @@ const Search = ({ query }) => {
       }
     }
   `).site.siteMetadata.searchUrl
-  const [data, setData] = useState(null)
-  useEffect(() => {
-    console.log("here", searchUrl)
+  const [state, setState] = useState({
+    data: [],
+    nextPage: null,
+    loading: true,
+  })
+
+  const fetchPage = ({ query, page }) =>
     fetch(searchUrl, {
       method: "POST",
       headers: {
@@ -23,8 +29,8 @@ const Search = ({ query }) => {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        query: `query ($query: String!) {
-          search(query: $query) {
+        query: `query ($query: String!, $page: String) {
+          search(query: $query, page: $page) {
             page
             next
             result {
@@ -53,14 +59,49 @@ const Search = ({ query }) => {
             }
           }
         }`,
-        variables: { query },
+        variables: { query, page },
       }),
     })
       .then(r => r.json())
-      .then(({ data }) => setData(data))
+      .then(({ data }) =>
+        setState(current => ({
+          data: [...current.data, ...data.search.result],
+          nextPage: data.search.next,
+          loading: false,
+        }))
+      )
+
+  useEffect(() => {
+    fetchPage({ query })
   }, [query])
 
-  return data && <PostPreviewList nodes={data.search.result} />
+  return (
+    <>
+      <PostPreviewList nodes={state.data} />
+      <div
+        css={{
+          margin: 16,
+          textAlign: "center",
+        }}
+      >
+        {state.loading ? (
+          <Spinner css={{ fontSize: 48 }} />
+        ) : (
+          state.nextPage && (
+            <button
+              css={primaryShadedButton}
+              onClick={() => {
+                setState({ ...state, loading: true })
+                fetchPage({ query, page: state.nextPage })
+              }}
+            >
+              Load more
+            </button>
+          )
+        )}
+      </div>
+    </>
+  )
 }
 
 Search.propTypes = {
