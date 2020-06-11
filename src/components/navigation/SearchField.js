@@ -8,7 +8,7 @@ import {
 import NavLink from "./NavLink"
 import colors from "../../colors"
 
-const SearchField = ({ query, ...props }) => {
+const SearchField = ({ path, query, ...props }) => {
   const [active, setActive] = useState(false)
   const [value, setValue] = useState(query || "")
   const ref = useRef(null)
@@ -16,7 +16,7 @@ const SearchField = ({ query, ...props }) => {
   return (
     <NavLink
       as="form"
-      className={active && "active"}
+      className={(active || path.match(/^\/search\/?/)) && "active"}
       onBlur={() => setActive(false)}
       onFocus={() => setActive(true)}
       css={{ cursor: "default", display: "flex" }}
@@ -74,6 +74,7 @@ const SearchField = ({ query, ...props }) => {
 }
 
 SearchField.propTypes = {
+  path: PropTypes.string.isRequired,
   query: PropTypes.string,
 }
 

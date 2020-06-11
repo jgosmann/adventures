@@ -45,7 +45,7 @@ const MainLinks = ({ orientation, path, query, ...props }) => {
         <YearSelector path={path} markerSide={markerSide} />
       </li>
       <li css={{ flex: 1 }}>
-        <SearchField markerSide={markerSide} query={query} />
+        <SearchField path={path} markerSide={markerSide} query={query} />
       </li>
     </ul>
   )
