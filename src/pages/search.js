@@ -15,7 +15,17 @@ const PostList = ({ location: { pathname, search } }) => {
     <>
       <HtmlHead path={pathname} language="en" />
       <Navigation path={pathname} query={query} fixed />
-      <main>{query && <Search query={query} />}</main>
+      <main>
+        <h1
+          css={{
+            margin: 32,
+            textAlign: "center",
+          }}
+        >
+          Search results for “{query}”
+        </h1>
+        {query && <Search query={query} />}
+      </main>
     </>
   )
 }
