@@ -36,6 +36,7 @@ const Search = ({ query }) => {
             result {
               pagePath
               childMdx {
+                id
                 background {
                   childImageSharp {
                     fixed {

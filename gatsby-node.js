@@ -220,6 +220,7 @@ const createSearchIndex = async ({ graphql }) => {
           nodes {
             pagePath
             childMdx {
+              id
               background {
                 childImageSharp {
                   fixed(width: 300, height: 250) {
