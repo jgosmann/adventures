@@ -86,7 +86,7 @@ module.exports = {
                 const latLong = JSON.parse(`[${node.childMdx.frontmatter.map}]`)
                 return {
                   ...node.childMdx.frontmatter,
-                  url: site.siteMetadata.siteUrl + node.pagePath + "/",
+                  url: site.siteMetadata.siteUrl + node.pagePath,
                   description: node.childMdx.excerpt,
                   lat: latLong[0],
                   long: latLong[1],
