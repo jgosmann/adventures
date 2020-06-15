@@ -70,7 +70,7 @@ function EmailSubmissionForm({
             margin: 0,
             outline: "none",
           },
-          state === "success" ? { background: "#33a11d" } : {},
+          state === "success" ? { background: "#33a11d !important" } : {},
         ]}
       >
         <VCollapsible collapsed={state === "initial"}>
