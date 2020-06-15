@@ -22,10 +22,10 @@ const LegalLink = styled(props => {
 const LegalLinks = props => (
   <ul css={[flexList, { fontSize: "0.7em", marginLeft: 4 }]} {...props}>
     <li>
-      <LegalLink to="/legal/privacy">Privacy policy</LegalLink>
+      <LegalLink to="/legal/privacy/">Privacy policy</LegalLink>
     </li>
     <li>
-      <LegalLink to="/legal/disclosure">Legal disclosure</LegalLink>
+      <LegalLink to="/legal/disclosure/">Legal disclosure</LegalLink>
     </li>
   </ul>
 )

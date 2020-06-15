@@ -24,7 +24,11 @@ const MainLinks = ({ orientation, path, query, ...props }) => {
       {...props}
     >
       <li>
-        <NavLink to="/subscribe" markerSide={markerSide} aria-label="Subscribe">
+        <NavLink
+          to="/subscribe/"
+          markerSide={markerSide}
+          aria-label="Subscribe"
+        >
           <FontAwesomeIcon icon={faBell} />
           <Label>Subscribe</Label>
         </NavLink>
@@ -36,7 +40,7 @@ const MainLinks = ({ orientation, path, query, ...props }) => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/map" markerSide={markerSide} aria-label="Map with posts">
+        <NavLink to="/map/" markerSide={markerSide} aria-label="Map with posts">
           <FontAwesomeIcon icon={faGlobeEurope} />
           <Label>Map</Label>
         </NavLink>
