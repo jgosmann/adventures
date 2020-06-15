@@ -3,11 +3,17 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Map as LeafletMap, TileLayer } from "react-leaflet"
 
+import Spinner from "../Spinner"
+
 import "leaflet/dist/leaflet.css"
 
 const Map = ({ children, ...props }) => {
   if (typeof window === "undefined") {
-    return null
+    return (
+      <div css={{ textAlign: "center", fontSize: 48, margin: "32px 0" }}>
+        <Spinner />
+      </div>
+    )
   }
 
   const url =
