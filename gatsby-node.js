@@ -178,7 +178,7 @@ const createYearlyIndices = async ({ actions, graphql }) => {
     let end = start + 1
     for (; end < posts.length && year == posts[end].date.getFullYear(); ++end);
     createPage({
-      path: `/year/${year}`,
+      path: `/year/${year}/`,
       component: postListTemplate,
       context: {
         postIds: posts.slice(start, end).map(post => post.id),
