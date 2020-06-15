@@ -109,9 +109,14 @@ exports.createResolvers = ({ createResolvers }) => {
           const parts = source.name.split(".")
           const name = parts.length > 1 ? parts.slice(0, -1).join("") : parts[0]
           const lang = parts.length > 1 ? parts[parts.length - 1] : ""
-          return `/${[lang, source.sourceInstanceName, source.relativeDirectory]
+          return `/${[
+            lang,
+            source.sourceInstanceName,
+            source.relativeDirectory,
+            name === "index" ? "" : name,
+          ]
             .filter(x => x.length > 0)
-            .join("/")}/${name === "index" ? "" : name}`
+            .join("/")}/`
         },
       },
     },
