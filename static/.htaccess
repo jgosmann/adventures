@@ -1,3 +1,5 @@
+ErrorDocument 404 /404.html
+
 ExpiresActive On
 ExpiresDefault "access plus 1 hours"
 ExpiresByType application/javascript "access plus 365 days"
