@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faSearch,
@@ -10,8 +10,9 @@ import colors from "../../colors"
 
 const SearchField = ({ path, query, ...props }) => {
   const [active, setActive] = useState(false)
-  const [value, setValue] = useState(query || "")
+  const [value, setValue] = useState("")
   const ref = useRef(null)
+  useEffect(() => setValue(query || ""), [query])
 
   return (
     <NavLink
