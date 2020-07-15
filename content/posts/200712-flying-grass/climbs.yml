@@ -1,0 +1,38 @@
+- date: 2020-07-12T10:22:22+02:00
+  ascents:
+    - name: "Flying Grass"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "6+"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "5-"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "7-"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "5+"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "6+"
+          style: hangdog
+        - grade:
+            system: UIAA
+            value: "6+"
+          style: toprope
+    - name: "Der 3. Mann"
+      grade:
+        system: UIAA
+        value: "7"
+      style: bailed
+    - name: "Fritzchen"
+      grade:
+        system: UIAA
+        value: "4-"
+      style: onsight

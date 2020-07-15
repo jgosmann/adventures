@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import PropTypes from "prop-types"
@@ -92,6 +92,7 @@ const Content = ({ mdx, nextPath }) => {
     Gallery,
     GpxTrack: BoundGpxTrack,
     Grade,
+    Link,
     Loc,
     Nextday: BoundNextday,
     Pano: bindImages(Pano, mdx.panoramas),
