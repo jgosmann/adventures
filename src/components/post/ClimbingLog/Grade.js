@@ -226,7 +226,8 @@ const Grade = ({ system, value }) => {
           color: "#fff",
         },
       }}
-      onClick={() => {
+      onClick={ev => {
+        ev.preventDefault()
         setState(current => {
           const translateXBy = Math.abs(
             Math.min(

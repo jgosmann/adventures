@@ -18,7 +18,7 @@ export const dataFragment = graphql`
   }
 `
 
-const Rimg = ({ alt, caption, image }) => {
+const Rimg = ({ alt, caption, image, children }) => {
   const galleryContext = useContext(GalleryContext)
   const height =
     !galleryContext.active || galleryContext.large ? "80vh" : "45vh"
@@ -49,6 +49,7 @@ const Rimg = ({ alt, caption, image }) => {
           }}
         />
         {caption && <Caption>{caption}</Caption>}
+        {children && <Caption>{children}</Caption>}
       </a>
     </div>
   )
@@ -57,6 +58,7 @@ const Rimg = ({ alt, caption, image }) => {
 Rimg.propTypes = {
   alt: PropTypes.string,
   caption: PropTypes.string,
+  children: PropTypes.node,
   image: PropTypes.object.isRequired,
 }
 
