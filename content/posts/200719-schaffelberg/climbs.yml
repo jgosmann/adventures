@@ -1,0 +1,32 @@
+- date: 2020-07-19T10:22:22+02:00
+  ascents:
+    - name: "Wintertraum"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: flash
+    - name: "Putzteufel"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Notnagel"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: onsight
+    - name: "Moulin Rouge"
+      grade:
+        system: UIAA
+        value: "7"
+      style: hangdog
+    - name: "Auszeit"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: onsight
+    - name: "Hohlschleifer"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: hangdog
