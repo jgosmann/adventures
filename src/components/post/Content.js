@@ -34,6 +34,11 @@ export const dataFragment = graphql`
       name
       ext
     }
+    overlay: resources(filter: { relativePath: { glob: "overlay/*" } }) {
+      name
+      ext
+      publicURL
+    }
     panoramas: resources(filter: { relativePath: { glob: "pano/*" } }) {
       ...Pano_data
       name
@@ -72,15 +77,24 @@ const Content = ({ mdx, nextPath }) => {
     src: PropTypes.string.isRequired,
   }
 
-  const bindImages = (Component, data) => {
+  const bindImages = (Component, imageData, overlayData) => {
     const images = Object.assign(
       {},
-      ...data.map(img => ({ [img.name + img.ext]: img }))
+      ...imageData.map(img => ({ [img.name + img.ext]: img }))
     )
-    const BoundImage = ({ src, ...props }) => (
-      <Component image={images[src]} {...props} />
+    const overlays = Object.assign(
+      {},
+      ...overlayData.map(overlay => ({ [overlay.name + overlay.ext]: overlay }))
+    )
+    const BoundImage = ({ src, overlay, ...props }) => (
+      <Component
+        image={images[src]}
+        overlay={overlay && overlays[overlay].publicURL}
+        {...props}
+      />
     )
     BoundImage.propTypes = {
+      overlay: PropTypes.string,
       src: PropTypes.string.isRequired,
     }
     return BoundImage
@@ -95,8 +109,8 @@ const Content = ({ mdx, nextPath }) => {
     Link,
     Loc,
     Nextday: BoundNextday,
-    Pano: bindImages(Pano, mdx.panoramas),
-    Rimg: bindImages(Rimg, mdx.images),
+    Pano: bindImages(Pano, mdx.panoramas, mdx.overlay),
+    Rimg: bindImages(Rimg, mdx.images, mdx.overlay),
     Travel,
     Video: BoundVideo,
   }
