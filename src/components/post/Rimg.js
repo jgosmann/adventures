@@ -12,7 +12,7 @@ import colors from "../../colors"
 export const dataFragment = graphql`
   fragment Rimg_data on File {
     childImageSharp {
-      rimg: fluid {
+      rimg: fluid(maxWidth: 1280) {
         ...GatsbyImageSharpFluid_withWebp
         aspectRatio
       }
