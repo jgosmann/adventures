@@ -1,5 +1,6 @@
 .cache
 .DS_Store
+.netlify
 .*.swp
 .*.swo
 access-tokens.json
