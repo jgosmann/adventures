@@ -67,6 +67,7 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
               width: "100%",
               height: "100%",
             }}
+            tabIndex={-1}
           ></object>
         )}
         {(caption || children || overlay) && (
@@ -79,6 +80,7 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
                     cursor: "pointer",
                     ["&:hover"]: { color: colors.highlight },
                     ["&:active"]: { color: "#fff" },
+                    ["&:focus-within"]: { color: colors.highlight },
                   }}
                 >
                   <input
