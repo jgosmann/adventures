@@ -87,7 +87,7 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
                     onChange={ev => {
                       setShowOverlay(ev.target.checked)
                     }}
-                    css={{ width: 0, height: 0 }}
+                    css={{ appearance: "none" }}
                   />
                   <span css={{ position: "relative" }}>
                     <FontAwesomeIcon icon={faRoute} fixedWidth /> Show route is{" "}
