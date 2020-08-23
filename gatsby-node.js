@@ -359,11 +359,13 @@ const createLegalPages = async ({ actions, graphql }) => {
   )
 }
 
-exports.createPages = async args => {
-  createYearlyIndices(args)
-  createSearchIndex(args)
-  createPostPages(args)
-  createLegalPages(args)
+exports.createPages = args => {
+  return Promise.all([
+    createYearlyIndices(args),
+    createSearchIndex(args),
+    createPostPages(args),
+    createLegalPages(args),
+  ])
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
