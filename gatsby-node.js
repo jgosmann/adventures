@@ -140,6 +140,7 @@ const createYearlyIndices = async ({ actions, graphql }) => {
               id
               frontmatter {
                 date
+                favorite
               }
             }
           }
@@ -149,6 +150,7 @@ const createYearlyIndices = async ({ actions, graphql }) => {
   ).data.allFile.nodes.map(post => ({
     id: post.childMdx.id,
     date: new Date(post.childMdx.frontmatter.date),
+    favorite: post.childMdx.frontmatter.favorite,
   }))
 
   // Paged default index
@@ -169,6 +171,15 @@ const createYearlyIndices = async ({ actions, graphql }) => {
         nextPage: i + 1 < numPages ? pagePath(i + 1) : undefined,
       },
     })
+  })
+
+  // Favorites index
+  createPage({
+    path: `/favorites`,
+    component: postListTemplate,
+    context: {
+      postIds: posts.filter(post => post.favorite).map(post => post.id),
+    },
   })
 
   // Yearly indices

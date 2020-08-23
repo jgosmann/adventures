@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBell, faGlobeEurope, faTh } from "@fortawesome/free-solid-svg-icons"
+import {
+  faBell,
+  faGlobeEurope,
+  faStar,
+  faTh,
+} from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -47,6 +52,16 @@ const MainLinks = ({ orientation, path, query, ...props }) => {
       </li>
       <li>
         <YearSelector path={path} markerSide={markerSide} />
+      </li>
+      <li>
+        <NavLink
+          to="/favorites/"
+          markerSide={markerSide}
+          aria-label="Top picks"
+        >
+          <FontAwesomeIcon icon={faStar} />
+          <Label>Top picks</Label>
+        </NavLink>
       </li>
       <li css={{ flex: 1 }}>
         <SearchField path={path} markerSide={markerSide} query={query} />
