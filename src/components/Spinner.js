@@ -1,4 +1,4 @@
-import { keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/react"
 const { FontAwesomeIcon } = require("@fortawesome/react-fontawesome")
 const { faCircleNotch } = require("@fortawesome/free-solid-svg-icons")
 import React from "react"

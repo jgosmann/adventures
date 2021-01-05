@@ -1,4 +1,4 @@
-import { css, Global } from "@emotion/core"
+import { css, Global } from "@emotion/react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"

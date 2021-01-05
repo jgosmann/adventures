@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import { keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/react"
 
 import { defaultShadedButton } from "../styles"
 

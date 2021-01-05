@@ -16,6 +16,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module",
   },
-  plugins: [],
-  rules: {},
+  plugins: ["@emotion"],
+  rules: {
+    "@emotion/pkg-renaming": "error",
+  },
 }

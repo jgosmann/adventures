@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { faBolt } from "@fortawesome/free-solid-svg-icons"
 import { faCircle } from "@fortawesome/free-solid-svg-icons"
 import { faDog } from "@fortawesome/free-solid-svg-icons"
