@@ -239,15 +239,12 @@ const createSearchIndex = async ({ graphql }) => {
               id
               background {
                 childImageSharp {
-                  fixed(width: 300, height: 250) {
-                    tracedSVG
-                    width
-                    height
-                    src
-                    srcSet
-                    srcWebp
-                    srcSetWebp
-                  }
+                  gatsbyImageData(
+                    width: 300
+                    height: 250
+                    layout: FIXED
+                    placeholder: TRACED_SVG
+                  )
                 }
               }
               frontmatter {

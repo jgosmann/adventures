@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -9,12 +9,11 @@ import VerticalScroll from "../VerticalScroll"
 export const dataFragment = graphql`
   fragment Pano_data on File {
     childImageSharp {
-      panoSmall: fixed(height: 300, fit: OUTSIDE) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
-      pano: fixed(height: 600, fit: OUTSIDE) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
+      gatsbyImageData(
+        height: 600
+        layout: FIXED
+        transformOptions: { fit: OUTSIDE }
+      )
     }
   }
 `
@@ -30,14 +29,8 @@ const Pano = ({ alt, caption, image }) => {
       }}
     >
       <VerticalScroll>
-        <Img
-          fixed={[
-            image.childImageSharp.panoSmall,
-            {
-              ...image.childImageSharp.pano,
-              media: "(min-height: 600px)",
-            },
-          ]}
+        <GatsbyImage
+          image={getImage(image)}
           alt={alt || caption}
           css={{
             maxHeight: "100vh",

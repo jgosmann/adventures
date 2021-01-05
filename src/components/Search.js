@@ -39,15 +39,7 @@ const Search = ({ query }) => {
                 id
                 background {
                   childImageSharp {
-                    fixed {
-                      tracedSVG
-                      width
-                      height
-                      src
-                      srcSet
-                      srcWebp
-                      srcSetWebp
-                    }
+                    gatsbyImageData
                   }
                 }
                 frontmatter {
