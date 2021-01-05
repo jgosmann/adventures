@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import React, { useContext, useState } from "react"
 
@@ -12,9 +12,10 @@ import colors from "../../colors"
 export const dataFragment = graphql`
   fragment Rimg_data on File {
     childImageSharp {
-      rimg: fluid(maxWidth: 1280) {
-        ...GatsbyImageSharpFluid_withWebp
-        aspectRatio
+      gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
+      original {
+        height
+        width
       }
     }
     publicURL
@@ -27,9 +28,11 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
 
   const height =
     !galleryContext.active || galleryContext.large ? "80vh" : "45vh"
+  const aspectRatio =
+    image.childImageSharp.original.width / image.childImageSharp.original.height
   const gallerySpecificStyle = {
     "@media screen and (min-height: 600px)": {
-      width: `calc(45vh * ${image.childImageSharp.rimg.aspectRatio})`,
+      width: `calc(45vh * ${aspectRatio})`,
       maxHeight: "45vh",
     },
   }
@@ -43,17 +46,19 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
     >
       <div css={{ display: "inline-block", position: "relative" }}>
         <a href={image.publicURL} title="View full size">
-          <Img
-            fluid={image.childImageSharp.rimg}
+          <GatsbyImage
+            image={getImage(image)}
             alt={alt || caption}
             css={{
               maxWidth: "calc(100vw - 64px)",
-              width: `calc(${height} * ${image.childImageSharp.rimg.aspectRatio})`,
+              width: `calc(${height} * ${aspectRatio})`,
               maxHeight: height,
               boxShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",
               borderRadius: 2,
+              display: "block",
               ...(galleryContext.active ? gallerySpecificStyle : {}),
             }}
+            imgStyle={{ transform: "none" }}
           />
         </a>
         {overlay && showOverlay && (
