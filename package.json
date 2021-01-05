@@ -40,7 +40,7 @@
     "gatsby-transformer-video": "^0.2.1",
     "gatsby-transformer-yaml": "^2.8.0",
     "leaflet": "^1.7.1",
-    "leaflet.geodesic": "^2.5.4",
+    "leaflet.geodesic": "^2.5.5-0",
     "leaflet.markercluster": "^1.4.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
