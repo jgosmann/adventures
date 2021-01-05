@@ -43,7 +43,12 @@ module.exports = {
         path: `${__dirname}/node_modules/leaflet/dist/`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        lessBabel: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
