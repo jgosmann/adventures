@@ -1,4 +1,5 @@
 module.exports = {
+  flags: { QUERY_ON_DEMAND: true, LAZY_IMAGES: true },
   siteMetadata: {
     title: `Jan's outdoor adventures`,
     description: `Jan's blog about adventures experienced outdoors and while travelling.`,
