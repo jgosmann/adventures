@@ -9,6 +9,7 @@
     "eslint": "^7.17.0",
     "eslint-plugin-cypress": "^2.11.2",
     "flexsearch": "^0.6.32",
+    "gatsby-cli": "^2.16.2",
     "node-sass": "^4.14.1",
     "prettier": "^2.2.1",
     "random-email": "^1.0.3"
@@ -36,7 +37,7 @@
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-transformer-csv": "^2.7.0",
     "gatsby-transformer-sharp": "^2.9.0",
-    "gatsby-transformer-video": "^0.1.18",
+    "gatsby-transformer-video": "^0.2.1",
     "gatsby-transformer-yaml": "^2.8.0",
     "leaflet": "^1.7.1",
     "leaflet.geodesic": "^2.5.4",
