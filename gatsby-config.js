@@ -1,5 +1,5 @@
 module.exports = {
-  flags: { QUERY_ON_DEMAND: true, LAZY_IMAGES: true },
+  flags: { DEV_SSR: false },
   siteMetadata: {
     title: `Jan's outdoor adventures`,
     description: `Jan's blog about adventures experienced outdoors and while travelling.`,
@@ -11,7 +11,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: ["node_modules"],
+        sassOptions: {
+          includePaths: ["node_modules"],
+        },
       },
     },
     `gatsby-plugin-emotion`,
