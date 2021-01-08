@@ -25,7 +25,6 @@ const Pano = ({ alt, caption, image }) => {
         margin: "32px 0",
         scrollSnapAlign: "start",
         position: "relative",
-        textAlign: "center",
       }}
     >
       <VerticalScroll>
@@ -34,6 +33,8 @@ const Pano = ({ alt, caption, image }) => {
           alt={alt || caption}
           css={{
             maxHeight: "100vh",
+            marginLeft: "auto",
+            marginRight: "auto",
           }}
         />
       </VerticalScroll>
