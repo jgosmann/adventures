@@ -1,5 +1,5 @@
 import { graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -14,12 +14,9 @@ export const dataFragment = graphql`
     childMdx {
       background {
         childImageSharp {
-          gatsbyImageData(
-            width: 300
-            height: 250
-            layout: FIXED
-            placeholder: TRACED_SVG
-          )
+          fixed(width: 300, height: 250) {
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
+          }
         }
       }
       frontmatter {
@@ -53,8 +50,8 @@ const PostPreview = ({ data }) => {
       to={data.pagePath}
       css={{ color: "#000", "&:hover": { color: "#000" } }}
     >
-      <GatsbyImage
-        image={getImage(data.childMdx.background)}
+      <Img
+        fixed={data.childMdx.background.childImageSharp.fixed}
         css={{ width: "100%", height: "100%" }}
       />
       <div css={textBoxStyle}>

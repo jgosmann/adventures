@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 
@@ -12,7 +12,9 @@ export const dataFragment = graphql`
   fragment Titlescreen_data on Mdx {
     background {
       childImageSharp {
-        gatsbyImageData(maxWidth: 1800, layout: FLUID)
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
     frontmatter {
@@ -45,7 +47,7 @@ const BoxedPostMeta = styled(PostMeta)({
   textAlign: "left",
 })
 
-const CoverImg = styled(GatsbyImage)({
+const CoverImg = styled(Img)({
   height: "100%",
   width: "100%",
 })
@@ -80,7 +82,7 @@ const Titlescreen = ({ background, frontmatter, timeToRead }) => {
       }}
     >
       <CoverImg
-        image={getImage(background)}
+        fluid={background.childImageSharp.fluid}
         style={{ transform: `translate(0, ${50 * scrollRatio}%)` }}
       />
       <div

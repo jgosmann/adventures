@@ -1,5 +1,3 @@
-const { getSrc } = require("gatsby-plugin-image")
-
 module.exports = {
   flags: { DEV_SSR: false },
   siteMetadata: {
@@ -19,7 +17,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -79,7 +76,9 @@ module.exports = {
                       }
                       background {
                         childImageSharp {
-                          gatsbyImageData(width: 800, layout: FIXED)
+                          resize(width: 800) {
+                            src
+                          }
                         }
                       }
                     }
@@ -103,7 +102,7 @@ module.exports = {
                     {
                       "og:image":
                         site.siteMetadata.siteUrl +
-                        getSrc(node.childMdx.background),
+                        node.childMdx.background.childImageSharp.resize.src,
                     },
                   ],
                 }
