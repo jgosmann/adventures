@@ -102,7 +102,7 @@ const VerticalScroll = ({ children }) => {
       <div
         ref={scrollArea}
         tabIndex={0}
-        css={{ overflow: "scroll", fontSize: 0 }}
+        css={{ overflow: "scroll", fontSize: 0, textAlign: "center" }}
       >
         {children}
       </div>
