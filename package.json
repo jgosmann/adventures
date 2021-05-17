@@ -5,7 +5,7 @@
   "devDependencies": {
     "@emotion/eslint-plugin": "^11.2.0",
     "axios": "^0.21.1",
-    "cypress": "^6.9.1",
+    "cypress": "^7.3.0",
     "eslint": "^7.26.0",
     "eslint-plugin-cypress": "^2.11.3",
     "flexsearch": "^0.6.32",
