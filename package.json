@@ -10,6 +10,7 @@
     "eslint-plugin-cypress": "^2.11.2",
     "flexsearch": "^0.6.32",
     "gatsby-cli": "^2.19.1",
+    "netlify-cli": "^3.29.17",
     "prettier": "^2.2.1",
     "random-email": "^1.0.3"
   },
