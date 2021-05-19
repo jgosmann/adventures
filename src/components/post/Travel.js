@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { GeodesicLine } from "react-leaflet-geodesic"
 
 import colors from "../../colors"
+import Geodesic from "../leaflet/Geodesic"
 import Map from "../leaflet/Map"
 import Marker from "../leaflet/Marker"
 
@@ -13,7 +13,7 @@ const GpxTrack = ({ route, markIntermediate }) => {
       bounds={route}
       padding={[50, 50]}
     >
-      <GeodesicLine positions={route} options={{ color: colors.red }} />
+      <Geodesic latlngs={route} color={colors.red} />
       {markIntermediate ? (
         route.map((stop, i) => <Marker key={i} position={stop} />)
       ) : (

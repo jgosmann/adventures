@@ -93,7 +93,9 @@ const YearSelector = ({ path, ...props }) => {
   const yearIndices = useStaticQuery(graphql`
     query {
       allSitePage(
-        filter: { path: { regex: "/^\\\\/year[/].*$/" } }
+        # prettier-ignore
+        # prettier is messing with the escapes
+        filter: { path: { regex: "/^\\/year[/].*$/" } }
         sort: { fields: context___year, order: DESC }
       ) {
         nodes {

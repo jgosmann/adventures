@@ -1,7 +1,7 @@
 import leaflet from "leaflet"
 import PropTypes from "prop-types"
 import React from "react"
-import { Map as LeafletMap, TileLayer } from "react-leaflet"
+import { MapContainer, TileLayer } from "react-leaflet"
 
 import Spinner from "../Spinner"
 
@@ -30,7 +30,7 @@ const Map = ({ children, ...props }) => {
     "pk.eyJ1Ijoiamdvc21hbm4iLCJhIjoiY2p0a2pnbGRmM2JlMDQzbzlzdW" +
     "trYjZiOSJ9.u2TRWUpD5guUay3Nn_Twiw"
   return (
-    <LeafletMap
+    <MapContainer
       css={{ height: "100%" }}
       dragging={!leaflet.Browser.mobile}
       tap={!leaflet.Browser.mobile}
@@ -45,7 +45,7 @@ const Map = ({ children, ...props }) => {
         accessToken={accessToken}
       />
       {children}
-    </LeafletMap>
+    </MapContainer>
   )
 }
 
