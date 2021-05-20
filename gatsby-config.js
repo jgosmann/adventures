@@ -1,7 +1,7 @@
 const { getSrc } = require("gatsby-plugin-image")
 
 module.exports = {
-  flags: { DEV_SSR: false },
+  flags: { DEV_SSR: true, PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: `Jan's outdoor adventures`,
     description: `Jan's blog about adventures experienced outdoors and while travelling.`,
