@@ -5,6 +5,7 @@ import { faDog } from "@fortawesome/free-solid-svg-icons"
 import { faEye } from "@fortawesome/free-solid-svg-icons"
 import { faFirstAid } from "@fortawesome/free-solid-svg-icons"
 import { faLevelDownAlt } from "@fortawesome/free-solid-svg-icons"
+import { faRedoAlt } from "@fortawesome/free-solid-svg-icons"
 import { faRunning } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
@@ -38,6 +39,7 @@ const styleMap = {
       title="Redpoint"
     />
   ),
+  repeat: () => <FontAwesomeIcon icon={faRedoAlt} fixedWidth title="Repeat" />,
   hangdog: () => <FontAwesomeIcon icon={faDog} fixedWidth title="Hang dog" />,
   toprope: () => (
     <FontAwesomeIcon icon={faLevelDownAlt} fixedWidth title="Toprope" />
