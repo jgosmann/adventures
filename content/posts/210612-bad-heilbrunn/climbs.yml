@@ -1,0 +1,37 @@
+- date: 2021-06-12T18:57:15+02:00
+  ascents:
+    - name: "Direkter Einstieg"
+      style: onsight
+      grade:
+        system: UIAA
+        value: "4+"
+    - name: "Glühwürmchen"
+      style: onsight
+      grade:
+        system: UIAA
+        value: "5-"
+    - name: "Siebenschläfer"
+      style: onsight
+      grade:
+        system: UIAA
+        value: "5+"
+    - name: "Fast wie in Sachsen"
+      style: onsight
+      grade:
+        system: UIAA
+        value: "6-"
+    - name: "Schwarzer Riss"
+      style: repeat
+      grade:
+        system: UIAA
+        value: "4"
+    - name: "Otto Flugplatte"
+      style: onsight
+      grade:
+        system: UIAA
+        value: "6-"
+    - name: "Steffi"
+      style: onsight
+      grade:
+        system: UIAA
+        value: "6"
