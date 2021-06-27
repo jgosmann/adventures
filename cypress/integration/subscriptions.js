@@ -1,7 +1,7 @@
 import randomEmail from "random-email"
 
-describe("The subscription process", function() {
-  it("successfully loads", function() {
+describe("The subscription process", function () {
+  it("successfully loads", function () {
     const email = randomEmail()
 
     cy.on("window:before:load", win => {
@@ -47,6 +47,7 @@ describe("The subscription process", function() {
     })
 
     cy.get("form.email-submission-form").within(form => {
+      cy.get('input[type="email"]').should("have.attr", "value", email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
     })
@@ -79,6 +80,7 @@ describe("The subscription process", function() {
     })
 
     cy.get("form.email-submission-form").within(form => {
+      cy.get('input[type="email"]').should("have.attr", "value", email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
     })

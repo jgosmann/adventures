@@ -10,6 +10,7 @@ const fs = require("fs")
 const FlexSearch = require("flexsearch")
 const axios = require("axios").default
 const path = require("path")
+const pLimit = require("p-limit")
 
 const accessTokensPromise = (async () =>
   JSON.parse(await fs.promises.readFile("access-tokens.json")))()
@@ -210,6 +211,7 @@ const createSearchIndex = async ({ graphql }) => {
   }
 
   let nextId = 0
+  const reverseGeocodeLimit = pLimit(10)
   const preprocessDoc = async post => {
     const [lat, long] = JSON.parse(`[${post.childMdx.frontmatter.map}]`)
     return {
@@ -222,7 +224,9 @@ const createSearchIndex = async ({ graphql }) => {
         id: nextId++,
         categories: post.childMdx.frontmatter.categories.join(" "),
         content: extractTextFromMdxAst(post.childMdx.mdxAST),
-        location: await reverseGeocode({ lat, long }),
+        location: await reverseGeocodeLimit(() =>
+          reverseGeocode({ lat, long })
+        ),
       },
     }
   }
