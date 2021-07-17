@@ -19,6 +19,7 @@ export const dataFragment = graphql`
             height: 250
             layout: FIXED
             placeholder: TRACED_SVG
+            transformOptions: { cropFocus: ENTROPY }
           )
         }
       }
