@@ -19,10 +19,12 @@ const ConfirmPage = () => (
           You are unsubscribing the following email address from email
           notifications for new posts:
         </p>
-        <ConfirmationButton
-          url="https://doveseed.adventures.jgosmann.de/confirm/"
-          submitLabel="Confirm"
-        />
+        <p>
+          <ConfirmationButton
+            url="https://doveseed.adventures.jgosmann.de/confirm/"
+            submitLabel="Confirm"
+          />
+        </p>
       </ContentStyleWrapper>
     </main>
   </>
