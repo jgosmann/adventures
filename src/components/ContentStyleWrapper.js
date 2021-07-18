@@ -3,6 +3,8 @@ import styled from "@emotion/styled"
 import { contentBaseStyle } from "../styles"
 
 const ContentStyleWrapper = styled("div")`
+  padding-bottom: 200px;
+
   ${contentBaseStyle}
 
   h1,
