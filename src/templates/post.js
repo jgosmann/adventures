@@ -59,6 +59,7 @@ const PostPage = ({
       <article css={{ height: "100%" }}>
         <Titlescreen {...mdx} />
         <Content mdx={mdx} nextPath={nextPath} />
+        <div css={{ height: "25vh" }}></div>
       </article>
     </main>
   </>
