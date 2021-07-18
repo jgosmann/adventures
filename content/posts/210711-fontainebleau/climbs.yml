@@ -1,0 +1,6 @@
+- date: 2021-07-11T18:57:15+02:00
+  ascents:
+    - name: "L'Abat-Jour"
+      grade:
+        system: Fb_bloc
+        value: "4c"

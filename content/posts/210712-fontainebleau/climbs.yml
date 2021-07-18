@@ -1,0 +1,6 @@
+- date: 2021-07-12T18:57:15+02:00
+  ascents:
+    - name: "Épreuve de Force"
+      grade:
+        system: Fb_bloc
+        value: "5c"
