@@ -60,44 +60,49 @@ const Search = ({ query }) => {
         setState(current => ({
           data: [...current.data, ...data.search.result],
           nextPage: data.search.next,
+          error: false,
           loading: false,
         }))
       )
+      .catch(() => setState({ error: true, loading: false }))
 
   useEffect(() => {
     fetchPage({ query })
   }, [query])
 
-  return (
-    <>
-      <PostPreviewList nodes={state.data} />
-      <div
-        css={{
-          margin: 16,
-          textAlign: "center",
-        }}
-      >
-        {!state.loading && state.data.length == 0 && (
-          <p>Unfortunately, nothing was found. 😞</p>
-        )}
-        {state.loading ? (
-          <Spinner css={{ fontSize: 48 }} />
-        ) : (
-          state.nextPage && (
-            <button
-              css={primaryShadedButton}
-              onClick={() => {
-                setState({ ...state, loading: true })
-                fetchPage({ query, page: state.nextPage })
-              }}
-            >
-              Load more
-            </button>
-          )
-        )}
+  const centerStyle = { margin: 16, textAlign: "center" }
+  if (state.loading) {
+    return (
+      <div css={centerStyle}>
+        <Spinner css={{ fontSize: 48 }} />
       </div>
-    </>
-  )
+    )
+  } else {
+    if (state.error) {
+      return <p css={centerStyle}>Sorry, an error occured. 😵</p>
+    } else if (state.data.length == 0) {
+      return <p css={centerStyle}>Unfortunately, nothing was found. 😞</p>
+    } else {
+      return (
+        <>
+          <PostPreviewList nodes={state.data} />
+          {state.nextPage && (
+            <div css={centerStyle}>
+              <button
+                css={primaryShadedButton}
+                onClick={() => {
+                  setState({ ...state, loading: true })
+                  fetchPage({ query, page: state.nextPage })
+                }}
+              >
+                Load more
+              </button>
+            </div>
+          )}
+        </>
+      )
+    }
+  }
 }
 
 Search.propTypes = {
