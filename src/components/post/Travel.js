@@ -6,7 +6,7 @@ import Geodesic from "../leaflet/Geodesic"
 import Map from "../leaflet/Map"
 import Marker from "../leaflet/Marker"
 
-const GpxTrack = ({ route, markIntermediate }) => {
+const Travel = ({ route, markIntermediate }) => {
   return (
     <Map
       css={{ height: 600, margin: "32px 0" }}
@@ -26,9 +26,9 @@ const GpxTrack = ({ route, markIntermediate }) => {
   )
 }
 
-GpxTrack.propTypes = {
+Travel.propTypes = {
   route: PropTypes.array.isRequired,
   markIntermediate: PropTypes.bool,
 }
 
-export default GpxTrack
+export default Travel

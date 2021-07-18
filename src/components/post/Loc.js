@@ -6,7 +6,7 @@ import Marker from "../leaflet/Marker"
 
 const munich = [48.1384, 11.5683]
 
-const GpxTrack = ({ latlong, zoom }) => {
+const Loc = ({ latlong, zoom }) => {
   const viewport = zoom
     ? {
         center: latlong,
@@ -23,9 +23,9 @@ const GpxTrack = ({ latlong, zoom }) => {
   )
 }
 
-GpxTrack.propTypes = {
+Loc.propTypes = {
   latlong: PropTypes.array.isRequired,
   zoom: PropTypes.number,
 }
 
-export default GpxTrack
+export default Loc
