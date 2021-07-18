@@ -1,6 +1,6 @@
 import leaflet from "leaflet"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { MapContainer, TileLayer } from "react-leaflet"
 
 import Spinner from "../Spinner"
@@ -8,7 +8,12 @@ import Spinner from "../Spinner"
 import "leaflet/dist/leaflet.css"
 
 const Map = ({ children, ...props }) => {
-  if (typeof window === "undefined") {
+  // Workaround for react-leaflet, hydrations does not work correctly when
+  // rendering immediatly.
+  const [render, setRender] = useState(false)
+  useEffect(() => setRender(true), [])
+
+  if (!render || typeof window === "undefined") {
     return (
       <div css={{ textAlign: "center", fontSize: 48, margin: "32px 0" }}>
         <Spinner />
