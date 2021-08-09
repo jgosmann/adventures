@@ -44,6 +44,11 @@ export const dataFragment = graphql`
       name
       ext
     }
+    panoramas2x: resources(filter: { relativePath: { glob: "pano/*" } }) {
+      ...Pano2x_data
+      name
+      ext
+    }
     videos: resources(filter: { ext: { in: [".m4v", ".mp4"] } }) {
       videoH264 {
         path
@@ -110,6 +115,7 @@ const Content = ({ mdx, nextPath }) => {
     Loc,
     Nextday: BoundNextday,
     Pano: bindImages(Pano, mdx.panoramas, mdx.overlay),
+    Pano2x: bindImages(Pano, mdx.panoramas2x, mdx.overlay),
     Rimg: bindImages(Rimg, mdx.images, mdx.overlay),
     Travel,
     Video: BoundVideo,
