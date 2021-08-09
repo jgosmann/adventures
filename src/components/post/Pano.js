@@ -14,11 +14,33 @@ export const dataFragment = graphql`
         layout: FIXED
         transformOptions: { fit: OUTSIDE }
       )
+      original {
+        height
+        width
+      }
+    }
+  }
+`
+
+export const dataFragment2x = graphql`
+  fragment Pano2x_data on File {
+    childImageSharp {
+      gatsbyImageData(
+        height: 1200
+        layout: FIXED
+        transformOptions: { fit: OUTSIDE }
+      )
+      original {
+        height
+        width
+      }
     }
   }
 `
 
 const Pano = ({ alt, caption, image }) => {
+  const aspectRatio = `(${image.childImageSharp.original.width} / ${image.childImageSharp.original.height})`
+
   return (
     <div
       css={{
@@ -33,6 +55,7 @@ const Pano = ({ alt, caption, image }) => {
           alt={alt || caption}
           css={{
             maxHeight: "100vh",
+            maxWidth: `calc(100vh * ${aspectRatio})`,
             marginLeft: "auto",
             marginRight: "auto",
           }}
