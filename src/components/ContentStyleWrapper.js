@@ -25,6 +25,11 @@ const ContentStyleWrapper = styled("div")`
       margin: 0;
     }
   }
+
+  iframe {
+    margin: 1em auto;
+    display: block;
+  }
 `
 
 export default ContentStyleWrapper
