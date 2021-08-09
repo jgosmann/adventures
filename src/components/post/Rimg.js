@@ -49,7 +49,7 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
             image={getImage(image)}
             alt={alt || caption}
             css={{
-              maxWidth: "calc(100vw - 64px)",
+              maxWidth: "min(calc(100vw - 64px), 1280px)",
               width: `calc(${height} * ${aspectRatio})`,
               maxHeight: height,
               boxShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",
