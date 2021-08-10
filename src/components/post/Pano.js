@@ -13,6 +13,7 @@ export const dataFragment = graphql`
         height: 600
         layout: FIXED
         transformOptions: { fit: OUTSIDE }
+        formats: [JPG, AVIF]
       )
       original {
         height
@@ -29,6 +30,7 @@ export const dataFragment2x = graphql`
         height: 1200
         layout: FIXED
         transformOptions: { fit: OUTSIDE }
+        formats: [JPG, AVIF]
       )
       original {
         height
