@@ -29,6 +29,7 @@ const ContentStyleWrapper = styled("div")`
   iframe {
     margin: 1em auto;
     display: block;
+    max-width: 100vw;
   }
 `
 
