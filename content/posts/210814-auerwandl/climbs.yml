@@ -1,0 +1,27 @@
+- date: 2021-08-14T19:16:25+02:00
+  ascents:
+    - name: "Kinderturnen"
+      grade:
+        system: UIAA
+        value: "4"
+      style: onsight
+    - name: "Baby Gwag"
+      grade:
+        system: UIAA
+        value: "3+"
+      style: onsight
+    - name: "Hot Dog"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: hangdog
+    - name: "Amigo"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: hangdog
+    - name: "Alpinfuchs"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
