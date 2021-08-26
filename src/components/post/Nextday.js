@@ -6,13 +6,14 @@ import React from "react"
 
 import { primaryShadedButton } from "../../styles"
 
-const Nextday = ({ path }) => (
-  <p css={{ textAlign: "right" }}>
-    <Link to={path} css={primaryShadedButton}>
-      Next day <FontAwesomeIcon icon={faChevronRight} />
-    </Link>
-  </p>
-)
+const Nextday = ({ path }) =>
+  path && (
+    <p css={{ textAlign: "right" }}>
+      <Link to={path} css={primaryShadedButton}>
+        Next day <FontAwesomeIcon icon={faChevronRight} />
+      </Link>
+    </p>
+  )
 
 Nextday.propTypes = {
   path: PropTypes.string.isRequired,
