@@ -202,7 +202,11 @@ const createYearlyIndices = async ({ actions, graphql }) => {
 }
 
 const createSearchIndex = async ({ graphql }) => {
-  const extractTextFromMdxAst = ({ type, value, children }) => {
+  const extractTextFromMdxAst = node => {
+    if (!node) {
+      return ""
+    }
+    const { type, value, children } = node
     if (type === "text") return value
     if (!children) return ""
     if (type === "paragraph")
