@@ -36,7 +36,7 @@ const Map = ({ children, ...props }) => {
     "trYjZiOSJ9.u2TRWUpD5guUay3Nn_Twiw"
   return (
     <MapContainer
-      css={{ height: "100%" }}
+      css={{ height: "100%", zIndex: 0 }}
       dragging={!leaflet.Browser.mobile}
       tap={!leaflet.Browser.mobile}
       scrollWheelZoom={false}
