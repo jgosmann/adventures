@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "types": ["@emotion/core"],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
