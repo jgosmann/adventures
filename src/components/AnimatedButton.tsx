@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react"
-import PropTypes from "prop-types"
+import React, { MouseEventHandler, useEffect, useState } from "react"
 import { keyframes } from "@emotion/react"
 
 import { defaultShadedButton } from "../styles"
@@ -15,7 +14,13 @@ const animation = keyframes`
   }
 `
 
-const AnimatedButton = ({ children, onClick, title }) => {
+export interface AnimatedButtonProps {
+  children?: React.ReactNode
+  onClick: MouseEventHandler<HTMLButtonElement>
+  title?: string
+}
+
+const AnimatedButton = ({ children, onClick, title }: AnimatedButtonProps) => {
   const [isAnimating, setIsAnimating] = useState(false)
   useEffect(() => {
     if (isAnimating) {
@@ -23,7 +28,9 @@ const AnimatedButton = ({ children, onClick, title }) => {
     }
   }, [isAnimating])
 
-  const onClickInternal = e => {
+  const onClickInternal = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     setIsAnimating(true)
     onClick(e)
   }
@@ -58,12 +65,6 @@ const AnimatedButton = ({ children, onClick, title }) => {
       ) : null}
     </button>
   )
-}
-
-AnimatedButton.propTypes = {
-  children: PropTypes.node,
-  onClick: PropTypes.func,
-  title: PropTypes.string,
 }
 
 export default AnimatedButton
