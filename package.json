@@ -3,16 +3,25 @@
   "version": "0.2.0",
   "private": true,
   "devDependencies": {
+    "@babel/core": "^7.16.7",
     "@emotion/eslint-plugin": "^11.2.0",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/builder-webpack5": "^6.4.9",
+    "@storybook/manager-webpack5": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.4.0",
     "axios": "^0.21.1",
     "babel-jest": "^27.4.5",
+    "babel-loader": "^8.2.3",
     "babel-preset-gatsby": "^2.4.0",
     "cypress": "^7.6.0",
     "eslint": "^7.29.0",
     "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-storybook": "^0.5.5",
     "flexsearch": "^0.6.32",
     "gatsby-cli": "^3.8.0",
     "identity-obj-proxy": "^3.0.0",
@@ -21,7 +30,8 @@
     "p-limit": "^3.1.0",
     "prettier": "^2.3.2",
     "random-email": "^1.0.3",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "storybook-addon-gatsby": "^0.0.3"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
@@ -69,6 +79,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
