@@ -60,7 +60,15 @@ export const fullHeight = css`
   }
 `
 
-export const shadedButton = ({ mainColor, highlight, shade }) => css`
+export const shadedButton = ({
+  mainColor,
+  highlight,
+  shade,
+}: {
+  mainColor: string
+  highlight: string
+  shade: string
+}) => css`
   background-color: ${mainColor};
   background: linear-gradient(180deg, ${mainColor} 60%, ${shade} 100%);
   border: none;
