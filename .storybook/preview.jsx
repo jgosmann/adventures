@@ -1,3 +1,4 @@
+import React from "react"
 import ContentStyleWrapper from "../src/components/ContentStyleWrapper"
 import { fontStyle } from "../src/components/HtmlHead/font"
 

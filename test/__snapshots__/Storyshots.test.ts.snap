@@ -1,0 +1,585 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Controls/Animated Button Animated Button 1`] = `
+<div
+  className="css-112qwlz"
+>
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>
+  <button
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "1dpsly4",
+          "next": undefined,
+          "styles": "
+  background-color: rgb(230, 230, 230);
+  background: linear-gradient(180deg, rgb(230, 230, 230) 60%, rgb(180, 180, 180) 100%);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  display: inline-block;
+
+  margin-left: 8px;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: $highlight;
+    background: linear-gradient(180deg, rgb(246, 246, 246) 60%, rgb(180, 180, 180) 100%);
+  }
+
+  &:active {
+    transition: 0s;
+    background: rgb(230, 230, 230);
+  }
+",
+          "toString": [Function],
+        },
+        Object {
+          "&:hover": Object {
+            "color": "#000",
+          },
+          "color": "#000",
+          "margin": 4,
+          "padding": "1px 4px",
+          "position": "relative",
+        },
+      ]
+    }
+    onClick={[Function]}
+    title="Click me!"
+  >
+    Label
+  </button>
+</div>
+`;
+
+exports[`Storyshots Crypted/Copy Button With Title 1`] = `
+<div
+  className="css-112qwlz"
+>
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>
+  <button
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "1dpsly4",
+          "next": undefined,
+          "styles": "
+  background-color: rgb(230, 230, 230);
+  background: linear-gradient(180deg, rgb(230, 230, 230) 60%, rgb(180, 180, 180) 100%);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  display: inline-block;
+
+  margin-left: 8px;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: $highlight;
+    background: linear-gradient(180deg, rgb(246, 246, 246) 60%, rgb(180, 180, 180) 100%);
+  }
+
+  &:active {
+    transition: 0s;
+    background: rgb(230, 230, 230);
+  }
+",
+          "toString": [Function],
+        },
+        Object {
+          "&:hover": Object {
+            "color": "#000",
+          },
+          "color": "#000",
+          "margin": 4,
+          "padding": "1px 4px",
+          "position": "relative",
+        },
+      ]
+    }
+    onClick={[Function]}
+    title="Title"
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-copy fa-w-14 "
+      data-icon="copy"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Crypted/Copy Button Without Title 1`] = `
+<div
+  className="css-112qwlz"
+>
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>
+  <button
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "1dpsly4",
+          "next": undefined,
+          "styles": "
+  background-color: rgb(230, 230, 230);
+  background: linear-gradient(180deg, rgb(230, 230, 230) 60%, rgb(180, 180, 180) 100%);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  display: inline-block;
+
+  margin-left: 8px;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: $highlight;
+    background: linear-gradient(180deg, rgb(246, 246, 246) 60%, rgb(180, 180, 180) 100%);
+  }
+
+  &:active {
+    transition: 0s;
+    background: rgb(230, 230, 230);
+  }
+",
+          "toString": [Function],
+        },
+        Object {
+          "&:hover": Object {
+            "color": "#000",
+          },
+          "color": "#000",
+          "margin": 4,
+          "padding": "1px 4px",
+          "position": "relative",
+        },
+      ]
+    }
+    onClick={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-copy fa-w-14 "
+      data-icon="copy"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Crypted/Email Email 1`] = `
+<div
+  className="css-112qwlz"
+>
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>
+  <a
+    className="crypted-email"
+    css={
+      Object {
+        "&:after": Object {
+          "content": "attr(data-name) \\"@\\" attr(data-domain) \\".\\" attr(data-tld)",
+        },
+        "marginRight": 4,
+      }
+    }
+    data-domain="domain"
+    data-name="name"
+    data-tld="tld"
+    href="#"
+    onClick={[Function]}
+    title="Write email"
+  />
+  <button
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "1dpsly4",
+          "next": undefined,
+          "styles": "
+  background-color: rgb(230, 230, 230);
+  background: linear-gradient(180deg, rgb(230, 230, 230) 60%, rgb(180, 180, 180) 100%);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  display: inline-block;
+
+  margin-left: 8px;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: $highlight;
+    background: linear-gradient(180deg, rgb(246, 246, 246) 60%, rgb(180, 180, 180) 100%);
+  }
+
+  &:active {
+    transition: 0s;
+    background: rgb(230, 230, 230);
+  }
+",
+          "toString": [Function],
+        },
+        Object {
+          "&:hover": Object {
+            "color": "#000",
+          },
+          "color": "#000",
+          "margin": 4,
+          "padding": "1px 4px",
+          "position": "relative",
+        },
+      ]
+    }
+    onClick={[Function]}
+    title="Copy email address"
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-copy fa-w-14 "
+      data-icon="copy"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Crypted/Phone Phone 1`] = `
+<div
+  className="css-112qwlz"
+>
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>
+  <span
+    css={
+      Object {
+        "&:after": Object {
+          "content": "attr(data-country) \\"\\\\202f\\" attr(data-area) \\"\\\\202f\\" attr(data-block0) \\"\\\\202f\\" attr(data-block1)",
+        },
+        "marginRight": 4,
+      }
+    }
+    data-area="174"
+    data-block0="123"
+    data-block1="4567"
+    data-country="+49"
+  />
+  <button
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "1dpsly4",
+          "next": undefined,
+          "styles": "
+  background-color: rgb(230, 230, 230);
+  background: linear-gradient(180deg, rgb(230, 230, 230) 60%, rgb(180, 180, 180) 100%);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  display: inline-block;
+
+  margin-left: 8px;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: $highlight;
+    background: linear-gradient(180deg, rgb(246, 246, 246) 60%, rgb(180, 180, 180) 100%);
+  }
+
+  &:active {
+    transition: 0s;
+    background: rgb(230, 230, 230);
+  }
+",
+          "toString": [Function],
+        },
+        Object {
+          "&:hover": Object {
+            "color": "#000",
+          },
+          "color": "#000",
+          "margin": 4,
+          "padding": "1px 4px",
+          "position": "relative",
+        },
+      ]
+    }
+    onClick={[Function]}
+    title="Copy phone number"
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-copy fa-w-14 "
+      data-icon="copy"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </button>
+</div>
+`;
