@@ -1,6 +1,8 @@
 import PropTypes from "prop-types"
 import React, { Component, createRef } from "react"
 
+/* global grecaptcha */
+
 let recaptchaLoaded = false
 const recaptchaInstances = []
 

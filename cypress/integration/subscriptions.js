@@ -31,7 +31,7 @@ describe("The subscription process", function () {
       .its("onRecaptchaLoad")
       .then(fn => fn())
 
-    cy.get("form.email-submission-form").within(form => {
+    cy.get("form.email-submission-form").within(() => {
       cy.get('input[type="email"]').type(email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
@@ -46,7 +46,7 @@ describe("The subscription process", function () {
       cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
     })
 
-    cy.get("form.email-submission-form").within(form => {
+    cy.get("form.email-submission-form").within(() => {
       cy.get('input[type="email"]').should("have.attr", "value", email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
@@ -64,7 +64,7 @@ describe("The subscription process", function () {
       .its("onRecaptchaLoad")
       .then(fn => fn())
 
-    cy.get("form.email-submission-form").within(form => {
+    cy.get("form.email-submission-form").within(() => {
       cy.get('input[type="email"]').type(email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
@@ -79,7 +79,7 @@ describe("The subscription process", function () {
       cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
     })
 
-    cy.get("form.email-submission-form").within(form => {
+    cy.get("form.email-submission-form").within(() => {
       cy.get('input[type="email"]').should("have.attr", "value", email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
