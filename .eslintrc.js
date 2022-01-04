@@ -9,6 +9,7 @@ module.exports = {
     "plugin:storybook/recommended",
     "plugin:jest-dom/recommended",
     "plugin:cypress/recommended",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -30,6 +31,7 @@ module.exports = {
         "plugin:storybook/recommended",
         "plugin:jest-dom/recommended",
         "plugin:cypress/recommended",
+        "prettier",
       ],
     },
     {

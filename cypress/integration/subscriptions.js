@@ -10,7 +10,7 @@ describe("The subscription process", function () {
         return originalFetch(
           url.replace(
             "https://doveseed.adventures.jgosmann.de",
-            "http://localhost:5000"
+            "http://127.0.0.1:5000"
           ),
           options
         )
@@ -46,8 +46,11 @@ describe("The subscription process", function () {
       cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
     })
 
+    cy.get('form.email-submission-form input[type="email"]').should(
+      "have.value",
+      email
+    )
     cy.get("form.email-submission-form").within(() => {
-      cy.get('input[type="email"]').should("have.attr", "value", email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
     })
@@ -79,8 +82,11 @@ describe("The subscription process", function () {
       cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
     })
 
+    cy.get('form.email-submission-form input[type="email"]').should(
+      "have.value",
+      email
+    )
     cy.get("form.email-submission-form").within(() => {
-      cy.get('input[type="email"]').should("have.attr", "value", email)
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
     })
