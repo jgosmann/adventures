@@ -11,6 +11,7 @@
     "@storybook/addon-storyshots": "^6.4.9",
     "@storybook/builder-webpack5": "^6.4.9",
     "@storybook/manager-webpack5": "^6.4.9",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.4.9",
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.16.1",
@@ -24,6 +25,7 @@
     "babel-jest": "^27.4.5",
     "babel-loader": "^8.2.3",
     "babel-preset-gatsby": "^2.4.0",
+    "css-loader": "^6.5.1",
     "cypress": "^7.6.0",
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
@@ -42,7 +44,9 @@
     "prettier": "^2.3.2",
     "random-email": "^1.0.3",
     "react-test-renderer": "^17.0.2",
+    "sass-loader": "^12.4.0",
     "storybook-addon-gatsby": "^0.0.3",
+    "style-loader": "^3.3.1",
     "typescript": "^4.5.4"
   },
   "dependencies": {
