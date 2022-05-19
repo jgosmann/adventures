@@ -56,7 +56,7 @@ const ElevationProfile = ({ data }: ElevationProfileProps) => {
         minHeight: 200,
         height: "50vh",
         maxHeight: 400,
-        margin: "16px 64px",
+        margin: 16,
       }}
     >
       {typeof window === "undefined" ? (
