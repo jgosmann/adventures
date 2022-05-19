@@ -1,9 +1,10 @@
 import PropTypes from "prop-types"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Polyline, useMap } from "react-leaflet"
 
 import colors from "../../colors"
 import Map from "../leaflet/Map"
+import WithRemoteGpxTrack from "./WithRemoteGpxTrack"
 
 const SetBounds = ({ bounds }) => {
   const map = useMap()
@@ -18,32 +19,25 @@ SetBounds.propTypes = {
 }
 
 const GpxTrack = ({ url }) => {
-  const [segments, setSegments] = useState([[[0, 0]]])
-  useEffect(() => {
-    const req = new XMLHttpRequest()
-    req.addEventListener("load", () => {
-      setSegments(
-        Array.from(
-          req.responseXML.getElementsByTagName("trkseg")
-        ).map(segment =>
-          Array.from(segment.getElementsByTagName("trkpt")).map(point => [
-            point.getAttribute("lat"),
-            point.getAttribute("lon"),
-          ])
-        )
-      )
-    })
-    req.open("GET", url)
-    req.send()
-  }, [])
-
   return (
-    <Map css={{ height: 600, margin: "32px 0" }}>
-      <SetBounds bounds={segments.flat()} />
-      {segments.map((segment, i) => (
-        <Polyline color={colors.highlight} key={i} positions={segment} />
-      ))}
-    </Map>
+    <WithRemoteGpxTrack
+      url={url}
+      render={track => {
+        const segments = track
+          ? track.segments.map(segment =>
+              segment.map(point => [point.lat, point.lon])
+            )
+          : [[[0, 0]]]
+        return (
+          <Map css={{ height: 600, margin: "32px 0" }}>
+            <SetBounds bounds={segments.flat()} />
+            {segments.map((segment, i) => (
+              <Polyline color={colors.highlight} key={i} positions={segment} />
+            ))}
+          </Map>
+        )
+      }}
+    />
   )
 }
 

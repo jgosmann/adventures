@@ -7,6 +7,7 @@ import React from "react"
 import ClimbingLog from "./ClimbingLog"
 import { LocalStorageGradeContext } from "./ClimbingLog/Grade"
 import ContentStyleWrapper from "../ContentStyleWrapper"
+import ElevationProfile from "./ElevationProfile"
 import Gallery from "./Gallery"
 import GpxTrack from "./GpxTrack"
 import Grade from "./ClimbingLog/Grade"
@@ -16,6 +17,7 @@ import Pano from "./Pano"
 import Rimg from "./Rimg"
 import Travel from "./Travel"
 import Video from "./Video"
+import WithRemoteGpxTrack from "./WithRemoteGpxTrack"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
@@ -59,6 +61,22 @@ export const dataFragment = graphql`
   }
 `
 
+const earthRadiusMeters = 6371e3
+const calcDistKilometers = (p1, p2) => {
+  const phi1 = (p1.lat * Math.PI) / 180
+  const phi2 = (p2.lat * Math.PI) / 180
+  const deltaPhi = ((p2.lat - p1.lat) * Math.PI) / 180
+  const deltaLambda = ((p2.lon - p1.lon) * Math.PI) / 180
+  const a =
+    Math.sin(deltaPhi / 2) * Math.sin(deltaPhi / 2) +
+    Math.cos(phi1) *
+      Math.cos(phi2) *
+      Math.sin(deltaLambda / 2) *
+      Math.sin(deltaLambda / 2)
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+  return (earthRadiusMeters * c) / 1000
+}
+
 const Content = ({ mdx, nextPath }) => {
   const gpxTracks = Object.assign(
     {},
@@ -68,6 +86,37 @@ const Content = ({ mdx, nextPath }) => {
   )
   const BoundGpxTrack = ({ src }) => <GpxTrack url={gpxTracks[src]} />
   BoundGpxTrack.propTypes = {
+    src: PropTypes.string.isRequired,
+  }
+  const BoundElevationProfile = ({ src }) => (
+    <WithRemoteGpxTrack
+      url={gpxTracks[src]}
+      render={track => (
+        <ElevationProfile
+          data={(track?.segments || [])
+            .flatMap(segment => segment)
+            .reduce((mappedArray, point) => {
+              const distKilometers =
+                mappedArray.length === 0
+                  ? 0
+                  : mappedArray[mappedArray.length - 1].distKilometers +
+                    calcDistKilometers(
+                      mappedArray[mappedArray.length - 1],
+                      point
+                    )
+              mappedArray.push({
+                lat: point.lat,
+                lon: point.lon,
+                distKilometers,
+                elevationMeters: point.elevationMeters,
+              })
+              return mappedArray
+            }, [])}
+        />
+      )}
+    />
+  )
+  BoundElevationProfile.propTypes = {
     src: PropTypes.string.isRequired,
   }
 
@@ -108,6 +157,7 @@ const Content = ({ mdx, nextPath }) => {
   const BoundNextday = () => <Nextday path={nextPath} />
 
   const mdxComponents = {
+    ElevationProfile: BoundElevationProfile,
     Gallery,
     GpxTrack: BoundGpxTrack,
     Grade,
