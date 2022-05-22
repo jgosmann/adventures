@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { ResponsiveLine } from "@nivo/line"
 
 import Spinner from "../Spinner"
@@ -42,6 +42,9 @@ export const Tooltip = ({ point }: TooltipProps) => (
 )
 
 const ElevationProfile = ({ data }: ElevationProfileProps) => {
+  const [render, setRender] = useState(false)
+  useEffect(() => setRender(true), [])
+
   const minElevation = Math.min(...data.map(x => x.elevationMeters))
   const maxElevation = Math.max(...data.map(x => x.elevationMeters))
   const yBottom = Math.min(
@@ -59,7 +62,7 @@ const ElevationProfile = ({ data }: ElevationProfileProps) => {
         margin: 16,
       }}
     >
-      {typeof window === "undefined" ? (
+      {!render || typeof window === "undefined" ? (
         <div css={{ textAlign: "center", fontSize: 48 }}>
           <Spinner />
         </div>
