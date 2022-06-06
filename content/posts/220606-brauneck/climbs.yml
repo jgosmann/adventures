@@ -1,0 +1,32 @@
+- date: 2022-06-06T19:16:25+02:00
+  ascents:
+    - name: "Salatlaus"
+      grade:
+        system: UIAA
+        value: "4"
+      style: onsight
+    - name: "Sparifankerl"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Dottori"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Frommage de Stie"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: flash
+    - name: "Le soleil est près de moi"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Steinbrecher"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: onsight
