@@ -59,10 +59,8 @@ const SubscribePage = () => (
             <a href="http://newsfox.mozdev.org/">NewsFox plugin for Firefox</a>.
           </li>
           <li>
-            Many might prefer to get email notifications. Currently, I am not
-            offering such a service myself for technical and legal reasons. But
-            there are online services that send you email notifications based on
-            an RSS feed:
+            You can use an online service that sends you email notifications
+            based on an RSS feed:
             <ul>
               <li>
                 <a href="https://ifttt.com/applets/147561p-rss-feed-to-email">
