@@ -1,0 +1,22 @@
+- date: 2022-06-06T19:16:25+02:00
+  ascents:
+    - name: "Kamikaze Frosch"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
+    - name: "Headcornerstone"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: redpoint
+    - name: "Pizza-Connection"
+      grade:
+        system: UIAA
+        value: "7"
+      style: redpoint
+    - name: "Unknown"
+      grade:
+        system: UIAA
+        value: "4"
+      style: onsight
