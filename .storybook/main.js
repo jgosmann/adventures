@@ -7,6 +7,7 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "storybook-addon-gatsby",
     {
       name: "@storybook/preset-scss",
       options: {
@@ -48,6 +49,7 @@ module.exports = {
     )
     config.resolve.alias["gatsby-original"] = require.resolve("gatsby")
     config.resolve.alias["gatsby"] = require.resolve("./mocks/gatsby.js")
+
     return config
   },
 }

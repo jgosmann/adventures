@@ -1,7 +1,9 @@
 import React from "react"
 import { fontStyle } from "../src/components/HtmlHead/font"
+import { decorator as staticQueryDecorator } from "./mocks/gatsby"
 
 export const decorators = [
+  staticQueryDecorator,
   Story => (
     <>
       <style type="text/css">{fontStyle}</style>
