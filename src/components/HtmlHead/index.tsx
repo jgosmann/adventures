@@ -1,11 +1,24 @@
 import { graphql, useStaticQuery } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import { Helmet } from "react-helmet"
 
 import { fontStyle } from "./font"
 
-const HtmlHead = ({ description, imageSrc, title, language, path }) => {
+export interface HtmlHeadProps {
+  description?: string
+  language: string
+  imageSrc?: string
+  path: string
+  title?: string
+}
+
+const HtmlHead = ({
+  description,
+  imageSrc,
+  title,
+  language,
+  path,
+}: HtmlHeadProps) => {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -60,14 +73,6 @@ const HtmlHead = ({ description, imageSrc, title, language, path }) => {
       <style type="text/css">{fontStyle}</style>
     </Helmet>
   )
-}
-
-HtmlHead.propTypes = {
-  description: PropTypes.string,
-  language: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string,
-  path: PropTypes.string.isRequired,
-  title: PropTypes.string,
 }
 
 export default HtmlHead
