@@ -19,6 +19,9 @@ export const ElevationProfile = () => (
     ]}
   />
 )
+ElevationProfile.parameters = {
+  storyshots: { disable: true }, // Renders only spinner or empty canvas initially
+}
 
 export const Tooltip = () => (
   <div style={{ display: "inline-block" }}>
