@@ -1,24 +1,68 @@
 import { graphql, useStaticQuery } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useContext, useRef, useState, useEffect } from "react"
+import React, {
+  useContext,
+  useRef,
+  useState,
+  useEffect,
+  ChangeEventHandler,
+} from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
 import colors from "../../../colors"
 
-const sportGrades = ["UIAA", "YDS", "french"]
-const boulderingGrades = ["Fb_bloc", "Fb_trav", "V"]
+const sportGrades = ["UIAA", "YDS", "french"] as const
+const boulderingGrades = ["Fb_bloc", "Fb_trav", "V"] as const
 
-const GradeContext = React.createContext({
+type SportGradeSystem = typeof sportGrades[number]
+type BoulderingGradeSystem = typeof boulderingGrades[number]
+type System = SportGradeSystem | BoulderingGradeSystem
+
+const isSportGrade = (system: string | null): system is SportGradeSystem => {
+  return !!sportGrades.find(it => it === system)
+}
+
+const isBoulderingGrade = (
+  system: string | null
+): system is BoulderingGradeSystem => {
+  return !!boulderingGrades.find(it => it === system)
+}
+
+interface ConversionTable {
+  allClimbingGradesCsv: {
+    nodes: Array<{
+      [k in System]: string
+    }>
+  }
+}
+
+interface DefaultGradeSystems {
+  defaultBoulderingGradeSystem: BoulderingGradeSystem | null
+  defaultSportGradeSystem: SportGradeSystem | null
+}
+
+interface GradeContextValue extends DefaultGradeSystems {
+  getDefaultSystem: (system: System) => System | null
+  setDefaultGradeSystems: (systems: Partial<DefaultGradeSystems>) => void
+}
+
+const GradeContext = React.createContext<GradeContextValue>({
   setDefaultGradeSystems: () => undefined,
+  getDefaultSystem: () => null,
   defaultBoulderingGradeSystem: null,
   defaultSportGradeSystem: null,
 })
 
 let nextId = 0
 
-export const LocalStorageGradeContext = ({ children }) => {
-  const [state, setState] = useState({
+export interface LocalStorageGradeContextProps {
+  children?: React.ReactNode
+}
+
+export const LocalStorageGradeContext = ({
+  children,
+}: LocalStorageGradeContextProps) => {
+  const [state, setState] = useState<DefaultGradeSystems>({
     defaultBoulderingGradeSystem: null,
     defaultSportGradeSystem: null,
   })
@@ -26,18 +70,31 @@ export const LocalStorageGradeContext = ({ children }) => {
     setState(state => ({
       ...state,
       defaultBoulderingGradeSystem:
-        window && window.localStorage.getItem("defaultBoulderingGradeSystem"),
+        (window &&
+          boulderingGrades.find(
+            it =>
+              it === window.localStorage.getItem("defaultBoulderingGradeSystem")
+          )) ||
+        null,
       defaultSportGradeSystem:
-        window && window.localStorage.getItem("defaultSportGradeSystem"),
+        (window &&
+          sportGrades.find(
+            it => it === window.localStorage.getItem("defaultSportGradeSystem")
+          )) ||
+        null,
     }))
   }, [])
 
-  const setDefaultGradeSystems = systems => {
-    setState(systems)
+  const setDefaultGradeSystems = (systems: Partial<DefaultGradeSystems>) => {
+    setState({
+      defaultBoulderingGradeSystem:
+        systems.defaultBoulderingGradeSystem ?? null,
+      defaultSportGradeSystem: systems.defaultSportGradeSystem ?? null,
+    })
     Object.entries(systems).forEach(([key, value]) => {
       try {
         if (window && value) {
-          window.localStorage.setItem(key, systems[key])
+          window.localStorage.setItem(key, value)
         }
       } catch (err) {
         console.warn(`Failed to store ${key} in local storage.`)
@@ -45,8 +102,8 @@ export const LocalStorageGradeContext = ({ children }) => {
     })
   }
 
-  const getDefaultSystem = system =>
-    boulderingGrades.indexOf(system) >= 0
+  const getDefaultSystem = (system: string) =>
+    isBoulderingGrade(system)
       ? state.defaultBoulderingGradeSystem
       : state.defaultSportGradeSystem
 
@@ -59,12 +116,21 @@ export const LocalStorageGradeContext = ({ children }) => {
   )
 }
 
-LocalStorageGradeContext.propTypes = {
-  children: PropTypes.node,
+export interface GradeProps {
+  system: System
+  value: string
 }
 
-const Grade = ({ system, value }) => {
-  const [state, setState] = useState({
+interface GradeState {
+  expanded: boolean
+  xTranslation: number
+  selectedSystem: System | null
+  hasPendingUpdate: boolean
+  id: number
+}
+
+const Grade = ({ system, value }: GradeProps) => {
+  const [state, setState] = useState<GradeState>({
     expanded: false,
     xTranslation: 0,
     selectedSystem: null,
@@ -72,11 +138,13 @@ const Grade = ({ system, value }) => {
     id: nextId++,
   })
   const gradeContext = useContext(GradeContext)
-  const updateDefaultSystem = state => {
+  const updateDefaultSystem = (state: GradeState) => {
     const update =
-      boulderingGrades.indexOf(state.selectedSystem) >= 0
+      state.selectedSystem && isBoulderingGrade(state.selectedSystem)
         ? { defaultBoulderingGradeSystem: state.selectedSystem }
-        : { defaultSportGradeSystem: state.selectedSystem }
+        : isSportGrade(state.selectedSystem)
+        ? { defaultSportGradeSystem: state.selectedSystem }
+        : {}
     gradeContext.setDefaultGradeSystems(update)
   }
   useEffect(() => {
@@ -85,16 +153,20 @@ const Grade = ({ system, value }) => {
       updateDefaultSystem(state)
     }
   }, [state])
-  const ref = useRef(null)
-  const dropDownRef = useRef(null)
+  const ref = useRef<HTMLButtonElement>(null)
+  const dropDownRef = useRef<HTMLFormElement>(null)
   useEffect(() => {
     const collapse = () =>
       setState(current => ({
         ...current,
         expanded: false,
       }))
-    const onClick = ev => {
-      if (ref.current.contains(ev.target)) return
+    const onClick = (ev: MouseEvent) => {
+      if (
+        ev.target instanceof HTMLButtonElement &&
+        ref.current?.contains(ev.target)
+      )
+        return
       setState(current => {
         return {
           ...current,
@@ -120,7 +192,7 @@ const Grade = ({ system, value }) => {
     }
   }, [gradeContext])
 
-  const conversionTable = useStaticQuery(graphql`
+  const conversionTable = useStaticQuery<ConversionTable>(graphql`
     query {
       allClimbingGradesCsv {
         nodes {
@@ -135,7 +207,14 @@ const Grade = ({ system, value }) => {
     }
   `).allClimbingGradesCsv.nodes
 
-  const convertGrade = (value, fromSystem, toSystem) => {
+  const convertGrade = (
+    value: string,
+    fromSystem: System,
+    toSystem: System | null
+  ) => {
+    if (toSystem === null) {
+      return undefined
+    }
     let index = conversionTable.findIndex(row => row[fromSystem] === value)
     for (; index >= 0 && !conversionTable[index][toSystem]; --index);
     if (index < 0) {
@@ -144,7 +223,13 @@ const Grade = ({ system, value }) => {
     return { system: toSystem, value: conversionTable[index][toSystem] }
   }
 
-  const gradeToString = ({ system, value }) => {
+  const gradeToString = ({
+    system,
+    value,
+  }: {
+    system: System
+    value: string
+  }) => {
     if (system === "V") {
       return value
     } else {
@@ -152,7 +237,13 @@ const Grade = ({ system, value }) => {
     }
   }
 
-  const renderGrade = ({ system, value }) => {
+  const renderGrade = ({
+    system,
+    value,
+  }: {
+    system: System
+    value: string
+  }) => {
     if (system === "V") {
       return value
     } else {
@@ -175,8 +266,9 @@ const Grade = ({ system, value }) => {
     }
   }
 
-  const relevantConversions =
-    boulderingGrades.indexOf(system) >= 0 ? boulderingGrades : sportGrades
+  const relevantConversions = isBoulderingGrade(system)
+    ? boulderingGrades
+    : sportGrades
   const convertedGrades = relevantConversions
     .map(toSystem => convertGrade(value, system, toSystem))
     .filter(grade => !!grade)
@@ -190,18 +282,24 @@ const Grade = ({ system, value }) => {
     system,
   }
 
-  const selectionChanged = ev => {
-    const newSystem = ev.target.value
-    setState(current => ({
-      ...current,
-      selectedSystem: newSystem,
-    }))
+  const selectionChanged: ChangeEventHandler<HTMLInputElement> = ev => {
+    const newSystem = ev.target.value === "null" ? null : ev.target.value
+    if (
+      isBoulderingGrade(newSystem) ||
+      isSportGrade(newSystem) ||
+      newSystem === null
+    ) {
+      setState(current => ({
+        ...current,
+        selectedSystem: newSystem,
+      }))
+    }
   }
 
   return (
     <button
       ref={ref}
-      title={convertedGrades.map(gradeToString).join("\n")}
+      title={convertedGrades.map(it => it && gradeToString(it)).join("\n")}
       className="climbingGrade"
       css={{
         position: "relative",
@@ -229,15 +327,17 @@ const Grade = ({ system, value }) => {
       onClick={ev => {
         ev.preventDefault()
         setState(current => {
-          const translateXBy = Math.abs(
-            Math.min(
-              0,
-              dropDownRef.current.getBoundingClientRect().right -
-                current.xTranslation -
-                dropDownRef.current.clientWidth -
-                2
-            )
-          )
+          const translateXBy = dropDownRef.current
+            ? Math.abs(
+                Math.min(
+                  0,
+                  dropDownRef.current.getBoundingClientRect().right -
+                    current.xTranslation -
+                    dropDownRef.current.clientWidth -
+                    2
+                )
+              )
+            : 0
           return {
             ...current,
             expanded: !current.expanded,
@@ -247,7 +347,7 @@ const Grade = ({ system, value }) => {
         })
       }}
       onBlur={ev => {
-        if (!ref.current.contains(ev.relatedTarget) && state.expanded) {
+        if (!ref.current?.contains(ev.relatedTarget) && state.expanded) {
           setState(current => ({
             ...current,
             expanded: false,
@@ -299,7 +399,7 @@ const Grade = ({ system, value }) => {
             type="radio"
             name="system"
             value="null"
-            checked={state.selectedSystem === "null"}
+            checked={state.selectedSystem === null}
             onChange={selectionChanged}
           />{" "}
           <label htmlFor={`gradeSelect-${state.id}-null`}>
@@ -311,42 +411,44 @@ const Grade = ({ system, value }) => {
           Show grades as
           <table css={{ td: { padding: "0 4px 0" } }}>
             <tbody>
-              {convertedGrades.map(grade => (
-                <tr key={grade.system}>
-                  <td>
-                    <input
-                      tabIndex={state.expanded ? 0 : -1}
-                      id={`gradeSelect-${state.id}-${grade.system}`}
-                      type="radio"
-                      name="system"
-                      checked={state.selectedSystem === grade.system}
-                      value={grade.system}
-                      onChange={selectionChanged}
-                    />
-                  </td>
-                  <td>
-                    <label htmlFor={`gradeSelect-${state.id}-${grade.system}`}>
-                      {grade.system.replace("_", " ")}
-                    </label>
-                  </td>
-                  <td css={{ fontWeight: "bold" }}>
-                    <label htmlFor={`gradeSelect-${state.id}-${grade.system}`}>
-                      {grade.value}
-                    </label>
-                  </td>
-                </tr>
-              ))}
+              {convertedGrades.map(
+                grade =>
+                  grade && (
+                    <tr key={grade.system}>
+                      <td>
+                        <input
+                          tabIndex={state.expanded ? 0 : -1}
+                          id={`gradeSelect-${state.id}-${grade.system}`}
+                          type="radio"
+                          name="system"
+                          checked={state.selectedSystem === grade.system}
+                          value={grade.system}
+                          onChange={selectionChanged}
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor={`gradeSelect-${state.id}-${grade.system}`}
+                        >
+                          {grade.system.replace("_", " ")}
+                        </label>
+                      </td>
+                      <td css={{ fontWeight: "bold" }}>
+                        <label
+                          htmlFor={`gradeSelect-${state.id}-${grade.system}`}
+                        >
+                          {grade.value}
+                        </label>
+                      </td>
+                    </tr>
+                  )
+              )}
             </tbody>
           </table>
         </div>
       </form>
     </button>
   )
-}
-
-Grade.propTypes = {
-  system: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
 }
 
 export default Grade
