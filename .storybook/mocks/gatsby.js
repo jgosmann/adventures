@@ -1,4 +1,7 @@
+const React = require("react")
 module.exports = require("gatsby-original")
+
+module.exports.Link = ({ to, ...props }) => <a href={to} {...props} />
 
 module.exports.withPrefix = path => path
 
