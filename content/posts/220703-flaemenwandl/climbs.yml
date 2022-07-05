@@ -1,0 +1,22 @@
+- date: 2022-07-03T19:16:25+02:00
+  ascents:
+    - name: "De Mauerfix"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Kruzifix"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Donnerrose"
+      grade:
+        system: french
+        value: "6b+"
+      style: flash
+    - name: "Jean Marie Pfaff"
+      grade:
+        system: french
+        value: "6b+"
+      style: redpoint
