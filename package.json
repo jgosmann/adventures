@@ -5,6 +5,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@emotion/eslint-plugin": "^11.2.0",
+    "@emotion/jest": "^11.9.3",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-interactions": "^6.5.9",

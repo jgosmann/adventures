@@ -8,6 +8,15 @@ export default {
   component: MainLinks,
   parameters: {
     chromatic: { viewports: [minFullWidth - 1, minFullWidth + 1] },
+    staticQuery: {
+      allSitePage: {
+        nodes: [
+          { path: "/year/2020", context: { year: 2020 } },
+          { path: "/year/2021", context: { year: 2021 } },
+          { path: "/year/2022", context: { year: 2022 } },
+        ],
+      },
+    },
   },
 }
 

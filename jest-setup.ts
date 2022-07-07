@@ -1,13 +1,8 @@
 import "@testing-library/jest-dom"
 import "isomorphic-fetch"
 import ResizeObserver from "resize-observer-polyfill"
+import { matchers } from "@emotion/jest"
+
+expect.extend(matchers)
 
 global.ResizeObserver = ResizeObserver
-
-beforeEach(() => {
-  jest.spyOn(global.Math, "random").mockReturnValue(0.123456789)
-})
-
-afterEach(() => {
-  jest.spyOn(global.Math, "random").mockRestore()
-})

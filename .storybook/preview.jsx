@@ -1,6 +1,6 @@
 import React from "react"
 import { fontStyle } from "../src/components/HtmlHead/font"
-import { decorator as staticQueryDecorator } from "./mocks/gatsby"
+import { decorator as staticQueryDecorator } from "../test/mockStaticQuery"
 
 export const decorators = [
   staticQueryDecorator,
