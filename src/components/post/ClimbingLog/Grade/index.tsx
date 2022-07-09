@@ -224,3 +224,5 @@ const Grade = ({ system, value }: GradeProps) => {
 }
 
 export default Grade
+
+export { LocalStorageGradeContext } from "./GradeContext"
