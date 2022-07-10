@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 export interface TrackPoint {
   lat?: number
@@ -48,7 +48,7 @@ export const useRemoteGpxTrack = (url: string): Track | undefined => {
 
 export interface WithRemoteGpxTrackProps {
   url: string
-  render: (track?: Track) => React.ReactNode
+  render: (track?: Track) => JSX.Element
 }
 
 const WithRemoteGpxTrack = ({ url, render }: WithRemoteGpxTrackProps) => {
