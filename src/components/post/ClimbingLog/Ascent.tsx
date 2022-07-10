@@ -1,9 +1,8 @@
 import { graphql } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-import Grade from "./Grade"
-import Style from "./Style"
+import Grade, { GradeProps } from "./Grade"
+import Style, { AscenionStyle } from "./Style"
 
 export const dataFragment = graphql`
   fragment Ascent_data on ClimbsYamlAscents {
@@ -24,7 +23,22 @@ export const dataFragment = graphql`
   }
 `
 
-const Ascent = ({ data, pitch }) => {
+export interface Pitch {
+  name?: string
+  style?: AscenionStyle
+  grade?: GradeProps
+}
+
+export interface Route extends Pitch {
+  pitches?: Pitch[]
+}
+
+export interface AscentProps {
+  data: Route
+  pitch?: number
+}
+
+const Ascent = ({ data, pitch }: AscentProps) => {
   return (
     <span
       css={
@@ -62,11 +76,6 @@ const Ascent = ({ data, pitch }) => {
       )}
     </span>
   )
-}
-
-Ascent.propTypes = {
-  data: PropTypes.object.isRequired,
-  pitch: PropTypes.number,
 }
 
 export default Ascent

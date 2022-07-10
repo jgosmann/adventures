@@ -56,8 +56,10 @@ const styleMap = {
 }
 /* eslint-enable react/display-name */
 
+export type AscenionStyle = keyof typeof styleMap
+
 export interface StyleProps {
-  ascensionStyle: keyof typeof styleMap
+  ascensionStyle: AscenionStyle
 }
 
 const Style = ({ ascensionStyle }: StyleProps) => {

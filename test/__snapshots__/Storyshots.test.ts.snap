@@ -10001,6 +10001,1131 @@ Array [
 ]
 `;
 
+exports[`Storyshots Post/Climbing Log/Ascent Multi Pitch 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <span
+    className="css-t9gjfx-Ascent"
+  >
+    Stairway to Heaven
+     
+    (
+    7
+     pitches)
+    <ol>
+      <li>
+        <span
+          className="css-t9gjfx-Ascent"
+        >
+          <svg
+            aria-labelledby="svg-inline--fa-title-777777777777"
+            className="svg-inline--fa fa-dog fa-w-18 fa-fw "
+            data-icon="dog"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="svg-inline--fa-title-777777777777"
+              style={Object {}}
+            >
+              Hang dog
+            </title>
+            <path
+              d="M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+           
+          Pitch 1
+          : 
+          Womem in Comfortable Shoes
+           
+          (
+          <button
+            className="climbingGrade css-1y5ensw-Grade"
+            data-testid="grade"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            title="YDS 5.10a"
+          >
+            <span
+              className="css-p1fctf-GradeView"
+              data-testid="grade-system"
+            >
+              YDS
+            </span>
+             
+            5.10a
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-caret-down fa-w-10 "
+              data-icon="caret-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <form
+              className="css-1hyivot-Selector"
+              data-testid="grade-selector"
+              onClick={[Function]}
+            >
+              <div
+                className="css-a7el8w-Selector"
+              >
+                <input
+                  checked={true}
+                  id="gradeSelect-0-null"
+                  name="system"
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  type="radio"
+                  value="null"
+                />
+                 
+                <label
+                  htmlFor="gradeSelect-0-null"
+                >
+                  Show original grades
+                </label>
+              </div>
+              <div>
+                 
+                Show grades as
+                <table
+                  className="css-17ouugz-Selector"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          checked={false}
+                          id="gradeSelect-0-YDS"
+                          name="system"
+                          onChange={[Function]}
+                          tabIndex={-1}
+                          type="radio"
+                          value="YDS"
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor="gradeSelect-0-YDS"
+                        >
+                          YDS
+                        </label>
+                      </td>
+                      <td
+                        className="css-650gtv-Selector"
+                      >
+                        <label
+                          htmlFor="gradeSelect-0-YDS"
+                        >
+                          5.10a
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </button>
+          )
+        </span>
+      </li>
+      <li>
+        <span
+          className="css-t9gjfx-Ascent"
+        >
+          <svg
+            aria-labelledby="svg-inline--fa-title-777777777777"
+            className="svg-inline--fa fa-eye fa-w-18 fa-fw "
+            data-icon="eye"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="svg-inline--fa-title-777777777777"
+              style={Object {}}
+            >
+              Onsight
+            </title>
+            <path
+              d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+           
+          Pitch 2
+           
+          (
+          <button
+            className="climbingGrade css-1y5ensw-Grade"
+            data-testid="grade"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            title="YDS 5.10a"
+          >
+            <span
+              className="css-p1fctf-GradeView"
+              data-testid="grade-system"
+            >
+              YDS
+            </span>
+             
+            5.10a
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-caret-down fa-w-10 "
+              data-icon="caret-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <form
+              className="css-1hyivot-Selector"
+              data-testid="grade-selector"
+              onClick={[Function]}
+            >
+              <div
+                className="css-a7el8w-Selector"
+              >
+                <input
+                  checked={true}
+                  id="gradeSelect-1-null"
+                  name="system"
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  type="radio"
+                  value="null"
+                />
+                 
+                <label
+                  htmlFor="gradeSelect-1-null"
+                >
+                  Show original grades
+                </label>
+              </div>
+              <div>
+                 
+                Show grades as
+                <table
+                  className="css-17ouugz-Selector"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          checked={false}
+                          id="gradeSelect-1-YDS"
+                          name="system"
+                          onChange={[Function]}
+                          tabIndex={-1}
+                          type="radio"
+                          value="YDS"
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor="gradeSelect-1-YDS"
+                        >
+                          YDS
+                        </label>
+                      </td>
+                      <td
+                        className="css-650gtv-Selector"
+                      >
+                        <label
+                          htmlFor="gradeSelect-1-YDS"
+                        >
+                          5.10a
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </button>
+          )
+        </span>
+      </li>
+      <li>
+        <span
+          className="css-t9gjfx-Ascent"
+        >
+          <svg
+            aria-labelledby="svg-inline--fa-title-777777777777"
+            className="svg-inline--fa fa-first-aid fa-w-18 fa-fw "
+            data-icon="first-aid"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="svg-inline--fa-title-777777777777"
+              style={Object {}}
+            >
+              Aid
+            </title>
+            <path
+              d="M0 80v352c0 26.5 21.5 48 48 48h48V32H48C21.5 32 0 53.5 0 80zm128 400h320V32H128v448zm64-248c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48zM528 32h-48v448h48c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+           
+          Pitch 3
+          : 
+          Xenolith Dance
+           
+          (
+          <button
+            className="climbingGrade css-1y5ensw-Grade"
+            data-testid="grade"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            title="YDS 5.10c"
+          >
+            <span
+              className="css-p1fctf-GradeView"
+              data-testid="grade-system"
+            >
+              YDS
+            </span>
+             
+            5.10c
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-caret-down fa-w-10 "
+              data-icon="caret-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <form
+              className="css-1hyivot-Selector"
+              data-testid="grade-selector"
+              onClick={[Function]}
+            >
+              <div
+                className="css-a7el8w-Selector"
+              >
+                <input
+                  checked={true}
+                  id="gradeSelect-2-null"
+                  name="system"
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  type="radio"
+                  value="null"
+                />
+                 
+                <label
+                  htmlFor="gradeSelect-2-null"
+                >
+                  Show original grades
+                </label>
+              </div>
+              <div>
+                 
+                Show grades as
+                <table
+                  className="css-17ouugz-Selector"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          checked={false}
+                          id="gradeSelect-2-YDS"
+                          name="system"
+                          onChange={[Function]}
+                          tabIndex={-1}
+                          type="radio"
+                          value="YDS"
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor="gradeSelect-2-YDS"
+                        >
+                          YDS
+                        </label>
+                      </td>
+                      <td
+                        className="css-650gtv-Selector"
+                      >
+                        <label
+                          htmlFor="gradeSelect-2-YDS"
+                        >
+                          5.10c
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </button>
+          )
+        </span>
+      </li>
+      <li>
+        <span
+          className="css-t9gjfx-Ascent"
+        >
+          <svg
+            aria-labelledby="svg-inline--fa-title-777777777777"
+            className="svg-inline--fa fa-eye fa-w-18 fa-fw "
+            data-icon="eye"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="svg-inline--fa-title-777777777777"
+              style={Object {}}
+            >
+              Onsight
+            </title>
+            <path
+              d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+           
+          Pitch 4
+           
+          (
+          <button
+            className="climbingGrade css-1y5ensw-Grade"
+            data-testid="grade"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            title="YDS 5.10a"
+          >
+            <span
+              className="css-p1fctf-GradeView"
+              data-testid="grade-system"
+            >
+              YDS
+            </span>
+             
+            5.10a
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-caret-down fa-w-10 "
+              data-icon="caret-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <form
+              className="css-1hyivot-Selector"
+              data-testid="grade-selector"
+              onClick={[Function]}
+            >
+              <div
+                className="css-a7el8w-Selector"
+              >
+                <input
+                  checked={true}
+                  id="gradeSelect-3-null"
+                  name="system"
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  type="radio"
+                  value="null"
+                />
+                 
+                <label
+                  htmlFor="gradeSelect-3-null"
+                >
+                  Show original grades
+                </label>
+              </div>
+              <div>
+                 
+                Show grades as
+                <table
+                  className="css-17ouugz-Selector"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          checked={false}
+                          id="gradeSelect-3-YDS"
+                          name="system"
+                          onChange={[Function]}
+                          tabIndex={-1}
+                          type="radio"
+                          value="YDS"
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor="gradeSelect-3-YDS"
+                        >
+                          YDS
+                        </label>
+                      </td>
+                      <td
+                        className="css-650gtv-Selector"
+                      >
+                        <label
+                          htmlFor="gradeSelect-3-YDS"
+                        >
+                          5.10a
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </button>
+          )
+        </span>
+      </li>
+      <li>
+        <span
+          className="css-1259mfy-Ascent"
+        >
+          skipped
+           
+          Pitch 5
+          : 
+          Dyke Link
+           
+          (
+          <button
+            className="climbingGrade css-1y5ensw-Grade"
+            data-testid="grade"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            title="YDS 5.10a"
+          >
+            <span
+              className="css-p1fctf-GradeView"
+              data-testid="grade-system"
+            >
+              YDS
+            </span>
+             
+            5.10a
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-caret-down fa-w-10 "
+              data-icon="caret-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <form
+              className="css-1hyivot-Selector"
+              data-testid="grade-selector"
+              onClick={[Function]}
+            >
+              <div
+                className="css-a7el8w-Selector"
+              >
+                <input
+                  checked={true}
+                  id="gradeSelect-4-null"
+                  name="system"
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  type="radio"
+                  value="null"
+                />
+                 
+                <label
+                  htmlFor="gradeSelect-4-null"
+                >
+                  Show original grades
+                </label>
+              </div>
+              <div>
+                 
+                Show grades as
+                <table
+                  className="css-17ouugz-Selector"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          checked={false}
+                          id="gradeSelect-4-YDS"
+                          name="system"
+                          onChange={[Function]}
+                          tabIndex={-1}
+                          type="radio"
+                          value="YDS"
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor="gradeSelect-4-YDS"
+                        >
+                          YDS
+                        </label>
+                      </td>
+                      <td
+                        className="css-650gtv-Selector"
+                      >
+                        <label
+                          htmlFor="gradeSelect-4-YDS"
+                        >
+                          5.10a
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </button>
+          )
+        </span>
+      </li>
+      <li>
+        <span
+          className="css-t9gjfx-Ascent"
+        >
+          <svg
+            aria-labelledby="svg-inline--fa-title-777777777777"
+            className="svg-inline--fa fa-dog fa-w-18 fa-fw "
+            data-icon="dog"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="svg-inline--fa-title-777777777777"
+              style={Object {}}
+            >
+              Hang dog
+            </title>
+            <path
+              d="M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+           
+          Pitch 6
+          : 
+          Moonwatcher
+           
+          (
+          <button
+            className="climbingGrade css-1y5ensw-Grade"
+            data-testid="grade"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            title="YDS 5.9"
+          >
+            <span
+              className="css-p1fctf-GradeView"
+              data-testid="grade-system"
+            >
+              YDS
+            </span>
+             
+            5.9
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-caret-down fa-w-10 "
+              data-icon="caret-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <form
+              className="css-1hyivot-Selector"
+              data-testid="grade-selector"
+              onClick={[Function]}
+            >
+              <div
+                className="css-a7el8w-Selector"
+              >
+                <input
+                  checked={true}
+                  id="gradeSelect-5-null"
+                  name="system"
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  type="radio"
+                  value="null"
+                />
+                 
+                <label
+                  htmlFor="gradeSelect-5-null"
+                >
+                  Show original grades
+                </label>
+              </div>
+              <div>
+                 
+                Show grades as
+                <table
+                  className="css-17ouugz-Selector"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          checked={false}
+                          id="gradeSelect-5-YDS"
+                          name="system"
+                          onChange={[Function]}
+                          tabIndex={-1}
+                          type="radio"
+                          value="YDS"
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor="gradeSelect-5-YDS"
+                        >
+                          YDS
+                        </label>
+                      </td>
+                      <td
+                        className="css-650gtv-Selector"
+                      >
+                        <label
+                          htmlFor="gradeSelect-5-YDS"
+                        >
+                          5.9
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </button>
+          )
+        </span>
+      </li>
+      <li>
+        <span
+          className="css-1259mfy-Ascent"
+        >
+          not attempted
+           
+          Pitch 7
+           
+          (
+          <button
+            className="climbingGrade css-1y5ensw-Grade"
+            data-testid="grade"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            title="YDS 5.10a"
+          >
+            <span
+              className="css-p1fctf-GradeView"
+              data-testid="grade-system"
+            >
+              YDS
+            </span>
+             
+            5.10a
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-caret-down fa-w-10 "
+              data-icon="caret-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <form
+              className="css-1hyivot-Selector"
+              data-testid="grade-selector"
+              onClick={[Function]}
+            >
+              <div
+                className="css-a7el8w-Selector"
+              >
+                <input
+                  checked={true}
+                  id="gradeSelect-6-null"
+                  name="system"
+                  onChange={[Function]}
+                  tabIndex={-1}
+                  type="radio"
+                  value="null"
+                />
+                 
+                <label
+                  htmlFor="gradeSelect-6-null"
+                >
+                  Show original grades
+                </label>
+              </div>
+              <div>
+                 
+                Show grades as
+                <table
+                  className="css-17ouugz-Selector"
+                >
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          checked={false}
+                          id="gradeSelect-6-YDS"
+                          name="system"
+                          onChange={[Function]}
+                          tabIndex={-1}
+                          type="radio"
+                          value="YDS"
+                        />
+                      </td>
+                      <td>
+                        <label
+                          htmlFor="gradeSelect-6-YDS"
+                        >
+                          YDS
+                        </label>
+                      </td>
+                      <td
+                        className="css-650gtv-Selector"
+                      >
+                        <label
+                          htmlFor="gradeSelect-6-YDS"
+                        >
+                          5.10a
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </button>
+          )
+        </span>
+      </li>
+    </ol>
+  </span>,
+]
+`;
+
+exports[`Storyshots Post/Climbing Log/Ascent Single Pitch 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <span
+    className="css-t9gjfx-Ascent"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-eye fa-w-18 fa-fw "
+      data-icon="eye"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 576 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Onsight
+      </title>
+      <path
+        d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+     
+    La Dura Dura
+     
+    (
+    <button
+      className="climbingGrade css-1y5ensw-Grade"
+      data-testid="grade"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      title="french 9b+"
+    >
+      <span
+        className="css-p1fctf-GradeView"
+        data-testid="grade-system"
+      >
+        french
+      </span>
+       
+      9b+
+       
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-caret-down fa-w-10 "
+        data-icon="caret-down"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+      <form
+        className="css-1hyivot-Selector"
+        data-testid="grade-selector"
+        onClick={[Function]}
+      >
+        <div
+          className="css-a7el8w-Selector"
+        >
+          <input
+            checked={true}
+            id="gradeSelect-7-null"
+            name="system"
+            onChange={[Function]}
+            tabIndex={-1}
+            type="radio"
+            value="null"
+          />
+           
+          <label
+            htmlFor="gradeSelect-7-null"
+          >
+            Show original grades
+          </label>
+        </div>
+        <div>
+           
+          Show grades as
+          <table
+            className="css-17ouugz-Selector"
+          >
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    checked={false}
+                    id="gradeSelect-7-french"
+                    name="system"
+                    onChange={[Function]}
+                    tabIndex={-1}
+                    type="radio"
+                    value="french"
+                  />
+                </td>
+                <td>
+                  <label
+                    htmlFor="gradeSelect-7-french"
+                  >
+                    french
+                  </label>
+                </td>
+                <td
+                  className="css-650gtv-Selector"
+                >
+                  <label
+                    htmlFor="gradeSelect-7-french"
+                  >
+                    9b+
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </button>
+    )
+  </span>,
+]
+`;
+
 exports[`Storyshots Post/Climbing Log/Grade Grade 1`] = `
 Array [
   <style
@@ -10091,7 +11216,7 @@ french 7a+"
       >
         <input
           checked={true}
-          id="gradeSelect-0-null"
+          id="gradeSelect-8-null"
           name="system"
           onChange={[Function]}
           tabIndex={-1}
@@ -10100,7 +11225,7 @@ french 7a+"
         />
          
         <label
-          htmlFor="gradeSelect-0-null"
+          htmlFor="gradeSelect-8-null"
         >
           Show original grades
         </label>
@@ -10116,7 +11241,7 @@ french 7a+"
               <td>
                 <input
                   checked={false}
-                  id="gradeSelect-0-UIAA"
+                  id="gradeSelect-8-UIAA"
                   name="system"
                   onChange={[Function]}
                   tabIndex={-1}
@@ -10126,7 +11251,7 @@ french 7a+"
               </td>
               <td>
                 <label
-                  htmlFor="gradeSelect-0-UIAA"
+                  htmlFor="gradeSelect-8-UIAA"
                 >
                   UIAA
                 </label>
@@ -10135,7 +11260,7 @@ french 7a+"
                 className="css-650gtv-Selector"
               >
                 <label
-                  htmlFor="gradeSelect-0-UIAA"
+                  htmlFor="gradeSelect-8-UIAA"
                 >
                   8+
                 </label>
@@ -10145,7 +11270,7 @@ french 7a+"
               <td>
                 <input
                   checked={false}
-                  id="gradeSelect-0-YDS"
+                  id="gradeSelect-8-YDS"
                   name="system"
                   onChange={[Function]}
                   tabIndex={-1}
@@ -10155,7 +11280,7 @@ french 7a+"
               </td>
               <td>
                 <label
-                  htmlFor="gradeSelect-0-YDS"
+                  htmlFor="gradeSelect-8-YDS"
                 >
                   YDS
                 </label>
@@ -10164,7 +11289,7 @@ french 7a+"
                 className="css-650gtv-Selector"
               >
                 <label
-                  htmlFor="gradeSelect-0-YDS"
+                  htmlFor="gradeSelect-8-YDS"
                 >
                   5.11d
                 </label>
@@ -10174,7 +11299,7 @@ french 7a+"
               <td>
                 <input
                   checked={false}
-                  id="gradeSelect-0-french"
+                  id="gradeSelect-8-french"
                   name="system"
                   onChange={[Function]}
                   tabIndex={-1}
@@ -10184,7 +11309,7 @@ french 7a+"
               </td>
               <td>
                 <label
-                  htmlFor="gradeSelect-0-french"
+                  htmlFor="gradeSelect-8-french"
                 >
                   french
                 </label>
@@ -10193,7 +11318,7 @@ french 7a+"
                 className="css-650gtv-Selector"
               >
                 <label
-                  htmlFor="gradeSelect-0-french"
+                  htmlFor="gradeSelect-8-french"
                 >
                   7a+
                 </label>
