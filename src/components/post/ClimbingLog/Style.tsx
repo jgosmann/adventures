@@ -8,7 +8,6 @@ import { faLevelDownAlt } from "@fortawesome/free-solid-svg-icons"
 import { faRedoAlt } from "@fortawesome/free-solid-svg-icons"
 import { faRunning } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import PropTypes from "prop-types"
 import React from "react"
 
 const circledStyle = css({
@@ -52,18 +51,17 @@ const styleMap = {
   ),
   aid: () => <FontAwesomeIcon icon={faFirstAid} fixedWidth title="Aid" />,
   bailed: () => <FontAwesomeIcon icon={faRunning} fixedWidth title="Bailed" />,
+  skipped: () => <>skipped</>,
+  ["not attempted"]: () => <>not attempted</>,
 }
 /* eslint-enable react/display-name */
 
-const Style = ({ ascensionStyle }) => {
-  const component = styleMap[ascensionStyle]
-  return component ? component() : ascensionStyle
+export interface StyleProps {
+  ascensionStyle: keyof typeof styleMap
 }
 
-Style.propTypes = {
-  ascensionStyle: PropTypes.oneOf(
-    Object.keys(styleMap).concat(["skipped", "not attempted"])
-  ).isRequired,
+const Style = ({ ascensionStyle }: StyleProps) => {
+  return styleMap[ascensionStyle]()
 }
 
 export default Style
