@@ -10001,6 +10001,58 @@ Array [
 ]
 `;
 
+exports[`Storyshots Post/Caption Caption 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-2ezuxv-captionStyle"
+  >
+    This is the caption text.
+  </div>,
+]
+`;
+
 exports[`Storyshots Post/Climbing Log Climbing Log 1`] = `
 Array [
   <style

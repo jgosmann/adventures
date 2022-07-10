@@ -1,5 +1,4 @@
 import { css } from "@emotion/react"
-import PropTypes from "prop-types"
 import React from "react"
 
 const captionStyle = css({
@@ -15,10 +14,12 @@ const captionStyle = css({
   textAlign: "left",
 })
 
-const Caption = ({ children }) => <div css={captionStyle}>{children}</div>
-
-Caption.propTypes = {
-  children: PropTypes.node,
+export interface CaptionProps {
+  children?: React.ReactNode
 }
+
+const Caption = ({ children }: CaptionProps) => (
+  <div css={captionStyle}>{children}</div>
+)
 
 export default Caption
