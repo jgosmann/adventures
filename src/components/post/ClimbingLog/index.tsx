@@ -1,8 +1,7 @@
 import { graphql } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-import Ascent from "./Ascent"
+import Ascent, { Route } from "./Ascent"
 
 export const dataFragment = graphql`
   fragment ClimbingLog_data on ClimbsYaml {
@@ -12,7 +11,13 @@ export const dataFragment = graphql`
   }
 `
 
-const ClimbingLog = ({ climbs }) => (
+export interface ClimbingLogProps {
+  climbs: {
+    ascents: Route[]
+  }
+}
+
+const ClimbingLog = ({ climbs }: ClimbingLogProps) => (
   <>
     <h2>Climbing log book</h2>
     <ol>
@@ -24,9 +29,5 @@ const ClimbingLog = ({ climbs }) => (
     </ol>
   </>
 )
-
-ClimbingLog.propTypes = {
-  climbs: PropTypes.object.isRequired,
-}
 
 export default ClimbingLog
