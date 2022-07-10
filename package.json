@@ -45,6 +45,7 @@
     "isomorphic-fetch": "^3.0.0",
     "jest": "^27.4.5",
     "msw": "^0.36.8",
+    "msw-storybook-addon": "^1.6.3",
     "netlify-cli": "^6.7.6",
     "p-limit": "^3.1.0",
     "prettier": "^2.3.2",
@@ -109,5 +110,8 @@
     "cypress": "cypress open",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "msw": {
+    "workerDirectory": "msw"
   }
 }

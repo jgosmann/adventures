@@ -2,6 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "preserve",
+    "lib": ["es2021", "DOM"],
     "types": ["@emotion/core"],
     "strict": true,
     "forceConsistentCasingInFileNames": true

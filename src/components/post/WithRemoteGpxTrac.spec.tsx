@@ -20,6 +20,7 @@ describe("WithRemoteGpxTrack", () => {
               lon: 11.658008,
               elevationMeters: 547.95,
             },
+            { lat: 46.760972, lon: 12.034122, elevationMeters: 1046.056 },
           ],
           [
             {
