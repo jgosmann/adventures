@@ -44,7 +44,7 @@
     "identity-obj-proxy": "^3.0.0",
     "isomorphic-fetch": "^3.0.0",
     "jest": "^27.4.5",
-    "msw": "^0.36.3",
+    "msw": "^0.36.8",
     "netlify-cli": "^6.7.6",
     "p-limit": "^3.1.0",
     "prettier": "^2.3.2",
