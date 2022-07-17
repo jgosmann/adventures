@@ -1,7 +1,6 @@
 import { faCalendarDay } from "@fortawesome/free-solid-svg-icons"
 import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons"
 import { graphql } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
 import { semanticList } from "../styles"
@@ -22,7 +21,15 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 })
 
-const PostMeta = ({ frontmatter, timeToRead, className }) => (
+export interface PostMetaProps {
+  className?: string
+  frontmatter: {
+    date?: string
+  }
+  timeToRead?: number
+}
+
+const PostMeta = ({ frontmatter, timeToRead, className }: PostMetaProps) => (
   <ul css={semanticList} className={className}>
     {frontmatter.date && (
       <IconListItem icon={faCalendarDay} title="Date">
@@ -36,13 +43,5 @@ const PostMeta = ({ frontmatter, timeToRead, className }) => (
     )}
   </ul>
 )
-
-PostMeta.propTypes = {
-  className: PropTypes.string,
-  frontmatter: PropTypes.shape({
-    date: PropTypes.string,
-  }),
-  timeToRead: PropTypes.number,
-}
 
 export default PostMeta
