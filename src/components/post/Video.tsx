@@ -1,7 +1,10 @@
-import PropTypes from "prop-types"
 import React from "react"
 
-const Video = ({ src }) => (
+export interface VideoProps {
+  src: string
+}
+
+const Video = ({ src }: VideoProps) => (
   <div css={{ textAlign: "center", fontSize: 0, margin: 32 }}>
     <video
       controls
@@ -16,9 +19,5 @@ const Video = ({ src }) => (
     </video>
   </div>
 )
-
-Video.propTypes = {
-  src: PropTypes.string.isRequired,
-}
 
 export default Video
