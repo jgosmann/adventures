@@ -4,7 +4,6 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import PropTypes from "prop-types"
 import React, { useEffect, useRef, useState } from "react"
 
 const scrollArrowStyle = css({
@@ -29,23 +28,29 @@ const scrollArrowStyle = css({
   },
 })
 
-const useRefState = initialValue => {
+const useRefState = function useRefState<T>(
+  initialValue: T
+): [React.MutableRefObject<T>, (newValue: T) => void] {
   const ref = useRef(initialValue)
   const [, setState] = useState(initialValue)
   return [
     ref,
-    newValue => {
+    (newValue: T) => {
       ref.current = newValue
       setState(newValue)
     },
   ]
 }
 
-const VerticalScroll = ({ children }) => {
-  const scrollArea = useRef(null)
+export interface VerticalScrollProps {
+  children?: React.ReactNode
+}
+
+const VerticalScroll = ({ children }: VerticalScrollProps) => {
+  const scrollArea = useRef<HTMLDivElement>(null)
 
   const [scrollDirection, setScrollDirection] = useRefState(0)
-  const lastScrollProcessing = useRef(null)
+  const lastScrollProcessing = useRef<DOMHighResTimeStamp | null>(null)
   const [hover, setHover] = useState(0)
 
   const [showScrollArrows, setShowScrollArrows] = useState(true)
@@ -64,7 +69,7 @@ const VerticalScroll = ({ children }) => {
       window.removeEventListener("resize", determineScrollArrowVisibility)
   }, [])
 
-  const scroll = timestamp => {
+  const scroll = (timestamp: DOMHighResTimeStamp) => {
     if (scrollDirection.current == 0) {
       lastScrollProcessing.current = null
       return
@@ -75,24 +80,32 @@ const VerticalScroll = ({ children }) => {
       (lastScrollProcessing.current
         ? timestamp - lastScrollProcessing.current
         : 0)
-    scrollArea.current.scrollBy(delta, 0)
+    scrollArea.current?.scrollBy(delta, 0)
     lastScrollProcessing.current = timestamp
     window.requestAnimationFrame(scroll)
   }
-  const startScroll = direction => {
+  const startScroll = (direction: number) => {
     setHover(direction)
     setScrollDirection(direction)
     window.requestAnimationFrame(scroll)
   }
-  const stopScroll = (ev, direction) => {
+  const stopScroll = (
+    ev: React.MouseEvent | React.TouchEvent,
+    direction: number
+  ) => {
     if (direction !== scrollDirection.current) {
       return
     }
     setScrollDirection(0)
     lastScrollProcessing.current = null
-    ev.target.blur()
+    if (ev.target instanceof HTMLButtonElement) {
+      ev.target.blur()
+    }
   }
-  const handleMouseLeave = (ev, direction) => {
+  const handleMouseLeave = (
+    ev: React.MouseEvent | React.TouchEvent,
+    direction: number
+  ) => {
     setHover(0)
     stopScroll(ev, direction)
   }
@@ -126,6 +139,7 @@ const VerticalScroll = ({ children }) => {
                 display: "none",
               }
         }
+        title="Scroll left"
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
@@ -149,15 +163,12 @@ const VerticalScroll = ({ children }) => {
                 display: "none",
               }
         }
+        title="Scroll right"
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </>
   )
-}
-
-VerticalScroll.propTypes = {
-  children: PropTypes.node,
 }
 
 export default VerticalScroll
