@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import PropTypes from "prop-types"
+import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
 import React, { useContext, useState } from "react"
 
 import Caption from "./Caption"
@@ -22,7 +21,20 @@ export const dataFragment = graphql`
   }
 `
 
-const Rimg = ({ alt, caption, image, overlay, children }) => {
+export interface RimgProps {
+  alt?: string
+  caption?: string
+  children?: React.ReactNode
+  image: ImageDataLike & {
+    childImageSharp: {
+      original: { height: number; width: number }
+    }
+    publicURL: string
+  }
+  overlay?: string
+}
+
+const Rimg = ({ alt, caption, image, overlay, children }: RimgProps) => {
   const galleryContext = useContext(GalleryContext)
   const [showOverlay, setShowOverlay] = useState(true)
 
@@ -36,6 +48,8 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
     },
   }
 
+  const imageData = getImage(image)
+
   return (
     <div
       css={{
@@ -45,20 +59,22 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
     >
       <div css={{ display: "inline-block", position: "relative" }}>
         <a href={image.publicURL} title="View full size">
-          <GatsbyImage
-            image={getImage(image)}
-            alt={alt || caption}
-            css={{
-              maxWidth: "min(calc(100vw - 64px), 1280px)",
-              width: `calc(${height} * ${aspectRatio})`,
-              maxHeight: height,
-              boxShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",
-              borderRadius: 2,
-              display: "block",
-              ...(galleryContext.active ? gallerySpecificStyle : {}),
-            }}
-            imgStyle={{ transform: "none" }}
-          />
+          {imageData && (
+            <GatsbyImage
+              image={imageData}
+              alt={alt || caption || ""}
+              css={{
+                maxWidth: "min(calc(100vw - 64px), 1280px)",
+                width: `calc(${height} * ${aspectRatio})`,
+                maxHeight: height,
+                boxShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",
+                borderRadius: 2,
+                display: "block",
+                ...(galleryContext.active ? gallerySpecificStyle : {}),
+              }}
+              imgStyle={{ transform: "none" }}
+            />
+          )}
         </a>
         {overlay && showOverlay && (
           <object
@@ -114,14 +130,6 @@ const Rimg = ({ alt, caption, image, overlay, children }) => {
       </div>
     </div>
   )
-}
-
-Rimg.propTypes = {
-  alt: PropTypes.string,
-  caption: PropTypes.string,
-  children: PropTypes.node,
-  image: PropTypes.object.isRequired,
-  overlay: PropTypes.string,
 }
 
 export default Rimg

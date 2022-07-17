@@ -28,11 +28,24 @@ export const mockGatsbyImage = ({
 
 export const mockImageFileNode = (image: {
   gatsbyImageData: IGatsbyImageData
-}): FileNode & { gatsbyImageData: IGatsbyImageData; title: string } => ({
+}): FileNode & {
+  title: string
+  childImageSharp: { original: { width: number; height: number } }
+} => ({
   parent: "parent",
   id: "image-id",
   title: "Image title",
   children: [],
   internal: { type: "File", owner: "test-fixtures", contentDigest: "hash" },
-  ...image,
+  childImageSharp: {
+    ...image,
+    parent: "parent",
+    id: "image-id",
+    children: [],
+    internal: { type: "File", owner: "test-fixtures", contentDigest: "hash" },
+    original: {
+      width: image.gatsbyImageData.width,
+      height: image.gatsbyImageData.height,
+    },
+  },
 })

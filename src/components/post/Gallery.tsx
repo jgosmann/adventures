@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React from "react"
 
 export const GalleryContext = React.createContext({
@@ -6,7 +5,12 @@ export const GalleryContext = React.createContext({
   large: false,
 })
 
-const Gallery = ({ children, large }) => (
+export interface GalleryProps {
+  children?: React.ReactNode
+  large?: boolean
+}
+
+const Gallery = ({ children, large }: GalleryProps) => (
   <div
     css={{
       display: "flex",
@@ -19,10 +23,5 @@ const Gallery = ({ children, large }) => (
     </GalleryContext.Provider>
   </div>
 )
-
-Gallery.propTypes = {
-  children: PropTypes.node,
-  large: PropTypes.bool,
-}
 
 export default Gallery
