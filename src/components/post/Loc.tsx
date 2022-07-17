@@ -1,12 +1,16 @@
-import PropTypes from "prop-types"
 import React from "react"
 
 import Map from "../leaflet/Map"
 import Marker from "../leaflet/Marker"
 
-const munich = [48.1384, 11.5683]
+const munich: [number, number] = [48.1384, 11.5683]
 
-const Loc = ({ latlong, zoom }) => {
+export interface LocProps {
+  latlong: [number, number]
+  zoom?: number
+}
+
+const Loc = ({ latlong, zoom }: LocProps) => {
   const viewport = zoom
     ? {
         center: latlong,
@@ -21,11 +25,6 @@ const Loc = ({ latlong, zoom }) => {
       <Marker position={latlong} />
     </Map>
   )
-}
-
-Loc.propTypes = {
-  latlong: PropTypes.array.isRequired,
-  zoom: PropTypes.number,
 }
 
 export default Loc
