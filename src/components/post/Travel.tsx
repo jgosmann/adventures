@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React from "react"
 
 import colors from "../../colors"
@@ -6,7 +5,9 @@ import Geodesic from "../leaflet/Geodesic"
 import Map from "../leaflet/Map"
 import Marker from "../leaflet/Marker"
 
-const centerForZoomedViewport = route => {
+type Route = Array<[number, number]>
+
+const centerForZoomedViewport = (route: Route): [number, number] => {
   const latitudes = route.map(([lat]) => lat)
   const longitudes = route.map(([, long]) => long)
   return [
@@ -15,7 +16,13 @@ const centerForZoomedViewport = route => {
   ]
 }
 
-const Travel = ({ route, markIntermediate, zoom }) => {
+export interface TravelProps {
+  route: Route
+  markIntermediate?: boolean
+  zoom?: number
+}
+
+const Travel = ({ route, markIntermediate, zoom }: TravelProps) => {
   const viewport = zoom
     ? {
         center: centerForZoomedViewport(route),
@@ -38,12 +45,6 @@ const Travel = ({ route, markIntermediate, zoom }) => {
       )}
     </Map>
   )
-}
-
-Travel.propTypes = {
-  route: PropTypes.array.isRequired,
-  markIntermediate: PropTypes.bool,
-  zoom: PropTypes.number,
 }
 
 export default Travel
