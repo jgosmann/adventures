@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import PropTypes from "prop-types"
+import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
 import React from "react"
 
 import Caption from "./Caption"
@@ -40,9 +39,20 @@ export const dataFragment2x = graphql`
   }
 `
 
-const Pano = ({ alt, caption, image }) => {
+export interface PanoProps {
+  alt?: string
+  caption?: string
+  image: ImageDataLike & {
+    childImageSharp: {
+      original: { height: number; width: number }
+    }
+  }
+}
+
+const Pano = ({ alt, caption, image }: PanoProps) => {
   const aspectRatio = `(${image.childImageSharp.original.width} / ${image.childImageSharp.original.height})`
 
+  const imageData = getImage(image)
   return (
     <div
       css={{
@@ -52,26 +62,22 @@ const Pano = ({ alt, caption, image }) => {
       }}
     >
       <VerticalScroll>
-        <GatsbyImage
-          image={getImage(image)}
-          alt={alt || caption}
-          css={{
-            maxHeight: "100vh",
-            maxWidth: `calc(100vh * ${aspectRatio})`,
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        />
+        {imageData && (
+          <GatsbyImage
+            image={imageData}
+            alt={alt || caption || ""}
+            css={{
+              maxHeight: "100vh",
+              maxWidth: `calc(100vh * ${aspectRatio})`,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          />
+        )}
       </VerticalScroll>
       {caption && <Caption>{caption}</Caption>}
     </div>
   )
-}
-
-Pano.propTypes = {
-  alt: PropTypes.string,
-  caption: PropTypes.string,
-  image: PropTypes.object.isRequired,
 }
 
 export default Pano
