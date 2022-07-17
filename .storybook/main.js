@@ -19,7 +19,12 @@ module.exports = {
     },
   ],
   framework: "@storybook/react",
-  staticDirs: ["../static", "../node_modules/leaflet/dist/images", "../msw"],
+  staticDirs: [
+    "../static",
+    "../node_modules/leaflet/dist/images",
+    "../msw",
+    "../test/static",
+  ],
   core: {
     builder: "webpack5",
   },

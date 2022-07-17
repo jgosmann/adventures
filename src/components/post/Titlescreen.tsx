@@ -1,9 +1,9 @@
 import styled from "@emotion/styled"
+import { InterpolationWithTheme } from "@emotion/core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import PropTypes from "prop-types"
+import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
 
 import PostMeta from "../../components/PostMeta"
@@ -22,7 +22,7 @@ export const dataFragment = graphql`
   }
 `
 
-const titleStyle = {
+const titleStyle: InterpolationWithTheme<never> = {
   fontSize: "4vw",
   "@media (max-width: 600px)": {
     fontSize: 24,
@@ -50,7 +50,20 @@ const CoverImg = styled(GatsbyImage)({
   width: "100%",
 })
 
-const Titlescreen = ({ background, frontmatter, timeToRead }) => {
+export interface TitlescreenProps {
+  background: ImageDataLike
+  frontmatter: {
+    date: string
+    title: string
+  }
+  timeToRead: number
+}
+
+const Titlescreen = ({
+  background,
+  frontmatter,
+  timeToRead,
+}: TitlescreenProps) => {
   const [scrollRatio, setScrollRatio] = useState(0)
   const updateParallax = () => {
     window.requestAnimationFrame(() => {
@@ -70,6 +83,8 @@ const Titlescreen = ({ background, frontmatter, timeToRead }) => {
     }
   }, [])
 
+  const image = getImage(background)
+
   return (
     <div
       css={{
@@ -79,12 +94,14 @@ const Titlescreen = ({ background, frontmatter, timeToRead }) => {
         marginBottom: 32,
       }}
     >
-      <CoverImg
-        image={getImage(background)}
-        imgStyle={{ transform: `translate(0, ${50 * scrollRatio}%)` }}
-        loading="eager"
-        alt=""
-      />
+      {image && (
+        <CoverImg
+          image={image}
+          imgStyle={{ transform: `translate(0, ${50 * scrollRatio}%)` }}
+          loading="eager"
+          alt=""
+        />
+      )}
       <div
         css={{
           position: "absolute",
@@ -111,15 +128,6 @@ const Titlescreen = ({ background, frontmatter, timeToRead }) => {
       />
     </div>
   )
-}
-
-Titlescreen.propTypes = {
-  background: PropTypes.object.isRequired,
-  frontmatter: PropTypes.shape({
-    date: PropTypes.string,
-    title: PropTypes.string,
-  }),
-  timeToRead: PropTypes.number,
 }
 
 export default Titlescreen
