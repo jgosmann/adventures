@@ -31,6 +31,19 @@ const ContentStyleWrapper = styled("div")`
     display: block;
     max-width: 100vw;
   }
+
+  .attribution {
+    color: #888;
+    font-size: 0.8em;
+
+    a {
+      color: #888;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 `
 
 export default ContentStyleWrapper
