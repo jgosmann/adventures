@@ -1,0 +1,17 @@
+- date: 2022-07-24T19:16:25+02:00
+  ascents:
+    - name: "Magic"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Zack und Rauf"
+      grade:
+        system: UIAA
+        value: "7"
+      style: toprope
+    - name: "Toni's Platte"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: redpoint
