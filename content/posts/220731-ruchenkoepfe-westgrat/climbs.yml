@@ -1,0 +1,40 @@
+- date: 2022-07-31T19:16:25+02:00
+  ascents:
+    - name: "Ruchenköpfe Westgrat"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "2+"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "1"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "2+"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "1"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "2-"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "2+"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "1+"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "4"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "3-"
+          style: onsight
