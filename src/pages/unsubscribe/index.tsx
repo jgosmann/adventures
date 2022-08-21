@@ -10,8 +10,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 
 const UnsubscribePage = () => (
   <>
-    <HtmlHead path="/subscribe" language="en" />
-    <Navigation fixed />
+    <HtmlHead path="/unsubscribe" language="en" />
+    <Navigation path="/unsubscribe" fixed />
     <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>
         <h1>Unsubscribe from email notifications</h1>
@@ -30,7 +30,5 @@ const UnsubscribePage = () => (
     </main>
   </>
 )
-
-UnsubscribePage.propTypes = {}
 
 export default UnsubscribePage

@@ -10,13 +10,13 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 
 const ConfirmPage = () => (
   <>
-    <HtmlHead path="/subscribe" language="en" />
-    <Navigation fixed />
+    <HtmlHead path="/subscribe/confirm" language="en" />
+    <Navigation path="/subscribe/confirm" fixed />
     <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>
-        <h1>Confirm unsubscribing</h1>
+        <h1>Confirm subscription</h1>
         <p>
-          You are unsubscribing the following email address from email
+          You are subscribing the following email address to receive email
           notifications for new posts:
         </p>
         <p>
@@ -29,7 +29,5 @@ const ConfirmPage = () => (
     </main>
   </>
 )
-
-ConfirmPage.propTypes = {}
 
 export default ConfirmPage

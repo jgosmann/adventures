@@ -16,7 +16,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 const SubscribePage = () => (
   <>
     <HtmlHead path="/subscribe" language="en" />
-    <Navigation fixed />
+    <Navigation path="/subscribe" fixed />
     <main css={contentBaseStyle}>
       <ContentStyleWrapper>
         <h1>How to subscribe to the blog</h1>
@@ -79,7 +79,5 @@ const SubscribePage = () => (
     </main>
   </>
 )
-
-SubscribePage.propTypes = {}
 
 export default SubscribePage
