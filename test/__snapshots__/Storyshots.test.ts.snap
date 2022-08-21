@@ -1120,6 +1120,1344 @@ Array [
 ]
 `;
 
+exports[`Storyshots Controls/Search All Results 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ol
+    className="css-1xnxcqi-listStyle"
+  >
+    <li
+      className="css-1f2m1u8-listItemStyle"
+    >
+      <a
+        className="css-lqlori-PostPreview"
+        href="/post/url0"
+      >
+        <div
+          className="gatsby-image-wrapper css-1jj85uq-PostPreview"
+          data-gatsby-image-wrapper=""
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": 250,
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 300,
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            data-placeholder-image=""
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+          <img
+            alt=""
+            data-gatsby-image-ssr=""
+            data-main-image=""
+            data-src="background.png"
+            decoding="async"
+            loading="lazy"
+            onLoad={[Function]}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transform": "translateZ(0)",
+                "transition": "opacity 250ms linear",
+                "width": "100%",
+                "willChange": "opacity",
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              decoding="async"
+              loading="lazy"
+              onLoad={[Function]}
+              src="background.png"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": "translateZ(0)",
+                  "transition": "opacity 250ms linear",
+                  "width": "100%",
+                  "willChange": "opacity",
+                }
+              }
+            />
+          </noscript>
+          <script
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+              }
+            }
+            type="module"
+          />
+        </div>
+        <div
+          className="css-n9w22m-textBoxStyle"
+        >
+          <h2
+            className="css-b0l3km-PostPreview"
+          >
+            Post Title 0
+          </h2>
+          <ul
+            className="css-mf4x0r-semanticList-PostPreview"
+          >
+            <li
+              className="css-1xcs4yl-PostPreview"
+            >
+              <ul
+                className="css-f70qos-semanticList"
+              >
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+                    data-icon="calendar-day"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Date
+                    </title>
+                    <path
+                      d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  August 21, 2022
+                </li>
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+                    data-icon="hourglass-half"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 384 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Estimated reading duration
+                    </title>
+                    <path
+                      d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  42
+                   minute read
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ol
+                className="css-jeolgs-semanticList-commaSeparatedList"
+              >
+                <li>
+                  Box 1
+                </li>
+                <li>
+                  Box 2
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </li>
+    <li
+      className="css-1f2m1u8-listItemStyle"
+    >
+      <a
+        className="css-lqlori-PostPreview"
+        href="/post/url1"
+      >
+        <div
+          className="gatsby-image-wrapper css-1jj85uq-PostPreview"
+          data-gatsby-image-wrapper=""
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": 250,
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 300,
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            data-placeholder-image=""
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+          <img
+            alt=""
+            data-gatsby-image-ssr=""
+            data-main-image=""
+            data-src="background.png"
+            decoding="async"
+            loading="lazy"
+            onLoad={[Function]}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transform": "translateZ(0)",
+                "transition": "opacity 250ms linear",
+                "width": "100%",
+                "willChange": "opacity",
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              decoding="async"
+              loading="lazy"
+              onLoad={[Function]}
+              src="background.png"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": "translateZ(0)",
+                  "transition": "opacity 250ms linear",
+                  "width": "100%",
+                  "willChange": "opacity",
+                }
+              }
+            />
+          </noscript>
+          <script
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+              }
+            }
+            type="module"
+          />
+        </div>
+        <div
+          className="css-n9w22m-textBoxStyle"
+        >
+          <h2
+            className="css-b0l3km-PostPreview"
+          >
+            Post Title 1
+          </h2>
+          <ul
+            className="css-mf4x0r-semanticList-PostPreview"
+          >
+            <li
+              className="css-1xcs4yl-PostPreview"
+            >
+              <ul
+                className="css-f70qos-semanticList"
+              >
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+                    data-icon="calendar-day"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Date
+                    </title>
+                    <path
+                      d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  August 21, 2022
+                </li>
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+                    data-icon="hourglass-half"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 384 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Estimated reading duration
+                    </title>
+                    <path
+                      d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  42
+                   minute read
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ol
+                className="css-jeolgs-semanticList-commaSeparatedList"
+              >
+                <li>
+                  Box 1
+                </li>
+                <li>
+                  Box 2
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </li>
+  </ol>,
+]
+`;
+
+exports[`Storyshots Controls/Search Error 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ol
+    className="css-1xnxcqi-listStyle"
+  />,
+  <p
+    className="css-1qfbqm0-centerStyle"
+  >
+    Sorry, an error occured. 😵
+  </p>,
+]
+`;
+
+exports[`Storyshots Controls/Search Error With Result 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ol
+    className="css-1xnxcqi-listStyle"
+  >
+    <li
+      className="css-1f2m1u8-listItemStyle"
+    >
+      <a
+        className="css-lqlori-PostPreview"
+        href="/post/url0"
+      >
+        <div
+          className="gatsby-image-wrapper css-1jj85uq-PostPreview"
+          data-gatsby-image-wrapper=""
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": 250,
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 300,
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            data-placeholder-image=""
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+          <img
+            alt=""
+            data-gatsby-image-ssr=""
+            data-main-image=""
+            data-src="background.png"
+            decoding="async"
+            loading="lazy"
+            onLoad={[Function]}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transform": "translateZ(0)",
+                "transition": "opacity 250ms linear",
+                "width": "100%",
+                "willChange": "opacity",
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              decoding="async"
+              loading="lazy"
+              onLoad={[Function]}
+              src="background.png"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": "translateZ(0)",
+                  "transition": "opacity 250ms linear",
+                  "width": "100%",
+                  "willChange": "opacity",
+                }
+              }
+            />
+          </noscript>
+          <script
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+              }
+            }
+            type="module"
+          />
+        </div>
+        <div
+          className="css-n9w22m-textBoxStyle"
+        >
+          <h2
+            className="css-b0l3km-PostPreview"
+          >
+            Post Title 0
+          </h2>
+          <ul
+            className="css-mf4x0r-semanticList-PostPreview"
+          >
+            <li
+              className="css-1xcs4yl-PostPreview"
+            >
+              <ul
+                className="css-f70qos-semanticList"
+              >
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+                    data-icon="calendar-day"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Date
+                    </title>
+                    <path
+                      d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  August 21, 2022
+                </li>
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+                    data-icon="hourglass-half"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 384 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Estimated reading duration
+                    </title>
+                    <path
+                      d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  42
+                   minute read
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ol
+                className="css-jeolgs-semanticList-commaSeparatedList"
+              >
+                <li>
+                  Box 1
+                </li>
+                <li>
+                  Box 2
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </li>
+  </ol>,
+  <p
+    className="css-1qfbqm0-centerStyle"
+  >
+    Sorry, an error occured. 😵
+  </p>,
+]
+`;
+
+exports[`Storyshots Controls/Search First Page 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ol
+    className="css-1xnxcqi-listStyle"
+  >
+    <li
+      className="css-1f2m1u8-listItemStyle"
+    >
+      <a
+        className="css-lqlori-PostPreview"
+        href="/post/url0"
+      >
+        <div
+          className="gatsby-image-wrapper css-1jj85uq-PostPreview"
+          data-gatsby-image-wrapper=""
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": 250,
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 300,
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            data-placeholder-image=""
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+          <img
+            alt=""
+            data-gatsby-image-ssr=""
+            data-main-image=""
+            data-src="background.png"
+            decoding="async"
+            loading="lazy"
+            onLoad={[Function]}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transform": "translateZ(0)",
+                "transition": "opacity 250ms linear",
+                "width": "100%",
+                "willChange": "opacity",
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              decoding="async"
+              loading="lazy"
+              onLoad={[Function]}
+              src="background.png"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": "translateZ(0)",
+                  "transition": "opacity 250ms linear",
+                  "width": "100%",
+                  "willChange": "opacity",
+                }
+              }
+            />
+          </noscript>
+          <script
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+              }
+            }
+            type="module"
+          />
+        </div>
+        <div
+          className="css-n9w22m-textBoxStyle"
+        >
+          <h2
+            className="css-b0l3km-PostPreview"
+          >
+            Post Title 0
+          </h2>
+          <ul
+            className="css-mf4x0r-semanticList-PostPreview"
+          >
+            <li
+              className="css-1xcs4yl-PostPreview"
+            >
+              <ul
+                className="css-f70qos-semanticList"
+              >
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+                    data-icon="calendar-day"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Date
+                    </title>
+                    <path
+                      d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  August 21, 2022
+                </li>
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+                    data-icon="hourglass-half"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 384 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Estimated reading duration
+                    </title>
+                    <path
+                      d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  42
+                   minute read
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ol
+                className="css-jeolgs-semanticList-commaSeparatedList"
+              >
+                <li>
+                  Box 1
+                </li>
+                <li>
+                  Box 2
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </li>
+  </ol>,
+  <div
+    className="css-1qfbqm0-centerStyle"
+  >
+    <button
+      className="css-gp7sye-shadedButton-primaryShadedButton-primaryShadedButton"
+      onClick={[Function]}
+    >
+      Load more
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Controls/Search Loading 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ol
+    className="css-1xnxcqi-listStyle"
+  />,
+  <div
+    className="css-1qfbqm0-centerStyle"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-1iwybo3-Spinner-SearchView"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Controls/Search Loading More 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ol
+    className="css-1xnxcqi-listStyle"
+  >
+    <li
+      className="css-1f2m1u8-listItemStyle"
+    >
+      <a
+        className="css-lqlori-PostPreview"
+        href="/post/url0"
+      >
+        <div
+          className="gatsby-image-wrapper css-1jj85uq-PostPreview"
+          data-gatsby-image-wrapper=""
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": 250,
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 300,
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            data-placeholder-image=""
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+          <img
+            alt=""
+            data-gatsby-image-ssr=""
+            data-main-image=""
+            data-src="background.png"
+            decoding="async"
+            loading="lazy"
+            onLoad={[Function]}
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transform": "translateZ(0)",
+                "transition": "opacity 250ms linear",
+                "width": "100%",
+                "willChange": "opacity",
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              decoding="async"
+              loading="lazy"
+              onLoad={[Function]}
+              src="background.png"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": "translateZ(0)",
+                  "transition": "opacity 250ms linear",
+                  "width": "100%",
+                  "willChange": "opacity",
+                }
+              }
+            />
+          </noscript>
+          <script
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+              }
+            }
+            type="module"
+          />
+        </div>
+        <div
+          className="css-n9w22m-textBoxStyle"
+        >
+          <h2
+            className="css-b0l3km-PostPreview"
+          >
+            Post Title 0
+          </h2>
+          <ul
+            className="css-mf4x0r-semanticList-PostPreview"
+          >
+            <li
+              className="css-1xcs4yl-PostPreview"
+            >
+              <ul
+                className="css-f70qos-semanticList"
+              >
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+                    data-icon="calendar-day"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Date
+                    </title>
+                    <path
+                      d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  August 21, 2022
+                </li>
+                <li>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-777777777777"
+                    className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+                    data-icon="hourglass-half"
+                    data-prefix="fas"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 384 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title
+                      id="svg-inline--fa-title-777777777777"
+                      style={Object {}}
+                    >
+                      Estimated reading duration
+                    </title>
+                    <path
+                      d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                   
+                  42
+                   minute read
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ol
+                className="css-jeolgs-semanticList-commaSeparatedList"
+              >
+                <li>
+                  Box 1
+                </li>
+                <li>
+                  Box 2
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </li>
+  </ol>,
+  <div
+    className="css-1qfbqm0-centerStyle"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-1iwybo3-Spinner-SearchView"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Controls/Search No Results 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <p
+    className="css-1qfbqm0-centerStyle"
+  >
+    Unfortunately, nothing was found. 😞
+  </p>,
+]
+`;
+
 exports[`Storyshots Controls/Vertical Scroll Initial 1`] = `
 Array [
   <style
