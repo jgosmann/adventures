@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom"
 import "isomorphic-fetch"
-import ResizeObserver from "resize-observer-polyfill"
+import { ResizeObserver } from "@juggle/resize-observer"
 import { matchers } from "@emotion/jest"
 import { server } from "./src/mocks/server"
 
