@@ -54,6 +54,744 @@ Array [
 ]
 `;
 
+exports[`Storyshots Controls/Content Style Wrapper Content Style Wrapper 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-qo1cb7-ContentStyleWrapper-contentBaseStyle elekb7o0"
+  >
+    <h1>
+      Heading 1
+    </h1>
+    <h2>
+      Heading 2
+    </h2>
+    <h3>
+      Heading 3
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <ol>
+      <li>
+        Item 1
+      </li>
+      <li>
+        Item 2
+      </li>
+      <li>
+        Item 3
+      </li>
+    </ol>
+    <ul>
+      <li>
+        Item 1
+      </li>
+      <li>
+        Item 2
+      </li>
+      <li>
+        Item 3
+      </li>
+    </ul>
+    <iframe
+      srcDoc="<body style=\\"background: red;\\"></body>"
+    />
+    <p
+      className="attribution"
+    >
+      Attributed to 
+      <a
+        href="/"
+      >
+        link
+      </a>
+    </p>
+  </div>,
+]
+`;
+
+exports[`Storyshots Controls/Icon List Item Icon List Item 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ul>
+    <li>
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-address-book fa-w-14 fa-fw "
+        data-icon="address-book"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+       
+      Address book
+    </li>
+    <li>
+      <svg
+        aria-labelledby="svg-inline--fa-title-777777777777"
+        className="svg-inline--fa fa-air-freshener fa-w-16 fa-fw "
+        data-icon="air-freshener"
+        data-prefix="fas"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="svg-inline--fa-title-777777777777"
+          style={Object {}}
+        >
+          The title text.
+        </title>
+        <path
+          d="M224 160H96C43 160 0 203 0 256V480C0 497.625 14.375 512 32 512H288C305.625 512 320 497.625 320 480V256C320 203 277 160 224 160ZM160 416C115.875 416 80 380.125 80 336S115.875 256 160 256S240 291.875 240 336S204.125 416 160 416ZM224 32C224 14.375 209.625 0 192 0H128C110.375 0 96 14.375 96 32V128H224V32ZM381.781 51.578C383 50.969 384 49.359 384 48C384 46.625 383 45.031 381.781 44.422L352 32L339.562 2.219C338.969 1 337.375 0 336 0S333.031 1 332.406 2.219L320 32L290.219 44.422C289 45.031 288 46.625 288 48C288 49.359 289 50.969 290.219 51.578L320 64L332.406 93.781C333.031 95 334.625 96 336 96S338.969 95 339.562 93.781L352 64L381.781 51.578ZM448 64L460.406 93.781C461.031 95 462.625 96 464 96S466.969 95 467.562 93.781L480 64L509.781 51.578C511 50.969 512 49.359 512 48C512 46.625 511 45.031 509.781 44.422L480 32L467.562 2.219C466.969 1 465.375 0 464 0S461.031 1 460.406 2.219L448 32L418.219 44.422C417 45.031 416 46.625 416 48C416 49.359 417 50.969 418.219 51.578L448 64ZM480 224L467.562 194.219C466.969 193 465.375 192 464 192S461.031 193 460.406 194.219L448 224L418.219 236.422C417 237.031 416 238.625 416 240C416 241.359 417 242.969 418.219 243.578L448 256L460.406 285.781C461.031 287 462.625 288 464 288S466.969 287 467.562 285.781L480 256L509.781 243.578C511 242.969 512 241.359 512 240C512 238.625 511 237.031 509.781 236.422L480 224ZM445.781 147.578C447 146.969 448 145.359 448 144C448 142.625 447 141.031 445.781 140.422L416 128L403.562 98.219C402.969 97 401.375 96 400 96S397.031 97 396.406 98.219L384 128L354.219 140.422C353 141.031 352 142.625 352 144C352 145.359 353 146.969 354.219 147.578L384 160L396.406 189.781C397.031 191 398.625 192 400 192S402.969 191 403.562 189.781L416 160L445.781 147.578Z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+       
+      Air freshener
+    </li>
+  </ul>,
+]
+`;
+
+exports[`Storyshots Controls/Post Meta All Set 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ul
+    className="css-f70qos-semanticList"
+  >
+    <li>
+      <svg
+        aria-labelledby="svg-inline--fa-title-777777777777"
+        className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+        data-icon="calendar-day"
+        data-prefix="fas"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="svg-inline--fa-title-777777777777"
+          style={Object {}}
+        >
+          Date
+        </title>
+        <path
+          d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+       
+      July 17, 2022
+    </li>
+    <li>
+      <svg
+        aria-labelledby="svg-inline--fa-title-777777777777"
+        className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+        data-icon="hourglass-half"
+        data-prefix="fas"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 384 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="svg-inline--fa-title-777777777777"
+          style={Object {}}
+        >
+          Estimated reading duration
+        </title>
+        <path
+          d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+       
+      4
+       minute read
+    </li>
+  </ul>,
+]
+`;
+
+exports[`Storyshots Controls/Post Meta None Set 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <ul
+    className="css-f70qos-semanticList"
+  />,
+]
+`;
+
+exports[`Storyshots Controls/Vertical Scroll Initial 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "width": 400,
+      }
+    }
+  >
+    <div
+      className="css-1v28p0v-VerticalScroll"
+      tabIndex={0}
+    >
+      <div
+        style={
+          Object {
+            "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)",
+            "height": 200,
+            "width": 600,
+          }
+        }
+      />
+    </div>
+    <button
+      className=" inactive css-hdqxv6-scrollArrowStyle-VerticalScroll"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      style={Object {}}
+      tabIndex={-1}
+      title="Scroll left"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-left fa-w-10 "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+    <button
+      className=" inactive css-1a0ypfr-scrollArrowStyle-VerticalScroll"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      style={Object {}}
+      tabIndex={-1}
+      title="Scroll right"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right fa-w-10 "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Controls/Vertical Scroll Scroll Left Button 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "width": 400,
+      }
+    }
+  >
+    <div
+      className="css-1v28p0v-VerticalScroll"
+      tabIndex={0}
+    >
+      <div
+        style={
+          Object {
+            "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)",
+            "height": 200,
+            "width": 600,
+          }
+        }
+      />
+    </div>
+    <button
+      className=" inactive css-hdqxv6-scrollArrowStyle-VerticalScroll"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      style={Object {}}
+      tabIndex={-1}
+      title="Scroll left"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-left fa-w-10 "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+    <button
+      className=" inactive css-1a0ypfr-scrollArrowStyle-VerticalScroll"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      style={Object {}}
+      tabIndex={-1}
+      title="Scroll right"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right fa-w-10 "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Controls/Vertical Scroll Scroll Right Button 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "width": 400,
+      }
+    }
+  >
+    <div
+      className="css-1v28p0v-VerticalScroll"
+      tabIndex={0}
+    >
+      <div
+        style={
+          Object {
+            "background": "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)",
+            "height": 200,
+            "width": 600,
+          }
+        }
+      />
+    </div>
+    <button
+      className=" inactive css-hdqxv6-scrollArrowStyle-VerticalScroll"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      style={Object {}}
+      tabIndex={-1}
+      title="Scroll left"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-left fa-w-10 "
+        data-icon="chevron-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+    <button
+      className=" inactive css-1a0ypfr-scrollArrowStyle-VerticalScroll"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      style={Object {}}
+      tabIndex={-1}
+      title="Scroll right"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right fa-w-10 "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+  </div>,
+]
+`;
+
 exports[`Storyshots Crypted/Copy Button With Title 1`] = `
 Array [
   <style
@@ -13115,6 +13853,578 @@ Array [
         m
       </dd>
     </dl>
+  </div>,
+]
+`;
+
+exports[`Storyshots Post/Gpx Track Gpx Track 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-163o97b-Map"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-pp1yya-Spinner"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Post/Location Location 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-163o97b-Map"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-pp1yya-Spinner"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Post/Location Zoomed 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-163o97b-Map"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-pp1yya-Spinner"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Post/Nextday Nextday 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <p
+    className="css-1yttjdb-Nextday"
+  >
+    <a
+      className="css-gp7sye-shadedButton-primaryShadedButton-primaryShadedButton"
+      href="foo"
+    >
+      Next day 
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-chevron-right fa-w-10 "
+        data-icon="chevron-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </a>
+  </p>,
+]
+`;
+
+exports[`Storyshots Post/Travel With Intermediate 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-163o97b-Map"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-pp1yya-Spinner"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Post/Travel Without Intermediate 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-163o97b-Map"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-pp1yya-Spinner"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Post/Travel Zoomed 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-163o97b-Map"
+  >
+    <svg
+      aria-labelledby="svg-inline--fa-title-777777777777"
+      className="svg-inline--fa fa-circle-notch fa-w-16 css-pp1yya-Spinner"
+      data-icon="circle-notch"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-777777777777"
+        style={Object {}}
+      >
+        Loading
+      </title>
+      <path
+        d="M288 39.056v16.659c0 10.804 7.281 20.159 17.686 23.066C383.204 100.434 440 171.518 440 256c0 101.689-82.295 184-184 184-101.689 0-184-82.295-184-184 0-84.47 56.786-155.564 134.312-177.219C216.719 75.874 224 66.517 224 55.712V39.064c0-15.709-14.834-27.153-30.046-23.234C86.603 43.482 7.394 141.206 8.003 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.788 504 256c0-115.633-79.14-212.779-186.211-240.236C302.678 11.889 288 23.456 288 39.056z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Storyshots Post/Video Video 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-1m47j6s-Video"
+  >
+    <video
+      className="css-tis5j7-Video"
+      controls={true}
+    >
+      <source
+        src="test.mov"
+        type="video/mp4"
+      />
+    </video>
   </div>,
 ]
 `;

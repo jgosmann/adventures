@@ -13,11 +13,12 @@ import GpxTrack from "./GpxTrack"
 import Grade from "./ClimbingLog/Grade"
 import Loc from "./Loc"
 import Nextday from "./Nextday"
-import Pano from "./Pano"
-import Rimg from "./Rimg"
+import Pano, { PanoImage } from "./Pano"
+import Rimg, { Image } from "./Rimg"
 import Travel from "./Travel"
 import Video from "./Video"
-import WithRemoteGpxTrack from "./WithRemoteGpxTrack"
+import WithRemoteGpxTrack, { TrackPoint } from "./WithRemoteGpxTrack"
+import { Route } from "./ClimbingLog/Ascent"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
@@ -62,7 +63,16 @@ export const dataFragment = graphql`
 `
 
 const earthRadiusMeters = 6371e3
-const calcDistKilometers = (p1, p2) => {
+const calcDistKilometers = (p1: TrackPoint, p2: TrackPoint): number => {
+  if (
+    p1.lat === undefined ||
+    p1.lon === undefined ||
+    p2.lat === undefined ||
+    p2.lon === undefined
+  ) {
+    return 0
+  }
+
   const phi1 = (p1.lat * Math.PI) / 180
   const phi2 = (p2.lat * Math.PI) / 180
   const deltaPhi = ((p2.lat - p1.lat) * Math.PI) / 180
@@ -77,41 +87,85 @@ const calcDistKilometers = (p1, p2) => {
   return (earthRadiusMeters * c) / 1000
 }
 
-const Content = ({ mdx, nextPath }) => {
+interface File {
+  name: string
+  ext: string
+}
+
+interface PublicFile extends File {
+  publicURL: string
+}
+
+export interface ContentProps {
+  nextPath?: string
+  mdx: {
+    body: string
+    climbs: Array<{
+      childClimbsYaml: {
+        ascents: Route[]
+      }
+    }>
+    gpxTracks: PublicFile[]
+    images: Array<PublicFile & Image>
+    overlay: PublicFile[]
+    panoramas: Array<PublicFile & PanoImage>
+    panoramas2x: Array<PublicFile & PanoImage>
+    videos: Array<{
+      videoH264: {
+        path: string
+      }
+      name: string
+      relativePath: string
+    }>
+  }
+}
+
+const Content = ({ mdx, nextPath }: ContentProps) => {
   const gpxTracks = Object.assign(
     {},
     ...mdx.gpxTracks.map(track => ({
       [track.name + track.ext]: track.publicURL,
     }))
   )
-  const BoundGpxTrack = ({ src }) => <GpxTrack url={gpxTracks[src]} />
-  BoundGpxTrack.propTypes = {
-    src: PropTypes.string.isRequired,
-  }
-  const BoundElevationProfile = ({ src }) => (
+  const BoundGpxTrack = ({ src }: { src: string }) => (
+    <GpxTrack url={gpxTracks[src]} />
+  )
+  const BoundElevationProfile = ({ src }: { src: string }) => (
     <WithRemoteGpxTrack
       url={gpxTracks[src]}
       render={track => (
         <ElevationProfile
           data={(track?.segments || [])
             .flatMap(segment => segment)
-            .reduce((mappedArray, point) => {
-              const distKilometers =
-                mappedArray.length === 0
-                  ? 0
-                  : mappedArray[mappedArray.length - 1].distKilometers +
-                    calcDistKilometers(
-                      mappedArray[mappedArray.length - 1],
-                      point
-                    )
-              mappedArray.push({
-                lat: point.lat,
-                lon: point.lon,
-                distKilometers,
-                elevationMeters: point.elevationMeters,
-              })
-              return mappedArray
-            }, [])}
+            .reduce(
+              (
+                mappedArray: Array<
+                  TrackPoint & {
+                    distKilometers: number
+                    elevationMeters: number
+                  }
+                >,
+                point
+              ) => {
+                const distKilometers =
+                  mappedArray.length === 0
+                    ? 0
+                    : mappedArray[mappedArray.length - 1].distKilometers +
+                      calcDistKilometers(
+                        mappedArray[mappedArray.length - 1],
+                        point
+                      )
+                point.elevationMeters !== undefined &&
+                  mappedArray.push({
+                    lat: point.lat,
+                    lon: point.lon,
+                    distKilometers,
+                    elevationMeters: point.elevationMeters,
+                  })
+                return mappedArray
+              },
+              []
+            )}
         />
       )}
     />
@@ -126,31 +180,38 @@ const Content = ({ mdx, nextPath }) => {
       [video.relativePath.replace(/^[^/]+\//, "")]: video.videoH264.path,
     }))
   )
-  const BoundVideo = ({ src }) => <Video src={videos[src]} />
+  const BoundVideo = ({ src }: { src: string }) => <Video src={videos[src]} />
   BoundVideo.propTypes = {
     src: PropTypes.string.isRequired,
   }
 
-  const bindImages = (Component, imageData, overlayData) => {
-    const images = Object.assign(
+  const bindImages = function bindImages(
+    Component: React.ComponentType<{ image: Image; overlay?: string }>,
+    imageData: Array<File & Image>,
+    overlayData: PublicFile[]
+  ) {
+    const images: Record<string, Image> = Object.assign(
       {},
       ...imageData.map(img => ({ [img.name + img.ext]: img }))
     )
-    const overlays = Object.assign(
+    const overlays: Record<string, PublicFile> = Object.assign(
       {},
       ...overlayData.map(overlay => ({ [overlay.name + overlay.ext]: overlay }))
     )
-    const BoundImage = ({ src, overlay, ...props }) => (
+    const BoundImage = ({
+      src,
+      overlay,
+      ...props
+    }: {
+      src: string
+      overlay?: string
+    }) => (
       <Component
+        {...props}
         image={images[src]}
         overlay={overlay && overlays[overlay].publicURL}
-        {...props}
       />
     )
-    BoundImage.propTypes = {
-      overlay: PropTypes.string,
-      src: PropTypes.string.isRequired,
-    }
     return BoundImage
   }
 
@@ -183,11 +244,6 @@ const Content = ({ mdx, nextPath }) => {
       </LocalStorageGradeContext>
     </ContentStyleWrapper>
   )
-}
-
-Content.propTypes = {
-  nextPath: PropTypes.string,
-  mdx: PropTypes.object.isRequired,
 }
 
 export default Content

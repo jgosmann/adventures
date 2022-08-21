@@ -21,16 +21,18 @@ export const dataFragment = graphql`
   }
 `
 
+export type Image = ImageDataLike & {
+  childImageSharp: {
+    original: { height: number; width: number }
+  }
+  publicURL: string
+}
+
 export interface RimgProps {
   alt?: string
   caption?: string
   children?: React.ReactNode
-  image: ImageDataLike & {
-    childImageSharp: {
-      original: { height: number; width: number }
-    }
-    publicURL: string
-  }
+  image: Image
   overlay?: string
 }
 

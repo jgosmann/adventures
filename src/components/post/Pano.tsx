@@ -39,14 +39,16 @@ export const dataFragment2x = graphql`
   }
 `
 
+export type PanoImage = ImageDataLike & {
+  childImageSharp: {
+    original: { height: number; width: number }
+  }
+}
+
 export interface PanoProps {
   alt?: string
   caption?: string
-  image: ImageDataLike & {
-    childImageSharp: {
-      original: { height: number; width: number }
-    }
-  }
+  image: PanoImage
 }
 
 const Pano = ({ alt, caption, image }: PanoProps) => {
