@@ -8,10 +8,16 @@ import Navigation from "../components/navigation"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
-const NotFoundPage = () => (
+export interface NotFoundPageProps {
+  location: {
+    pathname: string
+  }
+}
+
+const NotFoundPage = ({ location: { pathname } }: NotFoundPageProps) => (
   <>
-    <HtmlHead language="en" />
-    <Navigation fixed />
+    <HtmlHead path={pathname} language="en" />
+    <Navigation path={pathname} />
     <main css={{ textAlign: "center" }}>
       <h1>
         <FontAwesomeIcon icon={faCompass} /> Not found
