@@ -9,6 +9,9 @@ import {
 export default {
   title: "Post/Panorama",
   component: Pano,
+  parameters: {
+    layout: "fullscreen",
+  },
 }
 
 const Template: ComponentStory<typeof Pano> = (args: PanoProps) => (
