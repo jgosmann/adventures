@@ -1,6 +1,6 @@
 import React from "react"
 import { ComponentStory } from "@storybook/react"
-import MapPage, { MapPageProps } from "./map"
+import MapPage, { MapPageProps } from "../pages/map"
 import { postPreview } from "../../test/post-preview-fixture"
 import { staticQueryData } from "../../test/static-query-data"
 

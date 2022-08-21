@@ -1,9 +1,9 @@
 import React from "react"
 import { staticQueryData } from "../../../test/static-query-data"
-import ConfirmPage from "./confirm"
+import ConfirmPage from "../../pages/unsubscribe/confirm"
 
 export default {
-  title: "Pages/Subscribe/Confirm",
+  title: "Pages/Unsubscribe/Confirm",
   component: ConfirmPage,
   parameters: {
     layout: "fullscreen",

@@ -1,6 +1,6 @@
 import React from "react"
 import { ComponentStory } from "@storybook/react"
-import NotFoundPage, { NotFoundPageProps } from "./404"
+import NotFoundPage, { NotFoundPageProps } from "../pages/404"
 import { staticQueryData } from "../../test/static-query-data"
 
 export default {

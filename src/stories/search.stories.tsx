@@ -2,7 +2,7 @@ import React from "react"
 import { ComponentStory } from "@storybook/react"
 import { postPreview } from "../../test/post-preview-fixture"
 import { searchUrl, staticQueryData } from "../../test/static-query-data"
-import SearchPage, { SearchPageProps } from "./search"
+import SearchPage, { SearchPageProps } from "../pages/search"
 import { rest } from "msw"
 
 export default {

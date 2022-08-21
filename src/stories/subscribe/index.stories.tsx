@@ -1,6 +1,6 @@
 import React from "react"
 import { staticQueryData } from "../../../test/static-query-data"
-import SubscribePage from "."
+import SubscribePage from "../../pages/subscribe"
 
 export default {
   title: "Pages/Subscribe/Index",

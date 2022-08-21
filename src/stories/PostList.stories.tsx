@@ -1,7 +1,7 @@
 import React from "react"
 import { ComponentStory } from "@storybook/react"
 import { staticQueryData } from "../../test/static-query-data"
-import PostListTemplate, { PostListProps } from "./PostList"
+import PostListTemplate, { PostListProps } from "../templates/PostList"
 import { postPreview } from "../../test/post-preview-fixture"
 
 export default {

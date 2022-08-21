@@ -1,6 +1,6 @@
 import React from "react"
 import { staticQueryData } from "../../../test/static-query-data"
-import UnsubscribePage from "."
+import UnsubscribePage from "../../pages/unsubscribe"
 
 export default {
   title: "Pages/Unsubscribe/Index",
