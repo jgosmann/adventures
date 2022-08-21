@@ -1,10 +1,15 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import PropTypes from "prop-types"
 import React from "react"
 
 import colors from "../colors"
 
-const IconBullet = ({ icon, children }) => (
+export interface IconBulletProps {
+  icon: IconProp
+  children: React.ReactNode
+}
+
+const IconBullet = ({ icon, children }: IconBulletProps) => (
   <div
     css={{
       display: "flex",
@@ -35,10 +40,5 @@ const IconBullet = ({ icon, children }) => (
     </div>
   </div>
 )
-
-IconBullet.propTypes = {
-  icon: PropTypes.object.isRequired,
-  children: PropTypes.node,
-}
 
 export default IconBullet
