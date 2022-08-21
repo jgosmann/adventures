@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  Node:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        check:
+          - name: Type check
+            run: npm run type-check
+          - name: Lint
+            run: npm run lint
+          - name: Test
+            run: npm test
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "17.x"
+          cache: "npm"
+      - run: npm ci
+
+      - name: ${{ matrix.check.name }}
+        run: ${{ matrix.check.run }}
+        env:
+          CI: true
+
+  Chromatic:
+    runs-on: ubuntu-latest
+    needs: Node
+    if: github.ref == 'refs/heads/develop'
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Publish to Chromatic for visual verification
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
