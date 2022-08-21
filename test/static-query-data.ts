@@ -1,3 +1,5 @@
+export const searchUrl = "https://search"
+
 export const staticQueryData = {
   allSitePage: {
     nodes: [
@@ -7,7 +9,9 @@ export const staticQueryData = {
     ],
   },
   site: {
-    siteMetadata: {},
+    siteMetadata: {
+      searchUrl,
+    },
   },
   icon: {
     publicURL: "marker-icon.png",

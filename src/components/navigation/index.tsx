@@ -43,6 +43,13 @@ const Navigation = ({ fixed, noTopMargin, path, query }: NavigationProps) => {
                 marginTop: 48,
               },
             },
+            // workaround for Storybook
+            ["body.sb-show-main.sb-main-fullscreen"]: {
+              marginTop: 56,
+              [`@media (min-width: ${minFullWidth}px)`]: {
+                marginTop: 48,
+              },
+            },
           }}
         />
       )}

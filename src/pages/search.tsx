@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React from "react"
 
 import HtmlHead from "../components/HtmlHead"
@@ -8,8 +7,15 @@ import Search from "../components/Search"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
-const PostList = ({ location: { pathname, search } }) => {
-  const query = new URLSearchParams(search || "").get("q")
+export interface SearchPageProps {
+  location: {
+    pathname: string
+    search?: string
+  }
+}
+
+const SearchPage = ({ location: { pathname, search } }: SearchPageProps) => {
+  const query = new URLSearchParams(search || "").get("q") || undefined
 
   return (
     <>
@@ -30,11 +36,4 @@ const PostList = ({ location: { pathname, search } }) => {
   )
 }
 
-PostList.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-    search: PropTypes.string,
-  }).isRequired,
-}
-
-export default PostList
+export default SearchPage
