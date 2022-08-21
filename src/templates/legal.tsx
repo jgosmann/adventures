@@ -1,7 +1,6 @@
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
-import PropTypes from "prop-types"
 import React from "react"
 
 import ContentStyleWrapper from "../components/ContentStyleWrapper"
@@ -16,7 +15,7 @@ import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 export const pageQuery = graphql`
-  query($pageId: String!) {
+  query ($pageId: String!) {
     mdx(id: { eq: $pageId }) {
       body
       frontmatter {
@@ -35,10 +34,27 @@ const mdxComponents = {
   Link,
 }
 
-const PostPage = ({ data: { mdx }, location: { pathname } }) => (
+export interface LegalPageProps {
+  data: {
+    mdx: {
+      frontmatter: {
+        title: string
+      }
+      body: string
+    }
+  }
+  location: {
+    pathname: string
+  }
+}
+
+const LegalPage = ({
+  data: { mdx },
+  location: { pathname },
+}: LegalPageProps) => (
   <>
     <HtmlHead path={pathname} title={mdx.frontmatter.title} language="en" />
-    <Navigation fixed />
+    <Navigation path={pathname} fixed />
     <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>
         <MDXProvider components={mdxComponents}>
@@ -49,11 +65,4 @@ const PostPage = ({ data: { mdx }, location: { pathname } }) => (
   </>
 )
 
-PostPage.propTypes = {
-  data: PropTypes.object.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
-}
-
-export default PostPage
+export default LegalPage

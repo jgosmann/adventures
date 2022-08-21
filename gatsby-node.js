@@ -329,7 +329,7 @@ const createPostPages = async ({ actions, graphql }) => {
 const createLegalPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const legalTemplate = path.resolve("src/templates/legal.js")
+  const legalTemplate = path.resolve("src/templates/legal.tsx")
 
   const legalPages = (
     await graphql(`
