@@ -58,6 +58,7 @@ const NavLink = styled(
   ${marker}
   height: 100%;
   box-sizing: border-box;
+  white-space: nowrap;
 
   cursor: pointer;
   user-select: none;
