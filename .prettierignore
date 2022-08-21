@@ -1,4 +1,5 @@
 layouts/**/*.html
+msw/mockServiceWorker.js
 .cache
 package.json
 package-lock.json
