@@ -127,7 +127,7 @@ exports.createResolvers = ({ createResolvers }) => {
 const createYearlyIndices = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const postListTemplate = path.resolve("src/templates/PostList.js")
+  const postListTemplate = path.resolve("src/templates/PostList.tsx")
 
   const posts = (
     await graphql(`

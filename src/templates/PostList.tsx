@@ -4,7 +4,6 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons"
 import { graphql, Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
 import HtmlHead from "../components/HtmlHead"
@@ -14,9 +13,10 @@ import { defaultShadedButton } from "../styles"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
+import { PostPreviewProps } from "../components/PostPreview"
 
 export const pageQuery = graphql`
-  query($postIds: [String!]) {
+  query ($postIds: [String!]) {
     allFile(
       filter: {
         sourceInstanceName: { eq: "posts" }
@@ -38,13 +38,34 @@ export const pageQuery = graphql`
   }
 `
 
+export interface PostListProps {
+  data: {
+    allFile: {
+      nodes: Array<
+        PostPreviewProps["data"] & {
+          childMdx: {
+            id: string
+          }
+        }
+      >
+    }
+  }
+  location: {
+    pathname: string
+  }
+  pageContext: {
+    nextPage?: string
+    prevPage?: string
+  }
+}
+
 const PostList = ({
   data: {
     allFile: { nodes },
   },
   location: { pathname },
   pageContext: { nextPage, prevPage },
-}) => (
+}: PostListProps) => (
   <>
     <HtmlHead path={pathname} language="en" />
     <Navigation path={pathname} fixed />
@@ -78,16 +99,5 @@ const PostList = ({
     </main>
   </>
 )
-
-PostList.propTypes = {
-  data: PropTypes.object.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
-  pageContext: PropTypes.shape({
-    nextPage: PropTypes.string,
-    prevPage: PropTypes.string,
-  }),
-}
 
 export default PostList

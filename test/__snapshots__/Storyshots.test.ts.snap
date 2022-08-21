@@ -24461,3 +24461,1279 @@ Array [
   </div>,
 ]
 `;
+
+exports[`Storyshots Templates/Post List Post List 1`] = `
+Array [
+  <style
+    type="text/css"
+  >
+    
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: #336cc6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #dd16c9;
+  }
+
+  </style>,
+  <div
+    className="css-t5jtfl-Navigation"
+  >
+    <nav
+      className="css-12sv3wt-CollapsedMenu"
+    >
+      <div
+        className="css-1oyed4z-CollapsedMenu"
+      >
+        <ul
+          className="css-n4wjbd-semanticList-flexList-MainLinks"
+        >
+          <li>
+            <a
+              activeClassName="active"
+              aria-label="Subscribe"
+              className="css-1m2eng2-NavLink-bottom e1d5kmad0"
+              href="/subscribe/"
+              tabIndex={0}
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-bell fa-w-14 "
+                data-icon="bell"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+              <span
+                className="css-19r1aad-Label"
+              >
+                Subscribe
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              activeClassName="active"
+              aria-label="List of posts"
+              className="css-1m2eng2-NavLink-bottom e1d5kmad0"
+              href="/"
+              tabIndex={0}
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-th fa-w-16 "
+                data-icon="th"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+              <span
+                className="css-19r1aad-Label"
+              >
+                List
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              activeClassName="active"
+              aria-label="Map with posts"
+              className="css-1m2eng2-NavLink-bottom e1d5kmad0"
+              href="/map/"
+              tabIndex={0}
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-globe-europe fa-w-16 "
+                data-icon="globe-europe"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 496 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm200 248c0 22.5-3.9 44.2-10.8 64.4h-20.3c-4.3 0-8.4-1.7-11.4-4.8l-32-32.6c-4.5-4.6-4.5-12.1.1-16.7l12.5-12.5v-8.7c0-3-1.2-5.9-3.3-8l-9.4-9.4c-2.1-2.1-5-3.3-8-3.3h-16c-6.2 0-11.3-5.1-11.3-11.3 0-3 1.2-5.9 3.3-8l9.4-9.4c2.1-2.1 5-3.3 8-3.3h32c6.2 0 11.3-5.1 11.3-11.3v-9.4c0-6.2-5.1-11.3-11.3-11.3h-36.7c-8.8 0-16 7.2-16 16v4.5c0 6.9-4.4 13-10.9 15.2l-31.6 10.5c-3.3 1.1-5.5 4.1-5.5 7.6v2.2c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8s-3.6-8-8-8H247c-3 0-5.8 1.7-7.2 4.4l-9.4 18.7c-2.7 5.4-8.2 8.8-14.3 8.8H194c-8.8 0-16-7.2-16-16V199c0-4.2 1.7-8.3 4.7-11.3l20.1-20.1c4.6-4.6 7.2-10.9 7.2-17.5 0-3.4 2.2-6.5 5.5-7.6l40-13.3c1.7-.6 3.2-1.5 4.4-2.7l26.8-26.8c2.1-2.1 3.3-5 3.3-8 0-6.2-5.1-11.3-11.3-11.3H258l-16 16v8c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8v-20c0-2.5 1.2-4.9 3.2-6.4l28.9-21.7c1.9-.1 3.8-.3 5.7-.3C358.3 56 448 145.7 448 256zM130.1 149.1c0-3 1.2-5.9 3.3-8l25.4-25.4c2.1-2.1 5-3.3 8-3.3 6.2 0 11.3 5.1 11.3 11.3v16c0 3-1.2 5.9-3.3 8l-9.4 9.4c-2.1 2.1-5 3.3-8 3.3h-16c-6.2 0-11.3-5.1-11.3-11.3zm128 306.4v-7.1c0-8.8-7.2-16-16-16h-20.2c-10.8 0-26.7-5.3-35.4-11.8l-22.2-16.7c-11.5-8.6-18.2-22.1-18.2-36.4v-23.9c0-16 8.4-30.8 22.1-39l42.9-25.7c7.1-4.2 15.2-6.5 23.4-6.5h31.2c10.9 0 21.4 3.9 29.6 10.9l43.2 37.1h18.3c8.5 0 16.6 3.4 22.6 9.4l17.3 17.3c3.4 3.4 8.1 5.3 12.9 5.3H423c-32.4 58.9-93.8 99.5-164.9 103.1z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+              <span
+                className="css-19r1aad-Label"
+              >
+                Map
+              </span>
+            </a>
+          </li>
+          <li>
+            <div
+              className="css-452xi3-NavLink-bottom-YearSelectorView e1d5kmad0"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              role="list"
+              tabIndex={-1}
+              to=""
+            >
+              <div
+                className="css-z90ohl-LabelLine"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-calendar-alt fa-w-14 "
+                  data-icon="calendar-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                <span
+                  className="css-19r1aad-Label"
+                >
+                  Pick a year
+                </span>
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-caret-down fa-w-10 css-sab7jh-LabelLine"
+                  data-icon="caret-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+              <div
+                className="css-192wzbo-DropDown e1de4y8h2"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "pointerEvents": "none",
+                  }
+                }
+              >
+                <div
+                  className="css-z90ohl-LabelLine"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-calendar-alt fa-w-14 "
+                    data-icon="calendar-alt"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                  <span
+                    className="css-19r1aad-Label"
+                  >
+                    Pick a year
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-caret-down fa-w-10 css-sab7jh-LabelLine"
+                    data-icon="caret-down"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+                <div
+                  className="css-ji4r05-YearSelectorView"
+                  role="listitem"
+                >
+                  <ol
+                    className="css-1ybajg2-Options-semanticList-flexList e1de4y8h1"
+                    style={
+                      Object {
+                        "transform": "translateY(-100%)",
+                      }
+                    }
+                  >
+                    <li>
+                      <a
+                        activeClassName="active"
+                        aria-label="Posts for the year 2020"
+                        className="css-1kiu28d-Option e1de4y8h0"
+                        href="/year/2020"
+                        tabIndex={0}
+                      >
+                        2020
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        activeClassName="active"
+                        aria-label="Posts for the year 2021"
+                        className="css-1kiu28d-Option e1de4y8h0"
+                        href="/year/2021"
+                        tabIndex={0}
+                      >
+                        2021
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        activeClassName="active"
+                        aria-label="Posts for the year 2022"
+                        className="css-1kiu28d-Option e1de4y8h0"
+                        href="/year/2022"
+                        tabIndex={0}
+                      >
+                        2022
+                      </a>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a
+              activeClassName="active"
+              aria-label="Top picks"
+              className="css-1m2eng2-NavLink-bottom e1d5kmad0"
+              href="/favorites/"
+              tabIndex={0}
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-star fa-w-18 "
+                data-icon="star"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+              <span
+                className="css-19r1aad-Label"
+              >
+                Top picks
+              </span>
+            </a>
+          </li>
+          <li
+            className="css-10tqhgi-MainLinks"
+          >
+            <form
+              action="/search"
+              className="css-101kj6x-NavLink-bottom-SearchField e1d5kmad0"
+              method="get"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onSubmit={[Function]}
+            >
+              <label
+                className="css-11k0q1x-SearchField"
+              >
+                <svg
+                  aria-labelledby="svg-inline--fa-title-777777777777"
+                  className="svg-inline--fa fa-search fa-w-16 css-1cwt1y4-SearchField"
+                  data-icon="search"
+                  data-prefix="fas"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title
+                    id="svg-inline--fa-title-777777777777"
+                    style={Object {}}
+                  >
+                    Search
+                  </title>
+                  <path
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                <input
+                  className="css-bkwamb-SearchField"
+                  name="q"
+                  onChange={[Function]}
+                  placeholder="Search"
+                  type="search"
+                  value=""
+                />
+              </label>
+              <button
+                className="css-hb9dxv-SearchField"
+                title="Submit search"
+                type="submit"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-chevron-circle-right fa-w-16 "
+                  data-icon="chevron-circle-right"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <ul
+        className="css-mgy0n6-semanticList-flexList-LegalLinks-CollapsedMenu"
+      >
+        <li>
+          <a
+            className="css-z90sqc-LegalLink e1lcsvey0"
+            href="/legal/privacy/"
+            tabIndex={0}
+          >
+            Privacy policy
+          </a>
+        </li>
+        <li>
+          <a
+            className="css-z90sqc-LegalLink e1lcsvey0"
+            href="/legal/disclosure/"
+            tabIndex={0}
+          >
+            Legal disclosure
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav
+      className="css-9dix76-ExpandedMenu"
+      style={
+        Object {
+          "opacity": 0,
+          "pointerEvents": "none",
+        }
+      }
+    >
+      <ul
+        className="css-ybm7ac-semanticList-flexList-MainLinks"
+        style={
+          Object {
+            "transform": "scaleY(0)",
+          }
+        }
+      >
+        <li>
+          <a
+            activeClassName="active"
+            aria-label="Subscribe"
+            className="css-xzwz40-NavLink-left e1d5kmad0"
+            href="/subscribe/"
+            tabIndex={-1}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-bell fa-w-14 "
+              data-icon="bell"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <span
+              className="css-19r1aad-Label"
+            >
+              Subscribe
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            activeClassName="active"
+            aria-label="List of posts"
+            className="css-xzwz40-NavLink-left e1d5kmad0"
+            href="/"
+            tabIndex={-1}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-th fa-w-16 "
+              data-icon="th"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <span
+              className="css-19r1aad-Label"
+            >
+              List
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            activeClassName="active"
+            aria-label="Map with posts"
+            className="css-xzwz40-NavLink-left e1d5kmad0"
+            href="/map/"
+            tabIndex={-1}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-globe-europe fa-w-16 "
+              data-icon="globe-europe"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 496 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm200 248c0 22.5-3.9 44.2-10.8 64.4h-20.3c-4.3 0-8.4-1.7-11.4-4.8l-32-32.6c-4.5-4.6-4.5-12.1.1-16.7l12.5-12.5v-8.7c0-3-1.2-5.9-3.3-8l-9.4-9.4c-2.1-2.1-5-3.3-8-3.3h-16c-6.2 0-11.3-5.1-11.3-11.3 0-3 1.2-5.9 3.3-8l9.4-9.4c2.1-2.1 5-3.3 8-3.3h32c6.2 0 11.3-5.1 11.3-11.3v-9.4c0-6.2-5.1-11.3-11.3-11.3h-36.7c-8.8 0-16 7.2-16 16v4.5c0 6.9-4.4 13-10.9 15.2l-31.6 10.5c-3.3 1.1-5.5 4.1-5.5 7.6v2.2c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8s-3.6-8-8-8H247c-3 0-5.8 1.7-7.2 4.4l-9.4 18.7c-2.7 5.4-8.2 8.8-14.3 8.8H194c-8.8 0-16-7.2-16-16V199c0-4.2 1.7-8.3 4.7-11.3l20.1-20.1c4.6-4.6 7.2-10.9 7.2-17.5 0-3.4 2.2-6.5 5.5-7.6l40-13.3c1.7-.6 3.2-1.5 4.4-2.7l26.8-26.8c2.1-2.1 3.3-5 3.3-8 0-6.2-5.1-11.3-11.3-11.3H258l-16 16v8c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8v-20c0-2.5 1.2-4.9 3.2-6.4l28.9-21.7c1.9-.1 3.8-.3 5.7-.3C358.3 56 448 145.7 448 256zM130.1 149.1c0-3 1.2-5.9 3.3-8l25.4-25.4c2.1-2.1 5-3.3 8-3.3 6.2 0 11.3 5.1 11.3 11.3v16c0 3-1.2 5.9-3.3 8l-9.4 9.4c-2.1 2.1-5 3.3-8 3.3h-16c-6.2 0-11.3-5.1-11.3-11.3zm128 306.4v-7.1c0-8.8-7.2-16-16-16h-20.2c-10.8 0-26.7-5.3-35.4-11.8l-22.2-16.7c-11.5-8.6-18.2-22.1-18.2-36.4v-23.9c0-16 8.4-30.8 22.1-39l42.9-25.7c7.1-4.2 15.2-6.5 23.4-6.5h31.2c10.9 0 21.4 3.9 29.6 10.9l43.2 37.1h18.3c8.5 0 16.6 3.4 22.6 9.4l17.3 17.3c3.4 3.4 8.1 5.3 12.9 5.3H423c-32.4 58.9-93.8 99.5-164.9 103.1z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <span
+              className="css-19r1aad-Label"
+            >
+              Map
+            </span>
+          </a>
+        </li>
+        <li>
+          <div
+            className="css-1xvk8n1-NavLink-left-YearSelectorView e1d5kmad0"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            role="list"
+            tabIndex={-1}
+            to=""
+          >
+            <div
+              className="css-z90ohl-LabelLine"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-calendar-alt fa-w-14 "
+                data-icon="calendar-alt"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+              <span
+                className="css-19r1aad-Label"
+              >
+                Pick a year
+              </span>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-caret-down fa-w-10 css-sab7jh-LabelLine"
+                data-icon="caret-down"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </div>
+            <div
+              className="css-192wzbo-DropDown e1de4y8h2"
+              style={
+                Object {
+                  "opacity": 0,
+                  "pointerEvents": "none",
+                }
+              }
+            >
+              <div
+                className="css-z90ohl-LabelLine"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-calendar-alt fa-w-14 "
+                  data-icon="calendar-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                <span
+                  className="css-19r1aad-Label"
+                >
+                  Pick a year
+                </span>
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-caret-down fa-w-10 css-sab7jh-LabelLine"
+                  data-icon="caret-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+              <div
+                className="css-ji4r05-YearSelectorView"
+                role="listitem"
+              >
+                <ol
+                  className="css-1ybajg2-Options-semanticList-flexList e1de4y8h1"
+                  style={
+                    Object {
+                      "transform": "translateY(-100%)",
+                    }
+                  }
+                >
+                  <li>
+                    <a
+                      activeClassName="active"
+                      aria-label="Posts for the year 2020"
+                      className="css-1kiu28d-Option e1de4y8h0"
+                      href="/year/2020"
+                      tabIndex={-1}
+                    >
+                      2020
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      activeClassName="active"
+                      aria-label="Posts for the year 2021"
+                      className="css-1kiu28d-Option e1de4y8h0"
+                      href="/year/2021"
+                      tabIndex={-1}
+                    >
+                      2021
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      activeClassName="active"
+                      aria-label="Posts for the year 2022"
+                      className="css-1kiu28d-Option e1de4y8h0"
+                      href="/year/2022"
+                      tabIndex={-1}
+                    >
+                      2022
+                    </a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a
+            activeClassName="active"
+            aria-label="Top picks"
+            className="css-xzwz40-NavLink-left e1d5kmad0"
+            href="/favorites/"
+            tabIndex={-1}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-star fa-w-18 "
+              data-icon="star"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 576 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+            <span
+              className="css-19r1aad-Label"
+            >
+              Top picks
+            </span>
+          </a>
+        </li>
+        <li
+          className="css-10tqhgi-MainLinks"
+        >
+          <form
+            action="/search"
+            className="css-4onrkm-NavLink-left-SearchField e1d5kmad0"
+            method="get"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onSubmit={[Function]}
+          >
+            <label
+              className="css-11k0q1x-SearchField"
+            >
+              <svg
+                aria-labelledby="svg-inline--fa-title-777777777777"
+                className="svg-inline--fa fa-search fa-w-16 css-1cwt1y4-SearchField"
+                data-icon="search"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title
+                  id="svg-inline--fa-title-777777777777"
+                  style={Object {}}
+                >
+                  Search
+                </title>
+                <path
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+              <input
+                className="css-bkwamb-SearchField"
+                name="q"
+                onChange={[Function]}
+                placeholder="Search"
+                type="search"
+                value=""
+              />
+            </label>
+            <button
+              className="css-hb9dxv-SearchField"
+              title="Submit search"
+              type="submit"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-chevron-circle-right fa-w-16 "
+                data-icon="chevron-circle-right"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </button>
+          </form>
+        </li>
+      </ul>
+      <ul
+        className="css-jd94jy-semanticList-flexList-LegalLinks-ExpandedMenu"
+      >
+        <li>
+          <a
+            className="css-z90sqc-LegalLink e1lcsvey0"
+            href="/legal/privacy/"
+            tabIndex={-1}
+          >
+            Privacy policy
+          </a>
+        </li>
+        <li>
+          <a
+            className="css-z90sqc-LegalLink e1lcsvey0"
+            href="/legal/disclosure/"
+            tabIndex={-1}
+          >
+            Legal disclosure
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button
+      className="css-1kju99l-MenuButton edvrsky0"
+      onClick={[Function]}
+      onMouseLeave={[Function]}
+      title="Expand menu"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-bars fa-w-14 fa-fw "
+        data-icon="bars"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </button>
+  </div>,
+  <main>
+    <ol
+      className="css-1xnxcqi-listStyle"
+    >
+      <li
+        className="css-1f2m1u8-listItemStyle"
+      >
+        <a
+          className="css-lqlori-PostPreview"
+          href="/post/url0"
+        >
+          <div
+            className="gatsby-image-wrapper css-1jj85uq-PostPreview"
+            data-gatsby-image-wrapper=""
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": 250,
+                "overflow": "hidden",
+                "position": "relative",
+                "width": 300,
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              data-placeholder-image=""
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              data-src="background.png"
+              decoding="async"
+              loading="lazy"
+              onLoad={[Function]}
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": "translateZ(0)",
+                  "transition": "opacity 250ms linear",
+                  "width": "100%",
+                  "willChange": "opacity",
+                }
+              }
+            />
+            <noscript>
+              <img
+                alt=""
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                decoding="async"
+                loading="lazy"
+                onLoad={[Function]}
+                src="background.png"
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+            </noscript>
+            <script
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+                }
+              }
+              type="module"
+            />
+          </div>
+          <div
+            className="css-n9w22m-textBoxStyle"
+          >
+            <h2
+              className="css-b0l3km-PostPreview"
+            >
+              Post Title 0
+            </h2>
+            <ul
+              className="css-mf4x0r-semanticList-PostPreview"
+            >
+              <li
+                className="css-1xcs4yl-PostPreview"
+              >
+                <ul
+                  className="css-f70qos-semanticList"
+                >
+                  <li>
+                    <svg
+                      aria-labelledby="svg-inline--fa-title-777777777777"
+                      className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+                      data-icon="calendar-day"
+                      data-prefix="fas"
+                      role="img"
+                      style={Object {}}
+                      viewBox="0 0 448 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title
+                        id="svg-inline--fa-title-777777777777"
+                        style={Object {}}
+                      >
+                        Date
+                      </title>
+                      <path
+                        d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                        fill="currentColor"
+                        style={Object {}}
+                      />
+                    </svg>
+                     
+                    August 21, 2022
+                  </li>
+                  <li>
+                    <svg
+                      aria-labelledby="svg-inline--fa-title-777777777777"
+                      className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+                      data-icon="hourglass-half"
+                      data-prefix="fas"
+                      role="img"
+                      style={Object {}}
+                      viewBox="0 0 384 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title
+                        id="svg-inline--fa-title-777777777777"
+                        style={Object {}}
+                      >
+                        Estimated reading duration
+                      </title>
+                      <path
+                        d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+                        fill="currentColor"
+                        style={Object {}}
+                      />
+                    </svg>
+                     
+                    42
+                     minute read
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ol
+                  className="css-jeolgs-semanticList-commaSeparatedList"
+                >
+                  <li>
+                    Box 1
+                  </li>
+                  <li>
+                    Box 2
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </a>
+      </li>
+      <li
+        className="css-1f2m1u8-listItemStyle"
+      >
+        <a
+          className="css-lqlori-PostPreview"
+          href="/post/url1"
+        >
+          <div
+            className="gatsby-image-wrapper css-1jj85uq-PostPreview"
+            data-gatsby-image-wrapper=""
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": 250,
+                "overflow": "hidden",
+                "position": "relative",
+                "width": 300,
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              data-placeholder-image=""
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              data-src="background.png"
+              decoding="async"
+              loading="lazy"
+              onLoad={[Function]}
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "height": "100%",
+                  "left": 0,
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "opacity": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": "translateZ(0)",
+                  "transition": "opacity 250ms linear",
+                  "width": "100%",
+                  "willChange": "opacity",
+                }
+              }
+            />
+            <noscript>
+              <img
+                alt=""
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                decoding="async"
+                loading="lazy"
+                onLoad={[Function]}
+                src="background.png"
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+            </noscript>
+            <script
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+                }
+              }
+              type="module"
+            />
+          </div>
+          <div
+            className="css-n9w22m-textBoxStyle"
+          >
+            <h2
+              className="css-b0l3km-PostPreview"
+            >
+              Post Title 1
+            </h2>
+            <ul
+              className="css-mf4x0r-semanticList-PostPreview"
+            >
+              <li
+                className="css-1xcs4yl-PostPreview"
+              >
+                <ul
+                  className="css-f70qos-semanticList"
+                >
+                  <li>
+                    <svg
+                      aria-labelledby="svg-inline--fa-title-777777777777"
+                      className="svg-inline--fa fa-calendar-day fa-w-14 fa-fw "
+                      data-icon="calendar-day"
+                      data-prefix="fas"
+                      role="img"
+                      style={Object {}}
+                      viewBox="0 0 448 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title
+                        id="svg-inline--fa-title-777777777777"
+                        style={Object {}}
+                      >
+                        Date
+                      </title>
+                      <path
+                        d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                        fill="currentColor"
+                        style={Object {}}
+                      />
+                    </svg>
+                     
+                    August 21, 2022
+                  </li>
+                  <li>
+                    <svg
+                      aria-labelledby="svg-inline--fa-title-777777777777"
+                      className="svg-inline--fa fa-hourglass-half fa-w-12 fa-fw "
+                      data-icon="hourglass-half"
+                      data-prefix="fas"
+                      role="img"
+                      style={Object {}}
+                      viewBox="0 0 384 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title
+                        id="svg-inline--fa-title-777777777777"
+                        style={Object {}}
+                      >
+                        Estimated reading duration
+                      </title>
+                      <path
+                        d="M360 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24 0 90.965 51.016 167.734 120.842 192C75.016 280.266 24 357.035 24 448c-13.255 0-24 10.745-24 24v16c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24 0-90.965-51.016-167.734-120.842-192C308.984 231.734 360 154.965 360 64c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24zm-75.078 384H99.08c17.059-46.797 52.096-80 92.92-80 40.821 0 75.862 33.196 92.922 80zm.019-256H99.078C91.988 108.548 88 86.748 88 64h208c0 22.805-3.987 44.587-11.059 64z"
+                        fill="currentColor"
+                        style={Object {}}
+                      />
+                    </svg>
+                     
+                    42
+                     minute read
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ol
+                  className="css-jeolgs-semanticList-commaSeparatedList"
+                >
+                  <li>
+                    Box 1
+                  </li>
+                  <li>
+                    Box 2
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </a>
+      </li>
+    </ol>
+    <div
+      className="css-1x5rkzp-PostList"
+    >
+      <a
+        className="css-r5zn2u-shadedButton"
+        href="prev"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-chevron-left fa-w-10 "
+          data-icon="chevron-left"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+         Newer posts
+      </a>
+      <a
+        className="css-r5zn2u-shadedButton"
+        href="next"
+      >
+        Older posts 
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-chevron-right fa-w-10 "
+          data-icon="chevron-right"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </a>
+    </div>
+  </main>,
+]
+`;
