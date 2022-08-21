@@ -289,7 +289,7 @@ const createSearchIndex = async ({ graphql }) => {
 const createPostPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const postTemplate = path.resolve("src/templates/post.js")
+  const postTemplate = path.resolve("src/templates/post.tsx")
 
   const posts = (
     await graphql(`

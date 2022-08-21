@@ -96,28 +96,30 @@ interface PublicFile extends File {
   publicURL: string
 }
 
+export interface ContentMdx {
+  body: string
+  climbs: Array<{
+    childClimbsYaml: {
+      ascents: Route[]
+    }
+  }>
+  gpxTracks: PublicFile[]
+  images: Array<PublicFile & Image>
+  overlay: PublicFile[]
+  panoramas: Array<PublicFile & PanoImage>
+  panoramas2x: Array<PublicFile & PanoImage>
+  videos: Array<{
+    videoH264: {
+      path: string
+    }
+    name: string
+    relativePath: string
+  }>
+}
+
 export interface ContentProps {
   nextPath?: string
-  mdx: {
-    body: string
-    climbs: Array<{
-      childClimbsYaml: {
-        ascents: Route[]
-      }
-    }>
-    gpxTracks: PublicFile[]
-    images: Array<PublicFile & Image>
-    overlay: PublicFile[]
-    panoramas: Array<PublicFile & PanoImage>
-    panoramas2x: Array<PublicFile & PanoImage>
-    videos: Array<{
-      videoH264: {
-        path: string
-      }
-      name: string
-      relativePath: string
-    }>
-  }
+  mdx: ContentMdx
 }
 
 const Content = ({ mdx, nextPath }: ContentProps) => {

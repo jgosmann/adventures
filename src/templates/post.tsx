@@ -1,9 +1,8 @@
 import { Global } from "@emotion/react"
 import { graphql } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-import Content from "../components/post/Content"
+import Content, { ContentMdx } from "../components/post/Content"
 import HtmlHead from "../components/HtmlHead"
 import Navigation from "../components/navigation"
 import { fullHeight } from "../styles"
@@ -11,9 +10,10 @@ import Titlescreen from "../components/post/Titlescreen"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
+import { ImageDataLike } from "gatsby-plugin-image"
 
 export const pageQuery = graphql`
-  query($postId: String!) {
+  query ($postId: String!) {
     mdx(id: { eq: $postId }) {
       background {
         childImageSharp {
@@ -33,12 +33,38 @@ export const pageQuery = graphql`
   }
 `
 
+export interface PostPageProps {
+  data: {
+    mdx: ContentMdx & {
+      excerpt: string
+      frontmatter: {
+        date: string
+        title: string
+      }
+      timeToRead: number
+      background: ImageDataLike & {
+        childImageSharp: {
+          resize: {
+            src: string
+          }
+        }
+      }
+    }
+  }
+  location: {
+    pathname: string
+  }
+  pageContext?: {
+    nextPath?: string
+  }
+}
+
 // TODO: extract layout component
 const PostPage = ({
   data: { mdx },
   location: { pathname },
-  pageContext: { nextPath },
-}) => (
+  pageContext,
+}: PostPageProps) => (
   <>
     <HtmlHead
       path={pathname}
@@ -48,7 +74,7 @@ const PostPage = ({
       language="en"
     />
     <Global styles={fullHeight} />
-    <Navigation fixed noTopMargin />
+    <Navigation path={pathname} fixed noTopMargin />
     <main
       css={{
         height: "100%",
@@ -58,21 +84,11 @@ const PostPage = ({
     >
       <article css={{ height: "100%" }}>
         <Titlescreen {...mdx} />
-        <Content mdx={mdx} nextPath={nextPath} />
+        <Content mdx={mdx} nextPath={pageContext?.nextPath} />
         <div css={{ height: "25vh" }}></div>
       </article>
     </main>
   </>
 )
-
-PostPage.propTypes = {
-  data: PropTypes.object.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }).isRequired,
-  pageContext: PropTypes.shape({
-    nextPath: PropTypes.string,
-  }),
-}
 
 export default PostPage
