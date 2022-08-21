@@ -1,18 +1,18 @@
-import PropTypes from "prop-types"
+import { css } from "@emotion/react"
 import React from "react"
 
-import PostPreview from "./PostPreview"
+import PostPreview, { PostPreviewProps } from "./PostPreview"
 
-const listStyle = {
+const listStyle = css({
   margin: 0,
   padding: 0,
 
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
-}
+})
 
-const listItemStyle = {
+const listItemStyle = css({
   transition: "0.2s",
   display: "block",
   margin: 16,
@@ -32,9 +32,19 @@ const listItemStyle = {
   "&:focus-within": {
     boxShadow: "0px 1px 12px rgba(0, 0, 0, 0.75)",
   },
+})
+
+export interface PostPreviewListProps {
+  nodes: Array<
+    PostPreviewProps["data"] & {
+      childMdx: {
+        id: string
+      }
+    }
+  >
 }
 
-const PostPreviewList = ({ nodes }) => (
+const PostPreviewList = ({ nodes }: PostPreviewListProps) => (
   <ol css={listStyle}>
     {nodes.map(post => (
       <li key={post.childMdx.id} css={listItemStyle}>
@@ -43,9 +53,5 @@ const PostPreviewList = ({ nodes }) => (
     ))}
   </ol>
 )
-
-PostPreviewList.propTypes = {
-  nodes: PropTypes.arrayOf(PostPreview.propTypes.data),
-}
 
 export default PostPreviewList
