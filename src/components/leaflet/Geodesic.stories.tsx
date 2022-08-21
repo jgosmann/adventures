@@ -13,6 +13,9 @@ export default {
       </Map>
     ),
   ],
+  parameters: {
+    chromatic: { diffThreshold: 0.4 },
+  },
 }
 
 const munich: [number, number] = [48.1384, 11.5683]

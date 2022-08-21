@@ -8,6 +8,9 @@ import { postPreview } from "../../test/post-preview-fixture"
 export default {
   title: "Controls/Post Preview List",
   component: PostPreviewListComponent,
+  paramaters: {
+    chromatic: { disableSnapshot: true },
+  },
 }
 
 const Template: ComponentStory<typeof PostPreviewListComponent> = (

@@ -5,6 +5,9 @@ import Style, { StyleProps } from "./Style"
 export default {
   title: "Post/Climbing Log/Style",
   component: Style,
+  paramaters: {
+    chromatic: { disableSnapshot: true },
+  },
 }
 
 const Template: ComponentStory<typeof Style> = (args: StyleProps) => (

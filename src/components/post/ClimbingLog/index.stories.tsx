@@ -48,6 +48,43 @@ ClimbingLog.args = {
         name: "Dreamcatcher",
         grade: { system: "YDS", value: "5.14d" },
       },
+      {
+        name: "Stairway to Heaven",
+        pitches: [
+          {
+            name: "Womem in Comfortable Shoes",
+            style: "hangdog",
+            grade: { system: "YDS", value: "5.10a" },
+          },
+          {
+            style: "onsight",
+            grade: { system: "YDS", value: "5.10a" },
+          },
+          {
+            name: "Xenolith Dance",
+            style: "aid",
+            grade: { system: "YDS", value: "5.10c" },
+          },
+          {
+            style: "onsight",
+            grade: { system: "YDS", value: "5.10a" },
+          },
+          {
+            name: "Dyke Link",
+            style: "skipped",
+            grade: { system: "YDS", value: "5.10a" },
+          },
+          {
+            name: "Moonwatcher",
+            style: "hangdog",
+            grade: { system: "YDS", value: "5.9" },
+          },
+          {
+            style: "not attempted",
+            grade: { system: "YDS", value: "5.10a" },
+          },
+        ],
+      },
     ],
   },
 }

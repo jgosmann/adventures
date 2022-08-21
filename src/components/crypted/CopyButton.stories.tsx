@@ -6,6 +6,9 @@ import CopyButton from "./CopyButton"
 export default {
   title: "Crypted/Copy Button",
   component: CopyButton,
+  paramaters: {
+    chromatic: { disableSnapshot: true },
+  },
 }
 
 const Template: ComponentStory<typeof CopyButton> = (args: {

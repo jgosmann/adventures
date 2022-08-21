@@ -10,6 +10,9 @@ import Rimg from "./Rimg"
 export default {
   title: "Post/Gallery",
   component: GalleryComponent,
+  parameters: {
+    chromatic: { viewports: [1600] },
+  },
 }
 
 const imgFileNode = {

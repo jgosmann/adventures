@@ -5,6 +5,7 @@
 .*.swo
 access-tokens.json
 assets/meta.html
+build-storybook.log
 favicons
 layouts/partials/script.*.js.html
 lib

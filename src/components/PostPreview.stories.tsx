@@ -6,6 +6,9 @@ import { postPreview } from "../../test/post-preview-fixture"
 export default {
   title: "Controls/Post Preview",
   component: PostPreviewComponent,
+  paramaters: {
+    chromatic: { disableSnapshot: true },
+  },
 }
 
 const Template: ComponentStory<typeof PostPreviewComponent> = (

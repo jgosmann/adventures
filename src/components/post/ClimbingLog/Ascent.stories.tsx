@@ -28,6 +28,7 @@ export default {
         ],
       },
     },
+    chromatic: { disableSnapshot: true },
   },
 }
 
