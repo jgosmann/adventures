@@ -1,24 +1,14 @@
 import React from "react"
 import { ComponentStory } from "@storybook/react"
 import NotFoundPage, { NotFoundPageProps } from "./404"
+import { staticQueryData } from "../../test/static-query-data"
 
 export default {
   title: "Pages/Not Found",
   component: NotFoundPage,
   parameters: {
     layout: "fullscreen",
-    staticQuery: {
-      allSitePage: {
-        nodes: [
-          { path: "/year/2020", context: { year: 2020 } },
-          { path: "/year/2021", context: { year: 2021 } },
-          { path: "/year/2022", context: { year: 2022 } },
-        ],
-      },
-      site: {
-        siteMetadata: {},
-      },
-    },
+    staticQuery: staticQueryData,
   },
 }
 

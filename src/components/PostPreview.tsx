@@ -48,19 +48,20 @@ const textBoxStyle = css({
   flexDirection: "column",
 })
 
-export interface PostPreviewProps {
-  data: {
-    pagePath: string
-    childMdx: {
-      background: ImageDataLike
-      frontmatter: {
-        title: string
-        date?: string
-        categories: string[]
-      }
-      timeToRead?: number
+export interface PostPreviewData {
+  pagePath: string
+  childMdx: {
+    background: ImageDataLike
+    frontmatter: {
+      title: string
+      date?: string
+      categories: string[]
     }
+    timeToRead?: number
   }
+}
+export interface PostPreviewProps {
+  data: PostPreviewData
 }
 
 const PostPreview = ({ data }: PostPreviewProps) => {
