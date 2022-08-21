@@ -1,6 +1,6 @@
+import { css } from "@emotion/react"
 import { graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import PropTypes from "prop-types"
+import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
 import React from "react"
 
 import PostMeta from "../components/PostMeta"
@@ -34,7 +34,7 @@ export const dataFragment = graphql`
   }
 `
 
-const textBoxStyle = {
+const textBoxStyle = css({
   position: "absolute",
   bottom: "0",
   left: "0",
@@ -46,19 +46,37 @@ const textBoxStyle = {
   display: "flex",
   justifyContent: "space-between",
   flexDirection: "column",
+})
+
+export interface PostPreviewProps {
+  data: {
+    pagePath: string
+    childMdx: {
+      background: ImageDataLike
+      frontmatter: {
+        title: string
+        date?: string
+        categories: string[]
+      }
+      timeToRead?: number
+    }
+  }
 }
 
-const PostPreview = ({ data }) => {
+const PostPreview = ({ data }: PostPreviewProps) => {
+  const background = getImage(data.childMdx.background)
   return (
     <Link
       to={data.pagePath}
       css={{ color: "#000", "&:hover": { color: "#000" } }}
     >
-      <GatsbyImage
-        image={getImage(data.childMdx.background)}
-        css={{ width: "100%", height: "100%" }}
-        alt=""
-      />
+      {background && (
+        <GatsbyImage
+          image={background}
+          css={{ width: "100%", height: "100%" }}
+          alt=""
+        />
+      )}
       <div css={textBoxStyle}>
         <h2
           css={{
@@ -106,10 +124,6 @@ const PostPreview = ({ data }) => {
       </div>
     </Link>
   )
-}
-
-PostPreview.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default PostPreview

@@ -13,7 +13,7 @@ import Marker from "../components/leaflet/Marker"
 import PostPreview, {
   width as PostPreviewWidth,
   height as postPreviewHeight,
-} from "../components/PostPreview.js"
+} from "../components/PostPreview"
 import { fullHeight } from "../styles"
 
 import "normalize.css"
