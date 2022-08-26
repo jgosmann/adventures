@@ -3,7 +3,7 @@ import leaflet from "leaflet"
 import React from "react"
 import { Marker as LeafletMarker, MarkerProps } from "react-leaflet"
 
-export { MarkerProps }
+export type { MarkerProps }
 
 const Marker = (props: MarkerProps) => {
   const iconImages = useStaticQuery(graphql`
