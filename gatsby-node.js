@@ -359,6 +359,19 @@ const createLegalPages = async ({ actions, graphql }) => {
   )
 }
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  createTypes(`
+    type SitePage implements Node {
+      context: SitePageContext
+    }
+    
+    type SitePageContext {
+      year: Int
+    }
+  `)
+}
+
 exports.createPages = args => {
   return Promise.all([
     createYearlyIndices(args),

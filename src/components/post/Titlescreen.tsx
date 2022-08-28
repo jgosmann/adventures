@@ -1,10 +1,10 @@
 import styled from "@emotion/styled"
-import { InterpolationWithTheme } from "@emotion/core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
+import { css } from "@emotion/react"
 
 import PostMeta from "../../components/PostMeta"
 
@@ -22,7 +22,7 @@ export const dataFragment = graphql`
   }
 `
 
-const titleStyle: InterpolationWithTheme<never> = {
+const titleStyle = css({
   fontSize: "4vw",
   "@media (max-width: 600px)": {
     fontSize: 24,
@@ -35,7 +35,7 @@ const titleStyle: InterpolationWithTheme<never> = {
   overflowWrap: "break-word",
   hyphens: "auto",
   fontWeight: "normal",
-}
+})
 
 const BoxedPostMeta = styled(PostMeta)({
   backgroundColor: "rgba(0, 0, 0, 0.6)",

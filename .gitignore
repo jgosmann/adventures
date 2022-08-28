@@ -1,4 +1,5 @@
-.cache
+.bin
+.cache*
 .DS_Store
 .netlify
 .*.swp

@@ -2,8 +2,10 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
     "lib": ["es2021", "DOM"],
-    "types": ["@emotion/core"],
+    "target": "ES2015",
+    "moduleResolution": "node",
     "strict": true,
     "forceConsistentCasingInFileNames": true
   }
