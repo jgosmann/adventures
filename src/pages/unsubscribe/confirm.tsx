@@ -8,9 +8,10 @@ import Navigation from "../../components/navigation"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
+export const Head = () => <HtmlHead path="/unsubscribe/confirm" />
+
 const ConfirmPage = () => (
   <>
-    <HtmlHead path="/unsubscribe/confirm" language="en" />
     <Navigation path="/unsubscribe/confirm" fixed />
     <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>

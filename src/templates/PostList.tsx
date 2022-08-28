@@ -38,6 +38,16 @@ export const pageQuery = graphql`
   }
 `
 
+export interface HeadProps {
+  location: {
+    pathname: string
+  }
+}
+
+export const Head = ({ location: { pathname } }: HeadProps) => (
+  <HtmlHead key="global-head" path={pathname} />
+)
+
 export interface PostListProps {
   data: {
     allFile: {
@@ -67,7 +77,6 @@ const PostList = ({
   pageContext: { nextPage, prevPage },
 }: PostListProps) => (
   <>
-    <HtmlHead path={pathname} language="en" />
     <Navigation path={pathname} fixed />
     <main>
       <PostPreviewList nodes={nodes} />

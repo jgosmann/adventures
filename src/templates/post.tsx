@@ -33,10 +33,39 @@ export const pageQuery = graphql`
   }
 `
 
+export interface HeadProps {
+  data: {
+    mdx: {
+      excerpt: string
+      frontmatter: {
+        title: string
+      }
+      background: ImageDataLike & {
+        childImageSharp: {
+          resize: {
+            src: string
+          }
+        }
+      }
+    }
+  }
+  location: {
+    pathname: string
+  }
+}
+
+export const Head = ({ location: { pathname }, data: { mdx } }: HeadProps) => (
+  <HtmlHead
+    path={pathname}
+    description={mdx.excerpt}
+    title={mdx.frontmatter.title}
+    imageSrc={mdx.background.childImageSharp.resize.src}
+  />
+)
+
 export interface PostPageProps {
   data: {
     mdx: ContentMdx & {
-      excerpt: string
       frontmatter: {
         date: string
         title: string
@@ -66,13 +95,6 @@ const PostPage = ({
   pageContext,
 }: PostPageProps) => (
   <>
-    <HtmlHead
-      path={pathname}
-      description={mdx.excerpt}
-      title={mdx.frontmatter.title}
-      imageSrc={mdx.background.childImageSharp.resize.src}
-      language="en"
-    />
     <Global styles={fullHeight} />
     <Navigation path={pathname} fixed noTopMargin />
     <main

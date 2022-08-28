@@ -8,6 +8,16 @@ import Navigation from "../components/navigation"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
+export interface HeadProps {
+  location: {
+    pathname: string
+  }
+}
+
+export const Head = ({ location: { pathname } }: HeadProps) => (
+  <HtmlHead path={pathname} />
+)
+
 export interface NotFoundPageProps {
   location: {
     pathname: string
@@ -16,7 +26,6 @@ export interface NotFoundPageProps {
 
 const NotFoundPage = ({ location: { pathname } }: NotFoundPageProps) => (
   <>
-    <HtmlHead path={pathname} language="en" />
     <Navigation path={pathname} />
     <main css={{ textAlign: "center" }}>
       <h1>

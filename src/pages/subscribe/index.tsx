@@ -13,9 +13,10 @@ import SubscribeForm from "../../components/doveseed/SubscribeForm"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
+export const Head = () => <HtmlHead path="/subscribe" />
+
 const SubscribePage = () => (
   <>
-    <HtmlHead path="/subscribe" language="en" />
     <Navigation path="/subscribe" fixed />
     <main css={contentBaseStyle}>
       <ContentStyleWrapper>

@@ -8,9 +8,10 @@ import SubscribeForm from "../../components/doveseed/SubscribeForm"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
+export const Head = () => <HtmlHead path="/unsubscribe" />
+
 const UnsubscribePage = () => (
   <>
-    <HtmlHead path="/unsubscribe" language="en" />
     <Navigation path="/unsubscribe" fixed />
     <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>

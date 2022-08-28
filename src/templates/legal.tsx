@@ -26,6 +26,23 @@ export const pageQuery = graphql`
   }
 `
 
+export interface HeadProps {
+  data: {
+    mdx: {
+      frontmatter: {
+        title: string
+      }
+    }
+  }
+  location: {
+    pathname: string
+  }
+}
+
+export const Head = ({ location: { pathname }, data: { mdx } }: HeadProps) => (
+  <HtmlHead path={pathname} title={mdx.frontmatter.title} />
+)
+
 const mdxComponents = {
   CryptedEmail,
   CryptedPhone,
@@ -37,9 +54,6 @@ const mdxComponents = {
 export interface LegalPageProps {
   data: {
     mdx: {
-      frontmatter: {
-        title: string
-      }
       body: string
     }
   }
@@ -53,7 +67,6 @@ const LegalPage = ({
   location: { pathname },
 }: LegalPageProps) => (
   <>
-    <HtmlHead path={pathname} title={mdx.frontmatter.title} language="en" />
     <Navigation path={pathname} fixed />
     <main css={{ marginTop: 48 }}>
       <ContentStyleWrapper>

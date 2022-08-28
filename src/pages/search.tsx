@@ -7,6 +7,16 @@ import Search from "../components/Search"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
+export interface HeadProps {
+  location: {
+    pathname: string
+  }
+}
+
+export const Head = ({ location: { pathname } }: HeadProps) => (
+  <HtmlHead path={pathname} />
+)
+
 export interface SearchPageProps {
   location: {
     pathname: string
@@ -19,7 +29,6 @@ const SearchPage = ({ location: { pathname, search } }: SearchPageProps) => {
 
   return (
     <>
-      <HtmlHead path={pathname} language="en" />
       <Navigation path={pathname} query={query} fixed />
       <main>
         <h1

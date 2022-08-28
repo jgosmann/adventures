@@ -19,6 +19,15 @@ import { fullHeight } from "../styles"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import "react-leaflet-markercluster/dist/styles.min.css"
+export interface HeadProps {
+  location: {
+    pathname: string
+  }
+}
+
+export const Head = ({ location: { pathname } }: HeadProps) => (
+  <HtmlHead path={pathname} />
+)
 
 export const pageQuery = graphql`
   query {
@@ -102,7 +111,6 @@ const MapPage = ({
   location: { pathname },
 }: MapPageProps) => (
   <div css={{ display: "flex", flexDirection: "column", height: "100%" }}>
-    <HtmlHead path={pathname} language="en" />
     <Global styles={fullHeight} />
     <Navigation path={pathname} />
     <main
