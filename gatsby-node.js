@@ -46,7 +46,7 @@ const resolveSinglePostFile = relativeDirectory => (source, args, context) => {
     relativeDirectory instanceof Function
       ? relativeDirectory(source, args, context)
       : relativeDirectory
-  return context.nodeModel.runQuery({
+  return context.nodeModel.findOne({
     type: `File`,
     firstOnly: true,
     query: {
@@ -83,22 +83,24 @@ exports.createResolvers = ({ createResolvers }) => {
           const relativePathFilters =
             (args.filter && args.filter.relativePath) || {}
           return (
-            (await context.nodeModel.runQuery({
-              type: `File`,
-              query: {
-                ...args,
-                filter: {
-                  ...args.filter,
-                  relativePath: Object.assign(
-                    { glob: `${pathPrefix}/**` },
-                    ...Object.entries(relativePathFilters).map(([k, v]) => ({
-                      [k]: `${pathPrefix}/${v}`,
-                    }))
-                  ),
-                  sourceInstanceName: { eq: "posts" },
+            (
+              await context.nodeModel.findAll({
+                type: `File`,
+                query: {
+                  ...args,
+                  filter: {
+                    ...args.filter,
+                    relativePath: Object.assign(
+                      { glob: `${pathPrefix}/**` },
+                      ...Object.entries(relativePathFilters).map(([k, v]) => ({
+                        [k]: `${pathPrefix}/${v}`,
+                      }))
+                    ),
+                    sourceInstanceName: { eq: "posts" },
+                  },
                 },
-              },
-            })) || []
+              })
+            ).entries || []
           )
         },
       },
