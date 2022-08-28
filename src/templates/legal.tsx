@@ -60,15 +60,17 @@ export interface LegalPageProps {
   location: {
     pathname: string
   }
+  pageContext: { language: string }
 }
 
 const LegalPage = ({
   data: { mdx },
   location: { pathname },
+  pageContext: { language },
 }: LegalPageProps) => (
   <>
     <Navigation path={pathname} fixed />
-    <main css={{ marginTop: 48 }}>
+    <main css={{ marginTop: 48 }} lang={language}>
       <ContentStyleWrapper>
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{mdx.body}</MDXRenderer>

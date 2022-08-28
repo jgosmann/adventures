@@ -106,6 +106,17 @@ exports.createResolvers = ({ createResolvers }) => {
       },
     },
     File: {
+      language: {
+        type: `String!`,
+        resolve: source => {
+          const parts = source.name.split(".")
+          const lang = parts.length > 1 ? parts[parts.length - 1] : ""
+          if (["de", "en"].includes(lang)) {
+            return lang
+          }
+          return "en"
+        },
+      },
       pagePath: {
         type: `String!`,
         resolve: source => {
@@ -344,6 +355,7 @@ const createLegalPages = async ({ actions, graphql }) => {
             childMdx {
               id
             }
+            language
           }
         }
       }
@@ -356,6 +368,7 @@ const createLegalPages = async ({ actions, graphql }) => {
       component: legalTemplate,
       context: {
         pageId: page.childMdx.id,
+        language: page.language,
       },
     })
   )
