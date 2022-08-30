@@ -1,5 +1,4 @@
 import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import React from "react"
 
@@ -52,29 +51,23 @@ const mdxComponents = {
 }
 
 export interface LegalPageProps {
-  data: {
-    mdx: {
-      body: string
-    }
-  }
   location: {
     pathname: string
   }
   pageContext: { language: string }
+  children: React.ReactNode
 }
 
 const LegalPage = ({
-  data: { mdx },
   location: { pathname },
   pageContext: { language },
+  children,
 }: LegalPageProps) => (
   <>
     <Navigation path={pathname} fixed />
     <main css={{ marginTop: 48 }} lang={language}>
       <ContentStyleWrapper>
-        <MDXProvider components={mdxComponents}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
+        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
       </ContentStyleWrapper>
     </main>
   </>

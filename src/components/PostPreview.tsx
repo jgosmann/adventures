@@ -28,7 +28,11 @@ export const dataFragment = graphql`
         date
         title
       }
-      timeToRead
+      fields {
+        timeToRead {
+          minutes
+        }
+      }
     }
     pagePath
   }
@@ -57,7 +61,9 @@ export interface PostPreviewData {
       date?: string
       categories: string[]
     }
-    timeToRead?: number
+    fields: {
+      timeToRead?: { minutes: number }
+    }
   }
 }
 export interface PostPreviewProps {
@@ -109,7 +115,7 @@ const PostPreview = ({ data }: PostPreviewProps) => {
           <li css={{ whiteSpace: "nowrap" }}>
             <PostMeta
               frontmatter={data.childMdx.frontmatter}
-              timeToRead={data.childMdx.timeToRead}
+              fields={data.childMdx.fields}
             />
           </li>
           {data.childMdx.frontmatter.categories && (

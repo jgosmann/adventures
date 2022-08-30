@@ -32,5 +32,5 @@ Titlescreen.args = {
     date: "2022-07-17T11:37:06Z",
     title: "The title of the post",
   },
-  timeToRead: 14,
+  fields: { timeToRead: { minutes: 14 } },
 }

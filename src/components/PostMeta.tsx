@@ -11,7 +11,11 @@ export const dataFragment = graphql`
     frontmatter {
       date
     }
-    timeToRead
+    fields {
+      timeToRead {
+        minutes
+      }
+    }
   }
 `
 
@@ -26,19 +30,21 @@ export interface PostMetaProps {
   frontmatter: {
     date?: string
   }
-  timeToRead?: number
+  fields?: {
+    timeToRead?: { minutes: number }
+  }
 }
 
-const PostMeta = ({ frontmatter, timeToRead, className }: PostMetaProps) => (
+const PostMeta = ({ frontmatter, fields, className }: PostMetaProps) => (
   <ul css={semanticList} className={className}>
     {frontmatter.date && (
       <IconListItem icon={faCalendarDay} title="Date">
         {dateFormat.format(Date.parse(frontmatter.date))}
       </IconListItem>
     )}
-    {timeToRead && (
+    {fields?.timeToRead && (
       <IconListItem icon={faHourglassHalf} title="Estimated reading duration">
-        {timeToRead} minute read
+        {Math.round(fields.timeToRead.minutes)} minute read
       </IconListItem>
     )}
   </ul>

@@ -26,7 +26,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
       }
-      body
       ...Titlescreen_data
       ...Content_data
     }
@@ -70,13 +69,15 @@ export interface PostPageProps {
         date: string
         title: string
       }
-      timeToRead: number
       background: ImageDataLike & {
         childImageSharp: {
           resize: {
             src: string
           }
         }
+      }
+      fields: {
+        timeToRead: { minutes: number }
       }
     }
   }
@@ -86,6 +87,7 @@ export interface PostPageProps {
   pageContext?: {
     nextPath?: string
   }
+  children: React.ReactNode
 }
 
 // TODO: extract layout component
@@ -93,6 +95,7 @@ const PostPage = ({
   data: { mdx },
   location: { pathname },
   pageContext,
+  children,
 }: PostPageProps) => (
   <>
     <Global styles={fullHeight} />
@@ -106,7 +109,9 @@ const PostPage = ({
     >
       <article css={{ height: "100%" }}>
         <Titlescreen {...mdx} />
-        <Content mdx={mdx} nextPath={pageContext?.nextPath} />
+        <Content mdx={mdx} nextPath={pageContext?.nextPath}>
+          {children}
+        </Content>
         <div css={{ height: "25vh" }}></div>
       </article>
     </main>

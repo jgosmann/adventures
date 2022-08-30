@@ -12,7 +12,10 @@ const Template: ComponentStory<typeof PostMeta> = (args: PostMetaProps) => (
 )
 
 export const AllSet = Template.bind({})
-AllSet.args = { frontmatter: { date: "2022-07-17T11:19:42Z" }, timeToRead: 4 }
+AllSet.args = {
+  frontmatter: { date: "2022-07-17T11:19:42Z" },
+  fields: { timeToRead: { minutes: 4 } },
+}
 
 export const NoneSet = Template.bind({})
 NoneSet.args = { frontmatter: {} }

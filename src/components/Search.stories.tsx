@@ -28,7 +28,9 @@ const postPreview = (id: number) => ({
       date: "2022-08-21 13:37",
       categories: ["Box 1", "Box 2"],
     },
-    timeToRead: 42,
+    fields: {
+      timeToRead: { minutes: 42 },
+    },
   },
 })
 

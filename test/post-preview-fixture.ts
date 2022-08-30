@@ -20,6 +20,8 @@ export const postPreview = (id: number, map = "48.1550, 11.5418") => ({
       categories: ["Box 1", "Box 2"],
       map,
     },
-    timeToRead: 42,
+    fields: {
+      timeToRead: { minutes: 42 },
+    },
   },
 })

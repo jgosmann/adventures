@@ -11,6 +11,8 @@ const FlexSearch = require("flexsearch")
 const axios = require("axios").default
 const path = require("path")
 const pLimit = require("p-limit")
+const readingTime = require("reading-time")
+const stripMdx = require("remark-mdx-to-plain-text")
 
 const accessTokensPromise = (async () =>
   JSON.parse(await fs.promises.readFile("access-tokens.json")))()
@@ -48,11 +50,12 @@ const resolveSinglePostFile = relativeDirectory => (source, args, context) => {
       : relativeDirectory
   return context.nodeModel.findOne({
     type: `File`,
-    firstOnly: true,
     query: {
       filter: {
         absolutePath: {
-          eq: `${path.dirname(source.fileAbsolutePath)}/${evaluatedDirectory}`,
+          eq: `${path.dirname(
+            context.nodeModel.getNodeById({ id: source.parent }).absolutePath
+          )}/${evaluatedDirectory}`,
         },
       },
     },
@@ -78,7 +81,9 @@ exports.createResolvers = ({ createResolvers }) => {
         },
         resolve: async (source, args, context) => {
           const pathPrefix = path.basename(
-            path.dirname(source.fileAbsolutePath)
+            path.dirname(
+              context.nodeModel.getNodeById({ id: source.parent }).absolutePath
+            )
           )
           const relativePathFilters =
             (args.filter && args.filter.relativePath) || {}
@@ -215,32 +220,19 @@ const createYearlyIndices = async ({ actions, graphql }) => {
 }
 
 const createSearchIndex = async ({ graphql }) => {
-  const extractTextFromMdxAst = node => {
-    if (!node) {
-      return ""
-    }
-    const { type, value, children } = node
-    if (type === "text") return value
-    if (!children) return ""
-    if (type === "paragraph")
-      return children.map(extractTextFromMdxAst).join("")
-    return children.map(extractTextFromMdxAst).join("\n\n")
-  }
-
   let nextId = 0
   const reverseGeocodeLimit = pLimit(10)
   const preprocessDoc = async post => {
+    const { default: mdx } = await import("remark-mdx")
+    const { remark } = await import("remark")
     const [lat, long] = JSON.parse(`[${post.childMdx.frontmatter.map}]`)
     return {
       pagePath: post.pagePath,
-      childMdx: {
-        ...post.childMdx,
-        mdxAST: undefined,
-      },
+      childMdx: post.childMdx,
       search: {
         id: nextId++,
         categories: post.childMdx.frontmatter.categories.join(" "),
-        content: extractTextFromMdxAst(post.childMdx.mdxAST),
+        content: remark().use(mdx).use(stripMdx).process(post.childMdx.body),
         location: await reverseGeocodeLimit(() =>
           reverseGeocode({ lat, long })
         ),
@@ -269,8 +261,11 @@ const createSearchIndex = async ({ graphql }) => {
                 title
                 map
               }
-              timeToRead
-              mdxAST
+              fields {
+                timeToRead {
+                  minutes
+                }
+              }
             }
           }
         }
@@ -316,6 +311,9 @@ const createPostPages = async ({ actions, graphql }) => {
               pagePath
               childMdx {
                 id
+                internal {
+                  contentFilePath
+                }
               }
             }
             next {
@@ -330,7 +328,7 @@ const createPostPages = async ({ actions, graphql }) => {
   posts.forEach(post =>
     createPage({
       path: post.node.pagePath,
-      component: postTemplate,
+      component: `${postTemplate}?__contentFilePath=${post.node.childMdx.internal.contentFilePath}`,
       context: {
         postId: post.node.childMdx.id,
         nextPath: post.next ? post.next.pagePath : null,
@@ -354,6 +352,9 @@ const createLegalPages = async ({ actions, graphql }) => {
             pagePath
             childMdx {
               id
+              internal {
+                contentFilePath
+              }
             }
             language
           }
@@ -365,7 +366,7 @@ const createLegalPages = async ({ actions, graphql }) => {
   legalPages.forEach(page =>
     createPage({
       path: page.pagePath,
-      component: legalTemplate,
+      component: `${legalTemplate}?__contentFilePath=${page.childMdx.internal.contentFilePath}`,
       context: {
         pageId: page.childMdx.id,
         language: page.language,
@@ -407,6 +408,17 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           },
         ],
       },
+    })
+  }
+}
+
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type == `Mdx`) {
+    createNodeField({
+      node,
+      name: `timeToRead`,
+      value: readingTime(node.body),
     })
   }
 }

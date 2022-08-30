@@ -1,5 +1,4 @@
 import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import PropTypes from "prop-types"
 import React from "react"
@@ -120,9 +119,10 @@ export interface ContentMdx {
 export interface ContentProps {
   nextPath?: string
   mdx: ContentMdx
+  children: React.ReactNode
 }
 
-const Content = ({ mdx, nextPath }: ContentProps) => {
+const Content = ({ mdx, nextPath, children }: ContentProps) => {
   const gpxTracks = Object.assign(
     {},
     ...mdx.gpxTracks.map(track => ({
@@ -237,9 +237,7 @@ const Content = ({ mdx, nextPath }: ContentProps) => {
   return (
     <ContentStyleWrapper>
       <LocalStorageGradeContext>
-        <MDXProvider components={mdxComponents}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
+        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
         {mdx.climbs.length > 0 && (
           <ClimbingLog climbs={mdx.climbs[0].childClimbsYaml} />
         )}

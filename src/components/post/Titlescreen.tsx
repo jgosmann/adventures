@@ -56,14 +56,12 @@ export interface TitlescreenProps {
     date: string
     title: string
   }
-  timeToRead: number
+  fields: {
+    timeToRead: { minutes: number }
+  }
 }
 
-const Titlescreen = ({
-  background,
-  frontmatter,
-  timeToRead,
-}: TitlescreenProps) => {
+const Titlescreen = ({ background, frontmatter, fields }: TitlescreenProps) => {
   const [scrollRatio, setScrollRatio] = useState(0)
   const updateParallax = () => {
     window.requestAnimationFrame(() => {
@@ -113,7 +111,7 @@ const Titlescreen = ({
         }}
       >
         <h1 css={titleStyle}>{frontmatter.title}</h1>
-        <BoxedPostMeta frontmatter={frontmatter} timeToRead={timeToRead} />
+        <BoxedPostMeta frontmatter={frontmatter} fields={fields} />
       </div>
       <FontAwesomeIcon
         icon={faChevronUp}
