@@ -25,7 +25,8 @@ export const useRemoteGpxTrack = (url: string): Track | undefined => {
             Array.from(segment.getElementsByTagName("trkpt")).map(point => {
               const lat = point.getAttribute("lat")
               const lon = point.getAttribute("lon")
-              const elevation = point.getElementsByTagName("ele")[0].textContent
+              const elevation =
+                point.getElementsByTagName("ele")[0]?.textContent
               return {
                 lat: lat ? Number.parseFloat(lat) : undefined,
                 lon: lon ? Number.parseFloat(lon) : undefined,
