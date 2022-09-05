@@ -45,8 +45,8 @@ const Rimg = ({ alt, caption, image, overlay, children }: RimgProps) => {
   const aspectRatio = `(${image.childImageSharp.original.width} / ${image.childImageSharp.original.height})`
   const gallerySpecificStyle = {
     "@media screen and (min-height: 600px)": {
-      width: `calc(45vh * ${aspectRatio})`,
-      maxHeight: "45vh",
+      width: `calc(${height} * ${aspectRatio})`,
+      maxHeight: height,
     },
   }
 
