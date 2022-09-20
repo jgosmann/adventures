@@ -95,7 +95,7 @@ const Titlescreen = ({ background, frontmatter, fields }: TitlescreenProps) => {
       {image && (
         <CoverImg
           image={image}
-          imgStyle={{ transform: `translate(0, ${50 * scrollRatio}%)` }}
+          style={{ transform: `translate(0, ${50 * scrollRatio}%)` }}
           loading="eager"
           alt=""
         />
