@@ -56,11 +56,6 @@ module.exports = {
     config.resolve.alias["gatsby-original"] = require.resolve("gatsby")
     config.resolve.alias["gatsby"] = require.resolve("./mocks/gatsby.js")
 
-    // Storybook 6.5 added support for React 18's new Root API, but fails to realize we
-    // arent using React 18 yet, so it fails when it can't find it.
-    // https://github.com/storybookjs/storybook/issues/18402
-    config.externals = ["react-dom/client"]
-
     return config
   },
 }

@@ -406,6 +406,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /react-leaflet-geodesic/,
             use: loaders.null(),
           },
+          {
+            test: /node_modules\/leaflet/,
+            use: loaders.null(),
+          },
         ],
       },
     })

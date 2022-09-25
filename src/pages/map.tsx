@@ -2,7 +2,7 @@ import { css, Global } from "@emotion/react"
 import { graphql } from "gatsby"
 import React from "react"
 import { Popup } from "react-leaflet"
-import MarkerClusterGroup from "react-leaflet-markercluster"
+import MarkerClusterGroup from "@changey/react-leaflet-markercluster"
 
 import colors from "../colors"
 import HtmlHead from "../components/HtmlHead"
@@ -18,7 +18,7 @@ import { fullHeight } from "../styles"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
-import "react-leaflet-markercluster/dist/styles.min.css"
+import "@changey/react-leaflet-markercluster/dist/styles.min.css"
 
 export interface HeadProps {
   location: {

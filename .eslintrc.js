@@ -20,7 +20,9 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "@typescript-eslint", "cypress"],
-  rules: {},
+  rules: {
+    "react/no-unknown-property": ["error", { ignore: ["css"] }],
+  },
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
