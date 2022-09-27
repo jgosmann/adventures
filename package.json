@@ -35,7 +35,7 @@
     "@types/react-leaflet-markercluster": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.38.0",
-    "axios": "^0.21.1",
+    "axios": "^0.27.2",
     "babel-jest": "^27.4.5",
     "babel-loader": "^8.2.3",
     "babel-preset-gatsby": "^2.4.0",
