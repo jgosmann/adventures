@@ -10,7 +10,6 @@ const fs = require("fs")
 const FlexSearch = require("flexsearch")
 const axios = require("axios").default
 const path = require("path")
-const pLimit = require("p-limit")
 const readingTime = require("reading-time")
 const stripMdx = require("remark-mdx-to-plain-text")
 
@@ -221,6 +220,7 @@ const createYearlyIndices = async ({ actions, graphql }) => {
 
 const createSearchIndex = async ({ graphql }) => {
   let nextId = 0
+  const { default: pLimit } = await import("p-limit")
   const reverseGeocodeLimit = pLimit(10)
   const preprocessDoc = async post => {
     const { default: mdx } = await import("remark-mdx")
