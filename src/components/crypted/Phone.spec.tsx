@@ -1,5 +1,5 @@
 import React from "react"
-import { render, screen } from "@testing-library/react"
+import { act, render, screen } from "@testing-library/react"
 import CryptedPhone from "./Phone"
 
 describe("CryptedPhone", () => {
@@ -22,7 +22,7 @@ describe("CryptedPhone", () => {
       />
     )
 
-    screen.getByTitle(copyButtonTitle).click()
+    act(() => screen.getByTitle(copyButtonTitle).click())
 
     expect(global.navigator.clipboard.writeText).toHaveBeenLastCalledWith(
       "+491741234567"

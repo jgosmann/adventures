@@ -1,5 +1,5 @@
 import React from "react"
-import { render, screen } from "@testing-library/react"
+import { act, render, screen } from "@testing-library/react"
 import CryptedEmail from "./Email"
 
 describe("CryptedEmail", () => {
@@ -21,7 +21,7 @@ describe("CryptedEmail", () => {
       />
     )
 
-    screen.getByTitle(copyButtonTitle).click()
+    act(() => screen.getByTitle(copyButtonTitle).click())
 
     expect(global.navigator.clipboard.writeText).toHaveBeenLastCalledWith(
       "name@domain.tld"

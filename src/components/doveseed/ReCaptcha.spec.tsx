@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+import { act, render } from "@testing-library/react"
 import React from "react"
 import ReCaptcha from "./ReCaptcha"
 
@@ -54,7 +54,7 @@ describe("ReCaptcha", () => {
 
     describe("when the ReCaptcha script was loaded", () => {
       beforeEach(() => {
-        window.onRecaptchaLoad()
+        act(() => window.onRecaptchaLoad())
       })
 
       it("calls the grecaptcha render function", () => {

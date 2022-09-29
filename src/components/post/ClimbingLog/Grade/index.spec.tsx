@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react"
+import { act, fireEvent, render, screen } from "@testing-library/react"
 import { setStaticQuery } from "../../../../../test/mockStaticQuery"
 import userEvent from "@testing-library/user-event"
 import React from "react"
@@ -74,7 +74,7 @@ describe("Grade", () => {
 
   describe("when clicking the Grade component", () => {
     beforeEach(() => {
-      screen.getByTestId("grade").click()
+      act(() => screen.getByTestId("grade").click())
     })
 
     it("shows the selector with the grade conversions", () => {
@@ -86,7 +86,7 @@ describe("Grade", () => {
 
     describe("when clicking in the selector", () => {
       beforeEach(() => {
-        screen.getByTestId("grade-selector").click()
+        act(() => screen.getByTestId("grade-selector").click())
       })
 
       it("still shows the selector", () => {
@@ -99,7 +99,7 @@ describe("Grade", () => {
 
     describe("when clicking outside the popup", () => {
       beforeEach(() => {
-        screen.getByTestId("grade-selector").parentElement?.click()
+        act(() => screen.getByTestId("grade-selector").parentElement?.click())
       })
 
       it("hides the selector", () => {
@@ -112,7 +112,7 @@ describe("Grade", () => {
 
     describe("when pressing Escape", () => {
       beforeEach(() => {
-        userEvent.type(screen.getByTestId("grade-selector"), "{esc}")
+        act(() => userEvent.type(screen.getByTestId("grade-selector"), "{esc}"))
       })
 
       it("hides the selector", () => {
@@ -125,7 +125,9 @@ describe("Grade", () => {
 
     describe("when losing focus", () => {
       beforeEach(() => {
-        fireEvent.blur(screen.getByTestId("grade-selector"))
+        act(() => {
+          fireEvent.blur(screen.getByTestId("grade-selector"))
+        })
       })
 
       it("hides the selector", () => {
@@ -138,8 +140,10 @@ describe("Grade", () => {
 
     describe("when changing the default system in the selector", () => {
       beforeEach(() => {
-        screen.getByLabelText("UIAA").click()
-        fireEvent.blur(screen.getByTestId("grade-selector"))
+        act(() => {
+          screen.getByLabelText("UIAA").click()
+          fireEvent.blur(screen.getByTestId("grade-selector"))
+        })
       })
 
       it("changes the used grade system", () => {
