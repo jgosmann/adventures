@@ -65,12 +65,8 @@ export const handlers = [
     }
   }),
 
-  rest.post(searchApiUrl, (req, res, ctx) => {
-    const page =
-      (req.body &&
-        typeof req.body === "object" &&
-        req.body["variables"]["page"]) ||
-      "page0"
+  rest.post(searchApiUrl, async (req, res, ctx) => {
+    const page = (await req.json())["variables"]["page"] || "page0"
     return res(
       ctx.status(200),
       ctx.json({
