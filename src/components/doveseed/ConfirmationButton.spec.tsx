@@ -1,24 +1,23 @@
 import React from "react"
 import { act, render, screen, waitFor } from "@testing-library/react"
 import { mockLocation } from "../../../test/mockLocation"
-import { rest } from "msw"
-import { setupServer } from "msw/node"
 import {
   ConfirmationButtonController,
   ConfirmationButtonView,
 } from "./ConfirmationButton"
 import { ProcessingState } from "./ProcessingState"
 import userEvent from "@testing-library/user-event"
+import { doveseedApiUrl, validBearerToken } from "../../mocks/handlers"
 
 describe("ConfirmationButtonController", () => {
-  const apiUrl = "http://api.host/confirm"
+  const apiUrl = `${doveseedApiUrl}/confirm`
   const originalLocation = window.location
   const renderMock = jest.fn()
 
   beforeEach(() => {
     Reflect.deleteProperty(window, "location")
     window.location = mockLocation(
-      "https://localhost/path?email=foo@example.com&token=some-opaque-token"
+      `https://localhost/path?email=foo@example.com&token=${validBearerToken}`
     )
 
     renderMock.mockReset().mockImplementation(() => null)
@@ -41,7 +40,7 @@ describe("ConfirmationButtonController", () => {
   it("the token is extracted from the location", () => {
     expect(renderMock).toHaveBeenLastCalledWith(
       expect.objectContaining({
-        token: "some-opaque-token",
+        token: validBearerToken,
       })
     )
   })
@@ -57,31 +56,13 @@ describe("ConfirmationButtonController", () => {
   })
 
   describe("when onSubmit is called", () => {
-    const server = setupServer(
-      rest.post(`${apiUrl}/foo@example.com`, (req, res, ctx) => {
-        if (req.headers.get("Authorization") === "Bearer some-opaque-token") {
-          return res(ctx.status(200))
-        } else {
-          return res(ctx.status(403))
-        }
-      })
-    )
-
-    beforeEach(() => {
-      server.listen({ onUnhandledRequest: "error" })
-    })
-
-    afterEach(() => {
-      server.close()
-    })
-
     describe("when the triggered requests succeeds", () => {
       it("sets the state to 'Success'", async () => {
         await act(async () =>
           renderMock.mock.calls[0][0].onSubmit(
             { preventDefault: jest.fn() },
             "foo@example.com",
-            "some-opaque-token"
+            validBearerToken
           )
         )
         await waitFor(() =>
@@ -128,7 +109,7 @@ describe("ConfirmationButtonView", () => {
     render(
       <ConfirmationButtonView
         email="foo@example.com"
-        token="some-opaque-token"
+        token={validBearerToken}
         submitLabel="Submit"
         state={ProcessingState.Initial}
         onSubmit={onSubmit}
@@ -145,7 +126,7 @@ describe("ConfirmationButtonView", () => {
       expect(onSubmit).toHaveBeenLastCalledWith(
         expect.anything(),
         "foo@example.com",
-        "some-opaque-token"
+        validBearerToken
       )
     })
   })

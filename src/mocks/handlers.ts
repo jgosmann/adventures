@@ -1,4 +1,13 @@
 import { rest } from "msw"
+import {
+  mockGatsbyImage,
+  mockImageFileNode,
+} from "../../test/gatsby-image-fixture"
+
+export const doveseedApiUrl = "http://doveseed.api"
+export const searchApiUrl = "http://search.api"
+
+export const validBearerToken = "some-opaque-token"
 
 export const handlers = [
   rest.get("/track.gpx", (req, res, ctx) => {
@@ -35,6 +44,65 @@ export const handlers = [
  </trk>
 </gpx>
             `)
+    )
+  }),
+
+  rest.post(`${doveseedApiUrl}/subscribe/foo@example.com`, (req, res, ctx) => {
+    return res(ctx.status(200))
+  }),
+  rest.post(
+    `${doveseedApiUrl}/subscribe/failure@example.com`,
+    (req, res, ctx) => {
+      return res(ctx.status(400))
+    }
+  ),
+
+  rest.post(`${doveseedApiUrl}/confirm/foo@example.com`, (req, res, ctx) => {
+    if (req.headers.get("Authorization") === `Bearer ${validBearerToken}`) {
+      return res(ctx.status(200))
+    } else {
+      return res(ctx.status(403))
+    }
+  }),
+
+  rest.post(searchApiUrl, (req, res, ctx) => {
+    const page =
+      (req.body &&
+        typeof req.body === "object" &&
+        req.body["variables"]["page"]) ||
+      "page0"
+    return res(
+      ctx.status(200),
+      ctx.json({
+        data: {
+          search: {
+            page: page,
+            next: "next",
+            result: [
+              {
+                pagePath: `/${page}`,
+                childMdx: {
+                  id: page,
+                  background: mockImageFileNode(
+                    mockGatsbyImage({
+                      url: "background.png",
+                      width: 300,
+                      height: 250,
+                      layout: "fixed",
+                    })
+                  ),
+                  frontmatter: {
+                    title: `Title ${page}`,
+                    date: "2022-08-21 13:37",
+                    categories: ["Box 1", "Box 2"],
+                  },
+                  fields: { timeToRead: { minutes: 42 } },
+                },
+              },
+            ],
+          },
+        },
+      })
     )
   }),
 ]

@@ -8,7 +8,7 @@ expect.extend(matchers)
 
 global.ResizeObserver = ResizeObserver
 
-beforeAll(() => server.listen())
+beforeAll(() => server.listen({ onUnhandledRequest: "error" }))
 
 afterEach(() => server.resetHandlers())
 

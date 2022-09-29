@@ -1,8 +1,6 @@
 import React from "react"
 import { act, render, screen, waitFor } from "@testing-library/react"
 import { mockLocation } from "../../../test/mockLocation"
-import { rest } from "msw"
-import { setupServer } from "msw/node"
 import { ProcessingState } from "./ProcessingState"
 import {
   RenderProps,
@@ -11,9 +9,10 @@ import {
 } from "./SubscribeForm"
 import ReCaptcha from "./ReCaptcha"
 import userEvent from "@testing-library/user-event"
+import { doveseedApiUrl } from "../../mocks/handlers"
 
 describe("SubscribeFormController", () => {
-  const apiUrl = "http://api.host/subscribe"
+  const apiUrl = `${doveseedApiUrl}/subscribe`
   const originalLocation = window.location
   const renderMock = jest.fn()
 
@@ -60,18 +59,7 @@ describe("SubscribeFormController", () => {
   })
 
   describe("when onSubmit is called", () => {
-    const server = setupServer(
-      rest.post(`${apiUrl}/foo@example.com`, (req, res, ctx) => {
-        return res(ctx.status(200))
-      }),
-      rest.post(`${apiUrl}/failure@example.com`, (req, res, ctx) => {
-        return res(ctx.status(400))
-      })
-    )
-
     beforeEach(() => {
-      server.listen({ onUnhandledRequest: "error" })
-
       const grecaptchaMock = {
         render: jest.fn(() => 123),
         reset: jest.fn(),
@@ -85,10 +73,6 @@ describe("SubscribeFormController", () => {
         ...grecaptchaMock,
         enterprise: grecaptchaMock,
       }
-    })
-
-    afterEach(() => {
-      server.close()
     })
 
     describe("when the triggered requests succeeds", () => {
