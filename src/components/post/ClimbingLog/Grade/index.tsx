@@ -198,8 +198,7 @@ const Grade = ({ system, value }: GradeProps) => {
         }
       }}
       onKeyDown={ev => {
-        const escKeyCode = 27
-        if (ev.keyCode == escKeyCode && state.expanded) {
+        if (ev.code === "Escape" && state.expanded) {
           setState(current => ({
             ...current,
             expanded: false,

@@ -3,6 +3,7 @@ import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import EmailSubmissionForm from "./EmailSubmissionForm"
 import { ProcessingState } from "./ProcessingState"
+import { UserEvent } from "@testing-library/user-event/dist/types/setup/setup"
 
 describe("EmailSubmissionForm", () => {
   const submitLabel = "Submit"
@@ -33,6 +34,12 @@ describe("EmailSubmissionForm", () => {
     theInputIsEnabled()
     theSubmitButtonIsEnabled()
   }
+
+  let user: UserEvent
+
+  beforeEach(() => {
+    user = userEvent.setup()
+  })
 
   describe("initially", () => {
     beforeEach(() => {
@@ -82,23 +89,23 @@ describe("EmailSubmissionForm", () => {
     })
 
     describe("through clicking the submit button", () => {
-      it("calls onSubmit with the entered email address", () => {
+      it("calls onSubmit with the entered email address", async () => {
         const emailAddress = "foo@example.com"
-        userEvent.type(
+        await user.type(
           screen.getByPlaceholderText("Email address"),
           emailAddress
         )
-        userEvent.click(screen.getByRole("button", { name: /submit/i }))
+        await user.click(screen.getByRole("button", { name: /submit/i }))
         expect(onSubmit).toHaveBeenCalledWith(expect.anything(), emailAddress)
       })
     })
 
     describe("through pressing enter", () => {
-      it("calls onSubmit with the entered email address", () => {
+      it("calls onSubmit with the entered email address", async () => {
         const emailAddress = "foo@example.com"
         const emailInput = screen.getByPlaceholderText("Email address")
-        userEvent.type(emailInput, emailAddress)
-        userEvent.keyboard("{enter}")
+        await user.type(emailInput, emailAddress)
+        await user.keyboard("{enter}")
         expect(onSubmit).toHaveBeenCalledWith(expect.anything(), emailAddress)
       })
     })

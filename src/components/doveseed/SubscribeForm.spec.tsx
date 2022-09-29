@@ -10,6 +10,7 @@ import {
 import ReCaptcha from "./ReCaptcha"
 import userEvent from "@testing-library/user-event"
 import { doveseedApiUrl } from "../../mocks/handlers"
+import { UserEvent } from "@testing-library/user-event/dist/types/setup/setup"
 
 describe("SubscribeFormController", () => {
   const apiUrl = `${doveseedApiUrl}/subscribe`
@@ -149,8 +150,10 @@ describe("SubscribeFormController", () => {
 
 describe("ConfirmationButtonView", () => {
   const onSubmit = jest.fn()
+  let user: UserEvent
 
   beforeEach(() => {
+    user = userEvent.setup()
     onSubmit
       .mockReset()
       .mockImplementation((ev: React.FormEvent<HTMLFormElement>) =>
@@ -169,8 +172,8 @@ describe("ConfirmationButtonView", () => {
   })
 
   describe("when clicking the submit button", () => {
-    beforeEach(() => {
-      userEvent.click(screen.getByRole("button", { name: /submit/i }))
+    beforeEach(async () => {
+      await user.click(screen.getByRole("button", { name: /submit/i }))
     })
 
     it("calls onSubmit with the email", () => {

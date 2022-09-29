@@ -8,6 +8,7 @@ import {
 import { ProcessingState } from "./ProcessingState"
 import userEvent from "@testing-library/user-event"
 import { doveseedApiUrl, validBearerToken } from "../../mocks/handlers"
+import { UserEvent } from "@testing-library/user-event/dist/types/setup/setup"
 
 describe("ConfirmationButtonController", () => {
   const apiUrl = `${doveseedApiUrl}/confirm`
@@ -98,8 +99,10 @@ describe("ConfirmationButtonController", () => {
 
 describe("ConfirmationButtonView", () => {
   const onSubmit = jest.fn()
+  let user: UserEvent
 
   beforeEach(() => {
+    user = userEvent.setup()
     onSubmit
       .mockReset()
       .mockImplementation((ev: React.FormEvent<HTMLFormElement>) =>
@@ -118,8 +121,8 @@ describe("ConfirmationButtonView", () => {
   })
 
   describe("when clicking the submit button", () => {
-    beforeEach(() => {
-      userEvent.click(screen.getByRole("button", { name: /submit/i }))
+    beforeEach(async () => {
+      await user.click(screen.getByRole("button", { name: /submit/i }))
     })
 
     it("calls onSubmit with the email and token", () => {

@@ -5,9 +5,14 @@ import React from "react"
 import Grade from "."
 import GradeContext from "./GradeContext"
 import { BoulderingGradeSystem, SportGradeSystem } from "./types"
+import { UserEvent } from "@testing-library/user-event/dist/types/setup/setup"
 
 describe("Grade", () => {
+  let user: UserEvent
+
   beforeEach(() => {
+    user = userEvent.setup()
+
     setStaticQuery({
       allClimbingGradesCsv: {
         nodes: [
@@ -111,8 +116,10 @@ describe("Grade", () => {
     })
 
     describe("when pressing Escape", () => {
-      beforeEach(() => {
-        act(() => userEvent.type(screen.getByTestId("grade-selector"), "{esc}"))
+      beforeEach(async () => {
+        await act(async () => {
+          await user.type(screen.getByTestId("grade-selector"), "{Escape}")
+        })
       })
 
       it("hides the selector", () => {
