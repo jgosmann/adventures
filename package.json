@@ -58,6 +58,7 @@
     "msw-storybook-addon": "^1.6.3",
     "netlify-cli": "^12.0.0",
     "p-limit": "^4.0.0",
+    "postcss": "^8.4.17",
     "prettier": "^2.3.2",
     "random-email": "^1.0.3",
     "react-test-renderer": "^18.2.0",
