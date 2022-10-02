@@ -13,7 +13,7 @@ import SubscribeForm from "../../components/doveseed/SubscribeForm"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
-export const Head = () => <HtmlHead path="/subscribe" />
+export const Head = () => <HtmlHead path="/subscribe" title="Subscribe" />
 
 const SubscribePage = () => (
   <>

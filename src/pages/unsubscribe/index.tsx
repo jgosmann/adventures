@@ -8,7 +8,7 @@ import SubscribeForm from "../../components/doveseed/SubscribeForm"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
-export const Head = () => <HtmlHead path="/unsubscribe" />
+export const Head = () => <HtmlHead path="/unsubscribe" title="Unsubscribe" />
 
 const UnsubscribePage = () => (
   <>

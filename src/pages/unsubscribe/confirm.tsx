@@ -8,7 +8,9 @@ import Navigation from "../../components/navigation"
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
-export const Head = () => <HtmlHead path="/unsubscribe/confirm" />
+export const Head = () => (
+  <HtmlHead path="/unsubscribe/confirm" title="Unsubscribe confirmation" />
+)
 
 const ConfirmPage = () => (
   <>
