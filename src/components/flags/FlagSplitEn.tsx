@@ -21,9 +21,9 @@ const FlagSplitEn = () => (
       },
     }}
   >
-    <span className="flag-icon flag-icon-us"></span>
+    <span className="fi fi-us"></span>
     <span
-      className="flag-icon flag-icon-gb"
+      className="fi fi-gb"
       css={{
         clipPath: "polygon(0% 100%, 100% 0%, 100% 100%)",
       }}
