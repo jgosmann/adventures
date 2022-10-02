@@ -168,6 +168,7 @@ const Grade = ({ system, value }: GradeProps) => {
       }}
       onClick={ev => {
         ev.preventDefault()
+        ev.stopPropagation()
         setState(current => {
           const translateXBy = dropDownRef.current
             ? Math.abs(
