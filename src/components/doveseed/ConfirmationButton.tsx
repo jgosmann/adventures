@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 
 import EmailSubmissionForm from "./EmailSubmissionForm"
 import { ProcessingState } from "./ProcessingState"
@@ -61,6 +61,10 @@ export const ConfirmationButtonController = ({
   render,
 }: ConfirmationButtonControllerProps) => {
   const [state, setState] = useState(ProcessingState.Initial)
+  const [search, setSearch] = useState("")
+  useEffect(() => {
+    setTimeout(() => setSearch(window.location.search), 0)
+  }, [])
 
   const onSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>, email: string, token: string) => {
@@ -85,9 +89,7 @@ export const ConfirmationButtonController = ({
     [url]
   )
 
-  const searchParams = new URLSearchParams(
-    typeof window === "undefined" ? "" : window.location.search
-  )
+  const searchParams = new URLSearchParams(search)
 
   return render({
     onSubmit,

@@ -30,19 +30,23 @@ describe("ConfirmationButtonController", () => {
     window.location = originalLocation
   })
 
-  it("the email address is extracted from the location", () => {
-    expect(renderMock).toHaveBeenLastCalledWith(
-      expect.objectContaining({
-        email: "foo@example.com",
-      })
+  it("the email address is extracted from the location", async () => {
+    await waitFor(() =>
+      expect(renderMock).toHaveBeenLastCalledWith(
+        expect.objectContaining({
+          email: "foo@example.com",
+        })
+      )
     )
   })
 
-  it("the token is extracted from the location", () => {
-    expect(renderMock).toHaveBeenLastCalledWith(
-      expect.objectContaining({
-        token: validBearerToken,
-      })
+  it("the token is extracted from the location", async () => {
+    await waitFor(() =>
+      expect(renderMock).toHaveBeenLastCalledWith(
+        expect.objectContaining({
+          token: validBearerToken,
+        })
+      )
     )
   })
 

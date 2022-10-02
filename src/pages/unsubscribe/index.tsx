@@ -21,12 +21,10 @@ const UnsubscribePage = () => (
           your email address. Afterwards, you will receive an email with a
           confirmation link that you need to click.
         </p>
-        <p>
-          <SubscribeForm
-            url="https://doveseed.adventures.jgosmann.de/unsubscribe"
-            submitLabel="Unsubscribe"
-          />
-        </p>
+        <SubscribeForm
+          url="https://doveseed.adventures.jgosmann.de/unsubscribe"
+          submitLabel="Unsubscribe"
+        />
       </ContentStyleWrapper>
     </main>
   </>

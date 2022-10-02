@@ -20,12 +20,10 @@ const ConfirmPage = () => (
           You are subscribing the following email address to receive email
           notifications for new posts:
         </p>
-        <p>
-          <ConfirmationButton
-            url="https://doveseed.adventures.jgosmann.de/confirm/"
-            submitLabel="Confirm"
-          />
-        </p>
+        <ConfirmationButton
+          url="https://doveseed.adventures.jgosmann.de/confirm/"
+          submitLabel="Confirm"
+        />
       </ContentStyleWrapper>
     </main>
   </>

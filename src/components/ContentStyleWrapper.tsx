@@ -5,6 +5,7 @@ import { contentBaseStyle } from "../styles"
 const ContentStyleWrapper = styled("div")`
   ${contentBaseStyle}
 
+  &>form,
   ol,
   p,
   ul,
