@@ -96,7 +96,9 @@ const Search = ({ query }: SearchProps) => {
                   title
                 }
                 fields {
-                  timeToRead
+                  timeToRead {
+                    minutes
+                  }
                 }
               }
             }
