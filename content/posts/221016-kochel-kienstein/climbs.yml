@@ -1,0 +1,17 @@
+- date: 2022-10-16T19:16:25+02:00
+  ascents:
+    - name: Sunset Boulevard
+      pitches:
+        - grade:
+            system: UIAA
+            value: "6"
+          style: hangdog
+        - grade:
+            system: UIAA
+            value: "6+"
+          style: flash
+    - name: Tom
+      grade:
+        system: UIAA
+        value: "5"
+      style: onsight
