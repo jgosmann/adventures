@@ -119,12 +119,10 @@ export const YearSelectorView = ({
   const dropDownButtonRef = useRef(null)
 
   const yearIndices = useStaticQuery<YearIndicesQuery>(graphql`
-    query {
+    {
       allSitePage(
-        # prettier-ignore
-        # prettier is messing with the escapes
-        filter: { path: { regex: "/^\\/year[/].*$/" } }
-        sort: { fields: context___year, order: DESC }
+        filter: { path: { regex: "/^/year[/].*$/" } }
+        sort: { context: { year: DESC } }
       ) {
         nodes {
           path

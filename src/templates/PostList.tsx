@@ -23,7 +23,7 @@ export const pageQuery = graphql`
         ext: { eq: ".mdx" }
         childMdx: { id: { in: $postIds } }
       }
-      sort: { fields: childMdx___frontmatter___date, order: DESC }
+      sort: { childMdx: { frontmatter: { date: DESC } } }
     ) {
       nodes {
         childMdx {

@@ -58,31 +58,29 @@ module.exports = {
           {
             output: "/index.xml",
             title: "Jan's outdoor adventures",
-            query: `
-              {
-                allFile(
-                  filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
-                  sort: {fields: childMdx___frontmatter___date, order: DESC}
-                ) {
-                  nodes {
-                    pagePath
-                    childMdx {
-                      excerpt(pruneLength: 500)
-                      frontmatter {
-                        date
-                        map
-                        title
-                      }
-                      background {
-                        childImageSharp {
-                          gatsbyImageData(width: 800, layout: FIXED)
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            `,
+            query: `{
+  allFile(
+    filter: {sourceInstanceName: {eq: "posts"}, ext: {eq: ".mdx"}}
+    sort: {childMdx: {frontmatter: {date: DESC}}}
+  ) {
+    nodes {
+      pagePath
+      childMdx {
+        excerpt(pruneLength: 500)
+        frontmatter {
+          date
+          map
+          title
+        }
+        background {
+          childImageSharp {
+            gatsbyImageData(width: 800, layout: FIXED)
+          }
+        }
+      }
+    }
+  }
+}`,
             custom_namespaces: {
               og: "http://ogp.me/ns#",
             },

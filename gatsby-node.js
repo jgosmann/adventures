@@ -148,10 +148,10 @@ const createYearlyIndices = async ({ actions, graphql }) => {
 
   const posts = (
     await graphql(`
-      query {
+      {
         allFile(
           filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
-          sort: { fields: childMdx___frontmatter___date, order: DESC }
+          sort: { childMdx: { frontmatter: { date: DESC } } }
         ) {
           nodes {
             childMdx {
@@ -304,7 +304,7 @@ const createPostPages = async ({ actions, graphql }) => {
       {
         allFile(
           filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
-          sort: { fields: childMdx___frontmatter___date, order: ASC }
+          sort: { childMdx: { frontmatter: { date: ASC } } }
         ) {
           edges {
             node {
