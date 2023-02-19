@@ -108,6 +108,9 @@
     "reading-time": "^1.5.0",
     "sass": "^1.35.1"
   },
+  "optionalDependencies": {
+    "netlify-cli": "^12.13.1"
+  },
   "scripts": {
     "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
     "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
