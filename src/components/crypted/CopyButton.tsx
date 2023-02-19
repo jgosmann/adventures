@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCopy } from "@fortawesome/free-regular-svg-icons"
+import { faClipboard } from "@fortawesome/free-regular-svg-icons"
 import React from "react"
 
 import AnimatedButton from "../AnimatedButton"
@@ -15,7 +15,7 @@ const CopyButton = ({ getCopyText, title }: CopyButtonProps) => {
   }
   return (
     <AnimatedButton onClick={onClick} title={title}>
-      <FontAwesomeIcon icon={faCopy} />
+      <FontAwesomeIcon icon={faClipboard} />
     </AnimatedButton>
   )
 }
