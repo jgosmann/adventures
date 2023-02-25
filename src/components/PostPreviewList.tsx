@@ -24,6 +24,7 @@ const listItemStyle = css({
   maxWidth: "calc(100vw - 72px)",
   height: 250,
   maxHeight: "calc(100vh - 72px)",
+  isolation: "isolate", // required for Safari to apply overflow: hidden to border radius
 
   "&:hover": {
     boxShadow: "0px 1px 12px rgba(0, 0, 0, 0.75)",
