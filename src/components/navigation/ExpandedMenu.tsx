@@ -24,6 +24,7 @@ const ExpandedMenu = ({ expanded, path, query }: ExpandedMenuProps) => (
       padding: "0 8px 0 0",
       transition: "opacity 0.2s ease-out",
       zIndex: 1,
+      overflow: "hidden",
     }}
     style={expanded ? { opacity: 1 } : { opacity: 0, pointerEvents: "none" }}
     className={expanded ? "expanded" : undefined}
