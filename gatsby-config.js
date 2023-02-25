@@ -11,6 +11,11 @@ module.exports = {
   },
   plugins: [
     {
+      // Alleviate memory problem
+      // https://github.com/gatsbyjs/gatsby/issues/36899
+      resolve: "gatsby-plugin-no-sourcemaps",
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         sassOptions: {
