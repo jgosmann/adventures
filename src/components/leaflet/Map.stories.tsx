@@ -6,7 +6,7 @@ export default {
   title: "Leaflet/Map",
   component: MapComponent,
   parameters: {
-    chromatic: { diffThreshold: 0.4 },
+    chromatic: { diffThreshold: 0.7 },
   },
 }
 

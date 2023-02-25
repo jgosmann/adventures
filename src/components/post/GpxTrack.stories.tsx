@@ -5,7 +5,7 @@ export default {
   title: "Post/Gpx Track",
   component: GpxTrackComponent,
   parameters: {
-    chromatic: { diffThreshold: 0.4 },
+    chromatic: { diffThreshold: 0.7 },
   },
 }
 

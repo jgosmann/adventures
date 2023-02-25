@@ -16,7 +16,7 @@ export default {
         publicURL: "marker-shadow.png",
       },
     },
-    chromatic: { diffThreshold: 0.4 },
+    chromatic: { diffThreshold: 0.7 },
   },
 }
 

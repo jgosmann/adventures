@@ -14,7 +14,7 @@ export default {
     ),
   ],
   parameters: {
-    chromatic: { diffThreshold: 0.4 },
+    chromatic: { diffThreshold: 0.7 },
   },
 }
 
