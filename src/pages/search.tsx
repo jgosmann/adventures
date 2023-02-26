@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import HtmlHead from "../components/HtmlHead"
 import Navigation from "../components/navigation"
@@ -25,21 +25,28 @@ export interface SearchPageProps {
 }
 
 const SearchPage = ({ location: { pathname, search } }: SearchPageProps) => {
-  const query = new URLSearchParams(search || "").get("q") || undefined
+  const [query, setQuery] = useState<string | undefined>(undefined)
+  useEffect(() =>
+    setQuery(new URLSearchParams(search || "").get("q") || undefined)
+  )
 
   return (
     <>
       <Navigation path={pathname} query={query} fixed />
       <main>
-        <h1
-          css={{
-            margin: 32,
-            textAlign: "center",
-          }}
-        >
-          Search results for “{query}”
-        </h1>
-        {query && <Search query={query} />}
+        {query && (
+          <>
+            <h1
+              css={{
+                margin: 32,
+                textAlign: "center",
+              }}
+            >
+              Search results for “{query}”
+            </h1>
+            <Search query={query} />
+          </>
+        )}
       </main>
     </>
   )
