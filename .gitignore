@@ -14,3 +14,4 @@ node_modules
 public
 resources/_gen
 /cypress/downloads/downloads.html
+/cypress/videos
