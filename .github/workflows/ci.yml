@@ -33,6 +33,38 @@ jobs:
         env:
           CI: true
 
+  E2E:
+    runs-on: ubuntu-latest
+    needs: Node
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-verison: "18.x"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile --non-interactive
+      - run: echo '{"mapbox":""}' > access-tokens.json
+      - run: |
+          npx gatsby develop &
+          for i in {1..60}; do
+            echo "Waiting 5 seconds"
+            sleep 5
+            if curl -I http://localhost:8000/; then
+              echo "Gatsby ready"
+              break
+            fi
+          done
+          if ! curl -I http://localhost:8000/; then
+            echo "Not ready after 5 minutes, aborting."
+            exit 1
+          fi
+      - run: curl --fail http://localhost:8000/search.json --output ./search.json
+      - run: docker compose up --wait -d
+      - run: docker compose logs
+        if: always()
+      - run: npx cypress run
+
   Chromatic:
     runs-on: ubuntu-latest
     needs: Node
