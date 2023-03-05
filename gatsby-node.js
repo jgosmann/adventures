@@ -18,6 +18,13 @@ const accessTokensPromise = (async () =>
 
 const reverseGeocode = async ({ lat, long }) => {
   const languages = ["de", "en"]
+  const access_token = (await accessTokensPromise).mapbox
+  if (!access_token) {
+    console.warn(
+      "Skipping geocoding for seach because of missing mapbox token."
+    )
+    return ""
+  }
   try {
     const response = await axios.get(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${long},${lat}.json`,
@@ -25,7 +32,7 @@ const reverseGeocode = async ({ lat, long }) => {
         params: {
           types: "place",
           language: languages.join(","),
-          access_token: (await accessTokensPromise).mapbox,
+          access_token,
         },
       }
     )
