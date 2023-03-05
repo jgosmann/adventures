@@ -39,7 +39,7 @@ export interface HeadProps {
       frontmatter: {
         title: string
       }
-      background: ImageDataLike & {
+      background?: ImageDataLike & {
         childImageSharp: {
           resize: {
             src: string
@@ -58,7 +58,7 @@ export const Head = ({ location: { pathname }, data: { mdx } }: HeadProps) => (
     path={pathname}
     description={mdx.excerpt}
     title={mdx.frontmatter.title}
-    imageSrc={mdx.background.childImageSharp.resize.src}
+    imageSrc={mdx.background?.childImageSharp.resize.src}
   />
 )
 

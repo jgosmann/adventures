@@ -32,7 +32,7 @@ export interface RimgProps {
   alt?: string
   caption?: string
   children?: React.ReactNode
-  image: Image
+  image?: Image
   overlay?: string
 }
 
@@ -42,7 +42,7 @@ const Rimg = ({ alt, caption, image, overlay, children }: RimgProps) => {
 
   const height =
     !galleryContext.active || galleryContext.large ? "80vh" : "45vh"
-  const aspectRatio = `(${image.childImageSharp.original.width} / ${image.childImageSharp.original.height})`
+  const aspectRatio = `(${image?.childImageSharp.original.width} / ${image?.childImageSharp.original.height})`
   const gallerySpecificStyle = {
     "@media screen and (min-height: 600px)": {
       width: `calc(${height} * ${aspectRatio})`,
@@ -50,7 +50,7 @@ const Rimg = ({ alt, caption, image, overlay, children }: RimgProps) => {
     },
   }
 
-  const imageData = getImage(image)
+  const imageData = image ? getImage(image) : undefined
 
   return (
     <div
@@ -60,7 +60,7 @@ const Rimg = ({ alt, caption, image, overlay, children }: RimgProps) => {
       }}
     >
       <div css={{ display: "inline-block", position: "relative" }}>
-        <a href={image.publicURL} title="View full size">
+        <a href={image?.publicURL} title="View full size">
           {imageData && (
             <GatsbyImage
               image={imageData}
