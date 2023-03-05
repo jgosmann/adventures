@@ -1,8 +1,6 @@
-import randomEmail from "random-email"
-
 describe("The subscription process", function () {
   it("successfully loads", function () {
-    const email = randomEmail()
+    const email = "foobar@example.com"
 
     cy.on("window:before:load", win => {
       const originalFetch = win.fetch
@@ -37,13 +35,12 @@ describe("The subscription process", function () {
       cy.get("button svg").should("have.attr", "data-icon", "check")
     })
 
-    cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
-      const entity = Object.values(content._default).filter(
-        x => x.email === email
-      )[0]
-      const encodedEmail = encodeURIComponent(entity.email)
-      const token = encodeURIComponent(entity.confirm_token.data)
-      cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
+    cy.task("mail:receive", email).then(content => {
+      const m = content
+        .replaceAll(/=\r?\n/g, "")
+        .replaceAll(/=3[dD]/g, "=")
+        .match(/<link>(?<link>.*)<\/link>/)
+      cy.visit(m.groups.link)
     })
 
     cy.get('form.email-submission-form input[type="email"]').should(
@@ -53,13 +50,6 @@ describe("The subscription process", function () {
     cy.get("form.email-submission-form").within(() => {
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
-    })
-
-    cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
-      const entity = Object.values(content._default).filter(
-        x => x.email == email
-      )[0]
-      expect(entity.state).to.equal("subscribed")
     })
 
     cy.visit("/unsubscribe")
@@ -73,13 +63,12 @@ describe("The subscription process", function () {
       cy.get("button svg").should("have.attr", "data-icon", "check")
     })
 
-    cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
-      const entity = Object.values(content._default).filter(
-        x => x.email === email
-      )[0]
-      const encodedEmail = encodeURIComponent(entity.email)
-      const token = encodeURIComponent(entity.confirm_token.data)
-      cy.visit(`/subscribe/confirm?email=${encodedEmail}&token=${token}`)
+    cy.task("mail:receive", email).then(content => {
+      const m = content
+        .replaceAll(/=\r?\n/g, "")
+        .replaceAll(/=3[dD]/g, "=")
+        .match(/<link>(?<link>.*)<\/link>/)
+      cy.visit(m.groups.link)
     })
 
     cy.get('form.email-submission-form input[type="email"]').should(
@@ -89,13 +78,6 @@ describe("The subscription process", function () {
     cy.get("form.email-submission-form").within(() => {
       cy.root().submit()
       cy.get("button svg").should("have.attr", "data-icon", "check")
-    })
-
-    cy.readFile("../doveseed/doveseed-db.dev.json").then(content => {
-      const entity = Object.values(content._default).filter(
-        x => x.email == email
-      )[0]
-      expect(entity).to.be.undefined
     })
   })
 })

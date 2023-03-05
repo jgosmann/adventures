@@ -1,0 +1,35 @@
+type Document {
+  pagePath: String!
+  childMdx: ChildMdx!
+}
+
+type ChildMdx {
+  id: ID!
+  background: Background
+  frontmatter: Frontmatter!
+  fields: Fields!
+}
+
+type Frontmatter {
+  categories: [String!]
+  date: String
+  title: String!
+  map: String
+}
+
+type Background {
+  childImageSharp: ImageSharp!
+}
+
+scalar JSON
+type ImageSharp {
+  gatsbyImageData: JSON!
+}
+
+type Fields {
+  timeToRead: TimeToRead!
+}
+
+type TimeToRead {
+  minutes: Float!
+}

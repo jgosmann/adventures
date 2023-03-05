@@ -1,0 +1,20 @@
+{
+  "cors": {},
+  "db": "/home/doveseed/doveseed-db.dev.json",
+  "rss": "http://localhost:8000/index.xml",
+  "smtp": {
+    "host": "greenmail",
+    "port": 3025,
+    "user": "doveseed",
+    "password": "password",
+    "ssl_mode": "no-ssl"
+  },
+  "template_vars": {
+    "display_name": "adventures.jgosmann.de",
+    "host": "localhost:8000",
+    "sender": "Jan's outdoor adventures <adventures@jgosmann.de>",
+    "confirm_url_format": "http://{host}/{action}/confirm/?email={email}&token={token}"
+  },
+  "email_templates": "/home/doveseed/adventures-doveseed-template",
+  "confirm_timeout_minutes": 2880
+}

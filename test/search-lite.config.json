@@ -1,0 +1,24 @@
+{
+  "cors": {
+    "origin": "http://localhost:8000"
+  },
+  "searchIndexFile": "/opt/search-lite/search.json",
+  "pageSize": 25,
+  "docSchema": "/opt/search-lite/schema.graphql",
+  "indexConfig": {
+    "encode": "advanced",
+    "tokenize": "reverse",
+    "threshold": false,
+    "cache": false,
+    "doc": {
+      "id": "search:id",
+      "store": ["pagePath", "childMdx"],
+      "field": [
+        "search:categories",
+        "search:location",
+        "childMdx:frontmatter:title",
+        "search:content"
+      ]
+    }
+  }
+}

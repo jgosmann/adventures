@@ -1,0 +1,27 @@
+services:
+  greenmail:
+    image: greenmail/standalone:1.6.14
+    ports:
+      - "3143:3143"
+      - "3993:3993"
+      - "8080:8080"
+
+  doveseed:
+    image: jgosmann/doveseed:1.1.0a5
+    command: --host 0.0.0.0
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./test/doveseed.config.json:/config.json
+      - ./test/doveseed-template:/home/doveseed/adventures-doveseed-template
+    environment:
+      - DOVESEED_CONFIG=/config.json
+
+  search-lite:
+    image: jgosmann/search-lite:latest
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./search.json:/opt/search-lite/search.json
+      - ./test/search-lite.config.json:/opt/search-lite/config.json
+      - ./search-lite.schema.graphql:/opt/search-lite/schema.graphql
