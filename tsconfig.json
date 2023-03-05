@@ -1,5 +1,5 @@
 {
-  "exclude": ["cypress.config.ts"],
+  "exclude": ["cypress/**", "**/*.spec.ts", "**/*.spec.tsx", "jest-setup.ts"],
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "preserve",

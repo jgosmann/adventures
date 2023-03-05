@@ -116,7 +116,7 @@
     "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
     "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit && tsc --noEmit --project tsconfig.spec.json && tsc --noEmit --project cypress/tsconfig.json",
     "lint": "eslint src *.js .storybook cypress",
     "test": "jest",
     "start": "npm run develop",
