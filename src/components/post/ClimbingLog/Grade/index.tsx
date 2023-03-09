@@ -29,8 +29,8 @@ interface ConversionTable {
 let nextId = 0
 
 export interface GradeProps {
-  system: System
-  value: string
+  system: System | null
+  value: string | null
 }
 
 interface GradeState {
@@ -104,8 +104,12 @@ const Grade = ({ system, value }: GradeProps) => {
     }
   }, [gradeContext])
 
+  if (!system || !value) {
+    return null
+  }
+
   const conversionTable = useStaticQuery<ConversionTable>(graphql`
-    query {
+    query ConversionTable {
       allClimbingGradesCsv {
         nodes {
           Fb_bloc

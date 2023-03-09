@@ -12,12 +12,11 @@ import GpxTrack from "./GpxTrack"
 import Grade from "./ClimbingLog/Grade"
 import Loc from "./Loc"
 import Nextday from "./Nextday"
-import Pano, { PanoImage } from "./Pano"
-import Rimg, { Image } from "./Rimg"
+import Pano from "./Pano"
+import Rimg from "./Rimg"
 import Travel from "./Travel"
 import Video from "./Video"
 import WithRemoteGpxTrack, { TrackPoint } from "./WithRemoteGpxTrack"
-import { Route } from "./ClimbingLog/Ascent"
 
 export const dataFragment = graphql`
   fragment Content_data on Mdx {
@@ -91,30 +90,8 @@ interface File {
   ext: string
 }
 
-interface PublicFile extends File {
-  publicURL: string
-}
-
-export interface ContentMdx {
-  body: string
-  climbs: Array<{
-    childClimbsYaml: {
-      ascents: Route[]
-    }
-  }>
-  gpxTracks: PublicFile[]
-  images: Array<PublicFile & Image>
-  overlay: PublicFile[]
-  panoramas: Array<PublicFile & PanoImage>
-  panoramas2x: Array<PublicFile & PanoImage>
-  videos: Array<{
-    videoH264: {
-      path: string
-    }
-    name: string
-    relativePath: string
-  }>
-}
+type ContentMdx = Queries.Content_dataFragment
+type Overlay = Queries.Content_dataFragment["overlay"][0]
 
 export interface ContentProps {
   nextPath?: string
@@ -179,7 +156,7 @@ const Content = ({ mdx, nextPath, children }: ContentProps) => {
   const videos = Object.assign(
     {},
     ...mdx.videos.map(video => ({
-      [video.relativePath.replace(/^[^/]+\//, "")]: video.videoH264.path,
+      [video.relativePath.replace(/^[^/]+\//, "")]: video.videoH264?.path,
     }))
   )
   const BoundVideo = ({ src }: { src: string }) => <Video src={videos[src]} />
@@ -187,18 +164,23 @@ const Content = ({ mdx, nextPath, children }: ContentProps) => {
     src: PropTypes.string.isRequired,
   }
 
-  const bindImages = function bindImages(
-    Component: React.ComponentType<{ image: Image; overlay?: string }>,
-    imageData: Array<File & Image>,
-    overlayData: PublicFile[]
+  const bindImages = function bindImages<Img>(
+    Component: React.ComponentType<{
+      image: Img
+      overlay?: string
+    }>,
+    imageData: ReadonlyArray<File & Img> | null,
+    overlayData: ReadonlyArray<Overlay> | null
   ) {
-    const images: Record<string, Image> = Object.assign(
+    const images: Record<string, Img> = Object.assign(
       {},
-      ...imageData.map(img => ({ [img.name + img.ext]: img }))
+      ...(imageData ?? []).map(img => ({ [img.name + img.ext]: img }))
     )
-    const overlays: Record<string, PublicFile> = Object.assign(
+    const overlays: Record<string, Overlay> = Object.assign(
       {},
-      ...overlayData.map(overlay => ({ [overlay.name + overlay.ext]: overlay }))
+      ...(overlayData ?? []).map(overlay => ({
+        [overlay.name + overlay.ext]: overlay,
+      }))
     )
     const BoundImage = ({
       src,
@@ -211,7 +193,7 @@ const Content = ({ mdx, nextPath, children }: ContentProps) => {
       <Component
         {...props}
         image={images[src]}
-        overlay={overlay && overlays[overlay].publicURL}
+        overlay={(overlay && overlays[overlay].publicURL) ?? undefined}
       />
     )
     return BoundImage
@@ -238,7 +220,7 @@ const Content = ({ mdx, nextPath, children }: ContentProps) => {
     <ContentStyleWrapper>
       <LocalStorageGradeContext>
         <MDXProvider components={mdxComponents}>{children}</MDXProvider>
-        {mdx.climbs.length > 0 && (
+        {mdx.climbs.length > 0 && mdx.climbs[0].childClimbsYaml && (
           <ClimbingLog climbs={mdx.climbs[0].childClimbsYaml} />
         )}
       </LocalStorageGradeContext>

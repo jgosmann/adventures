@@ -93,17 +93,6 @@ const Option = styled(function <TState>(
   }
 `
 
-interface YearIndicesQuery {
-  allSitePage: {
-    nodes: Array<{
-      path: string
-      context: {
-        year: number
-      }
-    }>
-  }
-}
-
 export interface YearSelectorViewProps extends Omit<NavLinkProps<never>, "to"> {
   path: string
   active: boolean
@@ -118,8 +107,8 @@ export const YearSelectorView = ({
 }: YearSelectorViewProps) => {
   const dropDownButtonRef = useRef(null)
 
-  const yearIndices = useStaticQuery<YearIndicesQuery>(graphql`
-    {
+  const yearIndices = useStaticQuery<Queries.YearIndicesQuery>(graphql`
+    query YearIndices {
       allSitePage(
         filter: { path: { regex: "/^/year[/].*$/" } }
         sort: { context: { year: DESC } }
@@ -172,15 +161,18 @@ export const YearSelectorView = ({
               transform: active ? "translateY(0%)" : "translateY(-100%)",
             }}
           >
-            {yearIndices.allSitePage.nodes.map(index => (
-              <Option
-                key={index.context.year}
-                to={index.path}
-                aria-label={`Posts for the year ${index.context.year}`}
-              >
-                {index.context.year}
-              </Option>
-            ))}
+            {yearIndices.allSitePage.nodes.map(
+              index =>
+                index.context && (
+                  <Option
+                    key={index.context.year}
+                    to={index.path}
+                    aria-label={`Posts for the year ${index.context.year}`}
+                  >
+                    {index.context.year}
+                  </Option>
+                )
+            )}
           </Options>
         </div>
       </DropDown>

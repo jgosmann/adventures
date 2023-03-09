@@ -52,26 +52,14 @@ const textBoxStyle = css({
   flexDirection: "column",
 })
 
-export interface PostPreviewData {
-  pagePath: string
-  childMdx: {
-    background: ImageDataLike
-    frontmatter: {
-      title: string
-      date?: string
-      categories: string[]
-    }
-    fields: {
-      timeToRead?: { minutes: number }
-    }
-  }
-}
+type PostPreviewData = Queries.PostPreview_dataFragment
+
 export interface PostPreviewProps {
   data: PostPreviewData
 }
 
 const PostPreview = ({ data }: PostPreviewProps) => {
-  const background = getImage(data.childMdx.background)
+  const background = getImage(data.childMdx?.background as ImageDataLike)
   return (
     <Link
       to={data.pagePath}
@@ -93,7 +81,7 @@ const PostPreview = ({ data }: PostPreviewProps) => {
             fontWeight: "normal",
           }}
         >
-          {data.childMdx.frontmatter.title}
+          {data.childMdx?.frontmatter?.title}
         </h2>
         <ul
           css={[
@@ -114,11 +102,11 @@ const PostPreview = ({ data }: PostPreviewProps) => {
         >
           <li css={{ whiteSpace: "nowrap" }}>
             <PostMeta
-              frontmatter={data.childMdx.frontmatter}
-              fields={data.childMdx.fields}
+              frontmatter={data.childMdx?.frontmatter}
+              fields={data.childMdx?.fields}
             />
           </li>
-          {data.childMdx.frontmatter.categories && (
+          {data.childMdx?.frontmatter?.categories && (
             <li>
               <ol css={commaSeparatedList}>
                 {data.childMdx.frontmatter.categories.map(c => (

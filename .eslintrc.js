@@ -26,6 +26,7 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
+      processor: "@graphql-eslint/graphql",
       extends: [
         "eslint:recommended",
         "plugin:react/recommended",
@@ -37,12 +38,31 @@ module.exports = {
       ],
     },
     {
+      files: ["*.graphql"],
+      parser: "@graphql-eslint/eslint-plugin",
+      plugins: ["@graphql-eslint"],
+      rules: {
+        "@graphql-eslint/no-anonymous-operations": "error",
+        "@graphql-eslint/naming-convention": [
+          "error",
+          {
+            OperationDefinition: {
+              style: "PascalCase",
+              forbiddenPrefixes: ["Query", "Mutation", "Subscription", "Get"],
+              forbiddenSuffixes: ["Query", "Mutation", "Subscription"],
+            },
+          },
+        ],
+      },
+    },
+    {
       files: [
         ".eslintrc.js",
         "cypress/**/*",
         "gatsby-browser.js",
         "gatsby-config.js",
         "gatsby-node.js",
+        "graphql.config.js",
         "jest.config.js",
         "jest-preprocess.js",
         "loadershim.js",

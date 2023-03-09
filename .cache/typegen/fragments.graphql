@@ -1,0 +1,263 @@
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/Ascent.tsx
+fragment Ascent_data on ClimbsYamlAscents {
+  name
+  grade {
+    system
+    value
+  }
+  pitches {
+    name
+    grade {
+      system
+      value
+    }
+    style
+  }
+  style
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/index.tsx
+fragment ClimbingLog_data on ClimbsYaml {
+  ascents {
+    ...Ascent_data
+  }
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Content.tsx
+fragment Content_data on Mdx {
+  climbs: resources(filter: {relativePath: {eq: "climbs.yml"}}) {
+    childClimbsYaml {
+      ...ClimbingLog_data
+    }
+  }
+  gpxTracks: resources(filter: {relativePath: {glob: "*.gpx"}}) {
+    publicURL
+    name
+    ext
+  }
+  images: resources(filter: {relativePath: {glob: "images/*"}}) {
+    ...Rimg_data
+    name
+    ext
+  }
+  overlay: resources(filter: {relativePath: {glob: "overlay/*"}}) {
+    name
+    ext
+    publicURL
+  }
+  panoramas: resources(filter: {relativePath: {glob: "pano/*"}}) {
+    ...Pano_data
+    name
+    ext
+  }
+  panoramas2x: resources(filter: {relativePath: {glob: "pano/*"}}) {
+    ...Pano2x_data
+    name
+    ext
+  }
+  videos: resources(filter: {ext: {in: [".m4v", ".mp4"]}}) {
+    videoH264 {
+      path
+    }
+    name
+    relativePath
+  }
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Pano.tsx
+fragment Pano_data on File {
+  childImageSharp {
+    gatsbyImageData(
+      height: 600
+      layout: FIXED
+      transformOptions: {fit: OUTSIDE}
+      formats: [JPG, AVIF]
+    )
+    original {
+      height
+      width
+    }
+  }
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Pano.tsx
+fragment Pano2x_data on File {
+  childImageSharp {
+    gatsbyImageData(
+      height: 1200
+      layout: FIXED
+      transformOptions: {fit: OUTSIDE}
+      formats: [JPG, AVIF]
+    )
+    original {
+      height
+      width
+    }
+  }
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
+fragment Rimg_data on File {
+  childImageSharp {
+    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
+    original {
+      height
+      width
+    }
+  }
+  publicURL
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Titlescreen.tsx
+fragment Titlescreen_data on Mdx {
+  background {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+    }
+  }
+  frontmatter {
+    title
+  }
+  ...PostMeta_data
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
+fragment PostMeta_data on Mdx {
+  frontmatter {
+    date
+  }
+  fields {
+    timeToRead {
+      minutes
+    }
+  }
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/PostPreview.tsx
+fragment PostPreview_data on File {
+  childMdx {
+    background {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
+          height: 250
+          layout: FIXED
+          placeholder: DOMINANT_COLOR
+          transformOptions: {cropFocus: ENTROPY}
+        )
+      }
+    }
+    frontmatter {
+      categories
+      date
+      title
+    }
+    fields {
+      timeToRead {
+        minutes
+      }
+    }
+  }
+  pagePath
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFixed on ImageSharpFixed {
+  base64
+  width
+  height
+  src
+  srcSet
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFixed_tracedSVG on ImageSharpFixed {
+  tracedSVG
+  width
+  height
+  src
+  srcSet
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFixed_withWebp on ImageSharpFixed {
+  base64
+  width
+  height
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFixed_withWebp_tracedSVG on ImageSharpFixed {
+  tracedSVG
+  width
+  height
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFixed_noBase64 on ImageSharpFixed {
+  width
+  height
+  src
+  srcSet
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFixed_withWebp_noBase64 on ImageSharpFixed {
+  width
+  height
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFluid on ImageSharpFluid {
+  base64
+  aspectRatio
+  src
+  srcSet
+  sizes
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFluidLimitPresentationSize on ImageSharpFluid {
+  maxHeight: presentationHeight
+  maxWidth: presentationWidth
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFluid_tracedSVG on ImageSharpFluid {
+  tracedSVG
+  aspectRatio
+  src
+  srcSet
+  sizes
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFluid_withWebp on ImageSharpFluid {
+  base64
+  aspectRatio
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+  sizes
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFluid_withWebp_tracedSVG on ImageSharpFluid {
+  tracedSVG
+  aspectRatio
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+  sizes
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFluid_noBase64 on ImageSharpFluid {
+  aspectRatio
+  src
+  srcSet
+  sizes
+}
+# /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
+fragment GatsbyImageSharpFluid_withWebp_noBase64 on ImageSharpFluid {
+  aspectRatio
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+  sizes
+}

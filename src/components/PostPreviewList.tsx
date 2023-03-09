@@ -36,11 +36,11 @@ const listItemStyle = css({
 })
 
 export interface PostPreviewListProps {
-  nodes: Array<
+  nodes: ReadonlyArray<
     PostPreviewProps["data"] & {
       childMdx: {
-        id: string
-      }
+        id: string | null
+      } | null
     }
   >
 }
@@ -48,7 +48,7 @@ export interface PostPreviewListProps {
 const PostPreviewList = ({ nodes }: PostPreviewListProps) => (
   <ol css={listStyle}>
     {nodes.map(post => (
-      <li key={post.childMdx.id} css={listItemStyle}>
+      <li key={post.childMdx?.id} css={listItemStyle}>
         <PostPreview data={post} />
       </li>
     ))}

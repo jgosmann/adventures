@@ -25,24 +25,18 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 })
 
-export interface PostMetaProps {
+export interface PostMetaProps extends Partial<Queries.PostMeta_dataFragment> {
   className?: string
-  frontmatter: {
-    date?: string
-  }
-  fields?: {
-    timeToRead?: { minutes: number }
-  }
 }
 
 const PostMeta = ({ frontmatter, fields, className }: PostMetaProps) => (
   <ul css={semanticList} className={className}>
-    {frontmatter.date && (
+    {frontmatter?.date && (
       <IconListItem icon={faCalendarDay} title="Date">
         {dateFormat.format(Date.parse(frontmatter.date))}
       </IconListItem>
     )}
-    {fields?.timeToRead && (
+    {fields?.timeToRead?.minutes && (
       <IconListItem icon={faHourglassHalf} title="Estimated reading duration">
         {Math.round(fields.timeToRead.minutes)} minute read
       </IconListItem>

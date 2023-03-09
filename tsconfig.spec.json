@@ -1,5 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "exclude": [],
-  "include": ["**/*.spec.ts", "**/*.spec.tsx", "jest-setup.ts"]
+  "include": [
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "jest-setup.ts",
+    "src/gatsby-types.d.ts"
+  ]
 }

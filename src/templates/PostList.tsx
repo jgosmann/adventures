@@ -3,7 +3,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons"
-import { graphql, Link } from "gatsby"
+import { graphql, Link, PageProps } from "gatsby"
 import React from "react"
 
 import HtmlHead from "../components/HtmlHead"
@@ -13,10 +13,9 @@ import { defaultShadedButton } from "../styles"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
-import { PostPreviewProps } from "../components/PostPreview"
 
 export const pageQuery = graphql`
-  query ($postIds: [String!]) {
+  query PostList($postIds: [String!]) {
     allFile(
       filter: {
         sourceInstanceName: { eq: "posts" }
@@ -28,9 +27,6 @@ export const pageQuery = graphql`
       nodes {
         childMdx {
           id
-          frontmatter {
-            draft
-          }
         }
         ...PostPreview_data
       }
@@ -48,26 +44,12 @@ export const Head = ({ location: { pathname } }: HeadProps) => (
   <HtmlHead key="global-head" path={pathname} />
 )
 
-export interface PostListProps {
-  data: {
-    allFile: {
-      nodes: Array<
-        PostPreviewProps["data"] & {
-          childMdx: {
-            id: string
-          }
-        }
-      >
-    }
-  }
-  location: {
-    pathname: string
-  }
-  pageContext: {
-    nextPage?: string
-    prevPage?: string
-  }
+interface PageContext {
+  nextPage?: string
+  prevPage?: string
 }
+
+export type PostListProps = PageProps<Queries.PostListQuery, PageContext>
 
 const PostList = ({
   data: {

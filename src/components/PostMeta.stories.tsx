@@ -18,4 +18,4 @@ AllSet.args = {
 }
 
 export const NoneSet = Template.bind({})
-NoneSet.args = { frontmatter: {} }
+NoneSet.args = { frontmatter: { date: null } }

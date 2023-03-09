@@ -50,16 +50,7 @@ const CoverImg = styled(GatsbyImage)({
   width: "100%",
 })
 
-export interface TitlescreenProps {
-  background: ImageDataLike
-  frontmatter: {
-    date: string
-    title: string
-  }
-  fields: {
-    timeToRead: { minutes: number }
-  }
-}
+export type TitlescreenProps = Queries.Titlescreen_dataFragment
 
 const Titlescreen = ({ background, frontmatter, fields }: TitlescreenProps) => {
   const [scrollRatio, setScrollRatio] = useState(0)
@@ -81,7 +72,7 @@ const Titlescreen = ({ background, frontmatter, fields }: TitlescreenProps) => {
     }
   }, [])
 
-  const image = getImage(background)
+  const image = getImage(background as ImageDataLike)
 
   return (
     <div
@@ -110,7 +101,7 @@ const Titlescreen = ({ background, frontmatter, fields }: TitlescreenProps) => {
           textAlign: "center",
         }}
       >
-        <h1 css={titleStyle}>{frontmatter.title}</h1>
+        <h1 css={titleStyle}>{frontmatter?.title}</h1>
         <BoxedPostMeta frontmatter={frontmatter} fields={fields} />
       </div>
       <FontAwesomeIcon

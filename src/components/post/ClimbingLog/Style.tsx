@@ -58,11 +58,17 @@ const styleMap = {
 
 export type AscenionStyle = keyof typeof styleMap
 
+export const isAscensionStyle = (value: string): value is AscenionStyle =>
+  value in styleMap
+
 export interface StyleProps {
-  ascensionStyle: AscenionStyle
+  ascensionStyle: AscenionStyle | string
 }
 
 const Style = ({ ascensionStyle }: StyleProps) => {
+  if (!isAscensionStyle(ascensionStyle)) {
+    return null
+  }
   return styleMap[ascensionStyle]()
 }
 

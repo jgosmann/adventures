@@ -24,13 +24,13 @@ export const dataFragment = graphql`
 `
 
 export interface Pitch {
-  name?: string
-  style?: AscenionStyle
-  grade?: GradeProps
+  name: string | null
+  style: AscenionStyle | null
+  grade: GradeProps | null
 }
 
 export interface Route extends Pitch {
-  pitches?: Pitch[]
+  pitches?: ReadonlyArray<Pitch | null>
 }
 
 export interface AscentProps {
@@ -66,11 +66,14 @@ const Ascent = ({ data, pitch }: AscentProps) => {
           {" "}
           ({data.pitches.length} pitches)
           <ol>
-            {data.pitches.map((pitch, i) => (
-              <li key={i}>
-                <Ascent data={pitch} pitch={i + 1} />
-              </li>
-            ))}
+            {data.pitches.map(
+              (pitch, i) =>
+                pitch && (
+                  <li key={i}>
+                    <Ascent data={pitch} pitch={i + 1} />
+                  </li>
+                )
+            )}
           </ol>
         </>
       )}

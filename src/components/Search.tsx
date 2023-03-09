@@ -54,15 +54,15 @@ interface State extends Omit<SearchViewProps, "loadMore" | "nextPage"> {
 }
 
 const Search = ({ query }: SearchProps) => {
-  const searchUrl = useStaticQuery(graphql`
-    query {
+  const searchUrl = useStaticQuery<Queries.SearchUrlQuery>(graphql`
+    query SearchUrl {
       site {
         siteMetadata {
           searchUrl
         }
       }
     }
-  `).site.siteMetadata.searchUrl
+  `).site?.siteMetadata?.searchUrl
   const [state, setState] = useState<State>({
     data: [],
     loading: true,
@@ -70,6 +70,7 @@ const Search = ({ query }: SearchProps) => {
   })
 
   const fetchPage = ({ query, page }: { query: string; page?: string }) =>
+    searchUrl &&
     fetch(searchUrl, {
       method: "POST",
       headers: {

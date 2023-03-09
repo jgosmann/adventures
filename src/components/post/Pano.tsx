@@ -39,11 +39,7 @@ export const dataFragment2x = graphql`
   }
 `
 
-export type PanoImage = ImageDataLike & {
-  childImageSharp: {
-    original: { height: number; width: number }
-  }
-}
+export type PanoImage = Queries.Pano_dataFragment
 
 export interface PanoProps {
   alt?: string
@@ -52,9 +48,9 @@ export interface PanoProps {
 }
 
 const Pano = ({ alt, caption, image }: PanoProps) => {
-  const aspectRatio = `(${image.childImageSharp.original.width} / ${image.childImageSharp.original.height})`
+  const aspectRatio = `(${image.childImageSharp?.original?.width} / ${image.childImageSharp?.original?.height})`
 
-  const imageData = getImage(image)
+  const imageData = getImage(image as ImageDataLike)
   return (
     <div
       css={{

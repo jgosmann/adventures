@@ -52,6 +52,8 @@ export const MultiPitch = Template.bind({})
 MultiPitch.args = {
   data: {
     name: "Stairway to Heaven",
+    style: null,
+    grade: null,
     pitches: [
       {
         name: "Womem in Comfortable Shoes",
@@ -59,6 +61,7 @@ MultiPitch.args = {
         grade: { system: "YDS", value: "5.10a" },
       },
       {
+        name: null,
         style: "onsight",
         grade: { system: "YDS", value: "5.10a" },
       },
@@ -68,6 +71,7 @@ MultiPitch.args = {
         grade: { system: "YDS", value: "5.10c" },
       },
       {
+        name: null,
         style: "onsight",
         grade: { system: "YDS", value: "5.10a" },
       },
@@ -82,6 +86,7 @@ MultiPitch.args = {
         grade: { system: "YDS", value: "5.9" },
       },
       {
+        name: null,
         style: "not attempted",
         grade: { system: "YDS", value: "5.10a" },
       },

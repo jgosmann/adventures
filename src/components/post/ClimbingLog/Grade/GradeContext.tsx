@@ -14,7 +14,7 @@ export interface DefaultGradeSystems {
 }
 
 export interface GradeContextValue extends DefaultGradeSystems {
-  getDefaultSystem: (system: System) => System | null
+  getDefaultSystem: (system: string | null) => System | null
   setDefaultGradeSystems: (systems: Partial<DefaultGradeSystems>) => void
 }
 
@@ -74,7 +74,7 @@ export const LocalStorageGradeContext = ({
     })
   }
 
-  const getDefaultSystem = (system: string) =>
+  const getDefaultSystem = (system: string | null) =>
     isBoulderingGrade(system)
       ? state.defaultBoulderingGradeSystem
       : state.defaultSportGradeSystem

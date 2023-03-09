@@ -1,5 +1,5 @@
 import { css, Global } from "@emotion/react"
-import { graphql } from "gatsby"
+import { graphql, HeadProps, PageProps } from "gatsby"
 import React from "react"
 import { Popup } from "react-leaflet"
 import MarkerClusterGroup from "@changey/react-leaflet-markercluster"
@@ -12,7 +12,6 @@ import Marker from "../components/leaflet/Marker"
 import PostPreview, {
   width as PostPreviewWidth,
   height as postPreviewHeight,
-  PostPreviewData,
 } from "../components/PostPreview"
 import { fullHeight } from "../styles"
 
@@ -20,18 +19,12 @@ import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import "@changey/react-leaflet-markercluster/dist/styles.min.css"
 
-export interface HeadProps {
-  location: {
-    pathname: string
-  }
-}
-
 export const Head = ({ location: { pathname } }: HeadProps) => (
   <HtmlHead path={pathname} />
 )
 
 export const pageQuery = graphql`
-  query {
+  query Map {
     allFile(
       filter: { sourceInstanceName: { eq: "posts" }, ext: { eq: ".mdx" } }
     ) {
@@ -80,30 +73,12 @@ const popupStyle = css({
   },
 })
 
-export interface MdxChild {
-  id: string
-  frontmatter: {
-    map: string
-  }
-}
-
-export interface Node extends PostPreviewData {
-  childMdx: MdxChild & PostPreviewData["childMdx"]
-}
+type MdxChild = Queries.MapQuery["allFile"]["nodes"][0]["childMdx"]
 
 const getNodeLatLng = (node: MdxChild) =>
-  JSON.parse(`[${node.frontmatter.map}]`)
+  JSON.parse(`[${node?.frontmatter?.map}]`)
 
-export interface MapPageProps {
-  data: {
-    allFile: {
-      nodes: Node[]
-    }
-  }
-  location: {
-    pathname: string
-  }
-}
+export type MapPageProps = PageProps<Queries.MapQuery>
 
 const MapPage = ({
   data: {
@@ -129,16 +104,19 @@ const MapPage = ({
         dragging={true}
       >
         <MarkerClusterGroup>
-          {nodes.map(node => (
-            <Marker
-              key={node.childMdx.id}
-              position={getNodeLatLng(node.childMdx)}
-            >
-              <Popup css={popupStyle}>
-                <PostPreview data={node} />
-              </Popup>
-            </Marker>
-          ))}
+          {nodes.map(
+            node =>
+              node?.childMdx && (
+                <Marker
+                  key={node.childMdx.id}
+                  position={getNodeLatLng(node.childMdx)}
+                >
+                  <Popup css={popupStyle}>
+                    <PostPreview data={node} />
+                  </Popup>
+                </Marker>
+              )
+          )}
         </MarkerClusterGroup>
       </Map>
     </main>

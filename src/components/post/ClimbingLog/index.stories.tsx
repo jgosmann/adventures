@@ -43,13 +43,18 @@ ClimbingLog.args = {
         name: "La Dura Dura",
         style: "onsight",
         grade: { system: "french", value: "9b+" },
+        pitches: null,
       },
       {
         name: "Dreamcatcher",
+        style: null,
         grade: { system: "YDS", value: "5.14d" },
+        pitches: null,
       },
       {
         name: "Stairway to Heaven",
+        style: null,
+        grade: null,
         pitches: [
           {
             name: "Womem in Comfortable Shoes",
@@ -57,6 +62,7 @@ ClimbingLog.args = {
             grade: { system: "YDS", value: "5.10a" },
           },
           {
+            name: null,
             style: "onsight",
             grade: { system: "YDS", value: "5.10a" },
           },
@@ -66,6 +72,7 @@ ClimbingLog.args = {
             grade: { system: "YDS", value: "5.10c" },
           },
           {
+            name: null,
             style: "onsight",
             grade: { system: "YDS", value: "5.10a" },
           },
@@ -80,6 +87,7 @@ ClimbingLog.args = {
             grade: { system: "YDS", value: "5.9" },
           },
           {
+            name: null,
             style: "not attempted",
             grade: { system: "YDS", value: "5.10a" },
           },

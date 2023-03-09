@@ -1,8 +1,8 @@
 import { Global } from "@emotion/react"
-import { graphql } from "gatsby"
+import { graphql, HeadProps, PageProps } from "gatsby"
 import React from "react"
 
-import Content, { ContentMdx } from "../components/post/Content"
+import Content from "../components/post/Content"
 import HtmlHead from "../components/HtmlHead"
 import Navigation from "../components/navigation"
 import { fullHeight } from "../styles"
@@ -10,12 +10,11 @@ import Titlescreen from "../components/post/Titlescreen"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
-import { ImageDataLike } from "gatsby-plugin-image"
 
 export const pageQuery = graphql`
-  query ($postId: String!) {
+  query PostPage($postId: String!) {
     mdx(id: { eq: $postId }) {
-      background {
+      teaserImg: background {
         childImageSharp {
           resize(width: 800) {
             src
@@ -32,63 +31,19 @@ export const pageQuery = graphql`
   }
 `
 
-export interface HeadProps {
-  data: {
-    mdx: {
-      excerpt: string
-      frontmatter: {
-        title: string
-      }
-      background?: ImageDataLike & {
-        childImageSharp: {
-          resize: {
-            src: string
-          }
-        }
-      }
-    }
-  }
-  location: {
-    pathname: string
-  }
-}
-
-export const Head = ({ location: { pathname }, data: { mdx } }: HeadProps) => (
+export const Head = ({
+  location: { pathname },
+  data: { mdx },
+}: HeadProps<Queries.PostPageQuery>) => (
   <HtmlHead
     path={pathname}
-    description={mdx.excerpt}
-    title={mdx.frontmatter.title}
-    imageSrc={mdx.background?.childImageSharp.resize.src}
+    description={mdx?.excerpt}
+    title={mdx?.frontmatter?.title}
+    imageSrc={mdx?.teaserImg?.childImageSharp?.resize?.src}
   />
 )
 
-export interface PostPageProps {
-  data: {
-    mdx: ContentMdx & {
-      frontmatter: {
-        date: string
-        title: string
-      }
-      background: ImageDataLike & {
-        childImageSharp: {
-          resize: {
-            src: string
-          }
-        }
-      }
-      fields: {
-        timeToRead: { minutes: number }
-      }
-    }
-  }
-  location: {
-    pathname: string
-  }
-  pageContext?: {
-    nextPath?: string
-  }
-  children: React.ReactNode
-}
+type PostPageProps = PageProps<Queries.PostPageQuery, { nextPath?: string }>
 
 // TODO: extract layout component
 const PostPage = ({
@@ -108,10 +63,16 @@ const PostPage = ({
       }}
     >
       <article css={{ height: "100%" }}>
-        <Titlescreen {...mdx} />
-        <Content mdx={mdx} nextPath={pageContext?.nextPath}>
-          {children}
-        </Content>
+        <Titlescreen
+          frontmatter={mdx?.frontmatter ?? null}
+          background={mdx?.background ?? null}
+          fields={mdx?.fields ?? null}
+        />
+        {mdx && (
+          <Content mdx={mdx} nextPath={pageContext?.nextPath}>
+            {children}
+          </Content>
+        )}
         <div css={{ height: "25vh" }}></div>
       </article>
     </main>

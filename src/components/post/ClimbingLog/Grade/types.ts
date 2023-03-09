@@ -17,6 +17,10 @@ export const isBoulderingGrade = (
   return !!boulderingGrades.find(it => it === system)
 }
 
+export const isGradingSystem = (system: string | null): system is System => {
+  return isBoulderingGrade(system) || isSportGrade(system)
+}
+
 export interface Grade {
   system: System
   value: string

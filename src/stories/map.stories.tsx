@@ -23,6 +23,19 @@ export const Map = Template.bind({})
 Map.args = {
   location: {
     pathname: "/map",
+    ancestorOrigins: new DOMStringList(),
+    hash: "",
+    host: "",
+    hostname: "",
+    href: "",
+    origin: "",
+    port: "80",
+    protocol: "http",
+    search: "",
+    assign: () => undefined,
+    reload: () => undefined,
+    replace: () => undefined,
+    state: null,
   },
   data: {
     allFile: {

@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby"
+import { graphql, HeadProps, Link, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import React from "react"
 
@@ -14,7 +14,7 @@ import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 export const pageQuery = graphql`
-  query ($pageId: String!) {
+  query LegalPage($pageId: String!) {
     mdx(id: { eq: $pageId }) {
       body
       frontmatter {
@@ -25,21 +25,11 @@ export const pageQuery = graphql`
   }
 `
 
-export interface HeadProps {
-  data: {
-    mdx: {
-      frontmatter: {
-        title: string
-      }
-    }
-  }
-  location: {
-    pathname: string
-  }
-}
-
-export const Head = ({ location: { pathname }, data: { mdx } }: HeadProps) => (
-  <HtmlHead path={pathname} title={mdx.frontmatter.title} />
+export const Head = ({
+  location: { pathname },
+  data: { mdx },
+}: HeadProps<Queries.LegalPageQuery>) => (
+  <HtmlHead path={pathname} title={mdx?.frontmatter?.title} />
 )
 
 const mdxComponents = {
@@ -50,13 +40,7 @@ const mdxComponents = {
   Link,
 }
 
-export interface LegalPageProps {
-  location: {
-    pathname: string
-  }
-  pageContext: { language: string }
-  children: React.ReactNode
-}
+type LegalPageProps = PageProps<Queries.LegalPageQuery, { language: string }>
 
 const LegalPage = ({
   location: { pathname },

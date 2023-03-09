@@ -7,12 +7,7 @@ import Navigation from "../components/navigation"
 
 import "normalize.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
-
-export interface HeadProps {
-  location: {
-    pathname: string
-  }
-}
+import { HeadProps } from "gatsby"
 
 export const Head = ({ location: { pathname } }: HeadProps) => (
   <HtmlHead path={pathname} />

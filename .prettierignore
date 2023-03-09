@@ -4,3 +4,4 @@ msw/mockServiceWorker.js
 package.json
 package-lock.json
 public
+src/gatsby-types.d.ts

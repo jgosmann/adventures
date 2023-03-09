@@ -6,8 +6,8 @@ import { Marker as LeafletMarker, MarkerProps } from "react-leaflet"
 export type { MarkerProps }
 
 const Marker = (props: MarkerProps) => {
-  const iconImages = useStaticQuery(graphql`
-    query {
+  const iconImages = useStaticQuery<Queries.MarkerIconImagesQuery>(graphql`
+    query MarkerIconImages {
       icon: file(
         sourceInstanceName: { eq: "leaflet" }
         relativePath: { eq: "images/marker-icon.png" }
@@ -30,11 +30,11 @@ const Marker = (props: MarkerProps) => {
   `)
   const DefaultIcon = new leaflet.Icon({
     iconAnchor: [12, 41],
-    iconRetinaUrl: iconImages.iconRetina.publicURL,
+    iconRetinaUrl: iconImages.iconRetina?.publicURL ?? undefined,
     iconSize: [25, 41],
-    iconUrl: iconImages.icon.publicURL,
+    iconUrl: iconImages.icon?.publicURL ?? undefined,
     shadowSize: [41, 41],
-    shadowUrl: iconImages.shadow.publicURL,
+    shadowUrl: iconImages.shadow?.publicURL ?? undefined,
     tooltipAnchor: [16, -28],
   })
 

@@ -4,15 +4,15 @@ import React from "react"
 import { fontStyle } from "./font"
 
 export interface HtmlHeadProps {
-  description?: string
-  imageSrc?: string
+  description?: string | null
+  imageSrc?: string | null
   path: string
-  title?: string
+  title?: string | null
 }
 
 const HtmlHead = ({ description, imageSrc, title, path }: HtmlHeadProps) => {
-  const { site } = useStaticQuery(graphql`
-    query {
+  const { site } = useStaticQuery<Queries.HtmlHeadQuery>(graphql`
+    query HtmlHead {
       site {
         siteMetadata {
           title
@@ -24,27 +24,28 @@ const HtmlHead = ({ description, imageSrc, title, path }: HtmlHeadProps) => {
     }
   `)
 
-  const completeTitle = (title ? `${title} | ` : "") + site.siteMetadata.title
+  const completeTitle = (title ? `${title} | ` : "") + site?.siteMetadata?.title
+  const descriptionWithFallback = description || site?.siteMetadata?.description
+  const siteUrl = site?.siteMetadata?.siteUrl
   return (
     <>
       <title>{completeTitle}</title>
-      <meta
-        name="description"
-        content={description || site.siteMetadata.description}
-      />
-      <meta name="og:url" content={`${site.siteMetadata.siteUrl}${path}`} />
-      <meta name="og:type" content="website" />
       <meta name="og:title" content={completeTitle} />
-      <meta
-        name="og:description"
-        content={description || site.siteMetadata.description}
-      />
-      {imageSrc && (
-        <meta
-          name="og:image"
-          content={`${site.siteMetadata.siteUrl}${imageSrc}`}
-        />
+      {descriptionWithFallback && (
+        <>
+          <meta name="description" content={descriptionWithFallback} />
+          <meta name="og:description" content={descriptionWithFallback} />
+        </>
       )}
+      {siteUrl && (
+        <>
+          <meta name="og:url" content={`${siteUrl}${path}`} />
+          {imageSrc && (
+            <meta name="og:image" content={`${siteUrl}${imageSrc}`} />
+          )}
+        </>
+      )}
+      <meta name="og:type" content="website" />
       <style type="text/css">{fontStyle}</style>
     </>
   )
