@@ -1,0 +1,37 @@
+- date: 2023-03-18T19:16:25+02:00
+  ascents:
+    - name: "Flüssigkeitsmangel"
+      grade:
+        system: UIAA
+        value: "4-"
+      style: flash
+    - name: "Gestern war heute noch morgen"
+      grade:
+        system: UIAA
+        value: "4"
+      style: onsight
+    - name: "Mein blauer Rucksack"
+      grade:
+        system: UIAA
+        value: "5-"
+      style: flash
+    - name: "Oide Trutschn"
+      grade:
+        system: UIAA
+        value: "5"
+      style: onsight
+    - name: "Laminator Deluxe"
+      grade:
+        system: UIAA
+        value: "6"
+      style: flash
+    - name: "Doppelmoppel"
+      grade:
+        system: UIAA
+        value: "4"
+      style: onsight
+    - name: "Petrus"
+      grade:
+        system: UIAA
+        value: "4"
+      style: flash
