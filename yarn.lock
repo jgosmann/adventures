@@ -5495,13 +5495,6 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-helmet@^6.1.5":
-  version "6.1.6"
-  resolved "https://registry.yarnpkg.com/@types/react-helmet/-/react-helmet-6.1.6.tgz#7d1afd8cbf099616894e8240e9ef70e3c6d7506d"
-  integrity sha512-ZKcoOdW/Tg+kiUbkFCBtvDw0k3nD4HJ/h/B9yWxN4uDO8OkRksWTO+EL+z/Qu3aHTeTll3Ro0Cc/8UhwBCMG5A==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-leaflet-markercluster@^3.0.0":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/react-leaflet-markercluster/-/react-leaflet-markercluster-3.0.1.tgz#69a8a9824c7d64dd5f510820bfc8e7a58415e36e"

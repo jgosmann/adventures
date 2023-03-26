@@ -32,7 +32,6 @@
     "@types/node": "^18.14.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@types/react-helmet": "^6.1.5",
     "@types/react-leaflet-markercluster": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
