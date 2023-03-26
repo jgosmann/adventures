@@ -14,10 +14,6 @@ export const dataFragment = graphql`
         transformOptions: { fit: OUTSIDE }
         formats: [JPG, AVIF]
       )
-      original {
-        height
-        width
-      }
     }
   }
 `
@@ -31,10 +27,6 @@ export const dataFragment2x = graphql`
         transformOptions: { fit: OUTSIDE }
         formats: [JPG, AVIF]
       )
-      original {
-        height
-        width
-      }
     }
   }
 `
@@ -48,7 +40,7 @@ export interface PanoProps {
 }
 
 const Pano = ({ alt, caption, image }: PanoProps) => {
-  const aspectRatio = `(${image.childImageSharp?.original?.width} / ${image.childImageSharp?.original?.height})`
+  const aspectRatio = `(${image.childImageSharp?.gatsbyImageData?.width} / ${image.childImageSharp?.gatsbyImageData?.height})`
 
   const imageData = getImage(image as ImageDataLike)
   return (

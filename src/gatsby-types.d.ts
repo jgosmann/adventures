@@ -424,6 +424,121 @@ type ClimbsYamlSortInput = {
   readonly parent: InputMaybe<NodeSortInput>;
 };
 
+type ContentfulAsset = {
+  readonly foo: Maybe<Scalars['String']>;
+  readonly videoGif: Maybe<GatsbyVideo>;
+  readonly videoH264: Maybe<GatsbyVideo>;
+  readonly videoH265: Maybe<GatsbyVideo>;
+  readonly videoProfile: Maybe<GatsbyVideo>;
+  readonly videoScreenshots: Maybe<ReadonlyArray<Maybe<File>>>;
+  readonly videoVP9: Maybe<GatsbyVideo>;
+  readonly videoWebP: Maybe<GatsbyVideo>;
+};
+
+
+type ContentfulAsset_videoGifArgs = {
+  duration?: InputMaybe<Scalars['Int']>;
+  fps?: InputMaybe<Scalars['Int']>;
+  maxHeight?: InputMaybe<Scalars['Int']>;
+  maxWidth?: InputMaybe<Scalars['Int']>;
+  overlay?: InputMaybe<Scalars['String']>;
+  overlayPadding?: InputMaybe<Scalars['Int']>;
+  overlayX?: InputMaybe<Scalars['String']>;
+  overlayY?: InputMaybe<Scalars['String']>;
+  publicPath?: InputMaybe<Scalars['String']>;
+  saturation?: InputMaybe<Scalars['Float']>;
+};
+
+
+type ContentfulAsset_videoH264Args = {
+  bufSize: InputMaybe<Scalars['String']>;
+  crf?: InputMaybe<Scalars['Int']>;
+  duration?: InputMaybe<Scalars['Int']>;
+  fps?: InputMaybe<Scalars['Int']>;
+  maxHeight?: InputMaybe<Scalars['Int']>;
+  maxRate: InputMaybe<Scalars['String']>;
+  maxWidth?: InputMaybe<Scalars['Int']>;
+  overlay?: InputMaybe<Scalars['String']>;
+  overlayPadding?: InputMaybe<Scalars['Int']>;
+  overlayX?: InputMaybe<Scalars['String']>;
+  overlayY?: InputMaybe<Scalars['String']>;
+  preset?: InputMaybe<Scalars['String']>;
+  publicPath?: InputMaybe<Scalars['String']>;
+  saturation?: InputMaybe<Scalars['Float']>;
+};
+
+
+type ContentfulAsset_videoH265Args = {
+  bufSize: InputMaybe<Scalars['Int']>;
+  crf?: InputMaybe<Scalars['Int']>;
+  duration?: InputMaybe<Scalars['Int']>;
+  fps?: InputMaybe<Scalars['Int']>;
+  maxHeight?: InputMaybe<Scalars['Int']>;
+  maxRate: InputMaybe<Scalars['Int']>;
+  maxWidth?: InputMaybe<Scalars['Int']>;
+  overlay?: InputMaybe<Scalars['String']>;
+  overlayPadding?: InputMaybe<Scalars['Int']>;
+  overlayX?: InputMaybe<Scalars['String']>;
+  overlayY?: InputMaybe<Scalars['String']>;
+  preset?: InputMaybe<Scalars['String']>;
+  publicPath?: InputMaybe<Scalars['String']>;
+  saturation?: InputMaybe<Scalars['Float']>;
+};
+
+
+type ContentfulAsset_videoProfileArgs = {
+  duration?: InputMaybe<Scalars['Int']>;
+  fps?: InputMaybe<Scalars['Int']>;
+  maxHeight?: InputMaybe<Scalars['Int']>;
+  maxWidth?: InputMaybe<Scalars['Int']>;
+  overlay?: InputMaybe<Scalars['String']>;
+  overlayPadding?: InputMaybe<Scalars['Int']>;
+  overlayX?: InputMaybe<Scalars['String']>;
+  overlayY?: InputMaybe<Scalars['String']>;
+  profile: InputMaybe<Scalars['String']>;
+  publicPath?: InputMaybe<Scalars['String']>;
+  saturation?: InputMaybe<Scalars['Float']>;
+};
+
+
+type ContentfulAsset_videoScreenshotsArgs = {
+  timestamps?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+  width?: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulAsset_videoVP9Args = {
+  bitrate: InputMaybe<Scalars['String']>;
+  cpuUsed?: InputMaybe<Scalars['Int']>;
+  crf?: InputMaybe<Scalars['Int']>;
+  duration?: InputMaybe<Scalars['Int']>;
+  fps?: InputMaybe<Scalars['Int']>;
+  maxHeight?: InputMaybe<Scalars['Int']>;
+  maxWidth?: InputMaybe<Scalars['Int']>;
+  maxrate: InputMaybe<Scalars['String']>;
+  minrate: InputMaybe<Scalars['String']>;
+  overlay?: InputMaybe<Scalars['String']>;
+  overlayPadding?: InputMaybe<Scalars['Int']>;
+  overlayX?: InputMaybe<Scalars['String']>;
+  overlayY?: InputMaybe<Scalars['String']>;
+  publicPath?: InputMaybe<Scalars['String']>;
+  saturation?: InputMaybe<Scalars['Float']>;
+};
+
+
+type ContentfulAsset_videoWebPArgs = {
+  duration?: InputMaybe<Scalars['Int']>;
+  fps?: InputMaybe<Scalars['Int']>;
+  maxHeight?: InputMaybe<Scalars['Int']>;
+  maxWidth?: InputMaybe<Scalars['Int']>;
+  overlay?: InputMaybe<Scalars['String']>;
+  overlayPadding?: InputMaybe<Scalars['Int']>;
+  overlayX?: InputMaybe<Scalars['String']>;
+  overlayY?: InputMaybe<Scalars['String']>;
+  publicPath?: InputMaybe<Scalars['String']>;
+  saturation?: InputMaybe<Scalars['Float']>;
+};
+
 type DateQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['Date']>;
   readonly gt: InputMaybe<Scalars['Date']>;
@@ -3311,7 +3426,7 @@ type Ascent_dataFragment = { readonly name: string | null, readonly style: strin
 
 type ClimbingLog_dataFragment = { readonly ascents: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null, readonly pitches: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null } | null> | null } | null> | null };
 
-type Content_dataFragment = { readonly climbs: ReadonlyArray<{ readonly childClimbsYaml: { readonly ascents: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null, readonly pitches: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null } | null> | null } | null> | null } | null }>, readonly gpxTracks: ReadonlyArray<{ readonly publicURL: string | null, readonly name: string, readonly ext: string }>, readonly images: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly overlay: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null }>, readonly panoramas: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly panoramas2x: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly videos: ReadonlyArray<{ readonly name: string, readonly relativePath: string, readonly videoH264: { readonly path: string | null } | null }> };
+type Content_dataFragment = { readonly climbs: ReadonlyArray<{ readonly childClimbsYaml: { readonly ascents: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null, readonly pitches: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null } | null> | null } | null> | null } | null }>, readonly gpxTracks: ReadonlyArray<{ readonly publicURL: string | null, readonly name: string, readonly ext: string }>, readonly images: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly overlay: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null }>, readonly panoramas: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly panoramas2x: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly videos: ReadonlyArray<{ readonly name: string, readonly relativePath: string, readonly videoH264: { readonly path: string | null } | null }> };
 
 type ConversionTableQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3354,7 +3469,7 @@ type LegalPageQueryVariables = Exact<{
 }>;
 
 
-type LegalPageQuery = { readonly mdx: { readonly body: string | null, readonly frontmatter: { readonly title: string | null } | null, readonly climbs: ReadonlyArray<{ readonly childClimbsYaml: { readonly ascents: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null, readonly pitches: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null } | null> | null } | null> | null } | null }>, readonly gpxTracks: ReadonlyArray<{ readonly publicURL: string | null, readonly name: string, readonly ext: string }>, readonly images: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly overlay: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null }>, readonly panoramas: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly panoramas2x: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly videos: ReadonlyArray<{ readonly name: string, readonly relativePath: string, readonly videoH264: { readonly path: string | null } | null }> } | null };
+type LegalPageQuery = { readonly mdx: { readonly body: string | null, readonly frontmatter: { readonly title: string | null } | null, readonly climbs: ReadonlyArray<{ readonly childClimbsYaml: { readonly ascents: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null, readonly pitches: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null } | null> | null } | null> | null } | null }>, readonly gpxTracks: ReadonlyArray<{ readonly publicURL: string | null, readonly name: string, readonly ext: string }>, readonly images: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly overlay: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null }>, readonly panoramas: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly panoramas2x: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly videos: ReadonlyArray<{ readonly name: string, readonly relativePath: string, readonly videoH264: { readonly path: string | null } | null }> } | null };
 
 type MapQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3366,9 +3481,9 @@ type MarkerIconImagesQueryVariables = Exact<{ [key: string]: never; }>;
 
 type MarkerIconImagesQuery = { readonly icon: { readonly publicURL: string | null } | null, readonly iconRetina: { readonly publicURL: string | null } | null, readonly shadow: { readonly publicURL: string | null } | null };
 
-type Pano_dataFragment = { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null };
+type Pano_dataFragment = { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null };
 
-type Pano2x_dataFragment = { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null };
+type Pano2x_dataFragment = { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null };
 
 type PostListQueryVariables = Exact<{
   postIds: InputMaybe<ReadonlyArray<Scalars['String']> | Scalars['String']>;
@@ -3384,11 +3499,11 @@ type PostPageQueryVariables = Exact<{
 }>;
 
 
-type PostPageQuery = { readonly mdx: { readonly excerpt: string | null, readonly teaserImg: { readonly childImageSharp: { readonly resize: { readonly src: string | null } | null } | null } | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null } | null, readonly background: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null, readonly climbs: ReadonlyArray<{ readonly childClimbsYaml: { readonly ascents: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null, readonly pitches: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null } | null> | null } | null> | null } | null }>, readonly gpxTracks: ReadonlyArray<{ readonly publicURL: string | null, readonly name: string, readonly ext: string }>, readonly images: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly overlay: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null }>, readonly panoramas: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly panoramas2x: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null }>, readonly videos: ReadonlyArray<{ readonly name: string, readonly relativePath: string, readonly videoH264: { readonly path: string | null } | null }>, readonly fields: { readonly timeToRead: { readonly minutes: number | null } | null } | null } | null };
+type PostPageQuery = { readonly mdx: { readonly excerpt: string | null, readonly teaserImg: { readonly childImageSharp: { readonly resize: { readonly src: string | null } | null } | null } | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null } | null, readonly background: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null, readonly climbs: ReadonlyArray<{ readonly childClimbsYaml: { readonly ascents: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null, readonly pitches: ReadonlyArray<{ readonly name: string | null, readonly style: string | null, readonly grade: { readonly system: string | null, readonly value: string | null } | null } | null> | null } | null> | null } | null }>, readonly gpxTracks: ReadonlyArray<{ readonly publicURL: string | null, readonly name: string, readonly ext: string }>, readonly images: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly overlay: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly publicURL: string | null }>, readonly panoramas: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly panoramas2x: ReadonlyArray<{ readonly name: string, readonly ext: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }>, readonly videos: ReadonlyArray<{ readonly name: string, readonly relativePath: string, readonly videoH264: { readonly path: string | null } | null }>, readonly fields: { readonly timeToRead: { readonly minutes: number | null } | null } | null } | null };
 
 type PostPreview_dataFragment = { readonly pagePath: string, readonly childMdx: { readonly background: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null, readonly frontmatter: { readonly categories: ReadonlyArray<string | null> | null, readonly date: string | null, readonly title: string | null } | null, readonly fields: { readonly timeToRead: { readonly minutes: number | null } | null } | null } | null };
 
-type Rimg_dataFragment = { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly original: { readonly height: number | null, readonly width: number | null } | null } | null };
+type Rimg_dataFragment = { readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null };
 
 type SearchUrlQueryVariables = Exact<{ [key: string]: never; }>;
 

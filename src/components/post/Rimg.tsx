@@ -12,10 +12,6 @@ export const dataFragment = graphql`
   fragment Rimg_data on File {
     childImageSharp {
       gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
-      original {
-        height
-        width
-      }
     }
     publicURL
   }
@@ -37,7 +33,7 @@ const Rimg = ({ alt, caption, image, overlay, children }: RimgProps) => {
 
   const height =
     !galleryContext.active || galleryContext.large ? "80vh" : "45vh"
-  const aspectRatio = `(${image?.childImageSharp?.original?.width} / ${image?.childImageSharp?.original?.height})`
+  const aspectRatio = `(${image?.childImageSharp?.gatsbyImageData?.width} / ${image?.childImageSharp?.gatsbyImageData?.height})`
   const gallerySpecificStyle = {
     "@media screen and (min-height: 600px)": {
       width: `calc(${height} * ${aspectRatio})`,

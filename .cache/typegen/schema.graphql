@@ -343,6 +343,17 @@ input ClimbsYamlSortInput {
   parent: NodeSortInput
 }
 
+type ContentfulAsset {
+  foo: String
+  videoGif(duration: Int = null, fps: Int = null, maxHeight: Int = null, maxWidth: Int = 1920, overlay: String = null, overlayPadding: Int = 10, overlayX: String = "center", overlayY: String = "center", publicPath: String = "static/videos", saturation: Float = 1): GatsbyVideo
+  videoH264(bufSize: String, crf: Int = 28, duration: Int = null, fps: Int = null, maxHeight: Int = null, maxRate: String, maxWidth: Int = 1920, overlay: String = null, overlayPadding: Int = 10, overlayX: String = "center", overlayY: String = "center", preset: String = "medium", publicPath: String = "static/videos", saturation: Float = 1): GatsbyVideo
+  videoH265(bufSize: Int, crf: Int = 31, duration: Int = null, fps: Int = null, maxHeight: Int = null, maxRate: Int, maxWidth: Int = 1920, overlay: String = null, overlayPadding: Int = 10, overlayX: String = "center", overlayY: String = "center", preset: String = "medium", publicPath: String = "static/videos", saturation: Float = 1): GatsbyVideo
+  videoProfile(duration: Int = null, fps: Int = null, maxHeight: Int = null, maxWidth: Int = 1920, overlay: String = null, overlayPadding: Int = 10, overlayX: String = "center", overlayY: String = "center", profile: String, publicPath: String = "static/videos", saturation: Float = 1): GatsbyVideo
+  videoScreenshots(timestamps: [String] = ["0"], width: Int = 600): [File]
+  videoVP9(bitrate: String, cpuUsed: Int = 1, crf: Int = 31, duration: Int = null, fps: Int = null, maxHeight: Int = null, maxWidth: Int = 1920, maxrate: String, minrate: String, overlay: String = null, overlayPadding: Int = 10, overlayX: String = "center", overlayY: String = "center", publicPath: String = "static/videos", saturation: Float = 1): GatsbyVideo
+  videoWebP(duration: Int = null, fps: Int = null, maxHeight: Int = null, maxWidth: Int = 1920, overlay: String = null, overlayPadding: Int = 10, overlayX: String = "center", overlayY: String = "center", publicPath: String = "static/videos", saturation: Float = 1): GatsbyVideo
+}
+
 """
 A date string, such as 2007-12-03, compliant with the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
 """
