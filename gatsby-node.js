@@ -392,6 +392,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     type SitePageContext {
       year: Int
     }
+    
+    type ContentfulAsset {
+      foo: String
+    }
   `)
 }
 
