@@ -1,5 +1,4 @@
 {
-  "cors": {},
   "db": "/home/doveseed/doveseed-db.dev.json",
   "rss": "http://localhost:8000/index.xml",
   "smtp": {

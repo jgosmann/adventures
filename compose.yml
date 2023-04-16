@@ -8,11 +8,13 @@ services:
       - "8080:8080"
 
   doveseed:
-    image: jgosmann/doveseed:1.1.0a7
-    command: --host 0.0.0.0
+    image: jgosmann/doveseed:2.0.0
+    working_dir: /home/doveseed
+    command: doveseed_dev:app
     ports:
       - "5000:5000"
     volumes:
+      - ./test/doveseed_dev.py:/home/doveseed/doveseed_dev.py
       - ./test/doveseed.config.json:/config.json
       - ./test/doveseed-template:/home/doveseed/adventures-doveseed-template
     environment:
