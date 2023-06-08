@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 import GalleryComponent, { GalleryProps } from "./Gallery"
 import {
   mockGatsbyImage,
@@ -27,9 +27,7 @@ const imgFileNode = {
   publicURL: "background.png",
 }
 
-const Template: ComponentStory<typeof GalleryComponent> = (
-  args: GalleryProps
-) => (
+const Template: StoryFn<typeof GalleryComponent> = (args: GalleryProps) => (
   <GalleryComponent {...args}>
     <Rimg image={imgFileNode} />
     <Rimg image={imgFileNode} />
@@ -38,9 +36,14 @@ const Template: ComponentStory<typeof GalleryComponent> = (
   </GalleryComponent>
 )
 
-export const Gallery = Template.bind({})
+export const Gallery = {
+  render: Template,
+}
 
-export const LargeGallery = Template.bind({})
-LargeGallery.args = {
-  large: true,
+export const LargeGallery = {
+  render: Template,
+
+  args: {
+    large: true,
+  },
 }

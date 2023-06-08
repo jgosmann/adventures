@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 
 import AnimatedButtonComponent, { AnimatedButtonProps } from "./AnimatedButton"
 
@@ -8,11 +8,14 @@ export default {
   component: AnimatedButtonComponent,
 }
 
-const Template: ComponentStory<typeof AnimatedButtonComponent> = (
+const Template: StoryFn<typeof AnimatedButtonComponent> = (
   args: Omit<AnimatedButtonProps, "children">
 ) => <AnimatedButtonComponent {...args}>Label</AnimatedButtonComponent>
 
-export const AnimatedButton = Template.bind({})
-AnimatedButton.args = {
-  title: "Click me!",
+export const AnimatedButton = {
+  render: Template,
+
+  args: {
+    title: "Click me!",
+  },
 }

@@ -1,13 +1,13 @@
 import React from "react"
-import { ComponentStory, Story } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 import Map from "./Map"
-import MarkerComponent, { MarkerProps } from "./Marker"
+import MarkerComponent from "./Marker"
 
 export default {
   title: "Leaflet/Marker",
   component: MarkerComponent,
   decorators: [
-    (Story: Story) => (
+    (Story: StoryFn) => (
       <Map css={{ height: 400 }} center={munich} zoom={12}>
         <Story />
       </Map>
@@ -31,11 +31,8 @@ export default {
 
 const munich: [number, number] = [48.1384, 11.5683]
 
-const Template: ComponentStory<typeof MarkerComponent> = (
-  args: MarkerProps
-) => <MarkerComponent {...args} />
-
-export const Marker = Template.bind({})
-Marker.args = {
-  position: munich,
+export const Marker = {
+  args: {
+    position: munich,
+  },
 }

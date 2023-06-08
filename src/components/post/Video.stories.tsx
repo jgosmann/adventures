@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import VideoComponent, { VideoProps } from "./Video"
+import VideoComponent from "./Video"
 
 export default {
   title: "Post/Video",
@@ -10,11 +8,8 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof VideoComponent> = (args: VideoProps) => (
-  <VideoComponent {...args} />
-)
-
-export const Video = Template.bind({})
-Video.args = {
-  src: "test.mov",
+export const Video = {
+  args: {
+    src: "test.mov",
+  },
 }

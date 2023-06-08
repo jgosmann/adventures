@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import { SearchView, SearchViewProps } from "./Search"
+import { SearchView } from "./Search"
 import {
   mockGatsbyImage,
   mockImageFileNode,
@@ -34,64 +32,67 @@ const postPreview = (id: number) => ({
   },
 })
 
-const Template: ComponentStory<typeof SearchView> = (args: SearchViewProps) => (
-  <SearchView {...args} />
-)
-
-export const Loading = Template.bind({})
-Loading.args = {
-  data: [],
-  loading: true,
-  error: false,
-  loadMore: () => undefined,
+export const Loading = {
+  args: {
+    data: [],
+    loading: true,
+    error: false,
+    loadMore: () => undefined,
+  },
 }
 
-export const FirstPage = Template.bind({})
-FirstPage.args = {
-  data: [postPreview(0)],
-  loading: false,
-  error: false,
-  loadMore: () => undefined,
-  nextPage: true,
+export const FirstPage = {
+  args: {
+    data: [postPreview(0)],
+    loading: false,
+    error: false,
+    loadMore: () => undefined,
+    nextPage: true,
+  },
 }
 
-export const LoadingMore = Template.bind({})
-LoadingMore.args = {
-  data: [postPreview(0)],
-  loading: true,
-  error: false,
-  loadMore: () => undefined,
-  nextPage: true,
+export const LoadingMore = {
+  args: {
+    data: [postPreview(0)],
+    loading: true,
+    error: false,
+    loadMore: () => undefined,
+    nextPage: true,
+  },
 }
 
-export const AllResults = Template.bind({})
-AllResults.args = {
-  data: [postPreview(0), postPreview(1)],
-  loading: false,
-  error: false,
-  loadMore: () => undefined,
+export const AllResults = {
+  args: {
+    data: [postPreview(0), postPreview(1)],
+    loading: false,
+    error: false,
+    loadMore: () => undefined,
+  },
 }
 
-export const NoResults = Template.bind({})
-NoResults.args = {
-  data: [],
-  loading: false,
-  error: false,
-  loadMore: () => undefined,
+export const NoResults = {
+  args: {
+    data: [],
+    loading: false,
+    error: false,
+    loadMore: () => undefined,
+  },
 }
 
-export const Error = Template.bind({})
-Error.args = {
-  data: [],
-  loading: false,
-  error: true,
-  loadMore: () => undefined,
+export const Error = {
+  args: {
+    data: [],
+    loading: false,
+    error: true,
+    loadMore: () => undefined,
+  },
 }
 
-export const ErrorWithResult = Template.bind({})
-ErrorWithResult.args = {
-  data: [postPreview(0)],
-  loading: false,
-  error: true,
-  loadMore: () => undefined,
+export const ErrorWithResult = {
+  args: {
+    data: [postPreview(0)],
+    loading: false,
+    error: true,
+    loadMore: () => undefined,
+  },
 }

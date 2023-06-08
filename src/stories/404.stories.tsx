@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import NotFoundPage, { NotFoundPageProps } from "../pages/404"
+import NotFoundPage from "../pages/404"
 import { staticQueryData } from "../../test/static-query-data"
 
 export default {
@@ -12,13 +10,10 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof NotFoundPage> = (
-  args: NotFoundPageProps
-) => <NotFoundPage {...args} />
-
-export const NotFound = Template.bind({})
-NotFound.args = {
-  location: {
-    pathname: "/foo",
+export const NotFound = {
+  args: {
+    location: {
+      pathname: "/foo",
+    },
   },
 }

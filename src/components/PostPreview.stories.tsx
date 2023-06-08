@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 import PostPreviewComponent, { PostPreviewProps } from "./PostPreview"
 import { postPreview } from "../../test/post-preview-fixture"
 
@@ -11,7 +11,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof PostPreviewComponent> = (
+const Template: StoryFn<typeof PostPreviewComponent> = (
   args: PostPreviewProps
 ) => (
   <div css={{ width: 300, height: 250, position: "relative" }}>
@@ -19,7 +19,10 @@ const Template: ComponentStory<typeof PostPreviewComponent> = (
   </div>
 )
 
-export const PostPreview = Template.bind({})
-PostPreview.args = {
-  data: postPreview(0),
+export const PostPreview = {
+  render: Template,
+
+  args: {
+    data: postPreview(0),
+  },
 }

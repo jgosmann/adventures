@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 import GradeComponent, { GradeProps } from "."
 import GradeContext from "./GradeContext"
 
@@ -32,7 +32,7 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof GradeComponent> = (args: GradeProps) => (
+const Template: StoryFn<typeof GradeComponent> = (args: GradeProps) => (
   <GradeContext.Provider
     value={{
       defaultBoulderingGradeSystem: null,
@@ -45,8 +45,11 @@ const Template: ComponentStory<typeof GradeComponent> = (args: GradeProps) => (
   </GradeContext.Provider>
 )
 
-export const Grade = Template.bind({})
-Grade.args = {
-  system: "UIAA",
-  value: "8+",
+export const Grade = {
+  render: Template,
+
+  args: {
+    system: "UIAA",
+    value: "8+",
+  },
 }

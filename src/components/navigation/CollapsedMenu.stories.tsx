@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import CollapsedMenu, { CollapsedMenuProps } from "./CollapsedMenu"
+import CollapsedMenu from "./CollapsedMenu"
 
 export default {
   title: "Navigation/Collapsed Menu",
@@ -19,13 +17,10 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof CollapsedMenu> = (
-  args: CollapsedMenuProps
-) => <CollapsedMenu {...args} />
+export const Default = {}
 
-export const Default = Template.bind({})
-
-export const Expanded = Template.bind({})
-Expanded.args = {
-  expanded: true,
+export const Expanded = {
+  args: {
+    expanded: true,
+  },
 }

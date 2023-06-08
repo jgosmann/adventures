@@ -1,7 +1,5 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
 import { staticQueryData } from "../../test/static-query-data"
-import PostListTemplate, { PostListProps } from "../templates/PostList"
+import PostListTemplate from "../templates/PostList"
 import { postPreview } from "../../test/post-preview-fixture"
 
 export default {
@@ -13,31 +11,28 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof PostListTemplate> = (
-  args: PostListProps
-) => <PostListTemplate {...args} />
-
-export const PostList = Template.bind({})
-PostList.args = {
-  data: { allFile: { nodes: [postPreview(0), postPreview(1)] } },
-  location: {
-    pathname: "/",
-    ancestorOrigins: {} as DOMStringList,
-    hash: "",
-    host: "",
-    hostname: "",
-    href: "",
-    origin: "",
-    port: "",
-    protocol: "http",
-    search: "",
-    assign: () => undefined,
-    reload: () => undefined,
-    replace: () => undefined,
-    state: null,
-  },
-  pageContext: {
-    prevPage: "prev",
-    nextPage: "next",
+export const PostList = {
+  args: {
+    data: { allFile: { nodes: [postPreview(0), postPreview(1)] } },
+    location: {
+      pathname: "/",
+      ancestorOrigins: {} as DOMStringList,
+      hash: "",
+      host: "",
+      hostname: "",
+      href: "",
+      origin: "",
+      port: "",
+      protocol: "http",
+      search: "",
+      assign: () => undefined,
+      reload: () => undefined,
+      replace: () => undefined,
+      state: null,
+    },
+    pageContext: {
+      prevPage: "prev",
+      nextPage: "next",
+    },
   },
 }

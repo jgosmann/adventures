@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import ExpandedMenu, { ExpandedMenuProps } from "./ExpandedMenu"
+import ExpandedMenu from "./ExpandedMenu"
 
 export default {
   title: "Navigation/Expanded Menu",
@@ -19,13 +17,10 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof ExpandedMenu> = (
-  args: ExpandedMenuProps
-) => <ExpandedMenu {...args} />
+export const Default = {}
 
-export const Default = Template.bind({})
-
-export const Expanded = Template.bind({})
-Expanded.args = {
-  expanded: true,
+export const Expanded = {
+  args: {
+    expanded: true,
+  },
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 import EmailSubmissionForm, {
   EmailSubmissionFormProps,
 } from "./EmailSubmissionForm"
@@ -10,7 +10,7 @@ export default {
   component: EmailSubmissionForm,
 }
 
-const Template: ComponentStory<typeof EmailSubmissionForm> = ({
+const Template: StoryFn<typeof EmailSubmissionForm> = ({
   fixedValue,
   submitLabel,
   state,
@@ -29,42 +29,61 @@ const Template: ComponentStory<typeof EmailSubmissionForm> = ({
   </EmailSubmissionForm>
 )
 
-export const Initial = Template.bind({})
-Initial.args = {
-  fixedValue: false,
-  submitLabel: "Submit",
-  state: ProcessingState.Initial,
+export const Initial = {
+  render: Template,
+
+  args: {
+    fixedValue: false,
+    submitLabel: "Submit",
+    state: ProcessingState.Initial,
+  },
 }
 
-export const WithEmail = Template.bind({})
-WithEmail.args = {
-  ...Initial.args,
-  email: "foo@example.com",
+export const WithEmail = {
+  render: Template,
+
+  args: {
+    ...Initial.args,
+    email: "foo@example.com",
+  },
 }
 
-export const RequestOngoing = Template.bind({})
-RequestOngoing.args = {
-  ...WithEmail.args,
-  state: ProcessingState.RequestOngoing,
+export const RequestOngoing = {
+  render: Template,
+
+  args: {
+    ...WithEmail.args,
+    state: ProcessingState.RequestOngoing,
+  },
 }
 
-export const Success = Template.bind({})
-Success.args = {
-  ...WithEmail.args,
-  state: ProcessingState.Success,
+export const Success = {
+  render: Template,
+
+  args: {
+    ...WithEmail.args,
+    state: ProcessingState.Success,
+  },
 }
 
-export const Error = Template.bind({})
-Error.args = {
-  ...WithEmail.args,
-  state: ProcessingState.Error,
+export const Error = {
+  render: Template,
+
+  args: {
+    ...WithEmail.args,
+    state: ProcessingState.Error,
+  },
 }
 
-export const FixedValue = Template.bind({})
-FixedValue.args = {
-  ...WithEmail.args,
-  fixedValue: true,
-}
-FixedValue.parameters = {
-  chromatic: { disableSnapshot: true },
+export const FixedValue = {
+  render: Template,
+
+  args: {
+    ...WithEmail.args,
+    fixedValue: true,
+  },
+
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
 }

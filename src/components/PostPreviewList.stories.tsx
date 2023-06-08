@@ -1,8 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import PostPreviewListComponent, {
-  PostPreviewListProps,
-} from "./PostPreviewList"
+import PostPreviewListComponent from "./PostPreviewList"
 import { postPreview } from "../../test/post-preview-fixture"
 
 export default {
@@ -13,11 +9,8 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof PostPreviewListComponent> = (
-  args: PostPreviewListProps
-) => <PostPreviewListComponent {...args} />
-
-export const PostPreviewList = Template.bind({})
-PostPreviewList.args = {
-  nodes: [postPreview(0), postPreview(1)],
+export const PostPreviewList = {
+  args: {
+    nodes: [postPreview(0), postPreview(1)],
+  },
 }

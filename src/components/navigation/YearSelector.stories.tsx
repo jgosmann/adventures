@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import { YearSelectorView, YearSelectorViewProps } from "./YearSelector"
+import { YearSelectorView } from "./YearSelector"
 
 export default {
   title: "Navigation/Year Selector",
@@ -18,18 +16,16 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof YearSelectorView> = (
-  args: YearSelectorViewProps
-) => <YearSelectorView {...args} />
+export const Closed = {}
 
-export const Closed = Template.bind({})
-
-export const Open = Template.bind({})
-Open.args = {
-  active: true,
+export const Open = {
+  args: {
+    active: true,
+  },
 }
 
-export const SelectedYear = Template.bind({})
-SelectedYear.args = {
-  path: "/year/2021",
+export const SelectedYear = {
+  args: {
+    path: "/year/2021",
+  },
 }

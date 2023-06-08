@@ -1,5 +1,5 @@
 import React from "react"
-import { ComponentStory } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 import VCollapsible from "./VCollapsible"
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: VCollapsible,
 }
 
-const Template: ComponentStory<typeof VCollapsible> = (args: {
+const Template: StoryFn<typeof VCollapsible> = (args: {
   collapsed?: boolean
 }) => (
   <span>
@@ -15,12 +15,18 @@ const Template: ComponentStory<typeof VCollapsible> = (args: {
   </span>
 )
 
-export const Collapsed = Template.bind({})
-Collapsed.args = {
-  collapsed: true,
+export const Collapsed = {
+  render: Template,
+
+  args: {
+    collapsed: true,
+  },
 }
 
-export const Open = Template.bind({})
-Open.args = {
-  collapsed: false,
+export const Open = {
+  render: Template,
+
+  args: {
+    collapsed: false,
+  },
 }

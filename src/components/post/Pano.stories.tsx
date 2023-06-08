@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import Pano, { PanoProps } from "./Pano"
+import Pano from "./Pano"
 import {
   mockGatsbyImage,
   mockImageFileNode,
@@ -14,10 +12,6 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Pano> = (args: PanoProps) => (
-  <Pano {...args} />
-)
-
 const imgFileNode = mockImageFileNode(
   mockGatsbyImage({
     url: "background.png",
@@ -27,9 +21,10 @@ const imgFileNode = mockImageFileNode(
   })
 )
 
-export const Panorama = Template.bind({})
-Panorama.args = {
-  image: {
-    ...imgFileNode,
+export const Panorama = {
+  args: {
+    image: {
+      ...imgFileNode,
+    },
   },
 }

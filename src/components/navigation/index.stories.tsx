@@ -1,6 +1,5 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import Navigation, { NavigationProps } from "."
+import { StoryObj } from "@storybook/react"
+import Navigation from "."
 import { userEvent, within } from "@storybook/testing-library"
 import { minFullWidth } from "./sizes"
 
@@ -22,24 +21,19 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof Navigation> = (args: NavigationProps) => (
-  <Navigation {...args} />
-)
+export const Default = {}
 
-export const Default = Template.bind({})
-
-export const DefaultWithQuery = Template.bind({})
-DefaultWithQuery.args = {
-  query: "query",
+export const DefaultWithQuery = {
+  args: {
+    path: "/year/2021",
+  },
 }
 
-export const DefaultWithYearPath = Template.bind({})
-DefaultWithQuery.args = {
-  path: "/year/2021",
-}
+export const DefaultWithYearPath = {}
 
-export const Expanded = Template.bind({})
-Expanded.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  await userEvent.click(canvas.getByTitle("Expand menu"))
+export const Expanded: StoryObj<typeof Navigation> = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    await userEvent.click(canvas.getByTitle("Expand menu"))
+  },
 }

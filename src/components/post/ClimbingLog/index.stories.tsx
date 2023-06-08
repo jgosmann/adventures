@@ -1,6 +1,4 @@
-import React from "react"
-import { ComponentStory } from "@storybook/react"
-import ClimbingLogComponent, { ClimbingLogProps } from "."
+import ClimbingLogComponent from "."
 
 export default {
   title: "Post/Climbing Log",
@@ -31,68 +29,65 @@ export default {
   },
 }
 
-const Template: ComponentStory<typeof ClimbingLogComponent> = (
-  args: ClimbingLogProps
-) => <ClimbingLogComponent {...args} />
-
-export const ClimbingLog = Template.bind({})
-ClimbingLog.args = {
-  climbs: {
-    ascents: [
-      {
-        name: "La Dura Dura",
-        style: "onsight",
-        grade: { system: "french", value: "9b+" },
-        pitches: null,
-      },
-      {
-        name: "Dreamcatcher",
-        style: null,
-        grade: { system: "YDS", value: "5.14d" },
-        pitches: null,
-      },
-      {
-        name: "Stairway to Heaven",
-        style: null,
-        grade: null,
-        pitches: [
-          {
-            name: "Womem in Comfortable Shoes",
-            style: "hangdog",
-            grade: { system: "YDS", value: "5.10a" },
-          },
-          {
-            name: null,
-            style: "onsight",
-            grade: { system: "YDS", value: "5.10a" },
-          },
-          {
-            name: "Xenolith Dance",
-            style: "aid",
-            grade: { system: "YDS", value: "5.10c" },
-          },
-          {
-            name: null,
-            style: "onsight",
-            grade: { system: "YDS", value: "5.10a" },
-          },
-          {
-            name: "Dyke Link",
-            style: "skipped",
-            grade: { system: "YDS", value: "5.10a" },
-          },
-          {
-            name: "Moonwatcher",
-            style: "hangdog",
-            grade: { system: "YDS", value: "5.9" },
-          },
-          {
-            name: null,
-            style: "not attempted",
-            grade: { system: "YDS", value: "5.10a" },
-          },
-        ],
-      },
-    ],
+export const ClimbingLog = {
+  args: {
+    climbs: {
+      ascents: [
+        {
+          name: "La Dura Dura",
+          style: "onsight",
+          grade: { system: "french", value: "9b+" },
+          pitches: null,
+        },
+        {
+          name: "Dreamcatcher",
+          style: null,
+          grade: { system: "YDS", value: "5.14d" },
+          pitches: null,
+        },
+        {
+          name: "Stairway to Heaven",
+          style: null,
+          grade: null,
+          pitches: [
+            {
+              name: "Womem in Comfortable Shoes",
+              style: "hangdog",
+              grade: { system: "YDS", value: "5.10a" },
+            },
+            {
+              name: null,
+              style: "onsight",
+              grade: { system: "YDS", value: "5.10a" },
+            },
+            {
+              name: "Xenolith Dance",
+              style: "aid",
+              grade: { system: "YDS", value: "5.10c" },
+            },
+            {
+              name: null,
+              style: "onsight",
+              grade: { system: "YDS", value: "5.10a" },
+            },
+            {
+              name: "Dyke Link",
+              style: "skipped",
+              grade: { system: "YDS", value: "5.10a" },
+            },
+            {
+              name: "Moonwatcher",
+              style: "hangdog",
+              grade: { system: "YDS", value: "5.9" },
+            },
+            {
+              name: null,
+              style: "not attempted",
+              grade: { system: "YDS", value: "5.10a" },
+            },
+          ],
+        },
+      ],
+    },
   },
 }
