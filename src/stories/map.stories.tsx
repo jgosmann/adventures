@@ -23,7 +23,7 @@ export const Map = Template.bind({})
 Map.args = {
   location: {
     pathname: "/map",
-    ancestorOrigins: new DOMStringList(),
+    ancestorOrigins: {} as DOMStringList,
     hash: "",
     host: "",
     hostname: "",

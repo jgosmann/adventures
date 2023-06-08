@@ -1,7 +1,5 @@
 const path = require("path")
-
 const toPath = _path => path.join(process.cwd(), _path)
-
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -18,23 +16,26 @@ module.exports = {
       },
     },
   ],
-  framework: "@storybook/react",
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
   staticDirs: [
     "../static",
     "../node_modules/leaflet/dist/images",
     "../msw",
     "../test/static",
   ],
-  core: {
-    builder: "webpack5",
-  },
   babel: async options => ({
     ...options,
     presets: options.presets.map(preset => {
       if (preset[0].includes("@babel/preset-react")) {
         return [
           "@babel/preset-react",
-          { runtime: "automatic", importSource: "@emotion/react" },
+          {
+            runtime: "automatic",
+            importSource: "@emotion/react",
+          },
         ]
       } else {
         return preset
@@ -55,7 +56,6 @@ module.exports = {
     )
     config.resolve.alias["gatsby-original"] = require.resolve("gatsby")
     config.resolve.alias["gatsby"] = require.resolve("./mocks/gatsby.js")
-
     return config
   },
 }

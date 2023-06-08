@@ -22,7 +22,7 @@ PostList.args = {
   data: { allFile: { nodes: [postPreview(0), postPreview(1)] } },
   location: {
     pathname: "/",
-    ancestorOrigins: new DOMStringList(),
+    ancestorOrigins: {} as DOMStringList,
     hash: "",
     host: "",
     hostname: "",
