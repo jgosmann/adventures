@@ -1,0 +1,32 @@
+- date: 2023-05-23T19:16:25+02:00
+  ascents:
+    - name: "Thunder Road"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Tricky Tricky Mana Mou"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
+    - name: "Massive Attack"
+      grade:
+        system: french
+        value: "7c"
+      style: hangdog
+    - name: "Smiths"
+      grade:
+        system: french
+        value: "7b"
+      style: redpoint
+    - name: "Zephyros"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Zephyros Extension"
+      grade:
+        system: french
+        value: "6c+"
+      style: hangdog

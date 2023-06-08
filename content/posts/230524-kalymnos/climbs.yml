@@ -1,0 +1,32 @@
+- date: 2023-05-24T19:16:25+02:00
+  ascents:
+    - name: "Kiss Bulle"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Mario Net"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Amythos"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
+    - name: "Yaka"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Mama Nota"
+      grade:
+        system: french
+        value: "7a"
+      style: retreat
+    - name: "Mr. Rigolo"
+      grade:
+        system: french
+        value: "6b+"
+      style: flash

@@ -1,0 +1,22 @@
+- date: 2023-05-19T19:16:25+02:00
+  ascents:
+    - name: "Pegaso"
+      grade:
+        system: french
+        value: "5b"
+      style: onsight
+    - name: "Chrysaor"
+      grade:
+        system: french
+        value: "5c+"
+      style: onsight
+    - name: "Ammohostos Vasilevousa"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Maccabi"
+      grade:
+        system: french
+        value: "6b+"
+      style: redpoint

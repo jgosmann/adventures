@@ -1,0 +1,37 @@
+- date: 2023-05-21T19:16:25+02:00
+  ascents:
+    - name: "Chan & Chan"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "It's a Janine thing"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Chuchichäschtlitripp"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
+    - name: "Pestalozzi"
+      grade:
+        system: french
+        value: "6c"
+      style: onsight
+    - name: "Oror does the Baby Freeze"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
+    - name: "Millionenbach"
+      grade:
+        system: french
+        value: "7a"
+      style: redpoint
+    - name: "Griffig goes to Kalymnos"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight

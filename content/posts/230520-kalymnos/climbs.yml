@@ -1,0 +1,17 @@
+- date: 2023-05-20T19:16:25+02:00
+  ascents:
+    - name: "Joy in the Garden"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Taverna Psirri"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Resista"
+      grade:
+        system: french
+        value: "6c"
+      style: onsight
