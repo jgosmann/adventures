@@ -1,0 +1,27 @@
+- date: 2023-05-28T19:16:25+02:00
+  ascents:
+    - name: "Papou"
+      grade:
+        system: french
+        value: "5c+"
+      style: onsight
+    - name: "Kosmos"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Romance of Stone 6c+"
+      grade:
+        system: french
+        value: "6c+"
+      style: onsight
+    - name: "Massive attack"
+      grade:
+        system: french
+        value: "7c"
+      style: hangdog
+    - name: "In Vino Veritas"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight

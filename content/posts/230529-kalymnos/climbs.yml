@@ -1,0 +1,22 @@
+- date: 2023-05-29T19:16:25+02:00
+  ascents:
+    - name: "Get up"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Roumain des Bois"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Summer wine"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
+    - name: "Mama Nota"
+      grade:
+        system: french
+        value: "7a"
+      style: redpoint
