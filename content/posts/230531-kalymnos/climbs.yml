@@ -1,0 +1,32 @@
+- date: 2023-05-31T19:16:25+02:00
+  ascents:
+    - name: "Ravasaki"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Damos"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Massive Attack"
+      grade:
+        system: french
+        value: "7c"
+      style: redpoint
+    - name: "Hippocrates"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Rufixius"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Alani"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
