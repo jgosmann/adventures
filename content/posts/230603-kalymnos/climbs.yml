@@ -1,0 +1,42 @@
+- date: 2023-06-03T19:16:25+02:00
+  ascents:
+    - name: "Hoppla"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Maja"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "The dentist terror"
+      grade:
+        system: french
+        value: "6c"
+      style: onsight
+    - name: "Chlausezäuerli"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Suchspiel"
+      grade:
+        system: french
+        value: "7a+"
+      style: redpoint
+    - name: "Timba Climber"
+      grade:
+        system: french
+        value: "7b"
+      style: redpoint
+    - name: "Lou + Zoe"
+      grade:
+        system: french
+        value: "6c+"
+      style: redpoint
+    - name: "Sauna am See"
+      grade:
+        system: french
+        value: "6b+"
+      style: redpoint

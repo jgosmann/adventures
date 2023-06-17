@@ -1,0 +1,17 @@
+- date: 2023-06-01T19:16:25+02:00
+  ascents:
+    - name: "Minion"
+      grade:
+        system: french
+        value: "5c+"
+      style: onsight
+    - name: "Prosciutto + Champagne"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Pornogeros"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
