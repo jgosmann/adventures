@@ -55,7 +55,7 @@ module.exports = {
       "node_modules/@emotion/react"
     )
     config.resolve.alias["gatsby-original"] = require.resolve("gatsby")
-    config.resolve.alias["gatsby"] = require.resolve("./mocks/gatsby.js")
+    config.resolve.alias["gatsby"] = require.resolve("./mocks/gatsby.mjs")
     return config
   },
 }

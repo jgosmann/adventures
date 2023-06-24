@@ -4,7 +4,7 @@ const mockStaticQuery = require("../../test/mockStaticQuery")
 module.exports = require("gatsby-original")
 
 function Link({ to, ...props }) {
-  return <a href={to} {...props} />
+  return React.createElement("a", { href: to, ...props })
 }
 
 Link.propTypes = {
