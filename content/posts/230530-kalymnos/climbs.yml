@@ -1,0 +1,17 @@
+- date: 2023-05-30T19:16:25+02:00
+  ascents:
+    - name: "Les Copains D'Abord (pitch 1)"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Cumulo Sinus"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "1995"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
