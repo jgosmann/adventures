@@ -1,0 +1,27 @@
+- date: 2023-06-25T19:16:25+02:00
+  ascents:
+    - name: "Wilde Iris"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Missing Bolt"
+      grade:
+        system: french
+        value: "5c+"
+      style: onsight
+    - name: "The Italian Job"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Jean Marie Pfaff"
+      grade:
+        system: french
+        value: "6b+"
+      style: hangdog
+    - name: "Oldie but Goldie"
+      grade:
+        system: french
+        value: "5b"
+      style: flash
