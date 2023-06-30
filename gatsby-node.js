@@ -239,7 +239,9 @@ const createSearchIndex = async ({ graphql }) => {
       search: {
         id: nextId++,
         categories: post.childMdx.frontmatter.categories.join(" "),
-        content: remark().use(mdx).use(stripMdx).process(post.childMdx.body),
+        content: (
+          await remark().use(mdx).use(stripMdx).process(post.childMdx.body)
+        ).value,
         location: await reverseGeocodeLimit(() =>
           reverseGeocode({ lat, long })
         ),
@@ -257,6 +259,7 @@ const createSearchIndex = async ({ graphql }) => {
             pagePath
             childMdx {
               id
+              body
               background {
                 childImageSharp {
                   gatsbyImageData(width: 300, height: 250, layout: FIXED)
