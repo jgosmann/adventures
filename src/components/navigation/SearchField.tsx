@@ -51,6 +51,7 @@ const SearchField = ({ path, query, ...props }: SearchFieldProps) => {
         <FontAwesomeIcon
           icon={faSearch}
           title="Search"
+          titleId="fa-title-search"
           css={{ cursor: "pointer", marginRight: 4 }}
         />
         <input
