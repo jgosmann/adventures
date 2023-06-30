@@ -17,6 +17,6 @@ describe("The search", function () {
     cy.get('input[type="search"]').first().type("Zugspitz")
     cy.get('button[type="submit"]').first().click()
 
-    cy.get("main ol li h2").should("have.text", "Zugspitz crossing")
+    cy.get("main ol li:first-child h2").should("have.text", "Zugspitz crossing")
   })
 })
