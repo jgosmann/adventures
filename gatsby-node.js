@@ -11,7 +11,6 @@ const FlexSearch = require("flexsearch")
 const axios = require("axios").default
 const path = require("path")
 const readingTime = require("reading-time")
-const stripMdx = require("remark-mdx-to-plain-text")
 
 const accessTokensPromise = (async () =>
   JSON.parse(await fs.promises.readFile("access-tokens.json")))()
@@ -232,6 +231,7 @@ const createSearchIndex = async ({ graphql }) => {
   const preprocessDoc = async post => {
     const { default: mdx } = await import("remark-mdx")
     const { remark } = await import("remark")
+    const { toString } = await import("mdast-util-to-string")
     const [lat, long] = JSON.parse(`[${post.childMdx.frontmatter.map}]`)
     return {
       pagePath: post.pagePath,
@@ -239,9 +239,7 @@ const createSearchIndex = async ({ graphql }) => {
       search: {
         id: nextId++,
         categories: post.childMdx.frontmatter.categories.join(" "),
-        content: (
-          await remark().use(mdx).use(stripMdx).process(post.childMdx.body)
-        ).value,
+        content: toString(remark().use(mdx).parse(post.childMdx.body)),
         location: await reverseGeocodeLimit(() =>
           reverseGeocode({ lat, long })
         ),
