@@ -62,7 +62,7 @@
     "msw-storybook-addon": "^1.8.0",
     "p-limit": "^4.0.0",
     "postcss": "^8.4.17",
-    "prettier": "^2.3.2",
+    "prettier": "^3.0.0",
     "react-test-renderer": "^18.2.0",
     "remark": "^14.0.2",
     "remark-mdx": "^2.1.3",

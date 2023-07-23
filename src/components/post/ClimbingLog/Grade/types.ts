@@ -1,8 +1,8 @@
 export const sportGrades = ["UIAA", "YDS", "french"] as const
 export const boulderingGrades = ["Fb_bloc", "Fb_trav", "V"] as const
 
-export type SportGradeSystem = typeof sportGrades[number]
-export type BoulderingGradeSystem = typeof boulderingGrades[number]
+export type SportGradeSystem = (typeof sportGrades)[number]
+export type BoulderingGradeSystem = (typeof boulderingGrades)[number]
 export type System = SportGradeSystem | BoulderingGradeSystem
 
 export const isSportGrade = (

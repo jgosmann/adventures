@@ -28,7 +28,7 @@ const marker = ({ markerSide }: MarkerStyleArgs) =>
         padding: 8px;
       }
     `,
-  }[markerSide || "bottom"])
+  })[markerSide || "bottom"]
 
 // Omit of 'ref' is workaround for https://github.com/gatsbyjs/gatsby/issues/16682
 export interface NavLinkProps<TState>
