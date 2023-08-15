@@ -113,7 +113,7 @@
     "sass": "^1.35.1"
   },
   "optionalDependencies": {
-    "netlify-cli": "^15.4.1"
+    "netlify-cli": "16.0.3"
   },
   "scripts": {
     "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
