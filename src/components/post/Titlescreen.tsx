@@ -32,6 +32,7 @@ const titleStyle = css({
   },
   textShadow: "2px 2px 4px #000",
   marginBottom: 32,
+  padding: "0px 32px",
   overflowWrap: "break-word",
   hyphens: "auto",
   fontWeight: "normal",
