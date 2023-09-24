@@ -20,7 +20,7 @@ const reverseGeocode = async ({ lat, long }) => {
   const access_token = (await accessTokensPromise).mapbox
   if (!access_token) {
     console.warn(
-      "Skipping geocoding for seach because of missing mapbox token."
+      "Skipping geocoding for search because of missing mapbox token."
     )
     return ""
   }
