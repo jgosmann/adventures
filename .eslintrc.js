@@ -8,7 +8,6 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:storybook/recommended",
     "plugin:jest-dom/recommended",
-    "plugin:cypress/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -19,7 +18,7 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "cypress"],
+  plugins: ["react", "@typescript-eslint"],
   rules: {
     "react/no-unknown-property": ["error", { ignore: ["css"] }],
   },
@@ -33,7 +32,6 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:storybook/recommended",
         "plugin:jest-dom/recommended",
-        "plugin:cypress/recommended",
         "prettier",
       ],
     },
@@ -58,7 +56,6 @@ module.exports = {
     {
       files: [
         ".eslintrc.js",
-        "cypress/**/*",
         "gatsby-browser.js",
         "gatsby-config.js",
         "gatsby-node.js",

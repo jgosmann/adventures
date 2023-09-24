@@ -44,8 +44,14 @@ jobs:
           node-version: "18.x"
           cache: "yarn"
       - run: yarn install --frozen-lockfile --non-interactive
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
       - run: echo '{"mapbox":""}' > access-tokens.json
-      - run: |
+      - name: Delete non-required files to speed up build
+        working-directory: ./content/posts
+        run: find . -maxdepth 1 -type d -name ! -name '*190716-squamish' -name '.' -exec rm -r {} +
+      - name: Start Gtasby development mode
+        run: |
           npx gatsby develop &
           for i in {1..60}; do
             echo "Waiting 5 seconds"
@@ -63,14 +69,14 @@ jobs:
       - run: docker compose up --wait -d
       - run: docker compose logs
         if: always()
-      - run: npx cypress run
-
+      - name: Run Playwright tests
+        run: yarn playwright test
       - uses: actions/upload-artifact@v3
-        if: failure()
+        if: always()
         with:
-          name: Cypress recordings
-          path: cypress/videos/*
-          retention-days: 7
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14
 
   Chromatic:
     runs-on: ubuntu-latest
