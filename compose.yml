@@ -25,6 +25,6 @@ services:
     ports:
       - "4000:4000"
     volumes:
-      - ./search.json:/opt/search-lite/search.json
+      - ./public/search.json:/opt/search-lite/search.json
       - ./test/search-lite.config.json:/opt/search-lite/config.json
       - ./search-lite.schema.graphql:/opt/search-lite/schema.graphql

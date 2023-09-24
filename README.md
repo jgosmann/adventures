@@ -15,7 +15,6 @@ npx gatsby develop
 Prepare test environment.
 
 ```
-curl --fail http://localhost:8000/search.json --output ./search.json
 docker compose up -d
 ```
 
