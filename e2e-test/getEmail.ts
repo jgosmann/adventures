@@ -1,15 +1,15 @@
-const Imap = require("imap")
+import Imap from "imap"
 
-module.exports = async email => {
+export default async (email: string): Promise<string> => {
   const imap = new Imap({
     user: email,
     password: "password",
     host: "127.0.0.1",
     port: 3143,
   })
-  await new Promise((resolve, reject) => {
+  await new Promise<void>((resolve, reject) => {
     imap.once("ready", () => resolve())
-    imap.once("error", err => reject(err))
+    imap.once("error", (err: Error) => reject(err))
     imap.connect()
   })
   return await new Promise((resolve, reject) => {
