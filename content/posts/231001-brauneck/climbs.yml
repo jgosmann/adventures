@@ -1,0 +1,31 @@
+- date: 2023-10-01T19:16:25+02:00
+  ascents:
+    - name: "Luhja! Sacklzement Hahleluja"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "3+"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "4+"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6-"
+          style: toprope
+    - name: "Phantastique — Phantastique"
+      grade:
+        system: UIAA
+        value: "6"
+      style: flash
+    - name: "Steinbrecher"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: repeat
+    - name: "DeConniA"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: hangdog
