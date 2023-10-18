@@ -116,8 +116,8 @@
     "netlify-cli": "^16.8.0"
   },
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
-    "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "type-check": "tsc --noEmit && tsc --noEmit --project tsconfig.spec.json && tsc --noEmit --project e2e-test/tsconfig.json",
     "lint": "eslint src *.js .storybook e2e-test",
