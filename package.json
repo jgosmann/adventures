@@ -64,7 +64,7 @@
     "postcss": "^8.4.31",
     "prettier": "^3.0.0",
     "react-test-renderer": "^18.2.0",
-    "remark": "^14.0.2",
+    "remark": "^15.0.1",
     "remark-mdx": "^3.0.0",
     "sass-loader": "^13.0.2",
     "storybook": "^7.0.20",
