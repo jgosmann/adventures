@@ -61,6 +61,7 @@ module.exports = {
         "gatsby-node.js",
         "graphql.config.js",
         "jest.config.js",
+        "jest.polyfills.js",
         "jest-preprocess.js",
         "loadershim.js",
         ".storybook/main.js",

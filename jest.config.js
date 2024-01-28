@@ -13,8 +13,15 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ``,
   },
-  setupFiles: [`<rootDir>/loadershim.js`],
+  // jest.polyfill.js to fix MSW compatibility
+  // https://mswjs.io/docs/migrations/1.x-to-2.x#requestresponsetextencoder-is-not-defined-jest
+  setupFiles: [`<rootDir>/loadershim.js`, `./jest.polyfills.js`],
   setupFilesAfterEnv: [`<rootDir>/jest-setup.ts`],
   testEnvironment: "jsdom",
   roots: ["src"],
+  // fix MSW imports
+  // https://mswjs.io/docs/migrations/1.x-to-2.x#cannot-find-module-mswnode-jsdom
+  testEnvironmentOptions: {
+    customExportConditions: [""],
+  },
 }

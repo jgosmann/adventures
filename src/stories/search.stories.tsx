@@ -1,7 +1,7 @@
 import { postPreview } from "../../test/post-preview-fixture"
 import { searchUrl, staticQueryData } from "../../test/static-query-data"
 import SearchPage from "../pages/search"
-import { rest } from "msw"
+import { http } from "msw"
 
 export default {
   title: "Pages/Search",
@@ -24,19 +24,20 @@ export const Search = {
   parameters: {
     msw: {
       handlers: [
-        rest.post(searchUrl, (req, res, ctx) =>
-          res(
-            ctx.status(200),
-            ctx.json({
-              data: {
-                search: {
-                  page: "page0",
-                  next: "next",
-                  result: [postPreview(0)],
+        http.post(
+          searchUrl,
+          () =>
+            new Response(
+              JSON.stringify({
+                data: {
+                  search: {
+                    page: "page0",
+                    next: "next",
+                    result: [postPreview(0)],
+                  },
                 },
-              },
-            })
-          )
+              })
+            )
         ),
       ],
     },

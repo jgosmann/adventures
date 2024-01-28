@@ -3,6 +3,7 @@
 ## Held-back dependency updates
 
 - `flexsearch < 0.7` due to broken import/export up to at least 0.7.2.
+- `undici < 6.0.0` because later version breaks Jest polyfills for MSW.
 
 ## Run E2E tests
 

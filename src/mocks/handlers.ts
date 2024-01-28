@@ -1,4 +1,4 @@
-import { rest } from "msw"
+import { http } from "msw"
 import {
   mockGatsbyImage,
   mockImageFileNode,
@@ -9,11 +9,14 @@ export const searchApiUrl = "http://search.api"
 
 export const validBearerToken = "some-opaque-token"
 
+type SearchBody = {
+  variables: Record<string, string>
+}
+
 export const handlers = [
-  rest.get("/track.gpx", (req, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.xml(`<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  http.get("/track.gpx", () => {
+    return new Response(
+      `<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" creator="" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <trk>
   <name>ACTIVE LOG002027</name>
@@ -42,34 +45,30 @@ export const handlers = [
    </trkpt>
   </trkseg>
  </trk>
-</gpx>
-            `)
+</gpx>`,
+      { headers: { "Content-Type": "text/xml" } }
     )
   }),
 
-  rest.post(`${doveseedApiUrl}/subscribe/foo@example.com`, (req, res, ctx) => {
-    return res(ctx.status(200))
+  http.post(`${doveseedApiUrl}/subscribe/foo@example.com`, () => {
+    return new Response("")
   }),
-  rest.post(
-    `${doveseedApiUrl}/subscribe/failure@example.com`,
-    (req, res, ctx) => {
-      return res(ctx.status(400))
-    }
-  ),
+  http.post(`${doveseedApiUrl}/subscribe/failure@example.com`, () => {
+    return new Response("", { status: 400 })
+  }),
 
-  rest.post(`${doveseedApiUrl}/confirm/foo@example.com`, (req, res, ctx) => {
-    if (req.headers.get("Authorization") === `Bearer ${validBearerToken}`) {
-      return res(ctx.status(200))
+  http.post(`${doveseedApiUrl}/confirm/foo@example.com`, ({ request }) => {
+    if (request.headers.get("Authorization") === `Bearer ${validBearerToken}`) {
+      return new Response()
     } else {
-      return res(ctx.status(403))
+      return new Response("", { status: 403 })
     }
   }),
 
-  rest.post(searchApiUrl, async (req, res, ctx) => {
-    const page = (await req.json())["variables"]["page"] || "page0"
-    return res(
-      ctx.status(200),
-      ctx.json({
+  http.post<object, SearchBody>(searchApiUrl, async ({ request }) => {
+    const page = (await request.json()).variables["page"] ?? "page0"
+    return new Response(
+      JSON.stringify({
         data: {
           search: {
             page: page,
