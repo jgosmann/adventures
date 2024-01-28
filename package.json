@@ -46,7 +46,7 @@
     "chromatic": "^10.6.1",
     "css-loader": "^6.5.1",
     "eslint": "^8.6.0",
-    "eslint-config-prettier": "9.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest-dom": "^5.0.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-storybook": "^0.6.12",
