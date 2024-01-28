@@ -86,7 +86,7 @@
     "@nivo/core": "^0.84.0",
     "@nivo/line": "^0.84.0",
     "@react-leaflet/core": "^2.1.0",
-    "flag-icons": "^6.6.5",
+    "flag-icons": "^7.1.0",
     "gatsby": "^5.6.1",
     "gatsby-plugin-emotion": "^8.6.0",
     "gatsby-plugin-feed": "^5.6.0",
