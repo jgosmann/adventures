@@ -7,7 +7,9 @@
 // You can delete this file if you're not using it
 
 const fs = require("fs")
-const FlexSearch = require("flexsearch")
+const { Document } = require("flexsearch/dist/flexsearch.bundle.min")
+// FIXME no way to properly import this?
+//const { encode } = require("flexsearch/dist/lang/latin/advanced.min")
 const axios = require("axios").default
 const path = require("path")
 const readingTime = require("reading-time")
@@ -234,6 +236,7 @@ const createSearchIndex = async ({ graphql }) => {
     const { toString } = await import("mdast-util-to-string")
     const [lat, long] = JSON.parse(`[${post.childMdx.frontmatter.map}]`)
     return {
+      id: nextId++,
       pagePath: post.pagePath,
       childMdx: post.childMdx,
       search: {
@@ -281,15 +284,16 @@ const createSearchIndex = async ({ graphql }) => {
     `)
   ).data.allFile.nodes
 
-  const searchIndex = new FlexSearch({
-    encode: "advanced",
+  const searchIndex = new Document({
+    encode: x => x, // FIXME
+    language: "us",
     tokenize: "reverse",
     threshold: false,
     cache: false,
-    doc: {
+    document: {
       id: "search:id",
       store: ["pagePath", "childMdx"],
-      field: [
+      index: [
         "search:categories",
         "search:location",
         "childMdx:frontmatter:title",
@@ -298,8 +302,19 @@ const createSearchIndex = async ({ graphql }) => {
     },
   })
 
-  searchIndex.add(await Promise.all(posts.map(preprocessDoc)))
-  await fs.promises.writeFile("./public/search.json", searchIndex.export())
+  await Promise.all(
+    posts.map(async p => searchIndex.add(await preprocessDoc(p)))
+  )
+  const searchIndexForExport = {}
+  await searchIndex.export((key, data) => {
+    console.log("foo", key, data)
+    searchIndexForExport[key] = data
+  })
+  console.log("done")
+  await fs.promises.writeFile(
+    "./public/search.json",
+    JSON.stringify(searchIndexForExport)
+  )
 }
 
 const createPostPages = async ({ actions, graphql }) => {
