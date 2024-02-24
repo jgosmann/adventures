@@ -21,8 +21,8 @@ jobs:
             run: yarn test
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20.x"
           cache: "yarn"
@@ -39,10 +39,10 @@ jobs:
     if: github.ref == 'refs/heads/develop'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: "20.x"
           cache: "yarn"
@@ -50,7 +50,7 @@ jobs:
       - run: yarn install --frozen-lockfile --non-interactive
 
       - name: Publish to Chromatic for visual verification
-        uses: chromaui/action@v1
+        uses: chromaui/action@v11
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
