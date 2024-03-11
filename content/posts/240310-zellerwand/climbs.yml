@@ -1,0 +1,37 @@
+- date: 2024-03-10T19:16:25+02:00
+  ascents:
+    - name: "Bauernopfer"
+      grade:
+        system: french
+        value: "4c"
+      style: onsight
+    - name: "Troll Stigen"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Sei kein Frosch"
+      grade:
+        system: french
+        value: "5b"
+      style: onsight
+    - name: "Hilti Hilti"
+      grade:
+        system: french
+        value: "6a+"
+      style: hangdog
+    - name: "Workaholic"
+      grade:
+        system: french
+        value: "6a+"
+      style: redpoint
+    - name: "Ende der Gemütlichkeit"
+      grade:
+        system: french
+        value: "7a"
+      style: retreat
+    - name: "Zeit für Gemütlichkeit"
+      grade:
+        system: french
+        value: "6a+"
+      style: redpoint
