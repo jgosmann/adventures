@@ -1,7 +1,7 @@
 import React from "react"
 import { StoryFn, StoryObj } from "@storybook/react"
 import VerticalScroll, { VerticalScrollProps } from "./VerticalScroll"
-import { fireEvent, within } from "@storybook/testing-library"
+import { fireEvent, within } from "@storybook/test"
 
 export default {
   title: "Controls/Vertical Scroll",

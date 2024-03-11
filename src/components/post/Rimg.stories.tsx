@@ -5,7 +5,7 @@ import {
   mockGatsbyImage,
   mockImageFileNode,
 } from "../../../test/gatsby-image-fixture"
-import { userEvent, within } from "@storybook/testing-library"
+import { userEvent, within } from "@storybook/test"
 
 export default {
   title: "Post/Responsive Image",
