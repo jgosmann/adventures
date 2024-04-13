@@ -1,0 +1,42 @@
+- date: 2024-04-06T19:16:25+02:00
+  ascents:
+    - name: "Knusperzapfen"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Balance"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Schildkröte"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Kurz und bünding"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Heckentrail"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "No name"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: redpoint
+    - name: "Samerweg"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Elefantenohr"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: redpoint
