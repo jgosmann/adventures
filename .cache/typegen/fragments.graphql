@@ -61,13 +61,6 @@ fragment Content_data on Mdx {
     relativePath
   }
 }
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
-fragment Rimg_data on File {
-  childImageSharp {
-    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
-  }
-  publicURL
-}
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Pano.tsx
 fragment Pano_data on File {
   childImageSharp {
@@ -102,6 +95,24 @@ fragment Titlescreen_data on Mdx {
   }
   ...PostMeta_data
 }
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
+fragment Rimg_data on File {
+  childImageSharp {
+    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
+  }
+  publicURL
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
+fragment PostMeta_data on Mdx {
+  frontmatter {
+    date
+  }
+  fields {
+    timeToRead {
+      minutes
+    }
+  }
+}
 # /Users/jgosmann/Documents/projects/adventures/src/components/PostPreview.tsx
 fragment PostPreview_data on File {
   childMdx {
@@ -128,17 +139,6 @@ fragment PostPreview_data on File {
     }
   }
   pagePath
-}
-# /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
-fragment PostMeta_data on Mdx {
-  frontmatter {
-    date
-  }
-  fields {
-    timeToRead {
-      minutes
-    }
-  }
 }
 # /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
 fragment GatsbyImageSharpFixed on ImageSharpFixed {
