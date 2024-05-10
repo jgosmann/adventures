@@ -83,6 +83,13 @@ fragment Pano2x_data on File {
     )
   }
 }
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
+fragment Rimg_data on File {
+  childImageSharp {
+    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
+  }
+  publicURL
+}
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Titlescreen.tsx
 fragment Titlescreen_data on Mdx {
   background {
@@ -94,13 +101,6 @@ fragment Titlescreen_data on Mdx {
     title
   }
   ...PostMeta_data
-}
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
-fragment Rimg_data on File {
-  childImageSharp {
-    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
-  }
-  publicURL
 }
 # /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
 fragment PostMeta_data on Mdx {
