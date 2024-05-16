@@ -1,0 +1,17 @@
+- date: 2024-05-05T19:16:25+02:00
+  ascents:
+    - name: "Kara Kiri"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Vai-col-liscio"
+      grade:
+        system: french
+        value: "6b"
+      style: hangdog
+    - name: "Weberknecht"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
