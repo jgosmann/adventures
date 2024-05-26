@@ -15,12 +15,6 @@ fragment Ascent_data on ClimbsYamlAscents {
   }
   style
 }
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/index.tsx
-fragment ClimbingLog_data on ClimbsYaml {
-  ascents {
-    ...Ascent_data
-  }
-}
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Content.tsx
 fragment Content_data on Mdx {
   climbs: resources(filter: {relativePath: {eq: "climbs.yml"}}) {
@@ -61,6 +55,19 @@ fragment Content_data on Mdx {
     relativePath
   }
 }
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/index.tsx
+fragment ClimbingLog_data on ClimbsYaml {
+  ascents {
+    ...Ascent_data
+  }
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
+fragment Rimg_data on File {
+  childImageSharp {
+    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
+  }
+  publicURL
+}
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Pano.tsx
 fragment Pano_data on File {
   childImageSharp {
@@ -94,13 +101,6 @@ fragment Titlescreen_data on Mdx {
     title
   }
   ...PostMeta_data
-}
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
-fragment Rimg_data on File {
-  childImageSharp {
-    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
-  }
-  publicURL
 }
 # /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
 fragment PostMeta_data on Mdx {
