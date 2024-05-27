@@ -10,8 +10,10 @@
  */
 
 const { TextDecoder, TextEncoder } = require("node:util")
+const { ReadableStream } = require("web-streams-polyfill")
 
 Object.defineProperties(globalThis, {
+  ReadableStream: { value: ReadableStream },
   TextDecoder: { value: TextDecoder },
   TextEncoder: { value: TextEncoder },
 })
