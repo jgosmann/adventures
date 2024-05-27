@@ -1,6 +1,6 @@
 import { StoryObj } from "@storybook/react"
 import Navigation from "."
-import { userEvent, within } from "@storybook/testing-library"
+import { userEvent, within } from "@storybook/test"
 import { minFullWidth } from "./sizes"
 
 export default {

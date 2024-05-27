@@ -1,5 +1,5 @@
 import React from "react"
-import { Story } from "@storybook/react"
+import { StoryFn } from "@storybook/react"
 
 let nextStaticQueryResult: unknown
 
@@ -12,7 +12,7 @@ export const useStaticQuery = () => {
 }
 
 export const decorator = (
-  Story: Story,
+  Story: StoryFn,
   { parameters }: { parameters: Record<string, unknown> }
 ) => {
   if (parameters && parameters.staticQuery) {

@@ -1,7 +1,8 @@
 const path = require("path")
 const toPath = _path => path.join(process.cwd(), _path)
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -15,34 +16,36 @@ module.exports = {
         },
       },
     },
+    "@storybook/addon-webpack5-compiler-babel",
+    "@chromatic-com/storybook",
   ],
+
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
   },
+
   staticDirs: [
     "../static",
     "../node_modules/leaflet/dist/images",
     "../msw",
     "../test/static",
   ],
+
   babel: async options => ({
     ...options,
-    presets: options.presets.map(preset => {
-      if (preset[0].includes("@babel/preset-react")) {
-        return [
-          "@babel/preset-react",
-          {
-            runtime: "automatic",
-            importSource: "@emotion/react",
-          },
-        ]
-      } else {
-        return preset
-      }
-    }),
-    plugins: [...options.plugins, "@emotion/babel-plugin"],
+    presets: [
+      [
+        "@babel/preset-react",
+        {
+          runtime: "automatic",
+          importSource: "@emotion/react",
+        },
+      ],
+    ],
+    plugins: ["@emotion/babel-plugin"],
   }),
+
   webpackFinal: async config => {
     config.resolve.alias["/flags"] = toPath("static/flags")
     config.resolve.alias["@emotion/core"] = toPath(
@@ -57,5 +60,9 @@ module.exports = {
     config.resolve.alias["gatsby-original"] = require.resolve("gatsby")
     config.resolve.alias["gatsby"] = require.resolve("./mocks/gatsby.mjs")
     return config
+  },
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
   },
 }
