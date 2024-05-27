@@ -1,0 +1,37 @@
+- date: 2024-04-14T19:16:25+02:00
+  ascents:
+    - name: "Po-Ebene (alternate easier start)"
+      grade:
+        system: french
+        value: "5c"
+      style: hangdog
+    - name: "Miraculix"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Fingerbeißer"
+      grade:
+        system: french
+        value: "6b+"
+      style: redpoint
+    - name: "Purple Love"
+      grade:
+        system: french
+        value: "5b+"
+      style: hangdog
+    - name: "Faun"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Hubert-Aichner-Gedächtnis Führe (only lower part)"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Verschneidung"
+      grade:
+        system: french
+        value: "5b"
+      style: flash

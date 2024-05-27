@@ -1,0 +1,37 @@
+- date: 2024-04-30T19:16:25+02:00
+  ascents:
+    - name: "Ohne Seil?"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Naturgewalt"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Wurschtl"
+      grade:
+        system: french
+        value: "6b+"
+      style: bailed
+    - name: "Hart gewesen"
+      grade:
+        system: french
+        value: "6c+"
+      style: hangdog
+    - name: "Adrenalinjunkie"
+      grade:
+        system: french
+        value: "6c+"
+      style: redpoint
+    - name: "Sporthängen"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Olli"
+      grade:
+        system: french
+        value: "5a"
+      style: onsight

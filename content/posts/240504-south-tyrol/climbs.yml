@@ -1,0 +1,37 @@
+- date: 2024-05-04T19:16:25+02:00
+  ascents:
+    - name: "Bio"
+      grade:
+        system: french
+        value: "5a"
+      style: onsight
+    - name: "Ballerina"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Dor feine Sepp"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Black Flag"
+      grade:
+        system: french
+        value: "6c"
+      style: flash
+    - name: "Kaminkehrer"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Patagonia"
+      grade:
+        system: french
+        value: "6b"
+      style: flash
+    - name: "Dickschedl"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight

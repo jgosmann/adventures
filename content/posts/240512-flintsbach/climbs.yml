@@ -1,0 +1,32 @@
+- date: 2024-05-12T19:16:25+02:00
+  ascents:
+    - name: "Pittsburg, Phil & Co."
+      grade:
+        system: UIAA
+        value: "5c"
+      style: onsight
+    - name: "Miles Davis"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Scheißdreck"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: onsight
+    - name: "Animals"
+      grade:
+        system: UIAA
+        value: "7+"
+      style: onsight
+    - name: "Milchmädchen"
+      grade:
+        system: UIAA
+        value: "8"
+      style: hangdog
+    - name: "Sacklaus"
+      grade:
+        system: UIAA
+        value: "7"
+      style: hangdog

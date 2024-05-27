@@ -90,18 +90,6 @@ fragment Rimg_data on File {
   }
   publicURL
 }
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/Titlescreen.tsx
-fragment Titlescreen_data on Mdx {
-  background {
-    childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-    }
-  }
-  frontmatter {
-    title
-  }
-  ...PostMeta_data
-}
 # /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
 fragment PostMeta_data on Mdx {
   frontmatter {
@@ -139,6 +127,18 @@ fragment PostPreview_data on File {
     }
   }
   pagePath
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Titlescreen.tsx
+fragment Titlescreen_data on Mdx {
+  background {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+    }
+  }
+  frontmatter {
+    title
+  }
+  ...PostMeta_data
 }
 # /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
 fragment GatsbyImageSharpFixed on ImageSharpFixed {

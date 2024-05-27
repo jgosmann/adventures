@@ -1,0 +1,37 @@
+- date: 2024-04-29T19:16:25+02:00
+  ascents:
+    - name: "BH"
+      grade:
+        system: french
+        value: "5b"
+      style: onsight
+    - name: "Johannesgraben"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Stiefelknecht"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Faxe"
+      grade:
+        system: french
+        value: "5c+"
+      style: onsight
+    - name: "Kellekesch"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
+    - name: "Tektonen"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Linksverkehr"
+      grade:
+        system: french
+        value: "6c"
+      style: hangdog

@@ -1,0 +1,27 @@
+- date: 2024-05-01T19:16:25+02:00
+  ascents:
+    - name: "Offnhitz"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Gipfelstürmer"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Tjure"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Sau"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Benny"
+      grade:
+        system: french
+        value: "6b+"
+      style: redpoint
