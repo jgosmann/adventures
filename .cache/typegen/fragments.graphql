@@ -61,25 +61,6 @@ fragment Content_data on Mdx {
     relativePath
   }
 }
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/Titlescreen.tsx
-fragment Titlescreen_data on Mdx {
-  background {
-    childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-    }
-  }
-  frontmatter {
-    title
-  }
-  ...PostMeta_data
-}
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
-fragment Rimg_data on File {
-  childImageSharp {
-    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
-  }
-  publicURL
-}
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Pano.tsx
 fragment Pano_data on File {
   childImageSharp {
@@ -101,6 +82,25 @@ fragment Pano2x_data on File {
       formats: [JPG, AVIF]
     )
   }
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Rimg.tsx
+fragment Rimg_data on File {
+  childImageSharp {
+    gatsbyImageData(width: 1280, layout: CONSTRAINED, placeholder: BLURRED)
+  }
+  publicURL
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/Titlescreen.tsx
+fragment Titlescreen_data on Mdx {
+  background {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+    }
+  }
+  frontmatter {
+    title
+  }
+  ...PostMeta_data
 }
 # /Users/jgosmann/Documents/projects/adventures/src/components/PostPreview.tsx
 fragment PostPreview_data on File {
