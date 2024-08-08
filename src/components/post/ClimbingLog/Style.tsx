@@ -7,6 +7,7 @@ import { faFirstAid } from "@fortawesome/free-solid-svg-icons"
 import { faLevelDownAlt } from "@fortawesome/free-solid-svg-icons"
 import { faRedoAlt } from "@fortawesome/free-solid-svg-icons"
 import { faRunning } from "@fortawesome/free-solid-svg-icons"
+import { faPeopleCarryBox } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 
@@ -51,6 +52,13 @@ const styleMap = {
   ),
   aid: () => <FontAwesomeIcon icon={faFirstAid} fixedWidth title="Aid" />,
   bailed: () => <FontAwesomeIcon icon={faRunning} fixedWidth title="Bailed" />,
+  simul: () => (
+    <FontAwesomeIcon
+      icon={faPeopleCarryBox}
+      fixedWidth
+      title="Simul-climbing follower"
+    />
+  ),
   skipped: () => <>skipped</>,
   ["not attempted"]: () => <>not attempted</>,
 }
