@@ -1,0 +1,47 @@
+- date: 2024-05-12T19:16:25+02:00
+  ascents:
+    - name: "100 Kilo Liebe"
+      grade:
+        system: UIAA
+        value: "7+"
+      style: onsight
+    - name: "Fliegenschiss"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Glühwürmchen"
+      grade:
+        system: UIAA
+        value: "7+"
+      style: hangdog
+    - name: "Steinlaus"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Honecker"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Bakerman"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Animals"
+      grade:
+        system: UIAA
+        value: "7/7+"
+      style: hangdog
+    - name: "Miles Davis"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Früchte der Saison"
+      grade:
+        system: UIAA
+        value: "6+/7-"
+      style: onsight

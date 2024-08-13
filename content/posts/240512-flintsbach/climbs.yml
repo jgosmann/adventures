@@ -1,14 +1,14 @@
 - date: 2024-05-12T19:16:25+02:00
   ascents:
-    - name: "Pittsburg, Phil & Co."
-      grade:
-        system: UIAA
-        value: "5c"
-      style: onsight
-    - name: "Miles Davis"
+    - name: "Kinderleicht"
       grade:
         system: UIAA
         value: "6-"
+      style: onsight
+    - name: "Frauenschuh"
+      grade:
+        system: UIAA
+        value: "5+"
       style: onsight
     - name: "Scheißdreck"
       grade:
