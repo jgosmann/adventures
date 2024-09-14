@@ -1,3 +1,9 @@
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/index.tsx
+fragment ClimbingLog_data on ClimbsYaml {
+  ascents {
+    ...Ascent_data
+  }
+}
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/Ascent.tsx
 fragment Ascent_data on ClimbsYamlAscents {
   name
@@ -14,12 +20,6 @@ fragment Ascent_data on ClimbsYamlAscents {
     style
   }
   style
-}
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/index.tsx
-fragment ClimbingLog_data on ClimbsYaml {
-  ascents {
-    ...Ascent_data
-  }
 }
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Content.tsx
 fragment Content_data on Mdx {
