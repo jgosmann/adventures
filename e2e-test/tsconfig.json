@@ -2,7 +2,10 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
-    "types": ["node"]
+    "types": ["node"],
+    "target": "ES2018",
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
   },
   "include": ["**/*.ts"]
 }

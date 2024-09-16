@@ -15,9 +15,9 @@ module.exports = {
   },
   // jest.polyfill.js to fix MSW compatibility
   // https://mswjs.io/docs/migrations/1.x-to-2.x#requestresponsetextencoder-is-not-defined-jest
-  setupFiles: [`<rootDir>/loadershim.js`, `./jest.polyfills.js`],
+  setupFiles: [`<rootDir>/loadershim.js`],
   setupFilesAfterEnv: [`<rootDir>/jest-setup.ts`],
-  testEnvironment: "jsdom",
+  testEnvironment: "<rootDir>/jsdom-extended.js",
   roots: ["src"],
   // fix MSW imports
   // https://mswjs.io/docs/migrations/1.x-to-2.x#cannot-find-module-mswnode-jsdom

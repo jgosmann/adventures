@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": [],
+  "exclude": ["e2e-test/**"],
   "include": [
     "**/*.spec.ts",
     "**/*.spec.tsx",
