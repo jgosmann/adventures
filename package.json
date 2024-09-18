@@ -60,7 +60,7 @@
     "mdast-util-to-markdown": "^2.1.0",
     "msw": "^2.1.5",
     "msw-storybook-addon": "^2.0.2",
-    "p-limit": "^5.0.0",
+    "p-limit": "^6.1.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.0",
     "react-test-renderer": "^18.2.0",
