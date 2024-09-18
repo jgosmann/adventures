@@ -134,13 +134,14 @@ const Content = ({ mdx, nextPath, children }: ContentProps) => {
                         mappedArray[mappedArray.length - 1],
                         point
                       )
-                point.elevationMeters !== undefined &&
+                if (point.elevationMeters !== undefined) {
                   mappedArray.push({
                     lat: point.lat,
                     lon: point.lon,
                     distKilometers,
                     elevationMeters: point.elevationMeters,
                   })
+                }
                 return mappedArray
               },
               []

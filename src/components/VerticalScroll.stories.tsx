@@ -46,7 +46,9 @@ export const ScrollLeftButton: StoryObj<typeof VerticalScroll> = {
   play: async context => {
     const canvas = within(context.canvasElement)
 
-    ScrollRightButton.play && (await ScrollRightButton.play(context))
+    if (ScrollRightButton.play) {
+      await ScrollRightButton.play(context)
+    }
     await fireEvent.mouseDown(canvas.getByTitle("Scroll left"))
     await new Promise(resolve => setTimeout(resolve, 2000))
     await fireEvent.mouseUp(canvas.getByTitle("Scroll left"))

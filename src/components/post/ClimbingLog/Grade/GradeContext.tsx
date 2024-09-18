@@ -68,7 +68,7 @@ export const LocalStorageGradeContext = ({
         if (window && value) {
           window.localStorage.setItem(key, value)
         }
-      } catch (err) {
+      } catch {
         console.warn(`Failed to store ${key} in local storage.`)
       }
     })
