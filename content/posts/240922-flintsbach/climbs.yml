@@ -1,0 +1,37 @@
+- date: 2024-09-22T19:16:25+02:00
+  ascents:
+    - name: "unnamed"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Fliegenschiss"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: redpoint
+    - name: "Steinlaus"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: redpoint
+    - name: "Warm up"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: flash
+    - name: "Ghostsong"
+      grade:
+        system: UIAA
+        value: "7+"
+      style: hangdog
+    - name: "Frauenschuh"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
+    - name: "Pittsburg, Phil & Co."
+      grade:
+        system: UIAA
+        value: "5"
+      style: hangdog
