@@ -1,0 +1,9 @@
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/mailfont.css"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
