@@ -41,7 +41,7 @@ const Map = ({ children, ...props }: MapProps) => {
     <MapContainer
       css={{ height: "100%", zIndex: 0 }}
       dragging={!leaflet.Browser.mobile}
-      tap={!leaflet.Browser.mobile}
+      tapHold={!leaflet.Browser.mobile}
       scrollWheelZoom={false}
       {...props}
     >
