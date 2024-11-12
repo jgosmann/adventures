@@ -6,9 +6,11 @@ class JSDOMEnvironmentExtended extends JSDOMEnvironment {
   constructor(...args) {
     super(...args)
 
+    this.global.BroadcastChannel = BroadcastChannel
     this.global.ReadableStream = ReadableStream
     this.global.TextDecoder = TextDecoder
     this.global.TextEncoder = TextEncoder
+    this.global.TransformStream = TransformStream
 
     this.global.Blob = Blob
     this.global.File = File
