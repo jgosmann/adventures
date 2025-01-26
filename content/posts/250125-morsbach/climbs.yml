@@ -1,0 +1,29 @@
+- date: 2025-01-25T19:16:25+02:00
+  ascents:
+    - name: "Via Angela"
+      grade:
+        system: UIAA
+        value: "4+"
+      style: flash
+    - name: "Via Angela direkt"
+      grade:
+        system: UIAA
+        value: "5-"
+      style: flash
+    - name: "Schlinge"
+      pitches:
+        - name: "Nobody"
+          grade:
+            system: UIAA
+            value: "4+"
+          style: flash
+        - name: "Schlinge"
+          grade:
+            system: UIAA
+            value: "6+"
+          style: flash
+    - name: "Shebel Sheik"
+      grade:
+        system: UIAA
+        value: "7"
+      style: hangdog
