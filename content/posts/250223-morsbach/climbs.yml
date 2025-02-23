@@ -1,0 +1,46 @@
+- date: 2025-02-23T19:16:25+02:00
+  ascents:
+    - name: "Sanduhr"
+      pitches:
+        - name: "Nobody"
+          grade:
+            system: UIAA
+            value: "4+"
+          style: redpoint
+        - name: "Sanduhr"
+          grade:
+            system: UIAA
+            value: "5"
+          style: onsight
+    - name: "Muttertag/Idefix"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Shebel Sheik"
+      grade:
+        system: UIAA
+        value: "7"
+      style: redpoint
+    - name: "Sisyphus"
+      pitches:
+        - name: "Spinn I"
+          grade:
+            system: UIAA
+            value: "6+"
+          style: flash
+        - name: "Sisyphus"
+          grade:
+            system: UIAA
+            value: "6"
+          style: onsight
+    - name: "Po-Ebene"
+      grade:
+        system: UIAA
+        value: "7"
+      style: bailed
+    - name: "Mini-Flipp"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
