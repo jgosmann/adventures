@@ -1,0 +1,27 @@
+- date: 2025-02-23T19:16:25+02:00
+  ascents:
+    - name: "Knusperzapfen"
+      grade:
+        system: UIAA
+        value: "6"
+      style: repeat
+    - name: "Ziag U"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Katzensprung"
+      grade:
+        system: UIAA
+        value: "8-"
+      style: redpoint
+    - name: Unnamed
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: HG-Stoaner
+      grade:
+        system: UIAA
+        value: "7+"
+      style: flash
