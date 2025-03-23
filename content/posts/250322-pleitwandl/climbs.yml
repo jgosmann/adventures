@@ -1,0 +1,32 @@
+- date: 2025-03-22T19:16:25+02:00
+  ascents:
+    - name: "Kriegspfad"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Grauer Hirsch"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: onsight
+    - name: "Unknown off-width crack"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "?"
+      grade:
+        system: UIAA
+        value: "7"
+      style: redpoint
+    - name: Komet
+      grade:
+        system: UIAA
+        value: "7"
+      style: bailed
+    - name: Ra's Sonnenpfeiler (first pitch)
+      grade:
+        system: UIAA
+        value: "6-"
+      style: flash
