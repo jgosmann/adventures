@@ -24,10 +24,6 @@ const Map = ({ children, ...props }: MapProps) => {
     )
   }
 
-  const url =
-    "https://api.mapbox.com/styles/v1/jgosmann/" +
-    "cjtlceqtm0xh71fnkgt3725ou/tiles/256/{z}/{x}/{y}@2x?" +
-    "access_token={accessToken}"
   const attribution =
     "Map data &copy; " +
     '<a href="https://www.openstreetmap.org/">OpenStreetMap</a> ' +
@@ -37,6 +33,10 @@ const Map = ({ children, ...props }: MapProps) => {
   const accessToken =
     "pk.eyJ1Ijoiamdvc21hbm4iLCJhIjoiY2p0a2pnbGRmM2JlMDQzbzlzdW" +
     "trYjZiOSJ9.u2TRWUpD5guUay3Nn_Twiw"
+  const url =
+    "https://api.mapbox.com/styles/v1/jgosmann/" +
+    "cjtlceqtm0xh71fnkgt3725ou/tiles/256/{z}/{x}/{y}@2x?" +
+    `access_token=${accessToken}`
   return (
     <MapContainer
       css={{ height: "100%", zIndex: 0 }}
@@ -50,7 +50,6 @@ const Map = ({ children, ...props }: MapProps) => {
         attribution={attribution}
         maxZoom={18}
         id="mapbox.outdoors"
-        accessToken={accessToken}
       />
       {children}
     </MapContainer>

@@ -49,7 +49,7 @@ export const useRemoteGpxTrack = (url: string): Track | undefined => {
 
 export interface WithRemoteGpxTrackProps {
   url: string
-  render: (track?: Track) => JSX.Element
+  render: (track?: Track) => React.JSX.Element
 }
 
 const WithRemoteGpxTrack = ({ url, render }: WithRemoteGpxTrackProps) => {

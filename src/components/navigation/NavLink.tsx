@@ -35,7 +35,7 @@ export interface NavLinkProps<TState>
   extends Omit<GatsbyLinkProps<TState>, "ref">,
     MarkerStyleArgs {
   as?: React.ElementType
-  ref?: React.LegacyRef<Link<TState>> & React.LegacyRef<HTMLAnchorElement>
+  ref?: React.Ref<Link<TState>> & React.Ref<HTMLAnchorElement>
 }
 
 const NavLink = styled(

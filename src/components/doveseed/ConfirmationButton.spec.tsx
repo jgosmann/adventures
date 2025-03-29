@@ -17,6 +17,7 @@ describe("ConfirmationButtonController", () => {
 
   beforeEach(() => {
     Reflect.deleteProperty(window, "location")
+    // @ts-expect-error requires `string & Location` type which is hard to mock
     window.location = mockLocation(
       `https://localhost/path?email=foo@example.com&token=${validBearerToken}`
     )
@@ -27,6 +28,7 @@ describe("ConfirmationButtonController", () => {
   })
 
   afterEach(() => {
+    // @ts-expect-error requires `string & Location` type, but stored type is Location
     window.location = originalLocation
   })
 
