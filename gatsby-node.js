@@ -9,6 +9,7 @@
 const fs = require("fs")
 const { Document, Charset, Encoder } = require("flexsearch")
 const EnglishPreset = require("flexsearch/lang/en")
+const Database = require("flexsearch/db/sqlite")
 const axios = require("axios").default
 const path = require("path")
 const readingTime = require("reading-time")
@@ -300,18 +301,16 @@ const createSearchIndex = async ({ graphql }) => {
       ],
     },
   })
+  if (fs.existsSync("./public/search.sqlite")) {
+    await fs.promises.unlink("./public/search.sqlite")
+  }
+  const db = new Database({ path: "./public/search.sqlite" })
+  await searchIndex.mount(db)
 
   await Promise.all(
     posts.map(async p => searchIndex.add(await preprocessDoc(p)))
   )
-  const searchIndexForExport = {}
-  await searchIndex.export((key, data) => {
-    searchIndexForExport[key] = data
-  })
-  await fs.promises.writeFile(
-    "./public/search.json",
-    JSON.stringify(searchIndexForExport)
-  )
+  await searchIndex.commit()
 }
 
 const createPostPages = async ({ actions, graphql }) => {
