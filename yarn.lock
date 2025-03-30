@@ -11098,10 +11098,10 @@ flatted@^3.2.9:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.3.3.tgz#67c8fad95454a7c7abebf74bb78ee74a44023358"
   integrity sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==
 
-flexsearch@^0.7.43:
-  version "0.7.43"
-  resolved "https://registry.yarnpkg.com/flexsearch/-/flexsearch-0.7.43.tgz#34f89b36278a466ce379c5bf6fb341965ed3f16c"
-  integrity sha512-c5o/+Um8aqCSOXGcZoqZOm+NqtVwNsvVpWv6lfmSclU954O3wvQKxxK8zj74fPaSJbXpSLTs4PRhh+wnoCXnKg==
+flexsearch@^0.8.143:
+  version "0.8.143"
+  resolved "https://registry.yarnpkg.com/flexsearch/-/flexsearch-0.8.143.tgz#b74069a933118b5e07a7e6fc6e073c6705775b65"
+  integrity sha512-J7TiCTSdtqSdmd723Bk9Wj5se2gGLLpRwujQztOm45n24VlW53O3H1GpWK/ZslOPB/WzQxwSGDaQ8Pm8RQW89Q==
 
 fluent-ffmpeg@^2.1.2:
   version "2.1.3"

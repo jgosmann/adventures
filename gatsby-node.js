@@ -7,9 +7,8 @@
 // You can delete this file if you're not using it
 
 const fs = require("fs")
-const { Document } = require("flexsearch/dist/flexsearch.bundle.min")
-// FIXME no way to properly import this?
-//const { encode } = require("flexsearch/dist/lang/latin/advanced.min")
+const { Document, Charset, Encoder } = require("flexsearch")
+const EnglishPreset = require("flexsearch/lang/en")
 const axios = require("axios").default
 const path = require("path")
 const readingTime = require("reading-time")
@@ -285,11 +284,11 @@ const createSearchIndex = async ({ graphql }) => {
   ).data.allFile.nodes
 
   const searchIndex = new Document({
-    encode: x => x, // FIXME
-    language: "us",
+    encoder: new Encoder(Charset.LatinAdvanced, EnglishPreset),
     tokenize: "reverse",
     threshold: false,
     cache: false,
+    store: true,
     document: {
       id: "search:id",
       store: ["pagePath", "childMdx"],
@@ -307,10 +306,8 @@ const createSearchIndex = async ({ graphql }) => {
   )
   const searchIndexForExport = {}
   await searchIndex.export((key, data) => {
-    console.log("foo", key, data)
     searchIndexForExport[key] = data
   })
-  console.log("done")
   await fs.promises.writeFile(
     "./public/search.json",
     JSON.stringify(searchIndexForExport)
