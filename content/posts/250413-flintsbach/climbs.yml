@@ -1,0 +1,32 @@
+- date: 2025-03-22T19:16:25+02:00
+  ascents:
+    - name: "Kinderleicht"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: repeat
+    - name: "Fliegenschiss"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: repeat
+    - name: "Knabenkraut"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: redpoint
+    - name: "Die Hoffnung stirbt zuletzt"
+      grade:
+        system: UIAA
+        value: "7+"
+      style: redpoint
+    - name: Ghostsong
+      grade:
+        system: UIAA
+        value: "7+"
+      style: redpoint
+    - name: Animals
+      grade:
+        system: UIAA
+        value: "7/7+"
+      style: repeat

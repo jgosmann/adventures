@@ -102,17 +102,6 @@ fragment Titlescreen_data on Mdx {
   }
   ...PostMeta_data
 }
-# /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
-fragment PostMeta_data on Mdx {
-  frontmatter {
-    date
-  }
-  fields {
-    timeToRead {
-      minutes
-    }
-  }
-}
 # /Users/jgosmann/Documents/projects/adventures/src/components/PostPreview.tsx
 fragment PostPreview_data on File {
   childMdx {
@@ -139,6 +128,17 @@ fragment PostPreview_data on File {
     }
   }
   pagePath
+}
+# /Users/jgosmann/Documents/projects/adventures/src/components/PostMeta.tsx
+fragment PostMeta_data on Mdx {
+  frontmatter {
+    date
+  }
+  fields {
+    timeToRead {
+      minutes
+    }
+  }
 }
 # /Users/jgosmann/Documents/projects/adventures/node_modules/gatsby-transformer-sharp/src/fragments.js
 fragment GatsbyImageSharpFixed on ImageSharpFixed {
