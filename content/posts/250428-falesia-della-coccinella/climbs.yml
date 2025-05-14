@@ -1,0 +1,27 @@
+- date: 2025-04-28T19:16:25+02:00
+  ascents:
+    - name: "A nino"
+      grade:
+        system: french
+        value: "5a"
+      style: onsight
+    - name: "Galattica"
+      grade:
+        system: french
+        value: "5a+"
+      style: onsight
+    - name: "Vogue"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Phantom"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Marco"
+      grade:
+        system: french
+        value: "6b"
+      style: hangdog
