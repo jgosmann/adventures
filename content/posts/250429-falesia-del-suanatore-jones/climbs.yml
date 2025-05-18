@@ -1,0 +1,27 @@
+- date: 2025-04-29T19:16:25+02:00
+  ascents:
+    - name: "Sognatori confusionali"
+      grade:
+        system: french
+        value: "5a"
+      style: onsight
+    - name: "Birrificio finalese"
+      grade:
+        system: french
+        value: "5b"
+      style: onsight
+    - name: "Natale in marguareis"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Pulin"
+      grade:
+        system: french
+        value: "6a+"
+      style: bailed
+    - name: "Cena rossa a quarzina"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
