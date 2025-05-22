@@ -1,0 +1,37 @@
+- date: 2025-05-02T19:16:25+02:00
+  ascents:
+    - name: "Il ricordo di fil"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Silhoutte"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Stardust"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "The Time Machine"
+      grade:
+        system: french
+        value: "6c+"
+      style: redpoint
+    - name: "Tollpatsch"
+      grade:
+        system: french
+        value: "6a"
+      style: flash
+    - name: "Galactic Mantra"
+      grade:
+        system: french
+        value: "7a+"
+      style: hangdog
+    - name: "The Power of Love"
+      grade:
+        system: french
+        value: "6a+"
+      style: redpoint
