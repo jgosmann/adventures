@@ -1,0 +1,32 @@
+- date: 2025-04-30T19:16:25+02:00
+  ascents:
+    - name: "Bomber for president"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Patagonia"
+      grade:
+        system: french
+        value: "5b"
+      style: onsight
+    - name: "A Star in the Night"
+      grade:
+        system: french
+        value: "6a+"
+      style: redpoint
+    - name: "La porta della percezione"
+      grade:
+        system: french
+        value: "6b+"
+      style: redpoint
+    - name: "Mel"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Fischia il vento"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
