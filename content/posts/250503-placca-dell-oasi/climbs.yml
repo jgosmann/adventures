@@ -1,0 +1,32 @@
+- date: 2025-05-03T19:16:25+02:00
+  ascents:
+    - name: "Fate Cosi'"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Capodanno dei Geki"
+      grade:
+        system: french
+        value: "6a+"
+      style: hangdog
+    - name: "Grigio Perla"
+      grade:
+        system: french
+        value: "6b"
+      style: redpoint
+    - name: "Balance"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Nosce te ipsum"
+      grade:
+        system: french
+        value: "6b+"
+      style: hangdog
+    - name: "Scroc"
+      grade:
+        system: french
+        value: "6b"
+      style: bailed

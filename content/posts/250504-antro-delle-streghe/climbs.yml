@@ -1,0 +1,22 @@
+- date: 2025-05-04T19:16:25+02:00
+  ascents:
+    - name: "40 Anni"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Norma adventure/Skull"
+      grade:
+        system: french
+        value: "6b"
+      style: hangdog
+    - name: "Neve in val Cornei"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Chi vive vola"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash

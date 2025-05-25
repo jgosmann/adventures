@@ -1,0 +1,27 @@
+- date: 2025-05-05T19:16:25+02:00
+  ascents:
+    - name: "Bar dei Negri (first pitch)"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Il pilastrino"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Finale by Thomas"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "La cascata Pietrificata"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: La pregunta
+      grade:
+        system: french
+        value: "5a"
+      style: onsight
