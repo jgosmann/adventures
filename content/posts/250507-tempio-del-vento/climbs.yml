@@ -1,0 +1,37 @@
+- date: 2025-05-07T19:16:25+02:00
+  ascents:
+    - name: "Chinottonic"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "La Pennavaira puo aspettare"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Morbida Sarucia"
+      grade:
+        system: french
+        value: "6b"
+      style: flash
+    - name: "Lejonidass"
+      grade:
+        system: french
+        value: "7a+"
+      style: onsight
+    - name: "Tempio del fumo"
+      grade:
+        system: french
+        value: "6a"
+      style: redpoint
+    - name: "Asua mentale"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Es Rütli fur di!"
+      grade:
+        system: french
+        value: "6c"
+      style: redpoint

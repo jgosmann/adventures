@@ -1,0 +1,42 @@
+- date: 2025-05-06T19:16:25+02:00
+  ascents:
+    - name: "Labirint"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Scarsoman"
+      grade:
+        system: french
+        value: "6a+"
+      style: redpoint
+    - name: "Torcicollo"
+      grade:
+        system: french
+        value: "6b"
+      style: flash
+    - name: "La Strangata"
+      grade:
+        system: french
+        value: "6b+"
+      style: onsight
+    - name: "Meteora"
+      grade:
+        system: french
+        value: "6c"
+      style: redpoint
+    - name: "Molecola"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Karma"
+      grade:
+        system: french
+        value: "6c+"
+      style: redpoint
+    - name: "Aktion"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash

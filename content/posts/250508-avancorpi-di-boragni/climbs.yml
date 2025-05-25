@@ -1,0 +1,32 @@
+- date: 2025-05-08T19:16:25+02:00
+  ascents:
+    - name: "A naso"
+      grade:
+        system: french
+        value: "5b+"
+      style: flash
+    - name: "Passera"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Le tue radici"
+      grade:
+        system: french
+        value: "6a"
+      style: flash
+    - name: "Fuori tema / Another spit in the wall (right variation)"
+      grade:
+        system: french
+        value: "7a"
+      style: redpoint
+    - name: "Tempio del fumo"
+      grade:
+        system: french
+        value: "6a"
+      style: redpoint
+    - name: "Chi non vola è un vile"
+      grade:
+        system: french
+        value: "6b"
+      style: hangdog
