@@ -1,0 +1,32 @@
+- date: 2025-05-09T19:16:25+02:00
+  ascents:
+    - name: "Via Fritz"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Pi"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Bingo Bongo"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Via del petrolio (first pitch)"
+      grade:
+        system: french
+        value: "5c"
+      style: flash
+    - name: "Bombolo"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Fanfara Tulip"
+      grade:
+        system: french
+        value: "6b"
+      style: flash

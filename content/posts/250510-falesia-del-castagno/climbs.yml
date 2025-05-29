@@ -1,0 +1,22 @@
+- date: 2025-05-09T19:16:25+02:00
+  ascents:
+    - name: "Anakin e Pad"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Donne"
+      grade:
+        system: french
+        value: "6c"
+      style: redpoint
+    - name: "Il ricordo di fil"
+      grade:
+        system: french
+        value: "6a"
+      style: repeat
+    - name: "Galactic Mantra"
+      grade:
+        system: french
+        value: "7a+"
+      style: hangdog
