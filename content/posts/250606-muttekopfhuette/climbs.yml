@@ -1,0 +1,16 @@
+- date: 2025-06-06T19:16:25+02:00
+  ascents:
+    - name: "Eiertanz"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "6+"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "7-"
+          style: hangdog
+        - grade:
+            system: UIAA
+            value: "6"
+          style: toprope

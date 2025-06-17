@@ -1,0 +1,22 @@
+- date: 2025-05-05T19:16:25+02:00
+  ascents:
+    - name: "Esel streck dich"
+      grade:
+        system: french
+        value: "5c+"
+      style: hangdog
+    - name: "Teufelsriss"
+      grade:
+        system: french
+        value: "5c+"
+      style: onsight
+    - name: "Herrenriss"
+      grade:
+        system: french
+        value: "6a"
+      style: redpoint
+    - name: "Jägersteig"
+      grade:
+        system: french
+        value: "6a+"
+      style: hangdog

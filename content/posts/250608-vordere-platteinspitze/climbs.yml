@@ -1,0 +1,12 @@
+- date: 2025-06-08T19:16:25+02:00
+  ascents:
+    - name: "Gagel"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
+    - name: "Schweizerkas (first pitch)"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
