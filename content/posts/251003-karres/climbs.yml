@@ -1,0 +1,47 @@
+- date: 2025-10-03T19:16:25+02:00
+  ascents:
+    - name: "Glücksdrache (first pitch)"
+      grade:
+        system: french
+        value: "5a+"
+      style: onsight
+    - name: "Drosselbart (first pitch)"
+      grade:
+        system: french
+        value: "5b"
+      style: onsight
+    - name: "Rumpelstilzchen"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Eisenhans"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Goldenes Dachl"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Hans im Glück"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Centrale"
+      grade:
+        system: french
+        value: "6b"
+      style: onsight
+    - name: "Hänsel & Gretel"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Rapunzel"
+      grade:
+        system: french
+        value: "6a"
+      style: hangdog

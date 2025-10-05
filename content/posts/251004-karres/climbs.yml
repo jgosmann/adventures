@@ -1,0 +1,32 @@
+- date: 2025-10-04T19:16:25+02:00
+  ascents:
+    - name: "Tirolia"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Tabu"
+      grade:
+        system: french
+        value: "6a+"
+      style: redpoint
+    - name: "Schöne Carmen"
+      grade:
+        system: french
+        value: "6a+"
+      style: onsight
+    - name: "Morgensonne"
+      grade:
+        system: french
+        value: "5c"
+      style: onsight
+    - name: "Bubi go home"
+      pitches:
+        - grade:
+            system: french
+            value: "5a+"
+          style: onsight
+        - grade:
+            system: french
+            value: "6a"
+          style: onsight
