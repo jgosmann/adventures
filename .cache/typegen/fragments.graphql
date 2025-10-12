@@ -15,6 +15,12 @@ fragment Ascent_data on ClimbsYamlAscents {
   }
   style
 }
+# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/index.tsx
+fragment ClimbingLog_data on ClimbsYaml {
+  ascents {
+    ...Ascent_data
+  }
+}
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Content.tsx
 fragment Content_data on Mdx {
   climbs: resources(filter: {relativePath: {eq: "climbs.yml"}}) {
@@ -53,12 +59,6 @@ fragment Content_data on Mdx {
     }
     name
     relativePath
-  }
-}
-# /Users/jgosmann/Documents/projects/adventures/src/components/post/ClimbingLog/index.tsx
-fragment ClimbingLog_data on ClimbsYaml {
-  ascents {
-    ...Ascent_data
   }
 }
 # /Users/jgosmann/Documents/projects/adventures/src/components/post/Pano.tsx
