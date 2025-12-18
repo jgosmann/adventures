@@ -67,7 +67,7 @@
     "remark": "^15.0.1",
     "remark-mdx": "^3.0.0",
     "sass-loader": "^16.0.1",
-    "storybook": "^8.1.4",
+    "storybook": "^8.6.15",
     "storybook-addon-gatsby": "^0.0.5",
     "style-loader": "^4.0.0",
     "typescript": ">=5.0.6",
