@@ -1,3 +1,4 @@
+.astro/
 .bin
 .cache*
 .DS_Store
@@ -7,10 +8,11 @@
 access-tokens.json
 assets/meta.html
 build-storybook.log
+dist/
 favicons
 layouts/partials/script.*.js.html
 lib
-node_modules
+node_modules/
 public
 resources/_gen
 /cypress/downloads/downloads.html

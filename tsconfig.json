@@ -1,14 +1,5 @@
 {
-  "exclude": ["e2e-test/**", "**/*.spec.ts", "**/*.spec.tsx", "jest-setup.ts"],
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
-    "lib": ["es2021", "DOM"],
-    "target": "ES2015",
-    "skipLibCheck": true,
-    "moduleResolution": "node",
-    "strict": true,
-    "forceConsistentCasingInFileNames": true
-  }
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }
