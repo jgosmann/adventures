@@ -1,0 +1,102 @@
+---
+import "../styles.css"
+import type { ImageMetadata } from "astro"
+import { Image } from "astro:assets"
+import PostMeta from "./PostMeta.astro"
+
+interface Props {
+  pagePath: string
+  meta: Meta
+}
+
+interface Meta {
+  title: string
+  background: ImageMetadata
+  categories: readonly string[]
+  date: Date
+}
+
+const { pagePath, meta } = Astro.props
+
+export const width = 300
+export const height = 250
+---
+
+<a href={pagePath} class="post-preview-link">
+  <Image
+    src={meta.background}
+    width={width}
+    height={height}
+    layout="fixed"
+    alt=""
+  />
+  <div class="text-box">
+    <h2>
+      {meta.title}
+    </h2>
+    <ul class="semantic-list">
+      <li>
+        <!-- FIXME time to read -->
+        <PostMeta date={meta.date} timeToRead={{ minutes: 0 }} />
+      </li>
+      {
+        meta.categories && (
+          <li>
+            <ol class="comma-separated-list">
+              {meta.categories.map(c => (
+                <li>{c}</li>
+              ))}
+            </ol>
+          </li>
+        )
+      }
+    </ul>
+  </div>
+</a>
+
+<style>
+  a.post-preview-link {
+    color: #000;
+  }
+
+  a.post-preview-link:hover {
+    color: #000;
+  }
+
+  .text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 50px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  ul {
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    opacity: 0.6;
+    font-size: 0.8em;
+  }
+
+  ul > li {
+    white-space: nowrap;
+  }
+
+  ul > li:not(:last-of-type) {
+    margin-right: 16px;
+  }
+</style>

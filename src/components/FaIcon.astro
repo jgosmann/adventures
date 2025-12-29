@@ -1,0 +1,17 @@
+---
+import { icon, type IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+
+interface Props {
+  icon: IconDefinition
+  ariaLabel?: string
+}
+
+const { icon: iconDef, ariaLabel } = Astro.props
+
+const iconHtml = icon(iconDef, {
+  attributes: { "aria-label": ariaLabel, "aria-hidden": !ariaLabel },
+}).html
+---
+
+<Fragment set:html={iconHtml} />

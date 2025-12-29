@@ -1,16 +1,114 @@
 ---
+import { getCollection } from "astro:content"
+import colors from "../colors"
+import PostPreview, {
+  width as previewWidth,
+  height as previewHeight,
+} from "../components/PostPreview.astro"
 
+const posts = await getCollection("posts")
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main>
+      <ol>
+        {
+          posts.map(post => (
+            <li>
+              <PostPreview pagePath="" meta={post.data} />
+            </li>
+          ))
+        }
+      </ol>
+    </main>
+  </body>
 </html>
+
+<style
+  define:vars={{
+    previewWidth: `${previewWidth}px`,
+    previewHeight: `${previewHeight}px`,
+  }}
+>
+  ol {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ol > li {
+    transition: 0.2s;
+    display: block;
+    margin: 16px;
+    border-radius: 16px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    width: var(--previewWidth);
+    max-width: calc(100vw - 72px);
+    height: var(--previewHeight);
+    max-height: calc(100vh - 72px);
+    isolation: isolate; /* required for Safari to apply overflow: hidden to border radius */
+  }
+
+  ol > li:hover,
+  ol > li:focus-within {
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.75);
+  }
+</style>
+
+<style
+  is:global
+  define:vars={{ accentColor: colors.accent, highlightColor: colors.highlight }}
+>
+  @font-face {
+    font-family: "Lato";
+    src:
+      url("/fonts/LatoLatin-Regular.woff1") format("woff2"),
+      url("/fonts/LatoLatin-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src:
+      url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Italic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src:
+      url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+      url("/fonts/LatoLatin-Bold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+  }
+
+  a {
+    color: var(--accentColor);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--highlightColor);
+  }
+</style>

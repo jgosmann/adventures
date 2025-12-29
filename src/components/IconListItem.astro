@@ -1,0 +1,16 @@
+---
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import FaIcon from "./FaIcon.astro"
+
+interface Props {
+  icon: IconDefinition
+  ariaLabel?: string
+}
+
+const { icon, ariaLabel } = Astro.props
+---
+
+<li>
+  <FaIcon icon={icon} ariaLabel={ariaLabel} />
+  <slot />
+</li>

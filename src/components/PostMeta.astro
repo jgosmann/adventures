@@ -1,0 +1,31 @@
+---
+import "../styles.css"
+import { faCalendarDay } from "@fortawesome/free-solid-svg-icons"
+import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons"
+
+import IconListItem from "./IconListItem.astro"
+
+interface Props {
+  date: Date
+  timeToRead: {
+    minutes: number
+  }
+}
+
+const { date, timeToRead } = Astro.props
+
+const dateFormat = new Intl.DateTimeFormat("en-US", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+})
+---
+
+<ul class="semantic-list">
+  <IconListItem icon={faCalendarDay} ariaLabel="Date">
+    {dateFormat.format(date)}
+  </IconListItem>
+  <IconListItem icon={faHourglassHalf} ariaLabel="Estimated reading duration">
+    {Math.round(timeToRead.minutes)} minute read
+  </IconListItem>
+</ul>

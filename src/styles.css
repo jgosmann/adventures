@@ -1,0 +1,14 @@
+.semantic-list,
+.comma-separated-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.comma-separated-list > li {
+  display: inline;
+}
+
+.comma-separated-list > li:not(:last-of-type):after {
+  content: ", ";
+}
