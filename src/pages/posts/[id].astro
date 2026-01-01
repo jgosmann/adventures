@@ -4,8 +4,8 @@ import "../../global.css"
 import { getCollection, render } from "astro:content"
 import placeholder from "../../components/placeholder.astro"
 import Titlescreen from "../../components/post/Titlescreen.astro"
-import GpxTrack from "../../components/post/GpxTrack"
-import Nextday from "../../components/post/Nextday"
+import Gallery from "../../components/post/Gallery.astro"
+import Rimg from "../../components/post/Rimg.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
@@ -19,37 +19,48 @@ const { post } = Astro.props
 const { Content } = await render(post)
 ---
 
-<main>
-  <article>
-    <Titlescreen
-      image={post.data.background}
-      title={post.data.title}
-      meta={{
-        date: post.data.date,
-        timeToRead: { minutes: 0 }, // FIXME
-      }}
-    />
-    <div class="content">
-      <Content
-        components={{
-          ElevationProfile: placeholder,
-          Gallery: placeholder,
-          GpxTrack: placeholder,
-          Grade: placeholder,
-          Loc: placeholder,
-          Link: placeholder,
-          Nextday: placeholder,
-          Pano: placeholder,
-          Pano2x: placeholder,
-          Rimg: placeholder,
-          Travel: placeholder,
-          Video: placeholder,
-        }}
-      />
-    </div>
-    <div style="height: 25vh;"></div>
-  </article>
-</main>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <Titlescreen
+          image={post.data.background}
+          title={post.data.title}
+          meta={{
+            date: post.data.date,
+            timeToRead: { minutes: 0 }, // FIXME
+          }}
+        />
+        <div class="content">
+          <Content
+            components={{
+              ElevationProfile: placeholder,
+              Gallery,
+              GpxTrack: placeholder,
+              Grade: placeholder,
+              Loc: placeholder,
+              Link: placeholder,
+              Nextday: placeholder,
+              Pano: placeholder,
+              Pano2x: placeholder,
+              Rimg,
+              Travel: placeholder,
+              Video: placeholder,
+            }}
+          />
+        </div>
+        <div style="height: 25vh;"></div>
+      </article>
+    </main>
+  </body>
+</html>
 
 <style>
   main {

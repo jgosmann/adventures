@@ -1,0 +1,19 @@
+---
+interface Props {
+  large?: boolean
+}
+
+const { large } = Astro.props
+---
+
+<div class="gallery" class:list={{ "gallery-large": large }}>
+  <slot />
+</div>
+
+<style>
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>

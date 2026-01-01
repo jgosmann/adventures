@@ -1,0 +1,198 @@
+---
+import { faRoute, faSlash } from "@fortawesome/free-solid-svg-icons"
+import type { ImageMetadata } from "astro"
+import { getImage } from "astro:assets"
+import { Image } from "astro:assets"
+import Caption from "./Caption.astro"
+import FaIcon from "../FaIcon.astro"
+import type { SvgComponent } from "astro/types"
+
+interface Props {
+  alt?: string
+  caption?: string
+  src: string
+  overlay?: string
+}
+
+const { alt, caption, src, overlay } = Astro.props
+
+const imagePath = `../../../content/posts/${Astro.params.id}/images/${src}`
+const imageLoader = import.meta.glob<{ default: ImageMetadata }>(
+  "../../../content/posts/*/images/*"
+)[imagePath]
+if (!imageLoader) {
+  throw new Error(
+    `Image path '${Astro.params.id}/images/${src}' does not exist.`
+  )
+}
+const image = imageLoader()
+const linkedImage = await getImage({
+  src: image,
+  width: 1280,
+})
+
+const overlayPath = overlay
+  ? `../../../content/posts/${Astro.params.id}/overlay/${overlay}`
+  : undefined
+const overlayLoader = overlayPath
+  ? import.meta.glob<{ default: SvgComponent & ImageMetadata }>(
+      "../../../content/posts/*/overlay/*.svg"
+    )[overlayPath]
+  : undefined
+if (overlayPath && !overlayLoader) {
+  throw new Error(
+    `Overlay path '${Astro.params.id}/overlay/${overlay}' does not exist.`
+  )
+}
+const OverlaySvg = (await overlayLoader?.())?.default
+
+const slotCaption = (await Astro.slots.render("default"))?.trim()
+---
+
+<div class="rimg-container">
+  <div>
+    <rimg-overlay-controller>
+      <a href={linkedImage.src} title="View full size">
+        {
+          image && (
+            <div class="img-sizing-container">
+              <Image
+                src={image}
+                alt={alt || caption || ""}
+                widths={[320, 640, 1280]}
+                layout="constrained"
+                fit="contain"
+                position="top"
+              />
+            </div>
+          )
+        }
+      </a>
+      {OverlaySvg && <OverlaySvg class="overlay" />}
+      {
+        (caption || slotCaption?.length > 0) && (
+          <Caption>
+            {caption || slotCaption}
+            {overlay && (
+              <label class="overlay-toggle-container">
+                <FaIcon icon={faRoute} />
+                <div class="overlay-toggle-icon-slash">
+                  <FaIcon icon={faSlash} />{" "}
+                </div>
+                <input type="checkbox" checked />
+                <span class="overlay-toggle-label" />
+              </label>
+            )}
+          </Caption>
+        )
+      }
+    </rimg-overlay-controller>
+  </div>
+</div>
+
+<script>
+  class RimgOverlayController extends HTMLElement {
+    connectedCallback() {
+      const toggleInput = this.querySelector(
+        '.overlay-toggle-container input[type="checkbox"]'
+      )
+      const overlayElement = this.querySelector(".overlay")
+      const overlayToggleLabel = this.querySelector(".overlay-toggle-label")
+      if (
+        !(toggleInput instanceof HTMLInputElement) ||
+        !(overlayElement instanceof SVGElement) ||
+        !overlayToggleLabel
+      ) {
+        throw new Error("Failed to query elements for RimgOverlayController.")
+      }
+
+      const update = () => {
+        const overlayActive = toggleInput.checked
+        overlayElement.style.display = overlayActive ? "block" : "none"
+        overlayToggleLabel.textContent = overlayActive
+          ? "Show route is on."
+          : "Show route is off."
+      }
+
+      toggleInput.addEventListener("change", update)
+      update()
+    }
+  }
+
+  customElements.define("rimg-overlay-controller", RimgOverlayController)
+</script>
+
+<style
+  define:vars={{
+    "orig-height": linkedImage.attributes.height,
+    "orig-width": linkedImage.attributes.width,
+  }}
+>
+  .rimg-container {
+    margin: 32px;
+    text-align: center;
+  }
+
+  :global(.gallery) .rimg-container {
+    margin: 16px;
+  }
+
+  .rimg-container > div {
+    display: inline-block;
+    position: relative;
+  }
+
+  .img-sizing-container {
+    --target-height: 80vh;
+    overflow: hidden;
+    max-width: min(calc(100vw - 64px), 1280px);
+    width: calc(var(--target-height) * var(--orig-width) / var(--orig-height));
+    max-height: var(--target-height);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+
+  :global(.gallery:not(.gallery-large)) .img-sizing-container {
+    --target-height: 45vh;
+  }
+
+  .img-sizing-container img {
+    object-fit: var(--fit);
+    object-position: var(--pos);
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay-toggle-container {
+    position: relative;
+    display: block;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+
+  .overlay-toggle-container:hover,
+  .overlay-toggle-container:has(:focus-visible) {
+    color: var(--color-highlight);
+  }
+
+  .overlay-toggle-container:active {
+    color: #fff;
+  }
+
+  .overlay-toggle-container input[type="checkbox"] {
+    appearance: none;
+  }
+
+  .overlay-toggle-icon-slash {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>

@@ -1,16 +1,26 @@
 ---
-import { icon, type IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import {
+  icon,
+  type Attributes,
+  type IconDefinition,
+} from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 interface Props {
   icon: IconDefinition
   ariaLabel?: string
+  class?: string
 }
 
-const { icon: iconDef, ariaLabel } = Astro.props
+const { icon: iconDef, ariaLabel, class: classes } = Astro.props
 
+const attributes: Attributes = { "aria-hidden": ariaLabel ? "false" : "true" }
+if (ariaLabel) {
+  Object.assign(attributes, { "aria-label": ariaLabel })
+}
 const iconHtml = icon(iconDef, {
-  attributes: { "aria-label": ariaLabel, "aria-hidden": !ariaLabel },
+  classes,
+  attributes,
 }).html
 ---
 
