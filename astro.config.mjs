@@ -10,6 +10,7 @@ export default defineConfig({
     breakpoints: [750, 1080, 1280, 1668, 2048],
   },
   vite: {
+    assetsInclude: ["**/*.m4v"],
     server: {
       fs: {
         deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/!(annex)"],

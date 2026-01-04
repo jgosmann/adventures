@@ -6,6 +6,7 @@ import placeholder from "../../components/placeholder.astro"
 import Titlescreen from "../../components/post/Titlescreen.astro"
 import Gallery from "../../components/post/Gallery.astro"
 import Rimg from "../../components/post/Rimg.astro"
+import Video from "../../components/post/Video.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
@@ -52,7 +53,7 @@ const { Content } = await render(post)
               Pano2x: placeholder,
               Rimg,
               Travel: placeholder,
-              Video: placeholder,
+              Video,
             }}
           />
         </div>
