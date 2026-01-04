@@ -1,0 +1,19 @@
+---
+import ContentSpinner from "./ContentSpinner.astro"
+import GpxTrack from "./GpxTrack"
+import type { GpxTrackProps } from "./GpxTrack"
+
+interface Props extends Omit<GpxTrackProps, "url"> {
+  src: string
+}
+const { src, ...props } = Astro.props
+const gpxPath = `../../../content/posts/${Astro.params.id}/${src}`
+const gpxLoader = import.meta.glob<{ default: string }>(
+  "../../../content/posts/**/*.gpx"
+)[gpxPath]
+const url = (await gpxLoader()).default
+---
+
+<GpxTrack client:only="react" {...props} url={url}>
+  <Fragment slot="fallback"><ContentSpinner /></Fragment>
+</GpxTrack>

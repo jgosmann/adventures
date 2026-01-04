@@ -1,5 +1,3 @@
-import React from "react"
-
 import Map from "../leaflet/Map"
 import Marker from "../leaflet/Marker"
 
@@ -21,7 +19,7 @@ const Loc = ({ latlong, zoom }: LocProps) => {
         padding: [50, 150],
       }
   return (
-    <Map css={{ height: 600, margin: "32px 0" }} {...viewport}>
+    <Map style={{ height: 600, margin: "32px 0" }} {...viewport}>
       <Marker position={latlong} />
     </Map>
   )

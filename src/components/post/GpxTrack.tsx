@@ -1,5 +1,4 @@
-import { LatLngTuple } from "leaflet"
-import React from "react"
+import type { LatLngTuple } from "leaflet"
 import { Polyline, useMap } from "react-leaflet"
 
 import colors from "../../colors"
@@ -33,7 +32,7 @@ const GpxTrack = ({ url }: GpxTrackProps) => {
             )
           : [[[0, 0]]]
         return (
-          <Map css={{ height: 600, margin: "32px 0" }}>
+          <Map style={{ height: 600, margin: "32px 0" }}>
             <SetBounds bounds={segments.flat()} />
             {segments.map((segment, i) => (
               <Polyline color={colors.highlight} key={i} positions={segment} />

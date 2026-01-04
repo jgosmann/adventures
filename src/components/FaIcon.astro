@@ -3,6 +3,7 @@ import {
   icon,
   type Attributes,
   type IconDefinition,
+  type Styles,
 } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
@@ -10,9 +11,10 @@ interface Props {
   icon: IconDefinition
   ariaLabel?: string
   class?: string
+  styles?: Styles
 }
 
-const { icon: iconDef, ariaLabel, class: classes } = Astro.props
+const { icon: iconDef, ariaLabel, class: classes, styles } = Astro.props
 
 const attributes: Attributes = { "aria-hidden": ariaLabel ? "false" : "true" }
 if (ariaLabel) {
@@ -21,6 +23,7 @@ if (ariaLabel) {
 const iconHtml = icon(iconDef, {
   classes,
   attributes,
+  styles,
 }).html
 ---
 

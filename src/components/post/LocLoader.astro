@@ -1,0 +1,9 @@
+---
+import ContentSpinner from "./ContentSpinner.astro"
+import Loc from "./Loc"
+import type { LocProps as Props } from "./Loc"
+---
+
+<Loc client:only="react" {...Astro.props}>
+  <Fragment slot="fallback"><ContentSpinner /></Fragment>
+</Loc>

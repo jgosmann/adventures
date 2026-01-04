@@ -1,8 +1,6 @@
 import leaflet from "leaflet"
-import React, { useEffect, useState } from "react"
-import { MapContainer, TileLayer, MapContainerProps } from "react-leaflet"
-
-import Spinner from "../Spinner"
+import React from "react"
+import { MapContainer, TileLayer, type MapContainerProps } from "react-leaflet"
 
 import "leaflet/dist/leaflet.css"
 
@@ -11,19 +9,6 @@ export interface MapProps extends MapContainerProps {
 }
 
 const Map = ({ children, ...props }: MapProps) => {
-  // Workaround for react-leaflet, hydrations does not work correctly when
-  // rendering immediatly.
-  const [render, setRender] = useState(false)
-  useEffect(() => setRender(true), [])
-
-  if (!render || typeof window === "undefined") {
-    return (
-      <div css={{ textAlign: "center", fontSize: 48, margin: "32px 0" }}>
-        <Spinner />
-      </div>
-    )
-  }
-
   const attribution =
     "Map data &copy; " +
     '<a href="https://www.openstreetmap.org/">OpenStreetMap</a> ' +
@@ -39,7 +24,7 @@ const Map = ({ children, ...props }: MapProps) => {
     `access_token=${accessToken}`
   return (
     <MapContainer
-      css={{ height: "100%", zIndex: 0 }}
+      style={{ height: "100%", zIndex: 0 }}
       dragging={!leaflet.Browser.mobile}
       tapHold={!leaflet.Browser.mobile}
       scrollWheelZoom={false}

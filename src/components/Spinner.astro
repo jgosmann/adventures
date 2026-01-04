@@ -1,0 +1,18 @@
+---
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons"
+import FaIcon from "./FaIcon.astro"
+---
+
+<FaIcon
+  icon={faCircleNotch}
+  ariaLabel="Loading"
+  styles={{ animation: "spin 1s linear infinite" }}
+/>
+
+<style>
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

@@ -7,6 +7,10 @@ import Titlescreen from "../../components/post/Titlescreen.astro"
 import Gallery from "../../components/post/Gallery.astro"
 import Rimg from "../../components/post/Rimg.astro"
 import Video from "../../components/post/Video.astro"
+import Loc from "../../components/post/Loc"
+import LocLoader from "../../components/post/LocLoader.astro"
+import TravelLoader from "../../components/post/TravelLoader.astro"
+import GpxTrackLoader from "../../components/post/GpxTrackLoader.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
@@ -44,15 +48,15 @@ const { Content } = await render(post)
             components={{
               ElevationProfile: placeholder,
               Gallery,
-              GpxTrack: placeholder,
+              GpxTrack: GpxTrackLoader,
               Grade: placeholder,
-              Loc: placeholder,
+              Loc: LocLoader,
               Link: placeholder,
               Nextday: placeholder,
               Pano: placeholder,
               Pano2x: placeholder,
               Rimg,
-              Travel: placeholder,
+              Travel: TravelLoader,
               Video,
             }}
           />

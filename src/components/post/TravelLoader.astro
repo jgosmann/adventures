@@ -1,0 +1,9 @@
+---
+import ContentSpinner from "./ContentSpinner.astro"
+import Travel from "./Travel"
+import type { TravelProps as Props } from "./Travel"
+---
+
+<Travel client:only="react" {...Astro.props}>
+  <Fragment slot="fallback"><ContentSpinner /></Fragment>
+</Travel>

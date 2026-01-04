@@ -1,5 +1,3 @@
-import React from "react"
-
 import colors from "../../colors"
 import Geodesic from "../leaflet/Geodesic"
 import Map from "../leaflet/Map"
@@ -33,7 +31,7 @@ const Travel = ({ route, markIntermediate, zoom }: TravelProps) => {
         padding: [50, 50],
       }
   return (
-    <Map css={{ height: 600, margin: "32px 0" }} {...viewport}>
+    <Map style={{ height: 600, margin: "32px 0" }} {...viewport}>
       <Geodesic latlngs={route} color={colors.red} />
       {markIntermediate ? (
         route.map((stop, i) => <Marker key={i} position={stop} />)

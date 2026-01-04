@@ -1,40 +1,21 @@
-import { graphql, useStaticQuery } from "gatsby"
 import leaflet from "leaflet"
-import React from "react"
-import { Marker as LeafletMarker, MarkerProps } from "react-leaflet"
+import type { MarkerProps } from "react-leaflet"
+import { Marker as LeafletMarker } from "react-leaflet"
+
+import icon from "leaflet/dist/images/marker-icon.png"
+import iconRetina from "leaflet/dist/images/marker-icon-2x.png"
+import iconShadow from "leaflet/dist/images/marker-shadow.png"
 
 export type { MarkerProps }
 
 const Marker = (props: MarkerProps) => {
-  const iconImages = useStaticQuery<Queries.MarkerIconImagesQuery>(graphql`
-    query MarkerIconImages {
-      icon: file(
-        sourceInstanceName: { eq: "leaflet" }
-        relativePath: { eq: "images/marker-icon.png" }
-      ) {
-        publicURL
-      }
-      iconRetina: file(
-        sourceInstanceName: { eq: "leaflet" }
-        relativePath: { eq: "images/marker-icon-2x.png" }
-      ) {
-        publicURL
-      }
-      shadow: file(
-        sourceInstanceName: { eq: "leaflet" }
-        relativePath: { eq: "images/marker-shadow.png" }
-      ) {
-        publicURL
-      }
-    }
-  `)
   const DefaultIcon = new leaflet.Icon({
     iconAnchor: [12, 41],
-    iconRetinaUrl: iconImages.iconRetina?.publicURL ?? undefined,
-    iconSize: [25, 41],
-    iconUrl: iconImages.icon?.publicURL ?? undefined,
-    shadowSize: [41, 41],
-    shadowUrl: iconImages.shadow?.publicURL ?? undefined,
+    iconRetinaUrl: iconRetina.src,
+    iconSize: [icon.width, icon.height],
+    iconUrl: icon.src,
+    shadowSize: [iconShadow.width, iconShadow.height],
+    shadowUrl: iconShadow.src,
     tooltipAnchor: [16, -28],
   })
 

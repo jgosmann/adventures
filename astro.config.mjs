@@ -3,14 +3,16 @@ import { defineConfig } from "astro/config"
 
 import mdx from "@astrojs/mdx"
 
+import react from "@astrojs/react"
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx()],
+  integrations: [mdx(), react()],
   image: {
     breakpoints: [750, 1080, 1280, 1668, 2048],
   },
   vite: {
-    assetsInclude: ["**/*.m4v"],
+    assetsInclude: ["**/*.gpx", "**/*.m4v"],
     server: {
       fs: {
         deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/!(annex)"],

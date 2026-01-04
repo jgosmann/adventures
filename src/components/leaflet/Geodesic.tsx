@@ -1,8 +1,8 @@
 import {
   createPathComponent,
-  LeafletContextInterface,
+  type LeafletContextInterface,
 } from "@react-leaflet/core"
-import { LatLngExpression, PolylineOptions } from "leaflet"
+import type { LatLngExpression, PolylineOptions } from "leaflet"
 import { GeodesicLine as LGeodesicLine } from "leaflet.geodesic"
 
 export interface GeodesicProps extends PolylineOptions {
