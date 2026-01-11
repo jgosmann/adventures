@@ -6,7 +6,7 @@
 @font-face {
   font-family: "Lato";
   src:
-    url("/fonts/LatoLatin-Regular.woff1") format("woff2"),
+    url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
     url("/fonts/LatoLatin-Regular.woff") format("woff");
   font-display: swap;
 }
