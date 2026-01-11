@@ -1,5 +1,6 @@
-import React from "react"
-import { Grade, isBoulderingGrade, isSportGrade, System } from "./types"
+import React, { useId } from "react"
+import { isBoulderingGrade, isSportGrade } from "./types"
+import type { Grade, System } from "./types"
 
 export interface SelectorProps {
   convertedGrades: Grade[]
@@ -7,7 +8,6 @@ export interface SelectorProps {
   xTranslation: number
   selectedSystem: System | null
   onSystemChange?: (system: System | null) => void
-  id: number
 }
 
 const Selector = React.forwardRef<HTMLFormElement, SelectorProps>(
@@ -18,36 +18,19 @@ const Selector = React.forwardRef<HTMLFormElement, SelectorProps>(
       xTranslation,
       selectedSystem,
       onSystemChange,
-      id,
     } = componentProps
+    const id = useId()
     return (
       <form
         data-testid="grade-selector"
         ref={ref}
-        css={{
-          position: "absolute",
-          top: -1,
-          right: -1 - xTranslation,
-          padding: 4,
-          opacity: expanded ? 1 : 0,
-          transform: `scale(${expanded ? 1 : 0})`,
-          transformOrigin: "top right",
-          pointerEvents: expanded ? undefined : "none",
-          cursor: "default",
-          background: "#fff",
-          border: "1px solid #888",
-          boxShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",
-          borderRadius: 4,
-          transition: "0.2s ease-out",
-          whiteSpace: "nowrap",
-          zIndex: 1,
-          color: "#222",
-          fontSize: "0.8em",
-          lineHeight: 1.2,
-        }}
+        className={(expanded ? "expanded " : "") + "grade-selector"}
+        style={
+          { "--x-translation": `${xTranslation}px` } as React.CSSProperties
+        }
         onClick={ev => ev.stopPropagation()}
       >
-        <div css={{ marginBottom: 8, padding: 2 }}>
+        <div>
           <input
             tabIndex={expanded ? 0 : -1}
             id={`gradeSelect-${id}-null`}
@@ -62,7 +45,7 @@ const Selector = React.forwardRef<HTMLFormElement, SelectorProps>(
         <div>
           {" "}
           Show grades as
-          <table css={{ td: { padding: "0 4px 0" } }}>
+          <table>
             <tbody>
               {convertedGrades.map(
                 grade =>
@@ -95,7 +78,7 @@ const Selector = React.forwardRef<HTMLFormElement, SelectorProps>(
                           {grade.system.replace("_", " ")}
                         </label>
                       </td>
-                      <td css={{ fontWeight: "bold" }}>
+                      <td className="grade-value-cell">
                         <label htmlFor={`gradeSelect-${id}-${grade.system}`}>
                           {grade.value}
                         </label>

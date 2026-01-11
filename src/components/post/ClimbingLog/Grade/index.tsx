@@ -1,30 +1,20 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React, { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef, useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
-import colors from "../../../../colors"
 import {
   boulderingGrades,
   isBoulderingGrade,
   isSportGrade,
   sportGrades,
-  System,
-  Grade as GradeType,
   gradeToString,
 } from "./types"
+import type { System, Grade as GradeType } from "./types"
 import Selector from "./Selector"
 import { createGradeConverter } from "./gradeConverter"
-import GradeContext from "./GradeContext"
 import GradeView from "./GradeView"
-
-interface ConversionTable {
-  allClimbingGradesCsv: {
-    nodes: Array<{
-      [k in System]: string
-    }>
-  }
-}
+import conversionTable from "./climbing-grades.csv"
+import { useBoulderingGradeSystem, useSportGradeSystem } from "./GradeContext"
 
 let nextId = 0
 
@@ -38,7 +28,7 @@ interface GradeState {
   xTranslation: number
   selectedSystem: System | null
   hasPendingUpdate: boolean
-  id: number
+  firstRender: boolean
 }
 
 const Grade = ({ system, value }: GradeProps) => {
@@ -47,27 +37,34 @@ const Grade = ({ system, value }: GradeProps) => {
     xTranslation: 0,
     selectedSystem: null,
     hasPendingUpdate: false,
-    id: nextId++,
+    firstRender: true,
   })
-  const gradeContext = useContext(GradeContext)
-  const updateDefaultSystem = (state: GradeState) => {
-    const update =
-      state.selectedSystem && isBoulderingGrade(state.selectedSystem)
-        ? { defaultBoulderingGradeSystem: state.selectedSystem }
-        : isSportGrade(state.selectedSystem)
-        ? { defaultSportGradeSystem: state.selectedSystem }
-        : {}
-    gradeContext.setDefaultGradeSystems(update)
+  const [boulderingGradeSystem, setBoulderingGradeSystem] =
+    useBoulderingGradeSystem()
+  const [sportGradeSystem, setSportGradeSystem] = useSportGradeSystem()
+  const updateDefaultSystem = ({ selectedSystem }: GradeState) => {
+    if (
+      isBoulderingGrade(system) &&
+      (selectedSystem == null || isBoulderingGrade(selectedSystem))
+    ) {
+      setBoulderingGradeSystem(selectedSystem)
+    } else if (
+      isSportGrade(system) &&
+      (selectedSystem == null || isSportGrade(selectedSystem))
+    ) {
+      setSportGradeSystem(selectedSystem)
+    }
   }
   useEffect(() => {
     if (state.hasPendingUpdate) {
-      setState({ ...state, hasPendingUpdate: false })
+      setState(state => ({ ...state, hasPendingUpdate: false }))
       updateDefaultSystem(state)
     }
   }, [state])
   const ref = useRef<HTMLButtonElement>(null)
   const dropDownRef = useRef<HTMLFormElement>(null)
   useEffect(() => {
+    setState(state => ({ ...state, firstRender: false }))
     const collapse = () =>
       setState(current => ({
         ...current,
@@ -95,33 +92,20 @@ const Grade = ({ system, value }: GradeProps) => {
     }
   }, [])
   useEffect(() => {
-    const selectedSystem = gradeContext.getDefaultSystem(system)
+    const selectedSystem = isBoulderingGrade(system)
+      ? boulderingGradeSystem
+      : sportGradeSystem
     if (state.selectedSystem !== selectedSystem) {
-      setState({
+      setState(state => ({
         ...state,
-        selectedSystem: gradeContext.getDefaultSystem(system),
-      })
+        selectedSystem,
+      }))
     }
-  }, [gradeContext])
+  }, [boulderingGradeSystem, sportGradeSystem])
 
   if (!system || !value) {
     return null
   }
-
-  const conversionTable = useStaticQuery<ConversionTable>(graphql`
-    query ConversionTable {
-      allClimbingGradesCsv {
-        nodes {
-          Fb_bloc
-          Fb_trav
-          UIAA
-          V
-          YDS
-          french
-        }
-      }
-    }
-  `).allClimbingGradesCsv.nodes
 
   const convertGrade = createGradeConverter(conversionTable)
 
@@ -135,7 +119,11 @@ const Grade = ({ system, value }: GradeProps) => {
   const displayGrade = convertGrade(
     value,
     system,
-    gradeContext.getDefaultSystem(system)
+    state.firstRender
+      ? null
+      : isBoulderingGrade(system)
+      ? boulderingGradeSystem
+      : sportGradeSystem
   ) || {
     value,
     system,
@@ -147,29 +135,6 @@ const Grade = ({ system, value }: GradeProps) => {
       ref={ref}
       title={convertedGrades.map(it => it && gradeToString(it)).join("\n")}
       className="climbingGrade"
-      css={{
-        position: "relative",
-        cursor: "pointer",
-        padding: "0 0 1px",
-        color: "inherit",
-        lineHeight: 0,
-        textAlign: "left",
-        display: "inline-block",
-        background: "none",
-        transition: "0.2s ease-out",
-        border: "none",
-        borderRadius: 4,
-        whiteSpace: "nowrap",
-        outline: "none",
-        "&:hover": {
-          backgroundColor: colors.accent,
-          color: "#fff",
-        },
-        "&:focus-within": {
-          backgroundColor: colors.accent,
-          color: "#fff",
-        },
-      }}
       onClick={ev => {
         ev.preventDefault()
         ev.stopPropagation()
@@ -221,12 +186,9 @@ const Grade = ({ system, value }: GradeProps) => {
         onSystemChange={selectedSystem =>
           setState(current => ({ ...current, selectedSystem }))
         }
-        id={state.id}
       />
     </button>
   )
 }
 
 export default Grade
-
-export { LocalStorageGradeContext } from "./GradeContext"

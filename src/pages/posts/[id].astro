@@ -5,9 +5,9 @@ import { getCollection, render } from "astro:content"
 import placeholder from "../../components/placeholder.astro"
 import Titlescreen from "../../components/post/Titlescreen.astro"
 import Gallery from "../../components/post/Gallery.astro"
+import GradeLoader from "../../components/post/GradeLoader.astro"
 import Rimg from "../../components/post/Rimg.astro"
 import Video from "../../components/post/Video.astro"
-import Loc from "../../components/post/Loc"
 import LocLoader from "../../components/post/LocLoader.astro"
 import TravelLoader from "../../components/post/TravelLoader.astro"
 import GpxTrackLoader from "../../components/post/GpxTrackLoader.astro"
@@ -49,7 +49,7 @@ const { Content } = await render(post)
               ElevationProfile: placeholder,
               Gallery,
               GpxTrack: GpxTrackLoader,
-              Grade: placeholder,
+              Grade: GradeLoader,
               Loc: LocLoader,
               Link: placeholder,
               Nextday: placeholder,

@@ -1,4 +1,4 @@
-import { System } from "./types"
+import type { System } from "./types"
 
 export type ConversionTable = Array<{
   [k in System]: string

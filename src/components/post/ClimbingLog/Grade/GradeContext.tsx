@@ -1,89 +1,47 @@
-import React, { useEffect, useState } from "react"
-import {
-  boulderingGrades,
-  BoulderingGradeSystem,
-  isBoulderingGrade,
-  sportGrades,
-  SportGradeSystem,
-  System,
-} from "./types"
+import { boulderingGrades, sportGrades } from "./types"
+import type { BoulderingGradeSystem, SportGradeSystem } from "./types"
+import { atom, useAtom } from "jotai"
 
-export interface DefaultGradeSystems {
-  defaultBoulderingGradeSystem: BoulderingGradeSystem | null
-  defaultSportGradeSystem: SportGradeSystem | null
-}
+const initialBoulderingGradeSystem =
+  typeof window !== "undefined" &&
+  window.localStorage.getItem("defaultBoulderingGradeSystem")
+const initialSportGradeSystem =
+  typeof window !== "undefined" &&
+  window.localStorage.getItem("defaultSportGradeSystem")
 
-export interface GradeContextValue extends DefaultGradeSystems {
-  getDefaultSystem: (system: string | null) => System | null
-  setDefaultGradeSystems: (systems: Partial<DefaultGradeSystems>) => void
-}
+const defaultBoulderingGradeSystem = atom<BoulderingGradeSystem | null>(
+  boulderingGrades.find(it => it === initialBoulderingGradeSystem) ?? null
+)
+const defaultSportGradeSystem = atom<SportGradeSystem | null>(
+  sportGrades.find(it => it === initialSportGradeSystem) ?? null
+)
 
-const GradeContext = React.createContext<GradeContextValue>({
-  setDefaultGradeSystems: () => undefined,
-  getDefaultSystem: () => null,
-  defaultBoulderingGradeSystem: null,
-  defaultSportGradeSystem: null,
-})
+export const useBoulderingGradeSystem = () => {
+  const [state, setState] = useAtom(defaultBoulderingGradeSystem)
 
-export default GradeContext
-
-export interface LocalStorageGradeContextProps {
-  children?: React.ReactNode
-}
-
-export const LocalStorageGradeContext = ({
-  children,
-}: LocalStorageGradeContextProps) => {
-  const [state, setState] = useState<DefaultGradeSystems>({
-    defaultBoulderingGradeSystem: null,
-    defaultSportGradeSystem: null,
-  })
-  useEffect(() => {
-    setState(state => ({
-      ...state,
-      defaultBoulderingGradeSystem:
-        (window &&
-          boulderingGrades.find(
-            it =>
-              it === window.localStorage.getItem("defaultBoulderingGradeSystem")
-          )) ||
-        null,
-      defaultSportGradeSystem:
-        (window &&
-          sportGrades.find(
-            it => it === window.localStorage.getItem("defaultSportGradeSystem")
-          )) ||
-        null,
-    }))
-  }, [])
-
-  const setDefaultGradeSystems = (systems: Partial<DefaultGradeSystems>) => {
-    setState({
-      defaultBoulderingGradeSystem:
-        systems.defaultBoulderingGradeSystem ?? null,
-      defaultSportGradeSystem: systems.defaultSportGradeSystem ?? null,
-    })
-    Object.entries(systems).forEach(([key, value]) => {
-      try {
-        if (window && value) {
-          window.localStorage.setItem(key, value)
-        }
-      } catch {
-        console.warn(`Failed to store ${key} in local storage.`)
-      }
-    })
+  const setGradeSystem = (system: BoulderingGradeSystem | null) => {
+    setState(system)
+    if (system === null) {
+      window.localStorage.removeItem("defaultBoulderingGradeSystem")
+    } else {
+      window.localStorage.setItem("defaultBoulderingGradeSystem", system)
+    }
   }
 
-  const getDefaultSystem = (system: string | null) =>
-    isBoulderingGrade(system)
-      ? state.defaultBoulderingGradeSystem
-      : state.defaultSportGradeSystem
+  return [state, setGradeSystem] as const
+}
 
-  return (
-    <GradeContext.Provider
-      value={{ ...state, getDefaultSystem, setDefaultGradeSystems }}
-    >
-      {children}
-    </GradeContext.Provider>
-  )
+export const useSportGradeSystem = () => {
+  const [state, setState] = useAtom(defaultSportGradeSystem)
+
+  const setGradeSystem = (system: SportGradeSystem | null) => {
+    setState(system)
+    if (system === null) {
+      window.localStorage.removeItem("defaultSportGradeSystem")
+    } else {
+      window.localStorage.setItem("defaultSportGradeSystem", system)
+    }
+  }
+
+  return [state, setGradeSystem] as const
 }
