@@ -103,7 +103,7 @@ const slotCaption = (await Astro.slots.render("default"))?.trim()
         !(overlayElement instanceof SVGElement) ||
         !overlayToggleLabel
       ) {
-        throw new Error("Failed to query elements for RimgOverlayController.")
+        return
       }
 
       const update = () => {
