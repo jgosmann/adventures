@@ -4,6 +4,7 @@ import { defineConfig } from "astro/config"
 import mdx from "@astrojs/mdx"
 import react from "@astrojs/react"
 import dsv from "@rollup/plugin-dsv"
+import yaml from "@rollup/plugin-yaml"
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +14,7 @@ export default defineConfig({
   },
   vite: {
     assetsInclude: ["**/*.gpx", "**/*.m4v"],
-    plugins: [dsv()],
+    plugins: [dsv(), yaml()],
     server: {
       fs: {
         deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/!(annex)"],

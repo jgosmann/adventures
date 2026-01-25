@@ -1,4 +1,4 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useRef, useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
@@ -16,8 +16,6 @@ import GradeView from "./GradeView"
 import conversionTable from "./climbing-grades.csv"
 import { useBoulderingGradeSystem, useSportGradeSystem } from "./GradeContext"
 
-let nextId = 0
-
 export interface GradeProps {
   system: System | null
   value: string | null
@@ -25,7 +23,6 @@ export interface GradeProps {
 
 interface GradeState {
   expanded: boolean
-  xTranslation: number
   selectedSystem: System | null
   hasPendingUpdate: boolean
   firstRender: boolean
@@ -34,7 +31,6 @@ interface GradeState {
 const Grade = ({ system, value }: GradeProps) => {
   const [state, setState] = useState<GradeState>({
     expanded: false,
-    xTranslation: 0,
     selectedSystem: null,
     hasPendingUpdate: false,
     firstRender: true,
@@ -62,7 +58,6 @@ const Grade = ({ system, value }: GradeProps) => {
     }
   }, [state])
   const ref = useRef<HTMLButtonElement>(null)
-  const dropDownRef = useRef<HTMLFormElement>(null)
   useEffect(() => {
     setState(state => ({ ...state, firstRender: false }))
     const collapse = () =>
@@ -139,22 +134,10 @@ const Grade = ({ system, value }: GradeProps) => {
         ev.preventDefault()
         ev.stopPropagation()
         setState(current => {
-          const translateXBy = dropDownRef.current
-            ? Math.abs(
-                Math.min(
-                  0,
-                  dropDownRef.current.getBoundingClientRect().right -
-                    current.xTranslation -
-                    dropDownRef.current.clientWidth -
-                    2
-                )
-              )
-            : 0
           return {
             ...current,
             expanded: !current.expanded,
             hasPendingUpdate: current.expanded,
-            xTranslation: translateXBy,
           }
         })
       }}

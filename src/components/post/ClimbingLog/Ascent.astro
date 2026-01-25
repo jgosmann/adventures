@@ -1,0 +1,64 @@
+---
+import Grade, { type GradeProps } from "./Grade"
+import Style, { type AscenionStyle } from "./Style.astro"
+
+export interface Pitch {
+  name: string | null
+  style: AscenionStyle | null
+  grade: GradeProps | null
+}
+
+export interface Route extends Pitch {
+  pitches?: ReadonlyArray<Pitch | null>
+}
+
+export interface Props {
+  data: Route
+  pitch?: number
+}
+
+const { data, pitch } = Astro.props
+---
+
+<span
+  style={data.style === "skipped" || data.style === "not attempted"
+    ? { color: "#aaa" }
+    : {}}
+>
+  {
+    data.style && (
+      <>
+        <Style ascensionStyle={data.style} />{" "}
+      </>
+    )
+  }
+  {pitch && `Pitch ${pitch}`}
+  {pitch && data.name && ": "}
+  {data.name}
+  {
+    data.grade && (
+      <>
+        {" "}
+        (<Grade client:load {...data.grade} />)
+      </>
+    )
+  }
+  {
+    data.pitches && (
+      <>
+        {" "}
+        ({data.pitches.length} pitches)
+        <ol>
+          {data.pitches.map(
+            (pitch, i) =>
+              pitch && (
+                <li>
+                  <Astro.self data={pitch} pitch={i + 1} />
+                </li>
+              )
+          )}
+        </ol>
+      </>
+    )
+  }
+</span>

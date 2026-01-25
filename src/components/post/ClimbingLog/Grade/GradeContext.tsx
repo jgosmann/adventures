@@ -32,6 +32,10 @@ export const useBoulderingGradeSystem = () => {
 }
 
 export const useSportGradeSystem = () => {
+  if (typeof window === "undefined") {
+    return [null, () => {}] as const
+  }
+
   const [state, setState] = useAtom(defaultSportGradeSystem)
 
   const setGradeSystem = (system: SportGradeSystem | null) => {

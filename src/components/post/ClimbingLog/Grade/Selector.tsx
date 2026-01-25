@@ -24,7 +24,7 @@ const Selector = React.forwardRef<HTMLFormElement, SelectorProps>(
       <form
         data-testid="grade-selector"
         ref={ref}
-        className={(expanded ? "expanded " : "") + "grade-selector"}
+        className={(expanded ? "expanded " : "") + "grade-selector popover"}
         style={
           { "--x-translation": `${xTranslation}px` } as React.CSSProperties
         }

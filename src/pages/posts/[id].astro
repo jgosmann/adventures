@@ -1,7 +1,7 @@
 ---
 import "normalize.css/normalize.css"
 import "../../global.css"
-import { getCollection, render } from "astro:content"
+import { getCollection, render, z } from "astro:content"
 import placeholder from "../../components/placeholder.astro"
 import Titlescreen from "../../components/post/Titlescreen.astro"
 import Gallery from "../../components/post/Gallery.astro"
@@ -11,6 +11,15 @@ import Video from "../../components/post/Video.astro"
 import LocLoader from "../../components/post/LocLoader.astro"
 import TravelLoader from "../../components/post/TravelLoader.astro"
 import GpxTrackLoader from "../../components/post/GpxTrackLoader.astro"
+import ClimbingLog from "../../components/post/ClimbingLog/ClimbingLog.astro"
+import {
+  styleMap,
+  type AscenionStyle,
+} from "../../components/post/ClimbingLog/Style.astro"
+import {
+  boulderingGrades,
+  sportGrades,
+} from "../../components/post/ClimbingLog/Grade/types"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
@@ -20,7 +29,42 @@ export async function getStaticPaths() {
   }))
 }
 
+const GradeSchema = z.object({
+  system: z.enum([...sportGrades, ...boulderingGrades]),
+  value: z.string(),
+})
+const Climbs = z.array(
+  z.object({
+    ascents: z.array(
+      z.object({
+        name: z.string(),
+        grade: GradeSchema.nullable(),
+        style: z
+          .enum(Object.keys(styleMap) as [AscenionStyle, ...AscenionStyle[]])
+          .nullable(),
+        pitches: z.optional(
+          z.array(
+            z.object({
+              name: z.string().nullable(),
+              grade: GradeSchema,
+              style: z
+                .enum(
+                  Object.keys(styleMap) as [AscenionStyle, ...AscenionStyle[]]
+                )
+                .nullable(),
+            })
+          )
+        ),
+      })
+    ),
+  })
+)
+
 const { post } = Astro.props
+const climbsYml = await import(
+  `../../../content/posts/${post.id}/climbs.yml`
+).catch(() => ({ default: undefined }))
+const climbs = await Climbs.parseAsync(climbsYml.default)
 const { Content } = await render(post)
 ---
 
@@ -60,6 +104,11 @@ const { Content } = await render(post)
               Video,
             }}
           />
+          {
+            climbs && climbs[0].ascents && (
+              <ClimbingLog ascents={climbs[0].ascents} />
+            )
+          }
         </div>
         <div style="height: 25vh;"></div>
       </article>
@@ -92,6 +141,12 @@ const { Content } = await render(post)
     color: #222;
     width: 600px;
     max-width: calc(100vw - 32px);
+  }
+
+  .content .popover {
+    width: auto;
+    margin: 0;
+    z-index: 9999;
   }
 
   .content ul {

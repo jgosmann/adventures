@@ -1,0 +1,28 @@
+---
+import Ascent, { type Route } from "./Ascent.astro"
+
+interface Props {
+  ascents: ReadonlyArray<Route>
+}
+
+const { ascents } = Astro.props
+---
+
+<h2>Climbing log book</h2>
+<ol>
+  {
+    ascents?.map(
+      ascent =>
+        ascent && (
+          <li>
+            <Ascent
+              data={{
+                ...ascent,
+                pitches: ascent.pitches,
+              }}
+            />
+          </li>
+        )
+    )
+  }
+</ol>

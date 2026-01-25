@@ -57,6 +57,9 @@ importers:
       '@rollup/plugin-dsv':
         specifier: ^3.0.5
         version: 3.0.5(rollup@4.54.0)
+      '@rollup/plugin-yaml':
+        specifier: ^4.1.2
+        version: 4.1.2(rollup@4.54.0)
       '@types/leaflet':
         specifier: ^1.9.21
         version: 1.9.21
@@ -1411,6 +1414,15 @@ packages:
 
   '@rollup/plugin-dsv@3.0.5':
     resolution: {integrity: sha512-q1U4vu7voJkgeltujKya7ByxuWaHg9lYqCFQfWkqcgvIeOlUh52VrQSlgEe1JhN4wIaw5FOflRX3Jv0nqrw9uQ==}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
+  '@rollup/plugin-yaml@4.1.2':
+    resolution: {integrity: sha512-RpupciIeZMUqhgFE97ba0s98mOFS7CWzN3EJNhJkqSv9XLlWYtwVdtE6cDw6ASOF/sZVFS7kRJXftaqM2Vakdw==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
@@ -6987,6 +6999,14 @@ snapshots:
       '@types/d3-dsv': 3.0.7
       d3-dsv: 2.0.0
       strip-bom: 4.0.0
+      tosource: 2.0.0-alpha.3
+    optionalDependencies:
+      rollup: 4.54.0
+
+  '@rollup/plugin-yaml@4.1.2(rollup@4.54.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.3.0(rollup@4.54.0)
+      js-yaml: 4.1.1
       tosource: 2.0.0-alpha.3
     optionalDependencies:
       rollup: 4.54.0

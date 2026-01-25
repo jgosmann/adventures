@@ -1,0 +1,46 @@
+---
+import FirstAscent from "./styles/FirstAscent.astro"
+import Onsight from "./styles/Onsight.astro"
+import Flash from "./styles/Flash.astro"
+import Redpoint from "./styles/Redpoint.astro"
+import Repeat from "./styles/Repeat.astro"
+import Hangdog from "./styles/Hangdog.astro"
+import Toprope from "./styles/Toprope.astro"
+import TopropeHangdog from "./styles/TopropeHangdog.astro"
+import Aid from "./styles/Aid.astro"
+import Bailed from "./Bailed.astro"
+import Simul from "./styles/Simul.astro"
+import Skipped from "./styles/Skipped.astro"
+import NotAttempted from "./styles/NotAttempted.astro"
+
+export const styleMap = {
+  fa: FirstAscent,
+  onsight: Onsight,
+  flash: Flash,
+  redpoint: Redpoint,
+  repeat: Repeat,
+  hangdog: Hangdog,
+  toprope: Toprope,
+  "toprope-hangdog": TopropeHangdog,
+  aid: Aid,
+  bailed: Bailed,
+  retreat: Bailed,
+  simul: Simul,
+  skipped: Skipped,
+  ["not attempted"]: NotAttempted,
+}
+
+export type AscenionStyle = keyof typeof styleMap
+
+interface Props {
+  ascensionStyle: AscenionStyle
+}
+
+const { ascensionStyle } = Astro.props
+const Component = styleMap[ascensionStyle]
+if (typeof Component === "undefined") {
+  throw new Error(`ascensionStyle ${ascensionStyle} is invalid`)
+}
+---
+
+<Component />
