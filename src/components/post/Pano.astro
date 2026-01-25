@@ -1,6 +1,5 @@
 ---
 import type { ImageMetadata } from "astro"
-import { getImage } from "astro:assets"
 import { Image } from "astro:assets"
 import Caption from "./Caption.astro"
 import VerticalScroll from "../VerticalScroll.astro"
@@ -22,11 +21,16 @@ const imageLoader = import.meta.glob<{ default: ImageMetadata }>(
 if (!imageLoader) {
   throw new Error(`Image path '${Astro.params.id}/pano/${src}' does not exist.`)
 }
-const image = imageLoader()
-const linkedImage = await getImage({
-  src: image,
-  height,
-})
+const { default: image } = await imageLoader()
+let scaledHeight = Math.min(height, image.height)
+let scaledWidth = (scaledHeight / image.height) * image.width
+const maxDensity = 2
+const maxWebpWidth = 16383
+const maxPanoWidth = Math.floor(maxWebpWidth / maxDensity)
+if (scaledWidth > maxPanoWidth) {
+  scaledHeight *= maxPanoWidth / scaledWidth
+  scaledWidth = maxPanoWidth
+}
 ---
 
 <div class="pano-container">
@@ -35,9 +39,10 @@ const linkedImage = await getImage({
       <VerticalScroll>
         <Image
           src={image}
+          densities={[1, 2]}
+          width={scaledWidth}
+          height={scaledHeight}
           alt={alt || caption || ""}
-          height={height}
-          layout="constrained"
         />
       </VerticalScroll>
     )
@@ -54,8 +59,8 @@ const linkedImage = await getImage({
 
 <style
   define:vars={{
-    "orig-height": linkedImage.attributes.height,
-    "orig-width": linkedImage.attributes.width,
+    "orig-height": scaledHeight,
+    "orig-width": scaledWidth,
   }}
 >
   .pano-container {
