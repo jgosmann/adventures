@@ -7,6 +7,7 @@ import PostMeta from "./PostMeta.astro"
 interface Props {
   pagePath: string
   meta: Meta
+  timeToRead: { minutes: number }
 }
 
 interface Meta {
@@ -16,7 +17,7 @@ interface Meta {
   date: Date
 }
 
-const { pagePath, meta } = Astro.props
+const { pagePath, meta, timeToRead } = Astro.props
 
 export const width = 300
 export const height = 250
@@ -37,7 +38,7 @@ export const height = 250
     <ul class="semantic-list">
       <li>
         <!-- FIXME time to read -->
-        <PostMeta date={meta.date} timeToRead={{ minutes: 0 }} />
+        <PostMeta date={meta.date} timeToRead={timeToRead} />
       </li>
       {
         meta.categories && (

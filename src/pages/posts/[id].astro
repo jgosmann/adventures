@@ -23,6 +23,7 @@ import Nextday from "../../components/post/Nextday.astro"
 import Pano from "../../components/post/Pano.astro"
 import Pano2x from "../../components/post/Pano2x.astro"
 import ElevationProfileLoader from "../../components/post/ElevationProfileLoader.astro"
+import readingTime from "reading-time"
 
 export async function getStaticPaths() {
   function areSubsequentDays(a: Date, b: Date): boolean {
@@ -106,7 +107,7 @@ const { Content } = await render(post)
           title={post.data.title}
           meta={{
             date: post.data.date,
-            timeToRead: { minutes: 0 }, // FIXME
+            timeToRead: readingTime(post.body ?? ""),
           }}
         />
         <div class="content">

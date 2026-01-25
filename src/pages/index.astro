@@ -6,6 +6,7 @@ import PostPreview, {
   width as previewWidth,
   height as previewHeight,
 } from "../components/PostPreview.astro"
+import readingTime from "reading-time"
 
 const posts = await getCollection("posts")
 ---
@@ -24,7 +25,11 @@ const posts = await getCollection("posts")
         {
           posts.map(post => (
             <li>
-              <PostPreview pagePath={`/posts/${post.id}/`} meta={post.data} />
+              <PostPreview
+                pagePath={`/posts/${post.id}/`}
+                meta={post.data}
+                timeToRead={readingTime(post.body ?? "")}
+              />
             </li>
           ))
         }
