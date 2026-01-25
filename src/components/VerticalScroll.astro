@@ -1,0 +1,154 @@
+---
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+---
+
+<vertical-scroll>
+  <div class="scroll-container" tabindex={0}>
+    <slot />
+  </div>
+  <button
+    tabindex={-1}
+    class="scroll-arrow scroll-arrow-left inactive"
+    aria-label="Scroll left"
+  >
+    <FontAwesomeIcon icon={faChevronLeft} />
+  </button>
+  <button
+    tabindex={-1}
+    class="scroll-arrow scroll-arrow-right inactive"
+    title="Scroll right"
+  >
+    <FontAwesomeIcon icon={faChevronRight} />
+  </button>
+</vertical-scroll>
+
+<script>
+  class VerticalScroll extends HTMLElement {
+    private cleanup?: () => void
+
+    connectedCallback() {
+      const scrollLeftBtn = this.querySelector("button.scroll-arrow-left")
+      const scrollRightBtn = this.querySelector("button.scroll-arrow-right")
+      const scrollContainer = this.querySelector("div.scroll-container")
+      if (
+        !(scrollLeftBtn instanceof HTMLButtonElement) ||
+        !(scrollRightBtn instanceof HTMLButtonElement) ||
+        !(scrollContainer instanceof HTMLDivElement)
+      ) {
+        return
+      }
+
+      let scrollDirection: number = 0
+      let lastScrollProcessing: DOMHighResTimeStamp | null = null
+
+      const scroll = (timestamp: DOMHighResTimeStamp) => {
+        if (scrollDirection == 0) {
+          lastScrollProcessing = null
+          return
+        }
+        const delta =
+          0.25 *
+          scrollDirection *
+          (lastScrollProcessing ? timestamp - lastScrollProcessing : 0)
+        scrollContainer.scrollBy(delta, 0)
+        lastScrollProcessing = timestamp
+        window.requestAnimationFrame(scroll)
+      }
+
+      const startScroll = (btnElement: HTMLElement, direction: number) => {
+        scrollDirection = direction
+        window.requestAnimationFrame(scroll)
+      }
+      const stopScroll = (btnElement: HTMLElement, direction: number) => {
+        if (direction !== scrollDirection) {
+          return
+        }
+        scrollDirection = 0
+        lastScrollProcessing = null
+        btnElement.blur()
+      }
+
+      for (const [scrollBtn, direction] of [
+        [scrollLeftBtn, -1],
+        [scrollRightBtn, +1],
+      ] as const) {
+        for (const startEvent of ["mousedown", "touchstart"]) {
+          scrollBtn.addEventListener(startEvent, () =>
+            startScroll(scrollBtn, direction)
+          )
+        }
+        for (const stopEvent of ["mouseup", "touchend", "mouseleave"]) {
+          scrollBtn.addEventListener(stopEvent, () =>
+            stopScroll(scrollBtn, direction)
+          )
+        }
+      }
+
+      const updateScrollArrowVisibility = () => {
+        const showScrollArrows =
+          scrollContainer.scrollWidth <= scrollContainer.clientWidth
+        if (showScrollArrows) {
+          scrollLeftBtn.style.display = "none"
+          scrollRightBtn.style.display = "none"
+        } else {
+          scrollLeftBtn.style.display = "initial"
+          scrollRightBtn.style.display = "initial"
+        }
+      }
+      window.addEventListener("resize", updateScrollArrowVisibility)
+      updateScrollArrowVisibility()
+
+      this.cleanup = () => {
+        window.removeEventListener("resize", updateScrollArrowVisibility)
+      }
+    }
+
+    disconnectedCallback() {
+      this.cleanup?.()
+    }
+  }
+
+  customElements.define("vertical-scroll", VerticalScroll)
+</script>
+
+<style>
+  .scroll-container {
+    overflow: scroll;
+    font-size: 0;
+    text-align: center;
+  }
+
+  .scroll-arrow {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 6rem;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    outline: none;
+  }
+
+  .scroll-arrow:not(:active):hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .scroll-arrow:active {
+    background-color: rgba(180, 180, 180, 0.4);
+  }
+
+  .scroll-arrow-left {
+    left: 0;
+  }
+
+  .scroll-arrow-right {
+    right: 0;
+  }
+</style>

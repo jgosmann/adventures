@@ -1,0 +1,71 @@
+---
+import type { ImageMetadata } from "astro"
+import { getImage } from "astro:assets"
+import { Image } from "astro:assets"
+import Caption from "./Caption.astro"
+import VerticalScroll from "../VerticalScroll.astro"
+
+interface Props {
+  alt?: string
+  caption?: string
+  src: string
+}
+
+const { alt, caption, src } = Astro.props
+
+const imagePath = `../../../content/posts/${Astro.params.id}/pano/${src}`
+const imageLoader = import.meta.glob<{ default: ImageMetadata }>(
+  "../../../content/posts/*/pano/*"
+)[imagePath]
+if (!imageLoader) {
+  throw new Error(`Image path '${Astro.params.id}/pano/${src}' does not exist.`)
+}
+const image = imageLoader()
+const linkedImage = await getImage({
+  src: image,
+  height: 600,
+})
+---
+
+<div class="pano-container">
+  {
+    image && (
+      <VerticalScroll>
+        <Image
+          src={image}
+          alt={alt || caption || ""}
+          height={600}
+          layout="constrained"
+        />
+      </VerticalScroll>
+    )
+  }
+  {
+    (caption || Astro.slots.has("default")) && (
+      <Caption>
+        {caption}
+        <slot />
+      </Caption>
+    )
+  }
+</div>
+
+<style
+  define:vars={{
+    "orig-height": linkedImage.attributes.height,
+    "orig-width": linkedImage.attributes.width,
+  }}
+>
+  .pano-container {
+    margin: 32px 0;
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+  .pano-container img {
+    max-height: 100vh;
+    max-width: calc(100vh / var(--orig-height) * var(--orig-width));
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
