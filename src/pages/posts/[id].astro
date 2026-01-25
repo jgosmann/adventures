@@ -23,6 +23,7 @@ import {
 import Nextday from "../../components/post/Nextday.astro"
 import Pano from "../../components/post/Pano.astro"
 import Pano2x from "../../components/post/Pano2x.astro"
+import ElevationProfileLoader from "../../components/post/ElevationProfileLoader.astro"
 
 export async function getStaticPaths() {
   function areSubsequentDays(a: Date, b: Date): boolean {
@@ -112,7 +113,7 @@ const { Content } = await render(post)
         <div class="content">
           <Content
             components={{
-              ElevationProfile: placeholder,
+              ElevationProfile: ElevationProfileLoader,
               Gallery,
               GpxTrack: GpxTrackLoader,
               Grade: GradeLoader,

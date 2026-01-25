@@ -1,0 +1,20 @@
+---
+import ContentSpinner from "./ContentSpinner.astro"
+import GpxElevationProfile, {
+  type GpxElevationProfileProps,
+} from "./GpxElevationProfile"
+
+interface Props extends Omit<GpxElevationProfileProps, "url"> {
+  src: string
+}
+const { src, ...props } = Astro.props
+const gpxPath = `../../../content/posts/${Astro.params.id}/${src}`
+const gpxLoader = import.meta.glob<{ default: string }>(
+  "../../../content/posts/**/*.gpx"
+)[gpxPath]
+const url = (await gpxLoader()).default
+---
+
+<GpxElevationProfile client:only="react" {...props} url={url}>
+  <Fragment slot="fallback"><ContentSpinner /></Fragment>
+</GpxElevationProfile>
