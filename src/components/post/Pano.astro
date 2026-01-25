@@ -9,9 +9,11 @@ interface Props {
   alt?: string
   caption?: string
   src: string
+  height?: number
 }
 
 const { alt, caption, src } = Astro.props
+const height = Astro.props.height ?? 600
 
 const imagePath = `../../../content/posts/${Astro.params.id}/pano/${src}`
 const imageLoader = import.meta.glob<{ default: ImageMetadata }>(
@@ -23,7 +25,7 @@ if (!imageLoader) {
 const image = imageLoader()
 const linkedImage = await getImage({
   src: image,
-  height: 600,
+  height,
 })
 ---
 
@@ -34,7 +36,7 @@ const linkedImage = await getImage({
         <Image
           src={image}
           alt={alt || caption || ""}
-          height={600}
+          height={height}
           layout="constrained"
         />
       </VerticalScroll>

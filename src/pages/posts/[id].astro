@@ -22,6 +22,7 @@ import {
 } from "../../components/post/ClimbingLog/Grade/types"
 import Nextday from "../../components/post/Nextday.astro"
 import Pano from "../../components/post/Pano.astro"
+import Pano2x from "../../components/post/Pano2x.astro"
 
 export async function getStaticPaths() {
   function areSubsequentDays(a: Date, b: Date): boolean {
@@ -117,7 +118,7 @@ const { Content } = await render(post)
               Grade: GradeLoader,
               Loc: LocLoader,
               Pano,
-              Pano2x: placeholder,
+              Pano2x,
               Rimg,
               Travel: TravelLoader,
               Video,

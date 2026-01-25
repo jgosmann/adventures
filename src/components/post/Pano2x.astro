@@ -1,0 +1,11 @@
+---
+import Pano from "./Pano.astro"
+
+interface Props {
+  alt?: string
+  caption?: string
+  src: string
+}
+---
+
+<Pano {...Astro.props} height={1200} />
