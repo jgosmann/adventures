@@ -20,47 +20,67 @@ import {
   boulderingGrades,
   sportGrades,
 } from "../../components/post/ClimbingLog/Grade/types"
+import Nextday from "../../components/post/Nextday.astro"
 
 export async function getStaticPaths() {
+  function areSubsequentDays(a: Date, b: Date): boolean {
+    const normalizedA = new Date(a.getFullYear(), a.getMonth(), a.getDate())
+    const normalizedB = new Date(b.getFullYear(), b.getMonth(), b.getDate())
+    return normalizedB.valueOf() - normalizedA.valueOf() === 24 * 60 * 60 * 1000
+  }
   const posts = await getCollection("posts")
-  return posts.map(post => ({
-    params: { id: post.id },
-    props: { post },
-  }))
+  posts.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf())
+  return posts.map((post, i) => {
+    let nextpost = i + 1 < posts.length ? posts[i + 1] : null
+    if (nextpost && !areSubsequentDays(post.data.date, nextpost.data.date)) {
+      nextpost = null
+    }
+    return {
+      params: { id: post.id },
+      props: { post, nextpost },
+    }
+  })
 }
 
 const GradeSchema = z.object({
   system: z.enum([...sportGrades, ...boulderingGrades]),
   value: z.string(),
 })
-const Climbs = z.array(
-  z.object({
-    ascents: z.array(
-      z.object({
-        name: z.string(),
-        grade: GradeSchema.nullable(),
-        style: z
-          .enum(Object.keys(styleMap) as [AscenionStyle, ...AscenionStyle[]])
-          .nullable(),
-        pitches: z.optional(
-          z.array(
-            z.object({
-              name: z.string().nullable(),
-              grade: GradeSchema,
-              style: z
-                .enum(
-                  Object.keys(styleMap) as [AscenionStyle, ...AscenionStyle[]]
-                )
-                .nullable(),
-            })
-          )
-        ),
-      })
-    ),
-  })
+const Climbs = z.optional(
+  z.array(
+    z.object({
+      ascents: z.array(
+        z.object({
+          name: z.string(),
+          grade: GradeSchema.optional().transform(x => x ?? null),
+          style: z
+            .enum(Object.keys(styleMap) as [AscenionStyle, ...AscenionStyle[]])
+            .optional()
+            .transform(x => x ?? null),
+          pitches: z.optional(
+            z.array(
+              z.object({
+                name: z
+                  .string()
+                  .optional()
+                  .transform(x => x ?? null),
+                grade: GradeSchema,
+                style: z
+                  .enum(
+                    Object.keys(styleMap) as [AscenionStyle, ...AscenionStyle[]]
+                  )
+                  .optional()
+                  .transform(x => x ?? null),
+              })
+            )
+          ),
+        })
+      ),
+    })
+  )
 )
 
-const { post } = Astro.props
+const { post, nextpost } = Astro.props
 const climbsYml = await import(
   `../../../content/posts/${post.id}/climbs.yml`
 ).catch(() => ({ default: undefined }))
@@ -96,7 +116,6 @@ const { Content } = await render(post)
               Grade: GradeLoader,
               Loc: LocLoader,
               Link: placeholder,
-              Nextday: placeholder,
               Pano: placeholder,
               Pano2x: placeholder,
               Rimg,
@@ -104,6 +123,7 @@ const { Content } = await render(post)
               Video,
             }}
           />
+          {nextpost && <Nextday path={`/posts/${nextpost.id}`} />}
           {
             climbs && climbs[0].ascents && (
               <ClimbingLog ascents={climbs[0].ascents} />

@@ -12,3 +12,53 @@
 .comma-separated-list > li:not(:last-of-type):after {
   content: ", ";
 }
+
+.shaded-button {
+  --shaded-button-main-color: rgb(230, 230, 230);
+  --shaded-button-highlight-color: rgb(246, 246, 246);
+  --shaded-button-shade-color: rgb(180, 180, 180);
+
+  background-color: var(--shaded-button-main-color);
+  background: linear-gradient(
+    180deg,
+    var(--shaded-button-main-color) 60%,
+    var(--shaded-button-shade-color) 100%
+  );
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  display: inline-block;
+
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.shaded-button:hover {
+  background-color: var(--shaded-button-highlight-color);
+  background: linear-gradient(
+    180deg,
+    var(--shaded-button-highlight-color) 60%,
+    var(--shaded-button-shade-color) 100%
+  );
+}
+
+.shaded-button:active {
+  transition: 0s;
+  background: var(--shaded-button-main-color);
+}
+
+.shaded-button.shaded-button-primary {
+  --shaded-button-main-color: rgb(51, 108, 198);
+  --shaded-button-highlight-color: rgb(67, 124, 214);
+  --shaded-button-shade-color: rgb(31, 59, 105);
+
+  color: #fff;
+  text-decoration: none;
+}
+
+.shaded-button.shaded-button-primary:hover {
+  color: #fff;
+}
