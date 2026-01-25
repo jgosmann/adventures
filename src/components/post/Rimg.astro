@@ -45,8 +45,6 @@ if (overlayPath && !overlayLoader) {
   )
 }
 const OverlaySvg = (await overlayLoader?.())?.default
-
-const slotCaption = (await Astro.slots.render("default"))?.trim()
 ---
 
 <div class="rimg-container">
@@ -70,9 +68,10 @@ const slotCaption = (await Astro.slots.render("default"))?.trim()
       </a>
       {OverlaySvg && <OverlaySvg class="overlay" />}
       {
-        (caption || slotCaption?.length > 0) && (
+        (caption || Astro.slots.has("default")) && (
           <Caption>
-            {caption || slotCaption}
+            {caption}
+            <slot />
             {overlay && (
               <label class="overlay-toggle-container">
                 <FaIcon icon={faRoute} />
