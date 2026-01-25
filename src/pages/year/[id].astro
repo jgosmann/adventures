@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content"
+import PostList from "../../components/PostList.astro"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts")
+  return new Set(posts.map(post => post.data.date.getFullYear()))
+    .values()
+    .map(year => ({
+      params: { id: year },
+      props: { year },
+    }))
+    .toArray()
+}
+
+const { year } = Astro.props
+---
+
+<PostList year={year} />

@@ -31,8 +31,10 @@ let allPosts = (
 ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
 let posts = allPosts
-const start = pageSize * (page - 1)
-posts = posts.slice(start, start + pageSize)
+if (!year) {
+  const start = pageSize * (page - 1)
+  posts = posts.slice(start, start + pageSize)
+}
 
 const maxPage = Math.ceil(allPosts.length / pageSize)
 ---
@@ -61,7 +63,7 @@ const maxPage = Math.ceil(allPosts.length / pageSize)
         }
       </ol>
       {
-        (page > 1 || page < maxPage) && (
+        !year && (page > 1 || page < maxPage) && (
           <div class="pagination">
             {page > 1 && (
               <a href={`/page/${page - 1}`} class="shaded-button">
