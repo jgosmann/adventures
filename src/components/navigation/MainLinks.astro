@@ -1,0 +1,77 @@
+---
+import "../../styles.css"
+import {
+  faBell,
+  faGlobeEurope,
+  faStar,
+  faTh,
+} from "@fortawesome/free-solid-svg-icons"
+
+import Label from "./Label.astro"
+import NavLink from "./NavLink.astro"
+import type { HTMLAttributes } from "astro/types"
+import FaIcon from "../FaIcon.astro"
+import YearSelector from "./YearSelector.astro"
+import SearchField from "./SearchField.astro"
+
+export interface Props extends HTMLAttributes<"ul"> {
+  orientation?: "row" | "column"
+  idPrefix: string
+}
+
+const { orientation, idPrefix, class: cssClass, ...props } = Astro.props
+const markerSide = orientation === "column" ? "left" : "bottom"
+---
+
+<ul {...props} class:list={["main-links", orientation, "flex-list", cssClass]}>
+  <li>
+    <NavLink href="/subscribe/" markerSide={markerSide} aria-label="Subscribe">
+      <FaIcon icon={faBell} />
+      <Label>Subscribe</Label>
+    </NavLink>
+  </li>
+  <li>
+    <NavLink href="/" markerSide={markerSide} aria-label="List of posts">
+      <FaIcon icon={faTh} />
+      <Label>List</Label>
+    </NavLink>
+  </li>
+  <li>
+    <NavLink href="/map/" markerSide={markerSide} aria-label="Map with posts">
+      <FaIcon icon={faGlobeEurope} />
+      <Label>Map</Label>
+    </NavLink>
+  </li>
+  <li>
+    <YearSelector markerSide={markerSide} idPrefix={idPrefix} />
+  </li>
+  <li>
+    <NavLink href="/favorites/" markerSide={markerSide} aria-label="Top picks">
+      <FaIcon icon={faStar} />
+      <Label>Top picks</Label>
+    </NavLink>
+  </li>
+  <li style={{ flex: 1 }}>
+    <SearchField markerSide={markerSide} />
+  </li>
+</ul>
+
+<style define:vars={{ orientation: orientation ?? "row" }}>
+  .main-links {
+    flex-direction: var(--orientation);
+    transform-origin: top left;
+    transition: transform 0.2s ease-out;
+  }
+
+  :global(.expanded) .main-links.row {
+    transform: scaleX(0);
+  }
+
+  .main-links.column {
+    transform: scaleY(0);
+  }
+
+  :global(.expanded) .main-links.column {
+    transform: scaleY(1);
+  }
+</style>

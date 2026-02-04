@@ -1,0 +1,27 @@
+---
+import type { HTMLAttributes } from "astro/types"
+import FaIcon from "../FaIcon.astro"
+import { faCalendarAlt, faCaretDown } from "@fortawesome/free-solid-svg-icons"
+import Label from "./Label.astro"
+
+interface Props extends HTMLAttributes<"div"> {}
+---
+
+<div {...Astro.props}>
+  <FaIcon icon={faCalendarAlt} />
+  <Label><slot /></Label>
+  <FaIcon icon={faCaretDown} styles={{ marginLeft: "4px" }} />
+</div>
+
+<style>
+  div {
+    white-space: nowrap;
+    padding: 12px 12px 8px;
+  }
+
+  @media (min-width: 600px) {
+    div {
+      padding: 8px 8px 4px;
+    }
+  }
+</style>

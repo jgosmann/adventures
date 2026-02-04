@@ -1,0 +1,63 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+export interface Props extends HTMLAttributes<"a"> {
+  markerSide?: "bottom" | "left"
+}
+
+const { markerSide, class: cssClass, ...props } = Astro.props
+const markerClass = `marker-${markerSide ?? "bottom"}`
+const isActive =
+  Astro.url.pathname.replace(/\/$/, "") ===
+  props.href?.toString()?.replace(/\/$/, "")
+---
+
+<a class:list={[markerClass, cssClass, { active: isActive }]} {...props}>
+  <slot />
+</a>
+
+<style>
+  a {
+    transition: 0.2s;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+  }
+
+  a:hover,
+  a.active {
+    border-color: var(--color-accent);
+    color: #000;
+  }
+
+  a:focus {
+    color: var(--color-accent);
+  }
+
+  .marker-bottom {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    padding: 12px 12px 8px;
+  }
+
+  .marker-left {
+    border-left: 4px solid rgba(255, 255, 255, 0);
+    padding: 12px;
+  }
+
+  @media (min-width: 600px) {
+    .marker-bottom {
+      padding: 8px 8px 4px;
+    }
+
+    .marker-left {
+      padding: 8px;
+    }
+  }
+</style>

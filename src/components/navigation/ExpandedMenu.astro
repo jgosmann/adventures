@@ -1,0 +1,33 @@
+---
+import LegalLinks from "./LegalLinks.astro"
+import MainLinks from "./MainLinks.astro"
+---
+
+<nav class="expanded-menu">
+  <MainLinks orientation="column" idPrefix="expanded" />
+  <LegalLinks orientation="row" />
+</nav>
+
+<style>
+  nav.expanded-menu {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 0 8px 0 0;
+    transition: opacity 0.2s ease-out;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  :global(.expanded) nav {
+    opacity: 1;
+    pointer-events: initial;
+  }
+</style>

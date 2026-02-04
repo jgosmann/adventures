@@ -1,0 +1,159 @@
+---
+import type { HTMLAttributes } from "astro/types"
+import FaIcon from "../FaIcon.astro"
+import {
+  faChevronCircleRight,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons"
+
+export interface Props extends HTMLAttributes<"a"> {
+  markerSide?: "bottom" | "left"
+}
+
+const { markerSide, class: cssClass, ...props } = Astro.props
+const markerClass = `marker-${markerSide ?? "bottom"}`
+const isActive = Astro.url.pathname.replace(/\/$/, "") === "/search"
+---
+
+<search-field>
+  <form
+    method="get"
+    action="/search"
+    class:list={[markerClass, { active: isActive }]}
+  >
+    <label>
+      <FaIcon
+        icon={faSearch}
+        ariaLabel="Search"
+        styles={{ cursor: "pointer", marginRight: "4px" }}
+      />
+      <input type="search" name="q" placeholder="Search" />
+    </label>
+    <button title="Submit search" type="submit" class="hidden">
+      <FaIcon icon={faChevronCircleRight} />
+    </button>
+  </form>
+</search-field>
+
+<script>
+  class SearchField extends HTMLElement {
+    connectedCallback() {
+      const form = this.querySelector("form")
+      const input = this.querySelector("input")
+      const submitButton = this.querySelector('button[type="submit"]')
+      if (
+        !(form instanceof HTMLFormElement) ||
+        !(input instanceof HTMLInputElement)
+      ) {
+        return
+      }
+
+      form.addEventListener("submit", ev => {
+        if (!input.value) {
+          ev.preventDefault()
+        }
+      })
+
+      const updateSubmitBtnVisibility = () => {
+        if (input.value) {
+          submitButton?.classList.remove("hidden")
+        } else {
+          submitButton?.classList.add("hidden")
+        }
+      }
+      input.addEventListener("input", updateSubmitBtnVisibility)
+
+      if (location.pathname === "/search") {
+        const query = new URLSearchParams(location.search).get("q")
+        if (query) {
+          input.value = query
+        }
+      }
+
+      updateSubmitBtnVisibility()
+    }
+  }
+
+  customElements.define("search-field", SearchField)
+</script>
+
+<style>
+  form {
+    user-select: none;
+    outline: none;
+    transition: 0.2s;
+    display: flex;
+    flex: 1;
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    user-select: none;
+    outline: none;
+  }
+
+  label {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+  }
+
+  form:focus-within,
+  form.active {
+    border-color: var(--color-accent);
+  }
+
+  form:focus-within,
+  label:focus-within,
+  button:focus {
+    color: var(--color-accent);
+  }
+
+  input {
+    min-width: 64px;
+    max-width: 320px;
+    width: 100%;
+    flex: 1;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+    visibility: hidden;
+    cursor: pointer;
+    visibility: visible;
+    outline: none;
+  }
+
+  button.hidden {
+    cursor: default;
+    visibility: hidden;
+  }
+
+  .marker-bottom {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    padding: 12px 12px 8px;
+  }
+
+  .marker-left {
+    border-left: 4px solid rgba(255, 255, 255, 0);
+    padding: 12px;
+  }
+
+  @media (min-width: 600px) {
+    .marker-bottom {
+      padding: 8px 8px 4px;
+    }
+
+    .marker-left {
+      padding: 8px;
+    }
+  }
+</style>

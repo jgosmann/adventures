@@ -1,0 +1,99 @@
+---
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import FaIcon from "../FaIcon.astro"
+import CollapsedMenu from "./CollapsedMenu.astro"
+import MenuButton from "./MenuButton.astro"
+import ExpandedMenu from "./ExpandedMenu.astro"
+
+interface Props {
+  fixed?: boolean
+  noTopMargin?: boolean
+}
+
+const { fixed, noTopMargin } = Astro.props
+---
+
+<navigation-bar class:list={{ fixed }}>
+  <CollapsedMenu />
+  <ExpandedMenu />
+  <MenuButton class="menu-button">
+    <FaIcon class="icon-menu-closed" icon={faBars} />
+    <FaIcon class="icon-menu-open" icon={faTimes} />
+  </MenuButton>
+</navigation-bar>
+
+<script>
+  class NavigationBar extends HTMLElement {
+    connectedCallback() {
+      const menuButton = this.querySelector(".menu-button")
+      if (!(menuButton instanceof HTMLButtonElement)) {
+        return
+      }
+      const collapsedElements = this.querySelectorAll(
+        ".collapsed-menu a, .collapsed-menu button, .collapsed-menu input"
+      )
+      const expandedElements = this.querySelectorAll(
+        ".expanded-menu a, .expanded-menu button, .expanded-menu input"
+      )
+
+      const updateTabIndex = (menuState: "expanded" | "collapsed") => {
+        const [collapsedElementsTabIndex, expandedElementsTabIndex] =
+          menuState === "expanded" ? ["-1", ""] : ["", "-1"]
+        collapsedElements.forEach(elem =>
+          elem.setAttribute("tabIndex", collapsedElementsTabIndex)
+        )
+        expandedElements.forEach(elem =>
+          elem.setAttribute("tabIndex", expandedElementsTabIndex)
+        )
+      }
+
+      menuButton.addEventListener("click", () => {
+        if (this.classList.contains("expanded")) {
+          this.classList.remove("expanded")
+          updateTabIndex("collapsed")
+        } else {
+          this.classList.add("expanded")
+          updateTabIndex("expanded")
+        }
+      })
+
+      updateTabIndex("collapsed")
+    }
+  }
+
+  customElements.define("navigation-bar", NavigationBar)
+</script>
+
+<style>
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  :global(.icon-menu-open) {
+    display: none !important;
+  }
+
+  .expanded :global(.icon-menu-open) {
+    display: block !important;
+  }
+
+  .expanded :global(.icon-menu-closed) {
+    display: none !important;
+  }
+</style>
+
+<style is:global>
+  body {
+    margin-top: 56px;
+  }
+
+  @media (min-width: 600px) {
+    body {
+      margin-top: 48px;
+    }
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+interface Props extends HTMLAttributes<"button"> {}
+---
+
+<button {...Astro.props}><slot /></button>
+
+<style>
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 12px 20px;
+
+    outline: none;
+  }
+
+  button:focus,
+  button:hover {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 600px) {
+    button {
+      display: none;
+    }
+  }
+</style>

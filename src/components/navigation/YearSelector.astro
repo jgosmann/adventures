@@ -1,0 +1,145 @@
+---
+import { getCollection } from "astro:content"
+import LabelLine from "./LabelLine.astro"
+import NavLink, { Props as NavLinkProps } from "./NavLink.astro"
+import Option from "./Option.astro"
+
+interface Props extends Pick<NavLinkProps, "markerSide"> {
+  idPrefix: string
+}
+
+const { idPrefix, markerSide } = Astro.props
+const dropdownId = `${idPrefix}-year-selector-dropdown`
+
+const yearMatch = Astro.url.pathname.match(/\/year\/(\d+)/)
+const selectedText =
+  yearMatch && yearMatch.length > 1 ? yearMatch[1] : "Pick a year"
+
+const allYears = new Set(
+  (await getCollection("posts")).map(post => post.data.date.getFullYear())
+)
+  .values()
+  .toArray()
+  .sort()
+  .reverse()
+---
+
+<year-selector>
+  <div class="dropdown-container">
+    <NavLink
+      markerSide={markerSide}
+      aria-haspopup="menu"
+      aria-controls={dropdownId}
+      style={{
+        outline: "none",
+        padding: 0,
+      }}
+      class:list={["year-selector-trigger", yearMatch ? "active" : undefined]}
+    >
+      <LabelLine>{selectedText}</LabelLine>
+    </NavLink>
+    <div id={dropdownId} class:list={["dropdown", `marker-${markerSide}`]}>
+      <NavLink
+        markerSide={markerSide}
+        aria-haspopup="menu"
+        aria-controls={dropdownId}
+        style={{
+          outline: "none",
+          padding: 0,
+          border: "none",
+        }}
+        class="year-selector-trigger"
+      >
+        <LabelLine>Pick a year</LabelLine>
+      </NavLink>
+      <div class="dropdown-pane" role="listitem">
+        <ol class="dropdown-content flex-list">
+          {
+            allYears.map(year => (
+              <Option
+                href={`/year/${year}`}
+                aria-label={`Posts for the year ${year}`}
+              >
+                {year}
+              </Option>
+            ))
+          }
+        </ol>
+      </div>
+    </div>
+  </div>
+</year-selector>
+
+<script>
+  class YearSelector extends HTMLElement {
+    connectedCallback() {
+      const triggerButtons = this.querySelectorAll(".year-selector-trigger")
+      const dropdown = this.querySelector(".dropdown")
+      if (!(dropdown instanceof HTMLElement)) {
+        return
+      }
+
+      triggerButtons.forEach(triggerButton =>
+        triggerButton.addEventListener("click", () => {
+          if (dropdown.classList.contains("open")) {
+            dropdown.classList.remove("open")
+          } else {
+            dropdown.classList.add("open")
+          }
+        })
+      )
+    }
+  }
+
+  customElements.define("year-selector", YearSelector)
+</script>
+
+<style>
+  .dropdown-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: 0.2s ease-out;
+
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .dropdown.marker-left {
+    margin-left: 4px;
+  }
+
+  .dropdown.open,
+  .dropdown:focus-within {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  .dropdown-pane {
+    overflow: hidden;
+  }
+
+  .dropdown-content {
+    margin-top: 4px;
+    flex-direction: column;
+    transition: 0.2s ease-out;
+    transform: translateY(-100%);
+  }
+
+  .dropdown.open .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    transform: translateY(0%);
+  }
+</style>

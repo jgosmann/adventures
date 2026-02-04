@@ -1,0 +1,32 @@
+---
+import LegalLinks from "./LegalLinks.astro"
+import MainLinks from "./MainLinks.astro"
+---
+
+<nav class="collapsed-menu">
+  <div class="main-links-container">
+    <MainLinks orientation="row" idPrefix="collapsed" />
+  </div>
+  <LegalLinks orientation="column" />
+</nav>
+
+<style>
+  nav.collapsed-menu {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0 8px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .main-links-container {
+    margin-right: 48px;
+  }
+
+  @media (min-width: 600px) {
+    margin-right: 0;
+  }
+</style>

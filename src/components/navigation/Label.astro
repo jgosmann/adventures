@@ -1,0 +1,22 @@
+---
+
+---
+
+<span><slot /></span>
+
+<style>
+  span {
+    margin-left: 4;
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    span {
+      display: inline;
+    }
+  }
+
+  :global(.expanded) span {
+    display: inline;
+  }
+</style>

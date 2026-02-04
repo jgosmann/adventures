@@ -1,0 +1,52 @@
+---
+import type { HTMLAttributes } from "astro/types"
+import LegalLink from "./LegalLink.astro"
+
+interface Props extends HTMLAttributes<"ul"> {
+  orientation: "row" | "column"
+}
+
+const { orientation, ...props } = Astro.props
+---
+
+<ul {...props} class:list={["flex-list", orientation, props.class]}>
+  <li>
+    <LegalLink href="/legal/privacy/">Privacy policy</LegalLink>
+  </li>
+  <li>
+    <LegalLink href="/legal/disclosure/">Legal disclosure</LegalLink>
+  </li>
+</ul>
+
+<style>
+  ul {
+    font-size: 0.7em;
+    margin-left: 4px;
+  }
+
+  .column {
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+    display: none;
+  }
+
+  .row {
+    margin-top: 1em;
+    margin-bottom: 4px
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .row li {
+    padding: 4px 4px 4px 12px;
+  }
+
+  @media (min-width: 600px) {
+    .column {
+      display: flex;
+    }
+  }
+</style>
