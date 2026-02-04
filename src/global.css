@@ -139,3 +139,29 @@ a:hover {
   font-weight: bold;
   margin: 0;
 }
+
+.leaflet-popup-content-wrapper {
+  overflow: hidden;
+  padding: 0 !important;
+  font-size: 1rem;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  transition: 0.2s;
+  position: relative;
+  width: 300px !important; /* for some reason a width one pixel larger get set directly on the element */
+  height: 250px;
+  max-width: calc(100vw - 72px);
+  max-height: calc(100vh - 72px);
+}
+
+a.leaflet-popup-close-button {
+  color: #fff;
+  mix-blend-mode: exclusion;
+}
+
+a.leaflet-popup-close-button:hover {
+  color: #dd16c9;
+  mix-blend-mode: normal;
+}

@@ -1,0 +1,41 @@
+---
+import "normalize.css/normalize.css"
+import "../global.css"
+import Navigation from "../components/navigation/Navigation.astro"
+import OverviewMap from "../components/leaflet/OverviewMap"
+import { getCollection } from "astro:content"
+
+const allPosts = await getCollection("posts")
+---
+
+<div class="map-container">
+  <Navigation />
+  <main><OverviewMap posts={allPosts} client:only="react" /></main>
+</div>
+
+<style>
+  :global(html) {
+    height: 100%;
+  }
+
+  :global(body) {
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  main {
+    flex-grow: 1;
+    position: relative;
+    z-index: 0;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+</style>

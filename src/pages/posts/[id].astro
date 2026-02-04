@@ -24,6 +24,7 @@ import Pano from "../../components/post/Pano.astro"
 import Pano2x from "../../components/post/Pano2x.astro"
 import ElevationProfileLoader from "../../components/post/ElevationProfileLoader.astro"
 import readingTime from "reading-time"
+import Navigation from "../../components/navigation/Navigation.astro"
 
 export async function getStaticPaths() {
   function areSubsequentDays(a: Date, b: Date): boolean {
@@ -100,6 +101,7 @@ const { Content } = await render(post)
     <title>Astro</title>
   </head>
   <body>
+    <Navigation fixed />
     <main>
       <article>
         <Titlescreen

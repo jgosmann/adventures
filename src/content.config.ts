@@ -9,6 +9,8 @@ const posts = defineCollection({
       background: z.preprocess(val => `images/${val}`, image()),
       categories: z.array(z.string()),
       date: z.date(),
+      favorite: z.boolean().optional(),
+      map: z.string().regex(/^[-+]?\d+(\.\d*)?\s*,\s*[-+]?\d+(\.\d*)?$/),
       title: z.string(),
     }),
 })

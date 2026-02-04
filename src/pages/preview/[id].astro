@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content"
+import PostPreview from "../../components/PostPreview.astro"
+import readingTime from "reading-time"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts")
+  posts.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf())
+  return posts.map((post, i) => {
+    return {
+      params: { id: post.id },
+      props: { post },
+    }
+  })
+}
+
+const { post } = Astro.props
+---
+
+<PostPreview
+  pagePath={`/posts/${post.id}`}
+  meta={post.data}
+  timeToRead={readingTime(post.body ?? "")}
+/>

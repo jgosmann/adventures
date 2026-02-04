@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content"
-import PostList, { pageSize } from "../../components/PostList.astro"
+import Page, { pageSize } from "../../components/Page.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
@@ -17,4 +17,4 @@ export async function getStaticPaths() {
 const { page } = Astro.props
 ---
 
-<PostList page={page} />
+<Page page={page} />

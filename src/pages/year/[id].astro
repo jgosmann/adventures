@@ -14,6 +14,12 @@ export async function getStaticPaths() {
 }
 
 const { year } = Astro.props
+
+let allPosts = (
+  await getCollection("posts", data => data.data.date.getFullYear() === year)
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+let posts = allPosts
 ---
 
-<PostList year={year} />
+<PostList posts={posts} />

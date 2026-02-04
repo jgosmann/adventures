@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content"
+import PostList from "./PostList.astro"
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons"
+import FaIcon from "./FaIcon.astro"
+
+export const pageSize = 20
+
+interface Props {
+  page: number
+}
+
+const { page } = Astro.props
+
+const allPosts = (await getCollection("posts")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
+
+const start = pageSize * (page - 1)
+const posts = allPosts.slice(start, start + pageSize)
+
+const maxPage = Math.ceil(allPosts.length / pageSize)
+---
+
+<PostList posts={posts}>
+  {
+    (page > 1 || page < maxPage) && (
+      <div class="pagination" slot="footer">
+        {page > 1 && (
+          <a href={`/page/${page - 1}`} class="shaded-button">
+            <FaIcon icon={faChevronLeft} /> Newer posts
+          </a>
+        )}
+        {page < maxPage && (
+          <a href={`/page/${page + 1}`} class="shaded-button">
+            Older posts <FaIcon icon={faChevronRight} />
+          </a>
+        )}
+      </div>
+    )
+  }
+</PostList>
+
+<style>
+  .pagination {
+    margin: 16px;
+    text-align: center;
+  }
+
+  .pagination a {
+    margin: 16px;
+    width: 118px;
+    color: #000;
+  }
+
+  .pagination a:hover {
+    color: #000;
+  }
+</style>
