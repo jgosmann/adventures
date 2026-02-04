@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content"
-import Page, { pageSize } from "../../components/Page.astro"
+import Page, { pageSize } from "../../layouts/Page.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")

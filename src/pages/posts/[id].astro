@@ -24,7 +24,7 @@ import Pano from "../../components/post/Pano.astro"
 import Pano2x from "../../components/post/Pano2x.astro"
 import ElevationProfileLoader from "../../components/post/ElevationProfileLoader.astro"
 import readingTime from "reading-time"
-import Navigation from "../../components/navigation/Navigation.astro"
+import DefaultLayout from "../../layouts/DefaultLayout.astro"
 
 export async function getStaticPaths() {
   function areSubsequentDays(a: Date, b: Date): boolean {
@@ -92,53 +92,41 @@ const climbs = await Climbs.parseAsync(climbsYml.default)
 const { Content } = await render(post)
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Navigation fixed />
-    <main>
-      <article>
-        <Titlescreen
-          image={post.data.background}
-          title={post.data.title}
-          meta={{
-            date: post.data.date,
-            timeToRead: readingTime(post.body ?? ""),
-          }}
-        />
-        <div class="content">
-          <Content
-            components={{
-              ElevationProfile: ElevationProfileLoader,
-              Gallery,
-              GpxTrack: GpxTrackLoader,
-              Grade: GradeLoader,
-              Loc: LocLoader,
-              Pano,
-              Pano2x,
-              Rimg,
-              Travel: TravelLoader,
-              Video,
-            }}
-          />
-          {nextpost && <Nextday path={`/posts/${nextpost.id}`} />}
-          {
-            climbs && climbs[0].ascents && (
-              <ClimbingLog ascents={climbs[0].ascents} />
-            )
-          }
-        </div>
-        <div style="height: 25vh;"></div>
-      </article>
-    </main>
-  </body>
-</html>
+<DefaultLayout>
+  <article>
+    <Titlescreen
+      image={post.data.background}
+      title={post.data.title}
+      meta={{
+        date: post.data.date,
+        timeToRead: readingTime(post.body ?? ""),
+      }}
+    />
+    <div class="content">
+      <Content
+        components={{
+          ElevationProfile: ElevationProfileLoader,
+          Gallery,
+          GpxTrack: GpxTrackLoader,
+          Grade: GradeLoader,
+          Loc: LocLoader,
+          Pano,
+          Pano2x,
+          Rimg,
+          Travel: TravelLoader,
+          Video,
+        }}
+      />
+      {nextpost && <Nextday path={`/posts/${nextpost.id}`} />}
+      {
+        climbs && climbs[0].ascents && (
+          <ClimbingLog ascents={climbs[0].ascents} />
+        )
+      }
+    </div>
+    <div style="height: 25vh;"></div>
+  </article>
+</DefaultLayout>
 
 <style>
   main {

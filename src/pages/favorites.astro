@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content"
-import PostList from "../components/PostList.astro"
+import PostList from "../layouts/PostList.astro"
 
 let allPosts = (await getCollection("posts", data => data.data.favorite)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()

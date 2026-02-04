@@ -1,0 +1,36 @@
+---
+import "normalize.css/normalize.css"
+import "../global.css"
+import Navigation from "../components/navigation/Navigation.astro"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body><Navigation /><main><slot /></main></body>
+</html>
+
+<style>
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    margin-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+    position: relative;
+    z-index: 0;
+  }
+</style>
