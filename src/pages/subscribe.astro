@@ -1,0 +1,71 @@
+---
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons"
+import { faRssSquare } from "@fortawesome/free-solid-svg-icons"
+
+import DefaultLayout from "../layouts/DefaultLayout.astro"
+import IconBullet from "../components/IconBullet.astro"
+import ContentStyleWrapper from "../components/ContentStyleWrapper.astro"
+import SubscribeForm from "../components/doveseed/SubscribeForm"
+---
+
+<DefaultLayout title="Subscribe" description={null} imageSrc={null}>
+  <ContentStyleWrapper>
+    <h1>How to subscribe to the blog</h1>
+    <IconBullet icon={faEnvelopeSquare}>
+      <h2>E-mail Notifications</h2>
+      <SubscribeForm
+        client:load
+        url="https://doveseed.adventures.jgosmann.de/subscribe"
+        submitLabel="Subscribe"
+      />
+      <p style={{ opacity: 0.8, fontSize: "0.8em" }}>
+        By subscribing with your e-mail you agree to the
+        <a href="/legal/privacy">privacy policy</a>. In particular, you agree to
+        receive e-mail from this website. For this the e-mail address will be
+        stored and processed on the server. You may
+        <a href="/unsubscribe">unsubscribe</a> any time.
+      </p>
+    </IconBullet>
+
+    <IconBullet icon={faRssSquare}>
+      <h2>RSS Feed</h2>
+
+      <p>
+        The blog provides an <a href="/index.xml">RSS feed</a> that can deliver new
+        posts directly to you.
+        <a href="http://www.whatisrss.com/">
+          A short explanation of RSS can be found here.
+        </a>
+      </p>
+
+      <p>
+        To get the updates delivered automatically, you have a variety of
+        options:
+      </p>
+
+      <ul>
+        <li>
+          You can use an RSS reader software. You will find lots of choices on
+          you favourite search engine. Personally, I use the
+          <a href="http://newsfox.mozdev.org/">NewsFox plugin for Firefox</a>.
+        </li>
+        <li>
+          You can use an online service that sends you email notifications based
+          on an RSS feed:
+          <ul>
+            <li>
+              <a href="https://ifttt.com/applets/147561p-rss-feed-to-email">
+                IFTTT
+              </a>
+              (stands for If This Than That), can do a lot more than just delivering
+              email notifications for RSS feeds.
+            </li>
+            <li>
+              <a href="https://blogtrottr.com/">Blogtrottr</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </IconBullet>
+  </ContentStyleWrapper>
+</DefaultLayout>

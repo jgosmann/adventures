@@ -1,0 +1,42 @@
+---
+import { type IconProp } from "@fortawesome/fontawesome-svg-core"
+import FaIcon from "./FaIcon.astro"
+
+export interface IconBulletProps {
+  icon: IconProp
+}
+
+const { icon } = Astro.props
+---
+
+<div class="icon-bullet-container">
+  <div class="icon-bullet-bullet">
+    <FaIcon icon={icon} styles={{ color: "var(--color-red)" }} />
+  </div>
+  <div class="icon-bullet-text">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .icon-bullet-container {
+    display: flex;
+    width: 600px;
+    max-width: calc(100% - 32px);
+    margin: auto auto 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icon-bullet-bullet {
+    color: #222;
+    font-size: 48px;
+    margin-top: -0.0625em;
+    margin-right: 24px;
+  }
+
+  .icon-bullet-text {
+    flex: 1;
+    min-width: 300px;
+  }
+</style>

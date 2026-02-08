@@ -1,0 +1,62 @@
+---
+
+---
+
+<div class="content"><slot /></div>
+
+<style is:global>
+  .content ol,
+  .content > p,
+  .content ul,
+  .content h1,
+  .content h2,
+  .content h3,
+  .content form {
+    margin: 0 auto 1em;
+    line-height: 1.25;
+    color: #222;
+    width: 600px;
+    max-width: calc(100vw - 32px);
+  }
+
+  .content .popover {
+    width: auto;
+    margin: 0;
+    z-index: 9999;
+  }
+
+  .content ul {
+    padding: 0 20px;
+  }
+
+  .content ul,
+  .content ol {
+    box-sizing: border-box;
+  }
+  .content ul ul,
+  .content ol ul,
+  .content ul ol,
+  .content ol ol {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .content iframe {
+    margin: 1em auto;
+    display: block;
+    max-width: 100vw;
+  }
+
+  .attribution {
+    color: #888;
+    font-size: 0.8em;
+  }
+
+  .attribution a {
+    color: #888;
+  }
+
+  .attribution a:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import ContentStyleWrapper from "../../components/ContentStyleWrapper.astro"
+import ConfirmationButton from "../../components/doveseed/ConfirmationButton"
+import DefaultLayout from "../../layouts/DefaultLayout.astro"
+---
+
+<DefaultLayout title="Confirm subscription" description={null} imageSrc={null}>
+  <ContentStyleWrapper>
+    <h1>Confirm subscription</h1>
+    <p>
+      You are subscribing the following email address to receive email
+      notifications for new posts:
+    </p>
+    <ConfirmationButton
+      client:load
+      url="https://doveseed.adventures.jgosmann.de/subscribe/confirm/"
+      submitLabel="Confirm"
+    />
+  </ContentStyleWrapper>
+</DefaultLayout>

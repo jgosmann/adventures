@@ -1,0 +1,52 @@
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.anim-spin {
+  animation: spin 1s linear infinite;
+}
+
+form.email-submission-form {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  display: flex;
+}
+
+form.email-submission-form:focus-within {
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+form.email-submission-form input[type="email"] {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  padding: 8px;
+  height: 100%;
+  flex-grow: 1;
+  outline: none;
+}
+
+form.email-submission-form input[type="email"]:invalid {
+  border: none;
+  box-shadow: none;
+}
+
+form.email-submission-form button[type="submit"] {
+  border-radius: 0 4px 4px 0;
+  box-shadow: -1px 0 1px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  outline: none;
+}
+
+.vcollapsible {
+  display: inline-block;
+  transition: 0.2s ease-out;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 4px;
+  opacity: 1;
+}

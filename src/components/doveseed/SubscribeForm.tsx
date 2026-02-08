@@ -1,4 +1,4 @@
-import React, { FormEvent, useRef, useState } from "react"
+import React, { type FormEvent, useRef, useState } from "react"
 
 import EmailSubmissionForm from "./EmailSubmissionForm"
 import { ProcessingState } from "./ProcessingState"
