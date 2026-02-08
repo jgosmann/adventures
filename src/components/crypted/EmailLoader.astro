@@ -1,0 +1,7 @@
+---
+import Email, { type CryptedEmailProps } from "./Email"
+
+interface Props extends CryptedEmailProps {}
+---
+
+<Email {...Astro.props} client:load />

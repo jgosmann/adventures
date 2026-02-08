@@ -1,4 +1,5 @@
-import React, { useRef } from "react"
+import "./styles.css"
+import { useRef } from "react"
 
 import CopyButton from "./CopyButton"
 
@@ -39,13 +40,7 @@ const CryptedPhone = ({
         data-area={area}
         data-block0={block0}
         data-block1={block1}
-        css={{
-          marginRight: 4,
-          ["&:after"]: {
-            content:
-              'attr(data-country) "\\202f" attr(data-area) "\\202f" attr(data-block0) "\\202f" attr(data-block1)',
-          },
-        }}
+        className="crypted crypted-phone"
       ></span>
       <CopyButton getCopyText={getPhone} title={copyTitle} />
     </>

@@ -1,0 +1,7 @@
+---
+import Phone, { type CryptedPhoneProps } from "./Phone"
+
+interface Props extends CryptedPhoneProps {}
+---
+
+<Phone {...Astro.props} client:only="react" />

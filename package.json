@@ -14,12 +14,14 @@
     "@astrojs/react": "^4.4.2",
     "@changey/react-leaflet-markercluster": "4.0.0-rc1",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-regular-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
     "@nivo/core": "^0.99.0",
     "@nivo/line": "^0.99.0",
     "@react-leaflet/core": "^2.1.0",
     "astro": "^5.16.6",
+    "flag-icons": "7.1.0",
     "jotai": "^2.16.1",
     "leaflet": "^1.9.4",
     "leaflet.geodesic": "^2.7.2",
@@ -43,6 +45,7 @@
     "mdast-util-from-markdown": "^2.0.2",
     "mdast-util-mdx": "^3.0.0",
     "micromark-extension-mdxjs": "^3.0.0",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "sass": "^1.97.3"
   }
 }

@@ -1,3 +1,4 @@
+import "./styles.css"
 import React, { useRef } from "react"
 
 import CopyButton from "./CopyButton"
@@ -46,14 +47,8 @@ const CryptedEmail = ({
         data-name={name}
         data-domain={domain}
         data-tld={tld}
-        className="crypted-email"
+        className="crypted crypted-email"
         title={writeEmailTitle}
-        css={{
-          marginRight: 4,
-          ["&:after"]: {
-            content: 'attr(data-name) "@" attr(data-domain) "." attr(data-tld)',
-          },
-        }}
       ></a>
       <CopyButton getCopyText={getEmail} title={copyTitle} />
     </>

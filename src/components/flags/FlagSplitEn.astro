@@ -1,0 +1,32 @@
+---
+import "./flagIcons.scss"
+---
+
+<span class="fi-split">
+  <span class="fi fi-us"></span>
+  <span class="fi fi-gb lower-triangle"></span>
+</span>
+
+<style>
+  span.fi-split {
+    margin-right: 4px;
+    position: relative;
+    line-height: 1em;
+    height: 1em;
+    vertical-align: text-top;
+    width: calc((4 / 3) * 1em);
+    display: inline-block;
+  }
+
+  span.fi-split span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  span.fi-split span.lower-triangle {
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  }
+</style>

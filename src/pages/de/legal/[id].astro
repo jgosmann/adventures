@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from "astro:content"
+import DefaultLayout from "../../../layouts/DefaultLayout.astro"
+import ContentStyleWrapper from "../../../components/ContentStyleWrapper.astro"
+import PhoneLoader from "../../../components/crypted/PhoneLoader.astro"
+import EmailLoader from "../../../components/crypted/EmailLoader.astro"
+import FlagDe from "../../../components/flags/FlagDe.astro"
+import FlagSplitEn from "../../../components/flags/FlagSplitEn.astro"
+
+export async function getStaticPaths() {
+  const legalPages = await getCollection("legal", data =>
+    data.id.endsWith("_de")
+  )
+  return legalPages.map(legalPage => {
+    return {
+      params: { id: legalPage.id.replace(/_de$/, "") },
+      props: { legalPage },
+    }
+  })
+}
+
+const { legalPage } = Astro.props
+const { Content } = await render(legalPage)
+---
+
+<DefaultLayout
+  title={legalPage.data.title}
+  description={null}
+  imageSrc={null}
+  mainLang="de"
+>
+  <ContentStyleWrapper>
+    <Content
+      components={{
+        CryptedEmail: EmailLoader,
+        CryptedPhone: PhoneLoader,
+        FlagDe,
+        FlagSplitEn,
+      }}
+    />
+  </ContentStyleWrapper>
+</DefaultLayout>

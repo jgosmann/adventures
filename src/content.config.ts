@@ -15,4 +15,11 @@ const posts = defineCollection({
     }),
 })
 
-export const collections = { posts }
+const legal = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./content/legal" }),
+  schema: z.object({
+    title: z.string(),
+  }),
+})
+
+export const collections = { posts, legal }

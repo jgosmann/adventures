@@ -1,18 +1,4 @@
-import React, { MouseEventHandler, useEffect, useState } from "react"
-import { keyframes } from "@emotion/react"
-
-import { defaultShadedButton } from "../styles"
-
-const animation = keyframes`
-  from {
-    transform: scale(1, 1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(3, 3);
-    opacity: 0;
-  }
-`
+import React, { type MouseEventHandler, useEffect, useState } from "react"
 
 export interface AnimatedButtonProps {
   children?: React.ReactNode
@@ -37,32 +23,12 @@ const AnimatedButton = ({ children, onClick, title }: AnimatedButtonProps) => {
 
   return (
     <button
-      css={[
-        defaultShadedButton,
-        {
-          margin: 4,
-          color: "#000",
-          padding: "1px 4px",
-          position: "relative",
-          ["&:hover"]: { color: "#000" },
-        },
-      ]}
+      className="shaded-button copy-button"
       onClick={onClickInternal}
       title={title}
     >
       {children}
-      {isAnimating ? (
-        <div
-          css={{
-            position: "absolute",
-            top: 4,
-            left: 4,
-            animation: `${animation} 0.2s 1`,
-          }}
-        >
-          {children}
-        </div>
-      ) : null}
+      {isAnimating ? <div className="enlarge-fade-elem">{children}</div> : null}
     </button>
   )
 }

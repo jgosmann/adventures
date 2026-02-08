@@ -6,16 +6,17 @@ import Navigation from "../components/navigation/Navigation.astro"
 
 interface Props extends HeadProps {
   noTopMargin?: boolean
+  mainLang?: string
 }
 
-const { noTopMargin, ...headProps } = Astro.props
+const { noTopMargin, mainLang, ...headProps } = Astro.props
 ---
 
 <html lang="en">
   <Head {...headProps} />
   <body>
     <Navigation fixed noTopMargin={noTopMargin} />
-    <main>
+    <main lang={mainLang}>
       <slot />
     </main>
   </body>

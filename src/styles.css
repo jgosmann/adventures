@@ -67,3 +67,32 @@
 .shaded-button.shaded-button-primary:hover {
   color: #fff;
 }
+
+.copy-button {
+  margin: 4px;
+  color: #000;
+  padding: 1px 4px;
+  position: relative;
+}
+
+.copy-button:hover {
+  color: #000;
+}
+
+@keyframes enlarge-fade {
+  from {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(3, 3);
+    opacity: 0;
+  }
+}
+
+.enlarge-fade-elem {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  animation: enlarge-fade 0.2s 1;
+}
