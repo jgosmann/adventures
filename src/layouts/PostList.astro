@@ -10,6 +10,7 @@ import type { InferEntrySchema } from "astro:content"
 import DefaultLayout from "./DefaultLayout.astro"
 
 interface Props {
+  title: string | null
   posts: Array<{
     id: string
     body?: string
@@ -17,10 +18,10 @@ interface Props {
   }>
 }
 
-const { posts } = Astro.props
+const { title, posts } = Astro.props
 ---
 
-<DefaultLayout>
+<DefaultLayout title={title} description={null} imageSrc={null}>
   <ol>
     {
       posts.map(post => (

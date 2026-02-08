@@ -6,7 +6,7 @@ import FullHeightLayout from "../layouts/FullHeightLayout.astro"
 const allPosts = await getCollection("posts")
 ---
 
-<FullHeightLayout>
+<FullHeightLayout title="Map" description={null} imageSrc={null}>
   <OverviewMap posts={allPosts} client:only="react" />
 </FullHeightLayout>
 

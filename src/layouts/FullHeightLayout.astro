@@ -2,16 +2,15 @@
 import "normalize.css/normalize.css"
 import "../global.css"
 import Navigation from "../components/navigation/Navigation.astro"
+import Head, { type Props as HeadProps } from "../components/Head.astro"
+
+interface Props extends HeadProps {}
+
+const headProps = Astro.props
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
+  <Head {...headProps} />
   <body><Navigation /><main><slot /></main></body>
 </html>
 

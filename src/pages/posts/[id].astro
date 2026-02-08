@@ -25,6 +25,11 @@ import Pano2x from "../../components/post/Pano2x.astro"
 import ElevationProfileLoader from "../../components/post/ElevationProfileLoader.astro"
 import readingTime from "reading-time"
 import DefaultLayout from "../../layouts/DefaultLayout.astro"
+import { getImage } from "astro:assets"
+import type { Node } from "@types/mdast"
+import { fromMarkdown } from "mdast-util-from-markdown"
+import { mdxFromMarkdown } from "mdast-util-mdx"
+import { mdxjs } from "micromark-extension-mdxjs"
 
 export async function getStaticPaths() {
   function areSubsequentDays(a: Date, b: Date): boolean {
@@ -88,11 +93,59 @@ const { post, nextpost } = Astro.props
 const climbsYml = await import(
   `../../../content/posts/${post.id}/climbs.yml`
 ).catch(() => ({ default: undefined }))
-const climbs = await Climbs.parseAsync(climbsYml.default)
-const { Content } = await render(post)
+
+const [climbs, { Content }, ogImage] = await Promise.all([
+  Climbs.parseAsync(climbsYml.default),
+  render(post),
+  getImage({ src: post.data.background, width: 800 }),
+])
+
+function* mdastToWords(node: Node): Generator<string> {
+  switch (node.type) {
+    case "root":
+    case "paragraph":
+    case "link":
+      for (const childGen of node.children.flatMap(mdastToWords)) {
+        yield* childGen
+      }
+
+    case "text":
+      if (node.value) {
+        yield* node.value.replaceAll("\n", " ").split(/\s+/)
+      }
+
+    case "mdxJsxFlowElement":
+    case "mdxJsxTextElement":
+      return
+
+    default:
+      throw new Error(`Unhandled mdast node type: ${node.type}`)
+  }
+}
+
+const mdast = fromMarkdown(post.body ?? "", {
+  extensions: [mdxjs()],
+  mdastExtensions: [mdxFromMarkdown()],
+})
+
+const buffer = []
+const wordGen = mdastToWords(mdast)
+for (let i = 0; i < 55; ++i) {
+  const nextWord = wordGen.next()
+  if (nextWord.done) {
+    break
+  }
+  buffer.push(nextWord.value)
+}
+
+const excerpt = buffer.join(" ")
 ---
 
-<DefaultLayout>
+<DefaultLayout
+  title={post.data.title}
+  description={excerpt}
+  imageSrc={ogImage.src}
+>
   <article>
     <Titlescreen
       image={post.data.background}

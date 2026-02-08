@@ -25,7 +25,7 @@ const posts = allPosts.slice(start, start + pageSize)
 const maxPage = Math.ceil(allPosts.length / pageSize)
 ---
 
-<PostList posts={posts}>
+<PostList title={null} posts={posts}>
   {
     (page > 1 || page < maxPage) && (
       <div class="pagination" slot="footer">

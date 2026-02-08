@@ -1,0 +1,34 @@
+---
+export interface Props {
+  description: string | null
+  imageSrc: string | null
+  title: string | null
+}
+
+const { description, imageSrc, title } = Astro.props
+const completeTitle = (title ? `${title} | ` : "") + "Jan's outdoor adventures"
+const descriptionWithFallback =
+  description ||
+  "Jan's blog about adventures experienced outdoors and while travelling."
+---
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{completeTitle}</title>
+  <meta name="og:title" content={completeTitle} />
+  {
+    descriptionWithFallback && (
+      <>
+        <meta name="description" content={descriptionWithFallback} />
+        <meta name="og:description" content={descriptionWithFallback} />
+      </>
+    )
+  }
+  <meta name="og:url" content={Astro.url} />
+  {imageSrc && <meta name="og:image" content={imageSrc} />}
+  <meta name="og:type" content="website" />
+  <slot />
+</head>
