@@ -21,6 +21,7 @@ const { fixed, noTopMargin } = Astro.props
     <FaIcon class="icon-menu-open" icon={faTimes} />
   </MenuButton>
 </navigation-bar>
+{noTopMargin || !fixed ? null : <div class="spacer" />}
 
 <script>
   class NavigationBar extends HTMLElement {
@@ -84,16 +85,14 @@ const { fixed, noTopMargin } = Astro.props
   .expanded :global(.icon-menu-closed) {
     display: none !important;
   }
-</style>
 
-<style is:global>
-  body {
-    margin-top: 56px;
+  .spacer {
+    height: 56px;
   }
 
   @media (min-width: 600px) {
-    body {
-      margin-top: 48px;
+    .spacer {
+      height: 48px;
     }
   }
 </style>

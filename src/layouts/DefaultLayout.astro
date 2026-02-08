@@ -2,15 +2,17 @@
 import Head, { type Props as HeadProps } from "../components/Head.astro"
 import Navigation from "../components/navigation/Navigation.astro"
 
-interface Props extends HeadProps {}
+interface Props extends HeadProps {
+  noTopMargin?: boolean
+}
 
-const headProps = Astro.props
+const { noTopMargin, ...headProps } = Astro.props
 ---
 
 <html lang="en">
   <Head {...headProps} />
   <body>
-    <Navigation fixed />
+    <Navigation fixed noTopMargin={noTopMargin} />
     <main>
       <slot />
     </main>
