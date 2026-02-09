@@ -8,6 +8,7 @@ import yaml from "@rollup/plugin-yaml"
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://adventures.jgosmann.de",
   integrations: [mdx(), react()],
   image: {
     breakpoints: [750, 1080, 1280, 1668, 2048],
