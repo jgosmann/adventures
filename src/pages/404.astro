@@ -1,0 +1,26 @@
+---
+import { faCompass } from "@fortawesome/free-regular-svg-icons"
+import ContentStyleWrapper from "../components/ContentStyleWrapper.astro"
+import FaIcon from "../components/FaIcon.astro"
+import DefaultLayout from "../layouts/DefaultLayout.astro"
+---
+
+<DefaultLayout title="Not found" description={null} imageSrc={null}>
+  <ContentStyleWrapper>
+    <h1>
+      <FaIcon icon={faCompass} /> Not found
+    </h1>
+    <p>Seems like we are lost.</p>
+  </ContentStyleWrapper>
+</DefaultLayout>
+
+<style>
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 32px;
+  }
+</style>
