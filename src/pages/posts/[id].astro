@@ -26,11 +26,8 @@ import ElevationProfileLoader from "../../components/post/ElevationProfileLoader
 import readingTime from "reading-time"
 import DefaultLayout from "../../layouts/DefaultLayout.astro"
 import { getImage } from "astro:assets"
-import type { Node } from "@types/mdast"
-import { fromMarkdown } from "mdast-util-from-markdown"
-import { mdxFromMarkdown } from "mdast-util-mdx"
-import { mdxjs } from "micromark-extension-mdxjs"
 import ContentStyleWrapper from "../../components/ContentStyleWrapper.astro"
+import { excerpt } from "../../mdast"
 
 export async function getStaticPaths() {
   function areSubsequentDays(a: Date, b: Date): boolean {
@@ -100,51 +97,11 @@ const [climbs, { Content }, ogImage] = await Promise.all([
   render(post),
   getImage({ src: post.data.background, width: 800 }),
 ])
-
-function* mdastToWords(node: Node): Generator<string> {
-  switch (node.type) {
-    case "root":
-    case "paragraph":
-    case "link":
-      for (const childGen of node.children.flatMap(mdastToWords)) {
-        yield* childGen
-      }
-
-    case "text":
-      if (node.value) {
-        yield* node.value.replaceAll("\n", " ").split(/\s+/)
-      }
-
-    case "mdxJsxFlowElement":
-    case "mdxJsxTextElement":
-      return
-
-    default:
-      throw new Error(`Unhandled mdast node type: ${node.type}`)
-  }
-}
-
-const mdast = fromMarkdown(post.body ?? "", {
-  extensions: [mdxjs()],
-  mdastExtensions: [mdxFromMarkdown()],
-})
-
-const buffer = []
-const wordGen = mdastToWords(mdast)
-for (let i = 0; i < 55; ++i) {
-  const nextWord = wordGen.next()
-  if (nextWord.done) {
-    break
-  }
-  buffer.push(nextWord.value)
-}
-
-const excerpt = buffer.join(" ")
 ---
 
 <DefaultLayout
   title={post.data.title}
-  description={excerpt}
+  description={excerpt(post.body ?? "")}
   imageSrc={ogImage.src}
   noTopMargin
 >

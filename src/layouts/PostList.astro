@@ -1,13 +1,11 @@
 ---
 import "normalize.css/normalize.css"
 import "../global.css"
-import PostPreview, {
-  width as previewWidth,
-  height as previewHeight,
-} from "../components/PostPreview.astro"
+import "../styles.css"
 import readingTime from "reading-time"
 import type { InferEntrySchema } from "astro:content"
 import DefaultLayout from "./DefaultLayout.astro"
+import PostPreview from "../components/PostPreview.astro"
 
 interface Props {
   title: string | null
@@ -22,7 +20,7 @@ const { title, posts } = Astro.props
 ---
 
 <DefaultLayout title={title} description={null} imageSrc={null}>
-  <ol>
+  <ol class="post-preview-list">
     {
       posts.map(post => (
         <li>
@@ -37,39 +35,3 @@ const { title, posts } = Astro.props
   </ol>
   <slot name="footer" />
 </DefaultLayout>
-
-<style
-  define:vars={{
-    previewWidth: `${previewWidth}px`,
-    previewHeight: `${previewHeight}px`,
-  }}
->
-  ol {
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  ol > li {
-    transition: 0.2s;
-    display: block;
-    margin: 16px;
-    border-radius: 16px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    position: relative;
-    width: var(--previewWidth);
-    max-width: calc(100vw - 72px);
-    height: var(--previewHeight);
-    max-height: calc(100vh - 72px);
-    isolation: isolate; /* required for Safari to apply overflow: hidden to border radius */
-  }
-
-  ol > li:hover,
-  ol > li:focus-within {
-    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.75);
-  }
-</style>

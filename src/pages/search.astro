@@ -2,8 +2,12 @@
 import "normalize.css/normalize.css"
 import "../global.css"
 import DefaultLayout from "../layouts/DefaultLayout.astro"
+import ContentSpinner from "../components/post/ContentSpinner.astro"
+import SearchView from "../components/SearchView"
 ---
 
 <DefaultLayout title="Search" description={null} imageSrc={null}>
-  search page tbd
+  <SearchView client:only="react">
+    <Fragment slot="fallback"><ContentSpinner /></Fragment>
+  </SearchView>
 </DefaultLayout>
