@@ -10,8 +10,8 @@ const allPosts = await getCollection("posts")
   <OverviewMap posts={allPosts} client:only="react" />
 </FullHeightLayout>
 
-<style>
-  a:hover {
-    color: var(--color-accent);
+<style is:global>
+  a.post-preview-link:hover {
+    color: var(--color-accent) !important;
   }
 </style>
