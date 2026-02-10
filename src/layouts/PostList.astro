@@ -2,7 +2,6 @@
 import "normalize.css/normalize.css"
 import "../global.css"
 import "../styles.css"
-import readingTime from "reading-time"
 import type { InferEntrySchema } from "astro:content"
 import DefaultLayout from "./DefaultLayout.astro"
 import PostPreview from "../components/PostPreview.astro"
@@ -27,7 +26,7 @@ const { title, posts } = Astro.props
           <PostPreview
             pagePath={`/posts/${post.id}/`}
             meta={post.data}
-            timeToRead={readingTime(post.body ?? "")}
+            timeToRead={post.data.readingTime}
           />
         </li>
       ))

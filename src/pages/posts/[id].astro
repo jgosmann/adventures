@@ -111,7 +111,7 @@ const [climbs, { Content }, ogImage] = await Promise.all([
       title={post.data.title}
       meta={{
         date: post.data.date,
-        timeToRead: readingTime(post.body ?? ""),
+        timeToRead: post.data.readingTime,
       }}
     />
     <ContentStyleWrapper>
