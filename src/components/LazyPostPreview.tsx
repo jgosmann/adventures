@@ -7,7 +7,11 @@ export interface LazyPostPreviewProps {
 async function load(postId: string): Promise<string> {
   const response = await fetch(`/preview/${postId}`)
   if (!response.ok) {
-    throw new Error("Failed to fetch preview")
+    throw new Error(
+      `Failed to fetch preview (${response.status} ${
+        response.statusText
+      }): ${response.text()}`
+    )
   }
   return await response.text()
 }
@@ -15,16 +19,18 @@ async function load(postId: string): Promise<string> {
 function LazyPostPreview({ postId }: LazyPostPreviewProps) {
   const [state, setState] = useState({
     loading: true,
-    error: false,
+    error: null,
     data: "",
   })
   useEffect(() => {
     load(postId)
-      .then(data => setState({ loading: false, error: false, data }))
-      .catch(() => setState({ loading: false, error: true, data: "" }))
+      .then(data => setState({ loading: false, error: null, data }))
+      .catch(error => setState({ loading: false, error, data: "" }))
   }, [])
 
-  return <div dangerouslySetInnerHTML={{ __html: state.data }}></div>
+  return (
+    <div dangerouslySetInnerHTML={{ __html: state.data }}>{state.error}</div>
+  )
 }
 
 export default LazyPostPreview
