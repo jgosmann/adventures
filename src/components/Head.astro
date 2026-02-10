@@ -1,4 +1,6 @@
 ---
+import faCssUrl from "@fortawesome/fontawesome-svg-core/styles.css?url"
+
 export interface Props {
   description: string | null
   imageSrc: string | null
@@ -13,6 +15,122 @@ const descriptionWithFallback =
 ---
 
 <head>
+  <style is:inline>
+    :root {
+      --color-accent: #336cc6;
+      --color-highlight: #dd16c9;
+      --color-red: #d43c31;
+    }
+
+    @font-face {
+      font-family: "Lato";
+      src:
+        url("/fonts/LatoLatin-Regular.woff2") format("woff2"),
+        url("/fonts/LatoLatin-Regular.woff") format("woff");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Lato";
+      src:
+        url("/fonts/LatoLatin-Italic.woff2") format("woff2"),
+        url("/fonts/LatoLatin-Italic.woff") format("woff");
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Lato";
+      src:
+        url("/fonts/LatoLatin-Bold.woff2") format("woff2"),
+        url("/fonts/LatoLatin-Bold.woff") format("woff");
+      font-weight: bold;
+      font-display: swap;
+    }
+
+    body {
+      font-family: "Lato", sans-serif;
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--color-highlight);
+    }
+
+    .icon-menu-open {
+      display: none !important;
+    }
+
+    .expanded .icon-menu-open {
+      display: block !important;
+    }
+
+    .expanded .icon-menu-closed {
+      display: none !important;
+    }
+
+    nav.collapsed-menu {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      padding: 0 8px;
+      border-bottom: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    nav.expanded-menu {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .expanded nav.expanded-menu {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    .expanded .main-links.row {
+      transform: scaleX(0);
+    }
+
+    .main-links.column {
+      transform: scaleY(0);
+    }
+
+    .expanded .main-links.column {
+      transform: scaleY(1);
+    }
+
+    .dropdown {
+      opacity: 0;
+    }
+
+    a.navlink {
+      display: block;
+      color: #000;
+      text-decoration: none;
+      height: 100%;
+      box-sizing: border-box;
+      white-space: nowrap;
+
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+    }
+
+    .svg-inline--fa {
+      height: 1em;
+    }
+  </style>
+  <link href={faCssUrl} rel="stylesheet" />
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link

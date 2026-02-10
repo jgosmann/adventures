@@ -12,13 +12,18 @@ const isActive =
   props.href?.toString()?.replace(/\/$/, "")
 ---
 
-<a class:list={[markerClass, cssClass, { active: isActive }]} {...props}>
+<a
+  class:list={["navlink", markerClass, cssClass, { active: isActive }]}
+  {...props}
+>
   <slot />
 </a>
 
 <style>
   a {
-    transition: 0.2s;
+    transition:
+      color 0.2s,
+      border-color 0.2s;
     display: block;
     color: #000;
     text-decoration: none;

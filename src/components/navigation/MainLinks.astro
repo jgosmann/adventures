@@ -62,16 +62,4 @@ const markerSide = orientation === "column" ? "left" : "bottom"
     transform-origin: top left;
     transition: transform 0.2s ease-out;
   }
-
-  :global(.expanded) .main-links.row {
-    transform: scaleX(0);
-  }
-
-  .main-links.column {
-    transform: scaleY(0);
-  }
-
-  :global(.expanded) .main-links.column {
-    transform: scaleY(1);
-  }
 </style>
