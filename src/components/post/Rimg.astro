@@ -147,6 +147,7 @@ const OverlaySvg = (await overlayLoader?.())?.default
     max-width: min(calc(100vw - 64px), 1280px);
     width: calc(var(--target-height) * var(--orig-width) / var(--orig-height));
     max-height: var(--target-height);
+    aspect-ratio: calc(var(--orig-width) / var(--orig-height));
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
   }
