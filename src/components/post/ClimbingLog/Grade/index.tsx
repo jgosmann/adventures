@@ -65,11 +65,8 @@ const Grade = ({ system, value }: GradeProps) => {
         ...current,
         expanded: false,
       }))
-    const onClick = (ev: MouseEvent) => {
-      if (
-        ev.target instanceof HTMLButtonElement &&
-        ref.current?.contains(ev.target)
-      )
+    const onClick = (ev: Event) => {
+      if (ev.target instanceof HTMLElement && ref.current?.contains(ev.target))
         return
       setState(current => {
         return {
@@ -81,9 +78,11 @@ const Grade = ({ system, value }: GradeProps) => {
     }
     window.addEventListener("resize", collapse)
     window.addEventListener("click", onClick)
+    window.addEventListener("touchstart", onClick)
     return () => {
       window.removeEventListener("resize", collapse)
       window.removeEventListener("click", onClick)
+      window.removeEventListener("touchstart", onClick)
     }
   }, [])
   useEffect(() => {
