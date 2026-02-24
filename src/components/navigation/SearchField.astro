@@ -63,7 +63,7 @@ const isActive = Astro.url.pathname.replace(/\/$/, "") === "/search"
       }
       input.addEventListener("input", updateSubmitBtnVisibility)
 
-      if (location.pathname === "/search") {
+      if (location.pathname === "/search" || location.pathname === "/search/") {
         const query = new URLSearchParams(location.search).get("q")
         if (query) {
           input.value = query
