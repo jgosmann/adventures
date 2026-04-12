@@ -1,0 +1,22 @@
+- date: 2026-04-11T19:16:25+02:00
+  ascents:
+    - name: "No name"
+      grade:
+        system: UIAA
+        value: "5"
+      style: onsight
+    - name: "No name / Bruchverschneidung / chossy corner"
+      grade:
+        system: UIAA
+        value: "6+/7-"
+      style: redpoint
+    - name: "No name"
+      grade:
+        system: UIAA
+        value: "8-"
+      style: retreat
+    - name: "Linke Variante"
+      grade:
+        system: UIAA
+        value: "6"
+      style: hangdog
