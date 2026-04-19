@@ -1,0 +1,42 @@
+- date: 2026-04-17T19:16:25+02:00
+  ascents:
+    - name: "Dreiplattenweg"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "6-"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6-"
+          style: onsight
+    - name: "Flora Bohra"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "6-"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "6-/6"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6-"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "5+"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6/6+"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "6-"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "5-"
+          style: toprope
