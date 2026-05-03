@@ -1,0 +1,32 @@
+- date: 2026-05-01T19:16:25+02:00
+  ascents:
+    - name: "Fahrt ins Blaue"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "6"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "7"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "6/6+"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6"
+          style: hangdog
+        - grade:
+            system: UIAA
+            value: "1"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6"
+          style: toprope
