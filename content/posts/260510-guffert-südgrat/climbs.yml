@@ -1,0 +1,24 @@
+- date: 2026-05-10T19:16:25+02:00
+  ascents:
+    - name: "Guffert Südgrat"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "5-"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "5-"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "1"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "5+"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "4+"
+          style: toprope
