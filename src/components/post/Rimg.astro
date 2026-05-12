@@ -128,8 +128,12 @@ const OverlaySvg = (await overlayLoader?.())?.default
   }}
 >
   .rimg-container {
+    --target-height: 80vh;
     margin: 32px;
     text-align: center;
+    height: 100%;
+    max-height: var(--target-height);
+    aspect-ratio: calc(var(--orig-width) / var(--orig-height));
   }
 
   :global(.gallery) .rimg-container {
@@ -142,7 +146,6 @@ const OverlaySvg = (await overlayLoader?.())?.default
   }
 
   .img-sizing-container {
-    --target-height: 80vh;
     overflow: hidden;
     max-width: min(calc(100vw - 64px), 1280px);
     width: calc(var(--target-height) * var(--orig-width) / var(--orig-height));
@@ -152,7 +155,7 @@ const OverlaySvg = (await overlayLoader?.())?.default
     border-radius: 2px;
   }
 
-  :global(.gallery:not(.gallery-large)) .img-sizing-container {
+  :global(.gallery:not(.gallery-large)) .rimg-container {
     --target-height: 45vh;
   }
 
