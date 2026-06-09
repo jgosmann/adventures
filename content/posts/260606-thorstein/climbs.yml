@@ -1,0 +1,27 @@
+- date: 2026-06-06T19:16:25+02:00
+  ascents:
+    - name: "King of the rodeo"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Königsbohrer"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: onsight
+    - name: "Kingline"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Königswampe"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: onsight
+    - name: "Eddie"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: redpoint

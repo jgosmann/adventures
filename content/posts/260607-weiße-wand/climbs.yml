@@ -1,0 +1,32 @@
+- date: 2026-06-07T19:16:25+02:00
+  ascents:
+    - name: "Daniel"
+      grade:
+        system: UIAA
+        value: "5-"
+      style: flash
+    - name: "Kiefernverschneidung"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: flash
+    - name: "Chrysalis"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: flash
+    - name: "Boulder"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: flash
+    - name: "Weiss der Geier"
+      grade:
+        system: UIAA
+        value: "7"
+      style: redpoint
+    - name: "Bauchtanz"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight

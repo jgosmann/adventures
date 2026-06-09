@@ -1,0 +1,22 @@
+- date: 2026-06-05T19:16:25+02:00
+  ascents:
+    - name: "Gewaltfrei Töpfern"
+      grade:
+        system: UIAA
+        value: "6-"
+      style: flash
+    - name: "Biomüsli"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: flash
+    - name: "Biomüslikante"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: flash
+    - name: "Tanjas Küche"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: flash

@@ -1,0 +1,17 @@
+- date: 2026-06-04T19:16:25+02:00
+  ascents:
+    - name: "Westriss (right variant)"
+      grade:
+        system: UIAA
+        value: "5"
+      style: hangdog
+    - name: "Westriss (left variant)"
+      grade:
+        system: UIAA
+        value: "5"
+      style: onsight
+    - name: "Ausstiegsverschneidung"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: hangdog
