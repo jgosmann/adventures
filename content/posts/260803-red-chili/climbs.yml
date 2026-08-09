@@ -1,0 +1,31 @@
+- date: 2026-08-03T19:16:25+02:00
+  ascents:
+    - name: "Traumtänzer"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "7"
+          style: toprope-hangdog
+        - grade:
+            system: UIAA
+            value: "8-"
+          style: retreat
+    - name: "Red Chili"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "7-"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "7-"
+          style: toprope-hangdog
+        - grade:
+            system: UIAA
+            value: "7-"
+          style: onsight
+    - name: "On the moon"
+      grade:
+        system: UIAA
+        value: "7-"
+      style: onsight

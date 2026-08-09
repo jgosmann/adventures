@@ -1,0 +1,22 @@
+- date: 2026-08-01T19:16:25+02:00
+  ascents:
+    - name: "Ingwer"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
+    - name: "Safran"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight
+    - name: "Chili"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Schote"
+      grade:
+        system: UIAA
+        value: "6"
+      style: onsight

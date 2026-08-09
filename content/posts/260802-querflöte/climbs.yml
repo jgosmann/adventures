@@ -1,0 +1,28 @@
+- date: 2026-08-02T19:16:25+02:00
+  ascents:
+    - name: "Querflöte"
+      pitches:
+        - grade:
+            system: UIAA
+            value: "5"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "6-"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "7+"
+          style: hangdog
+        - grade:
+            system: UIAA
+            value: "6"
+          style: toprope
+        - grade:
+            system: UIAA
+            value: "5+"
+          style: onsight
+        - grade:
+            system: UIAA
+            value: "5+"
+          style: toprope

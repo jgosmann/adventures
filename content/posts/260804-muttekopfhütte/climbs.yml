@@ -1,0 +1,17 @@
+- date: 2026-08-04T19:16:25+02:00
+  ascents:
+    - name: "Ironmant (variant 1)"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: onsight
+    - name: "Ironman (variant 2)"
+      grade:
+        system: UIAA
+        value: "6+"
+      style: hangdog
+    - name: "Heidi"
+      grade:
+        system: UIAA
+        value: "5"
+      style: onsight
