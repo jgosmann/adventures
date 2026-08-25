@@ -3,6 +3,32 @@ import * as pagefind from "pagefind"
 import { plaintext } from "../../mdast"
 import { reverseGeocode } from "../../geocode"
 
+class Semaphore {
+  max: number
+  count: number
+  waiting: Array<() => void>
+
+  constructor(max: number) {
+    this.max = max
+    this.count = 0
+    this.waiting = []
+  }
+
+  async acquire() {
+    if (this.count < this.max) {
+      this.count++
+      return
+    }
+    await new Promise<void>(resolve => this.waiting.push(resolve))
+  }
+
+  release() {
+    this.count--
+    const next = this.waiting.shift()
+    if (next) next()
+  }
+}
+
 export async function getStaticPaths() {
   const [posts, { index }] = await Promise.all([
     getCollection("posts"),
@@ -11,26 +37,32 @@ export async function getStaticPaths() {
   if (!index) {
     throw new Error("Failed to create search index")
   }
+  const semaphore = new Semaphore(20)
   await Promise.all(
     posts.map(async post => {
       const [lat, long] = JSON.parse(`[${post.data.map}]`)
-      await index.addCustomRecord({
-        url: `/posts/${post.id}`,
-        content: [
-          post.data.title,
-          await reverseGeocode({ lat, long }),
-          post.data.categories.join(", "),
-          plaintext(post.body ?? ""),
-        ].join("\n"),
-        language: "en",
-        meta: {
-          id: post.id,
-          title: post.data.title,
-        },
-        sort: {
-          date: post.data.date.getTime().toString(),
-        },
-      })
+      await semaphore.acquire()
+      try {
+        await index.addCustomRecord({
+          url: `/posts/${post.id}`,
+          content: [
+            post.data.title,
+            await reverseGeocode({ lat, long }),
+            post.data.categories.join(", "),
+            plaintext(post.body ?? ""),
+          ].join("\n"),
+          language: "en",
+          meta: {
+            id: post.id,
+            title: post.data.title,
+          },
+          sort: {
+            date: post.data.date.getTime().toString(),
+          },
+        })
+      } finally {
+        semaphore.release()
+      }
     })
   )
   const { errors, files } = await index.getFiles()
