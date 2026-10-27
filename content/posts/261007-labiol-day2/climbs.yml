@@ -1,0 +1,34 @@
+- date: 2026-10-07T19:16:25+02:00
+  ascents:
+    - name: "Lo Tiket"
+      grade:
+        system: UIAA
+        value: "5"
+      style: flash
+    - name: "La Teka"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: flash
+    - name: "Lo Taku"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: flash
+    - name: "No Me Bellostes La Cuca"
+      grade:
+        system: french
+        value: "6a"
+      style: flash
+    - name: "La Tramuntana"
+      grade:
+        system: french
+        value: "6a"
+      style: flash
+    - name: unknown
+      style: hangdog
+    - name: The Talker Bom
+      grade:
+        system: french
+        value: "6a"
+      style: flash
