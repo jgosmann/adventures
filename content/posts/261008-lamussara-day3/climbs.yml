@@ -1,0 +1,37 @@
+- date: 2026-10-08T19:16:25+02:00
+  ascents:
+    - name: "Alabama's"
+      grade:
+        system: UIAA
+        value: "5"
+      style: onsight
+    - name: "Gandalf El Gris"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
+    - name: "Laia"
+      grade:
+        system: french
+        value: "6a"
+      style: retreat
+    - name: "Climber Up"
+      grade:
+        system: french
+        value: "6a+"
+      style: retreat
+    - name: "Esperó de l'Alba"
+      grade:
+        system: UIAA
+        value: "5"
+      style: onsight
+    - name: Philadelfia
+      grade:
+        system: french
+        value: "6a+"
+      style: toprope
+    - name: "Scala Dei"
+      grade:
+        system: french
+        value: "6a"
+      style: toprope
