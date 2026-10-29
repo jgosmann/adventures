@@ -1,0 +1,27 @@
+- date: 2026-10-09T19:16:25+02:00
+  ascents:
+    - name: "Sipegotimato"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: redpoint
+    - name: "Plena de vida"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
+    - name: "Nancy Bartra"
+      grade:
+        system: french
+        value: "6a"
+      style: onsight
+    - name: "Kagando Melodías"
+      grade:
+        system: french
+        value: "6b+"
+      style: redpoint
+    - name: "Anda-Lui"
+      grade:
+        system: french
+        value: "6b"
+      style: hangdog
