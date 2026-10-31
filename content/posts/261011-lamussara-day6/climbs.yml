@@ -1,0 +1,42 @@
+- date: 2026-10-11T19:16:25+02:00
+  ascents:
+    - name: "Desig D'estui"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
+    - name: "Donantes De Sangre"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: flash
+    - name: "Chaoen Connection"
+      grade:
+        system: french
+        value: "6a"
+      style: flash
+    - name: "Jarto D'estar Harto"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Sufre Mamón"
+      grade:
+        system: french
+        value: "6b"
+      style: redpoint
+    - name: "Espantocells extension"
+      grade:
+        system: french
+        value: "6b"
+      style: flash
+    - name: Pelut
+      grade:
+        system: french
+        value: "6b"
+      style: redpoint
+    - name: "Via del Marro (first pitch)"
+      grade:
+        system: UIAA
+        value: 5+
+      style: hangdog

@@ -1,0 +1,32 @@
+- date: 2026-10-10T19:16:25+02:00
+  ascents:
+    - name: "Possa't la samarra"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: flash
+    - name: "En braulies"
+      grade:
+        system: UIAA
+        value: "5"
+      style: flash
+    - name: "Mighty Pennis"
+      grade:
+        system: french
+        value: "6a+"
+      style: redpoint
+    - name: "Cabras Rocosas"
+      grade:
+        system: french
+        value: "6a+"
+      style: flash
+    - name: "Moltes Grasses"
+      grade:
+        system: french
+        value: "6b"
+      style: flash
+    - name: "E.H. Sukarra"
+      grade:
+        system: UIAA
+        value: "5+"
+      style: onsight
